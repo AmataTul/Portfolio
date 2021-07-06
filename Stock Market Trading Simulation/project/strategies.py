@@ -22,7 +22,7 @@ def  meanReversionStrategy(prices, ticker):
     # calculate the average
     if i >= 5:
       average_five_days = (float(prices[i-1]) + float(prices[i-2]) + float(prices[i-3])+ float(prices[i-4]) + float(prices[i-5])) / 5
-    #if the program detects a buy signal or sell signal on the last day in the data
+    # if the program detects a buy signal or sell signal on the last day in the data
     # check if we can buy
     if current_price > average_five_days * 1.05  and buying == True:
       buying_price = current_price
@@ -129,7 +129,7 @@ def bollingerBands(prices, ticker):
       if counter == len(prices):
         print('You should buy this stock today: ' + ticker)
       buying = False
-#check if we can sell
+# check if we can sell
     elif price < average_five_days * 0.95:
       selling = price
       if first_buy_sell == True:
