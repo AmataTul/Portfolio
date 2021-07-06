@@ -1,4 +1,4 @@
-# Stock Market Trading
+## Stock Market Trading
 
 The project includes 10 stocks where it implements short selling. Meaning you can sell before you buy.
 <br> 
@@ -11,20 +11,22 @@ it prints a message like “You should <buy or sell> this stock today”.
 <br><br>The program stores the results to my strategy in a results.json, and specifically identifies which stock and strategy made the most profit. 
 
 
-## The code does the following:
+### The code does the following:
 
 * Obtains data from a web JSON API
-* Stores the data in CSV files on your server/development environment (AWS Cloud9)
+* Stores the data in CSV files on your server/development environment (AWS Cloud9 in my case)
 * Adds new data to the dataset. Meaning, tomorrow you can run your program again, and it will go get the latest data, and run your analysis 
 again
 * Data analysis
 * Stores the results in a results.json file on your server/development environment (AWS Cloud9)
 <br><br>
-Create a folder called “final_project” and put all your code in there.• Inside the folder “final_project” create another folder called “data”, and store 
+
+
+### How to use <br>
+* Create a folder called “project” and put all the code in there. 
+* Inside the folder “project” create another folder called “data”, and store 
 the csv files in there.
-  ----
-  
 * Have a project.py file, which will get the latest data, and 
 run analysis on the latest data, and store the updated results in the 
 results.json file.
-* Save the results.json file in the “final_project” folder
+* Save the results.json file in the “project” folder
