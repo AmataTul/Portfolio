@@ -61,7 +61,7 @@ def read_files(tickers):
     profit_bollinger, final_percentage_bollinger = strategies.bollingerBands (lines,ticker)
     dict_results[ticker + "_bb_profit"] = profit_bollinger
     dict_results[ticker + "_bb_returns"] = final_percentage_bollinger
-#  identifies which stock and strategy made the most profit
+# identifies which stock and strategy made the most profit
     maximum = max(profit_simple_moving, total_profit_mean, profit_bollinger)
 
     if maximum == total_profit_mean:
@@ -73,5 +73,5 @@ def read_files(tickers):
     dict_results['most_profitable_' + ticker] = max_profit_strategy
     
   saveResults(dict_results)
-#starting point
+# starting point
 read_files(tickers)
