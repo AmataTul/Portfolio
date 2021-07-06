@@ -25,7 +25,7 @@ again
 * Create a folder called “project” and put all the code in there. 
 * Inside the folder “project” create another folder called “data”, and store 
 the csv files in there.
-* Have a Main_project.py file, which will get the latest data, and 
+* Have a Main_project.py file, which will get the latest data, 
 run analysis on the latest data, and store the updated results in the 
 results.json file.
 * Save the results.json file in the “project” folder
