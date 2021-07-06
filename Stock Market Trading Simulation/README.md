@@ -21,7 +21,6 @@ again
 * Stores the results in a results.json file on your server/development environment (AWS Cloud9)
 <br>
 
-
 ### How to use <br>
 * Create a folder called “project” and put all the code in there. 
 * Inside the folder “project” create another folder called “data”, and store 
