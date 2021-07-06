@@ -13,12 +13,12 @@ it prints a message like “You should <buy or sell> this stock today”.
 
 ### The code does the following:
 
-* Obtains data from a web JSON API
-* Stores the data in CSV files on your server/development environment (AWS Cloud9 in my case)
+* Obtains data from a web JSON API.
+* Stores the data in CSV files on your server/development environment (AWS Cloud9 in my case).
 * Adds new data to the dataset. Meaning, tomorrow you can run your program again, and it will go get the latest data, and run your analysis 
-again
-* Data analysis
-* Stores the results in a results.json file on your server/development environment (AWS Cloud9)
+again.
+* Data analysis.
+* Stores the results in a results.json file on your server/development environment (AWS Cloud9).
 
 
 ### How to use <br>
@@ -28,4 +28,4 @@ the csv files in there.
 * Have a Main_project.py file, which will get the latest data, 
 run analysis on the latest data, and store the updated results in the 
 results.json file.
-* Save the results.json file in the “project” folder
+* Save the results.json file in the “project” folder.
