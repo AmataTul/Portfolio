@@ -1,6 +1,6 @@
 ## Stock Market Trading
 
-The project includes 10 stocks where it implements short selling. Meaning you can sell before you buy.
+The project includes 10 stocks that implements short selling. Meaning you can sell before you buy.
 <br> 
 <br>
 To implement this, I added a sell variable to my program and allow it to sell without buying first. I dded the logic to the buy if statement to add to profits when my buy also (profit += sell - buy). This logic will now be in my
