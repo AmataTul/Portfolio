@@ -13,8 +13,7 @@ This program should save the data in CSV files and should be able to save new da
 
 * Obtains data from a web JSON API.
 * Stores the data in CSV files on your server/development environment (AWS Cloud9 in my case).
-* Adds new data to the dataset. This means that tomorrow you can run the program again and it will get the latest data and run the analysis again.
-again.
+* Adds new data to the dataset. This means that tomorrow you can run the program again, and it will get the latest data and run the analysis again.
 * Data analysis.
 * Stores the results in a results.json file on your server/development environment (AWS Cloud9).
 
