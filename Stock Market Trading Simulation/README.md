@@ -22,7 +22,9 @@ again
 <br><br>
 Create a folder called “final_project” and put all your code in there.• Inside the folder “final_project” create another folder called “data”, and store 
 the csv files in there.
-• Have a final_project.py file that I can run, which will get the latest data, and 
+  ----
+  
+* Have a final_project.py file, which will get the latest data, and 
 run analysis on the latest data, and store the updated results in the 
 results.json file.
-• Save the results.json file in the “final_project” folder
+* Save the results.json file in the “final_project” folder
