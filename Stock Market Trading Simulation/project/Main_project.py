@@ -25,13 +25,13 @@ for ticker in tickers:
     closing_price = req_dct['Time Series (Daily)'][date]["4. close"]
     lines.append (closing_price + '\n')
   # save prices to ticker.csv files  
-  csv_file = open('./final_project/data/'+ticker + '.csv', 'w')
+  csv_file = open('./project/data/'+ticker + '.csv', 'w')
   csv_file.writelines(lines)
   csv_file.close()
 
 # saves result to json
 def saveResults (results):
-  f = open("./final_project/results.json", "w")
+  f = open("./project/results.json", "w")
   f.write(str(results) + '\n')
   f.write('\n')
   f.close()
@@ -40,7 +40,7 @@ def saveResults (results):
 def read_files(tickers):
   dict_results = {}
   for ticker in tickers:
-    file = open('./final_project/data/'+ ticker + ".csv", "r")
+    file = open('./project/data/'+ ticker + ".csv", "r")
     lines = file.readlines()
     prices = [float(line) for line in lines if line != "null\n"]
 
