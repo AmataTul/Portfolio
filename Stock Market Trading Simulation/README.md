@@ -19,7 +19,7 @@ it prints a message like “You should <buy or sell> this stock today”.
 again
 * Data analysis
 * Stores the results in a results.json file on your server/development environment (AWS Cloud9)
-<br>
+
 
 ### How to use <br>
 * Create a folder called “project” and put all the code in there. 
