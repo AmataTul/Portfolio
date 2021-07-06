@@ -6,7 +6,7 @@ The project includes 10 stocks that implements short selling. Meaning you can se
 To implement this, I added a sell variable to my program and allow it to sell without buying first. I dded the logic to the buy if statement to add to profits when my buy also (profit += sell - buy). This logic will now be in my
 buy and my sell if statements. 
 <br><br>
-This program should save the data in CSV files and should be able to save new data into the files. Meaning, when I go running my program, it should go get the latest data, update the files, and run a new analysis. If my program detects a buy signal or sells signal on the last day in the data, it prints a message like “You should this stock today”.
+This program should save the data in CSV files and should be able to save new data into the files. Meaning, when I go running my program, it should go get the latest data, update the files, and run a new analysis. If my program detects a buy signal or sells signal on the last day in the data, it prints a message like “You should buy this stock today”.
 
 
 ### The code does the following:
