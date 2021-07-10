@@ -1,5 +1,7 @@
-select*
-from PortfolioProject..CovidDeaths
+
+-- Skills used: Joins, CTE's, Temp Tables, Windows Functions, Aggregate Functions, Creating Views, Converting Data Types
+
+select* from PortfolioProject..CovidDeaths
 where continent is not null
 order by 3,4
 
