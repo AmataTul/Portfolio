@@ -122,4 +122,4 @@ Join PortfolioProject..CovidVaccinations vac
 where dea.continent is not null
 
 
-Select*from PercentPopulationVaccinated
+Select * from PercentPopulationVaccinated
