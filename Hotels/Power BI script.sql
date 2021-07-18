@@ -2,7 +2,6 @@
 Queries used for Power BI Project
 */
 
-
 -- create a temporary table
 with hotels as (
 select * from dbo.['2018$']
