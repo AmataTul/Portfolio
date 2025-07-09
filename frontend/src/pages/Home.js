@@ -132,31 +132,22 @@ const Home = () => {
           </div>
 
           {/* Search and Filter */}
-          <div className="mb-20 space-y-12">
-            <div className="relative max-w-lg mx-auto">
-              <Search className="absolute left-6 top-1/2 transform -translate-y-1/2 text-gray-400" size={24} />
+          <div className="mb-16 space-y-8">
+            <div className="relative max-w-md mx-auto">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
               <Input
                 type="text"
                 placeholder="Search projects..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-16 pr-6 py-4 bg-white border-2 border-gray-300 focus:border-red-500 focus:ring-red-500 rounded-2xl text-lg shadow-lg"
+                className="pl-12 pr-4 py-3 bg-white border-2 border-gray-300 focus:border-red-500 focus:ring-red-500 rounded-full text-base shadow-lg"
               />
             </div>
             
-            <Tabs value={activeCategory} onValueChange={setActiveCategory} className="w-full">
-              <TabsList className="grid w-full grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-3 bg-white border-2 border-gray-300 rounded-3xl p-3 shadow-xl">
-                {categories.map((category) => (
-                  <TabsTrigger
-                    key={category}
-                    value={category}
-                    className="text-sm font-semibold transition-all duration-300 data-[state=active]:bg-red-600 data-[state=active]:text-white data-[state=active]:shadow-lg hover:bg-red-50 rounded-2xl py-4 px-6 whitespace-nowrap"
-                  >
-                    {category === 'All' ? 'ALL' : category.toUpperCase()}
-                  </TabsTrigger>
-                ))}
-              </TabsList>
-            </Tabs>
+            <CategoryTabs 
+              activeCategory={activeCategory} 
+              setActiveCategory={setActiveCategory} 
+            />
           </div>
 
           {/* Featured Projects */}
