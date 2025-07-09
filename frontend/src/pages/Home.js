@@ -60,7 +60,7 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100">
+    <div className="min-h-screen bg-gray-50">
       {/* Modern Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-red-600 via-red-500 to-red-700 text-white overflow-hidden">
         {/* Floating Geometric Elements */}
@@ -76,7 +76,6 @@ const Home = () => {
           {/* Professional Badge */}
           <div className="flex justify-center mb-12">
             <div className="inline-flex items-center bg-white/20 backdrop-blur-lg rounded-full px-8 py-4 border border-white/30 shadow-2xl">
-              <Rocket className="w-6 h-6 mr-3 text-red-200" />
               <span className="text-lg font-semibold tracking-wide">PERFORMANCE MARKETING STRATEGIST</span>
             </div>
           </div>
@@ -106,7 +105,6 @@ const Home = () => {
                   className="group inline-flex items-center justify-center px-10 py-5 bg-white text-red-600 rounded-full font-bold text-lg hover:bg-red-50 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 hover:scale-105"
                 >
                   LET'S DRIVE RESULTS
-                  <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
                 <a
                   href="/about"
@@ -124,7 +122,7 @@ const Home = () => {
                 <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl hover:bg-white/15 transition-all duration-300 hover:scale-105">
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mr-4">
-                      <Target className="w-8 h-8 text-red-200" />
+                      <span className="text-2xl">🎯</span>
                     </div>
                     <div>
                       <div className="text-4xl font-black text-white mb-1">80+</div>
@@ -137,7 +135,7 @@ const Home = () => {
                 <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl hover:bg-white/15 transition-all duration-300 hover:scale-105">
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mr-4">
-                      <TrendingUp className="w-8 h-8 text-red-200" />
+                      <span className="text-2xl">📈</span>
                     </div>
                     <div>
                       <div className="text-4xl font-black text-white mb-1">300%</div>
@@ -150,7 +148,7 @@ const Home = () => {
                 <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl hover:bg-white/15 transition-all duration-300 hover:scale-105">
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mr-4">
-                      <Award className="w-8 h-8 text-red-200" />
+                      <span className="text-2xl">🏆</span>
                     </div>
                     <div>
                       <div className="text-4xl font-black text-white mb-1">5+</div>
@@ -177,7 +175,7 @@ const Home = () => {
         <div className="absolute bottom-0 left-0 right-0">
           <svg viewBox="0 0 1440 200" className="w-full h-auto">
             <path
-              fill="white"
+              fill="#f9fafb"
               fillOpacity="1"
               d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,144C960,149,1056,139,1152,128C1248,117,1344,107,1392,101.3L1440,96L1440,200L1392,200C1344,200,1248,200,1152,200C1056,200,960,200,864,200C768,200,672,200,576,200C480,200,384,200,288,200C192,200,96,200,48,200L0,200Z"
             ></path>
@@ -185,25 +183,23 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Instagram-style Profile Header */}
+      <InstagramHeader />
+
       {/* Brand Marquee */}
       <BrandMarquee />
 
-      {/* Portfolio Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          {/* Section Header */}
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-6 md:mb-8 tracking-tight">
-              CAMPAIGN SHOWCASE
-            </h2>
-            <p className="text-lg md:text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto font-light px-4">
-              Strategic campaigns that don't just look good — they 
-              <span className="font-semibold text-red-600"> drive measurable business growth</span> and ROI
-            </p>
-          </div>
+      {/* Instagram-style Stories Bar */}
+      <StoriesBar 
+        activeCategory={activeCategory} 
+        setActiveCategory={setActiveCategory} 
+      />
 
-          {/* Search and Filter */}
-          <div className="mb-16 space-y-8">
+      {/* Instagram-style Portfolio Grid */}
+      <section className="bg-gray-50 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Search Bar */}
+          <div className="mb-8">
             <div className="relative max-w-md mx-auto">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
               <Input
@@ -211,52 +207,33 @@ const Home = () => {
                 placeholder="Search campaigns..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-12 pr-4 py-3 bg-white border-2 border-gray-300 focus:border-red-500 focus:ring-red-500 rounded-full text-base shadow-lg"
+                className="pl-12 pr-4 py-3 bg-white border border-gray-300 focus:border-red-500 focus:ring-red-500 rounded-full text-base shadow-sm"
               />
             </div>
-            
-            <CategoryTabs 
-              activeCategory={activeCategory} 
-              setActiveCategory={setActiveCategory} 
-            />
           </div>
 
-          {/* Featured Projects */}
-          {featuredProjects.length > 0 && (
-            <div className="mb-16">
-              <h3 className="text-2xl md:text-3xl font-black text-gray-900 mb-8 flex items-center">
-                <Sparkles className="w-6 h-6 mr-3 text-red-600" />
-                AWARD-WINNING CAMPAIGNS
-              </h3>
-              <div className={`grid ${getGridClass(featuredProjects)} gap-4 md:gap-6`}>
-                {featuredProjects.map((project) => (
-                  <ProjectCard 
-                    key={project.id} 
-                    project={project} 
-                    onClick={handleProjectClick}
-                  />
-                ))}
-              </div>
+          {/* Grid View Toggle */}
+          <div className="flex items-center justify-center mb-8">
+            <div className="flex items-center bg-white rounded-full p-1 shadow-sm border border-gray-200">
+              <button className="p-2 text-red-600">
+                <Grid3X3 size={20} />
+              </button>
+              <button className="p-2 text-gray-400">
+                <MoreHorizontal size={20} />
+              </button>
             </div>
-          )}
+          </div>
 
-          {/* Regular Projects */}
-          {regularProjects.length > 0 && (
-            <div>
-              <h3 className="text-2xl md:text-3xl font-black text-gray-900 mb-8">
-                COMPLETE PORTFOLIO
-              </h3>
-              <div className={`grid ${getGridClass(regularProjects)} gap-4 md:gap-6`}>
-                {regularProjects.map((project) => (
-                  <ProjectCard 
-                    key={project.id} 
-                    project={project} 
-                    onClick={handleProjectClick}
-                  />
-                ))}
-              </div>
-            </div>
-          )}
+          {/* Instagram-style Grid */}
+          <div className={`grid gap-1 md:gap-2 ${getGridClass(filteredProjects)}`}>
+            {filteredProjects.map((project) => (
+              <ProjectCard 
+                key={project.id} 
+                project={project} 
+                onClick={handleProjectClick}
+              />
+            ))}
+          </div>
 
           {/* No results message */}
           {filteredProjects.length === 0 && (
@@ -264,70 +241,10 @@ const Home = () => {
               <div className="text-gray-400 mb-8">
                 <Filter size={80} className="mx-auto" />
               </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">No campaigns found</h3>
-              <p className="text-gray-600 text-xl">Try adjusting your search or filter criteria</p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">No campaigns found</h3>
+              <p className="text-gray-600">Try adjusting your search or category filter</p>
             </div>
           )}
-        </div>
-      </section>
-
-      {/* Modern CTA Section */}
-      <section className="relative bg-gradient-to-r from-red-600 via-red-500 to-red-700 text-white py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 left-10 w-40 h-40 bg-white/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-10 right-10 w-32 h-32 bg-white/30 rounded-full blur-2xl animate-float"></div>
-        </div>
-        
-        <div className="relative max-w-5xl mx-auto text-center px-4">
-          <div className="mb-8">
-            <div className="inline-flex items-center bg-white/20 backdrop-blur-lg rounded-full px-6 py-3 border border-white/30 mb-8">
-              <Zap className="w-5 h-5 mr-2 text-red-200" />
-              <span className="text-sm font-semibold tracking-wider">READY TO SCALE YOUR BRAND?</span>
-            </div>
-          </div>
-          
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-6 md:mb-8 tracking-tight leading-tight">
-            LET'S BUILD YOUR
-            <span className="block text-red-200">GROWTH ENGINE</span>
-          </h2>
-          
-          <p className="text-lg sm:text-xl md:text-2xl text-red-100 mb-8 md:mb-12 max-w-3xl mx-auto font-light leading-relaxed">
-            Partner with a <span className="font-semibold text-white">performance marketing strategist</span> who 
-            turns creative campaigns into <span className="font-semibold text-white">revenue machines</span>
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
-            <button
-              onClick={handleEmailClick}
-              className="group inline-flex items-center justify-center px-8 md:px-12 py-4 md:py-5 bg-white text-red-600 rounded-full font-bold text-base md:text-lg hover:bg-red-50 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 hover:scale-105"
-            >
-              START THE CONVERSATION
-              <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <a
-              href="/about"
-              className="inline-flex items-center justify-center px-8 md:px-12 py-4 md:py-5 border-2 md:border-3 border-white text-white rounded-full font-bold text-base md:text-lg hover:bg-white hover:text-red-600 transition-all duration-300 hover:scale-105"
-            >
-              EXPLORE MY EXPERTISE
-            </a>
-          </div>
-
-          {/* Trust Indicators */}
-          <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-white mb-2">ROI-FOCUSED</div>
-              <div className="text-red-200 text-sm">Every campaign optimized for performance</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-white mb-2">DATA-DRIVEN</div>
-              <div className="text-red-200 text-sm">Insights that inform every decision</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-white mb-2">GROWTH-MINDED</div>
-              <div className="text-red-200 text-sm">Strategies built for scalable success</div>
-            </div>
-          </div>
         </div>
       </section>
 
