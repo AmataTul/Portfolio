@@ -45,12 +45,12 @@ const Home = () => {
   const featuredProjects = filteredProjects.filter(project => project.featured);
   const regularProjects = filteredProjects.filter(project => !project.featured);
 
-  // Get grid class based on project orientation
+  // Get grid class based on project orientation - Instagram style
   const getGridClass = (projects) => {
     if (activeCategory === 'Social Media Content & Campaigns') {
-      return 'grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6';
+      return 'grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7'; // More columns for vertical content
     }
-    return 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4';
+    return 'grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5'; // Instagram-style grid
   };
 
   const handleEmailClick = () => {
