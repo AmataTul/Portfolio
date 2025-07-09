@@ -5,7 +5,7 @@ import ProjectModal from '../components/ProjectModal';
 import BrandMarquee from '../components/BrandMarquee';
 import { Tabs, TabsList, TabsTrigger } from '../components/ui/tabs';
 import { Input } from '../components/ui/input';
-import { Search, Filter, Sparkles, TrendingUp, Award, Users } from 'lucide-react';
+import { Search, Filter, Sparkles, TrendingUp, Award, Users, Zap } from 'lucide-react';
 
 const Home = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -44,58 +44,70 @@ const Home = () => {
   const featuredProjects = filteredProjects.filter(project => project.featured);
   const regularProjects = filteredProjects.filter(project => !project.featured);
 
+  // Get grid class based on project orientation
+  const getGridClass = (projects) => {
+    if (activeCategory === 'Social Media Content & Campaigns') {
+      return 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5';
+    }
+    return 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4';
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-red-600 via-red-500 to-red-700 text-white py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-red-600 via-red-500 to-red-700 text-white py-28 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent)]"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.15),transparent)]"></div>
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
         </div>
         
         <div className="relative max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 mb-8">
-              <Sparkles className="w-5 h-5 mr-2 text-red-200" />
-              <span className="text-sm font-medium">Creative Marketing Professional</span>
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-8 py-4 mb-12 shadow-xl">
+              <Zap className="w-6 h-6 mr-3 text-red-200" />
+              <span className="text-lg font-semibold">Creative Marketing Professional</span>
             </div>
             
-            <h1 className="text-6xl md:text-8xl font-bold mb-8 tracking-tight">
-              <span className="block bg-gradient-to-r from-white to-red-100 bg-clip-text text-transparent">
-                Creative
+            <h1 className="text-7xl md:text-9xl font-black mb-12 tracking-tighter leading-none">
+              <span className="block bg-gradient-to-r from-white via-red-100 to-white bg-clip-text text-transparent">
+                BOLD
               </span>
-              <span className="block text-white/95 -mt-4">
-                Strategy
+              <span className="block text-white/95 -mt-6">
+                CREATIVE
+              </span>
+              <span className="block text-red-200 -mt-6 text-5xl md:text-6xl font-bold">
+                STRATEGY
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl mb-12 text-red-100 max-w-4xl mx-auto leading-relaxed">
-              Transforming brands through data-driven creative strategies and compelling visual storytelling 
-              that drives measurable results for industry leaders
+            <p className="text-2xl md:text-3xl mb-16 text-red-100 max-w-5xl mx-auto leading-relaxed font-light">
+              Transforming brands through <span className="font-semibold text-white">data-driven creative strategies</span> and 
+              compelling visual storytelling that drives <span className="font-semibold text-white">measurable results</span> for industry leaders
             </p>
             
-            {/* Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-2xl mb-4">
-                  <Award className="w-8 h-8 text-red-200" />
+            {/* Enhanced Stats */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+              <div className="text-center group">
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 backdrop-blur-sm rounded-3xl mb-6 group-hover:bg-white/30 transition-colors duration-300">
+                  <Award className="w-10 h-10 text-red-200" />
                 </div>
-                <div className="text-3xl font-bold mb-2">50+</div>
-                <div className="text-red-200">Successful Campaigns</div>
+                <div className="text-5xl font-black mb-3">80+</div>
+                <div className="text-red-200 text-lg font-medium">Successful Campaigns</div>
               </div>
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-2xl mb-4">
-                  <Users className="w-8 h-8 text-red-200" />
+              <div className="text-center group">
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 backdrop-blur-sm rounded-3xl mb-6 group-hover:bg-white/30 transition-colors duration-300">
+                  <Users className="w-10 h-10 text-red-200" />
                 </div>
-                <div className="text-3xl font-bold mb-2">3</div>
-                <div className="text-red-200">Fortune 500 Clients</div>
+                <div className="text-5xl font-black mb-3">5+</div>
+                <div className="text-red-200 text-lg font-medium">Years Experience</div>
               </div>
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-2xl mb-4">
-                  <TrendingUp className="w-8 h-8 text-red-200" />
+              <div className="text-center group">
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 backdrop-blur-sm rounded-3xl mb-6 group-hover:bg-white/30 transition-colors duration-300">
+                  <TrendingUp className="w-10 h-10 text-red-200" />
                 </div>
-                <div className="text-3xl font-bold mb-2">300%</div>
-                <div className="text-red-200">Avg. Engagement Increase</div>
+                <div className="text-5xl font-black mb-3">300%</div>
+                <div className="text-red-200 text-lg font-medium">Avg. Engagement Increase</div>
               </div>
             </div>
           </div>
@@ -106,40 +118,41 @@ const Home = () => {
       <BrandMarquee />
 
       {/* Portfolio Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Featured Work
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-black text-gray-900 mb-8 tracking-tight">
+              FEATURED WORK
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A showcase of creative campaigns and strategic initiatives that delivered exceptional results for leading brands
+            <p className="text-2xl text-gray-600 max-w-4xl mx-auto font-light">
+              A curated showcase of creative campaigns and strategic initiatives that delivered 
+              <span className="font-semibold text-red-600"> exceptional results</span> for leading brands
             </p>
           </div>
 
           {/* Search and Filter */}
-          <div className="mb-16 space-y-8">
-            <div className="relative max-w-md mx-auto">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+          <div className="mb-20 space-y-12">
+            <div className="relative max-w-lg mx-auto">
+              <Search className="absolute left-6 top-1/2 transform -translate-y-1/2 text-gray-400" size={24} />
               <Input
                 type="text"
                 placeholder="Search projects..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-12 pr-4 py-3 bg-white border-2 border-gray-200 focus:border-red-400 focus:ring-red-400 rounded-full text-lg"
+                className="pl-16 pr-6 py-4 bg-white border-2 border-gray-300 focus:border-red-500 focus:ring-red-500 rounded-2xl text-lg shadow-lg"
               />
             </div>
             
             <Tabs value={activeCategory} onValueChange={setActiveCategory} className="w-full">
-              <TabsList className="grid w-full grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 bg-white border-2 border-gray-200 rounded-2xl p-2 shadow-lg">
+              <TabsList className="grid w-full grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-3 bg-white border-2 border-gray-300 rounded-3xl p-3 shadow-xl">
                 {categories.map((category) => (
                   <TabsTrigger
                     key={category}
                     value={category}
-                    className="text-sm font-medium transition-all duration-300 data-[state=active]:bg-red-600 data-[state=active]:text-white data-[state=active]:shadow-lg hover:bg-red-50 rounded-xl py-3 px-4 whitespace-nowrap"
+                    className="text-sm font-semibold transition-all duration-300 data-[state=active]:bg-red-600 data-[state=active]:text-white data-[state=active]:shadow-lg hover:bg-red-50 rounded-2xl py-4 px-6 whitespace-nowrap"
                   >
-                    {category}
+                    {category === 'All' ? 'ALL' : category.toUpperCase()}
                   </TabsTrigger>
                 ))}
               </TabsList>
@@ -148,12 +161,12 @@ const Home = () => {
 
           {/* Featured Projects */}
           {featuredProjects.length > 0 && (
-            <div className="mb-16">
-              <h3 className="text-2xl font-bold text-gray-900 mb-8 flex items-center">
-                <Sparkles className="w-6 h-6 mr-2 text-red-600" />
-                Featured Projects
+            <div className="mb-20">
+              <h3 className="text-3xl font-black text-gray-900 mb-12 flex items-center">
+                <Sparkles className="w-8 h-8 mr-3 text-red-600" />
+                FEATURED PROJECTS
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className={`grid ${getGridClass(featuredProjects)} gap-8`}>
                 {featuredProjects.map((project) => (
                   <ProjectCard 
                     key={project.id} 
@@ -168,10 +181,10 @@ const Home = () => {
           {/* Regular Projects */}
           {regularProjects.length > 0 && (
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-8">
-                All Projects
+              <h3 className="text-3xl font-black text-gray-900 mb-12">
+                ALL PROJECTS
               </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              <div className={`grid ${getGridClass(regularProjects)} gap-6`}>
                 {regularProjects.map((project) => (
                   <ProjectCard 
                     key={project.id} 
@@ -185,38 +198,44 @@ const Home = () => {
 
           {/* No results message */}
           {filteredProjects.length === 0 && (
-            <div className="text-center py-20">
-              <div className="text-gray-400 mb-6">
-                <Filter size={64} className="mx-auto" />
+            <div className="text-center py-24">
+              <div className="text-gray-400 mb-8">
+                <Filter size={80} className="mx-auto" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">No projects found</h3>
-              <p className="text-gray-600 text-lg">Try adjusting your search or filter criteria</p>
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">No projects found</h3>
+              <p className="text-gray-600 text-xl">Try adjusting your search or filter criteria</p>
             </div>
           )}
         </div>
       </section>
 
       {/* Call to Action */}
-      <section className="bg-gradient-to-r from-red-600 to-red-700 text-white py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready to Transform Your Brand?
+      <section className="relative bg-gradient-to-r from-red-600 via-red-500 to-red-700 text-white py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+        </div>
+        
+        <div className="relative max-w-5xl mx-auto text-center">
+          <h2 className="text-5xl md:text-6xl font-black mb-8 tracking-tight">
+            READY TO TRANSFORM YOUR BRAND?
           </h2>
-          <p className="text-xl text-red-100 mb-8 max-w-2xl mx-auto">
-            Let's collaborate to create impactful campaigns that drive results and elevate your brand presence
+          <p className="text-2xl text-red-100 mb-12 max-w-3xl mx-auto font-light">
+            Let's collaborate to create <span className="font-semibold text-white">impactful campaigns</span> that 
+            drive results and elevate your brand presence
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a
               href="mailto:amata.marketing@example.com"
-              className="inline-flex items-center justify-center px-8 py-4 bg-white text-red-600 rounded-full font-semibold hover:bg-red-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              className="inline-flex items-center justify-center px-12 py-5 bg-white text-red-600 rounded-full font-bold text-lg hover:bg-red-50 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 hover:scale-105"
             >
-              Get In Touch
+              LET'S CONNECT
             </a>
             <a
               href="/about"
-              className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-red-600 transition-all duration-300"
+              className="inline-flex items-center justify-center px-12 py-5 border-3 border-white text-white rounded-full font-bold text-lg hover:bg-white hover:text-red-600 transition-all duration-300 hover:scale-105"
             >
-              Learn More
+              LEARN MORE
             </a>
           </div>
         </div>
