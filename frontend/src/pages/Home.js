@@ -3,9 +3,10 @@ import { portfolioProjects, categories, contactInfo } from '../data/mock';
 import ProjectCard from '../components/ProjectCard';
 import ProjectModal from '../components/ProjectModal';
 import BrandMarquee from '../components/BrandMarquee';
-import CategoryTabs from '../components/CategoryTabs';
+import InstagramHeader from '../components/InstagramHeader';
+import StoriesBar from '../components/StoriesBar';
 import { Input } from '../components/ui/input';
-import { Search, Filter, Sparkles, TrendingUp, Award, Users, Zap, ArrowRight, Target, Rocket } from 'lucide-react';
+import { Search, Filter, Sparkles, Grid3X3, MoreHorizontal } from 'lucide-react';
 
 const Home = () => {
   const [selectedProject, setSelectedProject] = useState(null);
