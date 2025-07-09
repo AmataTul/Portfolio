@@ -69,45 +69,45 @@ const Home = () => {
               <span className="text-lg font-semibold">Creative Marketing Professional</span>
             </div>
             
-            <h1 className="text-7xl md:text-9xl font-black mb-12 tracking-tighter leading-none">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black mb-8 md:mb-12 tracking-tighter leading-none">
               <span className="block bg-gradient-to-r from-white via-red-100 to-white bg-clip-text text-transparent">
                 BOLD
               </span>
-              <span className="block text-white/95 -mt-6">
+              <span className="block text-white/95 -mt-2 md:-mt-6">
                 CREATIVE
               </span>
-              <span className="block text-red-200 -mt-6 text-5xl md:text-6xl font-bold">
+              <span className="block text-red-200 -mt-2 md:-mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
                 STRATEGY
               </span>
             </h1>
             
-            <p className="text-2xl md:text-3xl mb-16 text-red-100 max-w-5xl mx-auto leading-relaxed font-light">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-12 md:mb-16 text-red-100 max-w-5xl mx-auto leading-relaxed font-light px-4">
               Transforming brands through <span className="font-semibold text-white">data-driven creative strategies</span> and 
               compelling visual storytelling that drives <span className="font-semibold text-white">measurable results</span> for industry leaders
             </p>
             
             {/* Enhanced Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-12 max-w-5xl mx-auto px-4">
               <div className="text-center group">
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 backdrop-blur-sm rounded-3xl mb-6 group-hover:bg-white/30 transition-colors duration-300">
-                  <Award className="w-10 h-10 text-red-200" />
+                <div className="inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-white/20 backdrop-blur-sm rounded-3xl mb-4 md:mb-6 group-hover:bg-white/30 transition-colors duration-300">
+                  <Award className="w-8 h-8 md:w-10 md:h-10 text-red-200" />
                 </div>
-                <div className="text-5xl font-black mb-3">80+</div>
-                <div className="text-red-200 text-lg font-medium">Successful Campaigns</div>
+                <div className="text-3xl md:text-4xl lg:text-5xl font-black mb-2 md:mb-3">80+</div>
+                <div className="text-red-200 text-base md:text-lg font-medium">Successful Campaigns</div>
               </div>
               <div className="text-center group">
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 backdrop-blur-sm rounded-3xl mb-6 group-hover:bg-white/30 transition-colors duration-300">
-                  <Users className="w-10 h-10 text-red-200" />
+                <div className="inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-white/20 backdrop-blur-sm rounded-3xl mb-4 md:mb-6 group-hover:bg-white/30 transition-colors duration-300">
+                  <Users className="w-8 h-8 md:w-10 md:h-10 text-red-200" />
                 </div>
-                <div className="text-5xl font-black mb-3">5+</div>
-                <div className="text-red-200 text-lg font-medium">Years Experience</div>
+                <div className="text-3xl md:text-4xl lg:text-5xl font-black mb-2 md:mb-3">5+</div>
+                <div className="text-red-200 text-base md:text-lg font-medium">Years Experience</div>
               </div>
               <div className="text-center group">
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 backdrop-blur-sm rounded-3xl mb-6 group-hover:bg-white/30 transition-colors duration-300">
-                  <TrendingUp className="w-10 h-10 text-red-200" />
+                <div className="inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-white/20 backdrop-blur-sm rounded-3xl mb-4 md:mb-6 group-hover:bg-white/30 transition-colors duration-300">
+                  <TrendingUp className="w-8 h-8 md:w-10 md:h-10 text-red-200" />
                 </div>
-                <div className="text-5xl font-black mb-3">300%</div>
-                <div className="text-red-200 text-lg font-medium">Avg. Engagement Increase</div>
+                <div className="text-3xl md:text-4xl lg:text-5xl font-black mb-2 md:mb-3">300%</div>
+                <div className="text-red-200 text-base md:text-lg font-medium">Avg. Engagement Increase</div>
               </div>
             </div>
           </div>
