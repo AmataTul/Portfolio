@@ -203,29 +203,6 @@ const Home = () => {
       {/* Marketing Portfolio Grid */}
       <section className="bg-gray-50 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Section Header */}
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Performance Marketing Portfolio
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Strategic marketing campaigns delivering measurable results through data-driven approaches, 
-              conversion optimization, and growth marketing expertise
-            </p>
-          </div>
-
-          {/* Grid View Toggle */}
-          <div className="flex items-center justify-center mb-8">
-            <div className="flex items-center bg-white rounded-full p-1 shadow-sm border border-gray-200">
-              <button className="p-3 text-red-600 bg-red-50 rounded-full">
-                <Grid3X3 size={20} />
-              </button>
-              <button className="p-3 text-gray-400 hover:text-gray-600 transition-colors">
-                <MoreHorizontal size={20} />
-              </button>
-            </div>
-          </div>
-
           {/* Professional Portfolio Grid */}
           <div className={`grid gap-2 ${getGridClass(filteredProjects)}`}>
             {filteredProjects.map((project) => (
@@ -241,7 +218,7 @@ const Home = () => {
           {filteredProjects.length === 0 && (
             <div className="text-center py-24">
               <div className="text-gray-400 mb-8">
-                <Grid3X3 size={80} className="mx-auto" />
+                <Target size={80} className="mx-auto" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">No marketing campaigns found</h3>
               <p className="text-gray-600">Try adjusting your search terms or category filter to find relevant marketing projects</p>
