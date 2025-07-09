@@ -2,7 +2,7 @@
 export const portfolioProjects = [
   {
     id: 1,
-    title: "Brand Identity System",
+    title: "Beat by Dre Brand Identity System",
     category: "Graphic Design & Marketing Materials",
     client: "Beat by Dre",
     description: "Comprehensive brand identity system including logos, color palettes, typography guides, and brand guidelines for product launch campaign.",
@@ -12,11 +12,12 @@ export const portfolioProjects = [
       "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&h=600&fit=crop"
     ],
     type: "image",
-    featured: true
+    featured: true,
+    orientation: "horizontal"
   },
   {
     id: 2,
-    title: "Digital Campaign Launch",
+    title: "Disney+ Digital Campaign Launch",
     category: "Advertising",
     client: "Disney",
     description: "Multi-platform digital advertising campaign for Disney+ streaming service, including display ads, video commercials, and interactive banners.",
@@ -25,23 +26,39 @@ export const portfolioProjects = [
       "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop"
     ],
     type: "image",
-    featured: true
+    featured: true,
+    orientation: "horizontal"
   },
   {
     id: 3,
-    title: "Creative Suite Instagram Campaign",
+    title: "Adobe Creative Suite Instagram Reels",
     category: "Social Media Content & Campaigns",
     client: "Adobe",
-    description: "Engaging Instagram reels and posts showcasing Creative Suite capabilities through dynamic visual storytelling and user-generated content.",
+    description: "Engaging Instagram reels and TikTok content showcasing Creative Suite capabilities through dynamic vertical storytelling and user-generated content.",
     images: [
-      "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop"
+      "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=800&fit=crop"
     ],
     type: "video",
-    featured: true
+    featured: true,
+    orientation: "vertical"
   },
   {
     id: 4,
-    title: "Product Photography Series",
+    title: "High School Financial Literacy Animation",
+    category: "Illustrations & Educational Content",
+    client: "Educational Initiative",
+    description: "Educational animation video series designed for high school students covering financial literacy, budgeting, and career planning concepts.",
+    images: [
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop"
+    ],
+    type: "video",
+    featured: true,
+    orientation: "horizontal",
+    videoUrl: "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL"
+  },
+  {
+    id: 5,
+    title: "Beat by Dre Product Photography",
     category: "Photography Projects",
     client: "Beat by Dre",
     description: "High-end product photography series showcasing headphones with dynamic lighting and creative composition for e-commerce and marketing materials.",
@@ -51,11 +68,12 @@ export const portfolioProjects = [
       "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=800&h=600&fit=crop"
     ],
     type: "image",
-    featured: false
+    featured: false,
+    orientation: "horizontal"
   },
   {
-    id: 5,
-    title: "Brand Strategy & Visual Identity",
+    id: 6,
+    title: "Disney Brand Strategy & Visual Identity",
     category: "Creative Concepts & Branding",
     client: "Disney",
     description: "Comprehensive brand strategy development including market research, competitive analysis, and visual identity system for new Disney product line.",
@@ -64,11 +82,12 @@ export const portfolioProjects = [
       "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=800&h=600&fit=crop"
     ],
     type: "image",
-    featured: false
+    featured: false,
+    orientation: "horizontal"
   },
   {
-    id: 6,
-    title: "Marketing Collateral Suite",
+    id: 7,
+    title: "Adobe Conference Marketing Collateral",
     category: "Graphic Design & Marketing Materials",
     client: "Adobe",
     description: "Complete marketing collateral suite including brochures, flyers, business cards, and presentation templates for creative conference.",
@@ -77,11 +96,12 @@ export const portfolioProjects = [
       "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop"
     ],
     type: "image",
-    featured: false
+    featured: false,
+    orientation: "horizontal"
   },
   {
-    id: 7,
-    title: "Print & Digital Ad Campaign",
+    id: 8,
+    title: "Beat by Dre Print & Digital Campaign",
     category: "Advertising",
     client: "Beat by Dre",
     description: "Integrated print and digital advertising campaign for new headphone launch, including magazine ads, billboards, and online banners.",
@@ -90,23 +110,27 @@ export const portfolioProjects = [
       "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&h=600&fit=crop"
     ],
     type: "image",
-    featured: false
-  },
-  {
-    id: 8,
-    title: "Social Media Content Strategy",
-    category: "Social Media Content & Campaigns",
-    client: "Disney",
-    description: "Comprehensive social media content strategy with custom graphics, video content, and interactive posts for multiple Disney brand accounts.",
-    images: [
-      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop"
-    ],
-    type: "video",
-    featured: false
+    featured: false,
+    orientation: "horizontal"
   },
   {
     id: 9,
-    title: "Event Photography Coverage",
+    title: "Disney Social Media Campaign",
+    category: "Social Media Content & Campaigns",
+    client: "Disney",
+    description: "Multi-platform social media campaign with custom graphics, video content, and interactive Instagram stories for Disney brand accounts.",
+    images: [
+      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=800&fit=crop",
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=800&fit=crop",
+      "https://images.unsplash.com/photo-1489399627699-e5c5f1e8f6c6?w=600&h=800&fit=crop"
+    ],
+    type: "image",
+    featured: false,
+    orientation: "vertical"
+  },
+  {
+    id: 10,
+    title: "Adobe Event Photography Coverage",
     category: "Photography Projects",
     client: "Adobe",
     description: "Professional event photography coverage for Adobe Creative Conference, capturing keynotes, workshops, and networking moments.",
@@ -115,11 +139,12 @@ export const portfolioProjects = [
       "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=600&fit=crop"
     ],
     type: "image",
-    featured: false
+    featured: false,
+    orientation: "horizontal"
   },
   {
-    id: 10,
-    title: "Brand Positioning Strategy",
+    id: 11,
+    title: "Beat by Dre Brand Positioning Strategy",
     category: "Creative Concepts & Branding",
     client: "Beat by Dre",
     description: "Strategic brand positioning and messaging framework development for youth market expansion, including consumer research and competitive analysis.",
@@ -127,11 +152,12 @@ export const portfolioProjects = [
       "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop"
     ],
     type: "image",
-    featured: false
+    featured: false,
+    orientation: "horizontal"
   },
   {
-    id: 11,
-    title: "Promotional Materials Design",
+    id: 12,
+    title: "Disney Promotional Materials Design",
     category: "Graphic Design & Marketing Materials",
     client: "Disney",
     description: "Creative promotional materials including posters, banners, and digital assets for Disney theme park seasonal campaigns.",
@@ -140,19 +166,50 @@ export const portfolioProjects = [
       "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop"
     ],
     type: "image",
-    featured: false
+    featured: false,
+    orientation: "horizontal"
   },
   {
-    id: 12,
-    title: "Instagram Reels Campaign",
+    id: 13,
+    title: "Adobe TikTok Content Strategy",
     category: "Social Media Content & Campaigns",
     client: "Adobe",
-    description: "Creative Instagram reels campaign showcasing design tutorials and creative process behind Adobe Creative Suite features.",
+    description: "Creative TikTok and Instagram reels campaign showcasing design tutorials and creative process behind Adobe Creative Suite features.",
     images: [
-      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop"
+      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=800&fit=crop"
     ],
     type: "video",
-    featured: false
+    featured: false,
+    orientation: "vertical"
+  },
+  {
+    id: 14,
+    title: "Career Planning Educational Illustrations",
+    category: "Illustrations & Educational Content",
+    client: "Educational Initiative",
+    description: "Series of educational illustrations and infographics designed for high school career counseling programs and workshops.",
+    images: [
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop"
+    ],
+    type: "image",
+    featured: false,
+    orientation: "horizontal"
+  },
+  {
+    id: 15,
+    title: "Multi-Platform Social Campaign",
+    category: "Social Media Content & Campaigns",
+    client: "Beat by Dre",
+    description: "Cross-platform social media campaign featuring vertical reels, story content, and carousel posts for product launch.",
+    images: [
+      "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=600&h=800&fit=crop",
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=800&fit=crop",
+      "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=600&h=800&fit=crop"
+    ],
+    type: "image",
+    featured: false,
+    orientation: "vertical"
   }
 ];
 
@@ -166,7 +223,8 @@ export const categories = [
   "Advertising", 
   "Social Media Content & Campaigns",
   "Photography Projects",
-  "Creative Concepts & Branding"
+  "Creative Concepts & Branding",
+  "Illustrations & Educational Content"
 ];
 
 export const tools = [
