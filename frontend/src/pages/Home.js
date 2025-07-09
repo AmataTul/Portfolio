@@ -5,7 +5,7 @@ import ProjectModal from '../components/ProjectModal';
 import BrandMarquee from '../components/BrandMarquee';
 import StoriesBar from '../components/StoriesBar';
 import ProfessionalFilter from '../components/ProfessionalFilter';
-import { Grid3X3, MoreHorizontal, ArrowRight } from 'lucide-react';
+import { ArrowRight, Target } from 'lucide-react';
 
 const Home = () => {
   const [selectedProject, setSelectedProject] = useState(null);
