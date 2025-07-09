@@ -207,24 +207,24 @@ const Home = () => {
           <div className="absolute inset-0 bg-pattern"></div>
         </div>
         
-        <div className="relative max-w-5xl mx-auto text-center">
-          <h2 className="text-5xl md:text-6xl font-black mb-8 tracking-tight">
+        <div className="relative max-w-5xl mx-auto text-center px-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-6 md:mb-8 tracking-tight">
             READY TO TRANSFORM YOUR BRAND?
           </h2>
-          <p className="text-2xl text-red-100 mb-12 max-w-3xl mx-auto font-light">
+          <p className="text-lg sm:text-xl md:text-2xl text-red-100 mb-8 md:mb-12 max-w-3xl mx-auto font-light">
             Let's collaborate to create <span className="font-semibold text-white">impactful campaigns</span> that 
             drive results and elevate your brand presence
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
             <a
               href="mailto:amata.marketing@example.com"
-              className="inline-flex items-center justify-center px-12 py-5 bg-white text-red-600 rounded-full font-bold text-lg hover:bg-red-50 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 hover:scale-105"
+              className="inline-flex items-center justify-center px-8 md:px-12 py-4 md:py-5 bg-white text-red-600 rounded-full font-bold text-base md:text-lg hover:bg-red-50 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 hover:scale-105"
             >
               LET'S CONNECT
             </a>
             <a
               href="/about"
-              className="inline-flex items-center justify-center px-12 py-5 border-3 border-white text-white rounded-full font-bold text-lg hover:bg-white hover:text-red-600 transition-all duration-300 hover:scale-105"
+              className="inline-flex items-center justify-center px-8 md:px-12 py-4 md:py-5 border-2 md:border-3 border-white text-white rounded-full font-bold text-base md:text-lg hover:bg-white hover:text-red-600 transition-all duration-300 hover:scale-105"
             >
               LEARN MORE
             </a>
