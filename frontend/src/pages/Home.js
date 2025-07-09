@@ -3,7 +3,7 @@ import { portfolioProjects, categories } from '../data/mock';
 import ProjectCard from '../components/ProjectCard';
 import ProjectModal from '../components/ProjectModal';
 import BrandMarquee from '../components/BrandMarquee';
-import { Tabs, TabsList, TabsTrigger } from '../components/ui/tabs';
+import CategoryTabs from '../components/CategoryTabs';
 import { Input } from '../components/ui/input';
 import { Search, Filter, Sparkles, TrendingUp, Award, Users, Zap } from 'lucide-react';
 
