@@ -152,12 +152,12 @@ const Home = () => {
 
           {/* Featured Projects */}
           {featuredProjects.length > 0 && (
-            <div className="mb-20">
-              <h3 className="text-3xl font-black text-gray-900 mb-12 flex items-center">
-                <Sparkles className="w-8 h-8 mr-3 text-red-600" />
+            <div className="mb-16">
+              <h3 className="text-2xl md:text-3xl font-black text-gray-900 mb-8 flex items-center">
+                <Sparkles className="w-6 h-6 mr-3 text-red-600" />
                 FEATURED PROJECTS
               </h3>
-              <div className={`grid ${getGridClass(featuredProjects)} gap-8`}>
+              <div className={`grid ${getGridClass(featuredProjects)} gap-4 md:gap-6`}>
                 {featuredProjects.map((project) => (
                   <ProjectCard 
                     key={project.id} 
@@ -172,10 +172,10 @@ const Home = () => {
           {/* Regular Projects */}
           {regularProjects.length > 0 && (
             <div>
-              <h3 className="text-3xl font-black text-gray-900 mb-12">
+              <h3 className="text-2xl md:text-3xl font-black text-gray-900 mb-8">
                 ALL PROJECTS
               </h3>
-              <div className={`grid ${getGridClass(regularProjects)} gap-6`}>
+              <div className={`grid ${getGridClass(regularProjects)} gap-4 md:gap-6`}>
                 {regularProjects.map((project) => (
                   <ProjectCard 
                     key={project.id} 
