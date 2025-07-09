@@ -3,10 +3,9 @@ import { portfolioProjects, categories, contactInfo } from '../data/mock';
 import ProjectCard from '../components/ProjectCard';
 import ProjectModal from '../components/ProjectModal';
 import BrandMarquee from '../components/BrandMarquee';
-import InstagramHeader from '../components/InstagramHeader';
 import StoriesBar from '../components/StoriesBar';
-import { Input } from '../components/ui/input';
-import { Search, Filter, Sparkles, Grid3X3, MoreHorizontal } from 'lucide-react';
+import ProfessionalFilter from '../components/ProfessionalFilter';
+import { Grid3X3, MoreHorizontal, ArrowRight } from 'lucide-react';
 
 const Home = () => {
   const [selectedProject, setSelectedProject] = useState(null);
