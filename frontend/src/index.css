@@ -266,7 +266,33 @@ html {
   transform: translateY(-8px) rotateX(10deg);
 }
 
-/* Fashion-forward grid layouts */
+/* Fixed icon spacing and sizing */
+.w-18 {
+  width: 4.5rem;
+}
+
+.h-18 {
+  height: 4.5rem;
+}
+
+/* Professional spacing */
+.min-w-fit {
+  min-width: fit-content;
+}
+
+/* Enhanced professional styling */
+.max-w-20 {
+  max-width: 5rem;
+}
+
+/* Professional grid gaps */
+.gap-0\.5 {
+  gap: 0.125rem;
+}
+
+.gap-1\.5 {
+  gap: 0.375rem;
+}
 .masonry-grid {
   column-count: 3;
   column-gap: 1.5rem;
