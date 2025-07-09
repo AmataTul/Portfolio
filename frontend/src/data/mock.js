@@ -1,170 +1,258 @@
-// Mock data for portfolio website
+// Mock data for Amata T. portfolio website
 export const portfolioProjects = [
   {
     id: 1,
-    title: "Nike Summer Campaign",
-    category: "Social Media Posts",
-    client: "Nike",
-    description: "Created engaging Instagram posts and stories for Nike's summer collection launch",
-    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop",
-    type: "image"
+    title: "Brand Identity System",
+    category: "Graphic Design & Marketing Materials",
+    client: "Beat by Dre",
+    description: "Comprehensive brand identity system including logos, color palettes, typography guides, and brand guidelines for product launch campaign.",
+    images: [
+      "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&h=600&fit=crop"
+    ],
+    type: "image",
+    featured: true
   },
   {
     id: 2,
-    title: "Coca-Cola Brand Event",
-    category: "Events Management",
-    client: "Coca-Cola",
-    description: "Organized and managed a brand activation event for 500+ attendees",
-    image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=400&h=400&fit=crop",
-    type: "image"
+    title: "Digital Campaign Launch",
+    category: "Advertising",
+    client: "Disney",
+    description: "Multi-platform digital advertising campaign for Disney+ streaming service, including display ads, video commercials, and interactive banners.",
+    images: [
+      "https://images.unsplash.com/photo-1489399627699-e5c5f1e8f6c6?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop"
+    ],
+    type: "image",
+    featured: true
   },
   {
     id: 3,
-    title: "Apple Product Launch Video",
-    category: "Video Content",
-    client: "Apple",
-    description: "Produced promotional video content for iPhone launch campaign",
-    image: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400&h=400&fit=crop",
-    type: "video"
+    title: "Creative Suite Instagram Campaign",
+    category: "Social Media Content & Campaigns",
+    client: "Adobe",
+    description: "Engaging Instagram reels and posts showcasing Creative Suite capabilities through dynamic visual storytelling and user-generated content.",
+    images: [
+      "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop"
+    ],
+    type: "video",
+    featured: true
   },
   {
     id: 4,
-    title: "Adidas Digital Banner",
-    category: "Digital Ads/Banners",
-    client: "Adidas",
-    description: "Designed interactive digital banners for e-commerce platform",
-    image: "https://images.unsplash.com/photo-1544966503-7cc5ac882d5d?w=400&h=400&fit=crop",
-    type: "image"
+    title: "Product Photography Series",
+    category: "Photography Projects",
+    client: "Beat by Dre",
+    description: "High-end product photography series showcasing headphones with dynamic lighting and creative composition for e-commerce and marketing materials.",
+    images: [
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=800&h=600&fit=crop"
+    ],
+    type: "image",
+    featured: false
   },
   {
     id: 5,
-    title: "Starbucks Print Campaign",
-    category: "Print Ads",
-    client: "Starbucks",
-    description: "Created print advertisements for national magazine placement",
-    image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=400&fit=crop",
-    type: "image"
+    title: "Brand Strategy & Visual Identity",
+    category: "Creative Concepts & Branding",
+    client: "Disney",
+    description: "Comprehensive brand strategy development including market research, competitive analysis, and visual identity system for new Disney product line.",
+    images: [
+      "https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=800&h=600&fit=crop"
+    ],
+    type: "image",
+    featured: false
   },
   {
     id: 6,
-    title: "McDonald's Branding",
-    category: "Branding Materials",
-    client: "McDonald's",
-    description: "Developed comprehensive branding materials for new menu launch",
-    image: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400&h=400&fit=crop",
-    type: "image"
+    title: "Marketing Collateral Suite",
+    category: "Graphic Design & Marketing Materials",
+    client: "Adobe",
+    description: "Complete marketing collateral suite including brochures, flyers, business cards, and presentation templates for creative conference.",
+    images: [
+      "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop"
+    ],
+    type: "image",
+    featured: false
   },
   {
     id: 7,
-    title: "Samsung Social Strategy",
-    category: "Social Media Posts",
-    client: "Samsung",
-    description: "Developed social media content strategy and visual assets",
-    image: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=400&h=400&fit=crop",
-    type: "image"
+    title: "Print & Digital Ad Campaign",
+    category: "Advertising",
+    client: "Beat by Dre",
+    description: "Integrated print and digital advertising campaign for new headphone launch, including magazine ads, billboards, and online banners.",
+    images: [
+      "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&h=600&fit=crop"
+    ],
+    type: "image",
+    featured: false
   },
   {
     id: 8,
-    title: "Google Tech Conference",
-    category: "Events Management",
-    client: "Google",
-    description: "Managed marketing and promotional activities for tech conference",
-    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=400&fit=crop",
-    type: "image"
+    title: "Social Media Content Strategy",
+    category: "Social Media Content & Campaigns",
+    client: "Disney",
+    description: "Comprehensive social media content strategy with custom graphics, video content, and interactive posts for multiple Disney brand accounts.",
+    images: [
+      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop"
+    ],
+    type: "video",
+    featured: false
   },
   {
     id: 9,
-    title: "Tesla Launch Video",
-    category: "Video Content",
-    client: "Tesla",
-    description: "Created promotional video content for Model S launch",
-    image: "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=400&h=400&fit=crop",
-    type: "video"
+    title: "Event Photography Coverage",
+    category: "Photography Projects",
+    client: "Adobe",
+    description: "Professional event photography coverage for Adobe Creative Conference, capturing keynotes, workshops, and networking moments.",
+    images: [
+      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=600&fit=crop"
+    ],
+    type: "image",
+    featured: false
   },
   {
     id: 10,
-    title: "Microsoft Digital Campaign",
-    category: "Digital Ads/Banners",
-    client: "Microsoft",
-    description: "Designed digital advertising campaign for Office 365",
-    image: "https://images.unsplash.com/photo-1633419461186-7d40a38105ec?w=400&h=400&fit=crop",
-    type: "image"
+    title: "Brand Positioning Strategy",
+    category: "Creative Concepts & Branding",
+    client: "Beat by Dre",
+    description: "Strategic brand positioning and messaging framework development for youth market expansion, including consumer research and competitive analysis.",
+    images: [
+      "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop"
+    ],
+    type: "image",
+    featured: false
   },
   {
     id: 11,
-    title: "Spotify Print Ads",
-    category: "Print Ads",
-    client: "Spotify",
-    description: "Created print advertisements for music streaming service",
-    image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop",
-    type: "image"
+    title: "Promotional Materials Design",
+    category: "Graphic Design & Marketing Materials",
+    client: "Disney",
+    description: "Creative promotional materials including posters, banners, and digital assets for Disney theme park seasonal campaigns.",
+    images: [
+      "https://images.unsplash.com/photo-1489399627699-e5c5f1e8f6c6?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop"
+    ],
+    type: "image",
+    featured: false
   },
   {
     id: 12,
-    title: "Netflix Brand Identity",
-    category: "Branding Materials",
-    client: "Netflix",
-    description: "Developed brand identity materials for new series launch",
-    image: "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=400&h=400&fit=crop",
-    type: "image"
+    title: "Instagram Reels Campaign",
+    category: "Social Media Content & Campaigns",
+    client: "Adobe",
+    description: "Creative Instagram reels campaign showcasing design tutorials and creative process behind Adobe Creative Suite features.",
+    images: [
+      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop"
+    ],
+    type: "video",
+    featured: false
   }
 ];
 
 export const brands = [
-  "Nike", "Coca-Cola", "Apple", "Adidas", "Starbucks", "McDonald's", 
-  "Samsung", "Google", "Tesla", "Microsoft", "Spotify", "Netflix",
-  "Amazon", "Facebook", "Instagram", "YouTube", "Twitter", "LinkedIn"
+  "Beat by Dre", "Disney", "Adobe"
 ];
 
 export const categories = [
   "All",
-  "Social Media Posts",
-  "Events Management", 
-  "Video Content",
-  "Digital Ads/Banners",
-  "Print Ads",
-  "Branding Materials"
+  "Graphic Design & Marketing Materials",
+  "Advertising", 
+  "Social Media Content & Campaigns",
+  "Photography Projects",
+  "Creative Concepts & Branding"
+];
+
+export const tools = [
+  "Google Analytics", "Adobe Analytics", "Google Ads", "Looker Studio", 
+  "HubSpot", "Semrush", "WordPress", "Meta Ads Manager", "MailChimp", 
+  "SQL", "Tableau", "Adobe Photoshop", "Adobe Illustrator", "Canva", 
+  "CapCut", "Figma", "Hotjar", "Trello", "Jira", "Miro", "Notion"
 ];
 
 export const workHistory = [
   {
-    position: "Senior Marketing Coordinator",
-    company: "Creative Solutions Agency",
-    period: "2023 - Present",
+    position: "Marketing Project Manager | Marketing Coordinator",
+    company: "Ute Tribal Enterprises",
+    location: "Fort Duchesne, UT",
+    period: "Feb 2024 – July 2025",
     achievements: [
-      "Led marketing campaigns for 15+ major brands",
-      "Increased social media engagement by 300%",
-      "Managed events with 1000+ attendees",
-      "Created award-winning print and digital campaigns"
+      "Managed full-scope marketing operations across seven diverse business divisions, including e-commerce, retail, food service, fuel, and hospitality",
+      "Led integrated campaigns from strategy to execution, managing 14+ social media accounts, WordPress websites, paid Meta advertising, and cross-platform content creation",
+      "Directed creative development, brand positioning, and performance optimization across all channels",
+      "Collaborated with executive leadership, vendors, and business managers to align marketing efforts with organizational goals",
+      "Oversaw a small team and coordinated cross-functional projects using a hands-on, data-informed approach to drive engagement, growth, and brand visibility"
     ]
   },
   {
-    position: "Marketing Specialist",
-    company: "Digital Marketing Pro",
-    period: "2021 - 2023",
+    position: "Founder & Brand Manager",
+    company: "Friendly Futures (Brand: Aigata)",
+    location: "Remote",
+    period: "May 2023 – Mar 2025",
     achievements: [
-      "Developed brand identities for 20+ startups",
-      "Managed social media accounts with 500K+ followers",
-      "Created video content with 2M+ views",
-      "Coordinated product launch events"
+      "Built and led a direct-to-consumer e-commerce brand from the ground up, overseeing strategy, operations, marketing, and product development",
+      "Managed online storefronts across Amazon, Etsy, eBay, and TikTok Shop, optimizing listings, logistics, and ad performance to maximize visibility and conversions",
+      "Directed brand identity and creative direction for Aigata, producing original product photography, graphics, and promotional content",
+      "Developed marketing strategies tailored to target audiences, including social campaigns, influencer outreach, and seasonal promotions",
+      "Coordinated events for direct customer engagement and managed a small team to scale operations efficiently"
     ]
   },
   {
-    position: "Junior Graphic Designer",
-    company: "Design Studio Inc",
-    period: "2019 - 2021",
+    position: "Business Analyst & Marketing Specialist",
+    company: "Zorina Jewelry Design House, Inc",
+    location: "Remote",
+    period: "Sep 2021 – Apr 2023",
     achievements: [
-      "Designed print materials for Fortune 500 companies",
-      "Created digital assets for e-commerce platforms",
-      "Collaborated with marketing teams on brand campaigns",
-      "Developed visual content for social media"
+      "Supported business growth by combining data analysis with creative marketing strategies for a luxury jewelry brand",
+      "Conducted market research, competitor benchmarking, and consumer behavior analysis to inform product positioning and campaign planning",
+      "Developed and managed digital content, promotional materials, and e-commerce listings to enhance brand visibility and drive sales",
+      "Collaborated with leadership on pricing, inventory optimization, and branding decisions",
+      "Provided insights through sales reports and operational analysis to support data-driven decision-making"
+    ]
+  },
+  {
+    position: "Branding Strategy & Business Analytics Extern",
+    company: "Beats by Dre",
+    location: "Remote",
+    period: "Jan 2023 – Mar 2023",
+    achievements: [
+      "Conducted consumer research and data analysis to support branding and marketing strategy for Beats by Dre",
+      "Utilized SQL and Tableau to identify trends, segment audiences, and assess campaign performance",
+      "Delivered strategic recommendations to enhance Gen Z engagement, improve brand sentiment, and optimize positioning",
+      "Collaborated in a fast-paced, cross-functional environment to translate insights into actionable marketing strategies"
+    ]
+  },
+  {
+    position: "Data Analyst (Adobe Analytics Challenge Competitor)",
+    company: "Adobe x Hilton",
+    location: "Remote",
+    period: "Sep 2022 – Oct 2022",
+    achievements: [
+      "Selected to compete in the Adobe Analytics Challenge among 3,000+ teams",
+      "Analyzed real-world data from Hilton Hotels using Adobe Analytics to uncover customer behavior trends",
+      "Created compelling data visualizations and presented actionable recommendations to improve customer experience and business performance"
     ]
   }
 ];
 
+export const education = {
+  degree: "Bachelor's of Science in Management Information Systems",
+  minor: "Minor in Marketing",
+  university: "Utah State University",
+  honor: "Cum Laude",
+  period: "2019 - 2023"
+};
+
 export const contactInfo = {
-  email: "marketing.coordinator@example.com",
-  linkedin: "https://linkedin.com/in/marketing-coordinator",
+  name: "Amata T.",
+  email: "amata.marketing@example.com",
+  linkedin: "https://linkedin.com/in/amata-marketing",
   phone: "+1 (555) 123-4567",
-  location: "New York, NY"
+  location: "Utah, USA"
 };
