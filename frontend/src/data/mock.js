@@ -309,7 +309,7 @@ export const education = {
 
 export const contactInfo = {
   name: "Amata T.",
-  email: "amata.marketing@example.com",
+  email: "amata.portfolio@gmail.com",
   linkedin: "https://linkedin.com/in/amata-marketing",
   phone: "+1 (555) 123-4567",
   location: "Utah, USA"
