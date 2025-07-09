@@ -60,9 +60,9 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Modern Hero Section */}
+      {/* SEO Optimized Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-red-600 via-red-500 to-red-700 text-white overflow-hidden">
-        {/* Floating Geometric Elements */}
+        {/* Background Elements */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl animate-float"></div>
           <div className="absolute top-40 right-20 w-24 h-24 bg-white/20 rotate-45 blur-lg animate-pulse"></div>
@@ -70,7 +70,7 @@ const Home = () => {
           <div className="absolute bottom-20 right-40 w-28 h-28 bg-white/15 rotate-12 blur-lg animate-pulse"></div>
         </div>
 
-        {/* Main Content */}
+        {/* Hero Content */}
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-32">
           {/* Professional Badge */}
           <div className="flex justify-center mb-12">
@@ -79,10 +79,10 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Split Layout */}
+          {/* Main Content Layout */}
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left Column - Text Content */}
-            <div className="text-left lg:text-left">
+            {/* Left Column - Marketing Message */}
+            <div className="text-left">
               <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-8 leading-none tracking-tight">
                 <span className="block text-white">DRIVE</span>
                 <span className="block text-red-200 -mt-4">RESULTS.</span>
@@ -92,32 +92,32 @@ const Home = () => {
               </h1>
               
               <p className="text-xl md:text-2xl text-red-100 mb-12 leading-relaxed max-w-2xl">
-                I transform brands into <span className="font-bold text-white">revenue generators</span> through 
-                data-driven strategies that deliver <span className="font-bold text-white">measurable ROI</span> and 
-                sustainable growth for industry leaders.
+                Digital marketing specialist transforming brands into <span className="font-bold text-white">revenue generators</span> through 
+                data-driven marketing strategies, conversion rate optimization, and <span className="font-bold text-white">measurable ROI</span> for industry leaders.
               </p>
 
-              {/* CTA Buttons */}
+              {/* Call-to-Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-6 mb-16">
                 <button
                   onClick={handleEmailClick}
                   className="group inline-flex items-center justify-center px-10 py-5 bg-white text-red-600 rounded-full font-bold text-lg hover:bg-red-50 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 hover:scale-105"
                 >
-                  LET'S DRIVE RESULTS
+                  START MARKETING STRATEGY
+                  <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
                 <a
                   href="/about"
                   className="inline-flex items-center justify-center px-10 py-5 border-3 border-white text-white rounded-full font-bold text-lg hover:bg-white hover:text-red-600 transition-all duration-300 hover:scale-105"
                 >
-                  VIEW MY IMPACT
+                  VIEW MARKETING EXPERTISE
                 </a>
               </div>
             </div>
 
-            {/* Right Column - Stats Cards */}
+            {/* Right Column - Performance Metrics */}
             <div className="lg:justify-self-end">
               <div className="grid grid-cols-1 gap-8 max-w-md">
-                {/* Performance Metrics Cards */}
+                {/* Performance Marketing Metrics */}
                 <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl hover:bg-white/15 transition-all duration-300 hover:scale-105">
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mr-4">
@@ -125,10 +125,10 @@ const Home = () => {
                     </div>
                     <div>
                       <div className="text-4xl font-black text-white mb-1">80+</div>
-                      <div className="text-red-200 font-medium">High-Impact Campaigns</div>
+                      <div className="text-red-200 font-medium">Marketing Campaigns</div>
                     </div>
                   </div>
-                  <p className="text-red-100 text-sm">Delivered exceptional ROI across diverse industries</p>
+                  <p className="text-red-100 text-sm">Performance marketing campaigns delivering exceptional ROI across diverse industries</p>
                 </div>
 
                 <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl hover:bg-white/15 transition-all duration-300 hover:scale-105">
@@ -138,10 +138,10 @@ const Home = () => {
                     </div>
                     <div>
                       <div className="text-4xl font-black text-white mb-1">300%</div>
-                      <div className="text-red-200 font-medium">Average Growth Rate</div>
+                      <div className="text-red-200 font-medium">Growth Rate</div>
                     </div>
                   </div>
-                  <p className="text-red-100 text-sm">Proven track record of exponential growth</p>
+                  <p className="text-red-100 text-sm">Proven conversion rate optimization and customer acquisition growth</p>
                 </div>
 
                 <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl hover:bg-white/15 transition-all duration-300 hover:scale-105">
@@ -151,26 +151,26 @@ const Home = () => {
                     </div>
                     <div>
                       <div className="text-4xl font-black text-white mb-1">5+</div>
-                      <div className="text-red-200 font-medium">Years Dominating</div>
+                      <div className="text-red-200 font-medium">Years Experience</div>
                     </div>
                   </div>
-                  <p className="text-red-100 text-sm">Leading marketing innovation and strategy</p>
+                  <p className="text-red-100 text-sm">Leading digital marketing innovation and growth marketing strategies</p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Bottom Tagline */}
+          {/* SEO Keywords Banner */}
           <div className="text-center mt-20">
             <div className="inline-flex items-center bg-black/20 backdrop-blur-sm rounded-full px-8 py-3 border border-white/30">
               <span className="text-lg font-medium text-red-100">
-                TRUSTED BY INDUSTRY LEADERS • DATA-DRIVEN RESULTS • GROWTH FOCUSED
+                DATA-DRIVEN MARKETING • CONVERSION OPTIMIZATION • GROWTH MARKETING SPECIALIST
               </span>
             </div>
           </div>
         </div>
 
-        {/* Modern Wave Transition */}
+        {/* Professional Wave Transition */}
         <div className="absolute bottom-0 left-0 right-0">
           <svg viewBox="0 0 1440 200" className="w-full h-auto">
             <path
@@ -182,49 +182,52 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Instagram-style Profile Header */}
-      <InstagramHeader />
-
       {/* Brand Marquee */}
       <BrandMarquee />
 
-      {/* Instagram-style Stories Bar */}
+      {/* Professional Category Navigation */}
       <StoriesBar 
         activeCategory={activeCategory} 
         setActiveCategory={setActiveCategory} 
       />
 
-      {/* Instagram-style Portfolio Grid */}
-      <section className="bg-gray-50 py-8">
+      {/* Professional Filter System */}
+      <ProfessionalFilter 
+        searchTerm={searchTerm}
+        setSearchTerm={setSearchTerm}
+        activeCategory={activeCategory}
+        setActiveCategory={setActiveCategory}
+        categories={categories}
+      />
+
+      {/* Marketing Portfolio Grid */}
+      <section className="bg-gray-50 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Search Bar */}
-          <div className="mb-8">
-            <div className="relative max-w-md mx-auto">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
-              <Input
-                type="text"
-                placeholder="Search campaigns..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-12 pr-4 py-3 bg-white border border-gray-300 focus:border-red-500 focus:ring-red-500 rounded-full text-base shadow-sm"
-              />
-            </div>
+          {/* Section Header */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Performance Marketing Portfolio
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Strategic marketing campaigns delivering measurable results through data-driven approaches, 
+              conversion optimization, and growth marketing expertise
+            </p>
           </div>
 
           {/* Grid View Toggle */}
           <div className="flex items-center justify-center mb-8">
             <div className="flex items-center bg-white rounded-full p-1 shadow-sm border border-gray-200">
-              <button className="p-2 text-red-600">
+              <button className="p-3 text-red-600 bg-red-50 rounded-full">
                 <Grid3X3 size={20} />
               </button>
-              <button className="p-2 text-gray-400">
+              <button className="p-3 text-gray-400 hover:text-gray-600 transition-colors">
                 <MoreHorizontal size={20} />
               </button>
             </div>
           </div>
 
-          {/* Instagram-style Grid */}
-          <div className={`grid gap-1 md:gap-2 ${getGridClass(filteredProjects)}`}>
+          {/* Professional Portfolio Grid */}
+          <div className={`grid gap-2 ${getGridClass(filteredProjects)}`}>
             {filteredProjects.map((project) => (
               <ProjectCard 
                 key={project.id} 
@@ -234,16 +237,44 @@ const Home = () => {
             ))}
           </div>
 
-          {/* No results message */}
+          {/* No Results Message */}
           {filteredProjects.length === 0 && (
             <div className="text-center py-24">
               <div className="text-gray-400 mb-8">
-                <Filter size={80} className="mx-auto" />
+                <Grid3X3 size={80} className="mx-auto" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">No campaigns found</h3>
-              <p className="text-gray-600">Try adjusting your search or category filter</p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">No marketing campaigns found</h3>
+              <p className="text-gray-600">Try adjusting your search terms or category filter to find relevant marketing projects</p>
             </div>
           )}
+        </div>
+      </section>
+
+      {/* Marketing Strategy CTA */}
+      <section className="bg-white py-16 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            Ready to Scale Your Marketing Results?
+          </h2>
+          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            Partner with a performance marketing specialist who delivers data-driven strategies, 
+            conversion optimization, and measurable growth for your brand.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button
+              onClick={handleEmailClick}
+              className="inline-flex items-center justify-center px-8 py-4 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              Discuss Marketing Strategy
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </button>
+            <a
+              href="/about"
+              className="inline-flex items-center justify-center px-8 py-4 border-2 border-red-600 text-red-600 rounded-lg font-semibold hover:bg-red-50 transition-all duration-300"
+            >
+              View Marketing Experience
+            </a>
+          </div>
         </div>
       </section>
 
