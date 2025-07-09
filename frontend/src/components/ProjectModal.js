@@ -27,9 +27,9 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
 
   const getAspectRatio = () => {
     if (project.orientation === 'vertical') {
-      return 'aspect-[9/16]'; // Vertical aspect ratio for social media content
+      return 'aspect-[9/16] max-w-md mx-auto'; // Vertical aspect ratio, smaller max width
     }
-    return 'aspect-video'; // Default video aspect ratio
+    return 'aspect-video max-w-4xl mx-auto'; // Horizontal aspect ratio
   };
 
   const handleVideoClick = () => {
@@ -40,29 +40,29 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-7xl max-h-[95vh] overflow-y-auto bg-white border-0 shadow-2xl rounded-2xl">
-        <DialogHeader className="pb-8">
-          <DialogTitle className="text-4xl font-bold text-gray-900 mb-3">{project.title}</DialogTitle>
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <Badge variant="secondary" className="bg-red-100 text-red-800 font-semibold text-sm px-4 py-2">
+      <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto bg-white border-0 shadow-2xl rounded-2xl">
+        <DialogHeader className="pb-6">
+          <DialogTitle className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">{project.title}</DialogTitle>
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div className="flex flex-wrap items-center gap-3">
+              <Badge variant="secondary" className="bg-red-100 text-red-800 font-semibold text-sm px-3 py-1">
                 {project.category}
               </Badge>
-              <span className="text-gray-400">•</span>
-              <span className="text-gray-700 font-semibold text-lg">{project.client}</span>
+              <span className="text-gray-400 hidden sm:inline">•</span>
+              <span className="text-gray-700 font-semibold">{project.client}</span>
             </div>
             {project.featured && (
-              <Badge className="bg-gradient-to-r from-red-600 to-red-500 text-white font-bold px-4 py-2">
-                FEATURED PROJECT
+              <Badge className="bg-gradient-to-r from-red-600 to-red-500 text-white font-bold px-3 py-1">
+                FEATURED
               </Badge>
             )}
           </div>
         </DialogHeader>
         
-        <div className="space-y-10">
+        <div className="space-y-8">
           {/* Project Media */}
           <div className="relative">
-            <div className={`relative ${getAspectRatio()} bg-gray-100 rounded-2xl overflow-hidden shadow-2xl mx-auto max-w-4xl`}>
+            <div className={`relative ${getAspectRatio()} bg-gray-100 rounded-xl overflow-hidden shadow-xl`}>
               <img 
                 src={project.images[currentImageIndex]} 
                 alt={`${project.title} - Image ${currentImageIndex + 1}`}
@@ -75,12 +75,12 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                   <Button 
                     size="lg" 
                     onClick={handleVideoClick}
-                    className="bg-red-600 hover:bg-red-700 rounded-full p-8 shadow-2xl transform hover:scale-110 transition-all duration-300"
+                    className="bg-red-600 hover:bg-red-700 rounded-full p-4 md:p-6 shadow-xl transform hover:scale-110 transition-all duration-300"
                   >
                     {project.videoUrl && project.videoUrl.includes('youtube') ? (
-                      <Youtube size={48} className="text-white" />
+                      <Youtube size={32} className="text-white" />
                     ) : (
-                      <Play size={48} className="text-white ml-2" />
+                      <Play size={32} className="text-white ml-1" />
                     )}
                   </Button>
                 </div>
@@ -91,22 +91,22 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                 <>
                   <button
                     onClick={previousImage}
-                    className="absolute left-6 top-1/2 transform -translate-y-1/2 bg-white/95 hover:bg-white text-gray-800 p-3 rounded-full shadow-xl transition-all duration-300 hover:scale-110"
+                    className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/95 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
                   >
-                    <ChevronLeft size={28} />
+                    <ChevronLeft size={20} />
                   </button>
                   <button
                     onClick={nextImage}
-                    className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-white/95 hover:bg-white text-gray-800 p-3 rounded-full shadow-xl transition-all duration-300 hover:scale-110"
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/95 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
                   >
-                    <ChevronRight size={28} />
+                    <ChevronRight size={20} />
                   </button>
                 </>
               )}
               
               {/* Image counter */}
               {project.images.length > 1 && (
-                <div className="absolute top-6 right-6 bg-black/70 text-white px-4 py-2 rounded-full text-sm font-medium">
+                <div className="absolute top-4 right-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm font-medium">
                   {currentImageIndex + 1} / {project.images.length}
                 </div>
               )}
@@ -114,15 +114,15 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
             
             {/* Thumbnail navigation */}
             {project.images.length > 1 && (
-              <div className="flex space-x-4 mt-6 justify-center">
+              <div className="flex space-x-3 mt-4 justify-center overflow-x-auto pb-2">
                 {project.images.map((image, index) => (
                   <button
                     key={index}
                     onClick={() => goToImage(index)}
-                    className={`w-20 h-20 rounded-xl overflow-hidden border-3 transition-all duration-300 ${
+                    className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all duration-300 ${
                       index === currentImageIndex 
-                        ? 'border-red-600 ring-4 ring-red-200 shadow-lg' 
-                        : 'border-gray-300 hover:border-gray-400 hover:shadow-md'
+                        ? 'border-red-600 ring-2 ring-red-200 shadow-md' 
+                        : 'border-gray-300 hover:border-gray-400 hover:shadow-sm'
                     }`}
                   >
                     <img 
@@ -137,17 +137,17 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
           </div>
           
           {/* Project Details */}
-          <div className="space-y-8">
-            <div className="prose prose-xl max-w-none">
-              <p className="text-gray-700 text-xl leading-relaxed">{project.description}</p>
+          <div className="space-y-6">
+            <div className="prose prose-lg max-w-none">
+              <p className="text-gray-700 text-lg leading-relaxed">{project.description}</p>
             </div>
             
             {/* Video Link */}
             {project.videoUrl && (
-              <div className="bg-red-50 border-2 border-red-200 rounded-xl p-6">
-                <div className="flex items-center justify-between">
+              <div className="bg-red-50 border-2 border-red-200 rounded-xl p-4 md:p-6">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center sm:justify-between gap-4">
                   <div className="flex items-center space-x-4">
-                    <Youtube className="w-8 h-8 text-red-600" />
+                    <Youtube className="w-6 h-6 md:w-8 md:h-8 text-red-600 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-red-800 text-lg">Watch on YouTube</h4>
                       <p className="text-red-600 text-sm">Educational content for high school students</p>
@@ -155,7 +155,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                   </div>
                   <Button 
                     onClick={handleVideoClick}
-                    className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold"
+                    className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-semibold w-full sm:w-auto"
                   >
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Watch Video
@@ -165,18 +165,18 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
             )}
             
             {/* Project Info Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 border-t border-gray-200">
-              <div className="space-y-3">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 border-t border-gray-200">
+              <div className="space-y-2">
                 <h4 className="font-bold text-red-600 text-sm uppercase tracking-wider">Category</h4>
-                <p className="text-gray-700 font-medium text-lg">{project.category}</p>
+                <p className="text-gray-700 font-medium">{project.category}</p>
               </div>
-              <div className="space-y-3">
+              <div className="space-y-2">
                 <h4 className="font-bold text-red-600 text-sm uppercase tracking-wider">Client</h4>
-                <p className="text-gray-700 font-medium text-lg">{project.client}</p>
+                <p className="text-gray-700 font-medium">{project.client}</p>
               </div>
-              <div className="space-y-3">
+              <div className="space-y-2">
                 <h4 className="font-bold text-red-600 text-sm uppercase tracking-wider">Format</h4>
-                <p className="text-gray-700 font-medium text-lg capitalize">
+                <p className="text-gray-700 font-medium capitalize">
                   {project.orientation} {project.type}
                 </p>
               </div>
@@ -184,25 +184,25 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
             
             {/* Category-specific highlights */}
             {project.category === "Social Media Content & Campaigns" && (
-              <div className="bg-gradient-to-r from-red-50 to-red-100 border-2 border-red-200 rounded-xl p-6">
-                <h4 className="font-bold text-red-800 mb-4 text-lg">Campaign Highlights</h4>
-                <ul className="text-red-700 space-y-2">
-                  <li className="flex items-center"><span className="w-2 h-2 bg-red-600 rounded-full mr-3"></span>Multi-platform content strategy</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-red-600 rounded-full mr-3"></span>Vertical video optimization for TikTok/Instagram</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-red-600 rounded-full mr-3"></span>Consistent brand messaging across platforms</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-red-600 rounded-full mr-3"></span>Performance-optimized creative assets</li>
+              <div className="bg-gradient-to-r from-red-50 to-red-100 border-2 border-red-200 rounded-xl p-4 md:p-6">
+                <h4 className="font-bold text-red-800 mb-3 text-lg">Campaign Highlights</h4>
+                <ul className="text-red-700 space-y-2 text-sm md:text-base">
+                  <li className="flex items-center"><span className="w-2 h-2 bg-red-600 rounded-full mr-3 flex-shrink-0"></span>Multi-platform content strategy</li>
+                  <li className="flex items-center"><span className="w-2 h-2 bg-red-600 rounded-full mr-3 flex-shrink-0"></span>Vertical video optimization for TikTok/Instagram</li>
+                  <li className="flex items-center"><span className="w-2 h-2 bg-red-600 rounded-full mr-3 flex-shrink-0"></span>Consistent brand messaging across platforms</li>
+                  <li className="flex items-center"><span className="w-2 h-2 bg-red-600 rounded-full mr-3 flex-shrink-0"></span>Performance-optimized creative assets</li>
                 </ul>
               </div>
             )}
             
             {project.category === "Illustrations & Educational Content" && (
-              <div className="bg-gradient-to-r from-red-50 to-red-100 border-2 border-red-200 rounded-xl p-6">
-                <h4 className="font-bold text-red-800 mb-4 text-lg">Educational Impact</h4>
-                <ul className="text-red-700 space-y-2">
-                  <li className="flex items-center"><span className="w-2 h-2 bg-red-600 rounded-full mr-3"></span>Age-appropriate content design</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-red-600 rounded-full mr-3"></span>Engaging animation and visual storytelling</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-red-600 rounded-full mr-3"></span>Curriculum-aligned educational goals</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-red-600 rounded-full mr-3"></span>Interactive learning components</li>
+              <div className="bg-gradient-to-r from-red-50 to-red-100 border-2 border-red-200 rounded-xl p-4 md:p-6">
+                <h4 className="font-bold text-red-800 mb-3 text-lg">Educational Impact</h4>
+                <ul className="text-red-700 space-y-2 text-sm md:text-base">
+                  <li className="flex items-center"><span className="w-2 h-2 bg-red-600 rounded-full mr-3 flex-shrink-0"></span>Age-appropriate content design</li>
+                  <li className="flex items-center"><span className="w-2 h-2 bg-red-600 rounded-full mr-3 flex-shrink-0"></span>Engaging animation and visual storytelling</li>
+                  <li className="flex items-center"><span className="w-2 h-2 bg-red-600 rounded-full mr-3 flex-shrink-0"></span>Curriculum-aligned educational goals</li>
+                  <li className="flex items-center"><span className="w-2 h-2 bg-red-600 rounded-full mr-3 flex-shrink-0"></span>Interactive learning components</li>
                 </ul>
               </div>
             )}
