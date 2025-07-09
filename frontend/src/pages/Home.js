@@ -121,11 +121,11 @@ const Home = () => {
       <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-black text-gray-900 mb-8 tracking-tight">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-6 md:mb-8 tracking-tight">
               FEATURED WORK
             </h2>
-            <p className="text-2xl text-gray-600 max-w-4xl mx-auto font-light">
+            <p className="text-lg md:text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto font-light px-4">
               A curated showcase of creative campaigns and strategic initiatives that delivered 
               <span className="font-semibold text-red-600"> exceptional results</span> for leading brands
             </p>
