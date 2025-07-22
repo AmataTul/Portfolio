@@ -393,6 +393,146 @@ export const portfolioProjects = [
         }
       ]
     }
+  },
+  {
+    id: 30,
+    title: "Beat by Dre Instagram Story Series",
+    category: "Social Media Content & Campaigns",
+    client: "Beat by Dre",
+    description: "Weekly Instagram Stories series featuring behind-the-scenes content, product unboxings, and user-generated content campaigns.",
+    images: [
+      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=800&fit=crop"
+    ],
+    type: "video",
+    featured: false,
+    orientation: "vertical",
+    videoContent: {
+      totalVideos: 10,
+      videos: [
+        "https://www.tiktok.com/@beatsbydre/video/7334159049778351406",
+        "https://www.tiktok.com/@beatsbydre/video/7326031883245079850",
+        "https://www.tiktok.com/@beatsbydre/video/7329366242383498539",
+        "https://www.tiktok.com/@beatsbydre/video/7318186184612695342",
+        "https://www.tiktok.com/@beatsbydre/video/7295240267815243051",
+        "https://www.tiktok.com/@beatsbydre/video/7471801091441659178",
+        "https://www.tiktok.com/@beatsbydre/video/7481832950275788078",
+        "https://www.tiktok.com/@beatsbydre/video/7452207220508347691",
+        "https://www.tiktok.com/@beatsbydre/video/7406134372803382559",
+        "https://www.tiktok.com/@beatsbydre/video/7390967071472946462"
+      ]
+    }
+  },
+  {
+    id: 31,
+    title: "Disney+ Character Spotlight Campaign",
+    category: "Social Media Content & Campaigns",
+    client: "Disney",
+    description: "Character-focused social media campaign featuring daily character spotlights, trivia content, and interactive polls across multiple platforms.",
+    images: [
+      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=800&fit=crop"
+    ],
+    type: "video",
+    featured: false,
+    orientation: "vertical",
+    videoContent: {
+      totalVideos: 10,
+      videos: [
+        "https://www.tiktok.com/@disney/video/7334159049778351406",
+        "https://www.tiktok.com/@disney/video/7326031883245079850",
+        "https://www.tiktok.com/@disney/video/7329366242383498539",
+        "https://www.tiktok.com/@disney/video/7318186184612695342",
+        "https://www.tiktok.com/@disney/video/7295240267815243051",
+        "https://www.tiktok.com/@disney/video/7471801091441659178",
+        "https://www.tiktok.com/@disney/video/7481832950275788078",
+        "https://www.tiktok.com/@disney/video/7452207220508347691",
+        "https://www.tiktok.com/@disney/video/7406134372803382559",
+        "https://www.tiktok.com/@disney/video/7390967071472946462"
+      ]
+    }
+  },
+  {
+    id: 32,
+    title: "Adobe Creative Tips TikTok Series",
+    category: "Social Media Content & Campaigns",
+    client: "Adobe",
+    description: "Educational TikTok series providing quick creative tips, tutorials, and behind-the-scenes content for Adobe Creative Suite users.",
+    images: [
+      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=800&fit=crop"
+    ],
+    type: "video",
+    featured: false,
+    orientation: "vertical",
+    videoContent: {
+      totalVideos: 10,
+      videos: [
+        "https://www.tiktok.com/@adobe/video/7334159049778351406",
+        "https://www.tiktok.com/@adobe/video/7326031883245079850",
+        "https://www.tiktok.com/@adobe/video/7329366242383498539",
+        "https://www.tiktok.com/@adobe/video/7318186184612695342",
+        "https://www.tiktok.com/@adobe/video/7295240267815243051",
+        "https://www.tiktok.com/@adobe/video/7471801091441659178",
+        "https://www.tiktok.com/@adobe/video/7481832950275788078",
+        "https://www.tiktok.com/@adobe/video/7452207220508347691",
+        "https://www.tiktok.com/@adobe/video/7406134372803382559",
+        "https://www.tiktok.com/@adobe/video/7390967071472946462"
+      ]
+    }
+  },
+  {
+    id: 33,
+    title: "Ute Tribal Enterprises Cultural Content",
+    category: "Social Media Content & Campaigns",
+    client: "Ute Tribal Enterprises",
+    description: "Cultural education and awareness social media campaign featuring tribal history, traditions, and contemporary life across seven business divisions.",
+    images: [
+      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=800&fit=crop"
+    ],
+    type: "video",
+    featured: false,
+    orientation: "vertical",
+    videoContent: {
+      totalVideos: 10,
+      videos: [
+        "https://www.tiktok.com/@utetribalenterprises/video/7334159049778351406",
+        "https://www.tiktok.com/@utetribalenterprises/video/7326031883245079850",
+        "https://www.tiktok.com/@utetribalenterprises/video/7329366242383498539",
+        "https://www.tiktok.com/@utetribalenterprises/video/7318186184612695342",
+        "https://www.tiktok.com/@utetribalenterprises/video/7295240267815243051",
+        "https://www.tiktok.com/@utetribalenterprises/video/7471801091441659178",
+        "https://www.tiktok.com/@utetribalenterprises/video/7481832950275788078",
+        "https://www.tiktok.com/@utetribalenterprises/video/7452207220508347691",
+        "https://www.tiktok.com/@utetribalenterprises/video/7406134372803382559",
+        "https://www.tiktok.com/@utetribalenterprises/video/7390967071472946462"
+      ]
+    }
+  },
+  {
+    id: 34,
+    title: "Bison Made Product Showcase Reels",
+    category: "Social Media Content & Campaigns",
+    client: "Ute Tribal Enterprises - Bison Made",
+    description: "Product showcase Instagram Reels featuring authentic tribal products, craftsmanship stories, and behind-the-scenes production content.",
+    images: [
+      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=800&fit=crop"
+    ],
+    type: "video",
+    featured: false,
+    orientation: "vertical",
+    videoContent: {
+      totalVideos: 10,
+      videos: [
+        "https://www.tiktok.com/@bisonmade/video/7334159049778351406",
+        "https://www.tiktok.com/@bisonmade/video/7326031883245079850",
+        "https://www.tiktok.com/@bisonmade/video/7329366242383498539",
+        "https://www.tiktok.com/@bisonmade/video/7318186184612695342",
+        "https://www.tiktok.com/@bisonmade/video/7295240267815243051",
+        "https://www.tiktok.com/@bisonmade/video/7471801091441659178",
+        "https://www.tiktok.com/@bisonmade/video/7481832950275788078",
+        "https://www.tiktok.com/@bisonmade/video/7452207220508347691",
+        "https://www.tiktok.com/@bisonmade/video/7406134372803382559",
+        "https://www.tiktok.com/@bisonmade/video/7390967071472946462"
+      ]
+    }
   }
 ];
 
