@@ -21,7 +21,8 @@ const StoriesBar = ({ activeCategory, setActiveCategory }) => {
     "Social Media Content & Campaigns": "Social Media",
     "Photography Projects": "Photography",
     "Creative Concepts & Branding": "Branding",
-    "Illustrations & Educational Content": "Education"
+    "Illustrations & Educational Content": "Education",
+    "Business Analytics & Strategy": "Analytics"
   };
 
   return (
