@@ -678,6 +678,151 @@ export const portfolioProjects = [
     type: "image",
     featured: false,
     orientation: "horizontal"
+  },
+  {
+    id: 45,
+    title: "Adobe Creative Suite Tutorial Series",
+    category: "Illustrations & Educational Content",
+    client: "Adobe",
+    description: "Comprehensive tutorial series featuring animated illustrations and educational content for Adobe Creative Suite users, including step-by-step guides and creative techniques.",
+    images: [
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&h=600&fit=crop"
+    ],
+    type: "video",
+    featured: false,
+    orientation: "horizontal",
+    videoContent: {
+      totalVideos: 10,
+      videos: [
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL"
+      ]
+    }
+  },
+  {
+    id: 46,
+    title: "Disney Character Design Animation",
+    category: "Illustrations & Educational Content",
+    client: "Disney",
+    description: "Character design animation series teaching the fundamentals of Disney character creation, from concept sketches to final animated characters.",
+    images: [
+      "https://images.unsplash.com/photo-1489399627699-e5c5f1e8f6c6?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop"
+    ],
+    type: "video",
+    featured: false,
+    orientation: "horizontal",
+    videoContent: {
+      totalVideos: 10,
+      videos: [
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL"
+      ]
+    }
+  },
+  {
+    id: 47,
+    title: "Marketing Analytics Educational Series",
+    category: "Illustrations & Educational Content",
+    client: "Utah State University",
+    description: "Educational animation series explaining marketing analytics concepts, data visualization techniques, and strategic decision-making for business students.",
+    images: [
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
+    ],
+    type: "video",
+    featured: false,
+    orientation: "horizontal",
+    videoContent: {
+      totalVideos: 10,
+      videos: [
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL"
+      ]
+    }
+  },
+  {
+    id: 48,
+    title: "Tribal Heritage Educational Animation",
+    category: "Illustrations & Educational Content",
+    client: "Ute Tribal Enterprises",
+    description: "Educational animation series about Ute tribal heritage, history, and cultural traditions designed for educational institutions and cultural centers.",
+    images: [
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1553028826-f4804a6dba3b?w=800&h=600&fit=crop"
+    ],
+    type: "video",
+    featured: false,
+    orientation: "horizontal",
+    videoContent: {
+      totalVideos: 10,
+      videos: [
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL"
+      ]
+    }
+  },
+  {
+    id: 49,
+    title: "Coffee Culture Educational Videos",
+    category: "Illustrations & Educational Content",
+    client: "Ute Tribal Enterprises - KahPeeh Kah-Ahn",
+    description: "Educational video series about coffee culture, brewing techniques, and the cultural significance of coffee in tribal traditions.",
+    images: [
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
+    ],
+    type: "video",
+    featured: false,
+    orientation: "horizontal",
+    videoContent: {
+      totalVideos: 10,
+      videos: [
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL",
+        "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL"
+      ]
+    }
   }
 ];
 
