@@ -280,6 +280,119 @@ export const portfolioProjects = [
       ],
       competitiveAdvantage: "Achieved highest revenue in industry through data-driven strategic decisions and market analysis"
     }
+  },
+  {
+    id: 18,
+    title: "Friendly Futures Brand TikTok Campaigns",
+    category: "Social Media Content & Campaigns",
+    client: "Friendly Futures (Brand: Aigata)",
+    description: "High-engagement TikTok content campaigns for personal e-commerce brand, showcasing creative storytelling and conversion-focused social media strategy. Generated exceptional engagement and conversions across multiple video formats.",
+    images: [
+      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=800&fit=crop"
+    ],
+    type: "video",
+    featured: true,
+    orientation: "vertical",
+    socialMediaCampaign: {
+      platform: "TikTok",
+      totalVideos: 5,
+      performanceMetrics: {
+        highEngagement: 4,
+        topConverter: 1,
+        brandAwareness: "Significant increase"
+      },
+      videos: [
+        {
+          url: "https://www.tiktok.com/@friendlyfutures/video/7334159049778351406",
+          performance: "High engagement",
+          description: "Personal brand storytelling content"
+        },
+        {
+          url: "https://www.tiktok.com/@friendlyfutures/video/7326031883245079850",
+          performance: "High engagement",
+          description: "Product showcase and brand positioning"
+        },
+        {
+          url: "https://www.tiktok.com/@friendlyfutures/video/7329366242383498539",
+          performance: "High engagement",
+          description: "Creative brand narrative and engagement"
+        },
+        {
+          url: "https://www.tiktok.com/@friendlyfutures/video/7318186184612695342",
+          performance: "High engagement",
+          description: "Viral content strategy execution"
+        },
+        {
+          url: "https://www.tiktok.com/@friendlyfutures/video/7295240267815243051",
+          performance: "Highest conversion",
+          description: "Conversion-optimized content that drove sales"
+        }
+      ]
+    }
+  },
+  {
+    id: 19,
+    title: "KahPeeh Kah-Ahn Coffee House TikTok Strategy",
+    category: "Social Media Content & Campaigns",
+    client: "Ute Tribal Enterprises - KahPeeh Kah-Ahn",
+    description: "Comprehensive TikTok marketing strategy for Ute Tribal Enterprises' coffee house, featuring event marketing, seasonal campaigns, and conversion-focused content. Achieved 85% conversion increase and significant brand awareness growth.",
+    images: [
+      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=800&fit=crop"
+    ],
+    type: "video",
+    featured: true,
+    orientation: "vertical",
+    socialMediaCampaign: {
+      platform: "TikTok",
+      totalVideos: 8,
+      performanceMetrics: {
+        conversionIncrease: "85%",
+        eventMarketing: "Multiple successful campaigns",
+        brandAwareness: "Significant local impact"
+      },
+      videos: [
+        {
+          url: "https://www.tiktok.com/@kahpeehkahahn/video/7471801091441659178",
+          performance: "85% conversion increase",
+          description: "Primary conversion driver for coffee house"
+        },
+        {
+          url: "https://www.tiktok.com/@kahpeehkahahn/video/7481832950275788078",
+          performance: "Improved conversion",
+          description: "Secondary conversion-focused content"
+        },
+        {
+          url: "https://www.tiktok.com/@kahpeehkahahn/video/7452207220508347691",
+          performance: "Seasonal engagement",
+          description: "New Year marketing campaign"
+        },
+        {
+          url: "https://www.tiktok.com/@kahpeehkahahn/video/7406134372803382559",
+          performance: "Event marketing",
+          description: "Local event promotion and marketing"
+        },
+        {
+          url: "https://www.tiktok.com/@kahpeehkahahn/video/7390967071472946462",
+          performance: "Event marketing",
+          description: "Community event marketing strategy"
+        },
+        {
+          url: "https://www.tiktok.com/@kahpeehkahahn/video/7396130080369528094",
+          performance: "Brand awareness",
+          description: "Coffee house brand storytelling"
+        },
+        {
+          url: "https://www.tiktok.com/@kahpeehkahahn/video/7398706064197160223",
+          performance: "Engagement focused",
+          description: "Community engagement and brand building"
+        },
+        {
+          url: "https://www.tiktok.com/@kahpeehkahahn/video/7409139284403408159",
+          performance: "Top performer",
+          description: "Leading engagement and conversion content"
+        }
+      ]
+    }
   }
 ];
 
