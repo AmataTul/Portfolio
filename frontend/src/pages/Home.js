@@ -119,25 +119,30 @@ const Home = () => {
               </h2>
               
               <p className="text-xl md:text-2xl text-yellow-200 mb-8 font-medium">
-                Performance marketing that delivers measurable growth for Fortune companies
+                Performance-driven marketing professional seeking my next opportunity to drive measurable growth for innovative companies
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <button
-                  onClick={handleEmailClick}
+                  onClick={() => {
+                    document.querySelector('.portfolio-section')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
                   className="group bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-3xl"
                 >
                   <span className="flex items-center justify-center">
                     <Zap className="w-5 h-5 mr-2 group-hover:animate-bounce" />
-                    LET'S DRIVE RESULTS
+                    VIEW MY PORTFOLIO
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </button>
                 
-                <button className="group bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 border-2 border-white/30 hover:border-white/50">
+                <button 
+                  onClick={() => navigate('/about')}
+                  className="group bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 border-2 border-white/30 hover:border-white/50"
+                >
                   <span className="flex items-center justify-center">
-                    <Play className="w-5 h-5 mr-2 group-hover:animate-bounce" />
-                    WATCH SUCCESS STORIES
+                    <Users className="w-5 h-5 mr-2 group-hover:animate-bounce" />
+                    ABOUT ME & EXPERIENCE
                   </span>
                 </button>
               </div>
