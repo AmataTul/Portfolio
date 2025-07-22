@@ -10,7 +10,8 @@ const StoriesBar = ({ activeCategory, setActiveCategory }) => {
     "Social Media Content & Campaigns": Smartphone,
     "Photography Projects": Camera,
     "Creative Concepts & Branding": Lightbulb,
-    "Illustrations & Educational Content": BookOpen
+    "Illustrations & Educational Content": BookOpen,
+    "Business Analytics & Strategy": BarChart3
   };
 
   const shortNames = {
