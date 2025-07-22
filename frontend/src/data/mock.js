@@ -91,9 +91,9 @@ export const portfolioProjects = [
   },
   {
     id: 6,
-    title: "Beat by Dre Product Photography",
+    title: "Beats by Dre Product Photography",
     category: "Photography Projects",
-    client: "Beat by Dre",
+    client: "Beats by Dre",
     description: "High-end product photography series showcasing headphones with dynamic lighting and creative composition for e-commerce and marketing materials.",
     images: [
       "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&h=600&fit=crop",
