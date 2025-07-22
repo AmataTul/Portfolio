@@ -118,7 +118,7 @@ const About = () => {
                   className="bg-gradient-to-r from-pink-400 to-purple-500 hover:from-pink-500 hover:to-purple-600 text-white font-semibold py-3 px-6 md:px-8 rounded-full transition-all duration-300 border-2 border-white/30 shadow-xl text-sm md:text-base"
                 >
                   🔗 LinkedIn Profile
-                </button>
+                </a>
               </div>
             </div>
           </div>
