@@ -156,39 +156,43 @@ const About = () => {
                   'from-pink-500 to-rose-500',
                   'from-purple-500 to-indigo-500', 
                   'from-blue-500 to-cyan-500',
-                  'from-green-500 to-teal-500'
+                  'from-green-500 to-teal-500',
+                  'from-orange-500 to-red-500'
                 ];
                 const iconBgs = [
                   'bg-gradient-to-r from-pink-100 to-rose-100',
                   'bg-gradient-to-r from-purple-100 to-indigo-100',
                   'bg-gradient-to-r from-blue-100 to-cyan-100', 
-                  'bg-gradient-to-r from-green-100 to-teal-100'
+                  'bg-gradient-to-r from-green-100 to-teal-100',
+                  'bg-gradient-to-r from-orange-100 to-red-100'
                 ];
                 const textColors = [
                   'text-pink-600',
                   'text-purple-600',
                   'text-blue-600',
-                  'text-green-600'
+                  'text-green-600',
+                  'text-orange-600'
                 ];
                 
                 return (
-                  <Card key={category} className={`bg-gradient-to-br ${gradients[index]} shadow-2xl border-0 transform hover:scale-105 transition-all duration-300`}>
+                  <Card key={category} className={`bg-gradient-to-br ${gradients[index % gradients.length]} shadow-2xl border-0 transform hover:scale-105 transition-all duration-300 ${index === 4 ? 'md:col-span-2' : ''}`}>
                     <CardContent className="p-6 bg-white/90 backdrop-blur-sm rounded-lg m-1">
                       <div className="flex items-center mb-4">
-                        <div className={`flex-shrink-0 w-12 h-12 ${iconBgs[index]} rounded-xl flex items-center justify-center mr-4 shadow-lg`}>
-                          {index === 0 && <BarChart3 className={`w-6 h-6 ${textColors[index]}`} />}
-                          {index === 1 && <Megaphone className={`w-6 h-6 ${textColors[index]}`} />}
-                          {index === 2 && <Palette className={`w-6 h-6 ${textColors[index]}`} />}
-                          {index === 3 && <Briefcase className={`w-6 h-6 ${textColors[index]}`} />}
+                        <div className={`flex-shrink-0 w-12 h-12 ${iconBgs[index % iconBgs.length]} rounded-xl flex items-center justify-center mr-4 shadow-lg`}>
+                          {index === 0 && <BarChart3 className={`w-6 h-6 ${textColors[index % textColors.length]}`} />}
+                          {index === 1 && <Megaphone className={`w-6 h-6 ${textColors[index % textColors.length]}`} />}
+                          {index === 2 && <Palette className={`w-6 h-6 ${textColors[index % textColors.length]}`} />}
+                          {index === 3 && <Briefcase className={`w-6 h-6 ${textColors[index % textColors.length]}`} />}
+                          {index === 4 && <Target className={`w-6 h-6 ${textColors[index % textColors.length]}`} />}
                         </div>
-                        <h3 className={`text-lg font-bold ${textColors[index]}`}>{category}</h3>
+                        <h3 className={`text-lg font-bold ${textColors[index % textColors.length]}`}>{category}</h3>
                       </div>
                       <div className="flex flex-wrap gap-2">
                         {categoryTools.map((tool, toolIndex) => (
                           <Badge 
                             key={toolIndex} 
                             variant="secondary" 
-                            className={`${iconBgs[index]} ${textColors[index]} hover:shadow-md transition-all duration-200 border-0 font-medium`}
+                            className={`${iconBgs[index % iconBgs.length]} ${textColors[index % textColors.length]} hover:shadow-md transition-all duration-200 border-0 font-medium`}
                           >
                             {tool}
                           </Badge>
