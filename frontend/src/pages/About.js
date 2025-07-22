@@ -258,25 +258,25 @@ const About = () => {
 
           {/* Contact Section */}
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Marketing Strategy Consultation</h2>
-            <Card className="bg-white shadow-lg border-0 max-w-4xl mx-auto">
-              <CardContent className="p-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">Looking to Hire Top Marketing Talent? 🎯</h2>
+            <Card className="bg-gradient-to-br from-purple-50 via-pink-50 to-yellow-50 shadow-2xl border-2 border-purple-200 max-w-4xl mx-auto">
+              <CardContent className="p-6 md:p-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                   <div className="flex items-center justify-center md:justify-start group">
-                    <div className="flex-shrink-0 w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4 group-hover:bg-red-200 transition-colors">
-                      <Mail className="text-red-600" size={20} />
+                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full flex items-center justify-center mr-4 group-hover:from-purple-200 group-hover:to-pink-200 transition-colors">
+                      <Mail className="text-purple-600" size={20} />
                     </div>
                     <div className="text-left">
-                      <p className="text-sm text-gray-500 mb-1">Email for Marketing Projects</p>
-                      <a href={`mailto:${contactInfo.email}`} className="text-gray-700 hover:text-red-600 transition-colors font-medium">
+                      <p className="text-sm text-gray-500 mb-1">Ready to Join Your Team</p>
+                      <a href={`mailto:${contactInfo.email}`} className="text-gray-700 hover:text-purple-600 transition-colors font-medium">
                         {contactInfo.email}
                       </a>
                     </div>
                   </div>
                   
                   <div className="flex items-center justify-center md:justify-start group">
-                    <div className="flex-shrink-0 w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4 group-hover:bg-red-200 transition-colors">
-                      <Linkedin className="text-red-600" size={20} />
+                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-pink-100 to-orange-100 rounded-full flex items-center justify-center mr-4 group-hover:from-pink-200 group-hover:to-orange-200 transition-colors">
+                      <Linkedin className="text-pink-600" size={20} />
                     </div>
                     <div className="text-left">
                       <p className="text-sm text-gray-500 mb-1">Professional Network</p>
@@ -284,16 +284,16 @@ const About = () => {
                         href={contactInfo.linkedin} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="text-gray-700 hover:text-red-600 transition-colors font-medium"
+                        className="text-gray-700 hover:text-pink-600 transition-colors font-medium"
                       >
-                        Marketing Strategy LinkedIn
+                        Connect on LinkedIn
                       </a>
                     </div>
                   </div>
                   
                   <div className="flex items-center justify-center md:justify-start group">
-                    <div className="flex-shrink-0 w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4 group-hover:bg-red-200 transition-colors">
-                      <Phone className="text-red-600" size={20} />
+                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-blue-100 to-cyan-100 rounded-full flex items-center justify-center mr-4 group-hover:from-blue-200 group-hover:to-cyan-200 transition-colors">
+                      <Phone className="text-blue-600" size={20} />
                     </div>
                     <div className="text-left">
                       <p className="text-sm text-gray-500 mb-1">Direct Contact</p>
@@ -302,8 +302,8 @@ const About = () => {
                   </div>
                   
                   <div className="flex items-center justify-center md:justify-start group">
-                    <div className="flex-shrink-0 w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4 group-hover:bg-red-200 transition-colors">
-                      <MapPin className="text-red-600" size={20} />
+                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-green-100 to-teal-100 rounded-full flex items-center justify-center mr-4 group-hover:from-green-200 group-hover:to-teal-200 transition-colors">
+                      <MapPin className="text-green-600" size={20} />
                     </div>
                     <div className="text-left">
                       <p className="text-sm text-gray-500 mb-1">Location</p>
@@ -312,17 +312,26 @@ const About = () => {
                   </div>
                 </div>
                 
-                <div className="pt-6 border-t border-gray-200">
+                <div className="pt-6 border-t-2 border-gradient-to-r from-purple-200 to-pink-200">
                   <p className="text-gray-600 text-center mb-6">
-                    Ready to collaborate on performance marketing campaigns and data-driven growth strategies? 
-                    Let's discuss how strategic marketing coordination can drive measurable results for your brand.
+                    I'm actively seeking opportunities to join a creative marketing team where I can contribute my expertise in 
+                    <span className="font-semibold text-purple-600"> social media marketing, brand strategy,</span> and 
+                    <span className="font-semibold text-pink-600"> data-driven campaign optimization.</span>
                   </p>
-                  <button
-                    onClick={handleEmailClick}
-                    className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
-                  >
-                    Start Marketing Strategy Discussion
-                  </button>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button
+                      onClick={handleEmailClick}
+                      className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-3 px-6 md:px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl"
+                    >
+                      💼 Let's Discuss Opportunities
+                    </button>
+                    <a
+                      href="/"
+                      className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-bold py-3 px-6 md:px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl"
+                    >
+                      👈 View My Portfolio
+                    </a>
+                  </div>
                 </div>
               </CardContent>
             </Card>
