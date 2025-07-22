@@ -611,9 +611,9 @@ export const portfolioProjects = [
   },
   {
     id: 40,
-    title: "Beat by Dre Lifestyle Brand Strategy",
+    title: "Beats by Dre Lifestyle Brand Strategy",
     category: "Creative Concepts & Branding",
-    client: "Beat by Dre",
+    client: "Beats by Dre",
     description: "Comprehensive lifestyle brand strategy development including market positioning, brand voice evolution, and creative direction for music culture integration.",
     images: [
       "https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=800&h=600&fit=crop",
