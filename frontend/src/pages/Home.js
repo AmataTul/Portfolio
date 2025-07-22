@@ -204,7 +204,7 @@ const Home = () => {
       <section className="bg-gray-50 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Professional Portfolio Grid */}
-          <div className={`grid gap-2 ${getGridClass(filteredProjects)}`}>
+          <div className={`grid gap-4 ${getGridClass(filteredProjects)}`}>
             {filteredProjects.map((project) => (
               <ProjectCard 
                 key={project.id} 
