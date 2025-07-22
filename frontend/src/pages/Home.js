@@ -274,10 +274,10 @@ const Home = () => {
           <div className="text-center mt-16">
             <div className="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 rounded-3xl p-8 md:p-12 shadow-2xl transform hover:scale-105 transition-all duration-300">
               <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to Transform Your Marketing Strategy?
+                Ready to Add Marketing Impact to Your Team?
               </h3>
               <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
-                Let's create campaigns that don't just look good—they deliver measurable results and drive real business growth.
+                I create campaigns that don't just look good—they deliver measurable results, drive conversions, and grow your business. Let's discuss how I can contribute to your team's success.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
@@ -286,13 +286,16 @@ const Home = () => {
                 >
                   <span className="flex items-center justify-center">
                     <Zap className="w-5 h-5 mr-2 group-hover:animate-bounce" />
-                    START YOUR SUCCESS STORY
+                    LET'S TALK ABOUT OPPORTUNITIES
                   </span>
                 </button>
-                <button className="group bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 border-2 border-white/30 hover:border-white/50">
+                <button 
+                  onClick={() => navigate('/about')}
+                  className="group bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 border-2 border-white/30 hover:border-white/50"
+                >
                   <span className="flex items-center justify-center">
-                    <Play className="w-5 h-5 mr-2 group-hover:animate-bounce" />
-                    VIEW SUCCESS METRICS
+                    <Users className="w-5 h-5 mr-2 group-hover:animate-bounce" />
+                    VIEW MY EXPERIENCE
                   </span>
                 </button>
               </div>
