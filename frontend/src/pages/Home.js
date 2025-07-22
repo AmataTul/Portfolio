@@ -61,120 +61,127 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* SEO Optimized Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-red-600 via-red-500 to-red-700 text-white overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl animate-float"></div>
-          <div className="absolute top-40 right-20 w-24 h-24 bg-white/20 rotate-45 blur-lg animate-pulse"></div>
-          <div className="absolute bottom-40 left-20 w-40 h-40 bg-white/10 rounded-full blur-2xl animate-float"></div>
-          <div className="absolute bottom-20 right-40 w-28 h-28 bg-white/15 rotate-12 blur-lg animate-pulse"></div>
+      <section className="relative min-h-screen bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-600 text-white overflow-hidden">
+        {/* Vibrant Background Elements */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-20 left-10 w-32 h-32 bg-yellow-400/40 rounded-full blur-xl animate-float"></div>
+          <div className="absolute top-40 right-20 w-24 h-24 bg-pink-400/50 rotate-45 blur-lg animate-bounce"></div>
+          <div className="absolute bottom-40 left-20 w-40 h-40 bg-cyan-400/30 rounded-full blur-2xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-40 w-28 h-28 bg-green-400/40 rotate-12 blur-lg animate-ping"></div>
         </div>
 
         {/* Hero Content */}
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-32">
-          {/* Professional Badge */}
+          {/* Colorful Professional Badge */}
           <div className="flex justify-center mb-12">
-            <div className="inline-flex items-center bg-white/20 backdrop-blur-lg rounded-full px-8 py-4 border border-white/30 shadow-2xl">
-              <span className="text-lg font-semibold tracking-wide">PERFORMANCE MARKETING STRATEGIST</span>
+            <div className="inline-flex items-center bg-gradient-to-r from-yellow-400/30 to-pink-400/30 backdrop-blur-lg rounded-full px-8 py-4 border-2 border-white/30 shadow-2xl animate-pulse">
+              <span className="text-lg font-bold tracking-wide text-yellow-100">🚀 PERFORMANCE MARKETING STRATEGIST</span>
             </div>
           </div>
 
           {/* Main Content Layout */}
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left Column - Marketing Message */}
+            {/* Left Column - Vibrant Marketing Message */}
             <div className="text-left">
               <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-8 leading-none tracking-tight">
-                <span className="block text-white">DRIVE</span>
-                <span className="block text-red-200 -mt-4">RESULTS.</span>
-                <span className="block text-white/90 -mt-4 text-3xl sm:text-4xl md:text-5xl font-bold">
+                <span className="block bg-gradient-to-r from-yellow-300 via-pink-300 to-cyan-300 bg-clip-text text-transparent">DRIVE</span>
+                <span className="block bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-300 bg-clip-text text-transparent -mt-4">RESULTS.</span>
+                <span className="block text-white/95 -mt-4 text-3xl sm:text-4xl md:text-5xl font-bold">
                   NOT JUST CAMPAIGNS.
                 </span>
               </h1>
               
-              <p className="text-xl md:text-2xl text-red-100 mb-12 leading-relaxed max-w-2xl">
-                Digital marketing specialist transforming brands into <span className="font-bold text-white">revenue generators</span> through 
-                data-driven marketing strategies, conversion rate optimization, and <span className="font-bold text-white">measurable ROI</span> for industry leaders.
+              <p className="text-xl md:text-2xl text-yellow-100 mb-12 leading-relaxed max-w-2xl">
+                Digital marketing specialist transforming brands into <span className="font-bold text-yellow-300 bg-white/20 px-2 py-1 rounded">💰 revenue generators</span> through 
+                data-driven marketing strategies, conversion optimization, and <span className="font-bold text-cyan-300 bg-white/20 px-2 py-1 rounded">📈 measurable ROI</span> for industry leaders.
               </p>
 
-              {/* Call-to-Action Buttons */}
+              {/* Vibrant Call-to-Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-6 mb-16">
                 <button
                   onClick={handleEmailClick}
-                  className="group inline-flex items-center justify-center px-10 py-5 bg-white text-red-600 rounded-full font-bold text-lg hover:bg-red-50 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 hover:scale-105"
+                  className="group inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r from-yellow-400 to-orange-500 text-white rounded-full font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 hover:scale-105"
                 >
-                  START MARKETING STRATEGY
+                  🎯 START MARKETING STRATEGY
                   <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
                 <a
                   href="/about"
-                  className="inline-flex items-center justify-center px-10 py-5 border-3 border-white text-white rounded-full font-bold text-lg hover:bg-white hover:text-red-600 transition-all duration-300 hover:scale-105"
+                  className="inline-flex items-center justify-center px-10 py-5 border-3 border-white text-white rounded-full font-bold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300 hover:scale-105 bg-white/10 backdrop-blur-sm"
                 >
-                  VIEW MARKETING EXPERTISE
+                  ✨ VIEW MARKETING EXPERTISE
                 </a>
               </div>
             </div>
 
-            {/* Right Column - Performance Metrics */}
+            {/* Right Column - Colorful Performance Metrics */}
             <div className="lg:justify-self-end">
               <div className="grid grid-cols-1 gap-8 max-w-md">
-                {/* Performance Marketing Metrics */}
-                <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl hover:bg-white/15 transition-all duration-300 hover:scale-105">
+                {/* Vibrant Performance Marketing Metrics */}
+                <div className="bg-gradient-to-br from-yellow-400/20 to-orange-500/20 backdrop-blur-lg rounded-3xl p-8 border-2 border-white/20 shadow-2xl hover:from-yellow-400/30 hover:to-orange-500/30 transition-all duration-300 hover:scale-105">
                   <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mr-4">
+                    <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center mr-4 shadow-lg">
                       <span className="text-2xl">🎯</span>
                     </div>
                     <div>
-                      <div className="text-4xl font-black text-white mb-1">80+</div>
-                      <div className="text-red-200 font-medium">Marketing Campaigns</div>
+                      <div className="text-4xl font-black text-yellow-200 mb-1">80+</div>
+                      <div className="text-orange-200 font-medium">Marketing Campaigns</div>
                     </div>
                   </div>
-                  <p className="text-red-100 text-sm">Performance marketing campaigns delivering exceptional ROI across diverse industries</p>
+                  <p className="text-yellow-100 text-sm bg-white/10 backdrop-blur-sm p-3 rounded-lg">Performance marketing campaigns delivering exceptional ROI across diverse industries</p>
                 </div>
 
-                <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl hover:bg-white/15 transition-all duration-300 hover:scale-105">
+                <div className="bg-gradient-to-br from-pink-400/20 to-purple-500/20 backdrop-blur-lg rounded-3xl p-8 border-2 border-white/20 shadow-2xl hover:from-pink-400/30 hover:to-purple-500/30 transition-all duration-300 hover:scale-105">
                   <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mr-4">
+                    <div className="w-16 h-16 bg-gradient-to-r from-pink-400 to-purple-500 rounded-2xl flex items-center justify-center mr-4 shadow-lg">
                       <span className="text-2xl">📈</span>
                     </div>
                     <div>
-                      <div className="text-4xl font-black text-white mb-1">300%</div>
-                      <div className="text-red-200 font-medium">Growth Rate</div>
+                      <div className="text-4xl font-black text-pink-200 mb-1">300%</div>
+                      <div className="text-purple-200 font-medium">Growth Rate</div>
                     </div>
                   </div>
-                  <p className="text-red-100 text-sm">Proven conversion rate optimization and customer acquisition growth</p>
+                  <p className="text-pink-100 text-sm bg-white/10 backdrop-blur-sm p-3 rounded-lg">Proven conversion rate optimization and customer acquisition growth</p>
                 </div>
 
-                <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl hover:bg-white/15 transition-all duration-300 hover:scale-105">
+                <div className="bg-gradient-to-br from-cyan-400/20 to-blue-500/20 backdrop-blur-lg rounded-3xl p-8 border-2 border-white/20 shadow-2xl hover:from-cyan-400/30 hover:to-blue-500/30 transition-all duration-300 hover:scale-105">
                   <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mr-4">
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4 shadow-lg">
                       <span className="text-2xl">🏆</span>
                     </div>
                     <div>
-                      <div className="text-4xl font-black text-white mb-1">5+</div>
-                      <div className="text-red-200 font-medium">Years Experience</div>
+                      <div className="text-4xl font-black text-cyan-200 mb-1">5+</div>
+                      <div className="text-blue-200 font-medium">Years Experience</div>
                     </div>
                   </div>
-                  <p className="text-red-100 text-sm">Leading digital marketing innovation and growth marketing strategies</p>
+                  <p className="text-cyan-100 text-sm bg-white/10 backdrop-blur-sm p-3 rounded-lg">Leading digital marketing innovation and growth marketing strategies</p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* SEO Keywords Banner */}
+          {/* Vibrant SEO Keywords Banner */}
           <div className="text-center mt-20">
-            <div className="inline-flex items-center bg-black/20 backdrop-blur-sm rounded-full px-8 py-3 border border-white/30">
-              <span className="text-lg font-medium text-red-100">
-                DATA-DRIVEN MARKETING • CONVERSION OPTIMIZATION • GROWTH MARKETING SPECIALIST
+            <div className="inline-flex items-center bg-gradient-to-r from-green-400/30 to-teal-400/30 backdrop-blur-sm rounded-full px-8 py-3 border-2 border-white/30 animate-bounce">
+              <span className="text-lg font-medium text-green-100">
+                💡 DATA-DRIVEN MARKETING • 🚀 CONVERSION OPTIMIZATION • 📊 GROWTH MARKETING SPECIALIST
               </span>
             </div>
           </div>
         </div>
 
-        {/* Professional Wave Transition */}
+        {/* Colorful Wave Transition */}
         <div className="absolute bottom-0 left-0 right-0">
           <svg viewBox="0 0 1440 200" className="w-full h-auto">
+            <defs>
+              <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#f9fafb" />
+                <stop offset="50%" stopColor="#fef3c7" />
+                <stop offset="100%" stopColor="#f9fafb" />
+              </linearGradient>
+            </defs>
             <path
-              fill="#f9fafb"
+              fill="url(#waveGradient)"
               fillOpacity="1"
               d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,144C960,149,1056,139,1152,128C1248,117,1344,107,1392,101.3L1440,96L1440,200L1392,200C1344,200,1248,200,1152,200C1056,200,960,200,864,200C768,200,672,200,576,200C480,200,384,200,288,200C192,200,96,200,48,200L0,200Z"
             ></path>
