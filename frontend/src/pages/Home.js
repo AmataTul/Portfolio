@@ -83,33 +83,35 @@ const Home = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left Column - Vibrant Marketing Message */}
             <div className="text-left">
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-8 leading-none tracking-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-6 md:mb-8 leading-none tracking-tight">
                 <span className="block bg-gradient-to-r from-yellow-300 via-pink-300 to-cyan-300 bg-clip-text text-transparent">DRIVE</span>
-                <span className="block bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-300 bg-clip-text text-transparent -mt-4">RESULTS.</span>
-                <span className="block text-white/95 -mt-4 text-3xl sm:text-4xl md:text-5xl font-bold">
+                <span className="block bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-300 bg-clip-text text-transparent -mt-2 md:-mt-4">RESULTS.</span>
+                <span className="block text-white/95 -mt-2 md:-mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
                   NOT JUST CAMPAIGNS.
                 </span>
               </h1>
               
-              <p className="text-xl md:text-2xl text-yellow-100 mb-12 leading-relaxed max-w-2xl">
-                Digital marketing specialist transforming brands into <span className="font-bold text-yellow-300 bg-white/20 px-2 py-1 rounded">💰 revenue generators</span> through 
-                data-driven marketing strategies, conversion optimization, and <span className="font-bold text-cyan-300 bg-white/20 px-2 py-1 rounded">📈 measurable ROI</span> for industry leaders.
+              <p className="text-lg md:text-xl lg:text-2xl text-yellow-100 mb-8 md:mb-12 leading-relaxed max-w-2xl">
+                Creative marketing professional transforming brands into <span className="font-bold text-yellow-300 bg-white/20 px-2 py-1 rounded">💰 revenue generators</span> through 
+                data-driven strategies, social media mastery, and <span className="font-bold text-cyan-300 bg-white/20 px-2 py-1 rounded">📈 measurable ROI</span> for industry leaders.
               </p>
 
               {/* Vibrant Call-to-Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-6 mb-16">
+              <div className="flex flex-col sm:flex-row gap-4 md:gap-6 mb-12 md:mb-16">
                 <button
-                  onClick={handleEmailClick}
-                  className="group inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r from-yellow-400 to-orange-500 text-white rounded-full font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 hover:scale-105"
+                  onClick={() => {
+                    document.querySelector('.portfolio-section')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="group inline-flex items-center justify-center px-8 md:px-10 py-4 md:py-5 bg-gradient-to-r from-yellow-400 to-orange-500 text-white rounded-full font-bold text-base md:text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 hover:scale-105"
                 >
-                  🎯 START MARKETING STRATEGY
+                  🎯 VIEW MY PORTFOLIO
                   <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
                 <a
                   href="/about"
-                  className="inline-flex items-center justify-center px-10 py-5 border-3 border-white text-white rounded-full font-bold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300 hover:scale-105 bg-white/10 backdrop-blur-sm"
+                  className="inline-flex items-center justify-center px-8 md:px-10 py-4 md:py-5 border-3 border-white text-white rounded-full font-bold text-base md:text-lg hover:bg-white hover:text-purple-600 transition-all duration-300 hover:scale-105 bg-white/10 backdrop-blur-sm"
                 >
-                  ✨ VIEW MARKETING EXPERTISE
+                  ✨ VIEW MY EXPERIENCE
                 </a>
               </div>
             </div>
