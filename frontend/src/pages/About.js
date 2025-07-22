@@ -150,7 +150,7 @@ const About = () => {
           {/* Marketing Tools & Technologies */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text mb-8 text-center">Marketing Technology Stack</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {Object.entries(toolCategories).map(([category, categoryTools], index) => {
                 const gradients = [
                   'from-pink-500 to-rose-500',
