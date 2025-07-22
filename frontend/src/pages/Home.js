@@ -66,8 +66,8 @@ const Home = () => {
   };
 
   const handleEmailClick = () => {
-    const subject = "Performance Marketing Partnership - Let's Drive Results!";
-    const body = "Hi Amata,\n\nI found your portfolio and I'm impressed with your data-driven marketing approach and campaign results. I'd love to discuss how we can work together to achieve similar success for our brand.\n\nBest regards,";
+    const subject = "Marketing Position Inquiry - Let's Discuss Opportunities";
+    const body = "Hi Amata,\n\nI came across your portfolio and I'm impressed with your marketing expertise and proven results. I'd love to discuss potential opportunities for you to join our team.\n\nBest regards,";
     window.location.href = `mailto:${contactInfo.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
