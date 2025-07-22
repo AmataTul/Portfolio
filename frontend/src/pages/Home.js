@@ -193,7 +193,7 @@ const Home = () => {
       </div>
 
       {/* Enhanced Project Gallery */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 relative">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 relative portfolio-section">
         <div className="max-w-7xl mx-auto">
           {/* Enhanced Section Header */}
           <div className="text-center mb-12">
@@ -208,7 +208,7 @@ const Home = () => {
               </h2>
             </div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover data-driven marketing campaigns that deliver measurable results and drive business growth
+              Discover marketing campaigns that deliver measurable results and drive real business impact
             </p>
           </div>
 
