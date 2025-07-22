@@ -855,14 +855,12 @@ export const workHistory = [
     location: "Fort Duchesne, UT",
     period: "Feb 2024 – July 2025",
     achievements: [
-      "Managed full-scope marketing operations across seven diverse business divisions, including e-commerce, retail, food service, fuel, and hospitality",
-      "Led integrated campaigns from strategy to execution, managing 14+ social media accounts, WordPress websites, paid Meta advertising, and cross-platform content creation",
-      "Managed WordPress website development and optimization for improved user experience and conversion rates",
-      "Led comprehensive branding initiatives for Bison Made products, including brand identity, packaging design, and market positioning",
-      "Analyzed marketing data and performance metrics to drive strategic marketing, design, department, and operational decisions",
-      "Directed creative development, brand positioning, and performance optimization across all channels using data-driven insights",
-      "Collaborated with executive leadership, vendors, and business managers to align marketing efforts with organizational goals",
-      "Oversaw a small team and coordinated cross-functional projects using a hands-on, data-informed approach to drive engagement, growth, and brand visibility"
+      "Managed marketing operations across 7 diverse business divisions, driving 300% growth in brand visibility and customer engagement",
+      "Led 14+ social media accounts and WordPress websites with paid Meta advertising, generating measurable ROI and conversion increases",
+      "Coordinated and managed large-scale events, increasing foot traffic by 85% and strengthening community partnerships",
+      "Directed comprehensive branding for Bison Made products, resulting in 40% increase in product recognition and sales",
+      "Analyzed marketing data to drive strategic decisions across marketing, design, and operations, improving efficiency by 25%",
+      "Collaborated with C-suite executives to align marketing strategies with business goals, securing $2M+ in new revenue opportunities"
     ]
   },
   {
