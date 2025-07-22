@@ -2,9 +2,9 @@
 export const portfolioProjects = [
   {
     id: 1,
-    title: "Beat by Dre Brand Identity System",
+    title: "Beats by Dre Brand Identity System",
     category: "Graphic Design & Marketing Materials",
-    client: "Beat by Dre",
+    client: "Beats by Dre",
     description: "Comprehensive brand identity system including logos, color palettes, typography guides, and brand guidelines for product launch campaign.",
     images: [
       "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=800&h=600&fit=crop",
