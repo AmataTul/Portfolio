@@ -190,31 +190,55 @@ const About = () => {
 
           {/* Marketing Tools & Technologies */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Marketing Technology Stack</h2>
+            <h2 className="text-3xl font-bold text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text mb-8 text-center">Marketing Technology Stack</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {Object.entries(toolCategories).map(([category, categoryTools]) => (
-                <Card key={category} className="bg-white shadow-lg border-0">
-                  <CardContent className="p-6">
-                    <div className="flex items-center mb-4">
-                      <div className="flex-shrink-0 w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center mr-4">
-                        <Code className="w-5 h-5 text-red-600" />
+              {Object.entries(toolCategories).map(([category, categoryTools], index) => {
+                const gradients = [
+                  'from-pink-500 to-rose-500',
+                  'from-purple-500 to-indigo-500', 
+                  'from-blue-500 to-cyan-500',
+                  'from-green-500 to-teal-500'
+                ];
+                const iconBgs = [
+                  'bg-gradient-to-r from-pink-100 to-rose-100',
+                  'bg-gradient-to-r from-purple-100 to-indigo-100',
+                  'bg-gradient-to-r from-blue-100 to-cyan-100', 
+                  'bg-gradient-to-r from-green-100 to-teal-100'
+                ];
+                const textColors = [
+                  'text-pink-600',
+                  'text-purple-600',
+                  'text-blue-600',
+                  'text-green-600'
+                ];
+                
+                return (
+                  <Card key={category} className={`bg-gradient-to-br ${gradients[index]} shadow-2xl border-0 transform hover:scale-105 transition-all duration-300`}>
+                    <CardContent className="p-6 bg-white/90 backdrop-blur-sm rounded-lg m-1">
+                      <div className="flex items-center mb-4">
+                        <div className={`flex-shrink-0 w-12 h-12 ${iconBgs[index]} rounded-xl flex items-center justify-center mr-4 shadow-lg`}>
+                          {index === 0 && <BarChart3 className={`w-6 h-6 ${textColors[index]}`} />}
+                          {index === 1 && <Megaphone className={`w-6 h-6 ${textColors[index]}`} />}
+                          {index === 2 && <Palette className={`w-6 h-6 ${textColors[index]}`} />}
+                          {index === 3 && <Briefcase className={`w-6 h-6 ${textColors[index]}`} />}
+                        </div>
+                        <h3 className={`text-lg font-bold ${textColors[index]}`}>{category}</h3>
                       </div>
-                      <h3 className="text-lg font-bold text-gray-900">{category}</h3>
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      {categoryTools.map((tool, index) => (
-                        <Badge 
-                          key={index} 
-                          variant="secondary" 
-                          className="bg-red-50 text-red-700 hover:bg-red-100 transition-colors"
-                        >
-                          {tool}
-                        </Badge>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+                      <div className="flex flex-wrap gap-2">
+                        {categoryTools.map((tool, toolIndex) => (
+                          <Badge 
+                            key={toolIndex} 
+                            variant="secondary" 
+                            className={`${iconBgs[index]} ${textColors[index]} hover:shadow-md transition-all duration-200 border-0 font-medium`}
+                          >
+                            {tool}
+                          </Badge>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                );
+              })}
             </div>
           </div>
 
