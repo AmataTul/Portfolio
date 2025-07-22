@@ -233,7 +233,7 @@ export const portfolioProjects = [
     id: 16,
     title: "Multi-Platform Social Campaign",
     category: "Social Media Content & Campaigns",
-    client: "Beat by Dre",
+    client: "Beats by Dre",
     description: "Cross-platform social media campaign featuring vertical reels, story content, and carousel posts for product launch.",
     images: [
       "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=600&h=800&fit=crop",
