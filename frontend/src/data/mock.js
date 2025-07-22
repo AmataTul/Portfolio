@@ -44,6 +44,39 @@ export const portfolioProjects = [
   },
   {
     id: 4,
+    title: "Adobe Analytics Challenge - Consumer Research & Strategy",
+    category: "Illustrations & Educational Content",
+    client: "Adobe x Hilton",
+    description: "Comprehensive research presentation analyzing Hilton Hotels consumer behavior data using Adobe Analytics. Includes strategic recommendations, data visualizations, and actionable insights for customer experience optimization.",
+    images: [
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1553028826-f4804a6dba3b?w=800&h=600&fit=crop"
+    ],
+    type: "presentation",
+    featured: true,
+    orientation: "horizontal",
+    researchSlides: [
+      {
+        title: "Consumer Behavior Analysis",
+        description: "Deep dive into Hilton customer journey mapping and behavior patterns",
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
+      },
+      {
+        title: "Data Visualization & Insights",
+        description: "Strategic recommendations based on Adobe Analytics data analysis",
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
+      },
+      {
+        title: "Strategic Recommendations",
+        description: "Actionable insights for customer experience optimization",
+        image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop"
+      }
+    ]
+  },
+  {
+    id: 5,
     title: "High School Financial Literacy Animation",
     category: "Illustrations & Educational Content",
     client: "Educational Initiative",
@@ -57,7 +90,7 @@ export const portfolioProjects = [
     videoUrl: "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL"
   },
   {
-    id: 5,
+    id: 6,
     title: "Beat by Dre Product Photography",
     category: "Photography Projects",
     client: "Beat by Dre",
@@ -72,7 +105,7 @@ export const portfolioProjects = [
     orientation: "horizontal"
   },
   {
-    id: 6,
+    id: 7,
     title: "Disney Brand Strategy & Visual Identity",
     category: "Creative Concepts & Branding",
     client: "Disney",
@@ -86,7 +119,7 @@ export const portfolioProjects = [
     orientation: "horizontal"
   },
   {
-    id: 7,
+    id: 8,
     title: "Adobe Conference Marketing Collateral",
     category: "Graphic Design & Marketing Materials",
     client: "Adobe",
@@ -100,7 +133,7 @@ export const portfolioProjects = [
     orientation: "horizontal"
   },
   {
-    id: 8,
+    id: 9,
     title: "Beat by Dre Print & Digital Campaign",
     category: "Advertising",
     client: "Beat by Dre",
@@ -114,7 +147,7 @@ export const portfolioProjects = [
     orientation: "horizontal"
   },
   {
-    id: 9,
+    id: 10,
     title: "Disney Social Media Campaign",
     category: "Social Media Content & Campaigns",
     client: "Disney",
@@ -129,7 +162,7 @@ export const portfolioProjects = [
     orientation: "vertical"
   },
   {
-    id: 10,
+    id: 11,
     title: "Adobe Event Photography Coverage",
     category: "Photography Projects",
     client: "Adobe",
@@ -143,7 +176,7 @@ export const portfolioProjects = [
     orientation: "horizontal"
   },
   {
-    id: 11,
+    id: 12,
     title: "Beat by Dre Brand Positioning Strategy",
     category: "Creative Concepts & Branding",
     client: "Beat by Dre",
@@ -156,7 +189,7 @@ export const portfolioProjects = [
     orientation: "horizontal"
   },
   {
-    id: 12,
+    id: 13,
     title: "Disney Promotional Materials Design",
     category: "Graphic Design & Marketing Materials",
     client: "Disney",
@@ -170,7 +203,7 @@ export const portfolioProjects = [
     orientation: "horizontal"
   },
   {
-    id: 13,
+    id: 14,
     title: "Adobe TikTok Content Strategy",
     category: "Social Media Content & Campaigns",
     client: "Adobe",
@@ -183,7 +216,7 @@ export const portfolioProjects = [
     orientation: "vertical"
   },
   {
-    id: 14,
+    id: 15,
     title: "Career Planning Educational Illustrations",
     category: "Illustrations & Educational Content",
     client: "Educational Initiative",
@@ -197,7 +230,7 @@ export const portfolioProjects = [
     orientation: "horizontal"
   },
   {
-    id: 15,
+    id: 16,
     title: "Multi-Platform Social Campaign",
     category: "Social Media Content & Campaigns",
     client: "Beat by Dre",
