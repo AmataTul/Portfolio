@@ -34,7 +34,7 @@ const StoriesBar = ({ activeCategory, onCategoryChange }) => {
             return (
               <button
                 key={category}
-                onClick={() => setActiveCategory(category)}
+                onClick={() => onCategoryChange(category)}
                 className={`group flex items-center space-x-3 px-6 py-4 rounded-xl transition-all duration-300 ${
                   activeCategory === category
                     ? 'bg-red-600 text-white shadow-lg transform scale-105'
