@@ -210,9 +210,20 @@ const Home = () => {
       />
 
       {/* Marketing Portfolio Grid */}
-      <section className="bg-gray-50 py-12">
+      <section className="bg-gradient-to-br from-purple-50 via-pink-50 to-yellow-50 py-12 portfolio-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Professional Portfolio Grid */}
+          {/* Social Media Style Header */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-black bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 bg-clip-text text-transparent mb-4">
+              📱 My Creative Portfolio
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Swipe through my latest campaigns & creative projects! 
+              <span className="font-semibold text-purple-600"> ✨ Like what you see?</span>
+            </p>
+          </div>
+
+          {/* TikTok/Social Media Style Grid */}
           <div className={`grid gap-4 ${getGridClass(filteredProjects)}`}>
             {filteredProjects.map((project) => (
               <ProjectCard 
@@ -229,8 +240,8 @@ const Home = () => {
               <div className="text-gray-400 mb-8">
                 <Target size={80} className="mx-auto" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">No marketing campaigns found</h3>
-              <p className="text-gray-600">Try adjusting your search terms or category filter to find relevant marketing projects</p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">No creative projects found</h3>
+              <p className="text-gray-600">Try adjusting your search terms or category filter to discover more amazing work</p>
             </div>
           )}
         </div>
