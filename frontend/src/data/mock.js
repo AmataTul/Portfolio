@@ -856,7 +856,8 @@ export const workHistory = [
     period: "Feb 2024 – July 2025",
     achievements: [
       "Managed marketing operations across 7 diverse business divisions, driving 300% growth in brand visibility and customer engagement",
-      "Led 14+ social media accounts and WordPress websites with paid Meta advertising, generating measurable ROI and conversion increases",
+      "Led 14+ social media accounts with paid Meta advertising, generating measurable ROI and conversion increases",
+      "Developed and managed WordPress website for Ute Bison brand (bison-made products), increasing online sales by 85%",
       "Coordinated and managed large-scale events, increasing foot traffic by 85% and strengthening community partnerships",
       "Directed comprehensive branding for Bison Made products, resulting in 40% increase in product recognition and sales",
       "Analyzed marketing data to drive strategic decisions across marketing, design, and operations, improving efficiency by 25%",
