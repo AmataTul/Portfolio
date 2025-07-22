@@ -206,6 +206,38 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                 </ul>
               </div>
             )}
+            
+            {project.category === "Business Analytics & Strategy" && project.analytics && (
+              <div className="bg-gradient-to-r from-blue-50 to-purple-50 border-2 border-blue-200 rounded-xl p-4 md:p-6">
+                <h4 className="font-bold text-blue-800 mb-4 text-lg">Strategic Achievement</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                  <div className="bg-white rounded-lg p-4 shadow-sm">
+                    <h5 className="font-semibold text-blue-700 mb-2">Competition Results</h5>
+                    <p className="text-sm text-blue-600 mb-1">🏆 {project.analytics.achievement}</p>
+                    <p className="text-sm text-blue-600">🌍 {project.analytics.competitionLevel}</p>
+                  </div>
+                  <div className="bg-white rounded-lg p-4 shadow-sm">
+                    <h5 className="font-semibold text-purple-700 mb-2">Key Financial Metrics</h5>
+                    <div className="text-sm text-purple-600 space-y-1">
+                      <p>📈 ROE: {project.analytics.keyMetrics.returnOnEquity}%</p>
+                      <p>💰 EPS: ${project.analytics.keyMetrics.earningsPerShare}</p>
+                      <p>⭐ Credit Rating: {project.analytics.keyMetrics.creditRating}</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-white rounded-lg p-4 shadow-sm">
+                  <h5 className="font-semibold text-green-700 mb-3">Strategic Decisions & Impact</h5>
+                  <ul className="text-sm text-green-600 space-y-2">
+                    {project.analytics.strategicDecisions.map((decision, index) => (
+                      <li key={index} className="flex items-start">
+                        <span className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        {decision}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </DialogContent>
