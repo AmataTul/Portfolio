@@ -202,6 +202,77 @@ const About = () => {
             </div>
           </div>
 
+          {/* Strategic Achievements Section */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text mb-8 text-center">Strategic Business Achievement</h2>
+            <Card className="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 shadow-2xl border-2 border-purple-200">
+              <CardContent className="p-8">
+                <div className="text-center mb-8">
+                  <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-4 shadow-xl">
+                    <Award className="w-10 h-10 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Business Strategy Game Champion</h3>
+                  <p className="text-lg text-purple-600 font-semibold">🏆 1st Place Winner Among 158 Students</p>
+                  <p className="text-md text-blue-600 mt-2">🌍 Invited to Worldwide University Competition</p>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                  <div className="bg-white rounded-xl p-6 shadow-lg border-2 border-blue-200">
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-blue-600 mb-2">29.4%</div>
+                      <div className="text-sm text-gray-600">Return on Equity</div>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-xl p-6 shadow-lg border-2 border-purple-200">
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-purple-600 mb-2">$13.57</div>
+                      <div className="text-sm text-gray-600">Earnings Per Share</div>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-xl p-6 shadow-lg border-2 border-pink-200">
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-pink-600 mb-2">A+</div>
+                      <div className="text-sm text-gray-600">Credit Rating</div>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-xl p-6 shadow-lg border-2 border-green-200">
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-green-600 mb-2">$1.2M+</div>
+                      <div className="text-sm text-gray-600">Net Revenue</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-white rounded-xl p-6 shadow-lg border-2 border-gray-200">
+                  <h4 className="font-bold text-gray-800 mb-4 text-lg">Key Strategic Decisions & Impact</h4>
+                  <div className="space-y-3">
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0 w-2 h-2 bg-blue-500 rounded-full mt-2 mr-4"></div>
+                      <p className="text-gray-700">Corporate citizenship investments improved image rating from 77 to 94 (22% increase)</p>
+                    </div>
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0 w-2 h-2 bg-purple-500 rounded-full mt-2 mr-4"></div>
+                      <p className="text-gray-700">Strategic production capacity expansion in Latin America to meet demand</p>
+                    </div>
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0 w-2 h-2 bg-pink-500 rounded-full mt-2 mr-4"></div>
+                      <p className="text-gray-700">Enhanced celebrity contract bidding to improve brand appeal and market position</p>
+                    </div>
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0 w-2 h-2 bg-green-500 rounded-full mt-2 mr-4"></div>
+                      <p className="text-gray-700">Maintained A+ credit rating for 4 consecutive years through strategic financial management</p>
+                    </div>
+                  </div>
+                  <div className="mt-6 p-4 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg border-2 border-green-200">
+                    <p className="text-green-700 font-semibold">
+                      <strong>Result:</strong> Achieved highest revenue in industry through data-driven strategic decisions and comprehensive market analysis
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
           {/* Marketing Tools & Technologies */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text mb-8 text-center">Marketing Technology Stack</h2>
