@@ -14,7 +14,9 @@ import base64
 import json
 
 # Import our models
-from .models import (
+import sys
+sys.path.append('/app/backend')
+from models import (
     Project, ProjectCreate, ProjectUpdateRequest,
     Category, CategoryCreate,
     ContactInfo, ContactInfoCreate,
