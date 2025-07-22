@@ -122,11 +122,11 @@ const About = () => {
             <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Marketing Strategy Expertise</h2>
             <Card className="bg-white shadow-lg border-0">
               <CardContent className="p-8">
-                <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  Results-driven marketing coordinator with 5+ years of experience in performance marketing, digital marketing strategy, and data-driven campaign optimization. Proven track record of delivering measurable ROI through strategic marketing initiatives, conversion rate optimization, and customer acquisition campaigns.
+                <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
+                  I'm a creative marketing professional actively seeking opportunities to join innovative teams where I can contribute my 5+ years of experience in social media marketing, brand strategy, and data-driven campaign optimization. My expertise spans performance marketing, content creation, and conversion optimization with proven results for diverse brands.
                 </p>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  Expertise in marketing analytics, growth marketing, brand marketing coordination, and cross-channel marketing automation for Fortune 500 companies and emerging brands.
+                <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+                  Passionate about transforming brands through creative storytelling, strategic social media campaigns, and measurable growth initiatives. Ready to bring fresh perspectives and proven expertise to drive your marketing objectives forward.
                 </p>
               </CardContent>
             </Card>
