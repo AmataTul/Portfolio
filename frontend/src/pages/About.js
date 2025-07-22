@@ -15,7 +15,8 @@ const About = () => {
     "Analytics & Data Intelligence": ["Google Analytics", "Adobe Analytics", "Looker Studio", "SQL", "Tableau", "Hotjar"],
     "Digital Marketing & Advertising": ["Google Ads", "Meta Ads Manager", "HubSpot", "Semrush", "MailChimp"],
     "Creative & Design": ["Adobe Photoshop", "Adobe Illustrator", "Canva", "CapCut", "Figma"],
-    "Project Management & Operations": ["WordPress", "Trello", "Jira", "Miro", "Notion"]
+    "Project Management & Operations": ["WordPress", "Trello", "Jira", "Miro", "Notion"],
+    "SEO & Research": ["SEMrush", "Ahrefs", "Google Search Console", "Keyword Planner", "Screaming Frog", "Moz"]
   };
 
   const handleEmailClick = () => {
