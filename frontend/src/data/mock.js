@@ -257,7 +257,8 @@ export const categories = [
   "Social Media Content & Campaigns",
   "Photography Projects",
   "Creative Concepts & Branding",
-  "Illustrations & Educational Content"
+  "Illustrations & Educational Content",
+  "Business Analytics & Strategy"
 ];
 
 export const tools = [
