@@ -287,6 +287,50 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                 </div>
               </div>
             )}
+
+            {project.videoContent && (
+              <div className="bg-gradient-to-r from-purple-50 to-blue-50 border-2 border-purple-200 rounded-xl p-4 md:p-6">
+                <h4 className="font-bold text-purple-800 mb-4 text-lg">Video Content Collection</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                  <div className="bg-white rounded-lg p-4 shadow-sm">
+                    <h5 className="font-semibold text-purple-700 mb-2">Content Series</h5>
+                    <p className="text-sm text-purple-600">📹 Total Videos: {project.videoContent.totalVideos}</p>
+                  </div>
+                  <div className="bg-white rounded-lg p-4 shadow-sm">
+                    <h5 className="font-semibold text-blue-700 mb-2">Platform Distribution</h5>
+                    <p className="text-sm text-blue-600">🎬 {project.type === 'video' ? 'Social Media & YouTube' : 'Educational Platform'}</p>
+                  </div>
+                </div>
+                <div className="bg-white rounded-lg p-4 shadow-sm">
+                  <h5 className="font-semibold text-green-700 mb-3">Video Collection</h5>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {project.videoContent.videos.map((video, index) => (
+                      <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                        <div className="flex-1">
+                          <p className="text-sm text-gray-700 mb-1">Video {index + 1}</p>
+                          <p className="text-xs text-green-600 font-medium">
+                            {project.type === 'video' ? '📱 Social Media Reel' : '📚 Educational Content'}
+                          </p>
+                        </div>
+                        <a
+                          href={video}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="bg-purple-500 hover:bg-purple-600 text-white text-xs px-3 py-1 rounded-full transition-colors ml-3"
+                        >
+                          Watch
+                        </a>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="mt-4 p-3 bg-blue-50 rounded-lg">
+                    <p className="text-xs text-blue-700">
+                      💡 <strong>Note:</strong> Video content can be updated through the backend admin panel. Upload new videos or update social media links as needed.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </DialogContent>
