@@ -1,3 +1,5 @@
+import sys
+sys.path.append('/app/backend')
 from models import (
     Project, Category, ContactInfo, WorkHistory, Education, Tool, Brand, AnalyticsData
 )
