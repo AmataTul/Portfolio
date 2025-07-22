@@ -226,15 +226,15 @@ const Home = () => {
 
           {/* Enhanced Project Grid */}
           <div className="space-y-12">
-            {featuredProjects.length > 0 && (
+            {filteredProjects.length > 0 ? (
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
                   <span className="bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
-                    Featured Projects
+                    {activeCategory === 'All' ? 'Featured Projects' : `${activeCategory} Projects`}
                   </span>
                 </h3>
-                <div className={`grid gap-4 ${getGridClass(featuredProjects)}`}>
-                  {featuredProjects.map((project) => (
+                <div className={`grid gap-4 ${getGridClass(filteredProjects)}`}>
+                  {filteredProjects.map((project) => (
                     <div
                       key={project.id}
                       className="transform hover:scale-105 transition-all duration-300 hover:shadow-xl group"
@@ -247,28 +247,9 @@ const Home = () => {
                   ))}
                 </div>
               </div>
-            )}
-
-            {regularProjects.length > 0 && (
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-                  <span className="bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent">
-                    All Projects
-                  </span>
-                </h3>
-                <div className={`grid gap-4 ${getGridClass(regularProjects)}`}>
-                  {regularProjects.map((project) => (
-                    <div
-                      key={project.id}
-                      className="transform hover:scale-105 transition-all duration-300 hover:shadow-xl group"
-                    >
-                      <ProjectCard
-                        project={project}
-                        onClick={() => handleProjectClick(project)}
-                      />
-                    </div>
-                  ))}
-                </div>
+            ) : (
+              <div className="text-center py-16">
+                <p className="text-gray-500 text-lg">No projects found for the selected category.</p>
               </div>
             )}
           </div>
