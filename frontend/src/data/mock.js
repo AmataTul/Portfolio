@@ -243,6 +243,43 @@ export const portfolioProjects = [
     type: "image",
     featured: false,
     orientation: "vertical"
+  },
+  {
+    id: 17,
+    title: "Business Strategy Game - Championship Performance",
+    category: "Business Analytics & Strategy",
+    client: "Utah State University",
+    description: "Achieved 1st place among 158 students in semester-long Business Strategy Game simulation, earning invitation to worldwide university competition. Demonstrated strategic thinking, financial management, and competitive analysis skills.",
+    images: [
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop"
+    ],
+    type: "analytics",
+    featured: true,
+    orientation: "horizontal",
+    analytics: {
+      achievement: "1st Place Winner (158 students)",
+      competitionLevel: "Worldwide University Competition Invitation",
+      duration: "Full Semester",
+      keyMetrics: {
+        earningsPerShare: 13.57,
+        returnOnEquity: 29.4,
+        creditRating: "A+",
+        imageRating: 94,
+        netRevenue: 1201007,
+        profitMargin: 19.4,
+        stockPrice: 298.58,
+        netIncome: 233283
+      },
+      strategicDecisions: [
+        "Corporate citizenship investments improved image rating from 77 to 94 (22% increase)",
+        "Strategic production capacity expansion in Latin America to meet demand",
+        "Enhanced celebrity contract bidding to improve brand appeal and market position",
+        "Maintained A+ credit rating for 4 consecutive years through strategic financial management"
+      ],
+      competitiveAdvantage: "Achieved highest revenue in industry through data-driven strategic decisions and market analysis"
+    }
   }
 ];
 
