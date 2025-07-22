@@ -130,14 +130,17 @@ const About = () => {
         <div className="max-w-6xl mx-auto">
           {/* Professional Summary */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Marketing Strategy Expertise</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Marketing Strategy & Analytics Expertise</h2>
             <Card className="bg-white shadow-lg border-0">
               <CardContent className="p-8">
                 <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
-                  I'm a creative marketing professional actively seeking opportunities to join innovative teams where I can contribute my 5+ years of experience in social media marketing, brand strategy, and data-driven campaign optimization. My expertise spans performance marketing, content creation, and conversion optimization with proven results for diverse brands.
+                  I'm a creative marketing professional actively seeking opportunities to join innovative teams where I can contribute my 5+ years of experience in social media marketing, brand strategy, and data-driven campaign optimization. My expertise spans performance marketing, content creation, conversion optimization, and comprehensive analytics with proven results for diverse brands.
+                </p>
+                <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
+                  My analytical approach combines marketing research, SEO optimization, and data-driven insights to create campaigns that deliver measurable results. I specialize in transforming complex data into actionable marketing strategies that drive growth and engagement across all digital channels.
                 </p>
                 <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                  Passionate about transforming brands through creative storytelling, strategic social media campaigns, and measurable growth initiatives. Ready to bring fresh perspectives and proven expertise to drive your marketing objectives forward.
+                  Passionate about transforming brands through creative storytelling, strategic social media campaigns, market research, and measurable growth initiatives. Ready to bring fresh perspectives, analytical insights, and proven expertise to drive your marketing objectives forward.
                 </p>
               </CardContent>
             </Card>
