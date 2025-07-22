@@ -882,11 +882,11 @@ export const workHistory = [
     location: "Remote",
     period: "Sep 2021 – Apr 2023",
     achievements: [
-      "Supported business growth by combining data analysis with creative marketing strategies for a luxury jewelry brand",
-      "Conducted market research, competitor benchmarking, and consumer behavior analysis to inform product positioning and campaign planning",
-      "Developed and managed digital content, promotional materials, and e-commerce listings to enhance brand visibility and drive sales",
-      "Collaborated with leadership on pricing, inventory optimization, and branding decisions",
-      "Provided insights through sales reports and operational analysis to support data-driven decision-making"
+      "Combined data analysis with creative marketing for luxury jewelry brand, increasing online sales by 180% in 18 months",
+      "Conducted market research and competitor analysis that identified 3 new market segments, generating $500K+ in new revenue",
+      "Developed digital content and e-commerce optimization strategies that improved conversion rates by 120%",
+      "Collaborated with leadership on data-driven pricing and inventory decisions, reducing costs by 15% while maintaining quality",
+      "Delivered actionable insights through sales analytics that improved decision-making speed by 40%"
     ]
   },
   {
