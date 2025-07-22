@@ -396,9 +396,9 @@ export const portfolioProjects = [
   },
   {
     id: 30,
-    title: "Beat by Dre Instagram Story Series",
+    title: "Beats by Dre Instagram Story Series",
     category: "Social Media Content & Campaigns",
-    client: "Beat by Dre",
+    client: "Beats by Dre",
     description: "Weekly Instagram Stories series featuring behind-the-scenes content, product unboxings, and user-generated content campaigns.",
     images: [
       "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=800&fit=crop"
