@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { portfolioProjects, categories, contactInfo } from '../data/mock';
 import ProjectCard from '../components/ProjectCard';
 import ProjectModal from '../components/ProjectModal';
@@ -8,6 +9,7 @@ import ProfessionalFilter from '../components/ProfessionalFilter';
 import { ArrowRight, Target, Sparkles, Zap, TrendingUp, Users, Play } from 'lucide-react';
 
 const Home = () => {
+  const navigate = useNavigate();
   const [selectedProject, setSelectedProject] = useState(null);
   const [activeCategory, setActiveCategory] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
