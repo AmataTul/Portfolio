@@ -197,98 +197,89 @@ const About = () => {
             </div>
           </div>
 
-          {/* Education & Academic Excellence - Highlighted Section */}
+          {/* Education & Career Journey */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text mb-8 text-center">Academic Excellence & Distinguished Achievements</h2>
-            <Card className="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 shadow-2xl border-2 border-purple-200">
+            <h2 className="text-3xl font-bold text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text mb-8 text-center">Academic Foundation & Career Journey</h2>
+            
+            {/* Education Highlight */}
+            <Card className="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 shadow-2xl border-2 border-purple-200 mb-8">
               <CardContent className="p-8">
-                <div className="text-center mb-8">
-                  <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-4 shadow-xl">
-                    <GraduationCap className="w-10 h-10 text-white" />
+                <div className="flex items-center mb-6">
+                  <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mr-6 shadow-xl">
+                    <GraduationCap className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{education.degree}</h3>
-                  <p className="text-lg text-purple-600 font-semibold">{education.minor}</p>
-                  <p className="text-md text-blue-600 mt-2">{education.university} • {education.honor} • {education.period}</p>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{education.degree}</h3>
+                    <p className="text-lg text-purple-600 font-semibold">{education.minor}</p>
+                    <p className="text-md text-blue-600 mt-1">{education.university} • {education.honor} • {education.period}</p>
+                  </div>
                 </div>
                 
-                <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
-                  <p className="text-red-700 text-sm">
-                    <strong>Specialized Coursework:</strong> Digital Marketing Strategy, Consumer Behavior Analysis, Marketing Analytics, 
-                    Business Intelligence, Data-Driven Marketing, Project Management, Marketing Research & Analysis
-                  </p>
-                </div>
-
-                {/* Scholarships and Awards */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {/* Julie Ann Cook's Data Ninja Scholarship */}
-                  <div className="bg-white rounded-lg p-6 shadow-lg border-2 border-yellow-200">
-                    <div className="flex items-center mb-4">
-                      <Trophy className="w-8 h-8 text-yellow-600 mr-3" />
-                      <div>
-                        <h4 className="text-lg font-bold text-gray-900">Julie Ann Cook's Data Ninja Scholarship</h4>
-                        <p className="text-sm text-gray-600">Mar 2022 • Jon M. Huntsman School of Business</p>
-                      </div>
+                <div className="bg-white rounded-lg p-6 shadow-sm mb-6">
+                  <h4 className="font-semibold text-gray-800 mb-3">Academic Achievements & Scholarships</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded">
+                      <p className="text-sm font-semibold text-yellow-800">🏆 Julie Ann Cook's Data Ninja Scholarship</p>
+                      <p className="text-xs text-yellow-700">First remote recipient - Extremely competitive</p>
                     </div>
-                    <div className="space-y-2 mb-3">
-                      <Badge className="bg-yellow-100 text-yellow-800 text-xs">FIRST REMOTE RECIPIENT</Badge>
-                      <Badge className="bg-orange-100 text-orange-800 text-xs">EXTREMELY COMPETITIVE</Badge>
+                    <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded">
+                      <p className="text-sm font-semibold text-blue-800">🎓 Direct Admit Business Scholarship</p>
+                      <p className="text-xs text-blue-700">Top 10% high school class</p>
                     </div>
-                    <p className="text-sm text-gray-700">
-                      Highly distinguished scholarship recognizing exceptional leadership skills, work experience, and academic excellence. 
-                      First ever recipient to attend away from main campus.
-                    </p>
-                  </div>
-
-                  {/* Direct Admit Business Scholarship */}
-                  <div className="bg-white rounded-lg p-6 shadow-lg border-2 border-blue-200">
-                    <div className="flex items-center mb-4">
-                      <Award className="w-8 h-8 text-blue-600 mr-3" />
-                      <div>
-                        <h4 className="text-lg font-bold text-gray-900">Direct Admit Business Scholarship</h4>
-                        <p className="text-sm text-gray-600">Aug 2019 • Jon M. Huntsman School of Business</p>
-                      </div>
+                    <div className="bg-green-50 border-l-4 border-green-400 p-4 rounded">
+                      <p className="text-sm font-semibold text-green-800">💰 Hansen Differential Tuition Scholarship</p>
+                      <p className="text-xs text-green-700">Faculty endorsed selection</p>
                     </div>
-                    <div className="space-y-2 mb-3">
-                      <Badge className="bg-blue-100 text-blue-800 text-xs">TOP 10% HIGH SCHOOL</Badge>
-                      <Badge className="bg-purple-100 text-purple-800 text-xs">COMPETITIVE ADMISSION</Badge>
+                    <div className="bg-pink-50 border-l-4 border-pink-400 p-4 rounded">
+                      <p className="text-sm font-semibold text-pink-800">🎨 3rd Place Digital Media Arts Festival</p>
+                      <p className="text-xs text-pink-700">Creative excellence recognition</p>
                     </div>
-                    <p className="text-sm text-gray-700">
-                      Prestigious scholarship for exceptional academic performance and direct admission to the Management Information Systems program.
-                    </p>
-                  </div>
-
-                  {/* Hansen Differential Tuition Scholarship */}
-                  <div className="bg-white rounded-lg p-6 shadow-lg border-2 border-green-200">
-                    <div className="flex items-center mb-4">
-                      <Target className="w-8 h-8 text-green-600 mr-3" />
-                      <div>
-                        <h4 className="text-lg font-bold text-gray-900">Hansen Differential Tuition Scholarship</h4>
-                        <p className="text-sm text-gray-600">Jon M. Huntsman School of Business</p>
-                      </div>
-                    </div>
-                    <Badge className="bg-green-100 text-green-800 text-xs mb-3">FACULTY ENDORSED</Badge>
-                    <p className="text-sm text-gray-700">
-                      Selective scholarship awarded by the Jon M. Huntsman School of Business with endorsement from business school faculty.
-                    </p>
-                  </div>
-
-                  {/* Utah Digital Media Arts Festival */}
-                  <div className="bg-white rounded-lg p-6 shadow-lg border-2 border-pink-200">
-                    <div className="flex items-center mb-4">
-                      <Palette className="w-8 h-8 text-pink-600 mr-3" />
-                      <div>
-                        <h4 className="text-lg font-bold text-gray-900">3rd Place Utah Digital Media Arts Festival</h4>
-                        <p className="text-sm text-gray-600">May 2019 • Utah Digital Media Arts Festival</p>
-                      </div>
-                    </div>
-                    <Badge className="bg-pink-100 text-pink-800 text-xs mb-3">CREATIVE EXCELLENCE</Badge>
-                    <p className="text-sm text-gray-700">
-                      Recognized for outstanding creative work and digital media innovation in statewide competition.
-                    </p>
                   </div>
                 </div>
               </CardContent>
             </Card>
+
+            {/* Professional Experience - More Visual and Engaging */}
+            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Professional Marketing Experience</h3>
+            <div className="space-y-8">
+              {workHistory.map((job, index) => (
+                <Card key={index} className="bg-white shadow-lg border-0 hover:shadow-xl transition-all duration-300 overflow-hidden">
+                  <CardContent className="p-0">
+                    <div className="bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 p-6 text-white">
+                      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
+                        <div className="mb-4 lg:mb-0">
+                          <h4 className="text-xl font-bold mb-2">{job.position}</h4>
+                          <p className="text-lg font-semibold text-yellow-200">{job.company}</p>
+                          <p className="text-sm text-purple-100">{job.location}</p>
+                        </div>
+                        <div className="flex items-center space-x-4">
+                          <Badge className="bg-white/20 text-white border-white/30">
+                            <Calendar size={14} className="mr-2" />
+                            {job.period}
+                          </Badge>
+                          <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                            <Briefcase className="w-6 h-6 text-white" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="p-6">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {job.achievements.map((achievement, achievementIndex) => (
+                          <div key={achievementIndex} className="flex items-start bg-gray-50 p-4 rounded-lg">
+                            <div className="flex-shrink-0 w-6 h-6 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center mt-1 mr-3">
+                              <span className="text-white text-xs font-bold">{achievementIndex + 1}</span>
+                            </div>
+                            <p className="text-gray-700 text-sm leading-relaxed">{achievement}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
 
           {/* Professional Accomplishments */}
@@ -335,38 +326,6 @@ const About = () => {
                   </div>
                 </CardContent>
               </Card>
-            </div>
-          </div>
-
-          {/* Professional Experience */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Digital Marketing Career Experience</h2>
-            <div className="space-y-6">
-              {workHistory.map((job, index) => (
-                <Card key={index} className="bg-white shadow-lg border-0 hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-8">
-                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
-                      <div className="mb-4 lg:mb-0">
-                        <h3 className="text-xl font-bold text-red-600 mb-2">{job.position}</h3>
-                        <p className="text-lg text-gray-700 font-semibold">{job.company}</p>
-                        <p className="text-sm text-gray-500">{job.location}</p>
-                      </div>
-                      <Badge variant="outline" className="border-red-200 text-red-600 self-start lg:self-center">
-                        <Calendar size={14} className="mr-1" />
-                        {job.period}
-                      </Badge>
-                    </div>
-                    <div className="space-y-3">
-                      {job.achievements.map((achievement, achievementIndex) => (
-                        <div key={achievementIndex} className="flex items-start">
-                          <div className="flex-shrink-0 w-2 h-2 bg-red-500 rounded-full mt-2 mr-4"></div>
-                          <p className="text-gray-700 leading-relaxed">{achievement}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
             </div>
           </div>
 
