@@ -533,6 +533,151 @@ export const portfolioProjects = [
         "https://www.tiktok.com/@bisonmade/video/7390967071472946462"
       ]
     }
+  },
+  {
+    id: 35,
+    title: "Beat by Dre Event Photography",
+    category: "Photography Projects",
+    client: "Beat by Dre",
+    description: "Concert and music event photography capturing artist performances, backstage moments, and product placements during live events.",
+    images: [
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=800&h=600&fit=crop"
+    ],
+    type: "image",
+    featured: false,
+    orientation: "horizontal"
+  },
+  {
+    id: 36,
+    title: "Disney Character Meet & Greet Photography",
+    category: "Photography Projects",
+    client: "Disney",
+    description: "Character meet and greet photography for Disney parks, capturing magical moments between guests and beloved Disney characters.",
+    images: [
+      "https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&h=600&fit=crop"
+    ],
+    type: "image",
+    featured: false,
+    orientation: "horizontal"
+  },
+  {
+    id: 37,
+    title: "Adobe Creative Studio Photography",
+    category: "Photography Projects",
+    client: "Adobe",
+    description: "Behind-the-scenes photography of creative professionals using Adobe Creative Suite, showcasing workflow and creative process.",
+    images: [
+      "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=800&h=600&fit=crop"
+    ],
+    type: "image",
+    featured: false,
+    orientation: "horizontal"
+  },
+  {
+    id: 38,
+    title: "Ute Tribal Enterprises Facility Photography",
+    category: "Photography Projects",
+    client: "Ute Tribal Enterprises",
+    description: "Comprehensive facility photography across seven business divisions including retail spaces, hospitality venues, and operational facilities.",
+    images: [
+      "https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&h=600&fit=crop"
+    ],
+    type: "image",
+    featured: false,
+    orientation: "horizontal"
+  },
+  {
+    id: 39,
+    title: "KahPeeh Kah-Ahn Coffee House Interior Photography",
+    category: "Photography Projects",
+    client: "Ute Tribal Enterprises - KahPeeh Kah-Ahn",
+    description: "Interior and atmosphere photography of coffee house spaces, capturing the authentic tribal ambiance and customer experience.",
+    images: [
+      "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&h=600&fit=crop"
+    ],
+    type: "image",
+    featured: false,
+    orientation: "horizontal"
+  },
+  {
+    id: 40,
+    title: "Beat by Dre Lifestyle Brand Strategy",
+    category: "Creative Concepts & Branding",
+    client: "Beat by Dre",
+    description: "Comprehensive lifestyle brand strategy development including market positioning, brand voice evolution, and creative direction for music culture integration.",
+    images: [
+      "https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=800&h=600&fit=crop"
+    ],
+    type: "image",
+    featured: false,
+    orientation: "horizontal"
+  },
+  {
+    id: 41,
+    title: "Disney Streaming Brand Evolution",
+    category: "Creative Concepts & Branding",
+    client: "Disney",
+    description: "Brand evolution strategy for Disney+ streaming service including visual identity updates, content categorization, and user experience enhancements.",
+    images: [
+      "https://images.unsplash.com/photo-1489399627699-e5c5f1e8f6c6?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop"
+    ],
+    type: "image",
+    featured: false,
+    orientation: "horizontal"
+  },
+  {
+    id: 42,
+    title: "Adobe Creative Cloud Rebranding",
+    category: "Creative Concepts & Branding",
+    client: "Adobe",
+    description: "Creative Cloud suite rebranding initiative including logo refresh, color palette updates, and integrated brand experience across all touchpoints.",
+    images: [
+      "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop"
+    ],
+    type: "image",
+    featured: false,
+    orientation: "horizontal"
+  },
+  {
+    id: 43,
+    title: "Ute Tribal Enterprises Unified Brand Identity",
+    category: "Creative Concepts & Branding",
+    client: "Ute Tribal Enterprises",
+    description: "Unified brand identity system connecting all seven business divisions while maintaining individual brand personalities and tribal heritage authenticity.",
+    images: [
+      "https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=800&h=600&fit=crop"
+    ],
+    type: "image",
+    featured: false,
+    orientation: "horizontal"
+  },
+  {
+    id: 44,
+    title: "Bison Made Authentic Heritage Branding",
+    category: "Creative Concepts & Branding",
+    client: "Ute Tribal Enterprises - Bison Made",
+    description: "Authentic tribal heritage branding for Bison Made products, incorporating traditional designs with contemporary market appeal and cultural respect.",
+    images: [
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=800&h=600&fit=crop"
+    ],
+    type: "image",
+    featured: false,
+    orientation: "horizontal"
   }
 ];
 
