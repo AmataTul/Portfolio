@@ -298,6 +298,7 @@ const Home = () => {
       {selectedProject && (
         <ProjectModal
           project={selectedProject}
+          isOpen={!!selectedProject}
           onClose={handleCloseModal}
         />
       )}
