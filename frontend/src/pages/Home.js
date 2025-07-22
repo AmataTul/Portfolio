@@ -73,9 +73,9 @@ const Home = () => {
         {/* Hero Content */}
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-32">
           {/* Colorful Professional Badge */}
-          <div className="flex justify-center mb-12">
-            <div className="inline-flex items-center bg-gradient-to-r from-yellow-400/30 to-pink-400/30 backdrop-blur-lg rounded-full px-8 py-4 border-2 border-white/30 shadow-2xl animate-pulse">
-              <span className="text-lg font-bold tracking-wide text-yellow-100">🚀 PERFORMANCE MARKETING STRATEGIST</span>
+          <div className="flex justify-center mb-8 md:mb-12">
+            <div className="inline-flex items-center bg-gradient-to-r from-yellow-400/30 to-pink-400/30 backdrop-blur-lg rounded-full px-6 md:px-8 py-3 md:py-4 border-2 border-white/30 shadow-2xl animate-pulse">
+              <span className="text-base md:text-lg font-bold tracking-wide text-yellow-100">🎨 CREATIVE MARKETING PROFESSIONAL</span>
             </div>
           </div>
 
