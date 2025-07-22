@@ -1,13 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Card, CardContent } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
 import { workHistory, education, contactInfo, tools } from '../data/mock';
 import { 
   Mail, Phone, MapPin, Linkedin, Award, Users, TrendingUp, Calendar, 
-  GraduationCap, Briefcase, Target, BarChart3, Zap, Palette, Megaphone 
+  GraduationCap, Briefcase, Target, BarChart3, Zap, Palette, Megaphone, Trophy 
 } from 'lucide-react';
 
 const About = () => {
+  const navigate = useNavigate();
+
   const toolCategories = {
     "Analytics & Data Intelligence": ["Google Analytics", "Adobe Analytics", "Looker Studio", "SQL", "Tableau", "Hotjar"],
     "Digital Marketing & Advertising": ["Google Ads", "Meta Ads Manager", "HubSpot", "Semrush", "MailChimp"],
@@ -19,6 +22,14 @@ const About = () => {
     const subject = "Marketing Strategy Collaboration Opportunity";
     const body = "Hi Amata,\n\nI found your marketing portfolio and I'm impressed with your performance marketing expertise and data-driven approach. I'd love to discuss potential collaboration opportunities.\n\nBest regards,";
     window.location.href = `mailto:${contactInfo.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
+
+  const handleBackToWork = () => {
+    navigate('/', { replace: true });
+    // Smooth scroll to top after navigation
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
   };
 
   return (
@@ -94,12 +105,12 @@ const About = () => {
                 >
                   💼 I'm Available for Hire!
                 </button>
-                <a
-                  href="/"
+                <button
+                  onClick={handleBackToWork}
                   className="bg-gradient-to-r from-blue-400 to-purple-500 hover:from-blue-500 hover:to-purple-600 text-white font-semibold py-3 px-6 md:px-8 rounded-full transition-all duration-300 border-2 border-white/30 shadow-xl text-sm md:text-base"
                 >
                   👈 Back to Work Gallery
-                </a>
+                </button>
                 <a
                   href={contactInfo.linkedin}
                   target="_blank"
@@ -107,7 +118,7 @@ const About = () => {
                   className="bg-gradient-to-r from-pink-400 to-purple-500 hover:from-pink-500 hover:to-purple-600 text-white font-semibold py-3 px-6 md:px-8 rounded-full transition-all duration-300 border-2 border-white/30 shadow-xl text-sm md:text-base"
                 >
                   🔗 LinkedIn Profile
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -128,147 +139,6 @@ const About = () => {
                 <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
                   Passionate about transforming brands through creative storytelling, strategic social media campaigns, and measurable growth initiatives. Ready to bring fresh perspectives and proven expertise to drive your marketing objectives forward.
                 </p>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Education Section */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Marketing Education & Credentials</h2>
-            <Card className="bg-white shadow-lg border-0">
-              <CardContent className="p-8">
-                <div className="flex items-center mb-6">
-                  <div className="flex-shrink-0 w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mr-6">
-                    <GraduationCap className="w-8 h-8 text-red-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{education.degree}</h3>
-                    <p className="text-lg text-red-600 font-medium">{education.minor}</p>
-                  </div>
-                </div>
-                <div className="ml-22">
-                  <div className="flex items-center justify-between mb-4">
-                    <p className="text-xl font-semibold text-gray-700">{education.university}</p>
-                    <div className="flex items-center space-x-4">
-                      <Badge className="bg-red-100 text-red-800 text-sm font-medium">
-                        {education.honor}
-                      </Badge>
-                      <Badge variant="outline" className="border-red-200 text-red-600">
-                        <Calendar size={14} className="mr-1" />
-                        {education.period}
-                      </Badge>
-                    </div>
-                  </div>
-                  <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                    <p className="text-red-700 text-sm">
-                      <strong>Specialized Coursework:</strong> Digital Marketing Strategy, Consumer Behavior Analysis, Marketing Analytics, 
-                      Business Intelligence, Data-Driven Marketing, Project Management, Marketing Research & Analysis
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Professional Experience */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Digital Marketing Career Experience</h2>
-            <div className="space-y-6">
-              {workHistory.map((job, index) => (
-                <Card key={index} className="bg-white shadow-lg border-0 hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-8">
-                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
-                      <div className="mb-4 lg:mb-0">
-                        <h3 className="text-xl font-bold text-red-600 mb-2">{job.position}</h3>
-                        <p className="text-lg text-gray-700 font-semibold">{job.company}</p>
-                        <p className="text-sm text-gray-500">{job.location}</p>
-                      </div>
-                      <Badge variant="outline" className="border-red-200 text-red-600 self-start lg:self-center">
-                        <Calendar size={14} className="mr-1" />
-                        {job.period}
-                      </Badge>
-                    </div>
-                    <div className="space-y-3">
-                      {job.achievements.map((achievement, achievementIndex) => (
-                        <div key={achievementIndex} className="flex items-start">
-                          <div className="flex-shrink-0 w-2 h-2 bg-red-500 rounded-full mt-2 mr-4"></div>
-                          <p className="text-gray-700 leading-relaxed">{achievement}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-
-          {/* Strategic Achievements Section */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text mb-8 text-center">Strategic Business Achievement</h2>
-            <Card className="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 shadow-2xl border-2 border-purple-200">
-              <CardContent className="p-8">
-                <div className="text-center mb-8">
-                  <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-4 shadow-xl">
-                    <Award className="w-10 h-10 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Business Strategy Game Champion</h3>
-                  <p className="text-lg text-purple-600 font-semibold">🏆 1st Place Winner Among 158 Students</p>
-                  <p className="text-md text-blue-600 mt-2">🌍 Invited to Worldwide University Competition</p>
-                </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                  <div className="bg-white rounded-xl p-6 shadow-lg border-2 border-blue-200">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-blue-600 mb-2">29.4%</div>
-                      <div className="text-sm text-gray-600">Return on Equity</div>
-                    </div>
-                  </div>
-                  <div className="bg-white rounded-xl p-6 shadow-lg border-2 border-purple-200">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-purple-600 mb-2">$13.57</div>
-                      <div className="text-sm text-gray-600">Earnings Per Share</div>
-                    </div>
-                  </div>
-                  <div className="bg-white rounded-xl p-6 shadow-lg border-2 border-pink-200">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-pink-600 mb-2">A+</div>
-                      <div className="text-sm text-gray-600">Credit Rating</div>
-                    </div>
-                  </div>
-                  <div className="bg-white rounded-xl p-6 shadow-lg border-2 border-green-200">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-green-600 mb-2">$1.2M+</div>
-                      <div className="text-sm text-gray-600">Net Revenue</div>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="bg-white rounded-xl p-6 shadow-lg border-2 border-gray-200">
-                  <h4 className="font-bold text-gray-800 mb-4 text-lg">Key Strategic Decisions & Impact</h4>
-                  <div className="space-y-3">
-                    <div className="flex items-start">
-                      <div className="flex-shrink-0 w-2 h-2 bg-blue-500 rounded-full mt-2 mr-4"></div>
-                      <p className="text-gray-700">Corporate citizenship investments improved image rating from 77 to 94 (22% increase)</p>
-                    </div>
-                    <div className="flex items-start">
-                      <div className="flex-shrink-0 w-2 h-2 bg-purple-500 rounded-full mt-2 mr-4"></div>
-                      <p className="text-gray-700">Strategic production capacity expansion in Latin America to meet demand</p>
-                    </div>
-                    <div className="flex items-start">
-                      <div className="flex-shrink-0 w-2 h-2 bg-pink-500 rounded-full mt-2 mr-4"></div>
-                      <p className="text-gray-700">Enhanced celebrity contract bidding to improve brand appeal and market position</p>
-                    </div>
-                    <div className="flex items-start">
-                      <div className="flex-shrink-0 w-2 h-2 bg-green-500 rounded-full mt-2 mr-4"></div>
-                      <p className="text-gray-700">Maintained A+ credit rating for 4 consecutive years through strategic financial management</p>
-                    </div>
-                  </div>
-                  <div className="mt-6 p-4 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg border-2 border-green-200">
-                    <p className="text-green-700 font-semibold">
-                      <strong>Result:</strong> Achieved highest revenue in industry through data-driven strategic decisions and comprehensive market analysis
-                    </p>
-                  </div>
-                </div>
               </CardContent>
             </Card>
           </div>
@@ -324,6 +194,212 @@ const About = () => {
                   </Card>
                 );
               })}
+            </div>
+          </div>
+
+          {/* Strategic Business Achievement - Smaller Section */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text mb-8 text-center">Strategic Business Achievement</h2>
+            <Card className="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 shadow-xl border-2 border-purple-200">
+              <CardContent className="p-6">
+                <div className="text-center mb-6">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-3 shadow-xl">
+                    <Award className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Business Strategy Game Champion</h3>
+                  <p className="text-md text-purple-600 font-semibold">🏆 1st Place Winner Among 158 Students</p>
+                  <p className="text-sm text-blue-600 mt-1">🌍 Invited to Worldwide University Competition • April 2022</p>
+                </div>
+                
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                  <div className="bg-white rounded-lg p-4 shadow-sm border border-blue-200">
+                    <div className="text-center">
+                      <div className="text-lg font-bold text-blue-600 mb-1">29.4%</div>
+                      <div className="text-xs text-gray-600">ROE</div>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-lg p-4 shadow-sm border border-purple-200">
+                    <div className="text-center">
+                      <div className="text-lg font-bold text-purple-600 mb-1">$13.57</div>
+                      <div className="text-xs text-gray-600">EPS</div>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-lg p-4 shadow-sm border border-pink-200">
+                    <div className="text-center">
+                      <div className="text-lg font-bold text-pink-600 mb-1">A+</div>
+                      <div className="text-xs text-gray-600">Credit Rating</div>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-lg p-4 shadow-sm border border-green-200">
+                    <div className="text-center">
+                      <div className="text-lg font-bold text-green-600 mb-1">$1.2M+</div>
+                      <div className="text-xs text-gray-600">Revenue</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
+                  <p className="text-sm text-gray-700 mb-3">
+                    <strong>Key Achievement:</strong> Served as consultant to my team and teams from other industries, achieving highest revenue through strategic financial management and data-driven decisions.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <Badge variant="outline" className="text-xs">Strategic Planning</Badge>
+                    <Badge variant="outline" className="text-xs">Financial Analysis</Badge>
+                    <Badge variant="outline" className="text-xs">Cross-Industry Consulting</Badge>
+                    <Badge variant="outline" className="text-xs">Competitive Intelligence</Badge>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Academic Excellence & Awards */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Academic Excellence & Awards</h2>
+            
+            {/* Education */}
+            <Card className="bg-white shadow-lg border-0 mb-8">
+              <CardContent className="p-8">
+                <div className="flex items-center mb-6">
+                  <div className="flex-shrink-0 w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mr-6">
+                    <GraduationCap className="w-8 h-8 text-red-600" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{education.degree}</h3>
+                    <p className="text-lg text-red-600 font-medium">{education.minor}</p>
+                  </div>
+                </div>
+                <div className="ml-22">
+                  <div className="flex items-center justify-between mb-4">
+                    <p className="text-xl font-semibold text-gray-700">{education.university}</p>
+                    <div className="flex items-center space-x-4">
+                      <Badge className="bg-red-100 text-red-800 text-sm font-medium">
+                        {education.honor}
+                      </Badge>
+                      <Badge variant="outline" className="border-red-200 text-red-600">
+                        <Calendar size={14} className="mr-1" />
+                        {education.period}
+                      </Badge>
+                    </div>
+                  </div>
+                  <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                    <p className="text-red-700 text-sm">
+                      <strong>Specialized Coursework:</strong> Digital Marketing Strategy, Consumer Behavior Analysis, Marketing Analytics, 
+                      Business Intelligence, Data-Driven Marketing, Project Management, Marketing Research & Analysis
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Awards and Scholarships */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Julie Ann Cook's Data Ninja Scholarship */}
+              <Card className="bg-gradient-to-br from-yellow-50 to-orange-50 shadow-lg border-2 border-yellow-200">
+                <CardContent className="p-6">
+                  <div className="flex items-center mb-4">
+                    <Trophy className="w-8 h-8 text-yellow-600 mr-3" />
+                    <div>
+                      <h4 className="text-lg font-bold text-gray-900">Julie Ann Cook's Data Ninja Scholarship</h4>
+                      <p className="text-sm text-gray-600">Jon M. Huntsman School of Business • Mar 2022</p>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <Badge className="bg-yellow-100 text-yellow-800 text-xs">FIRST REMOTE RECIPIENT</Badge>
+                    <Badge className="bg-orange-100 text-orange-800 text-xs">EXTREMELY COMPETITIVE</Badge>
+                  </div>
+                  <p className="text-sm text-gray-700 mt-3">
+                    Highly distinguished scholarship recognizing exceptional leadership skills, work experience, and academic excellence. 
+                    First ever recipient to attend away from main campus.
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Direct Admit Business Scholarship */}
+              <Card className="bg-gradient-to-br from-blue-50 to-purple-50 shadow-lg border-2 border-blue-200">
+                <CardContent className="p-6">
+                  <div className="flex items-center mb-4">
+                    <Award className="w-8 h-8 text-blue-600 mr-3" />
+                    <div>
+                      <h4 className="text-lg font-bold text-gray-900">Direct Admit Business Scholarship</h4>
+                      <p className="text-sm text-gray-600">Jon M. Huntsman School of Business • Aug 2019</p>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <Badge className="bg-blue-100 text-blue-800 text-xs">TOP 10% HIGH SCHOOL</Badge>
+                    <Badge className="bg-purple-100 text-purple-800 text-xs">COMPETITIVE ADMISSION</Badge>
+                  </div>
+                  <p className="text-sm text-gray-700 mt-3">
+                    Prestigious scholarship for exceptional academic performance and direct admission to the Management Information Systems program.
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Hansen Differential Tuition Scholarship */}
+              <Card className="bg-gradient-to-br from-green-50 to-teal-50 shadow-lg border-2 border-green-200">
+                <CardContent className="p-6">
+                  <div className="flex items-center mb-4">
+                    <Target className="w-8 h-8 text-green-600 mr-3" />
+                    <div>
+                      <h4 className="text-lg font-bold text-gray-900">Hansen Differential Tuition Scholarship</h4>
+                      <p className="text-sm text-gray-600">Jon M. Huntsman School of Business</p>
+                    </div>
+                  </div>
+                  <Badge className="bg-green-100 text-green-800 text-xs">FACULTY ENDORSED</Badge>
+                  <p className="text-sm text-gray-700 mt-3">
+                    Selective scholarship awarded by the Jon M. Huntsman School of Business with endorsement from business school faculty.
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Utah Digital Media Arts Festival */}
+              <Card className="bg-gradient-to-br from-pink-50 to-red-50 shadow-lg border-2 border-pink-200">
+                <CardContent className="p-6">
+                  <div className="flex items-center mb-4">
+                    <Palette className="w-8 h-8 text-pink-600 mr-3" />
+                    <div>
+                      <h4 className="text-lg font-bold text-gray-900">3rd Place Utah Digital Media Arts Festival</h4>
+                      <p className="text-sm text-gray-600">Utah Digital Media Arts Festival • May 2019</p>
+                    </div>
+                  </div>
+                  <Badge className="bg-pink-100 text-pink-800 text-xs">CREATIVE EXCELLENCE</Badge>
+                  <p className="text-sm text-gray-700 mt-3">
+                    Recognized for outstanding creative work and digital media innovation in statewide competition.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Professional Experience */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Digital Marketing Career Experience</h2>
+            <div className="space-y-6">
+              {workHistory.map((job, index) => (
+                <Card key={index} className="bg-white shadow-lg border-0 hover:shadow-xl transition-all duration-300">
+                  <CardContent className="p-8">
+                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
+                      <div className="mb-4 lg:mb-0">
+                        <h3 className="text-xl font-bold text-red-600 mb-2">{job.position}</h3>
+                        <p className="text-lg text-gray-700 font-semibold">{job.company}</p>
+                        <p className="text-sm text-gray-500">{job.location}</p>
+                      </div>
+                      <Badge variant="outline" className="border-red-200 text-red-600 self-start lg:self-center">
+                        <Calendar size={14} className="mr-1" />
+                        {job.period}
+                      </Badge>
+                    </div>
+                    <div className="space-y-3">
+                      {job.achievements.map((achievement, achievementIndex) => (
+                        <div key={achievementIndex} className="flex items-start">
+                          <div className="flex-shrink-0 w-2 h-2 bg-red-500 rounded-full mt-2 mr-4"></div>
+                          <p className="text-gray-700 leading-relaxed">{achievement}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
 
@@ -396,12 +472,12 @@ const About = () => {
                     >
                       💼 Let's Discuss Opportunities
                     </button>
-                    <a
-                      href="/"
+                    <button
+                      onClick={handleBackToWork}
                       className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-bold py-3 px-6 md:px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl"
                     >
                       👈 View My Portfolio
-                    </a>
+                    </button>
                   </div>
                 </div>
               </CardContent>
