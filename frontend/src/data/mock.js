@@ -249,7 +249,7 @@ export const portfolioProjects = [
     title: "Business Strategy Game - Championship Performance",
     category: "Business Analytics & Strategy",
     client: "Utah State University",
-    description: "Achieved 1st place among 158 students in semester-long Business Strategy Game simulation, earning invitation to worldwide university competition. Demonstrated strategic thinking, financial management, and competitive analysis skills.",
+    description: "Achieved 1st place among 158 students in semester-long Business Strategy Game simulation, earning invitation to worldwide university competition. Served as consultant to my team and teams from other industries. Demonstrated strategic thinking, financial management, and competitive analysis skills.",
     images: [
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
