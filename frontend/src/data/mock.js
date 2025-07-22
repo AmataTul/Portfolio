@@ -827,7 +827,7 @@ export const portfolioProjects = [
 ];
 
 export const brands = [
-  "Beat by Dre", "Disney", "Adobe"
+  "Beats by Dre", "Disney", "Adobe"
 ];
 
 export const categories = [
