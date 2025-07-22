@@ -4,7 +4,7 @@ import { Badge } from '../components/ui/badge';
 import { workHistory, education, contactInfo, tools } from '../data/mock';
 import { 
   Mail, Phone, MapPin, Linkedin, Award, Users, TrendingUp, Calendar, 
-  GraduationCap, Code, Briefcase, Target, BarChart3, Zap 
+  GraduationCap, Briefcase, Target, BarChart3, Zap, Palette, Megaphone 
 } from 'lucide-react';
 
 const About = () => {
