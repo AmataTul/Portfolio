@@ -239,35 +239,47 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
               </div>
             )}
             
-            {project.videoContent && (
-              <div className="bg-gradient-to-r from-purple-50 to-blue-50 border-2 border-purple-200 rounded-xl p-4 md:p-6">
-                <h4 className="font-bold text-purple-800 mb-4 text-lg">Video Content Collection</h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            {project.socialMediaCampaign && (
+              <div className="bg-gradient-to-r from-pink-50 to-purple-50 border-2 border-pink-200 rounded-xl p-4 md:p-6">
+                <h4 className="font-bold text-pink-800 mb-4 text-lg">Social Media Campaign Performance</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div className="bg-white rounded-lg p-4 shadow-sm">
-                    <h5 className="font-semibold text-purple-700 mb-2">Content Series</h5>
-                    <p className="text-sm text-purple-600">📹 Total Videos: {project.videoContent.totalVideos}</p>
+                    <h5 className="font-semibold text-pink-700 mb-2">Platform & Scale</h5>
+                    <p className="text-sm text-pink-600 mb-1">📱 Platform: {project.socialMediaCampaign.platform}</p>
+                    <p className="text-sm text-pink-600">🎥 Total Videos: {project.socialMediaCampaign.totalVideos}</p>
                   </div>
                   <div className="bg-white rounded-lg p-4 shadow-sm">
-                    <h5 className="font-semibold text-blue-700 mb-2">Platform Distribution</h5>
-                    <p className="text-sm text-blue-600">🎬 {project.type === 'video' ? 'YouTube & Social Media' : 'Educational Platform'}</p>
+                    <h5 className="font-semibold text-purple-700 mb-2">Performance Metrics</h5>
+                    <div className="text-sm text-purple-600 space-y-1">
+                      {project.socialMediaCampaign.performanceMetrics.conversionIncrease && (
+                        <p>💹 Conversion Increase: {project.socialMediaCampaign.performanceMetrics.conversionIncrease}</p>
+                      )}
+                      {project.socialMediaCampaign.performanceMetrics.highEngagement && (
+                        <p>🔥 High Engagement Videos: {project.socialMediaCampaign.performanceMetrics.highEngagement}</p>
+                      )}
+                      {project.socialMediaCampaign.performanceMetrics.topConverter && (
+                        <p>🎯 Top Converter: {project.socialMediaCampaign.performanceMetrics.topConverter} video</p>
+                      )}
+                      <p>📊 Brand Awareness: {project.socialMediaCampaign.performanceMetrics.brandAwareness}</p>
+                    </div>
                   </div>
                 </div>
                 <div className="bg-white rounded-lg p-4 shadow-sm">
-                  <h5 className="font-semibold text-green-700 mb-3">Video Collection</h5>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    {project.videoContent.videos.map((video, index) => (
-                      <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                  <h5 className="font-semibold text-green-700 mb-3">Campaign Videos</h5>
+                  <div className="space-y-3">
+                    {project.socialMediaCampaign.videos.map((video, index) => (
+                      <div key={index} className="flex items-start justify-between p-3 bg-gray-50 rounded-lg">
                         <div className="flex-1">
-                          <p className="text-sm text-gray-700">Video {index + 1}</p>
-                          <p className="text-xs text-green-600 font-medium">📹 Educational Content</p>
+                          <p className="text-sm text-gray-700 mb-1">{video.description}</p>
+                          <p className="text-xs text-green-600 font-medium">📈 {video.performance}</p>
                         </div>
                         <a
-                          href={video}
+                          href={video.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="bg-purple-500 hover:bg-purple-600 text-white text-xs px-3 py-1 rounded-full transition-colors ml-3"
+                          className="bg-pink-500 hover:bg-pink-600 text-white text-xs px-3 py-1 rounded-full transition-colors ml-3"
                         >
-                          Watch
+                          View Video
                         </a>
                       </div>
                     ))}
