@@ -197,175 +197,142 @@ const About = () => {
             </div>
           </div>
 
-          {/* Strategic Business Achievement - Smaller Section */}
+          {/* Education & Academic Excellence - Highlighted Section */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text mb-8 text-center">Strategic Business Achievement</h2>
-            <Card className="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 shadow-xl border-2 border-purple-200">
-              <CardContent className="p-6">
-                <div className="text-center mb-6">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-3 shadow-xl">
-                    <Award className="w-8 h-8 text-white" />
+            <h2 className="text-3xl font-bold text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text mb-8 text-center">Academic Excellence & Distinguished Achievements</h2>
+            <Card className="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 shadow-2xl border-2 border-purple-200">
+              <CardContent className="p-8">
+                <div className="text-center mb-8">
+                  <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-4 shadow-xl">
+                    <GraduationCap className="w-10 h-10 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Business Strategy Game Champion</h3>
-                  <p className="text-md text-purple-600 font-semibold">🏆 1st Place Winner Among 158 Students</p>
-                  <p className="text-sm text-blue-600 mt-1">🌍 Invited to Worldwide University Competition • April 2022</p>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{education.degree}</h3>
+                  <p className="text-lg text-purple-600 font-semibold">{education.minor}</p>
+                  <p className="text-md text-blue-600 mt-2">{education.university} • {education.honor} • {education.period}</p>
                 </div>
                 
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-                  <div className="bg-white rounded-lg p-4 shadow-sm border border-blue-200">
-                    <div className="text-center">
-                      <div className="text-lg font-bold text-blue-600 mb-1">29.4%</div>
-                      <div className="text-xs text-gray-600">ROE</div>
-                    </div>
-                  </div>
-                  <div className="bg-white rounded-lg p-4 shadow-sm border border-purple-200">
-                    <div className="text-center">
-                      <div className="text-lg font-bold text-purple-600 mb-1">$13.57</div>
-                      <div className="text-xs text-gray-600">EPS</div>
-                    </div>
-                  </div>
-                  <div className="bg-white rounded-lg p-4 shadow-sm border border-pink-200">
-                    <div className="text-center">
-                      <div className="text-lg font-bold text-pink-600 mb-1">A+</div>
-                      <div className="text-xs text-gray-600">Credit Rating</div>
-                    </div>
-                  </div>
-                  <div className="bg-white rounded-lg p-4 shadow-sm border border-green-200">
-                    <div className="text-center">
-                      <div className="text-lg font-bold text-green-600 mb-1">$1.2M+</div>
-                      <div className="text-xs text-gray-600">Revenue</div>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
-                  <p className="text-sm text-gray-700 mb-3">
-                    <strong>Key Achievement:</strong> Served as consultant to my team and teams from other industries, achieving highest revenue through strategic financial management and data-driven decisions.
+                <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
+                  <p className="text-red-700 text-sm">
+                    <strong>Specialized Coursework:</strong> Digital Marketing Strategy, Consumer Behavior Analysis, Marketing Analytics, 
+                    Business Intelligence, Data-Driven Marketing, Project Management, Marketing Research & Analysis
                   </p>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge variant="outline" className="text-xs">Strategic Planning</Badge>
-                    <Badge variant="outline" className="text-xs">Financial Analysis</Badge>
-                    <Badge variant="outline" className="text-xs">Cross-Industry Consulting</Badge>
-                    <Badge variant="outline" className="text-xs">Competitive Intelligence</Badge>
+                </div>
+
+                {/* Scholarships and Awards */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {/* Julie Ann Cook's Data Ninja Scholarship */}
+                  <div className="bg-white rounded-lg p-6 shadow-lg border-2 border-yellow-200">
+                    <div className="flex items-center mb-4">
+                      <Trophy className="w-8 h-8 text-yellow-600 mr-3" />
+                      <div>
+                        <h4 className="text-lg font-bold text-gray-900">Julie Ann Cook's Data Ninja Scholarship</h4>
+                        <p className="text-sm text-gray-600">Mar 2022 • Jon M. Huntsman School of Business</p>
+                      </div>
+                    </div>
+                    <div className="space-y-2 mb-3">
+                      <Badge className="bg-yellow-100 text-yellow-800 text-xs">FIRST REMOTE RECIPIENT</Badge>
+                      <Badge className="bg-orange-100 text-orange-800 text-xs">EXTREMELY COMPETITIVE</Badge>
+                    </div>
+                    <p className="text-sm text-gray-700">
+                      Highly distinguished scholarship recognizing exceptional leadership skills, work experience, and academic excellence. 
+                      First ever recipient to attend away from main campus.
+                    </p>
+                  </div>
+
+                  {/* Direct Admit Business Scholarship */}
+                  <div className="bg-white rounded-lg p-6 shadow-lg border-2 border-blue-200">
+                    <div className="flex items-center mb-4">
+                      <Award className="w-8 h-8 text-blue-600 mr-3" />
+                      <div>
+                        <h4 className="text-lg font-bold text-gray-900">Direct Admit Business Scholarship</h4>
+                        <p className="text-sm text-gray-600">Aug 2019 • Jon M. Huntsman School of Business</p>
+                      </div>
+                    </div>
+                    <div className="space-y-2 mb-3">
+                      <Badge className="bg-blue-100 text-blue-800 text-xs">TOP 10% HIGH SCHOOL</Badge>
+                      <Badge className="bg-purple-100 text-purple-800 text-xs">COMPETITIVE ADMISSION</Badge>
+                    </div>
+                    <p className="text-sm text-gray-700">
+                      Prestigious scholarship for exceptional academic performance and direct admission to the Management Information Systems program.
+                    </p>
+                  </div>
+
+                  {/* Hansen Differential Tuition Scholarship */}
+                  <div className="bg-white rounded-lg p-6 shadow-lg border-2 border-green-200">
+                    <div className="flex items-center mb-4">
+                      <Target className="w-8 h-8 text-green-600 mr-3" />
+                      <div>
+                        <h4 className="text-lg font-bold text-gray-900">Hansen Differential Tuition Scholarship</h4>
+                        <p className="text-sm text-gray-600">Jon M. Huntsman School of Business</p>
+                      </div>
+                    </div>
+                    <Badge className="bg-green-100 text-green-800 text-xs mb-3">FACULTY ENDORSED</Badge>
+                    <p className="text-sm text-gray-700">
+                      Selective scholarship awarded by the Jon M. Huntsman School of Business with endorsement from business school faculty.
+                    </p>
+                  </div>
+
+                  {/* Utah Digital Media Arts Festival */}
+                  <div className="bg-white rounded-lg p-6 shadow-lg border-2 border-pink-200">
+                    <div className="flex items-center mb-4">
+                      <Palette className="w-8 h-8 text-pink-600 mr-3" />
+                      <div>
+                        <h4 className="text-lg font-bold text-gray-900">3rd Place Utah Digital Media Arts Festival</h4>
+                        <p className="text-sm text-gray-600">May 2019 • Utah Digital Media Arts Festival</p>
+                      </div>
+                    </div>
+                    <Badge className="bg-pink-100 text-pink-800 text-xs mb-3">CREATIVE EXCELLENCE</Badge>
+                    <p className="text-sm text-gray-700">
+                      Recognized for outstanding creative work and digital media innovation in statewide competition.
+                    </p>
                   </div>
                 </div>
               </CardContent>
             </Card>
           </div>
 
-          {/* Academic Excellence & Awards */}
+          {/* Professional Accomplishments */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Academic Excellence & Awards</h2>
-            
-            {/* Education */}
-            <Card className="bg-white shadow-lg border-0 mb-8">
-              <CardContent className="p-8">
-                <div className="flex items-center mb-6">
-                  <div className="flex-shrink-0 w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mr-6">
-                    <GraduationCap className="w-8 h-8 text-red-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{education.degree}</h3>
-                    <p className="text-lg text-red-600 font-medium">{education.minor}</p>
-                  </div>
-                </div>
-                <div className="ml-22">
-                  <div className="flex items-center justify-between mb-4">
-                    <p className="text-xl font-semibold text-gray-700">{education.university}</p>
-                    <div className="flex items-center space-x-4">
-                      <Badge className="bg-red-100 text-red-800 text-sm font-medium">
-                        {education.honor}
-                      </Badge>
-                      <Badge variant="outline" className="border-red-200 text-red-600">
-                        <Calendar size={14} className="mr-1" />
-                        {education.period}
-                      </Badge>
-                    </div>
-                  </div>
-                  <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                    <p className="text-red-700 text-sm">
-                      <strong>Specialized Coursework:</strong> Digital Marketing Strategy, Consumer Behavior Analysis, Marketing Analytics, 
-                      Business Intelligence, Data-Driven Marketing, Project Management, Marketing Research & Analysis
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Awards and Scholarships */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Julie Ann Cook's Data Ninja Scholarship */}
-              <Card className="bg-gradient-to-br from-yellow-50 to-orange-50 shadow-lg border-2 border-yellow-200">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Professional Accomplishments</h2>
+            <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
+              {/* Business Strategy Game Achievement */}
+              <Card className="bg-white shadow-lg border-0 hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
-                    <Trophy className="w-8 h-8 text-yellow-600 mr-3" />
+                    <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                      <BarChart3 className="w-6 h-6 text-blue-600" />
+                    </div>
                     <div>
-                      <h4 className="text-lg font-bold text-gray-900">Julie Ann Cook's Data Ninja Scholarship</h4>
-                      <p className="text-sm text-gray-600">Jon M. Huntsman School of Business • Mar 2022</p>
+                      <h3 className="text-xl font-bold text-blue-600 mb-1">Business Strategy Game Champion</h3>
+                      <p className="text-sm text-gray-600">Utah State University • April 2022</p>
                     </div>
                   </div>
-                  <div className="space-y-2">
-                    <Badge className="bg-yellow-100 text-yellow-800 text-xs">FIRST REMOTE RECIPIENT</Badge>
-                    <Badge className="bg-orange-100 text-orange-800 text-xs">EXTREMELY COMPETITIVE</Badge>
+                  <div className="space-y-2 mb-4">
+                    <Badge className="bg-blue-100 text-blue-800 text-xs">1ST PLACE (158 STUDENTS)</Badge>
+                    <Badge className="bg-purple-100 text-purple-800 text-xs">WORLDWIDE COMPETITION INVITE</Badge>
                   </div>
-                  <p className="text-sm text-gray-700 mt-3">
-                    Highly distinguished scholarship recognizing exceptional leadership skills, work experience, and academic excellence. 
-                    First ever recipient to attend away from main campus.
+                  <p className="text-sm text-gray-700 mb-4">
+                    Achieved 1st place in semester-long business simulation. Served as consultant to my team and teams from other industries. 
+                    Demonstrated exceptional strategic thinking and financial management skills.
                   </p>
-                </CardContent>
-              </Card>
-
-              {/* Direct Admit Business Scholarship */}
-              <Card className="bg-gradient-to-br from-blue-50 to-purple-50 shadow-lg border-2 border-blue-200">
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    <Award className="w-8 h-8 text-blue-600 mr-3" />
-                    <div>
-                      <h4 className="text-lg font-bold text-gray-900">Direct Admit Business Scholarship</h4>
-                      <p className="text-sm text-gray-600">Jon M. Huntsman School of Business • Aug 2019</p>
+                  <div className="grid grid-cols-4 gap-4">
+                    <div className="text-center">
+                      <div className="text-lg font-bold text-blue-600">29.4%</div>
+                      <div className="text-xs text-gray-600">ROE</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-lg font-bold text-purple-600">$13.57</div>
+                      <div className="text-xs text-gray-600">EPS</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-lg font-bold text-pink-600">A+</div>
+                      <div className="text-xs text-gray-600">Credit</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-lg font-bold text-green-600">$1.2M+</div>
+                      <div className="text-xs text-gray-600">Revenue</div>
                     </div>
                   </div>
-                  <div className="space-y-2">
-                    <Badge className="bg-blue-100 text-blue-800 text-xs">TOP 10% HIGH SCHOOL</Badge>
-                    <Badge className="bg-purple-100 text-purple-800 text-xs">COMPETITIVE ADMISSION</Badge>
-                  </div>
-                  <p className="text-sm text-gray-700 mt-3">
-                    Prestigious scholarship for exceptional academic performance and direct admission to the Management Information Systems program.
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Hansen Differential Tuition Scholarship */}
-              <Card className="bg-gradient-to-br from-green-50 to-teal-50 shadow-lg border-2 border-green-200">
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    <Target className="w-8 h-8 text-green-600 mr-3" />
-                    <div>
-                      <h4 className="text-lg font-bold text-gray-900">Hansen Differential Tuition Scholarship</h4>
-                      <p className="text-sm text-gray-600">Jon M. Huntsman School of Business</p>
-                    </div>
-                  </div>
-                  <Badge className="bg-green-100 text-green-800 text-xs">FACULTY ENDORSED</Badge>
-                  <p className="text-sm text-gray-700 mt-3">
-                    Selective scholarship awarded by the Jon M. Huntsman School of Business with endorsement from business school faculty.
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Utah Digital Media Arts Festival */}
-              <Card className="bg-gradient-to-br from-pink-50 to-red-50 shadow-lg border-2 border-pink-200">
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    <Palette className="w-8 h-8 text-pink-600 mr-3" />
-                    <div>
-                      <h4 className="text-lg font-bold text-gray-900">3rd Place Utah Digital Media Arts Festival</h4>
-                      <p className="text-sm text-gray-600">Utah Digital Media Arts Festival • May 2019</p>
-                    </div>
-                  </div>
-                  <Badge className="bg-pink-100 text-pink-800 text-xs">CREATIVE EXCELLENCE</Badge>
-                  <p className="text-sm text-gray-700 mt-3">
-                    Recognized for outstanding creative work and digital media innovation in statewide competition.
-                  </p>
                 </CardContent>
               </Card>
             </div>
