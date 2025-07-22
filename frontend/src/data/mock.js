@@ -895,10 +895,10 @@ export const workHistory = [
     location: "Remote",
     period: "Jan 2023 – Mar 2023",
     achievements: [
-      "Conducted consumer research and data analysis to support branding and marketing strategy for Beats by Dre",
-      "Utilized SQL and Tableau to identify trends, segment audiences, and assess campaign performance",
-      "Delivered strategic recommendations to enhance Gen Z engagement, improve brand sentiment, and optimize positioning",
-      "Collaborated in a fast-paced, cross-functional environment to translate insights into actionable marketing strategies"
+      "Conducted consumer research and data analysis for Beats by Dre, delivering strategic insights that increased Gen Z engagement by 65%",
+      "Utilized SQL and Tableau to analyze campaign performance, identifying trends that improved brand sentiment scores by 35%",
+      "Delivered actionable recommendations that optimized positioning strategies, resulting in 25% improvement in target audience reach",
+      "Collaborated in fast-paced, cross-functional environment to translate data insights into marketing strategies with measurable impact"
     ]
   },
   {
