@@ -134,9 +134,9 @@ export const portfolioProjects = [
   },
   {
     id: 9,
-    title: "Beat by Dre Print & Digital Campaign",
+    title: "Beats by Dre Print & Digital Campaign",
     category: "Advertising",
-    client: "Beat by Dre",
+    client: "Beats by Dre",
     description: "Integrated print and digital advertising campaign for new headphone launch, including magazine ads, billboards, and online banners.",
     images: [
       "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop",
