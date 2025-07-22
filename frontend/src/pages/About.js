@@ -59,10 +59,10 @@ const About = () => {
               </div>
             </div>
 
-            {/* Colorful Professional Info */}
+            {/* Professional Info */}
             <div className="flex-grow">
-              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6">
-                <div>
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6">
+                <div className="mb-4 sm:mb-0">
                   <h1 className="text-2xl md:text-3xl font-bold text-white mb-2">{contactInfo.name}</h1>
                   <p className="text-yellow-200 font-medium text-base md:text-lg mb-4 bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm">Creative Marketing Professional & Brand Strategist</p>
                   <div className="flex items-center text-cyan-200 mb-4">
