@@ -14,7 +14,7 @@ import base64
 import json
 
 # Import our models
-from models import (
+from .models import (
     Project, ProjectCreate, ProjectUpdateRequest,
     Category, CategoryCreate,
     ContactInfo, ContactInfoCreate,
