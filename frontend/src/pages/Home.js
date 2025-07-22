@@ -228,7 +228,7 @@ const Home = () => {
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
                   <span className="bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
-                    {activeCategory === 'All' ? 'Featured Projects' : `${activeCategory} Projects`}
+                    {activeCategory === 'All' ? 'All Projects' : `${activeCategory} Projects`}
                   </span>
                 </h3>
                 <div className={`grid gap-4 ${getGridClass(filteredProjects)}`}>
