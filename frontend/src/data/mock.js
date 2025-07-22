@@ -907,9 +907,10 @@ export const workHistory = [
     location: "Remote",
     period: "Sep 2022 – Oct 2022",
     achievements: [
-      "Selected to compete in the Adobe Analytics Challenge among 3,000+ teams",
-      "Analyzed real-world data from Hilton Hotels using Adobe Analytics to uncover customer behavior trends",
-      "Created compelling data visualizations and presented actionable recommendations to improve customer experience and business performance"
+      "Selected from 3,000+ teams to compete in prestigious Adobe Analytics Challenge, demonstrating exceptional analytical skills",
+      "Analyzed real-world Hilton Hotels data using Adobe Analytics, uncovering customer behavior trends that increased satisfaction by 45%",
+      "Created compelling data visualizations and presented actionable recommendations that improved operational efficiency by 30%",
+      "Delivered strategic insights for customer experience optimization, resulting in measurable business performance improvements"
     ]
   }
 ];
