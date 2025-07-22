@@ -1,4 +1,5 @@
-from fastapi import FastAPI, APIRouter
+from fastapi import FastAPI, APIRouter, HTTPException, UploadFile, File, Form
+from fastapi.responses import JSONResponse
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
@@ -6,9 +7,23 @@ import os
 import logging
 from pathlib import Path
 from pydantic import BaseModel, Field
-from typing import List
+from typing import List, Optional
 import uuid
 from datetime import datetime
+import base64
+import json
+
+# Import our models
+from models import (
+    Project, ProjectCreate, ProjectUpdateRequest,
+    Category, CategoryCreate,
+    ContactInfo, ContactInfoCreate,
+    WorkHistory, WorkHistoryCreate,
+    Education, EducationCreate,
+    Tool, ToolCreate,
+    Brand, BrandCreate,
+    AnalyticsData
+)
 
 
 ROOT_DIR = Path(__file__).parent
@@ -20,7 +35,7 @@ client = AsyncIOMotorClient(mongo_url)
 db = client[os.environ['DB_NAME']]
 
 # Create the main app without a prefix
-app = FastAPI()
+app = FastAPI(title="Portfolio API", version="1.0.0")
 
 # Create a router with the /api prefix
 api_router = APIRouter(prefix="/api")
