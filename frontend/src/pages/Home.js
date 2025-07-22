@@ -32,10 +32,8 @@ const Home = () => {
     // Filter by category
     if (activeCategory !== 'All') {
       filtered = filtered.filter(project => project.category === activeCategory);
-    } else {
-      // For "All" category, show only featured projects
-      filtered = filtered.filter(project => project.featured);
     }
+    // For "All" category, show all projects (both featured and non-featured)
     
     // Filter by search term
     if (searchTerm) {
