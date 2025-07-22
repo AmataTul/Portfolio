@@ -24,75 +24,83 @@ const About = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* SEO Optimized Hero Section */}
-      <section className="bg-gradient-to-br from-red-600 via-red-500 to-red-700 text-white py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
+      <section className="bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-600 text-white py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-10 left-10 w-32 h-32 bg-yellow-400/20 rounded-full blur-xl animate-bounce"></div>
+          <div className="absolute top-40 right-20 w-24 h-24 bg-pink-400/30 rounded-full blur-lg animate-pulse"></div>
+          <div className="absolute bottom-20 left-20 w-40 h-40 bg-cyan-400/20 rounded-full blur-2xl animate-ping"></div>
+          <div className="absolute bottom-40 right-10 w-28 h-28 bg-green-400/30 rounded-full blur-xl animate-bounce"></div>
+        </div>
+        
+        <div className="relative max-w-4xl mx-auto">
           {/* Professional Profile Header */}
           <div className="flex flex-col md:flex-row items-start md:items-center gap-8 mb-12">
-            {/* Professional Profile Picture */}
+            {/* Vibrant Profile Picture */}
             <div className="flex-shrink-0">
-              <div className="w-32 h-32 rounded-full bg-gradient-to-br from-white via-red-100 to-white p-1 shadow-2xl">
+              <div className="w-32 h-32 rounded-full bg-gradient-to-br from-yellow-400 via-pink-400 to-purple-500 p-1 shadow-2xl animate-pulse">
                 <div className="w-full h-full rounded-full bg-white p-1">
-                  <div className="w-full h-full rounded-full bg-gradient-to-br from-red-100 to-red-50 flex items-center justify-center">
-                    <span className="text-4xl font-black text-red-600">AT</span>
+                  <div className="w-full h-full rounded-full bg-gradient-to-br from-pink-100 via-purple-100 to-indigo-100 flex items-center justify-center">
+                    <span className="text-4xl font-black bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">AT</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Professional Info */}
+            {/* Colorful Professional Info */}
             <div className="flex-grow">
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6">
                 <div>
                   <h1 className="text-3xl font-bold text-white mb-2">{contactInfo.name}</h1>
-                  <p className="text-red-100 font-medium text-lg mb-4">Performance Marketing Strategist & Digital Marketing Specialist</p>
-                  <div className="flex items-center text-red-200 mb-4">
+                  <p className="text-yellow-200 font-medium text-lg mb-4 bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm">Performance Marketing Strategist & Digital Marketing Specialist</p>
+                  <div className="flex items-center text-cyan-200 mb-4">
                     <MapPin className="w-4 h-4 mr-2" />
                     <span className="text-sm">{contactInfo.location}</span>
                   </div>
                 </div>
                 
-                {/* Professional Metrics */}
+                {/* Colorful Professional Metrics */}
                 <div className="flex space-x-8 mt-4 sm:mt-0">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-white">80+</div>
-                    <div className="text-sm text-red-200">Campaigns</div>
+                  <div className="text-center bg-white/20 backdrop-blur-sm rounded-2xl p-4">
+                    <div className="text-2xl font-bold text-yellow-300">80+</div>
+                    <div className="text-sm text-purple-200">Campaigns</div>
                   </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-white">5+</div>
-                    <div className="text-sm text-red-200">Years</div>
+                  <div className="text-center bg-white/20 backdrop-blur-sm rounded-2xl p-4">
+                    <div className="text-2xl font-bold text-pink-300">5+</div>
+                    <div className="text-sm text-purple-200">Years</div>
                   </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-white">300%</div>
-                    <div className="text-sm text-red-200">Growth</div>
+                  <div className="text-center bg-white/20 backdrop-blur-sm rounded-2xl p-4">
+                    <div className="text-2xl font-bold text-cyan-300">300%</div>
+                    <div className="text-sm text-purple-200">Growth</div>
                   </div>
                 </div>
               </div>
 
               {/* Professional Summary */}
               <div className="space-y-3 mb-6">
-                <p className="text-white font-medium">
-                  Data-driven marketing coordinator specializing in performance marketing, conversion rate optimization, and growth marketing strategies
+                <p className="text-white font-medium bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                  🚀 Data-driven marketing coordinator specializing in performance marketing, conversion rate optimization, and growth marketing strategies
                 </p>
-                <p className="text-red-100">
-                  Expert in digital marketing campaigns, marketing analytics, and ROI-focused brand strategies for enterprise clients
+                <p className="text-yellow-100 bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                  ✨ Expert in digital marketing campaigns, marketing analytics, and ROI-focused brand strategies for enterprise clients
                 </p>
               </div>
 
-              {/* Action Buttons */}
+              {/* Vibrant Action Buttons */}
               <div className="flex space-x-4">
                 <button 
                   onClick={handleEmailClick}
-                  className="bg-white text-red-600 hover:bg-red-50 font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white hover:from-yellow-500 hover:to-orange-600 font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
                 >
-                  Contact for Marketing Strategy
+                  🎯 Contact for Marketing Strategy
                 </button>
                 <a
                   href={contactInfo.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-red-800/50 hover:bg-red-800/70 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 border border-red-400"
+                  className="bg-gradient-to-r from-blue-400 to-purple-500 hover:from-blue-500 hover:to-purple-600 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 border-2 border-white/30 shadow-xl"
                 >
-                  LinkedIn Profile
+                  🔗 LinkedIn Profile
                 </a>
               </div>
             </div>
