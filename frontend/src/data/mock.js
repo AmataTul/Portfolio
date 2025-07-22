@@ -427,7 +427,10 @@ export const workHistory = [
     achievements: [
       "Managed full-scope marketing operations across seven diverse business divisions, including e-commerce, retail, food service, fuel, and hospitality",
       "Led integrated campaigns from strategy to execution, managing 14+ social media accounts, WordPress websites, paid Meta advertising, and cross-platform content creation",
-      "Directed creative development, brand positioning, and performance optimization across all channels",
+      "Managed WordPress website development and optimization for improved user experience and conversion rates",
+      "Led comprehensive branding initiatives for Bison Made products, including brand identity, packaging design, and market positioning",
+      "Analyzed marketing data and performance metrics to drive strategic marketing, design, department, and operational decisions",
+      "Directed creative development, brand positioning, and performance optimization across all channels using data-driven insights",
       "Collaborated with executive leadership, vendors, and business managers to align marketing efforts with organizational goals",
       "Oversaw a small team and coordinated cross-functional projects using a hands-on, data-informed approach to drive engagement, growth, and brand visibility"
     ]
