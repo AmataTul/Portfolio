@@ -177,9 +177,9 @@ export const portfolioProjects = [
   },
   {
     id: 12,
-    title: "Beat by Dre Brand Positioning Strategy",
+    title: "Beats by Dre Brand Positioning Strategy",
     category: "Creative Concepts & Branding",
-    client: "Beat by Dre",
+    client: "Beats by Dre",
     description: "Strategic brand positioning and messaging framework development for youth market expansion, including consumer research and competitive analysis.",
     images: [
       "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop"
