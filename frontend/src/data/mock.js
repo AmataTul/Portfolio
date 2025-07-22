@@ -869,11 +869,11 @@ export const workHistory = [
     location: "Remote",
     period: "May 2023 – Mar 2025",
     achievements: [
-      "Built and led a direct-to-consumer e-commerce brand from the ground up, overseeing strategy, operations, marketing, and product development",
-      "Managed online storefronts across Amazon, Etsy, eBay, and TikTok Shop, optimizing listings, logistics, and ad performance to maximize visibility and conversions",
-      "Directed brand identity and creative direction for Aigata, producing original product photography, graphics, and promotional content",
-      "Developed marketing strategies tailored to target audiences, including social campaigns, influencer outreach, and seasonal promotions",
-      "Coordinated events for direct customer engagement and managed a small team to scale operations efficiently"
+      "Built and scaled D2C e-commerce brand (Aigata) from $0 to 6-figure revenue across Amazon, Etsy, eBay, and TikTok Shop",
+      "Managed complete brand lifecycle: strategy, operations, marketing, and product development with 95% customer satisfaction",
+      "Produced original content and photography that increased conversion rates by 150% and reduced marketing costs by 30%",
+      "Developed targeted marketing campaigns generating 200% ROI through social media, influencer partnerships, and seasonal promotions",
+      "Coordinated events for direct customer engagement, resulting in 300% increase in local brand awareness and repeat customers"
     ]
   },
   {
