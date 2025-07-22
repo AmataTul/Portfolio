@@ -247,29 +247,30 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Marketing Strategy CTA */}
-      <section className="bg-white py-16 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
+      {/* Job-Seeking CTA */}
+      <section className="bg-gradient-to-br from-purple-100 via-pink-100 to-yellow-100 py-16 px-4 sm:px-6 lg:px-8 border-t-2 border-gradient-to-r from-purple-300 to-pink-300">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Ready to Scale Your Marketing Results?
+          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-6">
+            Ready to Add Creative Power to Your Team? 🚀
           </h2>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Partner with a performance marketing specialist who delivers data-driven strategies, 
-            conversion optimization, and measurable growth for your brand.
+            I'm actively seeking opportunities to join a dynamic marketing team where I can contribute my 
+            <span className="font-semibold text-purple-600"> creative expertise, data-driven approach,</span> and 
+            <span className="font-semibold text-pink-600"> proven results</span> to drive your brand forward.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={handleEmailClick}
-              className="inline-flex items-center justify-center px-8 py-4 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-xl"
             >
-              Discuss Marketing Strategy
+              💼 Let's Connect - I'm Available!
               <ArrowRight className="ml-2 w-5 h-5" />
             </button>
             <a
               href="/about"
-              className="inline-flex items-center justify-center px-8 py-4 border-2 border-red-600 text-red-600 rounded-lg font-semibold hover:bg-red-50 transition-all duration-300"
+              className="inline-flex items-center justify-center px-8 py-4 border-2 border-purple-600 text-purple-600 rounded-full font-semibold hover:bg-purple-50 transition-all duration-300"
             >
-              View Marketing Experience
+              📄 View My Full Experience
             </a>
           </div>
         </div>
