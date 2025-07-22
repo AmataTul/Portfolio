@@ -536,9 +536,9 @@ export const portfolioProjects = [
   },
   {
     id: 35,
-    title: "Beat by Dre Event Photography",
+    title: "Beats by Dre Event Photography",
     category: "Photography Projects",
-    client: "Beat by Dre",
+    client: "Beats by Dre",
     description: "Concert and music event photography capturing artist performances, backstage moments, and product placements during live events.",
     images: [
       "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&h=600&fit=crop",
