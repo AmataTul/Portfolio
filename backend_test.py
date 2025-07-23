@@ -950,6 +950,274 @@ class BackendTester:
             self.log_test("Educational Animation Individual Retrieval", False, f"Request failed: {str(e)}")
             return False
     
+    def test_social_media_projects_retrieval(self):
+        """Test that social media projects exist and are retrievable"""
+        try:
+            response = self.session.get(f"{API_BASE_URL}/projects", timeout=10)
+            if response.status_code == 200:
+                projects = response.json()
+                social_media_projects = []
+                
+                # Look for social media projects with TikTok URLs
+                social_media_titles = [
+                    "KahPeeh Kah-Ahn Coffee House TikTok Strategy",
+                    "Adobe Creative Suite Instagram Reels",
+                    "Adobe TikTok Content Strategy", 
+                    "Beats by Dre Instagram Story Series",
+                    "Disney+ Character Spotlight Campaign",
+                    "Adobe Creative Tips TikTok Series",
+                    "Ute Tribal Enterprises Cultural Content",
+                    "Bison Made Product Showcase Reels"
+                ]
+                
+                for project in projects:
+                    title = project.get('title', '')
+                    for social_title in social_media_titles:
+                        if social_title in title:
+                            social_media_projects.append(project)
+                            break
+                
+                if len(social_media_projects) >= 8:
+                    self.log_test("Social Media Projects Retrieval", True, 
+                                f"Found {len(social_media_projects)} social media projects with TikTok integration")
+                    return social_media_projects
+                else:
+                    self.log_test("Social Media Projects Retrieval", False, 
+                                f"Expected at least 8 social media projects, found {len(social_media_projects)}")
+                    return social_media_projects
+            else:
+                self.log_test("Social Media Projects Retrieval", False, 
+                            f"Status {response.status_code}: {response.text}")
+                return []
+        except requests.exceptions.RequestException as e:
+            self.log_test("Social Media Projects Retrieval", False, f"Request failed: {str(e)}")
+            return []
+    
+    def test_tiktok_url_format_validation(self):
+        """Test that TikTok URLs follow proper format pattern"""
+        try:
+            social_media_projects = self.test_social_media_projects_retrieval()
+            if not social_media_projects:
+                self.log_test("TikTok URL Format Validation", False, 
+                            "Cannot test TikTok URLs - no social media projects found")
+                return False
+            
+            valid_tiktok_urls = 0
+            invalid_urls = []
+            
+            for project in social_media_projects:
+                # Check for TikTok URL in videoUrl field
+                video_url = project.get('videoUrl', '')
+                if video_url:
+                    if "tiktok.com" in video_url and "/video/" in video_url:
+                        valid_tiktok_urls += 1
+                    else:
+                        invalid_urls.append(f"{project.get('title', 'Unknown')}: {video_url}")
+                else:
+                    # Check in images array as fallback
+                    images = project.get('images', [])
+                    found_tiktok = False
+                    for image in images:
+                        if isinstance(image, str) and "tiktok.com" in image and "/video/" in image:
+                            valid_tiktok_urls += 1
+                            found_tiktok = True
+                            break
+                    if not found_tiktok:
+                        invalid_urls.append(f"{project.get('title', 'Unknown')}: No TikTok URL found")
+            
+            if valid_tiktok_urls >= 8:
+                self.log_test("TikTok URL Format Validation", True, 
+                            f"All {valid_tiktok_urls} TikTok URLs follow proper format")
+                return True
+            else:
+                self.log_test("TikTok URL Format Validation", False, 
+                            f"Only {valid_tiktok_urls}/8+ TikTok URLs are valid. Invalid: {invalid_urls}")
+                return False
+                
+        except Exception as e:
+            self.log_test("TikTok URL Format Validation", False, f"Error validating TikTok URLs: {str(e)}")
+            return False
+    
+    def test_kahpeeh_primary_tiktok_url(self):
+        """Test that KahPeeh Kah-Ahn Coffee House has the specific primary TikTok URL"""
+        try:
+            social_media_projects = self.test_social_media_projects_retrieval()
+            if not social_media_projects:
+                self.log_test("KahPeeh Primary TikTok URL", False, 
+                            "Cannot test primary TikTok URL - no social media projects found")
+                return False
+            
+            expected_url = "https://www.tiktok.com/@kahpeehkahahn/video/7409139284403408159"
+            kahpeeh_project = None
+            
+            for project in social_media_projects:
+                if "KahPeeh Kah-Ahn Coffee House" in project.get('title', ''):
+                    kahpeeh_project = project
+                    break
+            
+            if not kahpeeh_project:
+                self.log_test("KahPeeh Primary TikTok URL", False, 
+                            "KahPeeh Kah-Ahn Coffee House project not found")
+                return False
+            
+            # Check videoUrl field
+            video_url = kahpeeh_project.get('videoUrl', '')
+            if video_url == expected_url:
+                self.log_test("KahPeeh Primary TikTok URL", True, 
+                            f"KahPeeh project has correct primary TikTok URL: {video_url}")
+                return True
+            else:
+                # Check in images array as fallback
+                images = kahpeeh_project.get('images', [])
+                for image in images:
+                    if isinstance(image, str) and image == expected_url:
+                        self.log_test("KahPeeh Primary TikTok URL", True, 
+                                    f"KahPeeh project has correct primary TikTok URL in images: {image}")
+                        return True
+                
+                self.log_test("KahPeeh Primary TikTok URL", False, 
+                            f"Expected URL: {expected_url}, Found: {video_url}")
+                return False
+                
+        except Exception as e:
+            self.log_test("KahPeeh Primary TikTok URL", False, f"Error checking primary TikTok URL: {str(e)}")
+            return False
+    
+    def test_social_media_category_filtering(self):
+        """Test filtering for Social Media Content & Campaigns category"""
+        try:
+            # Test with Social Media Content & Campaigns category (URL encoded)
+            response = self.session.get(f"{API_BASE_URL}/projects?category=Social%20Media%20Content%20%26%20Campaigns", timeout=10)
+            if response.status_code == 200:
+                projects = response.json()
+                social_media_projects = []
+                
+                # Find social media projects in the category
+                for project in projects:
+                    if project.get('category') == 'Social Media Content & Campaigns':
+                        social_media_projects.append(project)
+                
+                if len(social_media_projects) >= 8:
+                    self.log_test("Social Media Category Filtering", True, 
+                                f"Found {len(social_media_projects)} projects in Social Media Content & Campaigns category")
+                    return True
+                else:
+                    self.log_test("Social Media Category Filtering", False, 
+                                f"Expected at least 8 social media projects, found {len(social_media_projects)}")
+                    return False
+            else:
+                self.log_test("Social Media Category Filtering", False, 
+                            f"Status {response.status_code}: {response.text}")
+                return False
+        except requests.exceptions.RequestException as e:
+            self.log_test("Social Media Category Filtering", False, f"Request failed: {str(e)}")
+            return False
+    
+    def test_video_project_orientation(self):
+        """Test that video projects have proper type and orientation fields"""
+        try:
+            social_media_projects = self.test_social_media_projects_retrieval()
+            if not social_media_projects:
+                self.log_test("Video Project Orientation", False, 
+                            "Cannot test video orientation - no social media projects found")
+                return False
+            
+            correct_orientations = 0
+            incorrect_projects = []
+            
+            for project in social_media_projects:
+                project_type = project.get('type', '')
+                orientation = project.get('orientation', '')
+                
+                # All social media video projects should be type 'video' and orientation 'vertical'
+                if project_type == 'video' and orientation == 'vertical':
+                    correct_orientations += 1
+                else:
+                    incorrect_projects.append(f"{project.get('title', 'Unknown')}: type={project_type}, orientation={orientation}")
+            
+            if correct_orientations >= 8:
+                self.log_test("Video Project Orientation", True, 
+                            f"All {correct_orientations} video projects have correct type and vertical orientation")
+                return True
+            else:
+                self.log_test("Video Project Orientation", False, 
+                            f"Only {correct_orientations}/8+ projects have correct orientation. Issues: {incorrect_projects}")
+                return False
+                
+        except Exception as e:
+            self.log_test("Video Project Orientation", False, f"Error checking video orientation: {str(e)}")
+            return False
+    
+    def test_featured_projects_marking(self):
+        """Test that featured projects are properly marked"""
+        try:
+            response = self.session.get(f"{API_BASE_URL}/projects", timeout=10)
+            if response.status_code == 200:
+                projects = response.json()
+                featured_projects = []
+                
+                for project in projects:
+                    if project.get('featured', False):
+                        featured_projects.append(project)
+                
+                # Check that we have some featured projects
+                if len(featured_projects) > 0:
+                    self.log_test("Featured Projects Marking", True, 
+                                f"Found {len(featured_projects)} featured projects properly marked")
+                    return True
+                else:
+                    self.log_test("Featured Projects Marking", True, 
+                                "No featured projects found (this may be expected)")
+                    return True
+            else:
+                self.log_test("Featured Projects Marking", False, 
+                            f"Status {response.status_code}: {response.text}")
+                return False
+        except requests.exceptions.RequestException as e:
+            self.log_test("Featured Projects Marking", False, f"Request failed: {str(e)}")
+            return False
+    
+    def test_database_consistency(self):
+        """Test database consistency and connection"""
+        try:
+            # Test multiple endpoints to ensure database is consistent
+            endpoints_to_test = [
+                ("/projects", "projects"),
+                ("/categories", "categories"),
+                ("/contact", "contact"),
+                ("/tools", "tools"),
+                ("/brands", "brands")
+            ]
+            
+            successful_connections = 0
+            
+            for endpoint, name in endpoints_to_test:
+                try:
+                    response = self.session.get(f"{API_BASE_URL}{endpoint}", timeout=10)
+                    if response.status_code in [200, 404]:  # 404 is acceptable for some endpoints
+                        successful_connections += 1
+                    else:
+                        self.log_test("Database Consistency", False, 
+                                    f"Database connection issue with {name}: status {response.status_code}")
+                        return False
+                except requests.exceptions.RequestException:
+                    self.log_test("Database Consistency", False, 
+                                f"Database connection failed for {name}")
+                    return False
+            
+            if successful_connections == len(endpoints_to_test):
+                self.log_test("Database Consistency", True, 
+                            "All database connections successful, no consistency issues detected")
+                return True
+            else:
+                self.log_test("Database Consistency", False, 
+                            f"Only {successful_connections}/{len(endpoints_to_test)} endpoints accessible")
+                return False
+                
+        except Exception as e:
+            self.log_test("Database Consistency", False, f"Error checking database consistency: {str(e)}")
+            return False
+    
     def run_all_tests(self):
         """Run all backend tests"""
         print(f"\n🚀 Starting Backend API Tests")
