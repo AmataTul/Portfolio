@@ -106,17 +106,28 @@ export const portfolioProjects = [
   },
   {
     id: 5,
-    title: "High School Financial Literacy Animation",
+    title: "High School Educational Animation - Traditional Knowledge & Modern Learning",
     category: "Illustrations & Educational Content",
-    client: "Educational Initiative",
-    description: "Educational animation video series designed for high school students covering financial literacy, budgeting, and career planning concepts.",
+    client: "Ute Tribal Enterprises - Ute Bison",
+    description: "Educational animation designed for high school students, bridging traditional tribal knowledge with contemporary learning. This engaging animated video explores cultural heritage, community values, and educational pathways while respecting and celebrating tribal traditions.",
     images: [
       "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop"
     ],
     type: "video",
     featured: true,
     orientation: "horizontal",
-    videoUrl: "https://youtu.be/DYLLB8qiQ8k?si=MZxpHgA0KJ4gAKlL"
+    videoUrl: "https://youtu.be/DYLLB8qiQ8k?si=Zm0y51wWhkg6D3P8",
+    educationalImpact: {
+      targetAudience: "High School Students",
+      focus: "Cultural education through animation",
+      topics: [
+        "Traditional tribal knowledge and cultural heritage",
+        "Modern educational pathways and opportunities",
+        "Community values and leadership development",
+        "Bridging traditional wisdom with contemporary learning"
+      ],
+      format: "Animated educational video with interactive elements"
+    }
   },
   {
     id: 6,
