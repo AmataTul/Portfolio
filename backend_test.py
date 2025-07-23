@@ -981,6 +981,17 @@ class BackendTester:
         self.test_ute_bison_ranch_project_details()
         self.test_ute_bison_ranch_individual_retrieval()
         
+        # Test Educational Animation project update specifically
+        print("\n" + "=" * 60)
+        print("🎓 EDUCATIONAL ANIMATION PROJECT UPDATE TESTS")
+        print("=" * 60)
+        self.test_educational_animation_project_retrieval()
+        self.test_educational_animation_youtube_url()
+        self.test_educational_animation_client_info()
+        self.test_educational_animation_category_filtering()
+        self.test_educational_animation_project_details()
+        self.test_educational_animation_individual_retrieval()
+        
         # Print summary
         print("\n" + "=" * 60)
         print("📊 TEST SUMMARY")
