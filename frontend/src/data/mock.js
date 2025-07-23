@@ -69,7 +69,8 @@ export const portfolioProjects = [
     ],
     type: "video",
     featured: true,
-    orientation: "vertical"
+    orientation: "vertical",
+    videoUrl: "https://www.tiktok.com/@adobe/video/7334159049778351406",
   },
   {
     id: 4,
