@@ -2,6 +2,35 @@
 export const portfolioProjects = [
   {
     id: 1,
+    title: "Ute Bison Ranch Summer Youth Program Photography",
+    category: "Photography Projects",
+    client: "Ute Tribal Enterprises - Ute Bison",
+    description: "Educational photography documentation of Uintah River High School students visiting the Ute Bison Ranch as part of the Summer Youth Program. Captured authentic moments of cultural education and youth engagement with tribal heritage and bison conservation efforts.",
+    images: [
+      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=800&h=600&fit=crop"
+    ],
+    type: "image",
+    featured: true,
+    orientation: "horizontal",
+    educationalImpact: {
+      program: "Summer Youth Program",
+      participants: "Uintah River High School Students",
+      focus: "Cultural education and tribal heritage awareness",
+      activities: [
+        "Guided bison ranch tours showcasing traditional tribal connections",
+        "Educational sessions on bison conservation and cultural significance",
+        "Hands-on learning experiences with tribal heritage practices",
+        "Photography documentation for program marketing and outreach"
+      ],
+      communityImpact: "Strengthened connections between youth and tribal heritage while promoting educational tourism"
+    }
+  },
+  {
+    id: 2,
     title: "Beats by Dre Brand Identity System",
     category: "Graphic Design & Marketing Materials",
     client: "Beats by Dre",
