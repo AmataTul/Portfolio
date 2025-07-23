@@ -15,10 +15,11 @@ sys.path.append('/app/backend')
 from models import Project
 
 async def update_educational_animation_project():
-    # Connect to MongoDB
-    mongo_url = os.environ.get('MONGO_URL', 'mongodb://localhost:27017/portfolio')
+    # Connect to MongoDB using the same configuration as the backend
+    mongo_url = os.environ.get('MONGO_URL', 'mongodb://localhost:27017')
+    db_name = os.environ.get('DB_NAME', 'test_database')
     client = AsyncIOMotorClient(mongo_url)
-    db = client.portfolio
+    db = client[db_name]
     
     # New project data
     project_data = {
