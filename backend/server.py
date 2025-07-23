@@ -306,8 +306,29 @@ async def upload_file(file: UploadFile = File(...)):
             "filename": file.filename,
             "content_type": file.content_type,
             "size": len(contents),
-            "base64_data": f"data:{file.content_type};base64,{base64_encoded}"
+            "base64_data": f"data:{file.content_type};base64,{base64_encoded}",
+            "url": f"data:{file.content_type};base64,{base64_encoded}"
         }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+# UPLOAD MULTIPLE FILES
+@api_router.post("/upload-multiple")
+async def upload_multiple_files(files: List[UploadFile] = File(...)):
+    """Upload multiple files and return base64 encoded strings"""
+    try:
+        uploaded_files = []
+        for file in files:
+            contents = await file.read()
+            base64_encoded = base64.b64encode(contents).decode('utf-8')
+            uploaded_files.append({
+                "filename": file.filename,
+                "content_type": file.content_type,
+                "size": len(contents),
+                "base64_data": f"data:{file.content_type};base64,{base64_encoded}",
+                "url": f"data:{file.content_type};base64,{base64_encoded}"
+            })
+        return {"uploaded_files": uploaded_files}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
