@@ -256,24 +256,21 @@ metadata:
   test_sequence: 1
   run_ui: false
 
-  - task: "Ute Bison Ranch Image Integration"
+  - task: "Educational Animation Project Update"
     implemented: true
     working: true
-    file: "mock.js, update_backend_ute_bison.py"
+    file: "mock.js, update_educational_animation.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
       - working: true
         agent: "main"
-        comment: "Successfully converted 5 user-provided images to base64 format and integrated them into both frontend mock.js and backend MongoDB database. Images include: youth walking on bridge, bison in enclosure, viewing area scenes, outdoor group activities, and ranch dog. Project now displays actual photography from Summer Youth Program."
-      - working: true
-        agent: "testing"
-        comment: "✅ TESTED: Ute Bison Ranch image integration fully successful. All 5 base64 images properly stored and retrievable via API. Project found in Photography Projects category with complete educational impact details. Individual project retrieval working with all images intact. Base64 format validation passed for all images."
+        comment: "Successfully replaced High School Financial Literacy Animation with new Ute Tribal Enterprises educational animation project. Updated title to 'High School Educational Animation - Traditional Knowledge & Modern Learning', changed client to 'Ute Tribal Enterprises - Ute Bison', updated description to focus on bridging traditional tribal knowledge with modern learning, and connected the YouTube video URL (https://youtu.be/DYLLB8qiQ8k?si=Zm0y51wWhkg6D3P8). The project is clickable and opens YouTube video in new tab. Added educational impact details for tribal cultural education focus."
 
 test_plan:
   current_focus:
-    - "Ute Bison Ranch Image Integration"
+    - "Educational Animation Project Update"
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
