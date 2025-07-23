@@ -565,6 +565,7 @@ export const portfolioProjects = [
     type: "video",
     featured: false,
     orientation: "vertical",
+    videoUrl: "https://www.tiktok.com/@bisonmade/video/7334159049778351406",
     videoContent: {
       totalVideos: 10,
       videos: [
