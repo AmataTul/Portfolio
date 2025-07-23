@@ -693,6 +693,253 @@ class BackendTester:
             self.log_test("Ute Bison Ranch Individual Retrieval", False, f"Request failed: {str(e)}")
             return False
     
+    def test_educational_animation_project_retrieval(self):
+        """Test that Educational Animation project exists and is retrievable"""
+        try:
+            response = self.session.get(f"{API_BASE_URL}/projects", timeout=10)
+            if response.status_code == 200:
+                projects = response.json()
+                educational_project = None
+                
+                # Find the Educational Animation project
+                for project in projects:
+                    title = project.get('title', '')
+                    if ("Traditional Knowledge" in title and "Modern Learning" in title) or \
+                       ("Educational Animation" in title and "Ute" in project.get('client', '')):
+                        educational_project = project
+                        break
+                
+                if educational_project:
+                    self.log_test("Educational Animation Project Retrieval", True, 
+                                f"Found Educational Animation project: {educational_project['title']}")
+                    return educational_project
+                else:
+                    self.log_test("Educational Animation Project Retrieval", False, 
+                                "Educational Animation project not found in projects list")
+                    return None
+            else:
+                self.log_test("Educational Animation Project Retrieval", False, 
+                            f"Status {response.status_code}: {response.text}")
+                return None
+        except requests.exceptions.RequestException as e:
+            self.log_test("Educational Animation Project Retrieval", False, f"Request failed: {str(e)}")
+            return None
+    
+    def test_educational_animation_youtube_url(self):
+        """Test that Educational Animation project has proper YouTube URL"""
+        try:
+            educational_project = self.test_educational_animation_project_retrieval()
+            if not educational_project:
+                self.log_test("Educational Animation YouTube URL", False, 
+                            "Cannot test YouTube URL - project not found")
+                return False
+            
+            # Check for YouTube URL in various possible fields
+            youtube_url = None
+            expected_url = "https://youtu.be/DYLLB8qiQ8k?si=Zm0y51wWhkg6D3P8"
+            
+            # Check in images array (might be stored as video URL)
+            images = educational_project.get('images', [])
+            for image in images:
+                if isinstance(image, str) and "youtu" in image:
+                    youtube_url = image
+                    break
+            
+            # Check in video_url field if it exists
+            if not youtube_url:
+                youtube_url = educational_project.get('video_url', '')
+            
+            # Check in description for the URL
+            if not youtube_url:
+                description = educational_project.get('description', '')
+                if expected_url in description:
+                    youtube_url = expected_url
+            
+            if youtube_url and "youtu" in youtube_url and "DYLLB8qiQ8k" in youtube_url:
+                self.log_test("Educational Animation YouTube URL", True, 
+                            f"YouTube URL found and valid: {youtube_url}")
+                return True
+            else:
+                self.log_test("Educational Animation YouTube URL", False, 
+                            f"YouTube URL not found or invalid. Found: {youtube_url}")
+                return False
+                
+        except Exception as e:
+            self.log_test("Educational Animation YouTube URL", False, f"Error checking YouTube URL: {str(e)}")
+            return False
+    
+    def test_educational_animation_client_info(self):
+        """Test that Educational Animation project has correct client information"""
+        try:
+            educational_project = self.test_educational_animation_project_retrieval()
+            if not educational_project:
+                self.log_test("Educational Animation Client Info", False, 
+                            "Cannot test client info - project not found")
+                return False
+            
+            client = educational_project.get('client', '')
+            expected_client = "Ute Tribal Enterprises - Ute Bison"
+            
+            if client == expected_client:
+                self.log_test("Educational Animation Client Info", True, 
+                            f"Client information correct: {client}")
+                return True
+            else:
+                self.log_test("Educational Animation Client Info", False, 
+                            f"Client mismatch. Expected: '{expected_client}', Got: '{client}'")
+                return False
+                
+        except Exception as e:
+            self.log_test("Educational Animation Client Info", False, f"Error checking client info: {str(e)}")
+            return False
+    
+    def test_educational_animation_category_filtering(self):
+        """Test that Educational Animation project appears in Illustrations & Educational Content category"""
+        try:
+            # Test with Illustrations & Educational Content category (URL encoded)
+            response = self.session.get(f"{API_BASE_URL}/projects?category=Illustrations%20%26%20Educational%20Content", timeout=10)
+            if response.status_code == 200:
+                projects = response.json()
+                educational_project = None
+                
+                # Find the Educational Animation project in the category
+                for project in projects:
+                    title = project.get('title', '')
+                    client = project.get('client', '')
+                    if ("Traditional Knowledge" in title and "Modern Learning" in title) or \
+                       ("Educational Animation" in title and "Ute" in client):
+                        educational_project = project
+                        break
+                
+                if educational_project:
+                    # Verify it's actually in the correct category
+                    category = educational_project.get('category')
+                    if category == 'Illustrations & Educational Content':
+                        self.log_test("Educational Animation Category Filtering", True, 
+                                    f"Educational Animation project found in correct category")
+                        return True
+                    else:
+                        self.log_test("Educational Animation Category Filtering", False, 
+                                    f"Project found but in wrong category: {category}")
+                        return False
+                else:
+                    self.log_test("Educational Animation Category Filtering", False, 
+                                "Educational Animation project not found in Illustrations & Educational Content category")
+                    return False
+            else:
+                self.log_test("Educational Animation Category Filtering", False, 
+                            f"Status {response.status_code}: {response.text}")
+                return False
+        except requests.exceptions.RequestException as e:
+            self.log_test("Educational Animation Category Filtering", False, f"Request failed: {str(e)}")
+            return False
+    
+    def test_educational_animation_project_details(self):
+        """Test that Educational Animation project has complete details including tribal education focus"""
+        try:
+            educational_project = self.test_educational_animation_project_retrieval()
+            if not educational_project:
+                self.log_test("Educational Animation Project Details", False, 
+                            "Cannot test details - project not found")
+                return False
+            
+            # Check required fields
+            required_fields = ['title', 'description', 'category', 'client', 'id']
+            missing_fields = []
+            
+            for field in required_fields:
+                if not educational_project.get(field):
+                    missing_fields.append(field)
+            
+            if missing_fields:
+                self.log_test("Educational Animation Project Details", False, 
+                            f"Missing required fields: {missing_fields}")
+                return False
+            
+            # Check that description contains tribal education content
+            description = educational_project.get('description', '')
+            tribal_keywords = ['tribal', 'traditional', 'knowledge', 'cultural', 'education', 'learning']
+            has_tribal_content = any(keyword.lower() in description.lower() for keyword in tribal_keywords)
+            
+            if not has_tribal_content:
+                self.log_test("Educational Animation Project Details", False, 
+                            "Description lacks tribal cultural education content")
+                return False
+            
+            # Check that it has proper project structure
+            if educational_project.get('category') != 'Illustrations & Educational Content':
+                self.log_test("Educational Animation Project Details", False, 
+                            f"Wrong category: {educational_project.get('category')}")
+                return False
+            
+            # Check project type is video
+            project_type = educational_project.get('type', '')
+            if project_type != 'video':
+                self.log_test("Educational Animation Project Details", False, 
+                            f"Wrong project type. Expected 'video', got: {project_type}")
+                return False
+            
+            self.log_test("Educational Animation Project Details", True, 
+                        "Project has complete details with tribal cultural education focus and correct video type")
+            return True
+            
+        except Exception as e:
+            self.log_test("Educational Animation Project Details", False, f"Error checking details: {str(e)}")
+            return False
+    
+    def test_educational_animation_individual_retrieval(self):
+        """Test individual project retrieval for Educational Animation project"""
+        try:
+            # First get the project to find its ID
+            educational_project = self.test_educational_animation_project_retrieval()
+            if not educational_project:
+                self.log_test("Educational Animation Individual Retrieval", False, 
+                            "Cannot test individual retrieval - project not found")
+                return False
+            
+            project_id = educational_project.get('id')
+            if not project_id:
+                self.log_test("Educational Animation Individual Retrieval", False, 
+                            "Project ID not found")
+                return False
+            
+            # Test individual project retrieval
+            response = self.session.get(f"{API_BASE_URL}/projects/{project_id}", timeout=10)
+            if response.status_code == 200:
+                individual_project = response.json()
+                
+                # Verify it's the same project
+                if individual_project.get('id') == project_id:
+                    # Verify all key details are intact
+                    title = individual_project.get('title', '')
+                    client = individual_project.get('client', '')
+                    category = individual_project.get('category', '')
+                    project_type = individual_project.get('type', '')
+                    
+                    if ("Traditional Knowledge" in title and "Modern Learning" in title and 
+                        client == "Ute Tribal Enterprises - Ute Bison" and
+                        category == "Illustrations & Educational Content" and
+                        project_type == "video"):
+                        self.log_test("Educational Animation Individual Retrieval", True, 
+                                    f"Individual project retrieval successful with all details intact")
+                        return True
+                    else:
+                        self.log_test("Educational Animation Individual Retrieval", False, 
+                                    f"Project details incomplete. Title: {title}, Client: {client}, Category: {category}, Type: {project_type}")
+                        return False
+                else:
+                    self.log_test("Educational Animation Individual Retrieval", False, 
+                                f"ID mismatch: expected {project_id}, got {individual_project.get('id')}")
+                    return False
+            else:
+                self.log_test("Educational Animation Individual Retrieval", False, 
+                            f"Status {response.status_code}: {response.text}")
+                return False
+                
+        except requests.exceptions.RequestException as e:
+            self.log_test("Educational Animation Individual Retrieval", False, f"Request failed: {str(e)}")
+            return False
+    
     def run_all_tests(self):
         """Run all backend tests"""
         print(f"\n🚀 Starting Backend API Tests")
