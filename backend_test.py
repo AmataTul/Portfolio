@@ -694,20 +694,30 @@ class BackendTester:
             return False
     
     def test_educational_animation_project_retrieval(self):
-        """Test that Educational Animation project exists and is retrievable"""
+        """Test that Educational Animation project exists and is retrievable (may be under old or new title)"""
         try:
             response = self.session.get(f"{API_BASE_URL}/projects", timeout=10)
             if response.status_code == 200:
                 projects = response.json()
                 educational_project = None
                 
-                # Find the Educational Animation project
+                # First look for the new title
                 for project in projects:
                     title = project.get('title', '')
                     if ("Traditional Knowledge" in title and "Modern Learning" in title) or \
                        ("Educational Animation" in title and "Ute" in project.get('client', '')):
                         educational_project = project
                         break
+                
+                # If not found, look for the old Financial Literacy project that should have been updated
+                if not educational_project:
+                    for project in projects:
+                        title = project.get('title', '')
+                        if "Financial Literacy" in title and "Animation" in title:
+                            educational_project = project
+                            self.log_test("Educational Animation Project Retrieval", False, 
+                                        f"Found old Financial Literacy project that should have been updated: {title}")
+                            return educational_project
                 
                 if educational_project:
                     self.log_test("Educational Animation Project Retrieval", True, 
