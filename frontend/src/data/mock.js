@@ -507,6 +507,7 @@ export const portfolioProjects = [
     type: "video",
     featured: false,
     orientation: "vertical",
+    videoUrl: "https://www.tiktok.com/@adobe/video/7329366242383498539",
     videoContent: {
       totalVideos: 10,
       videos: [
