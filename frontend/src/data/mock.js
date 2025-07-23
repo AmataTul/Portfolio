@@ -7,10 +7,10 @@ export const portfolioProjects = [
     client: "Ute Tribal Enterprises - Ute Bison",
     description: "Educational photography documentation of Uintah River High School students visiting the Ute Bison Ranch as part of the Summer Youth Program. Captured authentic moments of cultural education and youth engagement with tribal heritage and bison conservation efforts.",
     images: [
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?w=800&h=600&fit=crop",
+      "/root/.emergent/automation_output/20250722_232721/back_to_all_projects.jpeg",
+      "/root/.emergent/automation_output/20250722_232721/all_projects_scroll.jpeg", 
+      "/root/.emergent/automation_output/20250722_232721/all_projects_updated.jpeg",
+      "/root/.emergent/automation_output/20250722_232721/graphics_category_test.jpeg",
       "https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=800&h=600&fit=crop"
     ],
     type: "image",
@@ -22,7 +22,7 @@ export const portfolioProjects = [
       focus: "Cultural education and tribal heritage awareness",
       activities: [
         "Guided bison ranch tours showcasing traditional tribal connections",
-        "Educational sessions on bison conservation and cultural significance",
+        "Educational sessions on bison conservation and cultural significance", 
         "Hands-on learning experiences with tribal heritage practices",
         "Photography documentation for program marketing and outreach"
       ],
