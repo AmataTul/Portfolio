@@ -392,6 +392,11 @@ export const portfolioProjects = [
       },
       videos: [
         {
+          url: "https://www.tiktok.com/@kahpeehkahahn/video/7409139284403408159",
+          performance: "High engagement",
+          description: "Featured coffee house content - primary engagement driver"
+        },
+        {
           url: "https://www.tiktok.com/@kahpeehkahahn/video/7471801091441659178",
           performance: "85% conversion increase",
           description: "Primary conversion driver for coffee house"
@@ -418,18 +423,13 @@ export const portfolioProjects = [
         },
         {
           url: "https://www.tiktok.com/@kahpeehkahahn/video/7396130080369528094",
-          performance: "Brand awareness",
-          description: "Coffee house brand storytelling"
+          performance: "Event marketing",
+          description: "Special events and promotional content"
         },
         {
-          url: "https://www.tiktok.com/@kahpeehkahahn/video/7398706064197160223",
-          performance: "Engagement focused",
-          description: "Community engagement and brand building"
-        },
-        {
-          url: "https://www.tiktok.com/@kahpeehkahahn/video/7409139284403408159",
-          performance: "Top performer",
-          description: "Leading engagement and conversion content"
+          url: "https://www.tiktok.com/@kahpeehkahahn/video/7427963014958878759",
+          performance: "Event marketing",
+          description: "Additional event marketing strategy"
         }
       ]
     }
