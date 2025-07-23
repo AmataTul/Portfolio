@@ -45,7 +45,7 @@ export const portfolioProjects = [
     orientation: "horizontal"
   },
   {
-    id: 2,
+    id: 3,
     title: "Disney+ Digital Campaign Launch",
     category: "Advertising",
     client: "Disney",
@@ -59,7 +59,7 @@ export const portfolioProjects = [
     orientation: "horizontal"
   },
   {
-    id: 3,
+    id: 4,
     title: "Adobe Creative Suite Instagram Reels",
     category: "Social Media Content & Campaigns",
     client: "Adobe",
