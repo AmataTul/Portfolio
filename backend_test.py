@@ -1270,6 +1270,18 @@ class BackendTester:
         self.test_educational_animation_project_details()
         self.test_educational_animation_individual_retrieval()
         
+        # Test TikTok Video URL Integration specifically
+        print("\n" + "=" * 60)
+        print("📱 TIKTOK VIDEO URL INTEGRATION TESTS")
+        print("=" * 60)
+        self.test_social_media_projects_retrieval()
+        self.test_tiktok_url_format_validation()
+        self.test_kahpeeh_primary_tiktok_url()
+        self.test_social_media_category_filtering()
+        self.test_video_project_orientation()
+        self.test_featured_projects_marking()
+        self.test_database_consistency()
+        
         # Print summary
         print("\n" + "=" * 60)
         print("📊 TEST SUMMARY")
