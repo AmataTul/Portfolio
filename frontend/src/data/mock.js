@@ -382,6 +382,7 @@ export const portfolioProjects = [
     type: "video",
     featured: true,
     orientation: "vertical",
+    videoUrl: "https://www.tiktok.com/@kahpeehkahahn/video/7409139284403408159",
     socialMediaCampaign: {
       platform: "TikTok",
       totalVideos: 8,
