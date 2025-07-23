@@ -8,6 +8,10 @@ import asyncio
 import sys
 import os
 from motor.motor_asyncio import AsyncIOMotorClient
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv('/app/backend/.env')
 
 # Add the backend directory to the Python path
 sys.path.append('/app/backend')
