@@ -482,6 +482,217 @@ class BackendTester:
             self.log_test("File Upload", False, f"Request failed: {str(e)}")
             return False
     
+    def test_ute_bison_ranch_project_retrieval(self):
+        """Test that Ute Bison Ranch project exists and is retrievable"""
+        try:
+            response = self.session.get(f"{API_BASE_URL}/projects", timeout=10)
+            if response.status_code == 200:
+                projects = response.json()
+                ute_bison_project = None
+                
+                # Find the Ute Bison Ranch project
+                for project in projects:
+                    if "Ute Bison Ranch" in project.get('title', '') or "Summer Youth Program" in project.get('title', ''):
+                        ute_bison_project = project
+                        break
+                
+                if ute_bison_project:
+                    self.log_test("Ute Bison Ranch Project Retrieval", True, 
+                                f"Found Ute Bison Ranch project: {ute_bison_project['title']}")
+                    return ute_bison_project
+                else:
+                    self.log_test("Ute Bison Ranch Project Retrieval", False, 
+                                "Ute Bison Ranch project not found in projects list")
+                    return None
+            else:
+                self.log_test("Ute Bison Ranch Project Retrieval", False, 
+                            f"Status {response.status_code}: {response.text}")
+                return None
+        except requests.exceptions.RequestException as e:
+            self.log_test("Ute Bison Ranch Project Retrieval", False, f"Request failed: {str(e)}")
+            return None
+    
+    def test_ute_bison_ranch_base64_images(self):
+        """Test that Ute Bison Ranch project has valid base64 images"""
+        try:
+            # First get the project
+            ute_project = self.test_ute_bison_ranch_project_retrieval()
+            if not ute_project:
+                self.log_test("Ute Bison Ranch Base64 Images", False, 
+                            "Cannot test images - project not found")
+                return False
+            
+            images = ute_project.get('images', [])
+            if not images:
+                self.log_test("Ute Bison Ranch Base64 Images", False, 
+                            "No images found in Ute Bison Ranch project")
+                return False
+            
+            # Check that we have 5 images as expected
+            if len(images) != 5:
+                self.log_test("Ute Bison Ranch Base64 Images", False, 
+                            f"Expected 5 images, found {len(images)}")
+                return False
+            
+            # Validate each image is proper base64 format
+            valid_images = 0
+            for i, image in enumerate(images):
+                if isinstance(image, str) and image.startswith("data:image/jpeg;base64,"):
+                    # Check that there's actual base64 data after the prefix
+                    base64_data = image.split("data:image/jpeg;base64,")[1]
+                    if len(base64_data) > 100:  # Should be substantial base64 data
+                        valid_images += 1
+                    else:
+                        self.log_test("Ute Bison Ranch Base64 Images", False, 
+                                    f"Image {i+1} has insufficient base64 data")
+                        return False
+                else:
+                    self.log_test("Ute Bison Ranch Base64 Images", False, 
+                                f"Image {i+1} is not in proper base64 format: {image[:50]}...")
+                    return False
+            
+            if valid_images == 5:
+                self.log_test("Ute Bison Ranch Base64 Images", True, 
+                            f"All 5 base64 images are valid and properly formatted")
+                return True
+            else:
+                self.log_test("Ute Bison Ranch Base64 Images", False, 
+                            f"Only {valid_images}/5 images are valid")
+                return False
+                
+        except Exception as e:
+            self.log_test("Ute Bison Ranch Base64 Images", False, f"Error validating images: {str(e)}")
+            return False
+    
+    def test_ute_bison_ranch_photography_category(self):
+        """Test that Ute Bison Ranch project appears in Photography Projects category"""
+        try:
+            # Test with Photography Projects category (URL encoded)
+            response = self.session.get(f"{API_BASE_URL}/projects?category=Photography%20Projects", timeout=10)
+            if response.status_code == 200:
+                projects = response.json()
+                ute_bison_project = None
+                
+                # Find the Ute Bison Ranch project in Photography category
+                for project in projects:
+                    if "Ute Bison Ranch" in project.get('title', '') or "Summer Youth Program" in project.get('title', ''):
+                        ute_bison_project = project
+                        break
+                
+                if ute_bison_project:
+                    # Verify it's actually in Photography Projects category
+                    if ute_bison_project.get('category') == 'Photography Projects':
+                        self.log_test("Ute Bison Ranch Photography Category", True, 
+                                    f"Ute Bison Ranch project found in Photography Projects category")
+                        return True
+                    else:
+                        self.log_test("Ute Bison Ranch Photography Category", False, 
+                                    f"Project found but in wrong category: {ute_bison_project.get('category')}")
+                        return False
+                else:
+                    self.log_test("Ute Bison Ranch Photography Category", False, 
+                                "Ute Bison Ranch project not found in Photography Projects category")
+                    return False
+            else:
+                self.log_test("Ute Bison Ranch Photography Category", False, 
+                            f"Status {response.status_code}: {response.text}")
+                return False
+        except requests.exceptions.RequestException as e:
+            self.log_test("Ute Bison Ranch Photography Category", False, f"Request failed: {str(e)}")
+            return False
+    
+    def test_ute_bison_ranch_project_details(self):
+        """Test that Ute Bison Ranch project has complete details including educational impact"""
+        try:
+            ute_project = self.test_ute_bison_ranch_project_retrieval()
+            if not ute_project:
+                self.log_test("Ute Bison Ranch Project Details", False, 
+                            "Cannot test details - project not found")
+                return False
+            
+            # Check required fields
+            required_fields = ['title', 'description', 'category', 'images', 'id']
+            missing_fields = []
+            
+            for field in required_fields:
+                if not ute_project.get(field):
+                    missing_fields.append(field)
+            
+            if missing_fields:
+                self.log_test("Ute Bison Ranch Project Details", False, 
+                            f"Missing required fields: {missing_fields}")
+                return False
+            
+            # Check that description contains educational content
+            description = ute_project.get('description', '')
+            educational_keywords = ['youth', 'program', 'educational', 'learning', 'students', 'summer']
+            has_educational_content = any(keyword.lower() in description.lower() for keyword in educational_keywords)
+            
+            if not has_educational_content:
+                self.log_test("Ute Bison Ranch Project Details", False, 
+                            "Description lacks educational impact content")
+                return False
+            
+            # Check that it has proper project structure
+            if ute_project.get('category') != 'Photography Projects':
+                self.log_test("Ute Bison Ranch Project Details", False, 
+                            f"Wrong category: {ute_project.get('category')}")
+                return False
+            
+            self.log_test("Ute Bison Ranch Project Details", True, 
+                        "Project has complete details with educational impact content")
+            return True
+            
+        except Exception as e:
+            self.log_test("Ute Bison Ranch Project Details", False, f"Error checking details: {str(e)}")
+            return False
+    
+    def test_ute_bison_ranch_individual_retrieval(self):
+        """Test individual project retrieval for Ute Bison Ranch project"""
+        try:
+            # First get the project to find its ID
+            ute_project = self.test_ute_bison_ranch_project_retrieval()
+            if not ute_project:
+                self.log_test("Ute Bison Ranch Individual Retrieval", False, 
+                            "Cannot test individual retrieval - project not found")
+                return False
+            
+            project_id = ute_project.get('id')
+            if not project_id:
+                self.log_test("Ute Bison Ranch Individual Retrieval", False, 
+                            "Project ID not found")
+                return False
+            
+            # Test individual project retrieval
+            response = self.session.get(f"{API_BASE_URL}/projects/{project_id}", timeout=10)
+            if response.status_code == 200:
+                individual_project = response.json()
+                
+                # Verify it's the same project
+                if individual_project.get('id') == project_id:
+                    # Verify images are still intact
+                    images = individual_project.get('images', [])
+                    if len(images) == 5:
+                        self.log_test("Ute Bison Ranch Individual Retrieval", True, 
+                                    f"Individual project retrieval successful with {len(images)} images")
+                        return True
+                    else:
+                        self.log_test("Ute Bison Ranch Individual Retrieval", False, 
+                                    f"Expected 5 images, got {len(images)}")
+                        return False
+                else:
+                    self.log_test("Ute Bison Ranch Individual Retrieval", False, 
+                                f"ID mismatch: expected {project_id}, got {individual_project.get('id')}")
+                    return False
+            else:
+                self.log_test("Ute Bison Ranch Individual Retrieval", False, 
+                            f"Status {response.status_code}: {response.text}")
+                return False
+                
+        except requests.exceptions.RequestException as e:
+            self.log_test("Ute Bison Ranch Individual Retrieval", False, f"Request failed: {str(e)}")
+            return False
+    
     def run_all_tests(self):
         """Run all backend tests"""
         print(f"\n🚀 Starting Backend API Tests")
