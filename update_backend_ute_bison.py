@@ -16,9 +16,9 @@ from models import Project
 
 async def update_ute_bison_project():
     # Connect to MongoDB
-    mongo_url = os.environ.get('MONGO_URL', 'mongodb://localhost:27017/portfolio')
+    mongo_url = os.environ.get('MONGO_URL', 'mongodb://localhost:27017')
     client = AsyncIOMotorClient(mongo_url)
-    db = client.portfolio
+    db = client.test_database  # Use the correct database name
     
     # Read the base64 images from the file
     def read_base64_images():
@@ -69,7 +69,7 @@ async def update_ute_bison_project():
         # Update the existing project with new images
         result = await db.projects.update_one(
             {"title": project_data["title"]},
-            {"$set": {"images": base64_images}}
+            {"$set": project_data}
         )
         if result.modified_count > 0:
             print("✅ Successfully updated Ute Bison Ranch project with new images in database")
