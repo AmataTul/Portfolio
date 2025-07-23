@@ -724,6 +724,16 @@ class BackendTester:
         self.test_brands_endpoints()
         self.test_file_upload()
         
+        # Test Ute Bison Ranch image integration specifically
+        print("\n" + "=" * 60)
+        print("🖼️  UTE BISON RANCH IMAGE INTEGRATION TESTS")
+        print("=" * 60)
+        self.test_ute_bison_ranch_project_retrieval()
+        self.test_ute_bison_ranch_base64_images()
+        self.test_ute_bison_ranch_photography_category()
+        self.test_ute_bison_ranch_project_details()
+        self.test_ute_bison_ranch_individual_retrieval()
+        
         # Print summary
         print("\n" + "=" * 60)
         print("📊 TEST SUMMARY")
