@@ -203,24 +203,69 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     </p>
                   </div>
                   
-                  {/* Analytics Images Grid */}
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-                    {project.dualSections.analyticsSection.images.map((image, index) => (
-                      <div key={index} className="group relative overflow-hidden rounded-xl shadow-lg">
-                        <div className="bg-gradient-to-br from-blue-400 via-indigo-400 to-purple-400 rounded-xl p-1">
-                          <div className="bg-white rounded-lg overflow-hidden">
-                            <img 
-                              src={image} 
-                              alt={`Analytics Work ${index + 1}`}
-                              className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
-                            />
-                            <div className="absolute top-3 left-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-bold text-xs px-3 py-1 rounded-full shadow-lg">
-                              Analytics #{index + 1}
+                  {/* Analytics Images Grid - Flexible Layout for 4 images */}
+                  <div className={`mb-6 ${
+                    project.dualSections.analyticsSection.layout === 'mixed' 
+                      ? 'space-y-4' 
+                      : 'grid grid-cols-1 md:grid-cols-3 gap-6'
+                  }`}>
+                    {project.dualSections.analyticsSection.layout === 'mixed' ? (
+                      <>
+                        {/* First 3 images in a row */}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                          {project.dualSections.analyticsSection.images.slice(0, 3).map((image, index) => (
+                            <div key={index} className="group relative overflow-hidden rounded-xl shadow-lg">
+                              <div className="bg-gradient-to-br from-blue-400 via-indigo-400 to-purple-400 rounded-xl p-1">
+                                <div className="bg-white rounded-lg overflow-hidden">
+                                  <img 
+                                    src={image} 
+                                    alt={`Analytics Work ${index + 1}`}
+                                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                                  />
+                                  <div className="absolute top-3 left-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-bold text-xs px-3 py-1 rounded-full shadow-lg">
+                                    Analytics #{index + 1}
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                        {/* Horizontal image separately */}
+                        {project.dualSections.analyticsSection.images[3] && (
+                          <div className="group relative overflow-hidden rounded-xl shadow-lg">
+                            <div className="bg-gradient-to-br from-blue-400 via-indigo-400 to-purple-400 rounded-xl p-1">
+                              <div className="bg-white rounded-lg overflow-hidden">
+                                <img 
+                                  src={project.dualSections.analyticsSection.images[3]} 
+                                  alt="Analytics Presentation"
+                                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                                />
+                                <div className="absolute top-3 left-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-bold text-xs px-3 py-1 rounded-full shadow-lg">
+                                  Presentation
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        )}
+                      </>
+                    ) : (
+                      project.dualSections.analyticsSection.images.map((image, index) => (
+                        <div key={index} className="group relative overflow-hidden rounded-xl shadow-lg">
+                          <div className="bg-gradient-to-br from-blue-400 via-indigo-400 to-purple-400 rounded-xl p-1">
+                            <div className="bg-white rounded-lg overflow-hidden">
+                              <img 
+                                src={image} 
+                                alt={`Analytics Work ${index + 1}`}
+                                className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                              />
+                              <div className="absolute top-3 left-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-bold text-xs px-3 py-1 rounded-full shadow-lg">
+                                Analytics #{index + 1}
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    ))}
+                      ))
+                    )}
                   </div>
                   
                   {/* Analytics Highlights */}
