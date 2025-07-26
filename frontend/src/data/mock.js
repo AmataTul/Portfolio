@@ -208,50 +208,80 @@ export const portfolioProjects = [
     title: "KahPeeh kah-Ahn Ute Coffee House & Soda - Video Advertisement Campaign",
     category: "Advertising",
     client: "Ute Tribal Enterprises - KahPeeh kah-Ahn Ute Coffee House & Soda",
-    project_type: "Video Advertisement Production & Direction",
-    description: "Professional video advertisement for KahPeeh kah-Ahn Ute Coffee House & Soda, showcasing authentic indigenous hospitality and premium coffee experience. I directed and coordinated this comprehensive advertising campaign from concept to completion, highlighting the unique cultural atmosphere and community connection of this locally-owned indigenous business serving the Uintah and Ouray reservation communities.",
+    project_type: "Multi-Platform Video Advertisement Production & Direction",
+    description: "Comprehensive video advertisement campaign for KahPeeh kah-Ahn Ute Coffee House & Soda, showcasing authentic indigenous hospitality and premium coffee experience. I directed and coordinated this complete advertising production from initial concept through final editing, working with a talented team of editors to create professional-grade content. The campaign demonstrates my experience with TV/YouTube advertisements and large-scale advertising initiatives. These videos were strategically deployed across multiple platforms including social media, YouTube, cinema screenings, and big screen displays, showcasing the unique cultural atmosphere and community connection of this locally-owned indigenous business serving the Uintah and Ouray reservation communities.",
     images: [
-      "https://img.youtube.com/vi/placeholder/maxresdefault.jpg" // Video thumbnail placeholder
+      "COFFEE_HOUSE_VIDEO_THUMBNAIL_1", // User screenshot for video thumbnail
+      "UTE_CROSSING_GRILL_VIDEO_THUMBNAIL_2" // User screenshot for second video thumbnail
     ],
     type: "video", 
     featured: true,
     orientation: "horizontal",
-    videoUrl: "https://customer-assets.emergentagent.com/job_smooth-site-setup/artifacts/a3tv7dfw_Ute%20Coffeehouse%20V4.mp4",
+    // No YouTube links - using custom video files
+    videos: [
+      {
+        id: 1,
+        title: "KahPeeh kah-Ahn Coffee House Advertisement",
+        videoFile: "Ute Coffeehouse V4.mp4",
+        thumbnail: "COFFEE_HOUSE_VIDEO_THUMBNAIL_1",
+        description: "Professional advertisement showcasing authentic indigenous coffee house experience"
+      },
+      {
+        id: 2, 
+        title: "Ute Crossing Grill & Ute Lanes Advertisement",
+        videoFile: "Ute_Crossing_Grill_Advertisement.mp4", // User can replace with actual filename
+        thumbnail: "UTE_CROSSING_GRILL_VIDEO_THUMBNAIL_2", 
+        description: "Restaurant and bowling entertainment advertising campaign"
+      }
+    ],
     key_contributions: [
-      "Directed complete video advertisement production from initial concept through final editing",
-      "Coordinated all aspects of video shoot including location setup, talent direction, and equipment management",
-      "Developed creative vision showcasing authentic indigenous coffee house experience and cultural atmosphere",
-      "Managed production timeline and budget to deliver high-quality advertising content within project constraints",
-      "Created compelling narrative highlighting unique selling propositions of indigenous-owned local business",
-      "Produced professional-grade video advertisement suitable for multiple marketing channels and platforms"
+      "Directed and coordinated complete multi-video advertisement campaign from initial concept through final delivery",
+      "Led collaborative efforts with professional editing team to produce high-quality advertising content within budget constraints",
+      "Developed creative vision and production strategy for large-scale advertising deployment across cinema, social media, and YouTube platforms",
+      "Managed comprehensive production timeline including pre-production planning, filming coordination, and post-production oversight",
+      "Created compelling advertising narratives showcasing unique selling propositions of indigenous-owned local businesses", 
+      "Produced professional-grade video advertisements suitable for cinema screenings, big screen displays, and digital marketing channels",
+      "Coordinated second advertisement production for Ute Crossing Grill & Ute Lanes restaurant and bowling entertainment venue"
     ],
     skills_utilized: [
-      "Video Direction & Production",
-      "Creative Campaign Development", 
-      "Indigenous Business Marketing",
-      "Production Coordination",
-      "Video Editing & Post-Production",
-      "Advertising Strategy",
+      "Video Direction & Production Leadership",
+      "Large-Scale Advertising Campaign Management", 
+      "Cinema & Television Advertisement Production",
+      "Indigenous Business Marketing Strategy",
+      "Multi-Platform Content Distribution",
+      "Team Coordination & Editor Collaboration",
+      "Video Editing & Post-Production Direction",
+      "Restaurant & Entertainment Venue Advertising",
       "Cultural Sensitivity Marketing",
-      "Local Business Promotion",
-      "Brand Storytelling",
-      "Project Management"
+      "Brand Storytelling & Narrative Development",
+      "Project Management & Timeline Coordination"
     ],
     impact: {
       quantified_metrics: [
-        "Produced high-quality video advertisement showcasing authentic indigenous coffee house experience",
-        "Successfully directed and coordinated complete advertising campaign from concept to delivery", 
-        "Created compelling marketing asset suitable for multiple advertising platforms and channels",
-        "Delivered professional video content highlighting unique cultural atmosphere and community connection",
-        "Developed advertising material supporting overall brand positioning for KahPeeh kah-Ahn Coffee House"
+        "Successfully directed and produced two professional advertisement campaigns for Ute Tribal Enterprises businesses",
+        "Managed large-scale advertising deployment across cinema screens, social media platforms, YouTube, and big screen displays", 
+        "Coordinated complete production process working with editing team to deliver cinema-quality advertising content",
+        "Created versatile advertising assets suitable for multiple high-visibility marketing channels and sponsorship events",
+        "Demonstrated expertise in TV/YouTube advertising and large-scale campaign production with limited resource optimization"
       ],
       qualitative_outcomes: [
-        "Enhanced brand storytelling through authentic visual representation of indigenous hospitality",
-        "Strengthened marketing portfolio with professional video advertisement showcasing cultural sensitivity",
-        "Elevated coffee house brand presence through high-quality advertising content creation",
-        "Demonstrated comprehensive video production capabilities from direction through post-production",
-        "Created sustainable advertising framework for ongoing indigenous business marketing initiatives"
+        "Enhanced brand visibility for both coffee house and restaurant/bowling entertainment venue through professional advertising",
+        "Established expertise in directing large-scale advertising campaigns suitable for cinema and television distribution",
+        "Strengthened marketing portfolio with professional video advertisements showcasing indigenous business cultural sensitivity",
+        "Created sustainable advertising framework supporting ongoing indigenous business marketing and customer attraction initiatives",
+        "Demonstrated comprehensive production capabilities from creative direction through post-production team coordination",
+        "Elevated Ute Tribal Enterprises brand presence through high-quality, culturally authentic advertising content creation"
       ]
+    },
+    // Additional project details for Ute Crossing Grill & Ute Lanes
+    additionalProject: {
+      businessName: "Ute Crossing Grill & Ute Lanes",
+      businessType: "Restaurant & Bowling Entertainment Venue",
+      location: "Same area as KahPeeh kah-Ahn Coffee House",
+      ownership: "Ute Tribal Enterprises", 
+      services: "Comfort food restaurant with bowling entertainment, party rooms for booking, and arcade games",
+      marketingFocus: "Attracting new customers and retention of regular customers while increasing exposure and food traffic",
+      advertisingScope: "Cinemas, community events, sponsorships, social media platforms, and big screen displays"
     }
   },
   {
