@@ -447,6 +447,64 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                 </div>
               </div>
             )}
+            
+            {/* Brochure Sections for Educational Projects */}
+            {project.brochureSections && (
+              <div className="space-y-6">
+                <h4 className="font-bold text-indigo-800 text-xl mb-6 flex items-center">
+                  <span className="w-3 h-3 bg-indigo-600 rounded-full mr-3"></span>
+                  Marketing Materials & Brochures
+                </h4>
+                
+                {/* Section 1 */}
+                {project.brochureSections.section1 && (
+                  <div className="bg-gradient-to-r from-indigo-50 to-blue-50 border-2 border-indigo-200 rounded-xl p-6">
+                    <h5 className="font-semibold text-indigo-800 mb-3 text-lg flex items-center">
+                      <span className="text-xl mr-2">📚</span>
+                      {project.brochureSections.section1.title}
+                    </h5>
+                    <p className="text-indigo-700 mb-4 text-sm leading-relaxed">
+                      {project.brochureSections.section1.description}
+                    </p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {project.brochureSections.section1.images.map((image, index) => (
+                        <div key={index} className="bg-white rounded-lg overflow-hidden shadow-sm">
+                          <img 
+                            src={image} 
+                            alt={`${project.brochureSections.section1.title} - Image ${index + 1}`}
+                            className="w-full h-48 object-cover"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                
+                {/* Section 2 */}
+                {project.brochureSections.section2 && (
+                  <div className="bg-gradient-to-r from-teal-50 to-cyan-50 border-2 border-teal-200 rounded-xl p-6">
+                    <h5 className="font-semibold text-teal-800 mb-3 text-lg flex items-center">
+                      <span className="text-xl mr-2">🎯</span>
+                      {project.brochureSections.section2.title}
+                    </h5>
+                    <p className="text-teal-700 mb-4 text-sm leading-relaxed">
+                      {project.brochureSections.section2.description}
+                    </p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {project.brochureSections.section2.images.map((image, index) => (
+                        <div key={index} className="bg-white rounded-lg overflow-hidden shadow-sm">
+                          <img 
+                            src={image} 
+                            alt={`${project.brochureSections.section2.title} - Image ${index + 1}`}
+                            className="w-full h-48 object-cover"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         </div>
       </DialogContent>
