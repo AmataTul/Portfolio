@@ -353,16 +353,6 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                   <h4 className="text-3xl font-bold bg-gradient-to-r from-amber-600 via-orange-600 to-red-600 bg-clip-text text-transparent mb-4">
                     {project.combinedTikTokSection.sectionTitle}
                   </h4>
-                  
-                  {/* Engaging Description */}
-                  <div className="bg-white rounded-xl p-6 mb-6 shadow-sm border-l-4 border-amber-500">
-                    <p className="text-gray-700 text-lg leading-relaxed mb-4">
-                      {project.combinedTikTokSection.engagingDescription}
-                    </p>
-                    <p className="text-amber-700 font-semibold text-lg">
-                      {project.combinedTikTokSection.performanceHighlight}
-                    </p>
-                  </div>
                 </div>
 
                 {/* Videos Title */}
