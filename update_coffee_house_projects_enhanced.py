@@ -131,7 +131,7 @@ def main():
     
     # Update or insert TikTok project
     result_tiktok = projects_collection.update_one(
-        {"project_id": "8"},
+        {"id": "8"},
         {"$set": tiktok_project_data},
         upsert=True
     )
@@ -222,7 +222,7 @@ def main():
     
     # Update or insert Advertising project
     result_advertising = projects_collection.update_one(
-        {"project_id": "4"},
+        {"id": "4"},
         {"$set": advertising_project_data},
         upsert=True
     )
