@@ -425,7 +425,7 @@ export const portfolioProjects = [
     // Combined TikTok videos section with integrated performance metrics
     combinedTikTokSection: {
       sectionTitle: "Indigenous Coffee House TikTok Success",
-      videosTitle: "Top 6 Community-Engaging TikTok Videos",
+      videosTitle: "Top 6 Community-Engaging TikTok Videos (1 Strategic Ad + 5 Organic)",
       videosSubtitle: "Each video celebrates indigenous entrepreneurship while driving measurable business results",
       
       videos: [
@@ -434,15 +434,15 @@ export const portfolioProjects = [
           title: "🏪 Ultimate Coffee House Experience",
           url: "https://www.tiktok.com/@kahpeehkahahn/video/7471801091441659178",
           thumbnail: "PLACEHOLDER_THUMBNAIL_1", // User can replace with screenshot
-          description: "Step inside our indigenous coffee house! 🌟 See our amazing staff in action, discover our menu secrets, and get a full tour of our beautiful interior & exterior design. Plus, find out exactly where we're located! This authentic customer perspective will make you want to visit immediately! 📍✨",
+          description: "MUST-WATCH: Step inside our indigenous coffee house! 🌟 See our amazing staff in action, discover our menu secrets, and get a full tour of our beautiful interior & exterior design. Plus, find out exactly where we're located! This authentic customer perspective will make you want to visit immediately! 📍✨ Click to see why everyone's talking about us!",
           type: "customer_experience_organic"
         },
         {
           id: 2,
-          title: "🍹 Marilyn Monroe Signature Drink Magic",
+          title: "🍹 Marilyn Monroe Signature Drink Magic [STRATEGIC AD]",
           url: "https://www.tiktok.com/@kahpeehkahahn/video/7409139284403408159",
           thumbnail: "PLACEHOLDER_THUMBNAIL_2", // User can replace with screenshot
-          description: "Behind-the-scenes with our coffee house manager creating the legendary MARILYN MONROE drink! 🌟 This is our customers' #1 most beloved signature beverage. Watch the artistry and passion that goes into every single cup. You'll crave this drink after watching! ☕️💖 **[STRATEGIC AD CONTENT]**",
+          description: "VIRAL SENSATION: Behind-the-scenes with our coffee house manager creating the legendary MARILYN MONROE drink! 🌟 This is our customers' #1 most beloved signature beverage. Watch the artistry and passion that goes into every single cup. You'll crave this drink after watching! ☕️💖 [This was our only strategic ad - the rest are organic!]",
           type: "signature_product_ad"
         },
         {
@@ -450,7 +450,7 @@ export const portfolioProjects = [
           title: "🎊 4th of July Powwow Cultural Celebration",
           url: "https://www.tiktok.com/@kahpeehkahahn/video/7390967071472946462",
           thumbnail: "PLACEHOLDER_THUMBNAIL_3", // User can replace with screenshot
-          description: "Experience the magic of Northern Ute culture! 🪶 Join our annual 4th of July powwow celebration featuring traditional dances, authentic tribal customs, and our mobile coffee trailer serving the community. See customers engage with our heritage while enjoying great coffee! 🎯🌟",
+          description: "CULTURAL MAGIC: Experience the magic of Northern Ute culture! 🪶 Join our annual 4th of July powwow celebration featuring traditional dances, authentic tribal customs, and our mobile coffee trailer serving the community. See customers engage with our heritage while enjoying great coffee! 🎯🌟 Click to witness authentic indigenous celebration!",
           type: "cultural_event_organic"
         },
         {
@@ -458,7 +458,7 @@ export const portfolioProjects = [
           title: "☕ Barista Secrets Revealed",
           url: "https://www.tiktok.com/@kahpeehkahahn/video/7406134372803382559",
           thumbnail: "PLACEHOLDER_THUMBNAIL_4", // User can replace with screenshot
-          description: "Go behind the counter and discover what makes our coffee so special! 🔥 Watch our skilled baristas craft the perfect drink using professional techniques and premium ingredients. The dedication and artistry will amaze you! Perfect coffee every time! ⭐️",
+          description: "BEHIND THE SCENES: Go behind the counter and discover what makes our coffee so special! 🔥 Watch our skilled baristas craft the perfect drink using professional techniques and premium ingredients. The dedication and artistry will amaze you! Perfect coffee every time! ⭐️ Click to see the magic happen!",
           type: "behind_scenes_organic"
         },
         {
@@ -466,7 +466,7 @@ export const portfolioProjects = [
           title: "🎉 New Year Customer Love",
           url: "https://www.tiktok.com/@kahpeehkahahn/video/7396130080369528094",
           thumbnail: "PLACEHOLDER_THUMBNAIL_5", // User can replace with screenshot
-          description: "Starting the New Year with gratitude! 💝 This heartwarming customer appreciation post showcases the incredible bonds between our coffee house and our loyal community. See why our customers become family and why everyone keeps coming back! 🤗✨",
+          description: "HEARTWARMING: Starting the New Year with gratitude! 💝 This heartwarming customer appreciation post showcases the incredible bonds between our coffee house and our loyal community. See why our customers become family and why everyone keeps coming back! 🤗✨ Click to feel the love!",
           type: "customer_appreciation_organic"
         },
         {
@@ -474,7 +474,7 @@ export const portfolioProjects = [
           title: "🚚 Mobile Coffee Magic On-the-Go",
           url: "https://www.tiktok.com/@kahpeehkahahn/video/7452207220508347691",
           thumbnail: "PLACEHOLDER_THUMBNAIL_6", // User can replace with screenshot
-          description: "Our coffee house comes to YOU! 🚐☕ Watch how we bring premium coffee directly to community events and celebrations with our mobile trailer. See the excitement and engagement when great coffee meets community gathering! Always creating memorable moments! 🎪",
+          description: "COMMUNITY FAVORITE: Our coffee house comes to YOU! 🚐☕ Watch how we bring premium coffee directly to community events and celebrations with our mobile trailer. See the excitement and engagement when great coffee meets community gathering! Always creating memorable moments! 🎪 Click to see us in action!",
           type: "community_outreach_organic"
         }
       ]
