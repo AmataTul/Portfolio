@@ -151,9 +151,13 @@ class ProjectUpdateRequest(BaseModel):
     client: Optional[str] = None
     description: Optional[str] = None
     images: Optional[List[str]] = None
+    project_type: Optional[str] = None
     type: Optional[str] = None
     featured: Optional[bool] = None
     orientation: Optional[str] = None
     video_url: Optional[str] = None
     analytics: Optional[AnalyticsData] = None
     research_slides: Optional[List[Dict[str, str]]] = None
+    key_contributions: Optional[List[str]] = None
+    skills_utilized: Optional[List[str]] = None
+    impact: Optional[ImpactData] = None
