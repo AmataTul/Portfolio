@@ -1951,6 +1951,22 @@ class BackendTester:
         self.test_update_project()
         self.test_delete_project()
         
+        # Coffee House Projects Tests (Priority Focus)
+        print("\n" + "=" * 60)
+        print("☕ COFFEE HOUSE PROJECTS TESTING")
+        print("=" * 60)
+        self.test_coffee_house_tiktok_project_retrieval()
+        self.test_coffee_house_tiktok_video_descriptions()
+        self.test_coffee_house_tiktok_empty_images()
+        self.test_coffee_house_advertising_project_retrieval()
+        self.test_coffee_house_advertising_enhanced_description()
+        self.test_coffee_house_advertising_two_videos()
+        self.test_coffee_house_advertising_additional_project()
+        self.test_coffee_house_advertising_no_video_url()
+        self.test_coffee_house_advertising_enhanced_contributions()
+        self.test_coffee_house_projects_database_health()
+        self.test_coffee_house_projects_crud_operations()
+        
         # Test enhanced project fields specifically
         print("\n" + "=" * 60)
         print("🚀 ENHANCED PROJECT FIELDS TESTS")
