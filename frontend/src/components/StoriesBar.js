@@ -1,6 +1,6 @@
 import React from 'react';
 import { categories } from '../data/mock';
-import { Target, Palette, Megaphone, Smartphone, Camera, Lightbulb, BookOpen, BarChart3 } from 'lucide-react';
+import { Target, Palette, Megaphone, Smartphone, Camera, Lightbulb, BookOpen, BarChart3, Sparkles, Search } from 'lucide-react';
 
 const StoriesBar = ({ activeCategory, onCategoryChange }) => {
   const categoryIcons = {
