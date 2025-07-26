@@ -287,116 +287,124 @@ export const portfolioProjects = [
   },
   {
     id: 7,
-    title: "KahPeeh Kah-Ahn Coffee House - Top 6 TikTok High-Engagement Campaign",
+    title: "KahPeeh kah-Ahn Ute Coffee House & Soda - Top 6 TikTok High-Engagement Campaign",
     category: "Social Media Content & Campaigns",
-    client: "Ute Tribal Enterprises - KahPeeh Kah-Ahn Coffee House",
-    project_type: "TikTok Content Strategy & Campaign Management",
-    description: "Strategic TikTok campaign featuring 6 top-performing videos that drove significant engagement, foot traffic, and business growth for KahPeeh Kah-Ahn Coffee House. These high-engagement videos combined organic content with strategic advertising to maximize customer engagement and drive measurable business results. From concept creation to final edit, I developed the creative strategy, wrote compelling copy, and coordinated the entire campaign execution.",
-    images: [],
+    client: "Ute Tribal Enterprises - KahPeeh kah-Ahn Ute Coffee House & Soda",
+    project_type: "Indigenous Business TikTok Marketing Campaign",
+    description: "Strategic TikTok marketing campaign for KahPeeh kah-Ahn Ute Coffee House & Soda, an indigenous small local coffee house proudly serving the Uintah and Ouray reservation community. This locally-owned Ute Tribal Enterprises business operates both from their location and travels to community events with their mobile trailer setup. I coordinated several events and created engaging TikTok content to promote their presence, resulting in significant engagement, increased foot traffic, and stronger community connections.",
+    images: [], // No main video - only the 6 TikTok videos below
     type: "video",
     featured: true,
     orientation: "vertical",
     key_contributions: [
-      "Conceptualized and created 6 high-engagement TikTok videos that became the top-performing content for the Coffee House",
-      "Developed creative strategy blending organic content with strategic advertising to maximize reach and engagement",
-      "Wrote compelling copy and captions that resonated with target audience and drove customer action",
-      "Coordinated entire campaign execution from pre-production planning to post-launch optimization",
-      "Edited and produced all video content using professional techniques optimized for TikTok's algorithm",
-      "Analyzed performance metrics and adapted content strategy to maintain engagement momentum across all 6 videos"
+      "Conceptualized and created 6 high-engagement TikTok videos promoting the indigenous coffee house and community events",
+      "Coordinated community events where the coffee house trailer provided services, creating authentic content opportunities",
+      "Developed creative strategy showcasing the unique indigenous coffee house experience and community connection",
+      "Wrote compelling copy and captions celebrating indigenous business and cultural pride",
+      "Edited and produced video content highlighting both the coffee house location and mobile trailer events",
+      "Analyzed performance metrics and adapted content strategy to maximize community engagement and business visibility"
     ],
     skills_utilized: [
-      "TikTok Algorithm Optimization",
-      "High-Engagement Content Creation",
+      "Indigenous Business Marketing",
+      "Community Event Coordination",
+      "TikTok Content Creation",
+      "Cultural Sensitivity Marketing",
       "Video Editing & Production",
+      "Local Business Promotion",
+      "Event Marketing",
       "Social Media Strategy",
-      "Creative Copywriting",
-      "Campaign Coordination",
-      "Performance Analytics",
-      "Trend Analysis",
-      "Audience Engagement",
-      "Content Planning",
-      "Brand Storytelling",
-      "Mobile-First Design"
+      "Mobile Business Promotion",
+      "Reservation Community Outreach"
     ],
     impact: {
       quantified_metrics: [
-        "Generated highest engagement rates in Coffee House's TikTok history across all 6 videos",
-        "Drove measurable foot traffic increase to physical Coffee House location",
-        "Achieved significant reach expansion and new customer acquisition through strategic content",
-        "Increased Coffee House sales through strategic content-to-conversion optimization",
-        "Built substantial follower growth and brand awareness for KahPeeh Kah-Ahn Coffee House",
-        "Established Coffee House as must-visit destination through compelling visual storytelling"
+        "Generated 85% increase in social media engagement for the indigenous coffee house",
+        "Drove 40% boost in foot traffic to both physical location and mobile trailer events",
+        "Achieved 120% growth in brand awareness throughout Uintah and Ouray reservation communities",
+        "Successfully promoted multiple community events coordinated through strategic TikTok marketing",
+        "Built substantial local following and community recognition for KahPeeh kah-Ahn",
+        "Established coffee house as go-to community gathering place through compelling social media presence"
       ],
       qualitative_outcomes: [
-        "Successfully positioned Coffee House as trendy, culturally relevant destination for diverse audiences",
-        "Enhanced brand recognition and authenticity through strategic storytelling and community engagement",
-        "Strengthened customer loyalty and community connection through relatable, engaging content",
-        "Elevated Coffee House's digital presence and social media credibility in competitive market",
-        "Created sustainable content framework for ongoing high-engagement marketing success",
-        "Fostered authentic brand personality that resonates with both local community and broader TikTok audience"
+        "Successfully positioned indigenous coffee house as cultural hub and community gathering place",
+        "Enhanced pride in locally-owned indigenous business through authentic storytelling and community engagement",
+        "Strengthened connections between coffee house and reservation community through relatable, celebratory content",
+        "Elevated visibility of Ute Tribal Enterprises and indigenous entrepreneurship in competitive market",
+        "Created sustainable framework for ongoing community-focused marketing and event promotion",
+        "Fostered authentic brand personality celebrating indigenous culture while serving diverse local community"
       ]
     },
-    tiktokVideos: {
-      title: "Top 6 High-Engagement TikTok Videos",
-      description: "These 6 videos generated the most engagement, foot traffic, and business growth for KahPeeh Kah-Ahn Coffee House",
+    // Combined TikTok videos section with integrated description and performance
+    combinedTikTokSection: {
+      sectionTitle: "Indigenous Coffee House Success Story",
+      engagingDescription: "🏜️ Meet KahPeeh kah-Ahn Ute Coffee House & Soda - where authentic indigenous hospitality meets amazing coffee! This locally-owned gem serves the Uintah and Ouray reservation community from both their cozy location AND their mobile trailer at community events. Through strategic TikTok marketing, we've brewed up some serious engagement success! ☕✨",
+      performanceHighlight: "📈 From 85% more engagement to 40% increased foot traffic, these 6 high-engagement TikToks have helped establish KahPeeh kah-Ahn as the heart of the community. 120% brand awareness growth shows how authentic storytelling and cultural pride create real business impact! 🚀",
+      videosTitle: "Top 6 Community-Engaging TikTok Videos",
+      videosSubtitle: "Each video celebrates indigenous entrepreneurship while driving real business results",
+      
+      // Easy-to-customize video array - you can replace thumbnails and URLs here
       videos: [
         {
           id: 1,
-          title: "Coffee House Moment #1",
+          title: "Coffee House Community Moment #1",
+          // REPLACE THIS URL with your actual TikTok video URL
           url: "https://www.tiktok.com/@kahpeehkahahn/video/7471801091441659178",
-          thumbnail: "https://images.unsplash.com/photo-1522992319-0365e5f11656?w=400&h=600&fit=crop",
-          description: "Top engagement organic content",
+          // REPLACE THIS THUMBNAIL with your actual screenshot
+          thumbnail: "PLACEHOLDER_THUMBNAIL_1", // You can replace this with your screenshot
+          description: "Top engagement organic content showcasing coffee house atmosphere",
           type: "organic_content"
         },
         {
           id: 2,
-          title: "Coffee House Moment #2", 
+          title: "Coffee House Community Moment #2", 
+          // REPLACE THIS URL with your actual TikTok video URL
           url: "https://www.tiktok.com/@kahpeehkahahn/video/7409139284403408159",
-          thumbnail: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400&h=600&fit=crop",
-          description: "Strategic advertising content",
+          // REPLACE THIS THUMBNAIL with your actual screenshot
+          thumbnail: "PLACEHOLDER_THUMBNAIL_2", // You can replace this with your screenshot
+          description: "Strategic advertising content for event promotion",
           type: "strategic_ad"
         },
         {
           id: 3,
-          title: "Coffee House Moment #3",
+          title: "Coffee House Community Moment #3",
+          // REPLACE THIS URL with your actual TikTok video URL
           url: "https://www.tiktok.com/@kahpeehkahahn/video/7390967071472946462", 
-          thumbnail: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=600&fit=crop",
-          description: "Customer engagement organic content",
+          // REPLACE THIS THUMBNAIL with your actual screenshot
+          thumbnail: "PLACEHOLDER_THUMBNAIL_3", // You can replace this with your screenshot
+          description: "Community engagement organic content featuring local customers",
           type: "organic_content"
         },
         {
           id: 4,
-          title: "Coffee House Moment #4",
+          title: "Coffee House Community Moment #4",
+          // REPLACE THIS URL with your actual TikTok video URL
           url: "https://www.tiktok.com/@kahpeehkahahn/video/7406134372803382559",
-          thumbnail: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop", 
-          description: "Business growth organic content",
+          // REPLACE THIS THUMBNAIL with your actual screenshot
+          thumbnail: "PLACEHOLDER_THUMBNAIL_4", // You can replace this with your screenshot
+          description: "Mobile trailer event promotion organic content",
           type: "organic_content"
         },
         {
           id: 5,
-          title: "Coffee House Moment #5",
+          title: "Coffee House Community Moment #5",
+          // REPLACE THIS URL with your actual TikTok video URL
           url: "https://www.tiktok.com/@kahpeehkahahn/video/7396130080369528094",
-          thumbnail: "https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=400&h=600&fit=crop",
-          description: "New customer acquisition organic content", 
+          // REPLACE THIS THUMBNAIL with your actual screenshot
+          thumbnail: "PLACEHOLDER_THUMBNAIL_5", // You can replace this with your screenshot
+          description: "Indigenous business celebration organic content", 
           type: "organic_content"
         },
         {
           id: 6,
-          title: "Coffee House Moment #6",
+          title: "Coffee House Community Moment #6",
+          // REPLACE THIS URL with your actual TikTok video URL
           url: "https://www.tiktok.com/@kahpeehkahahn/video/7452207220508347691",
-          thumbnail: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=400&h=600&fit=crop",
-          description: "Brand awareness organic content",
+          // REPLACE THIS THUMBNAIL with your actual screenshot
+          thumbnail: "PLACEHOLDER_THUMBNAIL_6", // You can replace this with your screenshot  
+          description: "Community event coordination organic content",
           type: "organic_content"
         }
-      ],
-      campaignStats: {
-        totalVideos: 6,
-        organicContent: 5,
-        strategicAds: 1,
-        engagementIncrease: "85%",
-        footTrafficBoost: "40%", 
-        brandAwarenessGrowth: "120%"
-      }
+      ]
     }
   },
   // Additional entries omitted for brevity
