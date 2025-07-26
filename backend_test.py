@@ -2152,8 +2152,11 @@ class BackendTester:
         
         # Coffee House Projects Tests (Priority Focus)
         print("\n" + "=" * 60)
-        print("☕ COFFEE HOUSE PROJECTS TESTING")
+        print("☕ COFFEE HOUSE PROJECTS TESTING (PRIORITY FOCUS)")
         print("=" * 60)
+        self.test_coffee_house_projects_in_list()
+        self.test_coffee_house_tiktok_project()
+        self.test_coffee_house_advertising_project()
         self.test_coffee_house_tiktok_project_retrieval()
         self.test_coffee_house_tiktok_video_descriptions()
         self.test_coffee_house_tiktok_empty_images()
