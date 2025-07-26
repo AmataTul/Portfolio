@@ -43,12 +43,16 @@ class Project(BaseModel):
     client: str
     description: str
     images: List[str]
-    type: str = "image"
+    project_type: str = "Digital Marketing"  # More descriptive project type
+    type: str = "image"  # Media type: image, video, analytics, presentation
     featured: bool = False
     orientation: str = "horizontal"
     video_url: Optional[str] = None
     analytics: Optional[AnalyticsData] = None
     research_slides: Optional[List[Dict[str, str]]] = None
+    key_contributions: Optional[List[str]] = None  # Bullet points of specific contributions
+    skills_utilized: Optional[List[str]] = None  # Project-specific skills and tools
+    impact: Optional[ImpactData] = None  # Both quantified and qualitative impact
     created_at: datetime = Field(default_factory=datetime.utcnow)
     updated_at: datetime = Field(default_factory=datetime.utcnow)
 
