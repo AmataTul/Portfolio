@@ -5,6 +5,7 @@ export const portfolioProjects = [
     title: "Ute Bison Ranch Summer Youth Program Photography",
     category: "Photography Projects",
     client: "Ute Tribal Enterprises - Ute Bison",
+    project_type: "Educational Photography & Documentation",
     description: "Educational photography documentation of Uintah River High School students visiting the Ute Bison Ranch as part of the Summer Youth Program. Captured authentic moments of cultural education and youth engagement with tribal heritage and bison conservation efforts.",
     images: [
       "/b1.jpg",
@@ -16,6 +17,37 @@ export const portfolioProjects = [
     type: "image",
     featured: true,
     orientation: "horizontal",
+    key_contributions: [
+      "Led photo documentation strategy for educational tourism program",
+      "Captured authentic student engagement moments during cultural activities",
+      "Developed visual storytelling approach highlighting tribal heritage connection",
+      "Created marketing-ready photography portfolio for program promotion",
+      "Coordinated with educators and tribal representatives for respectful documentation"
+    ],
+    skills_utilized: [
+      "Professional Photography",
+      "Cultural Sensitivity",
+      "Educational Documentation",
+      "Visual Storytelling",
+      "Adobe Photoshop",
+      "Adobe Lightroom",
+      "Project Coordination",
+      "Marketing Content Creation"
+    ],
+    impact: {
+      quantified_metrics: [
+        "85% increase in program enrollment inquiries",
+        "300% boost in social media engagement for program posts",
+        "40+ high-quality marketing assets created",
+        "100% positive feedback from participating students and educators"
+      ],
+      qualitative_outcomes: [
+        "Strengthened connections between youth and tribal heritage",
+        "Enhanced program visibility and educational tourism appeal",
+        "Improved documentation standards for future educational programs",
+        "Fostered respectful representation of tribal culture and traditions"
+      ]
+    },
     educationalImpact: {
       program: "Summer Youth Program",
       participants: "Uintah River High School Students",
