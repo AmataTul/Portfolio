@@ -30,21 +30,36 @@ export const portfolioProjects = [
     }
   },
   {
-    id: 2,
-    title: "Beats by Dre Brand Identity System",
-    category: "Graphic Design & Marketing Materials",
-    client: "Beats by Dre",
-    description: "Comprehensive brand identity system including logos, color palettes, typography guides, and brand guidelines for product launch campaign.",
-    images: [
-      "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&h=600&fit=crop"
+{
+  id: 2,
+  title: "Beats by Dre Brand Identity System",
+  category: "Graphic Design & Marketing Materials",
+  client: "Beats by Dre",
+  description: "Comprehensive brand identity system including logos, color palettes, typography guides, and brand guidelines for a product launch campaign.",
+  images: [
+    "/beats0.jpg",
+    "/beats1.jpg",
+    "/beats2.jpg",
+    "/beats3.jpg",
+    "/beats4.jpg",
+    "/beats5.jpg"
+  ],
+  type: "image",
+  featured: true,
+  orientation: "horizontal",
+  educationalImpact: {
+    program: "Beats By Dre Strategy & Business Analytics Externship",
+    participants: "Externship Cohort Members",
+    focus: "Marketing Strategy & Visual Identity",
+    activities: [
+      "Brand design aligned with product aesthetics",
+      "Gen Z trend analysis and platform targeting",
+      "Competitor and web traffic evaluation"
     ],
-    type: "image",
-    featured: true,
-    orientation: "horizontal"
-  },
-  {
+    communityImpact: "Supported inclusive brand positioning and youth-focused marketing strategies"
+  }
+},
+
     id: 3,
     title: "Disney+ Digital Campaign Launch",
     category: "Advertising",
