@@ -203,6 +203,58 @@ export const portfolioProjects = [
       ]
     }
   },
+  {
+    id: 4,
+    title: "KahPeeh kah-Ahn Ute Coffee House & Soda - Video Advertisement Campaign",
+    category: "Advertising",
+    client: "Ute Tribal Enterprises - KahPeeh kah-Ahn Ute Coffee House & Soda",
+    project_type: "Multi-Platform Video Advertisement Production & Direction",
+    description: "Comprehensive video advertisement campaign for KahPeeh kah-Ahn Ute Coffee House & Soda, showcasing authentic indigenous hospitality and premium coffee experience. I directed and coordinated this complete advertising production from initial concept through final editing, working with a talented team of editors to create professional-grade content. The campaign demonstrates my experience with TV/YouTube advertisements and large-scale advertising initiatives. This video was strategically deployed across multiple platforms including social media, YouTube, cinema screenings, and big screen displays, showcasing the unique cultural atmosphere and community connection of this locally-owned indigenous business serving the Uintah and Ouray reservation communities.",
+    images: [
+      "data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCAKOBJIDABEAAREBAhEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMAAAERAhEAPwD9lk+9WhzjqACgAoA5T4425ufhLryAdLEt+RB/pWdT4So7nw94ih8u6kwv8X9a8mcdT0ISZ9afsoTGX4NaMhbOxZF49nNd1Fe6ctST5j1qH7nNdBmTL1oEyRQFGCtBNxWGDgUFnl3x8gJ1awmx1hcfqKAPN9T0YapZNaO+3d+lFguCWZhRI3GcRgE/hS5QLFnCVfAWmB9GfszyFvh40Z/gvpB/6CaqIHohAPWqAYy7TQB5v8TbbHieOVh96P8ArWy7GMnYteHFG0DH8WKmWhPMzpbdSBzWZcTyf9qGx8+yjyPvW0y/X5K6qZlKTP5R/wBrbTNd0f8AbU8W6N4eyl5J4yuFtdvZ2mO39SK55vlqHVT1gfo94S/ZE/bwuf2TobzxJ8RLeRV09ZvsrR7t0e0HbnaOtelTZKi0jr/gz/wS7+LPijwrP4v8C+J4Li3gkMYtNSnRvlyR8pPGfyrKdek9jWNNmPe/8EJf25Le5SG71DRbKGeOQeYIr/cF3D5ucZ2+/evJnllGRvGNhZ/+CJn7bfmWE8N9oL3EdzcNC6tr4+UdMEk4BOMGsZZdhHazLVRPofK37Y37OfjL9kT4mf8ACu/iTrdhqGpDyGvJdLaXym3K+3btO3I9+K8LHYGOIj7pUWozOJ+M9xqmnftJ+APhV4Z+H2qeP9V8R6LNNot5D4mshPbqjzNHdPgJ5qRuE3eWzJJGHLKjCKaJ7Bcp2n7Wvhj4/wDxG8Q+FfDXijwvJ8M7KOHfDLpHhy1e0E7mMRvEJ4vOVJQFZYPMCKnmeRvCFZVbFiG8Sf/Z" // coffee.jpg thumbnail
+    ],
+    type: "video", 
+    featured: true,
+    orientation: "horizontal",
+    videoFile: "Ute Coffeehouse V4.mp4",
+    key_contributions: [
+      "Directed and coordinated complete video advertisement campaign from initial concept through final delivery",
+      "Led collaborative efforts with professional editing team to produce high-quality advertising content within budget constraints",
+      "Developed creative vision and production strategy for large-scale advertising deployment across cinema, social media, and YouTube platforms",
+      "Managed comprehensive production timeline including pre-production planning, filming coordination, and post-production oversight",
+      "Created compelling advertising narrative showcasing unique selling propositions of indigenous-owned local coffee house", 
+      "Produced professional-grade video advertisement suitable for cinema screenings, big screen displays, and digital marketing channels"
+    ],
+    skills_utilized: [
+      "Video Direction & Production Leadership",
+      "Large-Scale Advertising Campaign Management", 
+      "Cinema & Television Advertisement Production",
+      "Indigenous Business Marketing Strategy",
+      "Multi-Platform Content Distribution",
+      "Team Coordination & Editor Collaboration",
+      "Video Editing & Post-Production Direction",
+      "Cultural Sensitivity Marketing",
+      "Brand Storytelling & Narrative Development",
+      "Project Management & Timeline Coordination"
+    ],
+    impact: {
+      quantified_metrics: [
+        "Successfully directed and produced professional advertisement campaign for KahPeeh kah-Ahn Coffee House",
+        "Managed large-scale advertising deployment across cinema screens, social media platforms, YouTube, and big screen displays", 
+        "Coordinated complete production process working with editing team to deliver cinema-quality advertising content",
+        "Created versatile advertising assets suitable for multiple high-visibility marketing channels and sponsorship events",
+        "Demonstrated expertise in TV/YouTube advertising and large-scale campaign production with limited resource optimization"
+      ],
+      qualitative_outcomes: [
+        "Enhanced brand visibility for indigenous coffee house through professional advertising",
+        "Established expertise in directing large-scale advertising campaigns suitable for cinema and television distribution",
+        "Strengthened marketing portfolio with professional video advertisements showcasing indigenous business cultural sensitivity",
+        "Created sustainable advertising framework supporting ongoing indigenous business marketing and customer attraction initiatives",
+        "Demonstrated comprehensive production capabilities from creative direction through post-production team coordination",
+        "Elevated Ute Tribal Enterprises brand presence through high-quality, culturally authentic advertising content creation"
+      ]
+    }
+  },
 
   {
     id: 5,
