@@ -11,7 +11,7 @@ const StoriesBar = ({ activeCategory, onCategoryChange }) => {
     "Advertising": Megaphone,
     "Social Media Content & Campaigns": Smartphone,
     "Photography Projects": Camera,
-    "Creative Concepts & Branding": Lightbulb,
+    "Creative Concepts": Lightbulb,
     "Illustrations & Educational Content": BookOpen
   };
 
@@ -23,7 +23,7 @@ const StoriesBar = ({ activeCategory, onCategoryChange }) => {
     "Advertising": "Advertising",
     "Social Media Content & Campaigns": "Social Media",
     "Photography Projects": "Photography",
-    "Creative Concepts & Branding": "Branding",
+    "Creative Concepts": "Creative",
     "Illustrations & Educational Content": "Education"
   };
 
