@@ -217,27 +217,84 @@ export const portfolioProjects = [
   },
   {
     id: 6,
-    title: "High School Educational Animation - Traditional Knowledge & Modern Learning",
+    title: "Utah High School Bison Grant Program - Educational Animation & Marketing Campaign",
     category: "Illustrations & Educational Content",
     client: "Ute Tribal Enterprises - Ute Bison",
-    description: "Educational animation designed for high school students, bridging traditional tribal knowledge with contemporary learning. This engaging animated video explores cultural heritage, community values, and educational pathways while respecting and celebrating tribal traditions.",
+    project_type: "Educational Animation & Promotional Marketing Campaign",
+    description: "Comprehensive educational animation and marketing campaign created for Ute Bison's 2024 Utah High School Bison Grant Program. Developed from concept to completion using Canva and advanced editing tools, including self-filmed footage at the bison ranch. This promotional initiative successfully attracted 15 schools across Utah to participate in the grant program, enabling schools to receive funding and purchase bison meat while promoting traditional knowledge and modern learning integration.",
     images: [
-      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop"
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop"
     ],
     type: "video",
     featured: true,
     orientation: "horizontal",
-    videoUrl: "https://youtu.be/DYLLB8qiQ8k?si=Zm0y51wWhkg6D3P8",
-    educationalImpact: {
-      targetAudience: "High School Students",
-      focus: "Cultural education through animation",
-      topics: [
-        "Traditional tribal knowledge and cultural heritage",
-        "Modern educational pathways and opportunities",
-        "Community values and leadership development",
-        "Bridging traditional wisdom with contemporary learning"
+    videoUrl: "https://youtu.be/DYLLB8qiQ8k?si=IOvfHjRqkPHxcnlu",
+    key_contributions: [
+      "Created complete educational animation from scratch using Canva and professional editing tools",
+      "Personally filmed and edited real-life footage at the Ute Bison ranch for authentic storytelling",
+      "Developed comprehensive marketing strategy for Utah high school outreach targeting bison grant recipients",
+      "Designed promotional brochures and marketing materials for statewide school district distribution",
+      "Coordinated multi-channel campaign reaching 15+ schools across Utah with measurable lead generation",
+      "Integrated traditional tribal knowledge with modern educational approaches through animated storytelling"
+    ],
+    skills_utilized: [
+      "Canva Animation Design",
+      "Video Production & Editing", 
+      "Documentary Filming",
+      "Educational Content Development",
+      "Graphic Design & Brochure Creation",
+      "Statewide Marketing Campaign Management",
+      "Lead Generation & Business Development",
+      "Cultural Sensitivity & Traditional Knowledge Integration",
+      "Grant Program Promotion",
+      "Multi-Platform Content Distribution"
+    ],
+    impact: {
+      quantified_metrics: [
+        "Successfully attracted 15 different schools across Utah to participate in bison grant program",
+        "Generated qualified leads resulting in direct business partnerships and meat sales contracts",
+        "Achieved statewide reach across Utah school districts through strategic marketing distribution",
+        "100% completion rate on animation project from concept to final delivery",
+        "Created 10+ marketing materials including brochures, flyers, and promotional assets"
       ],
-      format: "Animated educational video with interactive elements"
+      qualitative_outcomes: [
+        "Successfully bridged traditional tribal knowledge with modern educational approaches",
+        "Enhanced Ute Bison brand recognition and credibility among Utah educational institutions",
+        "Strengthened relationships between tribal enterprises and state educational system",
+        "Promoted cultural education and heritage awareness through innovative animation storytelling",
+        "Established foundation for ongoing partnerships between schools and tribal businesses"
+      ]
+    },
+    educationalImpact: {
+      targetAudience: "High School Students & Educators Statewide",
+      focus: "Traditional knowledge integration through modern educational marketing",
+      topics: [
+        "Traditional tribal knowledge and cultural heritage preservation",
+        "Modern educational pathways and bison grant program benefits",
+        "Community values and sustainable food sourcing education",
+        "Bridging traditional wisdom with contemporary learning through innovative animation"
+      ],
+      format: "Professional animated educational video with real-life ranch footage and comprehensive marketing materials"
+    },
+    brochureSections: {
+      section1: {
+        title: "Educational Program Brochures",
+        description: "Comprehensive brochures designed for Utah school districts highlighting bison grant benefits and educational opportunities",
+        images: [
+          "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop"
+        ]
+      },
+      section2: {
+        title: "Marketing Materials & Grant Information",
+        description: "Professional marketing collateral including program benefits, application processes, and cultural education components",
+        images: [
+          "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=800&h=600&fit=crop"
+        ]
+      }
     }
   },
   // Additional entries omitted for brevity
