@@ -449,6 +449,8 @@ export const brands = [
 
 export const categories = [
   "All",
+  "Branding",
+  "Analytics & Research", 
   "Graphic Design & Marketing Materials",
   "Advertising", 
   "Social Media Content & Campaigns",
