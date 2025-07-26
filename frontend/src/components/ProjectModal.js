@@ -166,6 +166,91 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
               </div>
             )}
 
+            {/* Multiple Videos Section - For Advertising Projects */}
+            {project.videos && project.videos.length > 0 && (
+              <div className="bg-gradient-to-br from-red-50 via-rose-50 to-pink-50 border-4 border-transparent bg-clip-padding rounded-2xl p-8 shadow-2xl">
+                <div className="text-center mb-6">
+                  <h4 className="text-3xl font-bold bg-gradient-to-r from-red-600 via-rose-600 to-pink-600 bg-clip-text text-transparent mb-4 flex items-center justify-center">
+                    <span className="text-4xl mr-3">🎬</span>
+                    Professional Advertisement Campaign
+                  </h4>
+                  <p className="text-gray-700 text-lg max-w-4xl mx-auto leading-relaxed">
+                    Multi-platform video advertisements directed and produced for cinema screenings, YouTube, social media, and big screen displays
+                  </p>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  {project.videos.map((video, index) => (
+                    <div key={index} className="group relative">
+                      <div className="bg-gradient-to-br from-red-400 via-rose-400 to-pink-400 rounded-xl p-1">
+                        <div className="bg-white rounded-lg overflow-hidden">
+                          <div className="relative aspect-video bg-gray-100 overflow-hidden">
+                            {/* Video Thumbnail */}
+                            <div className="w-full h-full bg-gray-200 flex items-center justify-center text-gray-500">
+                              {video.thumbnail === "COFFEE_HOUSE_VIDEO_THUMBNAIL_1" || video.thumbnail === "UTE_CROSSING_GRILL_VIDEO_THUMBNAIL_2" ? (
+                                <div className="text-center p-6">
+                                  <Play size={48} className="mx-auto mb-2 text-gray-400" />
+                                  <p className="text-sm">Upload your screenshot here</p>
+                                  <p className="text-xs text-gray-400">({video.thumbnail})</p>
+                                </div>
+                              ) : (
+                                <img 
+                                  src={video.thumbnail} 
+                                  alt={video.title}
+                                  className="w-full h-full object-cover"
+                                />
+                              )}
+                            </div>
+                            
+                            {/* Video Title Overlay */}
+                            <div className="absolute top-3 left-3 bg-gradient-to-r from-red-500 to-rose-500 text-white font-bold text-xs px-3 py-1 rounded-full shadow-lg">
+                              Advertisement #{index + 1}
+                            </div>
+                          </div>
+                          
+                          <div className="p-4">
+                            <h5 className="font-bold text-gray-800 mb-2">{video.title}</h5>
+                            <p className="text-gray-600 text-sm mb-3">{video.description}</p>
+                            <div className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
+                              File: {video.videoFile}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                
+                {/* Additional Project Details for Ute Crossing Grill */}
+                {project.additionalProject && (
+                  <div className="mt-8 bg-white rounded-xl p-6 shadow-sm">
+                    <h5 className="font-bold text-red-800 mb-4 flex items-center">
+                      <span className="text-2xl mr-2">🏢</span>
+                      {project.additionalProject.businessName}
+                    </h5>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-700">
+                      <div>
+                        <strong>Business Type:</strong> {project.additionalProject.businessType}
+                      </div>
+                      <div>
+                        <strong>Location:</strong> {project.additionalProject.location}
+                      </div>
+                      <div>
+                        <strong>Services:</strong> {project.additionalProject.services}
+                      </div>
+                      <div>
+                        <strong>Marketing Focus:</strong> {project.additionalProject.marketingFocus}
+                      </div>
+                    </div>
+                    <div className="mt-3 pt-3 border-t border-gray-200">
+                      <strong className="text-gray-800">Advertising Distribution:</strong>
+                      <p className="text-gray-600 text-sm mt-1">{project.additionalProject.advertisingScope}</p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
+
             {/* Additional Images Section - Displayed right below video */}
             {project.additionalImages && (
               <div className="bg-gradient-to-r from-gray-50 to-slate-50 border-2 border-gray-200 rounded-xl p-6">
