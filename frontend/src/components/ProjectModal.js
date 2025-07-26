@@ -188,6 +188,111 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
               </div>
             )}
 
+            {/* TikTok Videos Grid Section - Bright & Fun Social Media Design */}
+            {project.tiktokVideos && (
+              <div className="bg-gradient-to-br from-pink-50 via-purple-50 to-cyan-50 border-4 border-transparent bg-clip-padding rounded-2xl p-6 shadow-2xl">
+                <div className="bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 rounded-xl p-1 mb-6">
+                  <div className="bg-white rounded-lg p-4">
+                    <h4 className="text-2xl font-bold bg-gradient-to-r from-pink-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent mb-2 flex items-center">
+                      <span className="text-3xl mr-3">🎬</span>
+                      {project.tiktokVideos.title}
+                    </h4>
+                    <p className="text-gray-600 font-medium">
+                      {project.tiktokVideos.description}
+                    </p>
+                  </div>
+                </div>
+                
+                {/* 6 TikTok Videos Grid - 3x2 Layout */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {project.tiktokVideos.videos.map((video, index) => (
+                    <div key={video.id} className="group relative">
+                      {/* Video Card with Gradient Border */}
+                      <div className="bg-gradient-to-br from-pink-400 via-purple-400 to-cyan-400 rounded-2xl p-1 shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+                        <div className="bg-white rounded-xl overflow-hidden">
+                          {/* Video Thumbnail */}
+                          <div className="relative aspect-[9/16] overflow-hidden">
+                            <img 
+                              src={video.thumbnail} 
+                              alt={video.title}
+                              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            />
+                            
+                            {/* TikTok Play Overlay */}
+                            <div 
+                              className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+                              onClick={() => window.open(video.url, '_blank')}
+                            >
+                              <div className="bg-gradient-to-r from-pink-500 to-purple-500 rounded-full p-4 shadow-xl animate-pulse">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
+                                  <path d="M8 5v14l11-7z"/>
+                                </svg>
+                              </div>
+                            </div>
+                            
+                            {/* Video Number Badge */}
+                            <div className="absolute top-3 left-3 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-bold text-sm px-3 py-1 rounded-full shadow-lg">
+                              #{index + 1}
+                            </div>
+                            
+                            {/* Content Type Badge */}
+                            <div className={`absolute top-3 right-3 text-white font-semibold text-xs px-2 py-1 rounded-full shadow-lg ${
+                              video.type === 'organic_content' 
+                                ? 'bg-gradient-to-r from-green-400 to-emerald-500' 
+                                : 'bg-gradient-to-r from-orange-400 to-red-500'
+                            }`}>
+                              {video.type === 'organic_content' ? '🌟 ORGANIC' : '🎯 AD'}
+                            </div>
+                          </div>
+                          
+                          {/* Video Info */}
+                          <div className="p-4">
+                            <h5 className="font-bold text-gray-800 text-sm mb-2 truncate">
+                              {video.title}
+                            </h5>
+                            <p className="text-gray-600 text-xs mb-3 line-clamp-2">
+                              {video.description}
+                            </p>
+                            
+                            {/* Watch Button */}
+                            <button
+                              onClick={() => window.open(video.url, '_blank')}
+                              className="w-full bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 text-white font-bold py-2 px-4 rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 text-sm flex items-center justify-center space-x-2"
+                            >
+                              <span>🎵</span>
+                              <span>Watch on TikTok</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                
+                {/* Campaign Stats */}
+                <div className="mt-8 bg-gradient-to-r from-pink-100 via-purple-100 to-cyan-100 rounded-xl p-6 border-l-4 border-gradient-to-b from-pink-500 to-purple-500">
+                  <h5 className="font-bold text-gray-800 mb-3 flex items-center">
+                    <span className="text-2xl mr-2">📊</span>
+                    Campaign Performance Highlights
+                  </h5>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                    <div className="bg-white rounded-lg p-3 shadow-sm">
+                      <div className="text-2xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">6</div>
+                      <div className="text-sm text-gray-600 font-medium">Viral Videos</div>
+                    </div>
+                    <div className="bg-white rounded-lg p-3 shadow-sm">
+                      <div className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-cyan-600 bg-clip-text text-transparent">TOP</div>
+                      <div className="text-sm text-gray-600 font-medium">Engagement</div>
+                    </div>
+                    <div className="bg-white rounded-lg p-3 shadow-sm">
+                      <div className="text-2xl font-bold bg-gradient-to-r from-cyan-600 to-pink-600 bg-clip-text text-transparent">MAX</div>
+                      <div className="text-sm text-gray-600 font-medium">Sales Impact</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {/* Enhanced Project Information Section */}
             <div className="space-y-8 pt-6 border-t border-gray-200">
               
