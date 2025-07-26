@@ -369,13 +369,11 @@ export const portfolioProjects = [
         "Fostered authentic brand personality celebrating indigenous culture while serving diverse local community"
       ]
     },
-    // Combined TikTok videos section with integrated description and performance
+    // Combined TikTok videos section with integrated performance metrics
     combinedTikTokSection: {
-      sectionTitle: "Indigenous Coffee House Success Story",
-      engagingDescription: "🏜️ Meet KahPeeh kah-Ahn Ute Coffee House & Soda - where authentic indigenous hospitality meets amazing coffee! This locally-owned gem serves the Uintah and Ouray reservation community from both their cozy location AND their mobile trailer at community events. Through strategic TikTok marketing, we've brewed up some serious engagement success! ☕✨",
-      performanceHighlight: "📈 From 85% more engagement to 40% increased foot traffic, these 6 high-engagement TikToks have helped establish KahPeeh kah-Ahn as the heart of the community. 120% brand awareness growth shows how authentic storytelling and cultural pride create real business impact! 🚀",
+      sectionTitle: "Indigenous Coffee House TikTok Success",
       videosTitle: "Top 6 Community-Engaging TikTok Videos",
-      videosSubtitle: "Each video celebrates indigenous entrepreneurship while driving real business results",
+      videosSubtitle: "Each video celebrates indigenous entrepreneurship while driving measurable business results",
       
       // Easy-to-customize video array - you can replace thumbnails and URLs here
       videos: [
