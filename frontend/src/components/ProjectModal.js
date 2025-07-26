@@ -60,24 +60,25 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
         </DialogHeader>
         
         <div className="space-y-8">
-          {/* Project Media */}
-          <div className="relative">
-            <div className={`relative ${getAspectRatio()} bg-gray-100 rounded-xl overflow-hidden shadow-xl`}>
-              <img 
-                src={project.images[currentImageIndex]} 
-                alt={`${project.title} - Image ${currentImageIndex + 1}`}
-                className="w-full h-full object-cover"
-              />
-              
-              {/* Video/YouTube Overlay */}
-              {project.type === 'video' && (
-                <div className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/20 transition-colors duration-300">
-                  <Button 
-                    size="lg" 
-                    onClick={handleVideoClick}
-                    className="bg-red-600 hover:bg-red-700 rounded-full p-4 md:p-6 shadow-xl transform hover:scale-110 transition-all duration-300"
-                  >
-                    {project.videoUrl && project.videoUrl.includes('youtube') ? (
+          {/* Project Media - Only show if there are images */}
+          {project.images && project.images.length > 0 && (
+            <div className="relative">
+              <div className={`relative ${getAspectRatio()} bg-gray-100 rounded-xl overflow-hidden shadow-xl`}>
+                <img 
+                  src={project.images[currentImageIndex]} 
+                  alt={`${project.title} - Image ${currentImageIndex + 1}`}
+                  className="w-full h-full object-cover"
+                />
+                
+                {/* Video/YouTube Overlay */}
+                {project.type === 'video' && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/20 transition-colors duration-300">
+                    <Button 
+                      size="lg" 
+                      onClick={handleVideoClick}
+                      className="bg-red-600 hover:bg-red-700 rounded-full p-4 md:p-6 shadow-xl transform hover:scale-110 transition-all duration-300"
+                    >
+                      {project.videoUrl && project.videoUrl.includes('youtube') ? (
                       <Youtube size={32} className="text-white" />
                     ) : (
                       <Play size={32} className="text-white ml-1" />
