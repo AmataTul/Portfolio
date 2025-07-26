@@ -188,6 +188,109 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
               </div>
             )}
 
+            {/* Dual Sections for Analytics & Graphic Design Projects */}
+            {project.dualSections && (
+              <div className="space-y-8">
+                {/* Analytics Section */}
+                <div className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 border-4 border-transparent bg-clip-padding rounded-2xl p-8 shadow-2xl">
+                  <div className="text-center mb-6">
+                    <h4 className="text-3xl font-bold bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent mb-4 flex items-center justify-center">
+                      <span className="text-4xl mr-3">📊</span>
+                      {project.dualSections.analyticsSection.title}
+                    </h4>
+                    <p className="text-gray-700 text-lg max-w-4xl mx-auto leading-relaxed">
+                      {project.dualSections.analyticsSection.description}
+                    </p>
+                  </div>
+                  
+                  {/* Analytics Images Grid */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                    {project.dualSections.analyticsSection.images.map((image, index) => (
+                      <div key={index} className="group relative overflow-hidden rounded-xl shadow-lg">
+                        <div className="bg-gradient-to-br from-blue-400 via-indigo-400 to-purple-400 rounded-xl p-1">
+                          <div className="bg-white rounded-lg overflow-hidden">
+                            <img 
+                              src={image} 
+                              alt={`Analytics Work ${index + 1}`}
+                              className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                            />
+                            <div className="absolute top-3 left-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-bold text-xs px-3 py-1 rounded-full shadow-lg">
+                              Analytics #{index + 1}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  {/* Analytics Highlights */}
+                  <div className="bg-white rounded-xl p-6 shadow-sm">
+                    <h5 className="font-bold text-indigo-800 mb-4 flex items-center">
+                      <span className="text-2xl mr-2">🔍</span>
+                      Research & Analysis Highlights
+                    </h5>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {project.dualSections.analyticsSection.highlights.map((highlight, index) => (
+                        <div key={index} className="flex items-start">
+                          <span className="w-2 h-2 bg-indigo-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                          <span className="text-gray-700 text-sm">{highlight}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Graphic Design Section */}
+                <div className="bg-gradient-to-br from-pink-50 via-rose-50 to-red-50 border-4 border-transparent bg-clip-padding rounded-2xl p-8 shadow-2xl">
+                  <div className="text-center mb-6">
+                    <h4 className="text-3xl font-bold bg-gradient-to-r from-pink-600 via-rose-600 to-red-600 bg-clip-text text-transparent mb-4 flex items-center justify-center">
+                      <span className="text-4xl mr-3">🎨</span>
+                      {project.dualSections.brandingSection.title}
+                    </h4>
+                    <p className="text-gray-700 text-lg max-w-4xl mx-auto leading-relaxed">
+                      {project.dualSections.brandingSection.description}
+                    </p>
+                  </div>
+                  
+                  {/* Branding Images Grid */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                    {project.dualSections.brandingSection.images.map((image, index) => (
+                      <div key={index} className="group relative overflow-hidden rounded-xl shadow-lg">
+                        <div className="bg-gradient-to-br from-pink-400 via-rose-400 to-red-400 rounded-xl p-1">
+                          <div className="bg-white rounded-lg overflow-hidden">
+                            <img 
+                              src={image} 
+                              alt={`Design Work ${index + 1}`}
+                              className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                            />
+                            <div className="absolute top-3 left-3 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-bold text-xs px-3 py-1 rounded-full shadow-lg">
+                              Design #{index + 1}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  {/* Branding Highlights */}
+                  <div className="bg-white rounded-xl p-6 shadow-sm">
+                    <h5 className="font-bold text-rose-800 mb-4 flex items-center">
+                      <span className="text-2xl mr-2">✨</span>
+                      Creative Design Highlights
+                    </h5>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {project.dualSections.brandingSection.highlights.map((highlight, index) => (
+                        <div key={index} className="flex items-start">
+                          <span className="w-2 h-2 bg-rose-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                          <span className="text-gray-700 text-sm">{highlight}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {/* Combined TikTok Section - Indigenous Coffee House Success Story */}
             {project.combinedTikTokSection && (
               <div className="bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 border-4 border-transparent bg-clip-padding rounded-2xl p-8 shadow-2xl">
