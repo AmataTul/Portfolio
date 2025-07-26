@@ -459,51 +459,51 @@ export const portfolioProjects = [
       videos: [
         {
           id: 1,
-          title: "Customer Experience Showcase",
+          title: "🏪 Ultimate Coffee House Experience",
           url: "https://www.tiktok.com/@kahpeehkahahn/video/7471801091441659178",
           thumbnail: "PLACEHOLDER_THUMBNAIL_1", // User can replace with screenshot
-          description: "Customer perspective video showing coffee house staff, drinks, menu, internal and external design, and location. Features authentic customer interaction highlighting the welcoming atmosphere and quality service.",
-          type: "customer_experience"
+          description: "Step inside our indigenous coffee house! 🌟 See our amazing staff in action, discover our menu secrets, and get a full tour of our beautiful interior & exterior design. Plus, find out exactly where we're located! This authentic customer perspective will make you want to visit immediately! 📍✨",
+          type: "customer_experience_organic"
         },
         {
           id: 2,
-          title: "Marylin Monroe Signature Drink",
+          title: "🍹 Marilyn Monroe Signature Drink Magic",
           url: "https://www.tiktok.com/@kahpeehkahahn/video/7409139284403408159",
           thumbnail: "PLACEHOLDER_THUMBNAIL_2", // User can replace with screenshot
-          description: "Behind-the-scenes video featuring me and the coffee house manager creating the Marylin Monroe - the most popular and beloved drink by our customers. Shows the craftsmanship and care that goes into every signature beverage.",
-          type: "signature_product"
+          description: "Behind-the-scenes with our coffee house manager creating the legendary MARILYN MONROE drink! 🌟 This is our customers' #1 most beloved signature beverage. Watch the artistry and passion that goes into every single cup. You'll crave this drink after watching! ☕️💖 **[STRATEGIC AD CONTENT]**",
+          type: "signature_product_ad"
         },
         {
           id: 3,
-          title: "4th of July Northern Ute Powwow Celebration",
+          title: "🎊 4th of July Powwow Cultural Celebration",
           url: "https://www.tiktok.com/@kahpeehkahahn/video/7390967071472946462",
           thumbnail: "PLACEHOLDER_THUMBNAIL_3", // User can replace with screenshot
-          description: "Annual Northern Ute celebration event where I promoted both the powwow and our coffee house trailer. Features customer engagement, traditional dances, cultural celebration, and authentic Ute tribal ways while showcasing our community presence.",
-          type: "cultural_event"
+          description: "Experience the magic of Northern Ute culture! 🪶 Join our annual 4th of July powwow celebration featuring traditional dances, authentic tribal customs, and our mobile coffee trailer serving the community. See customers engage with our heritage while enjoying great coffee! 🎯🌟",
+          type: "cultural_event_organic"
         },
         {
           id: 4,
-          title: "Barista Behind the Scenes",
+          title: "☕ Barista Secrets Revealed",
           url: "https://www.tiktok.com/@kahpeehkahahn/video/7406134372803382559",
           thumbnail: "PLACEHOLDER_THUMBNAIL_4", // User can replace with screenshot
-          description: "Professional barista content showing drink preparation, coffee crafting techniques, and behind-the-scenes operations that make our coffee house special. Highlights the skill and dedication of our team.",
-          type: "behind_scenes"
+          description: "Go behind the counter and discover what makes our coffee so special! 🔥 Watch our skilled baristas craft the perfect drink using professional techniques and premium ingredients. The dedication and artistry will amaze you! Perfect coffee every time! ⭐️",
+          type: "behind_scenes_organic"
         },
         {
           id: 5,
-          title: "New Year Customer Appreciation",
+          title: "🎉 New Year Customer Love",
           url: "https://www.tiktok.com/@kahpeehkahahn/video/7396130080369528094",
           thumbnail: "PLACEHOLDER_THUMBNAIL_5", // User can replace with screenshot
-          description: "Special customer appreciation content created for New Year celebrations, thanking our loyal community for their continued support and showcasing the strong bonds between our coffee house and local customers.",
-          type: "customer_appreciation"
+          description: "Starting the New Year with gratitude! 💝 This heartwarming customer appreciation post showcases the incredible bonds between our coffee house and our loyal community. See why our customers become family and why everyone keeps coming back! 🤗✨",
+          type: "customer_appreciation_organic"
         },
         {
           id: 6,
-          title: "Community Event Coordination",
+          title: "🚚 Mobile Coffee Magic On-the-Go",
           url: "https://www.tiktok.com/@kahpeehkahahn/video/7452207220508347691",
           thumbnail: "PLACEHOLDER_THUMBNAIL_6", // User can replace with screenshot
-          description: "Community event coordination showcase highlighting our mobile trailer services and community engagement initiatives that bring quality coffee directly to local gatherings and celebrations.",
-          type: "community_outreach"
+          description: "Our coffee house comes to YOU! 🚐☕ Watch how we bring premium coffee directly to community events and celebrations with our mobile trailer. See the excitement and engagement when great coffee meets community gathering! Always creating memorable moments! 🎪",
+          type: "community_outreach_organic"
         }
       ]
     }
