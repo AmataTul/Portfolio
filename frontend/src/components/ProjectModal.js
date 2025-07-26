@@ -163,24 +163,25 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                 </div>
               </div>
             )}
-            
-            {/* Project Info Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 border-t border-gray-200">
-              <div className="space-y-2">
-                <h4 className="font-bold text-red-600 text-sm uppercase tracking-wider">Category</h4>
-                <p className="text-gray-700 font-medium">{project.category}</p>
-              </div>
-              <div className="space-y-2">
-                <h4 className="font-bold text-red-600 text-sm uppercase tracking-wider">Client</h4>
-                <p className="text-gray-700 font-medium">{project.client}</p>
-              </div>
-              <div className="space-y-2">
-                <h4 className="font-bold text-red-600 text-sm uppercase tracking-wider">Format</h4>
-                <p className="text-gray-700 font-medium capitalize">
-                  {project.orientation} {project.type}
-                </p>
-              </div>
-                  {/* New custom fields (optional) */}
+{/* Project Info Grid */}
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 border-t border-gray-200">
+  {/* Default fields */}
+  <div className="space-y-2">
+    <h4 className="font-bold text-red-600 text-sm uppercase tracking-wider">Category</h4>
+    <p className="text-gray-700 font-medium">{project.category}</p>
+  </div>
+  <div className="space-y-2">
+    <h4 className="font-bold text-red-600 text-sm uppercase tracking-wider">Client</h4>
+    <p className="text-gray-700 font-medium">{project.client}</p>
+  </div>
+  <div className="space-y-2">
+    <h4 className="font-bold text-red-600 text-sm uppercase tracking-wider">Format</h4>
+    <p className="text-gray-700 font-medium capitalize">
+      {project.orientation} {project.type}
+    </p>
+  </div>
+
+  {/* New custom fields (optional) */}
   {project.program && (
     <div className="space-y-2">
       <h4 className="font-bold text-red-600 text-sm uppercase tracking-wider">Program</h4>
@@ -200,6 +201,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
     </div>
   )}
 </div>
+
 
             {/* Category-specific highlights */}
             {project.category === "Social Media Content & Campaigns" && (
