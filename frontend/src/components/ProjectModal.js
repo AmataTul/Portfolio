@@ -180,8 +180,27 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                   {project.orientation} {project.type}
                 </p>
               </div>
-            </div>
-            
+                  {/* New custom fields (optional) */}
+  {project.program && (
+    <div className="space-y-2">
+      <h4 className="font-bold text-red-600 text-sm uppercase tracking-wider">Program</h4>
+      <p className="text-gray-700 font-medium">{project.program}</p>
+    </div>
+  )}
+  {project.focus && (
+    <div className="space-y-2">
+      <h4 className="font-bold text-red-600 text-sm uppercase tracking-wider">Focus</h4>
+      <p className="text-gray-700 font-medium">{project.focus}</p>
+    </div>
+  )}
+  {project.myRole && (
+    <div className="space-y-2">
+      <h4 className="font-bold text-red-600 text-sm uppercase tracking-wider">My Role</h4>
+      <p className="text-gray-700 font-medium">{project.myRole}</p>
+    </div>
+  )}
+</div>
+
             {/* Category-specific highlights */}
             {project.category === "Social Media Content & Campaigns" && (
               <div className="bg-gradient-to-r from-red-50 to-red-100 border-2 border-red-200 rounded-xl p-4 md:p-6">
