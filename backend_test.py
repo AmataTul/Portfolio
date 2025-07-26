@@ -1467,6 +1467,8 @@ class BackendTester:
         except requests.exceptions.RequestException as e:
             self.log_test("Social Media TikTok Integration Focus", False, f"Request failed: {str(e)}")
             return False
+    
+    def test_database_consistency(self):
         """Test database consistency and connection"""
         try:
             # Test multiple endpoints to ensure database is consistent
