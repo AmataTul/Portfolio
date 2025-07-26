@@ -339,7 +339,8 @@ test_plan:
 test_plan:
   current_focus:
     - "Coffee House Projects Content Enhancement"
-  stuck_tasks: []
+  stuck_tasks:
+    - "Coffee House Projects Content Enhancement"
   test_all: false
   test_priority: "high_first"
 
@@ -362,3 +363,5 @@ agent_communication:
     message: "✅ ENHANCED PROJECT FIELDS TESTING COMPLETE: All enhanced project model features are working perfectly. Successfully tested project_type (descriptive project type), key_contributions (list of bullet points), skills_utilized (list of project-specific skills), and impact (ImpactData model with quantified_metrics and qualitative_outcomes). Created and retrieved test projects with all enhanced fields. Backward compatibility confirmed - legacy projects still work. However, ❌ CRITICAL ISSUE: Social Media TikTok Video URL Integration task is FAILING. Expected KahPeeh Kah-Ahn Coffee House project and 7 other TikTok projects are missing from database. Main agent's implementation appears to have updated frontend mock.js but changes did not persist to backend database. Only 1 of 8+ expected social media projects found. This task needs immediate attention from main agent to ensure database persistence."
   - agent: "main"
     message: "🔄 STARTING COFFEE HOUSE PROJECTS ENHANCEMENT: User requested specific updates to both coffee house projects: 1) Update TikTok video descriptions with detailed context (customer perspective, Marylin Monroe drink making, 4th of July powwow celebration, customer appreciation, barista behind scenes), 2) Enhance advertising project with team direction details and second video for Ute Crossing Grill & Ute Lanes, 3) Remove YouTube link from advertising project and use screenshots for thumbnails, 4) Ensure mobile/web optimization. Ready to implement changes to mock.js and update backend database."
+  - agent: "testing"
+    message: "❌ COFFEE HOUSE PROJECTS TESTING COMPLETE: Coffee House Projects Content Enhancement task is FAILING. Backend testing shows 69.4% success rate (50/72 tests passed). Both coffee house projects exist in database but are missing critical requested features: 1) TikTok project (ID: 7) lacks 'combinedTikTokSection' with 6 specific video descriptions, 2) Advertising project (ID: 4) missing 'videos' array with 2 videos, 'additionalProject' section for Ute Crossing Grill, still has 'videoUrl' field, lacks team direction emphasis in description. Core database health is good (15 projects, CRUD operations working), but main agent's implementation appears incomplete - the specific structural changes requested by user were not properly implemented in the database. This task is now marked as stuck and needs main agent attention to complete the missing structural changes."
