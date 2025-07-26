@@ -275,20 +275,37 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     <span className="text-2xl mr-2">📊</span>
                     Campaign Performance Highlights
                   </h5>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-                    <div className="bg-white rounded-lg p-3 shadow-sm">
-                      <div className="text-2xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">6</div>
-                      <div className="text-sm text-gray-600 font-medium">Viral Videos</div>
+                  {project.tiktokVideos.campaignStats ? (
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                      <div className="bg-white rounded-lg p-3 shadow-sm">
+                        <div className="text-2xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">{project.tiktokVideos.campaignStats.engagementIncrease}</div>
+                        <div className="text-sm text-gray-600 font-medium">Engagement Increase</div>
+                      </div>
+                      <div className="bg-white rounded-lg p-3 shadow-sm">
+                        <div className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-cyan-600 bg-clip-text text-transparent">{project.tiktokVideos.campaignStats.footTrafficBoost}</div>
+                        <div className="text-sm text-gray-600 font-medium">Foot Traffic Boost</div>
+                      </div>
+                      <div className="bg-white rounded-lg p-3 shadow-sm">
+                        <div className="text-2xl font-bold bg-gradient-to-r from-cyan-600 to-pink-600 bg-clip-text text-transparent">{project.tiktokVideos.campaignStats.brandAwarenessGrowth}</div>
+                        <div className="text-sm text-gray-600 font-medium">Brand Awareness Growth</div>
+                      </div>
                     </div>
-                    <div className="bg-white rounded-lg p-3 shadow-sm">
-                      <div className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-cyan-600 bg-clip-text text-transparent">TOP</div>
-                      <div className="text-sm text-gray-600 font-medium">Engagement</div>
+                  ) : (
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                      <div className="bg-white rounded-lg p-3 shadow-sm">
+                        <div className="text-2xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">6</div>
+                        <div className="text-sm text-gray-600 font-medium">High-Engagement Videos</div>
+                      </div>
+                      <div className="bg-white rounded-lg p-3 shadow-sm">
+                        <div className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-cyan-600 bg-clip-text text-transparent">TOP</div>
+                        <div className="text-sm text-gray-600 font-medium">Performance</div>
+                      </div>
+                      <div className="bg-white rounded-lg p-3 shadow-sm">
+                        <div className="text-2xl font-bold bg-gradient-to-r from-cyan-600 to-pink-600 bg-clip-text text-transparent">MAX</div>
+                        <div className="text-sm text-gray-600 font-medium">Business Impact</div>
+                      </div>
                     </div>
-                    <div className="bg-white rounded-lg p-3 shadow-sm">
-                      <div className="text-2xl font-bold bg-gradient-to-r from-cyan-600 to-pink-600 bg-clip-text text-transparent">MAX</div>
-                      <div className="text-sm text-gray-600 font-medium">Sales Impact</div>
-                    </div>
-                  </div>
+                  )}
                 </div>
               </div>
             )}
