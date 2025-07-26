@@ -286,7 +286,8 @@ metadata:
 test_plan:
   current_focus:
     - "Social Media TikTok Video URL Integration"
-  stuck_tasks: []
+  stuck_tasks:
+    - "Social Media TikTok Video URL Integration"
   test_all: false
   test_priority: "high_first"
 
