@@ -12,21 +12,19 @@ const StoriesBar = ({ activeCategory, onCategoryChange }) => {
     "Social Media Content & Campaigns": Smartphone,
     "Photography Projects": Camera,
     "Creative Concepts & Branding": Lightbulb,
-    "Illustrations & Educational Content": BookOpen,
-    "Business Analytics & Strategy": BarChart3
+    "Illustrations & Educational Content": BookOpen
   };
 
   const shortNames = {
     "All": "All",
     "Branding": "Branding",
-    "Analytics & Research": "Analytics",
+    "Analytics & Research": "Analytics & Research",
     "Graphic Design & Marketing Materials": "Graphics",
     "Advertising": "Advertising",
     "Social Media Content & Campaigns": "Social Media",
     "Photography Projects": "Photography",
     "Creative Concepts & Branding": "Branding",
-    "Illustrations & Educational Content": "Education",
-    "Business Analytics & Strategy": "Analytics"
+    "Illustrations & Educational Content": "Education"
   };
 
   return (
