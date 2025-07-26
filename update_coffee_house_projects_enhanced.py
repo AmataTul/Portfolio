@@ -22,7 +22,7 @@ def main():
     
     # Update TikTok Campaign Project (ID: 8)
     tiktok_project_data = {
-        "project_id": "8",
+        "id": "8",
         "title": "KahPeeh kah-Ahn Ute Coffee House & Soda - Top 6 TikTok High-Engagement Campaign",
         "category": "Social Media Content & Campaigns",
         "client": "Ute Tribal Enterprises - KahPeeh kah-Ahn Ute Coffee House & Soda",
