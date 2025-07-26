@@ -163,45 +163,140 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                 </div>
               </div>
             )}
-{/* Project Info Grid */}
-<div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 border-t border-gray-200">
-  {/* Default fields */}
-  <div className="space-y-2">
-    <h4 className="font-bold text-red-600 text-sm uppercase tracking-wider">Category</h4>
-    <p className="text-gray-700 font-medium">{project.category}</p>
-  </div>
-  <div className="space-y-2">
-    <h4 className="font-bold text-red-600 text-sm uppercase tracking-wider">Client</h4>
-    <p className="text-gray-700 font-medium">{project.client}</p>
-  </div>
-  <div className="space-y-2">
-    <h4 className="font-bold text-red-600 text-sm uppercase tracking-wider">Format</h4>
-    <p className="text-gray-700 font-medium capitalize">
-      {project.orientation} {project.type}
-    </p>
-  </div>
 
-  {/* New custom fields (optional) */}
-  {project.program && (
-    <div className="space-y-2">
-      <h4 className="font-bold text-red-600 text-sm uppercase tracking-wider">Program</h4>
-      <p className="text-gray-700 font-medium">{project.program}</p>
-    </div>
-  )}
-  {project.focus && (
-    <div className="space-y-2">
-      <h4 className="font-bold text-red-600 text-sm uppercase tracking-wider">Focus</h4>
-      <p className="text-gray-700 font-medium">{project.focus}</p>
-    </div>
-  )}
-  {project.myRole && (
-    <div className="space-y-2">
-      <h4 className="font-bold text-red-600 text-sm uppercase tracking-wider">My Role</h4>
-      <p className="text-gray-700 font-medium">{project.myRole}</p>
-    </div>
-  )}
-</div>
+            {/* Enhanced Project Information Section */}
+            <div className="space-y-8 pt-6 border-t border-gray-200">
+              
+              {/* Project Overview Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="space-y-2">
+                  <h4 className="font-bold text-red-600 text-sm uppercase tracking-wider">Category</h4>
+                  <p className="text-gray-700 font-medium">{project.category}</p>
+                </div>
+                <div className="space-y-2">
+                  <h4 className="font-bold text-red-600 text-sm uppercase tracking-wider">Client</h4>
+                  <p className="text-gray-700 font-medium">{project.client}</p>
+                </div>
+                <div className="space-y-2">
+                  <h4 className="font-bold text-red-600 text-sm uppercase tracking-wider">Project Type</h4>
+                  <p className="text-gray-700 font-medium">{project.project_type || project.projectType || 'Digital Marketing'}</p>
+                </div>
+                <div className="space-y-2">
+                  <h4 className="font-bold text-red-600 text-sm uppercase tracking-wider">Format</h4>
+                  <p className="text-gray-700 font-medium capitalize">{project.orientation} {project.type}</p>
+                </div>
+              </div>
 
+              {/* Key Contributions Section */}
+              {(project.key_contributions || project.keyContributions) && (
+                <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-200 rounded-xl p-6">
+                  <h4 className="font-bold text-blue-800 mb-4 text-lg flex items-center">
+                    <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                    Key Contributions
+                  </h4>
+                  <ul className="space-y-3">
+                    {(project.key_contributions || project.keyContributions || []).map((contribution, index) => (
+                      <li key={index} className="flex items-start text-blue-700">
+                        <span className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        <span className="text-sm leading-relaxed">{contribution}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* Skills Utilized Section */}
+              {(project.skills_utilized || project.skillsUtilized) && (
+                <div className="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200 rounded-xl p-6">
+                  <h4 className="font-bold text-green-800 mb-4 text-lg flex items-center">
+                    <span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>
+                    Skills Utilized
+                  </h4>
+                  <div className="flex flex-wrap gap-2">
+                    {(project.skills_utilized || project.skillsUtilized || []).map((skill, index) => (
+                      <span 
+                        key={index}
+                        className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium border border-green-300"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Impact Section */}
+              {project.impact && (
+                <div className="bg-gradient-to-r from-purple-50 to-pink-50 border-2 border-purple-200 rounded-xl p-6">
+                  <h4 className="font-bold text-purple-800 mb-4 text-lg flex items-center">
+                    <span className="w-2 h-2 bg-purple-600 rounded-full mr-3"></span>
+                    Project Impact
+                  </h4>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {/* Quantified Metrics */}
+                    {project.impact.quantified_metrics && project.impact.quantified_metrics.length > 0 && (
+                      <div className="bg-white rounded-lg p-4 shadow-sm">
+                        <h5 className="font-semibold text-purple-700 mb-3 flex items-center">
+                          <span className="text-lg mr-2">📈</span>
+                          Quantified Results
+                        </h5>
+                        <ul className="space-y-2">
+                          {project.impact.quantified_metrics.map((metric, index) => (
+                            <li key={index} className="flex items-start text-purple-600 text-sm">
+                              <span className="w-1.5 h-1.5 bg-purple-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                              {metric}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                    
+                    {/* Qualitative Outcomes */}
+                    {project.impact.qualitative_outcomes && project.impact.qualitative_outcomes.length > 0 && (
+                      <div className="bg-white rounded-lg p-4 shadow-sm">
+                        <h5 className="font-semibold text-pink-700 mb-3 flex items-center">
+                          <span className="text-lg mr-2">✨</span>
+                          Qualitative Outcomes
+                        </h5>
+                        <ul className="space-y-2">
+                          {project.impact.qualitative_outcomes.map((outcome, index) => (
+                            <li key={index} className="flex items-start text-pink-600 text-sm">
+                              <span className="w-1.5 h-1.5 bg-pink-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                              {outcome}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {/* Legacy custom fields for backward compatibility */}
+              {(project.program || project.focus || project.myRole) && (
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 border-t border-gray-100">
+                  {project.program && (
+                    <div className="space-y-2">
+                      <h4 className="font-bold text-red-600 text-sm uppercase tracking-wider">Program</h4>
+                      <p className="text-gray-700 font-medium">{project.program}</p>
+                    </div>
+                  )}
+                  {project.focus && (
+                    <div className="space-y-2">
+                      <h4 className="font-bold text-red-600 text-sm uppercase tracking-wider">Focus</h4>
+                      <p className="text-gray-700 font-medium">{project.focus}</p>
+                    </div>
+                  )}
+                  {project.myRole && (
+                    <div className="space-y-2">
+                      <h4 className="font-bold text-red-600 text-sm uppercase tracking-wider">My Role</h4>
+                      <p className="text-gray-700 font-medium">{project.myRole}</p>
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
 
             {/* Category-specific highlights */}
             {project.category === "Social Media Content & Campaigns" && (
