@@ -188,42 +188,68 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
               </div>
             )}
 
-            {/* TikTok Videos Grid Section - Bright & Fun Social Media Design */}
-            {project.tiktokVideos && (
-              <div className="bg-gradient-to-br from-pink-50 via-purple-50 to-cyan-50 border-4 border-transparent bg-clip-padding rounded-2xl p-6 shadow-2xl">
-                <div className="bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 rounded-xl p-1 mb-6">
-                  <div className="bg-white rounded-lg p-4">
-                    <h4 className="text-2xl font-bold bg-gradient-to-r from-pink-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent mb-2 flex items-center">
-                      <span className="text-3xl mr-3">🎬</span>
-                      {project.tiktokVideos.title}
-                    </h4>
-                    <p className="text-gray-600 font-medium">
-                      {project.tiktokVideos.description}
+            {/* Combined TikTok Section - Indigenous Coffee House Success Story */}
+            {project.combinedTikTokSection && (
+              <div className="bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 border-4 border-transparent bg-clip-padding rounded-2xl p-8 shadow-2xl">
+                
+                {/* Section Header with Indigenous Coffee House Theme */}
+                <div className="text-center mb-8">
+                  <h4 className="text-3xl font-bold bg-gradient-to-r from-amber-600 via-orange-600 to-red-600 bg-clip-text text-transparent mb-4">
+                    {project.combinedTikTokSection.sectionTitle}
+                  </h4>
+                  
+                  {/* Engaging Description */}
+                  <div className="bg-white rounded-xl p-6 mb-6 shadow-sm border-l-4 border-amber-500">
+                    <p className="text-gray-700 text-lg leading-relaxed mb-4">
+                      {project.combinedTikTokSection.engagingDescription}
+                    </p>
+                    <p className="text-amber-700 font-semibold text-lg">
+                      {project.combinedTikTokSection.performanceHighlight}
                     </p>
                   </div>
                 </div>
+
+                {/* Videos Title */}
+                <div className="text-center mb-6">
+                  <h5 className="text-2xl font-bold text-amber-800 mb-2 flex items-center justify-center">
+                    <span className="text-3xl mr-3">🎬</span>
+                    {project.combinedTikTokSection.videosTitle}
+                  </h5>
+                  <p className="text-amber-600 font-medium">
+                    {project.combinedTikTokSection.videosSubtitle}
+                  </p>
+                </div>
                 
-                {/* 6 TikTok Videos Grid - 3x2 Layout */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {project.tiktokVideos.videos.map((video, index) => (
+                {/* 6 TikTok Videos Grid - Easy to Customize */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                  {project.combinedTikTokSection.videos.map((video, index) => (
                     <div key={video.id} className="group relative">
-                      {/* Video Card with Gradient Border */}
-                      <div className="bg-gradient-to-br from-pink-400 via-purple-400 to-cyan-400 rounded-2xl p-1 shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+                      {/* Video Card with Indigenous-inspired Gradient Border */}
+                      <div className="bg-gradient-to-br from-amber-400 via-orange-400 to-red-400 rounded-2xl p-1 shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
                         <div className="bg-white rounded-xl overflow-hidden">
-                          {/* Video Thumbnail */}
-                          <div className="relative aspect-[9/16] overflow-hidden">
-                            <img 
-                              src={video.thumbnail} 
-                              alt={video.title}
-                              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                            />
+                          {/* Video Thumbnail - EASY TO REPLACE */}
+                          <div className="relative aspect-[9/16] overflow-hidden bg-gray-100 flex items-center justify-center">
+                            {video.thumbnail.startsWith('PLACEHOLDER_THUMBNAIL_') ? (
+                              // Placeholder for your custom thumbnails
+                              <div className="w-full h-full bg-gradient-to-br from-amber-100 to-orange-100 flex flex-col items-center justify-center text-amber-700">
+                                <span className="text-4xl mb-2">📱</span>
+                                <span className="text-sm font-medium">Your Screenshot Here</span>
+                                <span className="text-xs">{video.thumbnail}</span>
+                              </div>
+                            ) : (
+                              <img 
+                                src={video.thumbnail} 
+                                alt={video.title}
+                                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                              />
+                            )}
                             
                             {/* TikTok Play Overlay */}
                             <div 
                               className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
                               onClick={() => window.open(video.url, '_blank')}
                             >
-                              <div className="bg-gradient-to-r from-pink-500 to-purple-500 rounded-full p-4 shadow-xl animate-pulse">
+                              <div className="bg-gradient-to-r from-amber-500 to-orange-500 rounded-full p-4 shadow-xl animate-pulse">
                                 <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
                                   <path d="M8 5v14l11-7z"/>
                                 </svg>
@@ -231,7 +257,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                             </div>
                             
                             {/* Video Number Badge */}
-                            <div className="absolute top-3 left-3 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-bold text-sm px-3 py-1 rounded-full shadow-lg">
+                            <div className="absolute top-3 left-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold text-sm px-3 py-1 rounded-full shadow-lg">
                               #{index + 1}
                             </div>
                             
@@ -254,10 +280,10 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                               {video.description}
                             </p>
                             
-                            {/* Watch Button */}
+                            {/* Watch Button with Indigenous Theme */}
                             <button
                               onClick={() => window.open(video.url, '_blank')}
-                              className="w-full bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 text-white font-bold py-2 px-4 rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 text-sm flex items-center justify-center space-x-2"
+                              className="w-full bg-gradient-to-r from-amber-500 via-orange-500 to-red-500 text-white font-bold py-2 px-4 rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 text-sm flex items-center justify-center space-x-2"
                             >
                               <span>🎵</span>
                               <span>Watch on TikTok</span>
@@ -269,43 +295,33 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                   ))}
                 </div>
                 
-                {/* Campaign Stats */}
-                <div className="mt-8 bg-gradient-to-r from-pink-100 via-purple-100 to-cyan-100 rounded-xl p-6 border-l-4 border-gradient-to-b from-pink-500 to-purple-500">
-                  <h5 className="font-bold text-gray-800 mb-3 flex items-center">
-                    <span className="text-2xl mr-2">📊</span>
-                    Campaign Performance Highlights
+                {/* Performance Stats with Indigenous Business Theme */}
+                <div className="bg-gradient-to-r from-amber-100 via-orange-100 to-red-100 rounded-xl p-6">
+                  <h5 className="font-bold text-amber-800 mb-4 text-center flex items-center justify-center">
+                    <span className="text-2xl mr-2">🏜️</span>
+                    Indigenous Business Success Metrics
                   </h5>
-                  {project.tiktokVideos.campaignStats ? (
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-                      <div className="bg-white rounded-lg p-3 shadow-sm">
-                        <div className="text-2xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">{project.tiktokVideos.campaignStats.engagementIncrease}</div>
-                        <div className="text-sm text-gray-600 font-medium">Engagement Increase</div>
-                      </div>
-                      <div className="bg-white rounded-lg p-3 shadow-sm">
-                        <div className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-cyan-600 bg-clip-text text-transparent">{project.tiktokVideos.campaignStats.footTrafficBoost}</div>
-                        <div className="text-sm text-gray-600 font-medium">Foot Traffic Boost</div>
-                      </div>
-                      <div className="bg-white rounded-lg p-3 shadow-sm">
-                        <div className="text-2xl font-bold bg-gradient-to-r from-cyan-600 to-pink-600 bg-clip-text text-transparent">{project.tiktokVideos.campaignStats.brandAwarenessGrowth}</div>
-                        <div className="text-sm text-gray-600 font-medium">Brand Awareness Growth</div>
-                      </div>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                    <div className="bg-white rounded-lg p-4 shadow-sm">
+                      <div className="text-3xl font-bold bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">85%</div>
+                      <div className="text-sm text-gray-600 font-medium">Engagement Increase</div>
                     </div>
-                  ) : (
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-                      <div className="bg-white rounded-lg p-3 shadow-sm">
-                        <div className="text-2xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">6</div>
-                        <div className="text-sm text-gray-600 font-medium">High-Engagement Videos</div>
-                      </div>
-                      <div className="bg-white rounded-lg p-3 shadow-sm">
-                        <div className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-cyan-600 bg-clip-text text-transparent">TOP</div>
-                        <div className="text-sm text-gray-600 font-medium">Performance</div>
-                      </div>
-                      <div className="bg-white rounded-lg p-3 shadow-sm">
-                        <div className="text-2xl font-bold bg-gradient-to-r from-cyan-600 to-pink-600 bg-clip-text text-transparent">MAX</div>
-                        <div className="text-sm text-gray-600 font-medium">Business Impact</div>
-                      </div>
+                    <div className="bg-white rounded-lg p-4 shadow-sm">
+                      <div className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">40%</div>
+                      <div className="text-sm text-gray-600 font-medium">Foot Traffic Boost</div>
                     </div>
-                  )}
+                    <div className="bg-white rounded-lg p-4 shadow-sm">
+                      <div className="text-3xl font-bold bg-gradient-to-r from-red-600 to-amber-600 bg-clip-text text-transparent">120%</div>
+                      <div className="text-sm text-gray-600 font-medium">Brand Awareness Growth</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Easy Customization Instructions */}
+                <div className="mt-6 bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r-lg">
+                  <div className="text-xs text-blue-700">
+                    <strong>💡 Easy Customization:</strong> Replace "PLACEHOLDER_THUMBNAIL_X" with your actual screenshot URLs and update video URLs in the data file for seamless integration.
+                  </div>
                 </div>
               </div>
             )}
