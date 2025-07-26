@@ -318,6 +318,25 @@ test_plan:
   test_all: false
   test_priority: "high_first"
 
+  - task: "Coffee House Projects Content Enhancement"
+    implemented: false
+    working: false
+    file: "mock.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: false
+        agent: "main"
+        comment: "User requested updates to coffee house projects: 1) Update TikTok video descriptions with specific details (customer perspective, Marylin Monroe drink, 4th of July powwow, etc.), 2) Add second video ad for Ute Crossing Grill & Ute Lanes to advertising project, 3) Remove YouTube link from advertising project, 4) Ensure mobile/web optimization. Starting implementation."
+
+test_plan:
+  current_focus:
+    - "Coffee House Projects Content Enhancement"
+  stuck_tasks: []
+  test_all: false
+  test_priority: "high_first"
+
 agent_communication:
   - agent: "main"
     message: "✅ PORTFOLIO ENHANCEMENT COMPLETE: Successfully implemented enhanced project categorization system with new fields (project_type, key_contributions, skills_utilized, impact), updated frontend UI for better organization, and added comprehensive SEO optimization. Backend testing confirms all enhanced fields working perfectly with 100% success rate."
@@ -335,3 +354,5 @@ agent_communication:
     message: "✅ UTE BISON RANCH IMAGE INTEGRATION TESTING COMPLETE: All 28 backend tests passed with 100% success rate. Ute Bison Ranch project successfully added to database with 5 valid base64 images. Project retrieval working via GET /api/projects, category filtering functional for Photography Projects, individual project retrieval operational, and all educational impact details preserved. Image integration fully successful."
   - agent: "testing"
     message: "✅ ENHANCED PROJECT FIELDS TESTING COMPLETE: All enhanced project model features are working perfectly. Successfully tested project_type (descriptive project type), key_contributions (list of bullet points), skills_utilized (list of project-specific skills), and impact (ImpactData model with quantified_metrics and qualitative_outcomes). Created and retrieved test projects with all enhanced fields. Backward compatibility confirmed - legacy projects still work. However, ❌ CRITICAL ISSUE: Social Media TikTok Video URL Integration task is FAILING. Expected KahPeeh Kah-Ahn Coffee House project and 7 other TikTok projects are missing from database. Main agent's implementation appears to have updated frontend mock.js but changes did not persist to backend database. Only 1 of 8+ expected social media projects found. This task needs immediate attention from main agent to ensure database persistence."
+  - agent: "main"
+    message: "🔄 STARTING COFFEE HOUSE PROJECTS ENHANCEMENT: User requested specific updates to both coffee house projects: 1) Update TikTok video descriptions with detailed context (customer perspective, Marylin Monroe drink making, 4th of July powwow celebration, customer appreciation, barista behind scenes), 2) Enhance advertising project with team direction details and second video for Ute Crossing Grill & Ute Lanes, 3) Remove YouTube link from advertising project and use screenshots for thumbnails, 4) Ensure mobile/web optimization. Ready to implement changes to mock.js and update backend database."
