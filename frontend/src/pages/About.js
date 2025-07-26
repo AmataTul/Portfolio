@@ -131,18 +131,122 @@ const About = () => {
         <div className="max-w-6xl mx-auto">
           {/* Professional Summary */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Marketing Strategy & Analytics Expertise</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Creative Marketing Professional & Data Analytics Expert</h2>
             <Card className="bg-white shadow-lg border-0">
               <CardContent className="p-8">
-                <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
-                  I'm a creative marketing professional actively seeking opportunities to join innovative teams where I can contribute my 5+ years of experience in social media marketing, brand strategy, and data-driven campaign optimization. My expertise spans performance marketing, content creation, conversion optimization, and comprehensive analytics with proven results for diverse brands.
-                </p>
-                <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
-                  My analytical approach combines marketing research, SEO optimization, and data-driven insights to create campaigns that deliver measurable results. I specialize in transforming complex data into actionable marketing strategies that drive growth and engagement across all digital channels.
-                </p>
-                <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                  Passionate about transforming brands through creative storytelling, strategic social media campaigns, market research, and measurable growth initiatives. Ready to bring fresh perspectives, analytical insights, and proven expertise to drive your marketing objectives forward.
-                </p>
+                <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-6 mb-6 border-l-4 border-blue-500">
+                  <p className="text-lg md:text-xl text-gray-800 font-semibold leading-relaxed mb-4">
+                    I'm a creative marketing professional with comprehensive experience across ALL marketing sectors and a variety of industries. My educational background in Information Systems (Data Analytics) with a minor in Marketing makes me extremely versatile in finding solutions to complex and mundane problems alike.
+                  </p>
+                  <p className="text-lg md:text-xl text-blue-800 font-bold leading-relaxed">
+                    Honestly? I have experience in everything marketing-related. Just ask me to find a solution for you - I can do it all! 🚀
+                  </p>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                  {/* Core Expertise Column 1 */}
+                  <div className="space-y-4">
+                    <div className="bg-blue-50 rounded-lg p-4">
+                      <h4 className="font-bold text-blue-800 mb-2 flex items-center">
+                        <span className="text-xl mr-2">📊</span>
+                        Data Analytics & Business Intelligence
+                      </h4>
+                      <p className="text-gray-700 text-sm mb-2">Proficiency in Google Analytics, Tableau, Power BI, and SQL to analyze customer data and campaign performance.</p>
+                      <p className="text-gray-700 text-sm">Data-driven decision-making, predictive analytics, and ROI measurement.</p>
+                    </div>
+                    
+                    <div className="bg-green-50 rounded-lg p-4">
+                      <h4 className="font-bold text-green-800 mb-2 flex items-center">
+                        <span className="text-xl mr-2">🔍</span>
+                        SEO & SEM Expertise
+                      </h4>
+                      <p className="text-gray-700 text-sm mb-2">Advanced knowledge of SEO strategies, including on-page, off-page, and technical SEO.</p>
+                      <p className="text-gray-700 text-sm">Experience with Google Ads and Bing Ads, managing PPC campaigns, and retargeting strategies.</p>
+                    </div>
+                    
+                    <div className="bg-pink-50 rounded-lg p-4">
+                      <h4 className="font-bold text-pink-800 mb-2 flex items-center">
+                        <span className="text-xl mr-2">📱</span>
+                        Social Media Marketing
+                      </h4>
+                      <p className="text-gray-700 text-sm mb-2">Expertise in social media platforms (Instagram, TikTok, LinkedIn, etc.) and creating high-engagement content.</p>
+                      <p className="text-gray-700 text-sm">Advanced social media ads management and influencer marketing.</p>
+                    </div>
+                    
+                    <div className="bg-purple-50 rounded-lg p-4">
+                      <h4 className="font-bold text-purple-800 mb-2 flex items-center">
+                        <span className="text-xl mr-2">📧</span>
+                        Email Marketing & Automation
+                      </h4>
+                      <p className="text-gray-700 text-sm mb-2">Experience with Mailchimp, HubSpot, ActiveCampaign to create automated email campaigns.</p>
+                      <p className="text-gray-700 text-sm">A/B testing and segmentation for better targeting and engagement.</p>
+                    </div>
+                    
+                    <div className="bg-orange-50 rounded-lg p-4">
+                      <h4 className="font-bold text-orange-800 mb-2 flex items-center">
+                        <span className="text-xl mr-2">✍️</span>
+                        Content Creation & Strategy
+                      </h4>
+                      <p className="text-gray-700 text-sm mb-2">Develop and execute content strategies across various platforms (blogs, video, podcasts).</p>
+                      <p className="text-gray-700 text-sm">Strong skills in copywriting and visual storytelling.</p>
+                    </div>
+                  </div>
+                  
+                  {/* Core Expertise Column 2 */}
+                  <div className="space-y-4">
+                    <div className="bg-indigo-50 rounded-lg p-4">
+                      <h4 className="font-bold text-indigo-800 mb-2 flex items-center">
+                        <span className="text-xl mr-2">🎨</span>
+                        UX/UI Design Knowledge
+                      </h4>
+                      <p className="text-gray-700 text-sm mb-2">Understanding of UX and UI principles for better web design and conversions.</p>
+                      <p className="text-gray-700 text-sm">Familiarity with Figma, Adobe XD, and Sketch.</p>
+                    </div>
+                    
+                    <div className="bg-teal-50 rounded-lg p-4">
+                      <h4 className="font-bold text-teal-800 mb-2 flex items-center">
+                        <span className="text-xl mr-2">🤖</span>
+                        AI & Automation
+                      </h4>
+                      <p className="text-gray-700 text-sm mb-2">Knowledge of AI-enhanced marketing through chatbots, personalization tools, and AI-driven analytics.</p>
+                      <p className="text-gray-700 text-sm">Using GPT-4, HubSpot AI, and ChatGPT for content creation and workflow automation.</p>
+                    </div>
+                    
+                    <div className="bg-red-50 rounded-lg p-4">
+                      <h4 className="font-bold text-red-800 mb-2 flex items-center">
+                        <span className="text-xl mr-2">🎬</span>
+                        Video Marketing & Live Streaming
+                      </h4>
+                      <p className="text-gray-700 text-sm mb-2">Creating short-form and long-form video content for TikTok, YouTube, and Instagram.</p>
+                      <p className="text-gray-700 text-sm">Proficiency with Adobe Premiere Pro and Final Cut Pro.</p>
+                    </div>
+                    
+                    <div className="bg-yellow-50 rounded-lg p-4">
+                      <h4 className="font-bold text-yellow-800 mb-2 flex items-center">
+                        <span className="text-xl mr-2">🛒</span>
+                        E-commerce Optimization
+                      </h4>
+                      <p className="text-gray-700 text-sm mb-2">Expertise in optimizing e-commerce websites (Shopify, WooCommerce), CRO, and customer journey mapping.</p>
+                      <p className="text-gray-700 text-sm">Conversion rate optimization and sales funnel development.</p>
+                    </div>
+                    
+                    <div className="bg-gray-50 rounded-lg p-4">
+                      <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+                        <span className="text-xl mr-2">🤝</span>
+                        Influencer Marketing & Brand Partnerships
+                      </h4>
+                      <p className="text-gray-700 text-sm mb-2">Identifying and collaborating with influencers to expand brand reach.</p>
+                      <p className="text-gray-700 text-sm">Managing brand partnerships and co-marketing campaigns.</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-gradient-to-r from-green-50 via-blue-50 to-purple-50 rounded-lg p-6 border-2 border-dashed border-gray-300">
+                  <p className="text-lg md:text-xl text-gray-800 leading-relaxed text-center font-medium">
+                    My analytical approach combines data-driven insights with creative problem-solving to deliver measurable results across ALL marketing channels. Whether it's project management, CRM optimization, or finding innovative solutions to unique challenges - 
+                    <span className="font-bold text-purple-800"> I genuinely have the experience and skills to tackle any marketing challenge you throw at me!</span>
+                  </p>
+                </div>
               </CardContent>
             </Card>
           </div>
