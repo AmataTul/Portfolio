@@ -13,18 +13,27 @@ class AnalyticsData(BaseModel):
     competitive_advantage: str
 
 
+class ImpactData(BaseModel):
+    quantified_metrics: Optional[List[str]] = None  # e.g., ["300% increase in engagement", "85% boost in sales"]
+    qualitative_outcomes: Optional[List[str]] = None  # e.g., ["Enhanced brand awareness", "Improved user experience"]
+
+
 class ProjectCreate(BaseModel):
     title: str
     category: str
     client: str
     description: str
     images: List[str]  # Base64 encoded images
-    type: str = "image"  # image, video, analytics, presentation
+    project_type: str = "Digital Marketing"  # More descriptive project type
+    type: str = "image"  # Media type: image, video, analytics, presentation
     featured: bool = False
     orientation: str = "horizontal"  # horizontal, vertical, square
     video_url: Optional[str] = None
     analytics: Optional[AnalyticsData] = None
     research_slides: Optional[List[Dict[str, str]]] = None
+    key_contributions: Optional[List[str]] = None  # Bullet points of specific contributions
+    skills_utilized: Optional[List[str]] = None  # Project-specific skills and tools
+    impact: Optional[ImpactData] = None  # Both quantified and qualitative impact
 
 
 class Project(BaseModel):
