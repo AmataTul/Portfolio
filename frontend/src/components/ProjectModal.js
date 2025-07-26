@@ -297,8 +297,12 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     </p>
                   </div>
                   
-                  {/* Branding Images Grid */}
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                  {/* Branding Images Grid - Flexible Layout for 2 images */}
+                  <div className={`mb-6 ${
+                    project.dualSections.brandingSection.layout === 'vertical_horizontal' 
+                      ? 'grid grid-cols-1 md:grid-cols-2 gap-6' 
+                      : 'grid grid-cols-1 md:grid-cols-3 gap-6'
+                  }`}>
                     {project.dualSections.brandingSection.images.map((image, index) => (
                       <div key={index} className="group relative overflow-hidden rounded-xl shadow-lg">
                         <div className="bg-gradient-to-br from-pink-400 via-rose-400 to-red-400 rounded-xl p-1">
@@ -306,7 +310,11 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                             <img 
                               src={image} 
                               alt={`Design Work ${index + 1}`}
-                              className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                              className={`w-full object-cover group-hover:scale-110 transition-transform duration-500 ${
+                                project.dualSections.brandingSection.layout === 'vertical_horizontal' 
+                                  ? 'h-64' 
+                                  : 'h-48'
+                              }`}
                             />
                             <div className="absolute top-3 left-3 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-bold text-xs px-3 py-1 rounded-full shadow-lg">
                               Design #{index + 1}
