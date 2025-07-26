@@ -64,7 +64,7 @@ export const portfolioProjects = [
   {
     id: 2,
     title: "Beats by Dre x Kim Kardashian Limited Edition Campaign - Brand Strategy & Analytics",
-    category: "Graphic Design & Marketing Materials",
+    category: "Branding",
     client: "Beats by Dre",
     project_type: "Brand Strategy & Consumer Analytics Campaign",
     description: "Comprehensive branding strategy and consumer analytics project for Beats by Dre's limited edition earbuds and headphones collaboration with Kim Kardashian. As part of the Beats by Dre Branding Strategy and Business Analytics Externship, I analyzed market trends, consumer data, and created impactful marketing materials for Gen Z audience targeting and brand positioning optimization.",
@@ -119,6 +119,39 @@ export const portfolioProjects = [
         "Improved competitive positioning in premium audio market through strategic brand differentiation",
         "Established foundation for future celebrity collaboration campaigns with measurable success metrics"
       ]
+    },
+    // Dual-section project structure
+    dualSections: {
+      analyticsSection: {
+        title: "Data Analytics & Market Research",
+        description: "Consumer behavior analysis and strategic insights using SQL, Tableau, and advanced data visualization to optimize celebrity collaboration campaigns",
+        images: [
+          "/beats0.jpg", // Analytics dashboard images
+          "/beats2.jpg", // Market research visualizations
+          "/beats4.jpg"  // Consumer data analysis
+        ],
+        highlights: [
+          "SQL database analysis for Gen Z consumer behavior patterns",
+          "Tableau data visualizations revealing key market insights",
+          "Celebrity partnership effectiveness research and trend analysis",
+          "Competitive market positioning analysis and strategic recommendations"
+        ]
+      },
+      brandingSection: {
+        title: "Graphic Design & Brand Materials",
+        description: "Creative visual identity development and marketing materials design for the Kim Kardashian x Beats by Dre limited edition collaboration",
+        images: [
+          "/beats.jpg",  // Brand identity designs
+          "/beats3.jpg", // Marketing materials
+          "/beats5.jpg"  // Campaign visuals
+        ],
+        highlights: [
+          "Cohesive visual identity system for limited edition product line",
+          "High-impact digital advertisements and social media campaign visuals",
+          "Product launch collateral and celebrity partnership marketing materials",
+          "Brand differentiation through strategic design and Gen Z-targeted aesthetics"
+        ]
+      }
     }
   },
   {
