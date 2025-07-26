@@ -164,6 +164,30 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
               </div>
             )}
 
+            {/* Additional Images Section - Displayed right below video */}
+            {project.additionalImages && (
+              <div className="bg-gradient-to-r from-gray-50 to-slate-50 border-2 border-gray-200 rounded-xl p-6">
+                <h4 className="font-semibold text-gray-800 mb-3 text-lg flex items-center">
+                  <span className="text-xl mr-2">📄</span>
+                  {project.additionalImages.title}
+                </h4>
+                <p className="text-gray-600 mb-4 text-sm">
+                  {project.additionalImages.description}
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {project.additionalImages.images.map((image, index) => (
+                    <div key={index} className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200">
+                      <img 
+                        src={image} 
+                        alt={`${project.additionalImages.title} - Image ${index + 1}`}
+                        className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {/* Enhanced Project Information Section */}
             <div className="space-y-8 pt-6 border-t border-gray-200">
               
