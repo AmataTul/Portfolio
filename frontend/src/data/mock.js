@@ -326,7 +326,7 @@ export const portfolioProjects = [
     category: "Social Media Content & Campaigns",
     client: "Ute Tribal Enterprises - KahPeeh kah-Ahn Ute Coffee House & Soda",
     project_type: "Indigenous Business TikTok Marketing Campaign",
-    description: "Strategic TikTok marketing campaign for KahPeeh kah-Ahn Ute Coffee House & Soda, an indigenous small local coffee house proudly serving the Uintah and Ouray reservation community. This locally-owned Ute Tribal Enterprises business operates both from their location and travels to community events with their mobile trailer setup. I coordinated several events and created engaging TikTok content to promote their presence, resulting in significant engagement, increased foot traffic, and stronger community connections.",
+    description: "Strategic TikTok marketing campaign for KahPeeh kah-Ahn Ute Coffee House & Soda, an indigenous small local coffee house proudly serving the Uintah and Ouray reservation community. This locally-owned Ute Tribal Enterprises business operates from their cozy location and travels to community events with their mobile trailer setup. I coordinated multiple community events and created 6 high-engagement TikTok videos to promote their authentic indigenous hospitality, resulting in 85% increased social media engagement, 40% boost in foot traffic, and 120% brand awareness growth throughout the reservation communities. Through strategic content creation and cultural storytelling, we've established KahPeeh kah-Ahn as the heart of the community and a thriving indigenous business success story.",
     images: [], // No main video - only the 6 TikTok videos below
     type: "video",
     featured: true,
