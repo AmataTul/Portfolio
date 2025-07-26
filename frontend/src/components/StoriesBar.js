@@ -18,6 +18,8 @@ const StoriesBar = ({ activeCategory, onCategoryChange }) => {
 
   const shortNames = {
     "All": "All",
+    "Branding": "Branding",
+    "Analytics & Research": "Analytics",
     "Graphic Design & Marketing Materials": "Graphics",
     "Advertising": "Advertising",
     "Social Media Content & Campaigns": "Social Media",
