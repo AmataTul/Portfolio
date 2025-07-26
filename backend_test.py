@@ -1530,6 +1530,22 @@ class BackendTester:
         self.test_update_project()
         self.test_delete_project()
         
+        # Test enhanced project fields specifically
+        print("\n" + "=" * 60)
+        print("🚀 ENHANCED PROJECT FIELDS TESTS")
+        print("=" * 60)
+        self.test_enhanced_project_fields_creation()
+        self.test_enhanced_project_fields_retrieval()
+        self.test_impact_data_model_validation()
+        self.test_project_type_categorization()
+        self.test_backward_compatibility()
+        
+        # Test the specific focus task
+        print("\n" + "=" * 60)
+        print("📱 SOCIAL MEDIA TIKTOK INTEGRATION FOCUS TEST")
+        print("=" * 60)
+        self.test_social_media_tiktok_integration_focus()
+        
         self.test_categories_endpoints()
         self.test_contact_endpoints()
         self.test_work_history_endpoints()
