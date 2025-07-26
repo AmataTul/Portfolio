@@ -223,9 +223,7 @@ export const portfolioProjects = [
     project_type: "Educational Animation & Promotional Marketing Campaign",
     description: "Comprehensive educational animation and marketing campaign created for Ute Bison's 2024 Utah High School Bison Grant Program. Developed from concept to completion using Canva and advanced editing tools, including self-filmed footage at the bison ranch. This promotional initiative successfully attracted 15 schools across Utah to participate in the grant program, enabling schools to receive funding and purchase bison meat while promoting traditional knowledge and modern learning integration.",
     images: [
-      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop"
+      "https://img.youtube.com/vi/DYLLB8qiQ8k/maxresdefault.jpg"
     ],
     type: "video",
     featured: true,
@@ -278,23 +276,13 @@ export const portfolioProjects = [
       ],
       format: "Professional animated educational video with real-life ranch footage and comprehensive marketing materials"
     },
-    brochureSections: {
-      section1: {
-        title: "Educational Program Brochures",
-        description: "Comprehensive brochures designed for Utah school districts highlighting bison grant benefits and educational opportunities",
-        images: [
-          "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
-          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop"
-        ]
-      },
-      section2: {
-        title: "Marketing Materials & Grant Information",
-        description: "Professional marketing collateral including program benefits, application processes, and cultural education components",
-        images: [
-          "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop",
-          "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=800&h=600&fit=crop"
-        ]
-      }
+    additionalImages: {
+      title: "Supporting Marketing Materials",
+      description: "Brochures and promotional materials created for the campaign",
+      images: [
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop"
+      ]
     }
   },
   // Additional entries omitted for brevity
