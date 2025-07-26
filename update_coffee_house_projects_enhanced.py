@@ -139,7 +139,7 @@ def main():
     
     # Update Advertising Campaign Project (ID: 4)
     advertising_project_data = {
-        "project_id": "4",
+        "id": "4",
         "title": "KahPeeh kah-Ahn Ute Coffee House & Soda - Video Advertisement Campaign",
         "category": "Advertising",
         "client": "Ute Tribal Enterprises - KahPeeh kah-Ahn Ute Coffee House & Soda",
