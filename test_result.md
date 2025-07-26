@@ -258,15 +258,30 @@ metadata:
 
   - task: "Social Media TikTok Video URL Integration"
     implemented: true
-    working: true
+    working: false
     file: "mock.js, update_social_media_videos.py"
-    stuck_count: 0
+    stuck_count: 1
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: true
         agent: "main"
         comment: "Successfully updated all vertical social media projects with clickable TikTok video URLs. Added primary TikTok URL (https://www.tiktok.com/@kahpeehkahahn/video/7409139284403408159) to KahPeeh Kah-Ahn Coffee House project as requested, and updated 7 other vertical video projects with proper TikTok URLs: Adobe Creative Suite Instagram Reels, Adobe TikTok Content Strategy, Beats by Dre Instagram Story Series, Disney+ Character Spotlight Campaign, Adobe Creative Tips TikTok Series, Ute Tribal Enterprises Cultural Content, and Bison Made Product Showcase Reels. All projects now have videoUrl fields that make them clickable and open in new tabs. Frontend mock.js updated with all video URLs."
+      - working: false
+        agent: "testing"
+        comment: "❌ TESTED: Social Media TikTok integration is NOT working. Expected KahPeeh Kah-Ahn Coffee House project with TikTok URL (https://www.tiktok.com/@kahpeehkahahn/video/7409139284403408159) not found in database. Only found 1 social media project (Adobe Creative Suite Instagram Reels) out of expected 8+ projects. The main agent's implementation appears to have updated frontend mock.js but changes did not persist to the backend database. Database contains only 9 original projects plus 2 test projects created during testing. Missing projects: KahPeeh Kah-Ahn Coffee House TikTok Strategy, Adobe TikTok Content Strategy, Beats by Dre Instagram Story Series, Disney+ Character Spotlight Campaign, Adobe Creative Tips TikTok Series, Ute Tribal Enterprises Cultural Content, and Bison Made Product Showcase Reels."
+
+  - task: "Enhanced Project Model with New Fields"
+    implemented: true
+    working: true
+    file: "models.py, server.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "✅ TESTED: Enhanced project model is fully functional. Successfully tested all new fields: project_type (descriptive project type), key_contributions (list of bullet points), skills_utilized (list of project-specific skills), and impact (dict with quantified_metrics and qualitative_outcomes). ImpactData model working correctly with both quantified and qualitative data. Created test project with all enhanced fields and verified proper storage/retrieval. Backward compatibility confirmed - legacy projects without enhanced fields still work correctly. Project type categorization provides better classification than basic type field."
 
 test_plan:
   current_focus:
