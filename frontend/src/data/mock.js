@@ -205,6 +205,57 @@ export const portfolioProjects = [
   },
   {
     id: 4,
+    title: "KahPeeh kah-Ahn Ute Coffee House & Soda - Video Advertisement Campaign",
+    category: "Advertising",
+    client: "Ute Tribal Enterprises - KahPeeh kah-Ahn Ute Coffee House & Soda",
+    project_type: "Video Advertisement Production & Direction",
+    description: "Professional video advertisement for KahPeeh kah-Ahn Ute Coffee House & Soda, showcasing authentic indigenous hospitality and premium coffee experience. I directed and coordinated this comprehensive advertising campaign from concept to completion, highlighting the unique cultural atmosphere and community connection of this locally-owned indigenous business serving the Uintah and Ouray reservation communities.",
+    images: [
+      "https://img.youtube.com/vi/placeholder/maxresdefault.jpg" // Video thumbnail placeholder
+    ],
+    type: "video", 
+    featured: true,
+    orientation: "horizontal",
+    videoUrl: "https://customer-assets.emergentagent.com/job_smooth-site-setup/artifacts/a3tv7dfw_Ute%20Coffeehouse%20V4.mp4",
+    key_contributions: [
+      "Directed complete video advertisement production from initial concept through final editing",
+      "Coordinated all aspects of video shoot including location setup, talent direction, and equipment management",
+      "Developed creative vision showcasing authentic indigenous coffee house experience and cultural atmosphere",
+      "Managed production timeline and budget to deliver high-quality advertising content within project constraints",
+      "Created compelling narrative highlighting unique selling propositions of indigenous-owned local business",
+      "Produced professional-grade video advertisement suitable for multiple marketing channels and platforms"
+    ],
+    skills_utilized: [
+      "Video Direction & Production",
+      "Creative Campaign Development", 
+      "Indigenous Business Marketing",
+      "Production Coordination",
+      "Video Editing & Post-Production",
+      "Advertising Strategy",
+      "Cultural Sensitivity Marketing",
+      "Local Business Promotion",
+      "Brand Storytelling",
+      "Project Management"
+    ],
+    impact: {
+      quantified_metrics: [
+        "Produced high-quality video advertisement showcasing authentic indigenous coffee house experience",
+        "Successfully directed and coordinated complete advertising campaign from concept to delivery", 
+        "Created compelling marketing asset suitable for multiple advertising platforms and channels",
+        "Delivered professional video content highlighting unique cultural atmosphere and community connection",
+        "Developed advertising material supporting overall brand positioning for KahPeeh kah-Ahn Coffee House"
+      ],
+      qualitative_outcomes: [
+        "Enhanced brand storytelling through authentic visual representation of indigenous hospitality",
+        "Strengthened marketing portfolio with professional video advertisement showcasing cultural sensitivity",
+        "Elevated coffee house brand presence through high-quality advertising content creation",
+        "Demonstrated comprehensive video production capabilities from direction through post-production",
+        "Created sustainable advertising framework for ongoing indigenous business marketing initiatives"
+      ]
+    }
+  },
+  {
+    id: 5,
     title: "Adobe Creative Suite Instagram Reels",
     category: "Social Media Content & Campaigns",
     client: "Adobe",
