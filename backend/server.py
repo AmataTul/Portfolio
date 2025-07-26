@@ -24,7 +24,7 @@ from models import (
     Education, EducationCreate,
     Tool, ToolCreate,
     Brand, BrandCreate,
-    AnalyticsData
+    AnalyticsData, ImpactData
 )
 
 
