@@ -120,6 +120,7 @@ export const portfolioProjects = [
     title: "Disney+ Digital Campaign Launch",
     category: "Advertising",
     client: "Disney",
+    project_type: "Multi-Platform Digital Advertising",
     description: "Multi-platform digital advertising campaign for Disney+ streaming service, including display ads, video commercials, and interactive banners.",
     images: [
       "https://images.unsplash.com/photo-1489399627699-e5c5f1e8f6c6?w=800&h=600&fit=crop",
@@ -127,7 +128,39 @@ export const portfolioProjects = [
     ],
     type: "image",
     featured: true,
-    orientation: "horizontal"
+    orientation: "horizontal",
+    key_contributions: [
+      "Designed comprehensive digital ad campaign across Google, Facebook, and YouTube platforms",
+      "Created interactive banner advertisements with click-through optimization",
+      "Developed video commercial concepts aligned with Disney+ brand guidelines",
+      "Implemented A/B testing strategy for ad creative optimization",
+      "Coordinated with media buying team for optimal campaign placement and timing"
+    ],
+    skills_utilized: [
+      "Digital Advertising",
+      "Google Ads",
+      "Facebook Ads Manager",
+      "YouTube Advertising",
+      "A/B Testing",
+      "Campaign Optimization",
+      "Creative Strategy",
+      "Adobe Creative Suite",
+      "Performance Analytics"
+    ],
+    impact: {
+      quantified_metrics: [
+        "150% increase in Disney+ subscription sign-ups during campaign period",
+        "45% improvement in click-through rates compared to previous campaigns",
+        "2.8M+ impressions across all digital platforms",
+        "25% reduction in cost-per-acquisition through optimization"
+      ],
+      qualitative_outcomes: [
+        "Successfully launched Disney+ to new market segments",
+        "Enhanced brand awareness in competitive streaming market",
+        "Established Disney+ as premium entertainment platform",
+        "Strengthened customer engagement through interactive ad experiences"
+      ]
+    }
   },
   {
     id: 4,
