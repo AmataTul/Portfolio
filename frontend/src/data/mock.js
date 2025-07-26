@@ -123,28 +123,30 @@ export const portfolioProjects = [
     // Dual-section project structure
     dualSections: {
       analyticsSection: {
-        title: "Data Analytics & Market Research",
-        description: "Consumer behavior analysis and strategic insights using SQL, Tableau, and advanced data visualization to optimize celebrity collaboration campaigns",
+        title: "Analytics & Research - Data Analysis & Presentations",
+        description: "Consumer behavior analysis, strategic insights, and comprehensive presentations using SQL, Tableau, and advanced data visualization to optimize celebrity collaboration campaigns",
         images: [
-          "/beats0.jpg", // Analytics dashboard images
-          "/beats2.jpg", // Market research visualizations
-          "/beats4.jpg"  // Consumer data analysis
+          "/beats0.jpg", // Analytics dashboard image 1
+          "/beats2.jpg", // Market research visualization 2  
+          "/beats4.jpg", // Consumer data analysis 3
+          "/beats6.jpg"  // Horizontal presentation image 4
         ],
+        layout: "mixed", // Indicates mixed layouts (3 square + 1 horizontal)
         highlights: [
           "SQL database analysis for Gen Z consumer behavior patterns",
-          "Tableau data visualizations revealing key market insights",
+          "Tableau data visualizations revealing key market insights", 
           "Celebrity partnership effectiveness research and trend analysis",
-          "Competitive market positioning analysis and strategic recommendations"
+          "Comprehensive presentations and strategic recommendations"
         ]
       },
       brandingSection: {
         title: "Graphic Design & Brand Materials",
         description: "Creative visual identity development and marketing materials design for the Kim Kardashian x Beats by Dre limited edition collaboration",
         images: [
-          "/beats.jpg",  // Brand identity designs
-          "/beats3.jpg", // Marketing materials
-          "/beats5.jpg"  // Campaign visuals
+          "/beats.jpg",  // Vertical brand identity design
+          "/beats3.jpg"  // Horizontal marketing materials
         ],
+        layout: "vertical_horizontal", // Indicates 1 vertical + 1 horizontal
         highlights: [
           "Cohesive visual identity system for limited edition product line",
           "High-impact digital advertisements and social media campaign visuals",
