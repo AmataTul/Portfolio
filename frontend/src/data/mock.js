@@ -426,67 +426,54 @@ export const portfolioProjects = [
       videosTitle: "Top 6 Community-Engaging TikTok Videos",
       videosSubtitle: "Each video celebrates indigenous entrepreneurship while driving measurable business results",
       
-      // Easy-to-customize video array - you can replace thumbnails and URLs here
       videos: [
         {
           id: 1,
-          title: "Coffee House Community Moment #1",
-          // REPLACE THIS URL with your actual TikTok video URL
+          title: "Customer Experience Showcase",
           url: "https://www.tiktok.com/@kahpeehkahahn/video/7471801091441659178",
-          // REPLACE THIS THUMBNAIL with your actual screenshot
-          thumbnail: "PLACEHOLDER_THUMBNAIL_1", // You can replace this with your screenshot
-          description: "Top engagement organic content showcasing coffee house atmosphere",
-          type: "organic_content"
+          thumbnail: "PLACEHOLDER_THUMBNAIL_1", // User can replace with screenshot
+          description: "Customer perspective video showing coffee house staff, drinks, menu, internal and external design, and location. Features authentic customer interaction highlighting the welcoming atmosphere and quality service.",
+          type: "customer_experience"
         },
         {
           id: 2,
-          title: "Coffee House Community Moment #2", 
-          // REPLACE THIS URL with your actual TikTok video URL
+          title: "Marylin Monroe Signature Drink",
           url: "https://www.tiktok.com/@kahpeehkahahn/video/7409139284403408159",
-          // REPLACE THIS THUMBNAIL with your actual screenshot
-          thumbnail: "PLACEHOLDER_THUMBNAIL_2", // You can replace this with your screenshot
-          description: "Strategic advertising content for event promotion",
-          type: "strategic_ad"
+          thumbnail: "PLACEHOLDER_THUMBNAIL_2", // User can replace with screenshot
+          description: "Behind-the-scenes video featuring me and the coffee house manager creating the Marylin Monroe - the most popular and beloved drink by our customers. Shows the craftsmanship and care that goes into every signature beverage.",
+          type: "signature_product"
         },
         {
           id: 3,
-          title: "Coffee House Community Moment #3",
-          // REPLACE THIS URL with your actual TikTok video URL
-          url: "https://www.tiktok.com/@kahpeehkahahn/video/7390967071472946462", 
-          // REPLACE THIS THUMBNAIL with your actual screenshot
-          thumbnail: "PLACEHOLDER_THUMBNAIL_3", // You can replace this with your screenshot
-          description: "Community engagement organic content featuring local customers",
-          type: "organic_content"
+          title: "4th of July Northern Ute Powwow Celebration",
+          url: "https://www.tiktok.com/@kahpeehkahahn/video/7390967071472946462",
+          thumbnail: "PLACEHOLDER_THUMBNAIL_3", // User can replace with screenshot
+          description: "Annual Northern Ute celebration event where I promoted both the powwow and our coffee house trailer. Features customer engagement, traditional dances, cultural celebration, and authentic Ute tribal ways while showcasing our community presence.",
+          type: "cultural_event"
         },
         {
           id: 4,
-          title: "Coffee House Community Moment #4",
-          // REPLACE THIS URL with your actual TikTok video URL
+          title: "Barista Behind the Scenes",
           url: "https://www.tiktok.com/@kahpeehkahahn/video/7406134372803382559",
-          // REPLACE THIS THUMBNAIL with your actual screenshot
-          thumbnail: "PLACEHOLDER_THUMBNAIL_4", // You can replace this with your screenshot
-          description: "Mobile trailer event promotion organic content",
-          type: "organic_content"
+          thumbnail: "PLACEHOLDER_THUMBNAIL_4", // User can replace with screenshot
+          description: "Professional barista content showing drink preparation, coffee crafting techniques, and behind-the-scenes operations that make our coffee house special. Highlights the skill and dedication of our team.",
+          type: "behind_scenes"
         },
         {
           id: 5,
-          title: "Coffee House Community Moment #5",
-          // REPLACE THIS URL with your actual TikTok video URL
+          title: "New Year Customer Appreciation",
           url: "https://www.tiktok.com/@kahpeehkahahn/video/7396130080369528094",
-          // REPLACE THIS THUMBNAIL with your actual screenshot
-          thumbnail: "PLACEHOLDER_THUMBNAIL_5", // You can replace this with your screenshot
-          description: "Indigenous business celebration organic content", 
-          type: "organic_content"
+          thumbnail: "PLACEHOLDER_THUMBNAIL_5", // User can replace with screenshot
+          description: "Special customer appreciation content created for New Year celebrations, thanking our loyal community for their continued support and showcasing the strong bonds between our coffee house and local customers.",
+          type: "customer_appreciation"
         },
         {
           id: 6,
-          title: "Coffee House Community Moment #6",
-          // REPLACE THIS URL with your actual TikTok video URL
+          title: "Community Event Coordination",
           url: "https://www.tiktok.com/@kahpeehkahahn/video/7452207220508347691",
-          // REPLACE THIS THUMBNAIL with your actual screenshot
-          thumbnail: "PLACEHOLDER_THUMBNAIL_6", // You can replace this with your screenshot  
-          description: "Community event coordination organic content",
-          type: "organic_content"
+          thumbnail: "PLACEHOLDER_THUMBNAIL_6", // User can replace with screenshot
+          description: "Community event coordination showcase highlighting our mobile trailer services and community engagement initiatives that bring quality coffee directly to local gatherings and celebrations.",
+          type: "community_outreach"
         }
       ]
     }
