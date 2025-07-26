@@ -1928,6 +1928,205 @@ class BackendTester:
             self.log_test("Coffee House Projects CRUD Operations", False, f"Request failed: {str(e)}")
             return False
 
+    def test_coffee_house_tiktok_project(self):
+        """Test TikTok Campaign Project (ID: 8) with combinedTikTokSection and 6 videos"""
+        try:
+            # Test GET /api/projects/8
+            response = self.session.get(f"{API_BASE_URL}/projects/8", timeout=10)
+            if response.status_code == 200:
+                project = response.json()
+                
+                # Verify project exists with ID "8"
+                if project.get('id') != "8":
+                    self.log_test("Coffee House TikTok Project - ID Check", False, 
+                                f"Expected ID '8', got '{project.get('id')}'")
+                    return False
+                
+                # Check for combinedTikTokSection
+                combined_section = project.get('combinedTikTokSection')
+                if not combined_section:
+                    self.log_test("Coffee House TikTok Project - Combined Section", False, 
+                                "Missing 'combinedTikTokSection' field")
+                    return False
+                
+                # Verify 6 videos exist
+                if not isinstance(combined_section, list) or len(combined_section) != 6:
+                    self.log_test("Coffee House TikTok Project - Video Count", False, 
+                                f"Expected 6 videos in combinedTikTokSection, got {len(combined_section) if isinstance(combined_section, list) else 'not a list'}")
+                    return False
+                
+                # Verify specific video descriptions
+                expected_descriptions = [
+                    "Customer Experience Showcase",
+                    "Marylin Monroe Signature Drink", 
+                    "4th of July Northern Ute Powwow",
+                    "Barista Behind the Scenes",
+                    "New Year Customer Appreciation",
+                    "Community Event Coordination"
+                ]
+                
+                found_descriptions = []
+                for video in combined_section:
+                    if isinstance(video, dict):
+                        desc = video.get('description', '')
+                        found_descriptions.append(desc)
+                
+                missing_descriptions = []
+                for expected in expected_descriptions:
+                    found = False
+                    for found_desc in found_descriptions:
+                        if expected.lower() in found_desc.lower():
+                            found = True
+                            break
+                    if not found:
+                        missing_descriptions.append(expected)
+                
+                if missing_descriptions:
+                    self.log_test("Coffee House TikTok Project - Video Descriptions", False, 
+                                f"Missing expected video descriptions: {missing_descriptions}")
+                    return False
+                
+                self.log_test("Coffee House TikTok Project", True, 
+                            f"TikTok project (ID: 8) found with combinedTikTokSection containing 6 videos with correct descriptions")
+                return True
+                
+            elif response.status_code == 404:
+                self.log_test("Coffee House TikTok Project", False, 
+                            "TikTok Campaign Project with ID '8' not found")
+                return False
+            else:
+                self.log_test("Coffee House TikTok Project", False, 
+                            f"Status {response.status_code}: {response.text}")
+                return False
+                
+        except requests.exceptions.RequestException as e:
+            self.log_test("Coffee House TikTok Project", False, f"Request failed: {str(e)}")
+            return False
+    
+    def test_coffee_house_advertising_project(self):
+        """Test Advertising Campaign Project (ID: 4) with videos array and additionalProject section"""
+        try:
+            # Test GET /api/projects/4
+            response = self.session.get(f"{API_BASE_URL}/projects/4", timeout=10)
+            if response.status_code == 200:
+                project = response.json()
+                
+                # Verify project exists with ID "4"
+                if project.get('id') != "4":
+                    self.log_test("Coffee House Advertising Project - ID Check", False, 
+                                f"Expected ID '4', got '{project.get('id')}'")
+                    return False
+                
+                # Check for videos array with 2 videos
+                videos = project.get('videos')
+                if not videos:
+                    self.log_test("Coffee House Advertising Project - Videos Array", False, 
+                                "Missing 'videos' array field")
+                    return False
+                
+                if not isinstance(videos, list) or len(videos) != 2:
+                    self.log_test("Coffee House Advertising Project - Video Count", False, 
+                                f"Expected 2 videos in videos array, got {len(videos) if isinstance(videos, list) else 'not a list'}")
+                    return False
+                
+                # Check for additionalProject section for Ute Crossing Grill
+                additional_project = project.get('additionalProject')
+                if not additional_project:
+                    self.log_test("Coffee House Advertising Project - Additional Project", False, 
+                                "Missing 'additionalProject' section")
+                    return False
+                
+                # Verify Ute Crossing Grill details in additionalProject
+                if isinstance(additional_project, dict):
+                    additional_desc = str(additional_project)
+                    if "ute crossing grill" not in additional_desc.lower():
+                        self.log_test("Coffee House Advertising Project - Ute Crossing Grill", False, 
+                                    "additionalProject section missing Ute Crossing Grill details")
+                        return False
+                
+                # Confirm videoUrl field is NOT present (YouTube links removed)
+                if 'videoUrl' in project:
+                    self.log_test("Coffee House Advertising Project - VideoUrl Removal", False, 
+                                "videoUrl field should be removed but still present")
+                    return False
+                
+                # Check description includes "team", "editors", "large-scale advertising"
+                description = project.get('description', '').lower()
+                required_terms = ['team', 'editors']
+                missing_terms = []
+                for term in required_terms:
+                    if term not in description:
+                        missing_terms.append(term)
+                
+                if missing_terms:
+                    self.log_test("Coffee House Advertising Project - Description Terms", False, 
+                                f"Description missing required terms: {missing_terms}")
+                    return False
+                
+                self.log_test("Coffee House Advertising Project", True, 
+                            f"Advertising project (ID: 4) found with videos array (2 videos), additionalProject section, no videoUrl field, and proper description")
+                return True
+                
+            elif response.status_code == 404:
+                self.log_test("Coffee House Advertising Project", False, 
+                            "Advertising Campaign Project with ID '4' not found")
+                return False
+            else:
+                self.log_test("Coffee House Advertising Project", False, 
+                            f"Status {response.status_code}: {response.text}")
+                return False
+                
+        except requests.exceptions.RequestException as e:
+            self.log_test("Coffee House Advertising Project", False, f"Request failed: {str(e)}")
+            return False
+    
+    def test_coffee_house_projects_in_list(self):
+        """Test that both coffee house projects appear in GET /api/projects"""
+        try:
+            response = self.session.get(f"{API_BASE_URL}/projects", timeout=10)
+            if response.status_code == 200:
+                projects = response.json()
+                
+                # Look for both projects
+                tiktok_project = None
+                advertising_project = None
+                
+                for project in projects:
+                    project_id = project.get('id')
+                    if project_id == "8":
+                        tiktok_project = project
+                    elif project_id == "4":
+                        advertising_project = project
+                
+                results = []
+                if tiktok_project:
+                    results.append("TikTok project (ID: 8) found")
+                else:
+                    results.append("❌ TikTok project (ID: 8) missing")
+                
+                if advertising_project:
+                    results.append("Advertising project (ID: 4) found")
+                else:
+                    results.append("❌ Advertising project (ID: 4) missing")
+                
+                if tiktok_project and advertising_project:
+                    self.log_test("Coffee House Projects in List", True, 
+                                f"Both coffee house projects found in projects list. {'; '.join(results)}")
+                    return True
+                else:
+                    self.log_test("Coffee House Projects in List", False, 
+                                f"Missing coffee house projects. {'; '.join(results)}")
+                    return False
+                
+            else:
+                self.log_test("Coffee House Projects in List", False, 
+                            f"Status {response.status_code}: {response.text}")
+                return False
+                
+        except requests.exceptions.RequestException as e:
+            self.log_test("Coffee House Projects in List", False, f"Request failed: {str(e)}")
+            return False
+
     def run_all_tests(self):
         """Run all backend tests"""
         print(f"\n🚀 Starting Backend API Tests")
