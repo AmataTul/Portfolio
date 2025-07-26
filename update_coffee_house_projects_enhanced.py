@@ -236,8 +236,8 @@ def main():
     print("   - Made content professional, SEO-optimized, and recruiter-friendly")
     
     # Verify the updates
-    tiktok_check = projects_collection.find_one({"project_id": "8"})
-    advertising_check = projects_collection.find_one({"project_id": "4"})
+    tiktok_check = projects_collection.find_one({"id": "8"})
+    advertising_check = projects_collection.find_one({"id": "4"})
     
     print(f"\n📊 Verification:")
     print(f"   TikTok Project: {'✅ Found' if tiktok_check else '❌ Not found'}")
