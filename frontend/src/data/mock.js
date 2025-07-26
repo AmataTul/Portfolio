@@ -29,7 +29,6 @@ export const portfolioProjects = [
       communityImpact: "Strengthened connections between youth and tribal heritage while promoting educational tourism"
     }
   },
-  {
 {
   id: 2,
   title: "Beats by Dre Brand Identity System",
@@ -47,19 +46,26 @@ export const portfolioProjects = [
   type: "image",
   featured: true,
   orientation: "horizontal",
-  educationalImpact: {
-    program: "Beats By Dre Strategy & Business Analytics Externship",
-    participants: "Externship Cohort Members",
-    focus: "Marketing Strategy & Visual Identity",
-    activities: [
-      "Brand design aligned with product aesthetics",
-      "Gen Z trend analysis and platform targeting",
-      "Competitor and web traffic evaluation"
-    ],
-    communityImpact: "Supported inclusive brand positioning and youth-focused marketing strategies"
-  }
-},
+  program: "Beats Strategy & Analytics Externship",
+  focus: "Marketing, Branding & Trend Analysis",
+  myRole: "Created campaign visuals & conducted audience research"
+}, // здесь запятая
 
+{
+  id: 3,
+  title: "Disney+ Digital Campaign Launch",
+  category: "Advertising",
+  client: "Disney",
+  description: "Multi-platform digital advertising campaign for Disney+ streaming service, including display ads, video commercials, and interactive banners.",
+  images: [
+    "https://images.unsplash.com/photo-1489399627699-e5c5f1e8f6c6?w=800&h=600&fit=crop",
+    "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop"
+  ],
+  type: "image",
+  featured: true,
+  orientation: "horizontal"
+},
+  {
     id: 3,
     title: "Disney+ Digital Campaign Launch",
     category: "Advertising",
