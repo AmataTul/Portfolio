@@ -1177,7 +1177,296 @@ class BackendTester:
             self.log_test("Featured Projects Marking", False, f"Request failed: {str(e)}")
             return False
     
-    def test_database_consistency(self):
+    def test_enhanced_project_fields_creation(self):
+        """Test creating a project with enhanced fields (project_type, key_contributions, skills_utilized, impact)"""
+        try:
+            enhanced_project_data = {
+                "title": "Enhanced Marketing Campaign with Analytics",
+                "category": "Business Analytics & Strategy",
+                "client": "Enhanced Test Client",
+                "description": "A comprehensive marketing campaign with detailed analytics and impact tracking.",
+                "images": ["https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"],
+                "project_type": "Strategic Marketing Analytics",  # Enhanced field
+                "type": "analytics",
+                "featured": True,
+                "orientation": "horizontal",
+                "key_contributions": [  # Enhanced field
+                    "Developed comprehensive market analysis strategy",
+                    "Implemented advanced analytics tracking system",
+                    "Created data-driven campaign optimization framework"
+                ],
+                "skills_utilized": [  # Enhanced field
+                    "Google Analytics",
+                    "Data Visualization",
+                    "Strategic Planning",
+                    "Market Research",
+                    "Campaign Optimization"
+                ],
+                "impact": {  # Enhanced field
+                    "quantified_metrics": [
+                        "300% increase in engagement rate",
+                        "85% boost in conversion rate",
+                        "150% improvement in ROI"
+                    ],
+                    "qualitative_outcomes": [
+                        "Enhanced brand awareness and recognition",
+                        "Improved customer experience and satisfaction",
+                        "Strengthened market positioning"
+                    ]
+                }
+            }
+            
+            response = self.session.post(f"{API_BASE_URL}/projects", json=enhanced_project_data, timeout=10)
+            if response.status_code == 200:
+                project = response.json()
+                
+                # Verify all enhanced fields are present and correct
+                if (project.get('id') and 
+                    project.get('title') == enhanced_project_data['title'] and
+                    project.get('project_type') == enhanced_project_data['project_type'] and
+                    project.get('key_contributions') == enhanced_project_data['key_contributions'] and
+                    project.get('skills_utilized') == enhanced_project_data['skills_utilized'] and
+                    project.get('impact') == enhanced_project_data['impact']):
+                    
+                    self.created_enhanced_project_id = project['id']
+                    self.log_test("Enhanced Project Fields Creation", True, 
+                                f"Project with enhanced fields created successfully. ID: {project['id']}")
+                    return project
+                else:
+                    missing_fields = []
+                    if not project.get('project_type'): missing_fields.append('project_type')
+                    if not project.get('key_contributions'): missing_fields.append('key_contributions')
+                    if not project.get('skills_utilized'): missing_fields.append('skills_utilized')
+                    if not project.get('impact'): missing_fields.append('impact')
+                    
+                    self.log_test("Enhanced Project Fields Creation", False, 
+                                f"Enhanced fields missing or incorrect: {missing_fields}")
+                    return None
+            else:
+                self.log_test("Enhanced Project Fields Creation", False, 
+                            f"Status {response.status_code}: {response.text}")
+                return None
+        except requests.exceptions.RequestException as e:
+            self.log_test("Enhanced Project Fields Creation", False, f"Request failed: {str(e)}")
+            return None
+    
+    def test_enhanced_project_fields_retrieval(self):
+        """Test retrieving a project with enhanced fields"""
+        if not hasattr(self, 'created_enhanced_project_id') or not self.created_enhanced_project_id:
+            self.log_test("Enhanced Project Fields Retrieval", False, "No enhanced project ID available for testing")
+            return False
+        
+        try:
+            response = self.session.get(f"{API_BASE_URL}/projects/{self.created_enhanced_project_id}", timeout=10)
+            if response.status_code == 200:
+                project = response.json()
+                
+                # Verify all enhanced fields are preserved
+                enhanced_fields_present = (
+                    project.get('project_type') == "Strategic Marketing Analytics" and
+                    isinstance(project.get('key_contributions'), list) and len(project.get('key_contributions', [])) == 3 and
+                    isinstance(project.get('skills_utilized'), list) and len(project.get('skills_utilized', [])) == 5 and
+                    isinstance(project.get('impact'), dict) and
+                    isinstance(project.get('impact', {}).get('quantified_metrics'), list) and
+                    isinstance(project.get('impact', {}).get('qualitative_outcomes'), list)
+                )
+                
+                if enhanced_fields_present:
+                    self.log_test("Enhanced Project Fields Retrieval", True, 
+                                "All enhanced fields retrieved correctly with proper data types")
+                    return True
+                else:
+                    self.log_test("Enhanced Project Fields Retrieval", False, 
+                                f"Enhanced fields not properly preserved. Project: {project}")
+                    return False
+            else:
+                self.log_test("Enhanced Project Fields Retrieval", False, 
+                            f"Status {response.status_code}: {response.text}")
+                return False
+        except requests.exceptions.RequestException as e:
+            self.log_test("Enhanced Project Fields Retrieval", False, f"Request failed: {str(e)}")
+            return False
+    
+    def test_impact_data_model_validation(self):
+        """Test that ImpactData model is working correctly with both quantified and qualitative data"""
+        try:
+            # Test creating a project with only quantified metrics
+            quantified_only_data = {
+                "title": "Quantified Impact Test Project",
+                "category": "Business Analytics & Strategy",
+                "client": "Test Analytics Client",
+                "description": "Testing quantified metrics only",
+                "images": ["https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"],
+                "project_type": "Analytics Testing",
+                "type": "analytics",
+                "impact": {
+                    "quantified_metrics": [
+                        "200% increase in traffic",
+                        "50% reduction in bounce rate"
+                    ]
+                    # No qualitative_outcomes
+                }
+            }
+            
+            response = self.session.post(f"{API_BASE_URL}/projects", json=quantified_only_data, timeout=10)
+            if response.status_code == 200:
+                project = response.json()
+                impact = project.get('impact', {})
+                
+                if (isinstance(impact.get('quantified_metrics'), list) and 
+                    len(impact.get('quantified_metrics', [])) == 2 and
+                    impact.get('qualitative_outcomes') is None):
+                    
+                    self.log_test("Impact Data Model Validation", True, 
+                                "ImpactData model correctly handles quantified metrics only")
+                    
+                    # Clean up test project
+                    self.session.delete(f"{API_BASE_URL}/projects/{project['id']}")
+                    return True
+                else:
+                    self.log_test("Impact Data Model Validation", False, 
+                                f"ImpactData model validation failed. Impact: {impact}")
+                    return False
+            else:
+                self.log_test("Impact Data Model Validation", False, 
+                            f"Status {response.status_code}: {response.text}")
+                return False
+        except requests.exceptions.RequestException as e:
+            self.log_test("Impact Data Model Validation", False, f"Request failed: {str(e)}")
+            return False
+    
+    def test_project_type_categorization(self):
+        """Test that project_type field provides better categorization than basic type"""
+        try:
+            # Get all projects and check for project_type diversity
+            response = self.session.get(f"{API_BASE_URL}/projects", timeout=10)
+            if response.status_code == 200:
+                projects = response.json()
+                project_types = set()
+                projects_with_project_type = 0
+                
+                for project in projects:
+                    project_type = project.get('project_type')
+                    if project_type:
+                        project_types.add(project_type)
+                        projects_with_project_type += 1
+                
+                if projects_with_project_type > 0:
+                    self.log_test("Project Type Categorization", True, 
+                                f"Found {projects_with_project_type} projects with project_type field. Types: {list(project_types)}")
+                    return True
+                else:
+                    self.log_test("Project Type Categorization", True, 
+                                "No existing projects have project_type field (expected for legacy data)")
+                    return True
+            else:
+                self.log_test("Project Type Categorization", False, 
+                            f"Status {response.status_code}: {response.text}")
+                return False
+        except requests.exceptions.RequestException as e:
+            self.log_test("Project Type Categorization", False, f"Request failed: {str(e)}")
+            return False
+    
+    def test_backward_compatibility(self):
+        """Test that existing projects without enhanced fields still work"""
+        try:
+            # Get existing projects (should be legacy projects without enhanced fields)
+            response = self.session.get(f"{API_BASE_URL}/projects", timeout=10)
+            if response.status_code == 200:
+                projects = response.json()
+                legacy_projects = []
+                
+                for project in projects:
+                    # Check if project lacks enhanced fields (legacy project)
+                    if (not project.get('key_contributions') and 
+                        not project.get('skills_utilized') and 
+                        not project.get('impact')):
+                        legacy_projects.append(project)
+                
+                if len(legacy_projects) > 0:
+                    # Test that we can still retrieve and update legacy projects
+                    test_project = legacy_projects[0]
+                    project_id = test_project['id']
+                    
+                    # Test individual retrieval
+                    response = self.session.get(f"{API_BASE_URL}/projects/{project_id}", timeout=10)
+                    if response.status_code == 200:
+                        retrieved_project = response.json()
+                        
+                        # Test updating legacy project (should work without enhanced fields)
+                        update_data = {"description": "Updated legacy project description"}
+                        response = self.session.put(f"{API_BASE_URL}/projects/{project_id}", json=update_data, timeout=10)
+                        
+                        if response.status_code == 200:
+                            self.log_test("Backward Compatibility", True, 
+                                        f"Legacy projects work correctly. Tested with: {test_project['title']}")
+                            return True
+                        else:
+                            self.log_test("Backward Compatibility", False, 
+                                        f"Failed to update legacy project: {response.status_code}")
+                            return False
+                    else:
+                        self.log_test("Backward Compatibility", False, 
+                                    f"Failed to retrieve legacy project: {response.status_code}")
+                        return False
+                else:
+                    self.log_test("Backward Compatibility", True, 
+                                "No legacy projects found (all projects have enhanced fields)")
+                    return True
+            else:
+                self.log_test("Backward Compatibility", False, 
+                            f"Status {response.status_code}: {response.text}")
+                return False
+        except requests.exceptions.RequestException as e:
+            self.log_test("Backward Compatibility", False, f"Request failed: {str(e)}")
+            return False
+
+    def test_social_media_tiktok_integration_focus(self):
+        """Test the specific Social Media TikTok Video URL Integration task that needs retesting"""
+        try:
+            # Check for KahPeeh Kah-Ahn Coffee House project specifically
+            response = self.session.get(f"{API_BASE_URL}/projects", timeout=10)
+            if response.status_code == 200:
+                projects = response.json()
+                kahpeeh_project = None
+                social_media_projects = []
+                
+                for project in projects:
+                    title = project.get('title', '')
+                    category = project.get('category', '')
+                    
+                    # Look for KahPeeh project specifically
+                    if "KahPeeh" in title or "Coffee House" in title:
+                        kahpeeh_project = project
+                    
+                    # Count social media projects
+                    if category == "Social Media Content & Campaigns":
+                        social_media_projects.append(project)
+                
+                # Check if the main KahPeeh project exists with TikTok URL
+                if kahpeeh_project:
+                    video_url = kahpeeh_project.get('videoUrl', '')
+                    expected_url = "https://www.tiktok.com/@kahpeehkahahn/video/7409139284403408159"
+                    
+                    if video_url == expected_url:
+                        self.log_test("Social Media TikTok Integration Focus", True, 
+                                    f"KahPeeh project found with correct TikTok URL: {video_url}")
+                        return True
+                    else:
+                        self.log_test("Social Media TikTok Integration Focus", False, 
+                                    f"KahPeeh project found but TikTok URL incorrect. Expected: {expected_url}, Got: {video_url}")
+                        return False
+                else:
+                    self.log_test("Social Media TikTok Integration Focus", False, 
+                                f"KahPeeh Kah-Ahn Coffee House project not found. Found {len(social_media_projects)} social media projects total")
+                    return False
+            else:
+                self.log_test("Social Media TikTok Integration Focus", False, 
+                            f"Status {response.status_code}: {response.text}")
+                return False
+        except requests.exceptions.RequestException as e:
+            self.log_test("Social Media TikTok Integration Focus", False, f"Request failed: {str(e)}")
+            return False
         """Test database consistency and connection"""
         try:
             # Test multiple endpoints to ensure database is consistent
