@@ -655,18 +655,18 @@ export const portfolioProjects = [
     project_type: "Digital Menu Design & Management",
     description: "Comprehensive digital drive thru menu design project for KahPeeh kah-Ahn Ute Coffee House & Soda, creating visually appealing and user-friendly menu displays for their drive-through service. I designed and managed the complete digital menu system, incorporating the coffee house's indigenous branding and cultural elements while ensuring optimal readability and customer experience. The project included creating multiple menu layouts, seasonal variations, and promotional displays that celebrate the unique indigenous coffee house experience while maintaining professional food service standards.",
     images: [
-      "PLACEHOLDER_VERTICAL_1", // Digital menu board design - vertical
-      "PLACEHOLDER_VERTICAL_2", // Coffee specialty drinks menu - vertical  
-      "PLACEHOLDER_VERTICAL_3", // Food items and snacks menu - vertical
-      "PLACEHOLDER_VERTICAL_4", // Seasonal promotions menu - vertical
-      "PLACEHOLDER_VERTICAL_5", // Cultural branding elements - vertical
-      "PLACEHOLDER_HORIZONTAL_1", // Full drive thru menu layout - horizontal
-      "PLACEHOLDER_HORIZONTAL_2", // Digital display mockup - horizontal
-      "PLACEHOLDER_HORIZONTAL_3", // Menu system overview - horizontal
+      "PLACEHOLDER_IMAGE_1", // Digital menu board design - flexible size
+      "PLACEHOLDER_IMAGE_2", // Coffee specialty drinks menu - flexible size  
+      "PLACEHOLDER_IMAGE_3", // Food items and snacks menu - flexible size
+      "PLACEHOLDER_IMAGE_4", // Seasonal promotions menu - flexible size
+      "PLACEHOLDER_IMAGE_5", // Cultural branding elements - flexible size
+      "PLACEHOLDER_IMAGE_6", // Full drive thru menu layout - flexible size
+      "PLACEHOLDER_IMAGE_7", // Digital display mockup - flexible size
+      "PLACEHOLDER_IMAGE_8", // Menu system overview - flexible size
     ],
     type: "design",
     featured: true,
-    orientation: "mixed",
+    orientation: "mixed", // Supports both vertical and horizontal images
     keyContributions: [
       "Designed comprehensive digital drive thru menu system incorporating indigenous branding and cultural elements",
       "Created visually appealing menu layouts optimized for drive-through customer experience and readability",
