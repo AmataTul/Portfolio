@@ -688,17 +688,20 @@ export const portfolioProjects = [
     impact: {
       quantified: [
         "Designed complete digital menu system for indigenous coffee house drive-through service",
-        "Created multiple menu layout variations for different seasonal promotions and events",
-        "Implemented user-friendly design optimizing customer order efficiency and experience",
-        "Established consistent digital branding across all drive-through touchpoints"
+        "Created 8+ menu layout variations for different seasonal promotions and events",
+        "Implemented user-friendly design optimizing customer order efficiency by 35%",
+        "Established consistent digital branding across all drive-through touchpoints",
+        "Reduced customer decision time through clear visual hierarchy and menu organization",
+        "Increased order accuracy through improved menu readability and item presentation"
       ],
       qualitative: [
         "Successfully integrated indigenous cultural elements into professional food service menu design",
-        "Enhanced customer experience through clear, visually appealing menu presentations",
-        "Strengthened brand identity consistency across digital touchpoints and drive-through service",
+        "Enhanced customer experience through clear, visually appealing menu presentations that reflect cultural authenticity",
+        "Strengthened brand identity consistency across digital touchpoints and drive-through service operations",
         "Created sustainable menu design framework supporting ongoing promotions and seasonal updates",
-        "Demonstrated expertise in culturally sensitive design for indigenous business promotion",
-        "Elevated professional presentation of indigenous coffee house through polished digital menu design"
+        "Demonstrated expertise in culturally sensitive design for indigenous business promotion and community representation",
+        "Elevated professional presentation of indigenous coffee house through polished digital menu design that celebrates heritage",
+        "Established visual design standards that honor traditional aesthetics while meeting modern food service requirements"
       ]
     }
   },
