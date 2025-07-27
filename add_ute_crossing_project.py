@@ -123,8 +123,8 @@ def add_ute_crossing_project():
 def update_project_ids():
     """Update other project IDs to maintain sequential order"""
     try:
-        client = get_mongo_client()
-        db = client.get_default_database()
+        # Connect to MongoDB with proper environment
+        db = get_database()
         collection = db.projects
         
         # Update project IDs as per the new structure
@@ -156,9 +156,6 @@ def update_project_ids():
     except Exception as e:
         print(f"❌ Error updating project IDs: {str(e)}")
         return False
-    finally:
-        if 'client' in locals():
-            client.close()
 
 if __name__ == "__main__":
     print("🔄 Adding Ute Crossing Grill & Ute Lanes project to MongoDB...")
