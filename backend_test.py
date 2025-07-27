@@ -2745,6 +2745,349 @@ class BackendTester:
             self.log_test("Ute Crossing Grill Comprehensive Verification", False, f"Error in comprehensive verification: {str(e)}")
             return False
 
+    def test_user_requested_updates(self):
+        """Test all user-requested updates from the review request"""
+        print("\n" + "=" * 80)
+        print("TESTING USER-REQUESTED UPDATES")
+        print("=" * 80)
+        
+        # 1. Ute Crossing Grill Project (ID: 5) - YouTube Button Removal
+        self.test_ute_crossing_grill_project_accessibility_review()
+        self.test_ute_crossing_grill_no_youtube_fields()
+        
+        # 2. Coffee House Advertising Project (ID: 4) - Thumbnail Update
+        self.test_coffee_house_advertising_thumbnail_update()
+        
+        # 3. Coffee House TikTok Project (ID: 10) - Description Cleanup
+        self.test_coffee_house_tiktok_description_cleanup()
+        
+        # 4. New Ute Bison Ranch Project (ID: 11) - Complete Creation
+        self.test_new_ute_bison_ranch_project_creation()
+        self.test_ute_bison_ranch_organic_content_structure()
+        
+        # 5. API Functionality - Total Projects Count and Category Filtering
+        self.test_total_projects_count_22()
+        self.test_category_filtering_includes_ute_bison()
+    
+    def test_ute_crossing_grill_project_accessibility_review(self):
+        """Test that Ute Crossing Grill project (ID: 5) is accessible"""
+        try:
+            response = self.session.get(f"{API_BASE_URL}/projects/5", timeout=10)
+            if response.status_code == 200:
+                project = response.json()
+                if project.get('id') == '5':
+                    title = project.get('title', '')
+                    if 'Ute Crossing Grill' in title:
+                        self.log_test("Ute Crossing Grill Project Accessibility (Review)", True, 
+                                    f"Project ID 5 accessible with title: {title}")
+                        return project
+                    else:
+                        self.log_test("Ute Crossing Grill Project Accessibility (Review)", False, 
+                                    f"Project ID 5 found but wrong title: {title}")
+                        return None
+                else:
+                    self.log_test("Ute Crossing Grill Project Accessibility (Review)", False, 
+                                f"ID mismatch: expected '5', got '{project.get('id')}'")
+                    return None
+            else:
+                self.log_test("Ute Crossing Grill Project Accessibility (Review)", False, 
+                            f"Status {response.status_code}: {response.text}")
+                return None
+        except requests.exceptions.RequestException as e:
+            self.log_test("Ute Crossing Grill Project Accessibility (Review)", False, f"Request failed: {str(e)}")
+            return None
+    
+    def test_ute_crossing_grill_no_youtube_fields(self):
+        """Test that Ute Crossing Grill project has no YouTube-specific fields"""
+        try:
+            project = self.test_ute_crossing_grill_project_accessibility_review()
+            if not project:
+                self.log_test("Ute Crossing Grill No YouTube Fields", False, 
+                            "Cannot test YouTube fields - project not accessible")
+                return False
+            
+            # Check that videoUrl does not contain "youtube"
+            video_url = project.get('videoUrl', '')
+            if video_url and 'youtube' in video_url.lower():
+                self.log_test("Ute Crossing Grill No YouTube Fields", False, 
+                            f"Project contains YouTube URL: {video_url}")
+                return False
+            
+            # Check video_url field as well
+            video_url_alt = project.get('video_url', '')
+            if video_url_alt and 'youtube' in video_url_alt.lower():
+                self.log_test("Ute Crossing Grill No YouTube Fields", False, 
+                            f"Project contains YouTube URL in video_url: {video_url_alt}")
+                return False
+            
+            # Check images array for YouTube URLs
+            images = project.get('images', [])
+            for image in images:
+                if isinstance(image, str) and 'youtube' in image.lower():
+                    self.log_test("Ute Crossing Grill No YouTube Fields", False, 
+                                f"Project contains YouTube URL in images: {image}")
+                    return False
+            
+            # Check description for YouTube references
+            description = project.get('description', '')
+            if 'youtube' in description.lower():
+                self.log_test("Ute Crossing Grill No YouTube Fields", False, 
+                            f"Project description contains YouTube reference")
+                return False
+            
+            self.log_test("Ute Crossing Grill No YouTube Fields", True, 
+                        "Project confirmed to have no YouTube-specific fields or references")
+            return True
+            
+        except Exception as e:
+            self.log_test("Ute Crossing Grill No YouTube Fields", False, f"Error checking YouTube fields: {str(e)}")
+            return False
+    
+    def test_coffee_house_advertising_thumbnail_update(self):
+        """Test that Coffee House Advertising Project (ID: 4) has updated thumbnail"""
+        try:
+            response = self.session.get(f"{API_BASE_URL}/projects/4", timeout=10)
+            if response.status_code == 200:
+                project = response.json()
+                if project.get('id') == '4':
+                    title = project.get('title', '')
+                    if 'Coffee House' in title and 'Advertisement' in title:
+                        # Check for updated thumbnail image
+                        thumbnail = project.get('thumbnail', '')
+                        images = project.get('images', [])
+                        
+                        # Look for the new coffee.jpg asset (kfmsk8rn_coffee.jpg)
+                        has_updated_thumbnail = False
+                        if 'kfmsk8rn_coffee.jpg' in thumbnail or 'coffee.jpg' in thumbnail:
+                            has_updated_thumbnail = True
+                        
+                        # Also check in images array
+                        for image in images:
+                            if isinstance(image, str) and ('kfmsk8rn_coffee.jpg' in image or 'coffee.jpg' in image):
+                                has_updated_thumbnail = True
+                                break
+                        
+                        if has_updated_thumbnail:
+                            self.log_test("Coffee House Advertising Thumbnail Update", True, 
+                                        f"Project has updated coffee.jpg thumbnail asset")
+                            return True
+                        else:
+                            self.log_test("Coffee House Advertising Thumbnail Update", False, 
+                                        f"Updated coffee.jpg thumbnail not found. Thumbnail: {thumbnail}")
+                            return False
+                    else:
+                        self.log_test("Coffee House Advertising Thumbnail Update", False, 
+                                    f"Project ID 4 found but wrong title: {title}")
+                        return False
+                else:
+                    self.log_test("Coffee House Advertising Thumbnail Update", False, 
+                                f"ID mismatch: expected '4', got '{project.get('id')}'")
+                    return False
+            else:
+                self.log_test("Coffee House Advertising Thumbnail Update", False, 
+                            f"Status {response.status_code}: {response.text}")
+                return False
+        except requests.exceptions.RequestException as e:
+            self.log_test("Coffee House Advertising Thumbnail Update", False, f"Request failed: {str(e)}")
+            return False
+    
+    def test_coffee_house_tiktok_description_cleanup(self):
+        """Test that Coffee House TikTok Project (ID: 10) has organized description with bullet points"""
+        try:
+            response = self.session.get(f"{API_BASE_URL}/projects/10", timeout=10)
+            if response.status_code == 200:
+                project = response.json()
+                if project.get('id') == '10':
+                    title = project.get('title', '')
+                    if 'Coffee House' in title and 'TikTok' in title:
+                        description = project.get('description', '')
+                        
+                        # Check for bullet point formatting (• bullets)
+                        has_bullet_points = '•' in description
+                        
+                        # Check for organized metrics formatting
+                        has_organized_metrics = any(metric_word in description.lower() 
+                                                  for metric_word in ['views', 'engagement', 'reach', 'metrics'])
+                        
+                        if has_bullet_points and has_organized_metrics:
+                            self.log_test("Coffee House TikTok Description Cleanup", True, 
+                                        f"Description has organized bullet points and clear metrics formatting")
+                            return True
+                        else:
+                            missing_elements = []
+                            if not has_bullet_points:
+                                missing_elements.append("bullet points (•)")
+                            if not has_organized_metrics:
+                                missing_elements.append("organized metrics")
+                            
+                            self.log_test("Coffee House TikTok Description Cleanup", False, 
+                                        f"Description missing: {', '.join(missing_elements)}")
+                            return False
+                    else:
+                        self.log_test("Coffee House TikTok Description Cleanup", False, 
+                                    f"Project ID 10 found but wrong title: {title}")
+                        return False
+                else:
+                    self.log_test("Coffee House TikTok Description Cleanup", False, 
+                                f"ID mismatch: expected '10', got '{project.get('id')}'")
+                    return False
+            else:
+                self.log_test("Coffee House TikTok Description Cleanup", False, 
+                            f"Status {response.status_code}: {response.text}")
+                return False
+        except requests.exceptions.RequestException as e:
+            self.log_test("Coffee House TikTok Description Cleanup", False, f"Request failed: {str(e)}")
+            return False
+    
+    def test_new_ute_bison_ranch_project_creation(self):
+        """Test that new Ute Bison Ranch Project (ID: 11) exists and is properly created"""
+        try:
+            response = self.session.get(f"{API_BASE_URL}/projects/11", timeout=10)
+            if response.status_code == 200:
+                project = response.json()
+                if project.get('id') == '11':
+                    title = project.get('title', '')
+                    category = project.get('category', '')
+                    client = project.get('client', '')
+                    
+                    # Verify it's the Ute Bison Ranch project
+                    if 'Ute Bison Ranch' in title:
+                        # Check category is "Social Media Content & Campaigns"
+                        if category == 'Social Media Content & Campaigns':
+                            # Check client is "Ute Tribal Enterprises - Ute Bison Ranch"
+                            if 'Ute Tribal Enterprises' in client and 'Ute Bison Ranch' in client:
+                                self.log_test("New Ute Bison Ranch Project Creation", True, 
+                                            f"Project ID 11 properly created: {title} in {category} category")
+                                return project
+                            else:
+                                self.log_test("New Ute Bison Ranch Project Creation", False, 
+                                            f"Wrong client: expected 'Ute Tribal Enterprises - Ute Bison Ranch', got '{client}'")
+                                return None
+                        else:
+                            self.log_test("New Ute Bison Ranch Project Creation", False, 
+                                        f"Wrong category: expected 'Social Media Content & Campaigns', got '{category}'")
+                            return None
+                    else:
+                        self.log_test("New Ute Bison Ranch Project Creation", False, 
+                                    f"Project ID 11 found but wrong title: {title}")
+                        return None
+                else:
+                    self.log_test("New Ute Bison Ranch Project Creation", False, 
+                                f"ID mismatch: expected '11', got '{project.get('id')}'")
+                    return None
+            else:
+                self.log_test("New Ute Bison Ranch Project Creation", False, 
+                            f"Status {response.status_code}: {response.text}")
+                return None
+        except requests.exceptions.RequestException as e:
+            self.log_test("New Ute Bison Ranch Project Creation", False, f"Request failed: {str(e)}")
+            return None
+    
+    def test_ute_bison_ranch_organic_content_structure(self):
+        """Test that Ute Bison Ranch project has same structure as coffee house TikTok with all organic content"""
+        try:
+            ute_bison_project = self.test_new_ute_bison_ranch_project_creation()
+            if not ute_bison_project:
+                self.log_test("Ute Bison Ranch Organic Content Structure", False, 
+                            "Cannot test structure - project not found")
+                return False
+            
+            # Check for combinedTikTokSection structure
+            combined_section = ute_bison_project.get('combinedTikTokSection', {})
+            if not combined_section:
+                self.log_test("Ute Bison Ranch Organic Content Structure", False, 
+                            "Missing combinedTikTokSection structure")
+                return False
+            
+            # Check for 6 videos in the structure
+            videos = combined_section.get('videos', [])
+            if len(videos) != 6:
+                self.log_test("Ute Bison Ranch Organic Content Structure", False, 
+                            f"Expected 6 videos, found {len(videos)}")
+                return False
+            
+            # Verify all videos are marked as organic content
+            organic_count = 0
+            for video in videos:
+                video_type = video.get('type', '')
+                description = video.get('description', '')
+                if 'organic' in video_type.lower() or 'organic' in description.lower():
+                    organic_count += 1
+                elif 'agricultural' in description.lower() or 'sustainability' in description.lower() or 'education' in description.lower():
+                    organic_count += 1  # Educational/agricultural content counts as organic
+            
+            if organic_count == 6:
+                self.log_test("Ute Bison Ranch Organic Content Structure", True, 
+                            f"All 6 videos are marked as organic content focused on agricultural education and sustainability")
+                return True
+            else:
+                self.log_test("Ute Bison Ranch Organic Content Structure", False, 
+                            f"Only {organic_count}/6 videos are marked as organic content")
+                return False
+                
+        except Exception as e:
+            self.log_test("Ute Bison Ranch Organic Content Structure", False, f"Error checking structure: {str(e)}")
+            return False
+    
+    def test_total_projects_count_22(self):
+        """Test that GET /api/projects returns 22 total projects"""
+        try:
+            response = self.session.get(f"{API_BASE_URL}/projects", timeout=10)
+            if response.status_code == 200:
+                projects = response.json()
+                if isinstance(projects, list):
+                    project_count = len(projects)
+                    if project_count == 22:
+                        self.log_test("Total Projects Count 22", True, 
+                                    f"Confirmed 22 total projects in database")
+                        return True
+                    else:
+                        self.log_test("Total Projects Count 22", False, 
+                                    f"Expected 22 projects, found {project_count}")
+                        return False
+                else:
+                    self.log_test("Total Projects Count 22", False, 
+                                f"Expected list, got: {type(projects)}")
+                    return False
+            else:
+                self.log_test("Total Projects Count 22", False, 
+                            f"Status {response.status_code}: {response.text}")
+                return False
+        except requests.exceptions.RequestException as e:
+            self.log_test("Total Projects Count 22", False, f"Request failed: {str(e)}")
+            return False
+    
+    def test_category_filtering_includes_ute_bison(self):
+        """Test that category filtering includes the new Ute Bison project in Social Media category"""
+        try:
+            # Test with Social Media Content & Campaigns category (URL encoded)
+            response = self.session.get(f"{API_BASE_URL}/projects?category=Social%20Media%20Content%20%26%20Campaigns", timeout=10)
+            if response.status_code == 200:
+                projects = response.json()
+                ute_bison_found = False
+                
+                for project in projects:
+                    title = project.get('title', '')
+                    if 'Ute Bison Ranch' in title:
+                        ute_bison_found = True
+                        break
+                
+                if ute_bison_found:
+                    self.log_test("Category Filtering Includes Ute Bison", True, 
+                                f"Ute Bison Ranch project found in Social Media Content & Campaigns category filter")
+                    return True
+                else:
+                    self.log_test("Category Filtering Includes Ute Bison", False, 
+                                f"Ute Bison Ranch project not found in Social Media category filter. Found {len(projects)} projects")
+                    return False
+            else:
+                self.log_test("Category Filtering Includes Ute Bison", False, 
+                            f"Status {response.status_code}: {response.text}")
+                return False
+        except requests.exceptions.RequestException as e:
+            self.log_test("Category Filtering Includes Ute Bison", False, f"Request failed: {str(e)}")
+            return False
+
     def run_all_tests(self):
         """Run all backend tests"""
         print(f"\n🚀 Starting Backend API Tests")
