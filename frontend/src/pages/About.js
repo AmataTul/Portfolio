@@ -64,7 +64,7 @@ const About = () => {
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6">
                 <div className="mb-4 sm:mb-0">
                   <h1 className="text-2xl md:text-3xl font-bold text-white mb-2">{contactInfo.name}</h1>
-                  <p className="text-yellow-200 font-medium text-base md:text-lg mb-4 bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm">Creative Marketing Professional & Brand Strategist</p>
+                  <p className="text-yellow-200 font-medium text-base md:text-lg mb-4 bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm">I'm a Creative Marketing Professional & Brand Strategist, blending data insights with creative solutions to drive results across all marketing channels. With a strong focus on project management, CRM optimization, and problem-solving, I'm adaptable, collaborative, and always ready to tackle new challenges.</p>
                   <div className="flex items-center text-cyan-200 mb-4">
                     <MapPin className="w-4 h-4 mr-2" />
                     <span className="text-sm">{contactInfo.location}</span>
