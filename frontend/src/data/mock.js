@@ -258,6 +258,64 @@ export const portfolioProjects = [
 
   {
     id: 5,
+    title: "Ute Crossing Grill & Ute Lanes - Video Advertisement Campaign",
+    category: "Advertising",
+    client: "Ute Tribal Enterprises - Ute Crossing Grill & Ute Lanes",
+    project_type: "Multi-Platform Video Advertisement Production & Direction", 
+    description: "Comprehensive video advertisement campaign for Ute Crossing Grill & Ute Lanes, a unique entertainment destination combining authentic dining with bowling and arcade gaming. I coordinated and directed this complete advertising production from initial concept development through final editing, showcasing the venue's diverse offerings including room booking services for private events, hosting capabilities, and family entertainment. The restaurant features comfort food with a distinctive mix of Native American and traditional American cuisine, managed by Ute Tribal Enterprises as an indigenous-owned business serving the community. I directed the entire creative process, managed cinema and big screen displays for sponsorship events, and coordinated post-production editing to create professional-grade advertising content suitable for multiple platform deployment.",
+    images: [
+      "https://customer-assets.emergentagent.com/job_project-showcase-15/artifacts/0heyu0bz_crossingrill.jpg"
+    ],
+    type: "video",
+    featured: true,
+    orientation: "horizontal",
+    videoFile: "uvpl-utecrossinggrill_utes_lanes_2025 (1080p).mp4", // Customizable video placement - replace this filename to upload your own video
+    videoUrl: "https://customer-assets.emergentagent.com/job_project-showcase-15/artifacts/otstibjq_uvpl-utecrossinggrill_utes_lanes_2025%20%281080p%29.mp4", // Direct video URL for easy customization
+    keyContributions: [
+      "Coordinated complete advertising campaign from concept to final production",
+      "Directed video advertisement showcasing restaurant, bowling, arcade, and room booking services",
+      "Managed cinema screenings and big screen displays for sponsorship and community events", 
+      "Coordinated professional editing team for high-quality commercial-grade content creation",
+      "Developed marketing strategy emphasizing indigenous business cultural authenticity and community connection",
+      "Created advertising framework supporting room booking promotions and private event hosting services"
+    ],
+    skillsUtilized: [
+      "Video Advertisement Direction & Production Coordination",
+      "Multi-Platform Advertising Campaign Management", 
+      "Indigenous Business Marketing & Cultural Sensitivity",
+      "Cinema & Big Screen Display Coordination",
+      "Post-Production Team Management & Editing Direction",
+      "Hospitality & Entertainment Venue Promotion Strategy",
+      "Room Booking & Event Hosting Service Marketing"
+    ],
+    impact: {
+      quantified: [
+        "Directed comprehensive advertising production for multi-service entertainment venue",
+        "Managed cinema and big screen advertising displays for community event sponsorship",
+        "Created professional advertising content suitable for television and digital platform distribution",
+        "Established marketing framework supporting room booking services and private event hosting"
+      ],
+      qualitative: [
+        "Successfully showcased venue's unique combination of dining, bowling, arcade gaming, and event hosting services",
+        "Elevated Ute Tribal Enterprises brand presence through culturally authentic advertising content",
+        "Demonstrated comprehensive production capabilities from creative direction through post-production coordination",
+        "Created sustainable advertising template supporting ongoing venue promotion and community engagement",
+        "Established expertise in multi-venue entertainment marketing and indigenous business promotion",
+        "Enhanced portfolio with professional restaurant and entertainment venue advertising experience",
+        "Strengthened community connection through indigenous-owned business promotion and cultural representation"
+      ]
+    },
+    relatedProjects: [
+      {
+        id: 4,
+        title: "KahPeeh kah-Ahn Ute Coffee House & Soda - Video Advertisement Campaign",
+        description: "Complementary advertising work for sister Ute Tribal Enterprises venue focusing on coffee house and social experience"
+      }
+    ]
+  },
+
+  {
+    id: 6,
     title: "Adobe Creative Suite Instagram Reels",
     category: "Social Media Content & Campaigns",
     client: "Adobe",
