@@ -2760,6 +2760,12 @@ class BackendTester:
         # Initialize data
         self.test_initialize_data()
         
+        # USER-REQUESTED UPDATES TESTING (PRIORITY)
+        print("\n" + "=" * 80)
+        print("🎯 USER-REQUESTED UPDATES TESTING (REVIEW REQUEST PRIORITY)")
+        print("=" * 80)
+        self.test_user_requested_updates()
+        
         # Test all endpoints
         self.test_get_projects()
         self.test_get_projects_by_category()
