@@ -24,7 +24,13 @@ const ProjectCard = ({ project, onClick }) => {
           <img 
             src={project.images[0]} 
             alt={project.title}
-            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+            className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+            style={{
+              minWidth: '100%',
+              minHeight: '100%',
+              maxWidth: '100%',
+              maxHeight: '100%'
+            }}
           />
           
           {/* Simple overlay on hover */}
