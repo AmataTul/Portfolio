@@ -2495,10 +2495,17 @@ class BackendTester:
         print("\n" + "=" * 60)
         print("🏢 UTE CROSSING GRILL & UTE LANES PROJECT TESTING (REVIEW REQUEST FOCUS)")
         print("=" * 60)
+        self.test_ute_crossing_grill_project_accessibility()
+        self.test_ute_crossing_grill_project_structure()
+        self.test_ute_crossing_grill_video_customization()
+        self.test_ute_crossing_grill_api_integration()
+        self.test_ute_crossing_grill_database_persistence()
+        self.test_ute_crossing_grill_comprehensive_verification()
+        
+        # Legacy tests for compatibility
         self.test_ute_crossing_grill_project_retrieval()
         self.test_ute_crossing_grill_advertising_category()
         self.test_ute_crossing_grill_video_fields()
-        self.test_ute_crossing_grill_project_structure()
         self.test_ute_crossing_grill_individual_retrieval()
         
         # DATA INTEGRITY TESTS
