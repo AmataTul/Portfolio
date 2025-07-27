@@ -64,12 +64,35 @@ const About = () => {
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6">
                 <div className="mb-4 sm:mb-0">
                   <h1 className="text-2xl md:text-3xl font-bold text-white mb-2">{contactInfo.name}</h1>
-                  <p className="text-yellow-200 font-medium text-lg mb-4 relative">
-                    <span className="bg-gradient-to-r from-white/20 to-white/30 px-6 py-3 rounded-full backdrop-blur-sm border border-white/20 shadow-lg inline-block relative overflow-hidden">
-                      <span className="absolute inset-0 bg-gradient-to-r from-purple-400/10 to-pink-400/10 rounded-full animate-pulse"></span>
-                      <span className="relative z-10">I'm a Creative Marketing Professional, blending data insights with creative solutions to drive results across all marketing channels. With a strong focus on project management, CRM optimization, and problem-solving, I'm adaptable, collaborative, and always ready to tackle new challenges.</span>
-                    </span>
-                  </p>
+                  <div className="relative mb-4">
+                    <div className="group relative inline-block">
+                      {/* Main Cloud Bubble */}
+                      <div className="relative bg-gradient-to-br from-white/25 via-white/20 to-white/15 backdrop-blur-md border border-white/30 rounded-3xl px-6 py-4 shadow-xl transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                        {/* Animated Background Orbs */}
+                        <div className="absolute inset-0 rounded-3xl overflow-hidden">
+                          <div className="absolute top-2 left-4 w-8 h-8 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-sm animate-pulse"></div>
+                          <div className="absolute bottom-3 right-6 w-6 h-6 bg-gradient-to-r from-cyan-400/20 to-blue-400/20 rounded-full blur-sm animate-bounce"></div>
+                          <div className="absolute top-1/2 left-1/2 w-4 h-4 bg-gradient-to-r from-yellow-400/20 to-orange-400/20 rounded-full blur-sm animate-ping"></div>
+                        </div>
+                        
+                        {/* Text Content */}
+                        <p className="relative z-10 text-yellow-100 font-medium text-base leading-relaxed">
+                          <span className="font-semibold text-white">Creative Marketing Professional</span> blending data insights with creative solutions. 
+                          <span className="block mt-2 text-sm">
+                            Strong focus on project management, CRM optimization & problem-solving. 
+                            <span className="text-cyan-200 font-medium">Adaptable • Collaborative • Challenge-Ready</span>
+                          </span>
+                        </p>
+                        
+                        {/* Floating Elements */}
+                        <div className="absolute -top-2 -right-2 w-4 h-4 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full opacity-70 animate-bounce"></div>
+                        <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-60 animate-pulse"></div>
+                      </div>
+                      
+                      {/* Hover Glow Effect */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-cyan-500/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
+                    </div>
+                  </div>
                   <div className="flex items-center text-cyan-200 mb-4">
                     <MapPin className="w-4 h-4 mr-2" />
                     <span className="text-sm">{contactInfo.location}</span>
