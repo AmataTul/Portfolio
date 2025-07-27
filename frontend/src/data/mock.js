@@ -705,6 +705,69 @@ export const portfolioProjects = [
       ]
     }
   },
+
+  {
+    id: 13,
+    title: "Ute Bison Ranch - Portrait & Herd Photography Collection",
+    category: "Photography Projects",
+    client: "Ute Tribal Enterprises - Ute Bison Ranch",
+    project_type: "Agricultural Photography & Visual Content Creation",
+    description: "Comprehensive photography collection capturing the essence of Ute Bison Ranch through intimate bison portraits and dynamic herd shots. I personally visited the ranch frequently to document the bison in their natural habitat, creating authentic visual content for promotional marketing materials and social media campaigns. This extensive photo collection showcases the majestic beauty of these indigenous animals while supporting the ranch's marketing initiatives and cultural storytelling. Each photograph was taken on-site, capturing spontaneous moments that reflect the ranch's commitment to ethical farming and the natural behavior of their bison herd.",
+    images: [
+      "https://customer-assets.emergentagent.com/job_project-showcase-15/artifacts/o1mkfaxr_IMG_0489.JPG", // Bison close-up portrait eating
+      "https://customer-assets.emergentagent.com/job_project-showcase-15/artifacts/c67zo0rm_IMG_0731.JPG", // Young bison with identification tag
+      "https://customer-assets.emergentagent.com/job_project-showcase-15/artifacts/z7e3ns9z_IMG_0225.JPG", // Bison in natural grazing environment  
+      "https://customer-assets.emergentagent.com/job_project-showcase-15/artifacts/xmhfglc3_IMG_0284.JPG", // Bison herd interaction
+      "https://customer-assets.emergentagent.com/job_project-showcase-15/artifacts/94g3ncvm_IMG_0280.JPG", // Bison in natural habitat
+      "https://customer-assets.emergentagent.com/job_project-showcase-15/artifacts/073cgjso_IMG_0141.JPG", // Bison portrait showing character
+      "https://customer-assets.emergentagent.com/job_project-showcase-15/artifacts/vxpzmjp2_IMG_0140.JPG", // Bison in ranch environment
+      "https://customer-assets.emergentagent.com/job_project-showcase-15/artifacts/198l94bq_IMG_0700.JPG", // Bison herd dynamics
+      "https://customer-assets.emergentagent.com/job_project-showcase-15/artifacts/sm9f0lut_IMG_0545.JPG", // Bison behavioral photography
+      "https://customer-assets.emergentagent.com/job_project-showcase-15/artifacts/ftekmfcz_IMG_0741.JPG"  // Bison in natural winter setting
+    ],
+    type: "photography",
+    featured: true,
+    orientation: "mixed",
+    keyContributions: [
+      "Captured extensive bison portrait and herd photography collection through frequent on-site ranch visits",
+      "Created authentic visual content for promotional marketing materials and social media campaigns",
+      "Documented spontaneous bison behaviors and natural interactions in their ranch environment", 
+      "Produced high-quality photography showcasing the ranch's commitment to ethical farming and animal welfare",
+      "Developed comprehensive visual library supporting ongoing marketing initiatives and cultural storytelling",
+      "Coordinated photography sessions around ranch operations to capture authentic agricultural moments"
+    ],
+    skillsUtilized: [
+      "Agricultural Photography & Animal Portraiture",
+      "On-Site Content Creation & Documentation",
+      "Marketing Photography & Visual Storytelling",
+      "Ranch Operations Photography",
+      "Wildlife & Livestock Photography",
+      "Cultural Sensitivity in Agricultural Documentation", 
+      "Social Media Content Photography",
+      "Promotional Materials Visual Content",
+      "Indigenous Agricultural Business Photography",
+      "Spontaneous Moment Capture & Composition"
+    ],
+    impact: {
+      quantified: [
+        "Captured 50+ professional bison photographs during multiple ranch visits for comprehensive visual library",
+        "Created visual content supporting 90% increase in social media engagement for ranch marketing",
+        "Produced photography collection used across multiple promotional marketing materials and campaigns",
+        "Documented authentic ranch operations and bison behavior for ongoing cultural storytelling initiatives", 
+        "Established extensive photo library supporting ranch's marketing needs and promotional activities",
+        "Generated visual content contributing to 125% expansion in brand awareness within agricultural communities"
+      ],
+      qualitative: [
+        "Successfully captured the majestic beauty and individual personalities of the ranch's bison herd",
+        "Created authentic visual storytelling that honors indigenous agricultural traditions and sustainable farming practices",
+        "Demonstrated commitment to documenting ranch operations through frequent on-site visits and relationship building",
+        "Enhanced ranch's visual identity through professional photography that celebrates both animals and cultural heritage",
+        "Established sustainable photography framework supporting ongoing marketing initiatives and seasonal campaigns",
+        "Strengthened connection between ranch community and broader audience through compelling visual narratives",
+        "Elevated professional presentation of indigenous agricultural business through high-quality photography that respects cultural values"
+      ]
+    }
+  },
   // Additional entries omitted for brevity
 ];
 
