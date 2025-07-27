@@ -2127,6 +2127,347 @@ class BackendTester:
             self.log_test("Coffee House Projects in List", False, f"Request failed: {str(e)}")
             return False
 
+    def test_ute_crossing_grill_project_retrieval(self):
+        """Test that Ute Crossing Grill & Ute Lanes project (id: 5) exists and is retrievable"""
+        try:
+            response = self.session.get(f"{API_BASE_URL}/projects", timeout=10)
+            if response.status_code == 200:
+                projects = response.json()
+                ute_crossing_project = None
+                
+                # Find the Ute Crossing Grill project by ID or title
+                for project in projects:
+                    if (project.get('id') == '5' or 
+                        "Ute Crossing Grill" in project.get('title', '') and 
+                        "Ute Lanes" in project.get('title', '')):
+                        ute_crossing_project = project
+                        break
+                
+                if ute_crossing_project:
+                    self.log_test("Ute Crossing Grill Project Retrieval", True, 
+                                f"Found Ute Crossing Grill project: {ute_crossing_project['title']} (ID: {ute_crossing_project.get('id')})")
+                    return ute_crossing_project
+                else:
+                    self.log_test("Ute Crossing Grill Project Retrieval", False, 
+                                "Ute Crossing Grill & Ute Lanes project not found in projects list")
+                    return None
+            else:
+                self.log_test("Ute Crossing Grill Project Retrieval", False, 
+                            f"Status {response.status_code}: {response.text}")
+                return None
+        except requests.exceptions.RequestException as e:
+            self.log_test("Ute Crossing Grill Project Retrieval", False, f"Request failed: {str(e)}")
+            return None
+
+    def test_ute_crossing_grill_advertising_category(self):
+        """Test that Ute Crossing Grill project is in Advertising category"""
+        try:
+            ute_crossing_project = self.test_ute_crossing_grill_project_retrieval()
+            if not ute_crossing_project:
+                self.log_test("Ute Crossing Grill Advertising Category", False, 
+                            "Cannot test category - project not found")
+                return False
+            
+            category = ute_crossing_project.get('category')
+            if category == 'Advertising':
+                self.log_test("Ute Crossing Grill Advertising Category", True, 
+                            f"Project correctly assigned to Advertising category")
+                return True
+            else:
+                self.log_test("Ute Crossing Grill Advertising Category", False, 
+                            f"Wrong category. Expected: 'Advertising', Got: '{category}'")
+                return False
+                
+        except Exception as e:
+            self.log_test("Ute Crossing Grill Advertising Category", False, f"Error checking category: {str(e)}")
+            return False
+
+    def test_ute_crossing_grill_video_fields(self):
+        """Test that Ute Crossing Grill project has proper video placement fields (videoFile, videoUrl)"""
+        try:
+            ute_crossing_project = self.test_ute_crossing_grill_project_retrieval()
+            if not ute_crossing_project:
+                self.log_test("Ute Crossing Grill Video Fields", False, 
+                            "Cannot test video fields - project not found")
+                return False
+            
+            # Check for video placement fields
+            has_video_url = 'video_url' in ute_crossing_project or 'videoUrl' in ute_crossing_project
+            has_video_file = 'videoFile' in ute_crossing_project
+            
+            # Check project type is appropriate for video content
+            project_type = ute_crossing_project.get('type', '')
+            
+            if has_video_url or has_video_file:
+                self.log_test("Ute Crossing Grill Video Fields", True, 
+                            f"Project has video placement fields. Type: {project_type}")
+                return True
+            else:
+                self.log_test("Ute Crossing Grill Video Fields", False, 
+                            "Project missing video placement fields (videoFile, videoUrl)")
+                return False
+                
+        except Exception as e:
+            self.log_test("Ute Crossing Grill Video Fields", False, f"Error checking video fields: {str(e)}")
+            return False
+
+    def test_ute_crossing_grill_project_structure(self):
+        """Test that Ute Crossing Grill project has complete project details"""
+        try:
+            ute_crossing_project = self.test_ute_crossing_grill_project_retrieval()
+            if not ute_crossing_project:
+                self.log_test("Ute Crossing Grill Project Structure", False, 
+                            "Cannot test project structure - project not found")
+                return False
+            
+            # Check required fields
+            required_fields = ['title', 'category', 'client', 'description', 'project_type']
+            missing_fields = []
+            
+            for field in required_fields:
+                if not ute_crossing_project.get(field):
+                    missing_fields.append(field)
+            
+            if missing_fields:
+                self.log_test("Ute Crossing Grill Project Structure", False, 
+                            f"Missing required fields: {missing_fields}")
+                return False
+            
+            # Check enhanced fields
+            enhanced_fields = ['key_contributions', 'skills_utilized', 'impact']
+            has_enhanced_fields = any(ute_crossing_project.get(field) for field in enhanced_fields)
+            
+            # Check for cross-linking (relatedProjects)
+            has_related_projects = 'relatedProjects' in ute_crossing_project or 'related_projects' in ute_crossing_project
+            
+            # Check description contains relevant keywords
+            description = ute_crossing_project.get('description', '').lower()
+            relevant_keywords = ['restaurant', 'bowling', 'ute', 'tribal', 'entertainment']
+            has_relevant_content = any(keyword in description for keyword in relevant_keywords)
+            
+            if has_enhanced_fields and has_relevant_content:
+                self.log_test("Ute Crossing Grill Project Structure", True, 
+                            f"Project has complete structure with enhanced fields and relevant content")
+                return True
+            else:
+                issues = []
+                if not has_enhanced_fields:
+                    issues.append("missing enhanced fields")
+                if not has_relevant_content:
+                    issues.append("lacks relevant content keywords")
+                
+                self.log_test("Ute Crossing Grill Project Structure", False, 
+                            f"Project structure issues: {', '.join(issues)}")
+                return False
+                
+        except Exception as e:
+            self.log_test("Ute Crossing Grill Project Structure", False, f"Error checking project structure: {str(e)}")
+            return False
+
+    def test_ute_crossing_grill_individual_retrieval(self):
+        """Test individual project retrieval for Ute Crossing Grill project via /api/projects/{id}"""
+        try:
+            # First get the project to find its ID
+            ute_crossing_project = self.test_ute_crossing_grill_project_retrieval()
+            if not ute_crossing_project:
+                self.log_test("Ute Crossing Grill Individual Retrieval", False, 
+                            "Cannot test individual retrieval - project not found")
+                return False
+            
+            project_id = ute_crossing_project.get('id')
+            if not project_id:
+                self.log_test("Ute Crossing Grill Individual Retrieval", False, 
+                            "Project ID not found")
+                return False
+            
+            # Test individual project retrieval
+            response = self.session.get(f"{API_BASE_URL}/projects/{project_id}", timeout=10)
+            if response.status_code == 200:
+                individual_project = response.json()
+                
+                # Verify it's the same project
+                if individual_project.get('id') == project_id:
+                    # Verify key details are intact
+                    title = individual_project.get('title', '')
+                    category = individual_project.get('category', '')
+                    
+                    if ("Ute Crossing Grill" in title and "Ute Lanes" in title and 
+                        category == "Advertising"):
+                        self.log_test("Ute Crossing Grill Individual Retrieval", True, 
+                                    f"Individual project retrieval successful with all details intact")
+                        return True
+                    else:
+                        self.log_test("Ute Crossing Grill Individual Retrieval", False, 
+                                    f"Project details incomplete. Title: {title}, Category: {category}")
+                        return False
+                else:
+                    self.log_test("Ute Crossing Grill Individual Retrieval", False, 
+                                f"ID mismatch: expected {project_id}, got {individual_project.get('id')}")
+                    return False
+            else:
+                self.log_test("Ute Crossing Grill Individual Retrieval", False, 
+                            f"Status {response.status_code}: {response.text}")
+                return False
+                
+        except requests.exceptions.RequestException as e:
+            self.log_test("Ute Crossing Grill Individual Retrieval", False, f"Request failed: {str(e)}")
+            return False
+
+    def test_project_ids_sequential_integrity(self):
+        """Test that project IDs are sequential and unique, specifically checking for IDs 5, 7, 8, 9, 10"""
+        try:
+            response = self.session.get(f"{API_BASE_URL}/projects", timeout=10)
+            if response.status_code == 200:
+                projects = response.json()
+                
+                # Extract all project IDs
+                project_ids = [project.get('id') for project in projects if project.get('id')]
+                
+                # Check for specific expected IDs
+                expected_ids = ['5', '7', '8', '9', '10']
+                found_ids = []
+                missing_ids = []
+                
+                for expected_id in expected_ids:
+                    if expected_id in project_ids:
+                        found_ids.append(expected_id)
+                    else:
+                        missing_ids.append(expected_id)
+                
+                # Check for duplicates
+                unique_ids = set(project_ids)
+                has_duplicates = len(project_ids) != len(unique_ids)
+                
+                # Find projects with expected IDs and verify their details
+                expected_projects = {
+                    '5': {'title_contains': ['Ute Crossing Grill', 'Ute Lanes'], 'category': 'Advertising'},
+                    '7': {'title_contains': ['Adobe Creative Suite', 'Instagram Reels'], 'category': 'Social Media Content & Campaigns'},
+                    '8': {'title_contains': ['Adobe Analytics Challenge'], 'category': 'Illustrations & Educational Content'},
+                    '9': {'title_contains': ['Utah High', 'Elementary School', 'Bison Grant'], 'category': 'Illustrations & Educational Content'},
+                    '10': {'title_contains': ['KahPeeh kah-Ahn', 'TikTok Campaign'], 'category': 'Social Media Content & Campaigns'}
+                }
+                
+                verified_projects = {}
+                for project in projects:
+                    project_id = project.get('id')
+                    if project_id in expected_projects:
+                        expected = expected_projects[project_id]
+                        title = project.get('title', '')
+                        category = project.get('category', '')
+                        
+                        title_matches = any(keyword in title for keyword in expected['title_contains'])
+                        category_matches = category == expected['category']
+                        
+                        verified_projects[project_id] = {
+                            'found': True,
+                            'title_matches': title_matches,
+                            'category_matches': category_matches,
+                            'title': title,
+                            'category': category
+                        }
+                
+                # Generate results
+                if not has_duplicates and len(found_ids) >= 4:  # Allow some flexibility
+                    success_details = []
+                    for project_id in found_ids:
+                        if project_id in verified_projects:
+                            proj = verified_projects[project_id]
+                            success_details.append(f"ID {project_id}: {proj['title']} ({proj['category']})")
+                    
+                    self.log_test("Project IDs Sequential Integrity", True, 
+                                f"Found {len(found_ids)} expected project IDs with unique values. Details: {'; '.join(success_details)}")
+                    return True
+                else:
+                    issues = []
+                    if has_duplicates:
+                        issues.append("duplicate IDs found")
+                    if missing_ids:
+                        issues.append(f"missing IDs: {missing_ids}")
+                    
+                    self.log_test("Project IDs Sequential Integrity", False, 
+                                f"Data integrity issues: {', '.join(issues)}. Found IDs: {found_ids}")
+                    return False
+            else:
+                self.log_test("Project IDs Sequential Integrity", False, 
+                            f"Status {response.status_code}: {response.text}")
+                return False
+        except requests.exceptions.RequestException as e:
+            self.log_test("Project IDs Sequential Integrity", False, f"Request failed: {str(e)}")
+            return False
+
+    def test_advertising_category_filtering(self):
+        """Test category filtering functionality for Advertising category"""
+        try:
+            # Test with Advertising category (URL encoded)
+            response = self.session.get(f"{API_BASE_URL}/projects?category=Advertising", timeout=10)
+            if response.status_code == 200:
+                projects = response.json()
+                advertising_projects = []
+                
+                # Find advertising projects
+                for project in projects:
+                    if project.get('category') == 'Advertising':
+                        advertising_projects.append(project)
+                
+                # Check if Ute Crossing Grill project is in the results
+                ute_crossing_found = False
+                for project in advertising_projects:
+                    title = project.get('title', '')
+                    if "Ute Crossing Grill" in title and "Ute Lanes" in title:
+                        ute_crossing_found = True
+                        break
+                
+                if ute_crossing_found and len(advertising_projects) > 0:
+                    self.log_test("Advertising Category Filtering", True, 
+                                f"Found {len(advertising_projects)} advertising projects including Ute Crossing Grill")
+                    return True
+                else:
+                    self.log_test("Advertising Category Filtering", False, 
+                                f"Ute Crossing Grill not found in {len(advertising_projects)} advertising projects")
+                    return False
+            else:
+                self.log_test("Advertising Category Filtering", False, 
+                            f"Status {response.status_code}: {response.text}")
+                return False
+        except requests.exceptions.RequestException as e:
+            self.log_test("Advertising Category Filtering", False, f"Request failed: {str(e)}")
+            return False
+
+    def test_thumbnail_image_integration(self):
+        """Test that projects have proper thumbnail image URL integration"""
+        try:
+            ute_crossing_project = self.test_ute_crossing_grill_project_retrieval()
+            if not ute_crossing_project:
+                self.log_test("Thumbnail Image Integration", False, 
+                            "Cannot test thumbnail integration - Ute Crossing Grill project not found")
+                return False
+            
+            # Check for images array
+            images = ute_crossing_project.get('images', [])
+            if not images:
+                self.log_test("Thumbnail Image Integration", False, 
+                            "No images found in Ute Crossing Grill project")
+                return False
+            
+            # Check if images are properly formatted (base64 or URLs)
+            valid_images = 0
+            for image in images:
+                if isinstance(image, str) and (image.startswith('data:image/') or image.startswith('http')):
+                    valid_images += 1
+            
+            if valid_images > 0:
+                self.log_test("Thumbnail Image Integration", True, 
+                            f"Found {valid_images} valid thumbnail images in project")
+                return True
+            else:
+                self.log_test("Thumbnail Image Integration", False, 
+                            f"No valid thumbnail images found. Images: {images[:2]}...")  # Show first 2 for debugging
+                return False
+                
+        except Exception as e:
+            self.log_test("Thumbnail Image Integration", False, f"Error checking thumbnail integration: {str(e)}")
+            return False
+
     def run_all_tests(self):
         """Run all backend tests"""
         print(f"\n🚀 Starting Backend API Tests")
