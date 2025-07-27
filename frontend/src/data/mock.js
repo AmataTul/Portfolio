@@ -432,7 +432,7 @@ export const portfolioProjects = [
     }
   },
   {
-    id: 8,
+    id: 10,
     title: "KahPeeh kah-Ahn Ute Coffee House & Soda - Top 6 TikTok High-Engagement Campaign",
     category: "Social Media Content & Campaigns",
     client: "Ute Tribal Enterprises - KahPeeh kah-Ahn Ute Coffee House & Soda",
