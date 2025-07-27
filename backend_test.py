@@ -2491,6 +2491,24 @@ class BackendTester:
         self.test_update_project()
         self.test_delete_project()
         
+        # UTE CROSSING GRILL PROJECT TESTS (REVIEW REQUEST FOCUS)
+        print("\n" + "=" * 60)
+        print("🏢 UTE CROSSING GRILL & UTE LANES PROJECT TESTING (REVIEW REQUEST FOCUS)")
+        print("=" * 60)
+        self.test_ute_crossing_grill_project_retrieval()
+        self.test_ute_crossing_grill_advertising_category()
+        self.test_ute_crossing_grill_video_fields()
+        self.test_ute_crossing_grill_project_structure()
+        self.test_ute_crossing_grill_individual_retrieval()
+        
+        # DATA INTEGRITY TESTS
+        print("\n" + "=" * 60)
+        print("🔍 DATA INTEGRITY & PROJECT ID SEQUENCE TESTING")
+        print("=" * 60)
+        self.test_project_ids_sequential_integrity()
+        self.test_advertising_category_filtering()
+        self.test_thumbnail_image_integration()
+
         # Coffee House Projects Tests (Priority Focus)
         print("\n" + "=" * 60)
         print("☕ COFFEE HOUSE PROJECTS TESTING (PRIORITY FOCUS)")
