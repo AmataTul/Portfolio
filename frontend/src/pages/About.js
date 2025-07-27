@@ -88,14 +88,17 @@ const About = () => {
                 </div>
               </div>
 
-              {/* Professional Summary */}
-              <div className="space-y-3 mb-6">
-                <p className="text-white font-medium bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                  🚀 Data-driven marketing coordinator specializing in performance marketing, conversion rate optimization, and growth marketing strategies
-                </p>
-                <p className="text-yellow-100 bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                  ✨ Expert in digital marketing campaigns, marketing analytics, and ROI-focused brand strategies for enterprise clients
-                </p>
+              {/* Industry Experience */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-6">
+                <h4 className="text-cyan-200 font-semibold mb-2">Industries Experience:</h4>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-yellow-400/20 text-yellow-200 px-2 py-1 rounded-full text-sm">Retail</span>
+                  <span className="bg-pink-400/20 text-pink-200 px-2 py-1 rounded-full text-sm">Food & Beverage</span>
+                  <span className="bg-green-400/20 text-green-200 px-2 py-1 rounded-full text-sm">Oil & Gas</span>
+                  <span className="bg-purple-400/20 text-purple-200 px-2 py-1 rounded-full text-sm">Entertainment</span>
+                  <span className="bg-blue-400/20 text-blue-200 px-2 py-1 rounded-full text-sm">Restaurant</span>
+                  <span className="bg-orange-400/20 text-orange-200 px-2 py-1 rounded-full text-sm">Agriculture</span>
+                </div>
               </div>
 
               {/* Vibrant Action Buttons */}
