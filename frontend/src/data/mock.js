@@ -714,16 +714,16 @@ export const portfolioProjects = [
     project_type: "Agricultural Photography & Visual Content Creation",
     description: "Comprehensive photography collection capturing the essence of Ute Bison Ranch through intimate bison portraits and dynamic herd shots. I personally visited the ranch frequently to document the bison in their natural habitat, creating authentic visual content for promotional marketing materials and social media campaigns. This extensive photo collection showcases the majestic beauty of these indigenous animals while supporting the ranch's marketing initiatives and cultural storytelling. Each photograph was taken on-site, capturing spontaneous moments that reflect the ranch's commitment to ethical farming and the natural behavior of their bison herd.",
     images: [
-      "https://customer-assets.emergentagent.com/job_project-showcase-15/artifacts/o1mkfaxr_IMG_0489.JPG", // Bison close-up portrait eating
-      "https://customer-assets.emergentagent.com/job_project-showcase-15/artifacts/c67zo0rm_IMG_0731.JPG", // Young bison with identification tag
-      "https://customer-assets.emergentagent.com/job_project-showcase-15/artifacts/z7e3ns9z_IMG_0225.JPG", // Bison in natural grazing environment  
-      "https://customer-assets.emergentagent.com/job_project-showcase-15/artifacts/xmhfglc3_IMG_0284.JPG", // Bison herd interaction
-      "https://customer-assets.emergentagent.com/job_project-showcase-15/artifacts/94g3ncvm_IMG_0280.JPG", // Bison in natural habitat
-      "https://customer-assets.emergentagent.com/job_project-showcase-15/artifacts/073cgjso_IMG_0141.JPG", // Bison portrait showing character
-      "https://customer-assets.emergentagent.com/job_project-showcase-15/artifacts/vxpzmjp2_IMG_0140.JPG", // Bison in ranch environment
-      "https://customer-assets.emergentagent.com/job_project-showcase-15/artifacts/198l94bq_IMG_0700.JPG", // Bison herd dynamics
-      "https://customer-assets.emergentagent.com/job_project-showcase-15/artifacts/sm9f0lut_IMG_0545.JPG", // Bison behavioral photography
-      "https://customer-assets.emergentagent.com/job_project-showcase-15/artifacts/ftekmfcz_IMG_0741.JPG"  // Bison in natural winter setting
+      "OPTIMIZED_BISON_IMAGE_1", // Bison close-up portrait eating - REPLACE WITH WEB-OPTIMIZED VERSION
+      "OPTIMIZED_BISON_IMAGE_2", // Young bison with identification tag - REPLACE WITH WEB-OPTIMIZED VERSION  
+      "OPTIMIZED_BISON_IMAGE_3", // Bison in natural grazing environment - REPLACE WITH WEB-OPTIMIZED VERSION
+      "OPTIMIZED_BISON_IMAGE_4", // Bison herd interaction - REPLACE WITH WEB-OPTIMIZED VERSION
+      "OPTIMIZED_BISON_IMAGE_5", // Bison in natural habitat - REPLACE WITH WEB-OPTIMIZED VERSION
+      "OPTIMIZED_BISON_IMAGE_6", // Bison portrait showing character - REPLACE WITH WEB-OPTIMIZED VERSION
+      "OPTIMIZED_BISON_IMAGE_7", // Bison in ranch environment - REPLACE WITH WEB-OPTIMIZED VERSION
+      "OPTIMIZED_BISON_IMAGE_8", // Bison herd dynamics - REPLACE WITH WEB-OPTIMIZED VERSION
+      "OPTIMIZED_BISON_IMAGE_9", // Bison behavioral photography - REPLACE WITH WEB-OPTIMIZED VERSION
+      "OPTIMIZED_BISON_IMAGE_10"  // Bison in natural winter setting - REPLACE WITH WEB-OPTIMIZED VERSION
     ],
     type: "photography",
     featured: true,
