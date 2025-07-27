@@ -67,7 +67,13 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                 <img 
                   src={project.images[currentImageIndex]} 
                   alt={`${project.title} - Image ${currentImageIndex + 1}`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-center"
+                  style={{
+                    minWidth: '100%',
+                    minHeight: '100%',
+                    maxWidth: '100%',
+                    maxHeight: '100%'
+                  }}
                 />
                 
                 {/* Video/YouTube Overlay */}
