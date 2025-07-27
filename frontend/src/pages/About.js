@@ -246,13 +246,6 @@ const About = () => {
                     </div>
                   </div>
                 </div>
-                
-                <div className="bg-gradient-to-r from-green-50 via-blue-50 to-purple-50 rounded-lg p-6 border-2 border-dashed border-gray-300">
-                  <p className="text-lg md:text-xl text-gray-800 leading-relaxed text-center font-medium">
-                    My analytical approach combines data-driven insights with creative problem-solving to deliver measurable results across ALL marketing channels. Whether it's project management, CRM optimization, or finding innovative solutions to unique challenges - 
-                    <span className="font-bold text-purple-800"> I genuinely have the experience and skills to tackle any marketing challenge you throw at me!</span>
-                  </p>
-                </div>
               </CardContent>
             </Card>
           </div>
