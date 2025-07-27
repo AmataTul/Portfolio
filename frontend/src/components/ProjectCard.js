@@ -20,7 +20,9 @@ const ProjectCard = ({ project, onClick }) => {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <div className="relative w-full h-full overflow-hidden">
+        <div className={`relative w-full h-full overflow-hidden project-image-container ${
+          project.category === 'Photography Projects' ? 'photography-project' : ''
+        }`}>
           <img 
             src={project.images[0]} 
             alt={project.title}
