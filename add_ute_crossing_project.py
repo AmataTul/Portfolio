@@ -84,9 +84,12 @@ def add_ute_crossing_project():
     }
 
     try:
+        # Load environment variables from backend/.env
+        from dotenv import load_dotenv
+        load_dotenv('/app/backend/.env')
+        
         # Connect to MongoDB
-        client = get_mongo_client()
-        db = client.get_default_database()
+        db = get_database()
         collection = db.projects
         
         # Check if project already exists
@@ -116,9 +119,6 @@ def add_ute_crossing_project():
     except Exception as e:
         print(f"❌ Error adding project to database: {str(e)}")
         return False
-    finally:
-        if 'client' in locals():
-            client.close()
 
 def update_project_ids():
     """Update other project IDs to maintain sequential order"""
