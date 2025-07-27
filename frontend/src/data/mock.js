@@ -329,7 +329,7 @@ export const portfolioProjects = [
     videoUrl: "https://www.tiktok.com/@adobe/video/7334159049778351406"
   },
   {
-    id: 6,
+    id: 8,
     title: "Adobe Analytics Challenge - Consumer Research & Strategy",
     category: "Illustrations & Educational Content",
     client: "Adobe x Hilton",
