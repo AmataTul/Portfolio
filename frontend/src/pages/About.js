@@ -65,32 +65,29 @@ const About = () => {
                 <div className="mb-4 sm:mb-0">
                   <h1 className="text-2xl md:text-3xl font-bold text-white mb-2">{contactInfo.name}</h1>
                   <div className="relative mb-4">
-                    <div className="group relative inline-block">
-                      {/* Main Cloud Bubble */}
-                      <div className="relative bg-gradient-to-br from-white/25 via-white/20 to-white/15 backdrop-blur-md border border-white/30 rounded-3xl px-6 py-4 shadow-xl transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
-                        {/* Animated Background Orbs */}
-                        <div className="absolute inset-0 rounded-3xl overflow-hidden">
-                          <div className="absolute top-2 left-4 w-8 h-8 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-sm animate-pulse"></div>
-                          <div className="absolute bottom-3 right-6 w-6 h-6 bg-gradient-to-r from-cyan-400/20 to-blue-400/20 rounded-full blur-sm animate-bounce"></div>
-                          <div className="absolute top-1/2 left-1/2 w-4 h-4 bg-gradient-to-r from-yellow-400/20 to-orange-400/20 rounded-full blur-sm animate-ping"></div>
+                    <div className="group relative inline-block max-w-md">
+                      {/* Smaller, Neater Cloud Bubble */}
+                      <div className="relative bg-gradient-to-br from-white/25 via-white/20 to-white/15 backdrop-blur-md border border-white/30 rounded-2xl px-4 py-3 shadow-lg transform transition-all duration-300 hover:scale-102">
+                        {/* Subtle Animated Elements */}
+                        <div className="absolute inset-0 rounded-2xl overflow-hidden">
+                          <div className="absolute top-1 right-3 w-3 h-3 bg-purple-400/15 rounded-full animate-pulse"></div>
+                          <div className="absolute bottom-2 left-3 w-2 h-2 bg-cyan-400/15 rounded-full animate-bounce"></div>
                         </div>
                         
-                        {/* Text Content */}
-                        <p className="relative z-10 text-yellow-100 font-medium text-base leading-relaxed">
-                          <span className="font-semibold text-white">Creative Marketing Professional</span> blending data insights with creative solutions. 
-                          <span className="block mt-2 text-sm">
-                            Strong focus on project management, CRM optimization & problem-solving. 
-                            <span className="text-cyan-200 font-medium">Adaptable • Collaborative • Challenge-Ready</span>
+                        {/* Compact Text Content */}
+                        <p className="relative z-10 text-yellow-100 font-medium text-sm leading-snug">
+                          <span className="font-semibold text-white text-base">Creative Marketing Professional</span>
+                          <span className="block mt-1 text-xs text-cyan-200">
+                            Data insights • Creative solutions • Project management
+                          </span>
+                          <span className="block mt-1 text-xs text-purple-200">
+                            Adaptable • Collaborative • Challenge-Ready
                           </span>
                         </p>
-                        
-                        {/* Floating Elements */}
-                        <div className="absolute -top-2 -right-2 w-4 h-4 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full opacity-70 animate-bounce"></div>
-                        <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-60 animate-pulse"></div>
                       </div>
                       
-                      {/* Hover Glow Effect */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-cyan-500/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
+                      {/* Subtle Hover Glow */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-pink-500/5 to-cyan-500/5 rounded-2xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
                     </div>
                   </div>
                   <div className="flex items-center text-cyan-200 mb-4">
