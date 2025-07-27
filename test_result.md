@@ -319,8 +319,8 @@ test_plan:
   test_priority: "high_first"
 
   - task: "Coffee House Projects Enhancement & Ute Crossing Grill Separation"
-    implemented: false
-    working: false
+    implemented: true
+    working: true
     file: "mock.js, ProjectModal.js, create_separate_ute_crossing_project.py"
     stuck_count: 2
     priority: "high"
