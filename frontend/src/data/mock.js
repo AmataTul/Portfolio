@@ -326,7 +326,39 @@ export const portfolioProjects = [
     type: "video",
     featured: true,
     orientation: "vertical",
-    videoUrl: "https://www.tiktok.com/@adobe/video/7334159049778351406"
+    videoUrl: "https://www.tiktok.com/@adobe/video/7334159049778351406",
+    keyContributions: [
+      "Created engaging vertical video content showcasing Adobe Creative Suite capabilities for social media platforms",
+      "Developed dynamic storytelling approach optimized for Instagram Reels and TikTok short-form video format",
+      "Produced user-generated content style videos demonstrating software features and creative possibilities",
+      "Coordinated content creation workflow from concept development through final video production and editing",
+      "Implemented social media best practices for vertical video engagement and platform-specific optimization"
+    ],
+    skillsUtilized: [
+      "Vertical Video Content Creation",
+      "Instagram Reels & TikTok Production",
+      "Adobe Creative Suite Expertise", 
+      "Social Media Content Strategy",
+      "Dynamic Storytelling for Short-Form Content",
+      "User-Generated Content Style Production",
+      "Video Editing & Post-Production",
+      "Platform-Specific Content Optimization"
+    ],
+    impact: {
+      quantified: [
+        "Created multiple high-engagement vertical video content pieces for Adobe Creative Suite promotion",
+        "Produced content optimized for Instagram Reels and TikTok platforms with focus on user engagement",
+        "Demonstrated Adobe software capabilities through practical, relatable video content examples",
+        "Achieved strong visual storytelling within short-form video constraints and platform requirements"
+      ],
+      qualitative: [
+        "Successfully showcased complex software capabilities through accessible, engaging vertical video content",
+        "Elevated Adobe Creative Suite brand presence on key social media platforms through compelling video narratives",
+        "Demonstrated expertise in creating user-generated content style videos that resonate with target audiences",
+        "Enhanced Adobe's social media content strategy with platform-optimized, engaging video content",
+        "Strengthened brand connection with creative professionals through relatable, practical software demonstrations"
+      ]
+    }
   },
   {
     id: 8,
