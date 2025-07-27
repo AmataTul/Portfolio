@@ -93,16 +93,16 @@ const About = () => {
                 </div>
               </div>
 
-              {/* Industry Experience */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-6">
-                <h4 className="text-cyan-200 font-semibold mb-2">Industries Experience:</h4>
-                <div className="flex flex-wrap gap-2">
-                  <span className="bg-yellow-400/20 text-yellow-200 px-2 py-1 rounded-full text-sm">Retail</span>
-                  <span className="bg-pink-400/20 text-pink-200 px-2 py-1 rounded-full text-sm">Food & Beverage</span>
-                  <span className="bg-green-400/20 text-green-200 px-2 py-1 rounded-full text-sm">Oil & Gas</span>
-                  <span className="bg-purple-400/20 text-purple-200 px-2 py-1 rounded-full text-sm">Entertainment</span>
-                  <span className="bg-blue-400/20 text-blue-200 px-2 py-1 rounded-full text-sm">Restaurant</span>
-                  <span className="bg-orange-400/20 text-orange-200 px-2 py-1 rounded-full text-sm">Agriculture</span>
+              {/* Industry Experience - Smaller */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 mb-6">
+                <h4 className="text-cyan-200 font-medium mb-2 text-sm">Industries:</h4>
+                <div className="flex flex-wrap gap-1">
+                  <span className="bg-yellow-400/20 text-yellow-200 px-2 py-1 rounded-full text-xs">Retail</span>
+                  <span className="bg-pink-400/20 text-pink-200 px-2 py-1 rounded-full text-xs">Food & Beverage</span>
+                  <span className="bg-green-400/20 text-green-200 px-2 py-1 rounded-full text-xs">Oil & Gas</span>
+                  <span className="bg-purple-400/20 text-purple-200 px-2 py-1 rounded-full text-xs">Entertainment</span>
+                  <span className="bg-blue-400/20 text-blue-200 px-2 py-1 rounded-full text-xs">Restaurant</span>
+                  <span className="bg-orange-400/20 text-orange-200 px-2 py-1 rounded-full text-xs">Agriculture</span>
                 </div>
               </div>
 
