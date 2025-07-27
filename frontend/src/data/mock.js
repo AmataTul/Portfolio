@@ -211,7 +211,7 @@ export const portfolioProjects = [
     project_type: "Multi-Platform Video Advertisement Production & Direction",
     description: "Comprehensive video advertisement campaign for KahPeeh kah-Ahn Ute Coffee House & Soda, showcasing authentic indigenous hospitality and premium coffee experience. I directed and coordinated this complete advertising production from initial concept through final editing, working with a talented team of editors to create professional-grade content. The campaign demonstrates my experience with TV/YouTube advertisements and large-scale advertising initiatives. This video was strategically deployed across multiple platforms including social media, YouTube, cinema screenings, and big screen displays, showcasing the unique cultural atmosphere and community connection of this locally-owned indigenous business serving the Uintah and Ouray reservation communities.",
     images: [
-      "https://customer-assets.emergentagent.com/job_project-showcase-15/artifacts/og27kur5_coffee.jpg"
+      "https://customer-assets.emergentagent.com/job_project-showcase-15/artifacts/kfmsk8rn_coffee.jpg"
     ],
     type: "video", 
     featured: true,
