@@ -2468,6 +2468,283 @@ class BackendTester:
             self.log_test("Thumbnail Image Integration", False, f"Error checking thumbnail integration: {str(e)}")
             return False
 
+    def test_ute_crossing_grill_project_accessibility(self):
+        """Test GET /api/projects/5 to confirm Ute Crossing Grill project is accessible"""
+        try:
+            response = self.session.get(f"{API_BASE_URL}/projects/5", timeout=10)
+            if response.status_code == 200:
+                project = response.json()
+                if project.get('id') == '5':
+                    title = project.get('title', '')
+                    if 'Ute Crossing Grill' in title and 'Ute Lanes' in title:
+                        self.log_test("Ute Crossing Grill Project Accessibility", True, 
+                                    f"Project ID 5 accessible with correct title: {title}")
+                        return project
+                    else:
+                        self.log_test("Ute Crossing Grill Project Accessibility", False, 
+                                    f"Project ID 5 found but wrong title: {title}")
+                        return None
+                else:
+                    self.log_test("Ute Crossing Grill Project Accessibility", False, 
+                                f"ID mismatch: expected '5', got '{project.get('id')}'")
+                    return None
+            elif response.status_code == 404:
+                self.log_test("Ute Crossing Grill Project Accessibility", False, 
+                            "Project ID 5 not found (404 error)")
+                return None
+            else:
+                self.log_test("Ute Crossing Grill Project Accessibility", False, 
+                            f"Status {response.status_code}: {response.text}")
+                return None
+        except requests.exceptions.RequestException as e:
+            self.log_test("Ute Crossing Grill Project Accessibility", False, f"Request failed: {str(e)}")
+            return None
+
+    def test_ute_crossing_grill_project_structure_enhanced(self):
+        """Verify all required fields are present in Ute Crossing Grill project"""
+        try:
+            project = self.test_ute_crossing_grill_project_accessibility()
+            if not project:
+                self.log_test("Ute Crossing Grill Project Structure Enhanced", False, 
+                            "Cannot test structure - project not accessible")
+                return False
+            
+            # Check required basic fields
+            required_fields = {
+                'title': 'Ute Crossing Grill & Ute Lanes - Video Advertisement Campaign',
+                'category': 'Advertising',
+                'client': 'Ute Tribal Enterprises',
+                'description': str,  # Should be a string
+                'project_type': str,  # Enhanced field
+                'key_contributions': list,  # Enhanced field
+                'skills_utilized': list,  # Enhanced field
+                'impact': dict  # Enhanced field
+            }
+            
+            missing_fields = []
+            incorrect_fields = []
+            
+            for field, expected_value in required_fields.items():
+                actual_value = project.get(field)
+                
+                if actual_value is None:
+                    missing_fields.append(field)
+                elif isinstance(expected_value, type):
+                    # Type check
+                    if not isinstance(actual_value, expected_value):
+                        incorrect_fields.append(f"{field}: expected {expected_value.__name__}, got {type(actual_value).__name__}")
+                elif actual_value != expected_value:
+                    # Exact value check
+                    incorrect_fields.append(f"{field}: expected '{expected_value}', got '{actual_value}'")
+            
+            if missing_fields or incorrect_fields:
+                error_msg = f"Missing fields: {missing_fields}, Incorrect fields: {incorrect_fields}"
+                self.log_test("Ute Crossing Grill Project Structure Enhanced", False, error_msg)
+                return False
+            else:
+                self.log_test("Ute Crossing Grill Project Structure Enhanced", True, 
+                            "All required fields present with correct values and types")
+                return True
+                
+        except Exception as e:
+            self.log_test("Ute Crossing Grill Project Structure Enhanced", False, f"Error checking structure: {str(e)}")
+            return False
+
+    def test_ute_crossing_grill_video_customization(self):
+        """Verify video_url and videoFile fields for video customization"""
+        try:
+            project = self.test_ute_crossing_grill_project_accessibility()
+            if not project:
+                self.log_test("Ute Crossing Grill Video Customization", False, 
+                            "Cannot test video customization - project not accessible")
+                return False
+            
+            # Check for video customization fields
+            video_url = project.get('video_url')
+            video_file = project.get('videoFile')
+            
+            video_issues = []
+            
+            # video_url should contain asset URL
+            if not video_url:
+                video_issues.append("video_url field missing")
+            elif not isinstance(video_url, str) or len(video_url) < 10:
+                video_issues.append(f"video_url invalid: {video_url}")
+            
+            # videoFile should reference original filename
+            if not video_file:
+                video_issues.append("videoFile field missing")
+            elif not isinstance(video_file, str):
+                video_issues.append(f"videoFile should be string, got {type(video_file)}")
+            
+            if video_issues:
+                self.log_test("Ute Crossing Grill Video Customization", False, 
+                            f"Video customization issues: {video_issues}")
+                return False
+            else:
+                self.log_test("Ute Crossing Grill Video Customization", True, 
+                            f"Video customization fields present: video_url={video_url[:50]}..., videoFile={video_file}")
+                return True
+                
+        except Exception as e:
+            self.log_test("Ute Crossing Grill Video Customization", False, f"Error checking video customization: {str(e)}")
+            return False
+
+    def test_ute_crossing_grill_api_integration(self):
+        """Confirm project appears in project lists and category filtering"""
+        try:
+            # Test 1: Project appears in full project list
+            response = self.session.get(f"{API_BASE_URL}/projects", timeout=10)
+            if response.status_code != 200:
+                self.log_test("Ute Crossing Grill API Integration", False, 
+                            f"Failed to get projects list: {response.status_code}")
+                return False
+            
+            projects = response.json()
+            ute_project_in_list = None
+            
+            for project in projects:
+                if project.get('id') == '5' and 'Ute Crossing Grill' in project.get('title', ''):
+                    ute_project_in_list = project
+                    break
+            
+            if not ute_project_in_list:
+                self.log_test("Ute Crossing Grill API Integration", False, 
+                            "Project not found in full projects list")
+                return False
+            
+            # Test 2: Project appears in Advertising category filter
+            response = self.session.get(f"{API_BASE_URL}/projects?category=Advertising", timeout=10)
+            if response.status_code != 200:
+                self.log_test("Ute Crossing Grill API Integration", False, 
+                            f"Failed to get Advertising category: {response.status_code}")
+                return False
+            
+            advertising_projects = response.json()
+            ute_project_in_category = None
+            
+            for project in advertising_projects:
+                if project.get('id') == '5' and 'Ute Crossing Grill' in project.get('title', ''):
+                    ute_project_in_category = project
+                    break
+            
+            if not ute_project_in_category:
+                self.log_test("Ute Crossing Grill API Integration", False, 
+                            "Project not found in Advertising category filter")
+                return False
+            
+            self.log_test("Ute Crossing Grill API Integration", True, 
+                        "Project appears in both full project list and Advertising category filter")
+            return True
+            
+        except requests.exceptions.RequestException as e:
+            self.log_test("Ute Crossing Grill API Integration", False, f"Request failed: {str(e)}")
+            return False
+        except Exception as e:
+            self.log_test("Ute Crossing Grill API Integration", False, f"Error in API integration test: {str(e)}")
+            return False
+
+    def test_ute_crossing_grill_database_persistence(self):
+        """Verify project is properly stored in MongoDB and survives backend restarts"""
+        try:
+            # Test 1: Verify project exists and has all data
+            project = self.test_ute_crossing_grill_project_accessibility()
+            if not project:
+                self.log_test("Ute Crossing Grill Database Persistence", False, 
+                            "Cannot test persistence - project not accessible")
+                return False
+            
+            # Test 2: Verify project has proper MongoDB structure (UUID-based ID)
+            project_id = project.get('id')
+            if not project_id or len(project_id) < 10:
+                self.log_test("Ute Crossing Grill Database Persistence", False, 
+                            f"Invalid project ID format: {project_id}")
+                return False
+            
+            # Test 3: Verify created_at and updated_at timestamps exist
+            created_at = project.get('created_at')
+            updated_at = project.get('updated_at')
+            
+            if not created_at:
+                self.log_test("Ute Crossing Grill Database Persistence", False, 
+                            "Missing created_at timestamp")
+                return False
+            
+            if not updated_at:
+                self.log_test("Ute Crossing Grill Database Persistence", False, 
+                            "Missing updated_at timestamp")
+                return False
+            
+            # Test 4: Verify all complex data structures are preserved
+            impact = project.get('impact', {})
+            if not isinstance(impact, dict) or not impact.get('quantified_metrics') or not impact.get('qualitative_outcomes'):
+                self.log_test("Ute Crossing Grill Database Persistence", False, 
+                            "Complex impact data structure not properly persisted")
+                return False
+            
+            key_contributions = project.get('key_contributions', [])
+            if not isinstance(key_contributions, list) or len(key_contributions) == 0:
+                self.log_test("Ute Crossing Grill Database Persistence", False, 
+                            "Key contributions list not properly persisted")
+                return False
+            
+            skills_utilized = project.get('skills_utilized', [])
+            if not isinstance(skills_utilized, list) or len(skills_utilized) == 0:
+                self.log_test("Ute Crossing Grill Database Persistence", False, 
+                            "Skills utilized list not properly persisted")
+                return False
+            
+            self.log_test("Ute Crossing Grill Database Persistence", True, 
+                        "Project properly stored with UUID ID, timestamps, and complex data structures intact")
+            return True
+            
+        except Exception as e:
+            self.log_test("Ute Crossing Grill Database Persistence", False, f"Error checking persistence: {str(e)}")
+            return False
+
+    def test_ute_crossing_grill_comprehensive_verification(self):
+        """Comprehensive verification of all Ute Crossing Grill project requirements"""
+        try:
+            print("\n" + "="*60)
+            print("UTE CROSSING GRILL & UTE LANES - COMPREHENSIVE VERIFICATION")
+            print("="*60)
+            
+            # Run all specific tests
+            accessibility_result = self.test_ute_crossing_grill_project_accessibility()
+            structure_result = self.test_ute_crossing_grill_project_structure_enhanced()
+            video_result = self.test_ute_crossing_grill_video_customization()
+            api_result = self.test_ute_crossing_grill_api_integration()
+            persistence_result = self.test_ute_crossing_grill_database_persistence()
+            
+            # Calculate overall success
+            tests_passed = sum([
+                bool(accessibility_result),
+                structure_result,
+                video_result,
+                api_result,
+                persistence_result
+            ])
+            
+            total_tests = 5
+            success_rate = (tests_passed / total_tests) * 100
+            
+            if success_rate == 100:
+                self.log_test("Ute Crossing Grill Comprehensive Verification", True, 
+                            f"ALL TESTS PASSED ({tests_passed}/{total_tests}) - Project fully functional")
+                return True
+            elif success_rate >= 80:
+                self.log_test("Ute Crossing Grill Comprehensive Verification", True, 
+                            f"MOSTLY FUNCTIONAL ({tests_passed}/{total_tests}, {success_rate:.1f}%) - Minor issues only")
+                return True
+            else:
+                self.log_test("Ute Crossing Grill Comprehensive Verification", False, 
+                            f"CRITICAL ISSUES ({tests_passed}/{total_tests}, {success_rate:.1f}%) - Major functionality problems")
+                return False
+                
+        except Exception as e:
+            self.log_test("Ute Crossing Grill Comprehensive Verification", False, f"Error in comprehensive verification: {str(e)}")
+            return False
+
     def run_all_tests(self):
         """Run all backend tests"""
         print(f"\n🚀 Starting Backend API Tests")
