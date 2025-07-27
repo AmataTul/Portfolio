@@ -139,10 +139,13 @@ const About = () => {
               <CardContent className="p-8">
                 <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-6 mb-6 border-l-4 border-blue-500">
                   <p className="text-lg md:text-xl text-gray-800 font-semibold leading-relaxed mb-4">
-                    I'm a creative marketing professional with comprehensive experience across ALL marketing sectors and a variety of industries. My educational background in Information Systems (Data Analytics) with a minor in Marketing makes me extremely versatile in finding solutions to complex and mundane problems alike.
+                    Creative Marketing Professional & Data Analytics Expert
                   </p>
-                  <p className="text-lg md:text-xl text-blue-800 font-bold leading-relaxed">
-                    Honestly? I have experience in everything marketing-related. Just ask me to find a solution for you - I can do it all! 🚀
+                  <p className="text-lg md:text-xl text-blue-800 leading-relaxed mb-4">
+                    I bring a unique blend of creative marketing expertise and data-driven insights that deliver measurable results across all marketing channels. With a background in Information Systems (Data Analytics) and a minor in Marketing, I develop innovative strategies that drive brand growth, optimize customer engagement, and maximize ROI.
+                  </p>
+                  <p className="text-lg md:text-xl text-purple-800 font-medium leading-relaxed">
+                    My experience spans multiple industries, equipping me with the skills to adapt quickly and implement tailored marketing solutions in any market. Hiring me means investing in a versatile professional who thrives in dynamic environments and is ready to tackle challenges with innovative, data-backed strategies.
                   </p>
                 </div>
                 
