@@ -12,8 +12,14 @@ import json
 
 def get_mongo_client():
     """Get MongoDB client from environment"""
-    mongo_url = os.getenv('MONGO_URL', 'mongodb://localhost:27017/portfolio')
+    mongo_url = os.getenv('MONGO_URL', 'mongodb://localhost:27017')
     return MongoClient(mongo_url)
+
+def get_database():
+    """Get the correct database"""
+    client = get_mongo_client()
+    db_name = os.getenv('DB_NAME', 'test_database')
+    return client[db_name]
 
 def add_ute_crossing_project():
     """Add the Ute Crossing Grill & Ute Lanes project to the database"""
