@@ -63,7 +63,9 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
           {/* Project Media - Only show if there are images */}
           {project.images && project.images.length > 0 && (
             <div className="relative">
-              <div className={`relative ${getAspectRatio()} bg-gray-100 rounded-xl overflow-hidden shadow-xl`}>
+              <div className={`relative ${getAspectRatio()} bg-gray-100 rounded-xl overflow-hidden shadow-xl project-image-container ${
+                project.category === 'Photography Projects' ? 'photography-project' : ''
+              }`}>
                 <img 
                   src={project.images[currentImageIndex]} 
                   alt={`${project.title} - Image ${currentImageIndex + 1}`}
