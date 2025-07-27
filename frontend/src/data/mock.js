@@ -315,7 +315,7 @@ export const portfolioProjects = [
   },
 
   {
-    id: 6,
+    id: 7,
     title: "Adobe Creative Suite Instagram Reels",
     category: "Social Media Content & Campaigns",
     client: "Adobe",
