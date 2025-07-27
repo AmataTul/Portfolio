@@ -646,6 +646,62 @@ export const portfolioProjects = [
       ]
     }
   },
+
+  {
+    id: 12,
+    title: "KahPeeh kah-Ahn Ute Coffee House & Soda - Digital Drive Thru Menu Design",
+    category: "Graphic Design & Marketing Materials",
+    client: "Ute Tribal Enterprises - KahPeeh kah-Ahn Ute Coffee House & Soda",
+    project_type: "Digital Menu Design & Management",
+    description: "Comprehensive digital drive thru menu design project for KahPeeh kah-Ahn Ute Coffee House & Soda, creating visually appealing and user-friendly menu displays for their drive-through service. I designed and managed the complete digital menu system, incorporating the coffee house's indigenous branding and cultural elements while ensuring optimal readability and customer experience. The project included creating multiple menu layouts, seasonal variations, and promotional displays that celebrate the unique indigenous coffee house experience while maintaining professional food service standards.",
+    images: [
+      "PLACEHOLDER_VERTICAL_1", // Digital menu board design - vertical
+      "PLACEHOLDER_VERTICAL_2", // Coffee specialty drinks menu - vertical  
+      "PLACEHOLDER_VERTICAL_3", // Food items and snacks menu - vertical
+      "PLACEHOLDER_VERTICAL_4", // Seasonal promotions menu - vertical
+      "PLACEHOLDER_VERTICAL_5", // Cultural branding elements - vertical
+      "PLACEHOLDER_HORIZONTAL_1", // Full drive thru menu layout - horizontal
+      "PLACEHOLDER_HORIZONTAL_2", // Digital display mockup - horizontal
+      "PLACEHOLDER_HORIZONTAL_3", // Menu system overview - horizontal
+    ],
+    type: "design",
+    featured: true,
+    orientation: "mixed",
+    keyContributions: [
+      "Designed comprehensive digital drive thru menu system incorporating indigenous branding and cultural elements",
+      "Created visually appealing menu layouts optimized for drive-through customer experience and readability",
+      "Managed complete digital menu implementation ensuring consistency with coffee house brand identity",
+      "Developed seasonal menu variations and promotional displays for special events and holidays",
+      "Coordinated with coffee house management to ensure menu accuracy and pricing updates",
+      "Created user-friendly design that celebrates indigenous culture while maintaining professional food service standards"
+    ],
+    skillsUtilized: [
+      "Digital Menu Design & Layout",
+      "Indigenous Branding Integration",
+      "Drive Thru Customer Experience Design",
+      "Menu Management & Coordination",
+      "Cultural Design Sensitivity",
+      "Food Service Graphics Design",
+      "Digital Display Optimization",
+      "Brand Consistency Management"
+    ],
+    impact: {
+      quantified: [
+        "Designed complete digital menu system for indigenous coffee house drive-through service",
+        "Created multiple menu layout variations for different seasonal promotions and events",
+        "Implemented user-friendly design optimizing customer order efficiency and experience",
+        "Established consistent digital branding across all drive-through touchpoints"
+      ],
+      qualitative: [
+        "Successfully integrated indigenous cultural elements into professional food service menu design",
+        "Enhanced customer experience through clear, visually appealing menu presentations",
+        "Strengthened brand identity consistency across digital touchpoints and drive-through service",
+        "Created sustainable menu design framework supporting ongoing promotions and seasonal updates",
+        "Demonstrated expertise in culturally sensitive design for indigenous business promotion",
+        "Elevated professional presentation of indigenous coffee house through polished digital menu design"
+      ]
+    }
+  },
   // Additional entries omitted for brevity
 ];
 
