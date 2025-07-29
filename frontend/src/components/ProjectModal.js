@@ -151,10 +151,10 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                 </div>
               )}
             </div>
-              )}
+            )}
             
-            {/* Thumbnail navigation */}
-            {project.images.length > 1 && (
+            {/* Thumbnail navigation - only show for regular projects, not Aigata brand grid */}
+            {project.images.length > 1 && project.title && !project.title.includes('Aigata Brand') && (
               <div className="flex space-x-3 mt-4 justify-center overflow-x-auto pb-2">
                 {project.images.map((image, index) => (
                   <button
