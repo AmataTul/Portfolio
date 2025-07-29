@@ -151,6 +151,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                 </div>
               )}
             </div>
+              )}
             
             {/* Thumbnail navigation */}
             {project.images.length > 1 && (
