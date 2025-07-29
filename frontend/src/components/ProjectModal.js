@@ -63,9 +63,40 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
           {/* Project Media - Only show if there are images */}
           {project.images && project.images.length > 0 && (
             <div className="relative">
-              <div className={`relative ${getAspectRatio()} bg-gray-100 rounded-xl overflow-hidden shadow-xl project-image-container ${
-                project.category === 'Photography Projects' ? 'photography-project' : ''
-              }`}>
+              {/* Special Grid Layout for Aigata Brand Project */}
+              {project.title && project.title.includes('Aigata Brand') ? (
+                <div className="space-y-4">
+                  <h3 className="text-lg font-semibold text-gray-800 text-center">Brand Identity Collection</h3>
+                  <div className="grid grid-cols-4 md:grid-cols-5 gap-3 p-4 bg-gray-50 rounded-xl">
+                    {project.images.map((image, index) => (
+                      <div key={index} className="aspect-square bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 group">
+                        <div className="w-full h-full bg-gray-100 flex items-center justify-center text-xs font-medium text-gray-500 hover:bg-gray-200 transition-colors duration-300 group-hover:text-gray-700">
+                          {image.startsWith('AIGATA_BRAND_IMAGE_') ? (
+                            <div className="text-center p-1">
+                              <div className="text-gray-400 mb-1">📎</div>
+                              <div>Image {index + 1}</div>
+                            </div>
+                          ) : (
+                            <img 
+                              src={image} 
+                              alt={`Aigata Brand Asset ${index + 1}`}
+                              className="w-full h-full object-cover"
+                            />
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="text-center text-sm text-gray-600 bg-blue-50 p-3 rounded-lg">
+                    <div className="font-medium text-blue-800 mb-1">📋 Complete Brand Identity System</div>
+                    <div>20 professional graphics including logos, business cards, social media assets, and marketing materials</div>
+                  </div>
+                </div>
+              ) : (
+                /* Regular Single Image Display */
+                <div className={`relative ${getAspectRatio()} bg-gray-100 rounded-xl overflow-hidden shadow-xl project-image-container ${
+                  project.category === 'Photography Projects' ? 'photography-project' : ''
+                }`}>
                 <img 
                   src={project.images[currentImageIndex]} 
                   alt={`${project.title} - Image ${currentImageIndex + 1}`}
