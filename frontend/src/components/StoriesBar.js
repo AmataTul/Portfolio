@@ -11,7 +11,6 @@ const StoriesBar = ({ activeCategory, onCategoryChange }) => {
     "Advertising": Megaphone,
     "Social Media Content & Campaigns": Smartphone,
     "Photography Projects": Camera,
-    "Creative Concepts": Lightbulb,
     "Illustrations & Educational Content": BookOpen
   };
 
