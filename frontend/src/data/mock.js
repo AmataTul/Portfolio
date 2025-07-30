@@ -438,7 +438,7 @@ export const portfolioProjects = [
     ]
   },
   {
-    id: 9,
+    id: 10,
     title: "Utah High & Elementary School Bison Grant Program - Educational Animation & Marketing Campaign",
     category: "Illustrations & Educational Content",
     client: "Ute Tribal Enterprises - Ute Bison",
