@@ -141,8 +141,8 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                   {/* Line 1: Professional & Social Media Graphics (13 images) */}
                   <div className="space-y-3">
                     <h4 className="text-md font-semibold text-gray-700">Professional & Social Media Graphics</h4>
-                    <div className="grid grid-cols-13 gap-2 p-3 bg-blue-50 rounded-lg">
-                      {project.images.slice(0, 13).map((image, index) => (
+                    <div className="grid grid-cols-7 gap-2 p-3 bg-blue-50 rounded-lg">
+                      {project.images.slice(0, 7).map((image, index) => (
                         <div key={index} className="aspect-square bg-white rounded overflow-hidden shadow-sm">
                           <div className="w-full h-full bg-gray-100 flex items-center justify-center text-xs font-medium text-gray-600">
                             {image.startsWith('PROFESSIONAL_GRAPHIC_') ? (
@@ -152,6 +152,22 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                               </div>
                             ) : (
                               <img src={image} alt={`Professional ${index + 1}`} className="w-full h-full object-cover" />
+                            )}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="grid grid-cols-6 gap-2 p-3 bg-blue-50 rounded-lg">
+                      {project.images.slice(7, 13).map((image, index) => (
+                        <div key={index + 7} className="aspect-square bg-white rounded overflow-hidden shadow-sm">
+                          <div className="w-full h-full bg-gray-100 flex items-center justify-center text-xs font-medium text-gray-600">
+                            {image.startsWith('PROFESSIONAL_GRAPHIC_') ? (
+                              <div className="text-center p-1">
+                                <div className="text-blue-500 mb-1 text-sm">💼</div>
+                                <div className="text-xs">P{index + 8}</div>
+                              </div>
+                            ) : (
+                              <img src={image} alt={`Professional ${index + 8}`} className="w-full h-full object-cover" />
                             )}
                           </div>
                         </div>
