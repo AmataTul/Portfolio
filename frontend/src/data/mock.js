@@ -803,11 +803,11 @@ export const portfolioProjects = [
 
   {
     id: 14,
-    title: "Aigata Brand - Comprehensive Visual Identity & Marketing Graphics Collection",
+    title: "Aigata Brand - E-commerce Product Listing Graphics & Marketing Assets",
     category: "Graphic Design & Marketing Materials",
-    client: "Aigata - Personal Business Brand",
-    project_type: "Complete Brand Identity Design & Marketing Materials Development",
-    description: "Comprehensive visual identity and marketing graphics collection for Aigata, my personal business brand. This extensive project encompasses complete brand development from logo design and color schemes to comprehensive marketing materials and digital assets. I designed and created over 20 distinct graphic elements that establish a cohesive, professional brand presence across all marketing channels. The collection includes business cards, letterheads, social media graphics, promotional materials, digital assets, and brand guidelines that reflect the innovative and professional nature of the Aigata brand while maintaining consistency across all touchpoints.",
+    client: "Aigata - Personal E-commerce Business",
+    project_type: "Complete E-commerce Product Graphics & Multi-Platform Marketing Materials",
+    description: "Comprehensive e-commerce product listing graphics and marketing assets for my personal Aigata brand business operating across Amazon, eBay, Etsy, and TikTok Shop platforms. I designed, branded, and created over 20 distinct graphic elements for product listings, social media marketing, and promotional materials. As the sole business operator, I handled complete business operations including working with overseas vendors on product design and logistics, personally managing inventory storage at my home, and coordinating all transportation and fulfillment. These graphics supported my multi-platform e-commerce strategy, featuring professional product presentations, social media assets, and promotional materials that established Aigata as a recognizable brand across all selling platforms.",
     images: [
       "AIGATA_BRAND_IMAGE_1",   // Logo design primary version
       "AIGATA_BRAND_IMAGE_2",   // Logo variations and alternatives  
