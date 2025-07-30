@@ -1117,15 +1117,10 @@ export const portfolioProjects = [
         "Elevated supermarket's digital marketing presence through professional short-form video content"
       ]
     }
-  },
-
-  {
-    id: 19,
-    // Additional entries omitted for brevity
   }
 ];
 
-export const brands = [
+export const categories = [
   "Beats by Dre", "Disney", "Adobe"
 ];
 
