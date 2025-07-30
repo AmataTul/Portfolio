@@ -63,14 +63,95 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
           {/* Project Media - Only show if there are images */}
           {project.images && project.images.length > 0 && (
             <div className="relative">
-              {/* Simple single image display for all projects */}
-              <div className={`relative aspect-video bg-gray-100 rounded-xl overflow-hidden shadow-xl project-image-container`}>
-                <img 
-                  src={project.images[currentImageIndex]} 
-                  alt={`${project.title} - Image ${currentImageIndex + 1}`}
-                  className="w-full h-full object-cover object-center"
-                />
-              </div>
+              {/* Special Instagram-style grid for Multi-Business Social Media Posts */}
+              {project.title && project.title.includes('Multi-Business Social Media Posts') ? (
+                <div className="bg-white rounded-xl p-6 shadow-lg">
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4 text-center">📱 30 Social Media Posts Across 8 Platforms</h3>
+                  <p className="text-sm text-gray-600 mb-6 text-center">
+                    Content created for Ute Tribal Enterprises, Ute Bison Ranch, Ute Plaza Supermarket & KahPeeh Kah-Ahn Coffee House
+                  </p>
+                  <div className="grid grid-cols-6 gap-2">
+                    {project.images.map((post, index) => (
+                      <div key={index} className="bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-200">
+                        {/* Instagram-style post cell */}
+                        <div className="aspect-square bg-gradient-to-br from-blue-50 to-purple-50 flex flex-col items-center justify-center p-2 text-xs">
+                          <div className="w-full h-16 bg-white rounded mb-2 flex items-center justify-center">
+                            <div className="text-center">
+                              <div className="text-2xl mb-1">
+                                {post.business === 'Ute Tribal Enterprises' && '🏛️'}
+                                {post.business === 'Ute Bison Ranch' && '🦬'}
+                                {post.business === 'Ute Plaza Supermarket' && '🏪'}
+                                {post.business === 'KahPeeh Kah-Ahn Ute Coffee House & Soda' && '☕'}
+                              </div>
+                              <div className="text-xs font-medium text-gray-700 leading-tight">
+                                {post.placeholder}
+                              </div>
+                            </div>
+                          </div>
+                          
+                          {/* Instagram-style engagement metrics */}
+                          <div className="w-full bg-white rounded p-1 text-center">
+                            <div className="flex justify-between items-center text-xs text-gray-600">
+                              <span className="flex items-center">
+                                <span className="text-red-500">❤️</span>
+                                <span className="ml-1">{post.likes}</span>
+                              </span>
+                              <span className="flex items-center">
+                                <span className="text-blue-500">📤</span>
+                                <span className="ml-1">{post.shares}</span>
+                              </span>
+                              <span className="flex items-center">
+                                <span className="text-green-500">💬</span>
+                                <span className="ml-1">{post.comments}</span>
+                              </span>
+                            </div>
+                            
+                            {/* Business tag */}
+                            <div className="text-xs text-gray-500 mt-1 truncate">
+                              {post.business.includes('Ute Tribal') && 'UTE TRIBAL'}
+                              {post.business.includes('Bison') && 'BISON RANCH'}
+                              {post.business.includes('Plaza') && 'PLAZA MARKET'}
+                              {post.business.includes('Coffee') && 'COFFEE HOUSE'}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  {/* Summary stats */}
+                  <div className="mt-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-4">
+                    <h4 className="font-semibold text-gray-800 mb-2 text-center">📊 Campaign Performance Summary</h4>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                      <div>
+                        <div className="text-2xl font-bold text-blue-600">30</div>
+                        <div className="text-sm text-gray-600">Total Posts</div>
+                      </div>
+                      <div>
+                        <div className="text-2xl font-bold text-red-500">5.2K+</div>
+                        <div className="text-sm text-gray-600">Total Likes</div>
+                      </div>
+                      <div>
+                        <div className="text-2xl font-bold text-blue-500">850+</div>
+                        <div className="text-sm text-gray-600">Total Shares</div>
+                      </div>
+                      <div>
+                        <div className="text-2xl font-bold text-green-500">1.2K+</div>
+                        <div className="text-sm text-gray-600">Total Comments</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                /* Regular single image display for other projects */
+                <div className={`relative aspect-video bg-gray-100 rounded-xl overflow-hidden shadow-xl project-image-container`}>
+                  <img 
+                    src={project.images[currentImageIndex]} 
+                    alt={`${project.title} - Image ${currentImageIndex + 1}`}
+                    className="w-full h-full object-cover object-center"
+                  />
+                </div>
+              )}
             </div>
           )}
 
