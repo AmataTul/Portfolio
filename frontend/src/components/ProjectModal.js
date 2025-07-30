@@ -178,7 +178,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                       <span className="text-2xl mr-2">🦬</span>
                       Ute Bison Ranch Promos & Marketing Materials (13 items)
                     </h4>
-                    <div className="grid grid-cols-6 md:grid-cols-8 gap-3">
+                    <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 gap-2 md:gap-3">
                       {project.images.slice(0, 13).map((item, index) => (
                         <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
                           <div className="aspect-square bg-gradient-to-br from-orange-50 to-red-50 flex items-center justify-center p-2">
