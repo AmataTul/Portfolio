@@ -938,6 +938,45 @@ export const portfolioProjects = [
       ]
     }
   },
+
+  {
+    id: 16,
+    title: "Multi-Business Social Media Posts - Comprehensive Content Creation Campaign",
+    category: "Social Media Content & Campaigns",
+    client: "Ute Tribal Enterprises & Associated Businesses",
+    project_type: "Multi-Platform Social Media Content Strategy & Creation",
+    description: "Comprehensive social media content creation campaign across multiple Ute Tribal Enterprise businesses including Ute Tribal Enterprises, Kah-Peeh kah-Ahn Ute Coffee House & Soda, Ute Plaza Supermarket, and Ute Bison Ranch. I created diverse content including promotional posts, event coverage, volunteering initiatives, progress updates, behind-the-scenes content, advertisements, and various graphics. The purpose was to increase social media engagement, boost exposure, drive traffic, and strengthen community connections across all business platforms. Each post was strategically crafted to align with business objectives while maintaining authentic brand voice and cultural sensitivity.",
+    images: [
+      "SOCIAL_MEDIA_POST_1", "SOCIAL_MEDIA_POST_2", "SOCIAL_MEDIA_POST_3", "SOCIAL_MEDIA_POST_4",
+      "SOCIAL_MEDIA_POST_5", "SOCIAL_MEDIA_POST_6", "SOCIAL_MEDIA_POST_7", "SOCIAL_MEDIA_POST_8", 
+      "SOCIAL_MEDIA_POST_9", "SOCIAL_MEDIA_POST_10", "SOCIAL_MEDIA_POST_11", "SOCIAL_MEDIA_POST_12",
+      "SOCIAL_MEDIA_POST_13", "SOCIAL_MEDIA_POST_14", "SOCIAL_MEDIA_POST_15", "SOCIAL_MEDIA_POST_16",
+      "SOCIAL_MEDIA_POST_17", "SOCIAL_MEDIA_POST_18", "SOCIAL_MEDIA_POST_19", "SOCIAL_MEDIA_POST_20"
+    ],
+    type: "social",
+    featured: true,
+    orientation: "mixed",
+    keyContributions: [
+      "Created comprehensive social media content strategy across four major Ute Tribal Enterprise businesses",
+      "Developed promotional posts, event coverage, and behind-the-scenes content to increase engagement and visibility",
+      "Coordinated volunteer initiative coverage and progress update posts showcasing community involvement and business growth",
+      "Designed advertisements and promotional graphics optimized for social media platforms to drive traffic and sales",
+      "Maintained consistent brand voice and cultural sensitivity across all business social media accounts",
+      "Implemented strategic content planning to maximize exposure and strengthen community connections for indigenous businesses"
+    ],
+    skillsUtilized: [
+      "Multi-Business Social Media Strategy",
+      "Content Creation & Curation",
+      "Brand Voice Development", 
+      "Community Engagement Management",
+      "Event Coverage & Documentation",
+      "Behind-the-Scenes Content Creation",
+      "Promotional Graphics Design",
+      "Cultural Sensitivity in Marketing",
+      "Cross-Platform Content Optimization",
+      "Indigenous Business Promotion"
+    ]
+  },
   // Additional entries omitted for brevity
 ];
 
