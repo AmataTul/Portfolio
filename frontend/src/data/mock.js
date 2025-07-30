@@ -1054,7 +1054,6 @@ export const portfolioProjects = [
     category: "Graphic Design & Marketing Materials",
     client: "Ute Tribal Enterprises & Associated Businesses",
     project_type: "Multi-Business Graphic Design & Visual Identity Portfolio",
-    description: "Comprehensive graphic design portfolio showcasing versatile design skills across multiple business categories and client needs. This collection represents professional graphic design work spanning promotional materials, product listings, marketing campaigns, brand identity, and event materials created for various Ute Tribal Enterprise businesses and community initiatives.",
     images: [
       // Line 1: Ute Bison Ranch Graphics (13 items)
       { placeholder: "UTE_BISON_PROMO_1", category: "Ute Bison Ranch Promos", type: "promotional_graphic" },
@@ -1098,9 +1097,8 @@ export const portfolioProjects = [
       { placeholder: "EVENT_FLYER_3", category: "Event Flyers", type: "business_event" },
       { placeholder: "EVENT_FLYER_4", category: "Event Flyers", type: "promotional_event" }
     ],
-    type: "design_portfolio",
+    type: "graphic_design",
     featured: true,
-    orientation: "mixed",
     key_contributions: [
       "Designed comprehensive promotional graphics and advertisements for Ute Bison Ranch business operations",
       "Created ecommerce product listings and email marketing templates to support online sales initiatives",
@@ -1118,12 +1116,11 @@ export const portfolioProjects = [
       "Cultural Design Sensitivity", "Visual Hierarchy", "Color Theory Application"
     ],
     impact: {
-      quantified_metrics: [
-        "34 professional graphic design pieces created across 4 major categories",
-        "13 promotional graphics and marketing materials for Ute Bison Ranch business expansion",
-        "4 custom design assets including logos and branded merchandise designs",
-        "13 cross-business promotional materials supporting multiple tribal enterprise locations",
-        "4 professional event flyers promoting community and cultural events"
+      business_scope_metrics: [
+        "100+ professional graphic design pieces created across 4 major categories",
+        "7 different businesses supported with custom graphic design solutions",
+        "Multi-platform design approach covering digital, print, and promotional materials",
+        "Comprehensive brand identity development across all tribal enterprise businesses"
       ],
       qualitative_outcomes: [
         "Established consistent visual identity across multiple Ute Tribal Enterprise businesses",
