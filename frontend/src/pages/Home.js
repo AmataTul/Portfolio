@@ -5,7 +5,6 @@ import ProjectCard from '../components/ProjectCard';
 import ProjectModal from '../components/ProjectModal';
 import BrandMarquee from '../components/BrandMarquee';
 import StoriesBar from '../components/StoriesBar';
-import ProfessionalFilter from '../components/ProfessionalFilter';
 import { ArrowRight, Target, Sparkles, Zap, TrendingUp, Users, Play } from 'lucide-react';
 
 const Home = () => {
