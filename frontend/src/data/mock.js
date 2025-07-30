@@ -218,7 +218,7 @@ export const portfolioProjects = [
     featured: true,
     orientation: "horizontal",
     videoFile: "Ute Coffeehouse V4.mp4", // Replace this filename with your own video file
-    videoUrl: "YOUR_COFFEE_HOUSE_VIDEO_URL_HERE", // Replace with your video URL for easy customization
+    videoUrl: "https://customer-assets.emergentagent.com/job_design-hub-fix/artifacts/miz4w5hk_Ute%20Coffeehouse%20V4.mp4", // Direct video URL - user can watch this video
     key_contributions: [
       "Directed and coordinated complete video advertisement campaign from initial concept through final delivery",
       "Led collaborative efforts with professional editing team to produce high-quality advertising content within budget constraints",
