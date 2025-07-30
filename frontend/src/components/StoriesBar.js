@@ -22,7 +22,6 @@ const StoriesBar = ({ activeCategory, onCategoryChange }) => {
     "Advertising": "Advertising",
     "Social Media Content & Campaigns": "Social Media",
     "Photography Projects": "Photography",
-    "Creative Concepts": "Creative",
     "Illustrations & Educational Content": "Education"
   };
 
