@@ -290,6 +290,8 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                 </div>
               )}
             </div>
+          )}
+          </div>
           
           {/* Project Details */}
           <div className="space-y-6">
