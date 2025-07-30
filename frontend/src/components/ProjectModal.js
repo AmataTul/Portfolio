@@ -60,12 +60,11 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
         </DialogHeader>
         
         <div className="space-y-8">
-          <>
-            {/* Project Media - Only show if there are images */}
-            {project.images && project.images.length > 0 && (
-              <div className="relative">
-                {/* Special Grid Layout for Aigata Brand Project */}
-                {project.title && project.title.includes('Aigata Brand') ? (
+          {/* Project Media - Only show if there are images */}
+          {project.images && project.images.length > 0 && (
+            <div className="relative">
+              {/* Special Grid Layout for Aigata Brand Project */}
+              {project.title && project.title.includes('Aigata Brand') ? (
                 <div className="space-y-4">
                   <h3 className="text-lg font-semibold text-gray-800 text-center">E-commerce Product Graphics Collection</h3>
                   <div className="grid grid-cols-4 gap-4 p-6 bg-gray-50 rounded-xl">
