@@ -98,13 +98,13 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                           {/* Image placeholder */}
                           <div className="aspect-square bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center relative">
                             <div className="text-center p-4">
-                              <div className="text-gray-400 text-sm font-medium mb-2">{post.placeholder}</div>
-                              <div className="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center">
-                                <svg className="w-6 h-6 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+                              <div className="text-gray-400 text-sm font-medium mb-3">{post.placeholder}</div>
+                              <div className="w-16 h-16 bg-gray-300 rounded-lg flex items-center justify-center">
+                                <svg className="w-8 h-8 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
                                   <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
                                 </svg>
                               </div>
-                              <div className="text-xs text-gray-500 mt-1">Upload Image</div>
+                              <div className="text-xs text-gray-500 mt-2 font-medium">Upload Image</div>
                             </div>
                           </div>
                           
