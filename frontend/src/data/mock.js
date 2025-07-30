@@ -1146,7 +1146,7 @@ export const portfolioProjects = [
     category: "Social Media Content & Campaigns",
     client: "Ute Tribal Enterprises - Ute Plaza Supermarket",
     project_type: "Holiday-Themed Facebook Reels Marketing Campaign",
-    description: "Strategic Facebook Reels campaign for Ute Plaza Supermarket focusing on holiday merchandise and seasonal promotions. Created engaging short-form video content to showcase holiday products, drive foot traffic, and increase seasonal sales through authentic storytelling and festive themes.",
+    description: "Strategic Facebook Reels campaign for Ute Plaza Supermarket focusing on holiday merchandise and seasonal promotions. Created engaging vertical short-form video content optimized for Facebook's Reels platform to showcase holiday products, drive foot traffic, and increase seasonal sales through authentic storytelling and festive themes.",
     images: [], // No main image - only the 3 Facebook Reels videos below
     type: "video", 
     featured: true,
