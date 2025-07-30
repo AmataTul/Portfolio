@@ -1050,6 +1050,93 @@ export const portfolioProjects = [
   },
   {
     id: 18,
+    title: "Comprehensive Graphic Design Portfolio - Multi-Category Professional Showcase",
+    category: "Graphic Design & Marketing Materials",
+    client: "Ute Tribal Enterprises & Associated Businesses",
+    project_type: "Multi-Business Graphic Design & Visual Identity Portfolio",
+    description: "Comprehensive graphic design portfolio showcasing versatile design skills across multiple business categories and client needs. This collection represents professional graphic design work spanning promotional materials, product listings, marketing campaigns, brand identity, and event materials created for various Ute Tribal Enterprise businesses and community initiatives.",
+    images: [
+      // Line 1: Ute Bison Ranch Graphics (13 items)
+      { placeholder: "UTE_BISON_PROMO_1", category: "Ute Bison Ranch Promos", type: "promotional_graphic" },
+      { placeholder: "UTE_BISON_PROMO_2", category: "Ute Bison Ranch Promos", type: "advertisement" },
+      { placeholder: "UTE_BISON_PRODUCT_1", category: "Ute Bison Ranch Promos", type: "product_listing" },
+      { placeholder: "UTE_BISON_PRODUCT_2", category: "Ute Bison Ranch Promos", type: "ecommerce_graphic" },
+      { placeholder: "UTE_BISON_EMAIL_1", category: "Ute Bison Ranch Promos", type: "email_template" },
+      { placeholder: "UTE_BISON_EMAIL_2", category: "Ute Bison Ranch Promos", type: "email_header" },
+      { placeholder: "UTE_BISON_PROMO_3", category: "Ute Bison Ranch Promos", type: "promotional_banner" },
+      { placeholder: "UTE_BISON_PROMO_4", category: "Ute Bison Ranch Promos", type: "social_media_post" },
+      { placeholder: "UTE_BISON_AD_1", category: "Ute Bison Ranch Promos", type: "digital_advertisement" },
+      { placeholder: "UTE_BISON_AD_2", category: "Ute Bison Ranch Promos", type: "print_advertisement" },
+      { placeholder: "UTE_BISON_MATERIAL_1", category: "Ute Bison Ranch Promos", type: "promotional_material" },
+      { placeholder: "UTE_BISON_MATERIAL_2", category: "Ute Bison Ranch Promos", type: "marketing_collateral" },
+      { placeholder: "UTE_BISON_BRAND_1", category: "Ute Bison Ranch Promos", type: "brand_graphic" },
+
+      // Line 2: Design Assets (4 items)
+      { placeholder: "STICKER_DESIGN_1", category: "Custom Design Assets", type: "sticker_design" },
+      { placeholder: "TSHIRT_DESIGN_1", category: "Custom Design Assets", type: "tshirt_design" },
+      { placeholder: "LOGO_DESIGN_1", category: "Custom Design Assets", type: "logo_design" },
+      { placeholder: "LOGO_DESIGN_2", category: "Custom Design Assets", type: "logo_design" },
+
+      // Line 3: Multi-Business Graphics (13 items)
+      { placeholder: "UTE_PLAZA_PROMO_1", category: "Multi-Business Graphics", type: "supermarket_promo" },
+      { placeholder: "UTE_PLAZA_PROMO_2", category: "Multi-Business Graphics", type: "supermarket_ad" },
+      { placeholder: "UTE_PLAZA_HOLIDAY_1", category: "Multi-Business Graphics", type: "holiday_material" },
+      { placeholder: "UTE_PLAZA_HOLIDAY_2", category: "Multi-Business Graphics", type: "seasonal_graphic" },
+      { placeholder: "UTE_PETROLEUM_AD_1", category: "Multi-Business Graphics", type: "gas_station_promo" },
+      { placeholder: "UTE_PETROLEUM_AD_2", category: "Multi-Business Graphics", type: "convenience_store_ad" },
+      { placeholder: "UTE_PETROLEUM_PROMO_1", category: "Multi-Business Graphics", type: "fuel_promotion" },
+      { placeholder: "COFFEE_HOUSE_PROMO_1", category: "Multi-Business Graphics", type: "coffee_shop_ad" },
+      { placeholder: "COFFEE_HOUSE_PROMO_2", category: "Multi-Business Graphics", type: "beverage_promotion" },
+      { placeholder: "COFFEE_HOUSE_HOLIDAY_1", category: "Multi-Business Graphics", type: "cafe_holiday_material" },
+      { placeholder: "MULTI_BUSINESS_AD_1", category: "Multi-Business Graphics", type: "cross_promotion" },
+      { placeholder: "MULTI_BUSINESS_AD_2", category: "Multi-Business Graphics", type: "tribal_enterprise_ad" },
+      { placeholder: "MULTI_BUSINESS_BRAND_1", category: "Multi-Business Graphics", type: "unified_branding" },
+
+      // Line 4: Event Flyers (4 items)
+      { placeholder: "EVENT_FLYER_1", category: "Event Flyers", type: "community_event" },
+      { placeholder: "EVENT_FLYER_2", category: "Event Flyers", type: "cultural_event" },
+      { placeholder: "EVENT_FLYER_3", category: "Event Flyers", type: "business_event" },
+      { placeholder: "EVENT_FLYER_4", category: "Event Flyers", type: "promotional_event" }
+    ],
+    type: "design_portfolio",
+    featured: true,
+    orientation: "mixed",
+    key_contributions: [
+      "Designed comprehensive promotional graphics and advertisements for Ute Bison Ranch business operations",
+      "Created ecommerce product listings and email marketing templates to support online sales initiatives",
+      "Developed custom design assets including stickers, t-shirt designs, and professional logos",
+      "Produced multi-business marketing materials for Ute Plaza Supermarket, Ute Petroleum, and KahPeeh Kah-Ahn Coffee House",
+      "Created seasonal and holiday-themed promotional materials to support event-based marketing campaigns",
+      "Designed professional event flyers for community, cultural, and business events",
+      "Maintained consistent visual identity across multiple business brands while respecting cultural sensitivity"
+    ],
+    skills_utilized: [
+      "Adobe Photoshop", "Adobe Illustrator", "Canva Pro",
+      "Logo Design & Brand Identity", "Print Design", "Digital Marketing Graphics",
+      "Ecommerce Visual Design", "Email Template Design", "Social Media Graphics",
+      "Event Marketing Materials", "Promotional Design", "Multi-Brand Coordination",
+      "Cultural Design Sensitivity", "Visual Hierarchy", "Color Theory Application"
+    ],
+    impact: {
+      quantified_metrics: [
+        "34 professional graphic design pieces created across 4 major categories",
+        "13 promotional graphics and marketing materials for Ute Bison Ranch business expansion",
+        "4 custom design assets including logos and branded merchandise designs",
+        "13 cross-business promotional materials supporting multiple tribal enterprise locations",
+        "4 professional event flyers promoting community and cultural events"
+      ],
+      qualitative_outcomes: [
+        "Established consistent visual identity across multiple Ute Tribal Enterprise businesses",
+        "Enhanced professional brand presence through high-quality graphic design and marketing materials",
+        "Supported business growth through effective promotional graphics and ecommerce visual assets",
+        "Strengthened community engagement through culturally sensitive event and promotional materials",
+        "Demonstrated versatile graphic design capabilities across multiple business sectors and design needs"
+      ]
+    }
+  },
+
+  {
+    id: 19,
     title: "Ute Plaza Supermarket - Holiday Merch Facebook Reels Campaign",
     category: "Social Media Content & Campaigns",
     client: "Ute Tribal Enterprises - Ute Plaza Supermarket",
