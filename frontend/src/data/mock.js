@@ -789,16 +789,12 @@ export const portfolioProjects = [
     project_type: "Agricultural Photography & Visual Content Creation",
     description: "Comprehensive photography collection capturing the essence of Ute Bison Ranch through intimate bison portraits and dynamic herd shots. I personally visited the ranch frequently to document the bison in their natural habitat, creating authentic visual content for promotional marketing materials and social media campaigns. This extensive photo collection showcases the majestic beauty of these indigenous animals while supporting the ranch's marketing initiatives and cultural storytelling. Each photograph was taken on-site, capturing spontaneous moments that reflect the ranch's commitment to ethical farming and the natural behavior of their bison herd.",
     images: [
-      "OPTIMIZED_BISON_IMAGE_1", // Bison close-up portrait eating - REPLACE WITH WEB-OPTIMIZED VERSION
-      "OPTIMIZED_BISON_IMAGE_2", // Young bison with identification tag - REPLACE WITH WEB-OPTIMIZED VERSION  
-      "OPTIMIZED_BISON_IMAGE_3", // Bison in natural grazing environment - REPLACE WITH WEB-OPTIMIZED VERSION
-      "OPTIMIZED_BISON_IMAGE_4", // Bison herd interaction - REPLACE WITH WEB-OPTIMIZED VERSION
-      "OPTIMIZED_BISON_IMAGE_5", // Bison in natural habitat - REPLACE WITH WEB-OPTIMIZED VERSION
-      "OPTIMIZED_BISON_IMAGE_6", // Bison portrait showing character - REPLACE WITH WEB-OPTIMIZED VERSION
-      "OPTIMIZED_BISON_IMAGE_7", // Bison in ranch environment - REPLACE WITH WEB-OPTIMIZED VERSION
-      "OPTIMIZED_BISON_IMAGE_8", // Bison herd dynamics - REPLACE WITH WEB-OPTIMIZED VERSION
-      "OPTIMIZED_BISON_IMAGE_9", // Bison behavioral photography - REPLACE WITH WEB-OPTIMIZED VERSION
-      "OPTIMIZED_BISON_IMAGE_10"  // Bison in natural winter setting - REPLACE WITH WEB-OPTIMIZED VERSION
+      "UTE_BISON_PHOTO_1", // Bison close-up portrait - Upload your own image here
+      "UTE_BISON_PHOTO_2", // Young bison with identification tag - Upload your own image here
+      "UTE_BISON_PHOTO_3", // Bison in natural grazing environment - Upload your own image here
+      "UTE_BISON_PHOTO_4", // Bison herd interaction - Upload your own image here
+      "UTE_BISON_PHOTO_5", // Bison in natural habitat - Upload your own image here
+      "UTE_BISON_PHOTO_6"  // Bison portrait showing character - Upload your own image here
     ],
     type: "photography",
     featured: true,
