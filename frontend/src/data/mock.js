@@ -267,7 +267,6 @@ export const portfolioProjects = [
     ]
   },
 
-  },
   {
     id: 8,
     title: "Adobe Analytics Challenge - Consumer Research & Strategy",
