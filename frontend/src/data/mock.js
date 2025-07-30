@@ -992,7 +992,6 @@ export const categories = [
   "Advertising", 
   "Social Media Content & Campaigns",
   "Photography Projects",
-  "Creative Concepts",
   "Illustrations & Educational Content"
 ];
 
