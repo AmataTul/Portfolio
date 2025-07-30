@@ -1121,7 +1121,8 @@ export const portfolioProjects = [
 
   {
     id: 19,
-  // Additional entries omitted for brevity
+    // Additional entries omitted for brevity
+  }
 ];
 
 export const brands = [
