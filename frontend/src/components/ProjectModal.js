@@ -71,6 +71,8 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                   className="w-full h-full object-cover object-center"
                 />
               </div>
+            </div>
+          )}
 
           {/* Project Details */}
           <div className="space-y-6">
