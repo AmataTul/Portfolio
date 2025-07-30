@@ -616,7 +616,7 @@ export const portfolioProjects = [
   },
 
   {
-    id: 11,
+    id: 12,
     title: "Ute Bison Ranch - Top 6 TikTok Organic Campaign",
     category: "Social Media Content & Campaigns",
     client: "Ute Tribal Enterprises - Ute Bison Ranch",
