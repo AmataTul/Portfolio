@@ -1,5 +1,5 @@
 import React from 'react';
-import { Input } from './ui/input';
+import { Input } from './ui/input.jsx';
 import { Search, Filter, SlidersHorizontal } from 'lucide-react';
 
 const ProfessionalFilter = ({ searchTerm, setSearchTerm, activeCategory, setActiveCategory, categories }) => {
