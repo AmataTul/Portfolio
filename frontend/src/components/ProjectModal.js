@@ -187,7 +187,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                   {/* Line 3: Promotional Materials - Compact grid */}
                   <div className="space-y-2">
                     <h4 className="text-sm font-semibold text-gray-700">Promotional Materials - Ute Plaza & Coffee House</h4>
-                    <div className="grid grid-cols-6 md:grid-cols-12 gap-1 p-2 bg-green-50 rounded-lg">
+                    <div className="grid grid-cols-6 md:grid-cols-8 gap-1 p-2 bg-green-50 rounded-lg">
                       {project.images.slice(17, 29).map((image, index) => (
                         <div key={index} className="aspect-square bg-white rounded overflow-hidden shadow-sm">
                           <div className="w-full h-full bg-gray-100 flex items-center justify-center text-xs font-medium text-gray-600">
