@@ -291,7 +291,6 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
               )}
             </div>
           )}
-          </div>
         
         <div className="space-y-8">
           {/* Project Details */}
