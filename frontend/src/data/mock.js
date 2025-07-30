@@ -1191,7 +1191,7 @@ export const portfolioProjects = [
       "Developed compelling short-form video content optimized for Facebook's algorithm and user engagement",
       "Designed holiday-themed campaigns that align with Ute Plaza Supermarket's community values and customer base",
       "Implemented seasonal marketing strategy to drive foot traffic and increase holiday merchandise sales",
-      "Coordinated video production including staging, lighting, and editing for professional holiday content"
+      "Coordinated vertical video production including staging, lighting, and editing for Facebook Reels format"
     ],
     skills_utilized: [
       "Facebook Reels Production",
