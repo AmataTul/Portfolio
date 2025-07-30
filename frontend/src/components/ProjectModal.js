@@ -998,6 +998,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
               </div>
             )}
           </div>
+          </>
         </div>
       </DialogContent>
     </Dialog>
