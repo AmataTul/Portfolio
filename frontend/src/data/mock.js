@@ -834,42 +834,42 @@ export const portfolioProjects = [
     featured: true,
     orientation: "mixed",
     keyContributions: [
-      "Designed complete visual identity system for Aigata brand from concept to final implementation",
-      "Created comprehensive logo design with multiple variations and applications for diverse marketing needs",
-      "Developed cohesive color palette, typography, and visual elements that reflect brand personality and values",
-      "Produced 20+ professional marketing graphics and materials ensuring consistent brand presentation across all channels",
-      "Established brand guidelines and style documentation for scalable brand application and future growth",
-      "Coordinated complete brand rollout across digital platforms, print materials, and marketing collateral"
+      "Created comprehensive e-commerce product listing graphics for Amazon, eBay, Etsy, and TikTok Shop platforms",
+      "Designed and branded 20+ marketing assets for multi-platform e-commerce business operations and social media promotion",
+      "Managed complete business operations including overseas vendor relationships, product design coordination, and logistics management",
+      "Established home-based inventory storage system and personally handled all product transportation and fulfillment processes",
+      "Developed cohesive Aigata brand identity across all e-commerce platforms ensuring consistent visual presentation and recognition",
+      "Created social media marketing graphics supporting product promotion and brand visibility across multiple online channels"
     ],
     skillsUtilized: [
-      "Brand Identity Design & Development",
-      "Logo Design & Visual Identity Creation",
-      "Marketing Graphics & Collateral Design",
-      "Brand Guidelines & Style Guide Development",
-      "Multi-Platform Design Consistency",
-      "Color Theory & Typography Selection",
-      "Print Design & Digital Asset Creation",
-      "Brand Strategy & Visual Communication",
-      "Adobe Creative Suite Mastery",
-      "Comprehensive Brand System Architecture"
+      "E-commerce Product Listing Design",
+      "Multi-Platform Brand Consistency",
+      "Amazon & eBay Marketplace Graphics", 
+      "Etsy Creative Product Presentation",
+      "TikTok Shop Visual Marketing",
+      "Social Media Product Promotion Graphics",
+      "International Vendor Coordination",
+      "Home-Based Business Operations Management",
+      "Logistics & Inventory Management",
+      "Cross-Platform Marketing Strategy"
     ],
     impact: {
       quantified: [
-        "Created comprehensive brand identity system with 20+ distinct graphic elements for complete brand coverage",
-        "Developed scalable logo design with 5+ variations suitable for all marketing applications and size requirements",
-        "Established consistent visual identity across 10+ different marketing channels and touchpoints",
-        "Produced complete brand guidelines documentation ensuring 100% brand consistency in future applications",
-        "Created marketing materials supporting personal business development and professional brand establishment",
-        "Designed versatile graphics suitable for both digital and print applications with optimal file formats"
+        "Created 20+ professional e-commerce product graphics supporting multi-platform business operations across 4 major platforms",
+        "Established successful home-based e-commerce business with complete operational control and inventory management",
+        "Developed comprehensive brand identity ensuring consistent presentation across Amazon, eBay, Etsy, and TikTok Shop",
+        "Managed international vendor relationships and logistics coordination for complete product development lifecycle",
+        "Created scalable graphics system supporting ongoing product launches and seasonal promotional campaigns",
+        "Built sustainable e-commerce business model with integrated design, operations, and fulfillment processes"
       ],
       qualitative: [
-        "Successfully established professional, cohesive brand identity that reflects innovative and trustworthy business values",
-        "Created memorable visual identity that differentiates Aigata brand in competitive market landscape",
-        "Demonstrated comprehensive graphic design expertise through complete brand development from concept to implementation",
-        "Enhanced personal business credibility through professional, consistent visual presentation across all marketing materials",
-        "Established foundation for scalable brand growth with flexible design system supporting future business expansion",
-        "Strengthened professional presence through polished, cohesive brand identity that communicates expertise and reliability",
-        "Created sustainable brand framework that maintains visual consistency while allowing for creative evolution and adaptation"
+        "Successfully established Aigata brand as recognizable presence across multiple e-commerce platforms through consistent visual identity",
+        "Demonstrated comprehensive business management skills combining creative design with operational excellence and logistics coordination",
+        "Created professional product presentation standards that enhanced brand credibility and customer trust across all platforms",
+        "Established efficient home-based business operations proving capability in end-to-end e-commerce business management",
+        "Enhanced product marketability through compelling graphics that effectively communicated value proposition to diverse platform audiences",
+        "Strengthened entrepreneurial skillset through successful integration of design expertise with practical business operations and international trade",
+        "Built sustainable business framework supporting continued growth and expansion across additional e-commerce platforms and product lines"
       ]
     }
   },
