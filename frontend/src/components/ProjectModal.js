@@ -135,19 +135,19 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                   </div>
                 </div>
               ) : project.title && project.title.includes('Comprehensive Graphic Design Skills Portfolio') ? (
-                <div className="space-y-4">
-                  <h3 className="text-lg font-semibold text-gray-800 text-center">Multi-Category Design Skills Showcase</h3>
+                <div className="space-y-3 max-h-screen overflow-hidden">
+                  <h3 className="text-md font-semibold text-gray-800 text-center">Multi-Category Design Skills Showcase</h3>
                   
-                  {/* Line 1: Professional & Social Media Graphics - Optimized for single page */}
-                  <div className="space-y-2">
-                    <h4 className="text-sm font-semibold text-gray-700">Professional & Social Media Graphics</h4>
-                    <div className="grid grid-cols-7 md:grid-cols-8 gap-1 p-2 bg-blue-50 rounded-lg">
+                  {/* Line 1: Professional & Social Media Graphics - Ultra compact */}
+                  <div className="space-y-1">
+                    <h4 className="text-xs font-semibold text-gray-700">Professional & Social Media Graphics</h4>
+                    <div className="grid grid-cols-8 md:grid-cols-13 gap-1 p-1 bg-blue-50 rounded">
                       {project.images.slice(0, 13).map((image, index) => (
-                        <div key={index} className="aspect-square bg-white rounded overflow-hidden shadow-sm">
+                        <div key={index} className="aspect-square bg-white rounded overflow-hidden shadow-sm" style={{minHeight: '40px', maxHeight: '60px'}}>
                           <div className="w-full h-full bg-gray-100 flex items-center justify-center text-xs font-medium text-gray-600">
                             {image.startsWith('PROFESSIONAL_GRAPHIC_') ? (
-                              <div className="text-center p-1">
-                                <div className="text-blue-500 mb-1 text-xs">💼</div>
+                              <div className="text-center p-0.5">
+                                <div className="text-blue-500 mb-0.5 text-xs">💼</div>
                                 <div className="text-xs">P{index + 1}</div>
                               </div>
                             ) : (
@@ -159,12 +159,12 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     </div>
                   </div>
 
-                  {/* Line 2: Drawing/Illustrator Skills - Compact */}
-                  <div className="space-y-2">
-                    <h4 className="text-sm font-semibold text-gray-700">Drawing & Illustration Skills</h4>
-                    <div className="grid grid-cols-4 gap-2 p-2 bg-purple-50 rounded-lg">
+                  {/* Line 2: Drawing/Illustrator Skills - Ultra compact */}
+                  <div className="space-y-1">
+                    <h4 className="text-xs font-semibold text-gray-700">Drawing & Illustration Skills</h4>
+                    <div className="grid grid-cols-4 gap-2 p-1 bg-purple-50 rounded">
                       {project.images.slice(13, 17).map((image, index) => (
-                        <div key={index} className="aspect-square bg-white rounded overflow-hidden shadow-sm">
+                        <div key={index} className="aspect-square bg-white rounded overflow-hidden shadow-sm" style={{minHeight: '50px', maxHeight: '80px'}}>
                           <div className="w-full h-full bg-gray-100 flex items-center justify-center text-sm font-medium text-gray-600">
                             {image.startsWith('ILLUSTRATION_') ? (
                               <div className="text-center p-1">
@@ -184,16 +184,16 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     </div>
                   </div>
 
-                  {/* Line 3: Promotional Materials - Compact grid */}
-                  <div className="space-y-2">
-                    <h4 className="text-sm font-semibold text-gray-700">Promotional Materials - Ute Plaza & Coffee House</h4>
-                    <div className="grid grid-cols-6 md:grid-cols-8 gap-1 p-2 bg-green-50 rounded-lg">
+                  {/* Line 3: Promotional Materials - Ultra compact */}
+                  <div className="space-y-1">
+                    <h4 className="text-xs font-semibold text-gray-700">Promotional Materials - Ute Plaza & Coffee House</h4>
+                    <div className="grid grid-cols-6 md:grid-cols-12 gap-1 p-1 bg-green-50 rounded">
                       {project.images.slice(17, 29).map((image, index) => (
-                        <div key={index} className="aspect-square bg-white rounded overflow-hidden shadow-sm">
+                        <div key={index} className="aspect-square bg-white rounded overflow-hidden shadow-sm" style={{minHeight: '40px', maxHeight: '60px'}}>
                           <div className="w-full h-full bg-gray-100 flex items-center justify-center text-xs font-medium text-gray-600">
                             {image.startsWith('PROMO_') ? (
-                              <div className="text-center p-1">
-                                <div className="text-green-500 mb-1 text-xs">📢</div>
+                              <div className="text-center p-0.5">
+                                <div className="text-green-500 mb-0.5 text-xs">📢</div>
                                 <div className="text-xs">PR{index + 1}</div>
                               </div>
                             ) : (
@@ -205,12 +205,12 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     </div>
                   </div>
 
-                  {/* Line 4: Event Flyers - Compact */}
-                  <div className="space-y-2">
-                    <h4 className="text-sm font-semibold text-gray-700">Event Flyers</h4>
-                    <div className="grid grid-cols-4 gap-2 p-2 bg-orange-50 rounded-lg">
+                  {/* Line 4: Event Flyers - Ultra compact */}
+                  <div className="space-y-1">
+                    <h4 className="text-xs font-semibold text-gray-700">Event Flyers</h4>
+                    <div className="grid grid-cols-4 gap-2 p-1 bg-orange-50 rounded">
                       {project.images.slice(29, 33).map((image, index) => (
-                        <div key={index} className="aspect-square bg-white rounded overflow-hidden shadow-sm">
+                        <div key={index} className="aspect-square bg-white rounded overflow-hidden shadow-sm" style={{minHeight: '50px', maxHeight: '80px'}}>
                           <div className="w-full h-full bg-gray-100 flex items-center justify-center text-sm font-medium text-gray-600">
                             {image.startsWith('EVENT_FLYER_') ? (
                               <div className="text-center p-1">
@@ -226,9 +226,9 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     </div>
                   </div>
 
-                  <div className="text-center text-sm text-gray-600 bg-gray-50 p-3 rounded-lg">
+                  <div className="text-center text-xs text-gray-600 bg-gray-50 p-2 rounded">
                     <div className="font-medium text-gray-800 mb-1">🎯 Selected Best Digital Assets</div>
-                    <div>Comprehensive showcase of graphic design versatility across multiple categories. These represent some of the best work from my extensive digital asset collection, highlighting diverse skills and creative expertise.</div>
+                    <div>Comprehensive showcase of graphic design versatility across multiple categories.</div>
                   </div>
                 </div>
               ) : (
