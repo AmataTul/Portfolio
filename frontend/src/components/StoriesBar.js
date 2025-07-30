@@ -7,7 +7,7 @@ const StoriesBar = ({ activeCategory, onCategoryChange }) => {
     "All": Target,
     "Branding": Sparkles,
     "Analytics & Research": BarChart3,
-    "Graphic Design": Palette,
+    "Graphic Design & Marketing Materials": Palette,
     "Advertising": Megaphone,
     "Social Media Content & Campaigns": Smartphone,
     "Photography Projects": Camera,
