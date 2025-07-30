@@ -1120,7 +1120,7 @@ export const portfolioProjects = [
   }
 ];
 
-export const categories = [
+export const brands = [
   "Beats by Dre", "Disney", "Adobe"
 ];
 
