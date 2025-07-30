@@ -877,7 +877,7 @@ export const portfolioProjects = [
   {
     id: 15,
     title: "Comprehensive Graphic Design Skills Portfolio - Multi-Category Design Showcase",
-    category: "Graphic Design & Marketing Materials", 
+    category: "Graphic Design", 
     client: "Various Clients - Comprehensive Design Portfolio",
     project_type: "Multi-Category Graphic Design Skills Demonstration",
     description: "Comprehensive graphic design portfolio showcasing diverse skills across multiple categories and client projects. This extensive collection demonstrates proficiency in professional design, illustration, promotional marketing, and event materials. The portfolio spans work for Ute Plaza Supermarket, KahPeeh kah-Ahn Ute Coffee House & Soda, and various event promotions, showcasing versatility in creating graphics for different industries and purposes. Each category represents specific skill sets from technical design work to creative illustration and strategic promotional materials.",
