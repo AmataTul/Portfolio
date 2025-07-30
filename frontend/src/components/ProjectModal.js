@@ -284,6 +284,31 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     alt={`${project.title} - Image ${currentImageIndex + 1}`}
                     className="w-full h-full object-cover object-center"
                   />
+                  
+                  {/* Navigation arrows for multiple images */}
+                  {project.images.length > 1 && (
+                    <>
+                      <button
+                        onClick={previousImage}
+                        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+                      >
+                        <ChevronLeft size={24} />
+                      </button>
+                      <button
+                        onClick={nextImage}
+                        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+                      >
+                        <ChevronRight size={24} />
+                      </button>
+                    </>
+                  )}
+                  
+                  {/* Image counter for multiple images */}
+                  {project.images.length > 1 && (
+                    <div className="absolute top-4 right-4 bg-black/70 text-white px-4 py-2 rounded-full text-sm font-medium">
+                      {currentImageIndex + 1} / {project.images.length}
+                    </div>
+                  )}
                 </div>
               )}
             </div>
