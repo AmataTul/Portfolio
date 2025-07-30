@@ -291,7 +291,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
               )}
             </div>
           )}
-          
+
           {/* Project Details */}
           <div className="space-y-6">
             <div className="prose prose-lg max-w-none">
