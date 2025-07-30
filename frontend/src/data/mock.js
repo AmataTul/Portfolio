@@ -682,7 +682,7 @@ export const portfolioProjects = [
   {
     id: 12,
     title: "KahPeeh kah-Ahn Ute Coffee House & Soda - Digital Drive Thru Menu Design",
-    category: "Graphic Design & Marketing Materials",
+    category: "Graphic Design",
     client: "Ute Tribal Enterprises - KahPeeh kah-Ahn Ute Coffee House & Soda",
     project_type: "Digital Menu Design & Management",
     description: "Comprehensive digital drive thru menu design project for KahPeeh kah-Ahn Ute Coffee House & Soda, creating visually appealing and user-friendly menu displays for their drive-through service. I designed and managed the complete digital menu system, incorporating the coffee house's indigenous branding and cultural elements while ensuring optimal readability and customer experience. The project included creating multiple menu layouts, seasonal variations, and promotional displays that celebrate the unique indigenous coffee house experience while maintaining professional food service standards.",
