@@ -1155,29 +1155,35 @@ export const portfolioProjects = [
       {
         id: 1,
         title: "🎄 Christmas Holiday Merch Showcase",
-        url: "YOUR_CHRISTMAS_VIDEO_HERE", // Replace with your video file path or link
+        facebookReelUrl: "YOUR_FACEBOOK_REEL_LINK_CHRISTMAS", // Replace with Facebook Reel URL
+        videoUrl: "YOUR_CHRISTMAS_VIDEO_URL", // Replace with direct video URL if hosting your own
         thumbnail: "CHRISTMAS_REEL_THUMBNAIL", // Upload your thumbnail image here
-        description: "Festive Christmas merchandise showcase featuring holiday decorations, gifts, and seasonal products available at Ute Plaza Supermarket. Captured the Christmas spirit with warm lighting and holiday music to drive seasonal shopping.",
-        type: "holiday_christmas_promo",
-        orientation: "vertical" // Vertical reel format
+        description: "Vertical Facebook Reel showcasing festive Christmas merchandise, holiday decorations, and seasonal products at Ute Plaza Supermarket. Optimized for Facebook Reels vertical format.",
+        type: "facebook_reel_christmas",
+        orientation: "vertical",
+        platform: "Facebook Reels"
       },
       {
         id: 2, 
         title: "💕 Valentine's Day Special Promotions",
-        url: "YOUR_VALENTINES_VIDEO_HERE", // Replace with your video file path or link
+        facebookReelUrl: "YOUR_FACEBOOK_REEL_LINK_VALENTINES", // Replace with Facebook Reel URL
+        videoUrl: "YOUR_VALENTINES_VIDEO_URL", // Replace with direct video URL if hosting your own
         thumbnail: "VALENTINES_REEL_THUMBNAIL", // Upload your thumbnail image here  
-        description: "Valentine's Day themed reel highlighting romantic gifts, special treats, and love-inspired products available at the supermarket. Created warm, romantic atmosphere to encourage Valentine's Day shopping.",
-        type: "holiday_valentines_promo",
-        orientation: "vertical" // Vertical reel format
+        description: "Vertical Facebook Reel highlighting romantic Valentine's Day gifts and special treats available at the supermarket. Created for Facebook Reels engagement.",
+        type: "facebook_reel_valentines",
+        orientation: "vertical",
+        platform: "Facebook Reels"
       },
       {
         id: 3,
         title: "🐰 Easter Holiday Celebration Collection", 
-        url: "YOUR_EASTER_VIDEO_HERE", // Replace with your video file path or link
+        facebookReelUrl: "YOUR_FACEBOOK_REEL_LINK_EASTER", // Replace with Facebook Reel URL
+        videoUrl: "YOUR_EASTER_VIDEO_URL", // Replace with direct video URL if hosting your own
         thumbnail: "EASTER_REEL_THUMBNAIL", // Upload your thumbnail image here
-        description: "Easter celebration preparation reel showcasing spring decorations, Easter treats, and family celebration essentials. Created joyful content to encourage customers to shop for their Easter celebrations at Ute Plaza Supermarket.",
-        type: "holiday_easter_promo",
-        orientation: "vertical" // Vertical reel format
+        description: "Vertical Facebook Reel showcasing Easter celebration essentials, spring decorations, and family treats. Optimized for Facebook Reels vertical viewing experience.",
+        type: "facebook_reel_easter",
+        orientation: "vertical",
+        platform: "Facebook Reels"
       }
     ],
     key_contributions: [
