@@ -316,7 +316,96 @@ export const portfolioProjects = [
   },
 
   {
+    id: 7,
+    title: "Disney+ Character Spotlight Campaign",
+    category: "Graphic Design & Marketing Materials",
+    client: "Disney",
+    description: "Multi-platform digital marketing campaign for Disney+ featuring character spotlights and promotional graphics across social media and digital advertising platforms.",
+    images: [
+      "https://images.unsplash.com/photo-1489399627699-e5c5f1e8f6c6?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop"
+    ],
+    type: "image",
+    featured: true,
+    orientation: "horizontal",
+    key_contributions: [
+      "Designed comprehensive digital marketing campaign showcasing Disney+ character portfolio",
+      "Created social media graphics optimized for Instagram, Facebook, and Twitter platforms",
+      "Developed consistent brand visual identity across multiple character spotlight campaigns",
+      "Implemented A/B testing strategy for promotional graphic optimization",
+      "Coordinated with content teams for character licensing and brand guideline compliance"
+    ],
+    skills_utilized: [
+      "Digital Marketing Design",
+      "Social Media Graphics",
+      "Brand Identity Design",
+      "Adobe Creative Suite",
+      "Campaign Visual Strategy",
+      "Multi-Platform Design Optimization",
+      "A/B Testing for Creative Assets"
+    ],
+    impact: {
+      quantified_metrics: [
+        "15+ character spotlight campaigns designed and deployed",
+        "40% improvement in social media engagement for Disney+ character content",
+        "2.5M+ impressions across digital marketing platforms",
+        "30% increase in Disney+ character-related search activity"
+      ],
+      qualitative_outcomes: [
+        "Enhanced Disney+ brand presence through compelling character-focused visual campaigns",
+        "Strengthened audience connection with Disney+ content through strategic character spotlights",
+        "Established consistent visual identity for Disney+ character marketing initiatives",
+        "Elevated brand recognition for Disney+ streaming service through targeted graphic campaigns"
+      ]
+    }
+  },
+
+  {
     id: 8,
+    title: "Beats by Dre Instagram Story Series",
+    category: "Social Media Content & Campaigns", 
+    client: "Beats by Dre",
+    description: "Dynamic Instagram Story series showcasing Beats headphones through lifestyle photography and engaging social media content optimized for vertical mobile viewing.",
+    images: [
+      "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=600&h=800&fit=crop"
+    ],
+    type: "image",
+    featured: true,
+    orientation: "vertical",
+    key_contributions: [
+      "Created cohesive Instagram Story series highlighting Beats product features and lifestyle integration",
+      "Developed engaging vertical content strategy optimized for mobile social media consumption",
+      "Produced lifestyle photography emphasizing product aesthetics and brand positioning",
+      "Implemented interactive Story elements including polls, questions, and swipe-up features",
+      "Coordinated content calendar ensuring consistent brand messaging across story campaigns"
+    ],
+    skills_utilized: [
+      "Instagram Story Design",
+      "Vertical Content Creation",
+      "Social Media Strategy", 
+      "Lifestyle Photography",
+      "Mobile-First Design",
+      "Interactive Content Development",
+      "Brand Storytelling"
+    ],
+    impact: {
+      quantified_metrics: [
+        "25+ Instagram Stories created for Beats product campaigns",
+        "60% increase in story completion rates compared to previous campaigns",
+        "35% boost in profile visits from story content",
+        "50% improvement in story engagement metrics"
+      ],
+      qualitative_outcomes: [
+        "Strengthened Beats brand identity through compelling lifestyle-focused story content",
+        "Enhanced audience engagement with Beats products through authentic social media storytelling",
+        "Established Beats as a premium lifestyle brand through strategic visual content",
+        "Improved brand awareness among target demographic through consistent story presence"
+      ]
+    }
+  },
+
+  {
+    id: 9,
     title: "Adobe Analytics Challenge - Consumer Research & Strategy",
     category: "Illustrations & Educational Content",
     client: "Adobe x Hilton",
