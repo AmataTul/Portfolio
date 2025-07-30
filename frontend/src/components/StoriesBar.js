@@ -18,7 +18,7 @@ const StoriesBar = ({ activeCategory, onCategoryChange }) => {
     "All": "All",
     "Branding": "Branding",
     "Analytics & Research": "Analytics & Research",
-    "Graphic Design": "Graphic Design",
+    "Graphic Design & Marketing Materials": "Graphic Design",
     "Advertising": "Advertising",
     "Social Media Content & Campaigns": "Social Media",
     "Photography Projects": "Photography",
