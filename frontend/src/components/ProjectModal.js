@@ -292,31 +292,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
             </div>
             )}
             
-            {/* Thumbnail navigation - only show for regular projects, not Aigata brand grid */}
-            {project.images.length > 1 && project.title && !project.title.includes('Aigata Brand') && (
-              <div className="flex space-x-3 mt-4 justify-center overflow-x-auto pb-2">
-                {project.images.map((image, index) => (
-                  <button
-                    key={index}
-                    onClick={() => goToImage(index)}
-                    className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all duration-300 ${
-                      index === currentImageIndex 
-                        ? 'border-red-600 ring-2 ring-red-200 shadow-md' 
-                        : 'border-gray-300 hover:border-gray-400 hover:shadow-sm'
-                    }`}
-                  >
-                    <img 
-                      src={image} 
-                      alt={`Thumbnail ${index + 1}`}
-                      className="w-full h-full object-cover"
-                    />
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
-          )}
-          
+            
           {/* Project Details */}
           <div className="space-y-6">
             <div className="prose prose-lg max-w-none">
