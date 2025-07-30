@@ -92,6 +92,48 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     <div>20 professional product listing graphics for Amazon, eBay, Etsy, and TikTok Shop platforms, plus social media marketing assets. Includes complete business operations management with overseas vendor coordination and home-based fulfillment.</div>
                   </div>
                 </div>
+              ) : project.title && project.title.includes('Digital Drive Thru Menu Design') ? (
+                <div className="space-y-4">
+                  <h3 className="text-lg font-semibold text-gray-800 text-center">Coffee House Digital Menu Collection</h3>
+                  <div className="grid grid-cols-1 gap-6">
+                    {/* Main Drive Thru Menu */}
+                    <div className="bg-white rounded-lg overflow-hidden shadow-lg border">
+                      <div className="w-full h-64 bg-gray-100 flex items-center justify-center text-sm font-medium text-gray-600">
+                        <div className="text-center p-4">
+                          <div className="text-gray-400 mb-2 text-3xl">☕</div>
+                          <div className="text-sm font-medium mb-1">DIGITAL_DRIVE_THRU_MENU</div>
+                          <div className="text-xs text-gray-500">Main Menu Design</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="text-center text-sm text-gray-600 bg-green-50 p-3 rounded-lg">
+                    <div className="font-medium text-green-800 mb-1">☕ Digital Drive Thru Menu Design</div>
+                    <div>Custom digital menu board design for drive-thru service, featuring clear product categories, pricing, and visual appeal optimized for quick customer decision-making.</div>
+                  </div>
+                  
+                  {/* Special handling for Coffee House Digital Menu - separate event sign */}
+                  <div className="mt-8 space-y-4">
+                    <div className="border-t pt-6">
+                      <h4 className="text-md font-semibold text-gray-800 mb-3 text-center">Event Signage Design</h4>
+                      <div className="flex justify-center">
+                        <div className="w-80 h-48 bg-white rounded-lg overflow-hidden shadow-lg border">
+                          <div className="w-full h-full bg-gray-100 flex items-center justify-center text-sm font-medium text-gray-600">
+                            <div className="text-center p-4">
+                              <div className="text-gray-400 mb-2 text-3xl">🪧</div>
+                              <div className="text-sm font-medium mb-1">DOUBLE_SIDED_EVENT_SIGN</div>
+                              <div className="text-xs text-gray-500">Event Signage Design</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="text-center text-sm text-gray-600 bg-green-50 p-3 rounded-lg mt-4 max-w-md mx-auto">
+                        <div className="font-medium text-green-800 mb-1">📋 Double-Sided Event Sign</div>
+                        <div>Custom menu design for double-sided signage used at community events and special occasions, designed and created by me to promote the coffee house at various venues.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               ) : (
                 /* Regular Single Image Display */
                 <div className={`relative ${getAspectRatio()} bg-gray-100 rounded-xl overflow-hidden shadow-xl project-image-container ${
