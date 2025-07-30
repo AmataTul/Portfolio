@@ -165,6 +165,140 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     </div>
                   </div>
                 </div>
+              ) : project.title && project.title.includes('Comprehensive Graphic Design Portfolio') ? (
+                <div className="bg-white rounded-xl p-6 shadow-lg">
+                  <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">🎨 34 Professional Graphic Design Pieces</h3>
+                  <p className="text-sm text-gray-600 mb-6 text-center">
+                    Multi-category portfolio spanning promotional materials, brand identity, and event marketing
+                  </p>
+                  
+                  {/* Line 1: Ute Bison Ranch Graphics */}
+                  <div className="mb-8">
+                    <h4 className="text-lg font-semibold text-gray-800 mb-3 flex items-center">
+                      <span className="text-2xl mr-2">🦬</span>
+                      Ute Bison Ranch Promos & Marketing Materials (13 items)
+                    </h4>
+                    <div className="grid grid-cols-6 md:grid-cols-8 gap-3">
+                      {project.images.slice(0, 13).map((item, index) => (
+                        <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
+                          <div className="aspect-square bg-gradient-to-br from-orange-50 to-red-50 flex items-center justify-center p-2">
+                            <div className="text-center">
+                              <div className="w-12 h-12 bg-orange-200 rounded-lg flex items-center justify-center mb-2">
+                                <svg className="w-6 h-6 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+                                  <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+                                </svg>
+                              </div>
+                              <div className="text-xs font-medium text-gray-700 leading-tight">
+                                {item.placeholder}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  {/* Line 2: Design Assets */}
+                  <div className="mb-8">
+                    <h4 className="text-lg font-semibold text-gray-800 mb-3 flex items-center">
+                      <span className="text-2xl mr-2">🎨</span>
+                      Custom Design Assets (4 items)
+                    </h4>
+                    <div className="grid grid-cols-4 gap-4">
+                      {project.images.slice(13, 17).map((item, index) => (
+                        <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
+                          <div className="aspect-square bg-gradient-to-br from-purple-50 to-pink-50 flex items-center justify-center p-3">
+                            <div className="text-center">
+                              <div className="w-16 h-16 bg-purple-200 rounded-lg flex items-center justify-center mb-2">
+                                <svg className="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                                  <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+                                </svg>
+                              </div>
+                              <div className="text-sm font-medium text-gray-700 leading-tight">
+                                {item.placeholder}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  {/* Line 3: Multi-Business Graphics */}
+                  <div className="mb-8">
+                    <h4 className="text-lg font-semibold text-gray-800 mb-3 flex items-center">
+                      <span className="text-2xl mr-2">🏪</span>
+                      Multi-Business Graphics: Plaza, Petroleum & Coffee House (13 items)
+                    </h4>
+                    <div className="grid grid-cols-6 md:grid-cols-8 gap-3">
+                      {project.images.slice(17, 30).map((item, index) => (
+                        <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
+                          <div className="aspect-square bg-gradient-to-br from-green-50 to-blue-50 flex items-center justify-center p-2">
+                            <div className="text-center">
+                              <div className="w-12 h-12 bg-green-200 rounded-lg flex items-center justify-center mb-2">
+                                <svg className="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                                  <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+                                </svg>
+                              </div>
+                              <div className="text-xs font-medium text-gray-700 leading-tight">
+                                {item.placeholder}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  {/* Line 4: Event Flyers */}
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-gray-800 mb-3 flex items-center">
+                      <span className="text-2xl mr-2">📋</span>
+                      Event Flyers (4 items)
+                    </h4>
+                    <div className="grid grid-cols-4 gap-4">
+                      {project.images.slice(30, 34).map((item, index) => (
+                        <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
+                          <div className="aspect-square bg-gradient-to-br from-yellow-50 to-orange-50 flex items-center justify-center p-3">
+                            <div className="text-center">
+                              <div className="w-16 h-16 bg-yellow-200 rounded-lg flex items-center justify-center mb-2">
+                                <svg className="w-8 h-8 text-yellow-600" fill="currentColor" viewBox="0 0 20 20">
+                                  <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+                                </svg>
+                              </div>
+                              <div className="text-sm font-medium text-gray-700 leading-tight">
+                                {item.placeholder}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  {/* Portfolio Summary */}
+                  <div className="bg-gradient-to-r from-gray-50 to-slate-50 rounded-lg p-6">
+                    <h4 className="font-bold text-gray-800 mb-4 text-center">📊 Portfolio Overview</h4>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                      <div className="bg-white rounded-lg p-3 shadow-sm">
+                        <div className="text-2xl font-bold text-orange-600">13</div>
+                        <div className="text-sm text-gray-600">Bison Ranch</div>
+                      </div>
+                      <div className="bg-white rounded-lg p-3 shadow-sm">
+                        <div className="text-2xl font-bold text-purple-600">4</div>
+                        <div className="text-sm text-gray-600">Design Assets</div>
+                      </div>
+                      <div className="bg-white rounded-lg p-3 shadow-sm">
+                        <div className="text-2xl font-bold text-green-600">13</div>
+                        <div className="text-sm text-gray-600">Multi-Business</div>
+                      </div>
+                      <div className="bg-white rounded-lg p-3 shadow-sm">
+                        <div className="text-2xl font-bold text-yellow-600">4</div>
+                        <div className="text-sm text-gray-600">Event Flyers</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               ) : (
                 /* Regular single image display for other projects */
                 <div className={`relative aspect-video bg-gray-100 rounded-xl overflow-hidden shadow-xl project-image-container`}>
