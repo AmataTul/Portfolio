@@ -156,6 +156,54 @@ export const portfolioProjects = [
       }
     }
   },
+
+  {
+    id: 3,
+    title: "Adobe Creative Suite Instagram Reels",
+    category: "Social Media Content & Campaigns",
+    client: "Adobe",
+    description: "Engaging Instagram reels and TikTok content showcasing Creative Suite capabilities through dynamic vertical storytelling and user-generated content.",
+    images: [
+      "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=800&fit=crop"
+    ],
+    type: "video",
+    featured: true,
+    orientation: "vertical",
+    videoUrl: "https://www.tiktok.com/@adobe/video/7334159049778351406",
+    key_contributions: [
+      "Created engaging vertical video content showcasing Adobe Creative Suite capabilities for social media platforms",
+      "Developed dynamic storytelling approach optimized for Instagram Reels and TikTok short-form video format",
+      "Produced user-generated content style videos demonstrating software features and creative possibilities",
+      "Coordinated content creation workflow from concept development through final video production and editing",
+      "Implemented social media best practices for vertical video engagement and platform-specific optimization"
+    ],
+    skills_utilized: [
+      "Vertical Video Content Creation",
+      "Instagram Reels & TikTok Production",
+      "Adobe Creative Suite Expertise", 
+      "Social Media Content Strategy",
+      "Dynamic Storytelling for Short-Form Content",
+      "User-Generated Content Style Production",
+      "Video Editing & Post-Production",
+      "Platform-Specific Content Optimization"
+    ],
+    impact: {
+      quantified_metrics: [
+        "Created multiple high-engagement vertical video content pieces for Adobe Creative Suite promotion",
+        "Produced content optimized for Instagram Reels and TikTok platforms with focus on user engagement",
+        "Demonstrated Adobe software capabilities through practical, relatable video content examples",
+        "Achieved strong visual storytelling within short-form video constraints and platform requirements"
+      ],
+      qualitative_outcomes: [
+        "Successfully showcased complex software capabilities through accessible, engaging vertical video content",
+        "Elevated Adobe Creative Suite brand presence on key social media platforms through compelling video narratives",
+        "Demonstrated expertise in creating user-generated content style videos that resonate with target audiences",
+        "Enhanced Adobe's social media content strategy with platform-optimized, engaging video content",
+        "Strengthened brand connection with creative professionals through relatable, practical software demonstrations"
+      ]
+    }
+  },
+
   {
     id: 4,
     title: "KahPeeh kah-Ahn Ute Coffee House & Soda - Video Advertisement Campaign",
