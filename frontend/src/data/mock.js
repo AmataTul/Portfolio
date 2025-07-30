@@ -873,6 +873,71 @@ export const portfolioProjects = [
       ]
     }
   },
+
+  {
+    id: 15,
+    title: "Comprehensive Graphic Design Skills Portfolio - Multi-Category Design Showcase",
+    category: "Graphic Design & Marketing Materials", 
+    client: "Various Clients - Comprehensive Design Portfolio",
+    project_type: "Multi-Category Graphic Design Skills Demonstration",
+    description: "Comprehensive graphic design portfolio showcasing diverse skills across multiple categories and client projects. This extensive collection demonstrates proficiency in professional design, illustration, promotional marketing, and event materials. The portfolio spans work for Ute Plaza Supermarket, KahPeeh kah-Ahn Ute Coffee House & Soda, and various event promotions, showcasing versatility in creating graphics for different industries and purposes. Each category represents specific skill sets from technical design work to creative illustration and strategic promotional materials.",
+    images: [
+      // Line 1: 13 Professional & Social Media Graphics
+      "PROFESSIONAL_GRAPHIC_1", "PROFESSIONAL_GRAPHIC_2", "PROFESSIONAL_GRAPHIC_3", "PROFESSIONAL_GRAPHIC_4", 
+      "PROFESSIONAL_GRAPHIC_5", "PROFESSIONAL_GRAPHIC_6", "PROFESSIONAL_GRAPHIC_7", "PROFESSIONAL_GRAPHIC_8", 
+      "PROFESSIONAL_GRAPHIC_9", "PROFESSIONAL_GRAPHIC_10", "PROFESSIONAL_GRAPHIC_11", "PROFESSIONAL_GRAPHIC_12", "PROFESSIONAL_GRAPHIC_13",
+      
+      // Line 2: 4 Drawing/Illustrator Skills (stickers, t-shirt, 2 logos)
+      "ILLUSTRATION_STICKER_1", "ILLUSTRATION_TSHIRT_1", "ILLUSTRATION_LOGO_1", "ILLUSTRATION_LOGO_2",
+      
+      // Line 3: 12 Promotional Graphics for Ute Plaza & Coffee House
+      "PROMO_SEASONAL_1", "PROMO_SEASONAL_2", "PROMO_SEASONAL_3", "PROMO_DRINKS_1", "PROMO_DRINKS_2", "PROMO_DRINKS_3",
+      "PROMO_REGULAR_1", "PROMO_REGULAR_2", "PROMO_HOLIDAY_1", "PROMO_HOLIDAY_2", "PROMO_HOLIDAY_3", "PROMO_DEALS_1",
+      
+      // Line 4: 4 Event Flyers  
+      "EVENT_FLYER_1", "EVENT_FLYER_2", "EVENT_FLYER_3", "EVENT_FLYER_4"
+    ],
+    type: "design",
+    featured: true,
+    orientation: "mixed",
+    keyContributions: [
+      "Created comprehensive graphic design portfolio demonstrating expertise across professional, promotional, and creative design categories",
+      "Designed 13 professional graphics for business and social media use showcasing technical design skills and brand consistency",
+      "Produced illustration work including custom stickers, t-shirt designs, and logo creation demonstrating artistic and creative abilities",
+      "Developed 12 promotional graphics for Ute Plaza Supermarket and KahPeeh kah-Ahn Coffee House covering seasonal, beverage, and holiday campaigns",
+      "Created 4 distinct event flyers showcasing layout design, typography, and information hierarchy skills for various community events",
+      "Demonstrated versatility in design styles, from corporate professional graphics to creative illustrations and promotional materials"
+    ],
+    skillsUtilized: [
+      "Professional Graphic Design & Layout",
+      "Social Media Graphics Creation",
+      "Custom Illustration & Drawing Skills",
+      "Logo Design & Brand Identity",
+      "Sticker & Merchandise Design",
+      "T-shirt & Apparel Graphics",
+      "Promotional Materials Design",
+      "Seasonal & Holiday Campaign Graphics",
+      "Event Flyer Design & Layout", 
+      "Multi-Category Design Versatility"
+    ],
+    impact: {
+      quantified: [
+        "Created comprehensive portfolio with 33 distinct design pieces across 4 specialized categories",
+        "Demonstrated proficiency in 13 professional business graphics suitable for corporate and social media applications",
+        "Produced 4 illustration pieces showcasing creative design skills in stickers, apparel, and logo design",
+        "Developed 12 promotional graphics supporting marketing campaigns for local businesses and establishments",
+        "Designed 4 event flyers with varied layouts and information architectures for different community events"
+      ],
+      qualitative: [
+        "Successfully demonstrated versatility across multiple design disciplines from professional corporate graphics to creative illustrations",
+        "Established comprehensive design skillset capable of serving diverse client needs and project requirements",
+        "Enhanced portfolio credibility through organized presentation of varied design capabilities and technical proficiencies",
+        "Proved ability to adapt design style and approach based on client needs, industry requirements, and project objectives",
+        "Strengthened professional reputation through diverse portfolio showcasing both creative artistry and technical design expertise",
+        "Created sustainable framework for demonstrating design capabilities across multiple categories and client types"
+      ]
+    }
+  },
   // Additional entries omitted for brevity
 ];
 
