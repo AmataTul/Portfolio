@@ -804,7 +804,7 @@ export const portfolioProjects = [
   {
     id: 14,
     title: "Aigata Brand - E-commerce Product Listing Graphics & Marketing Assets",
-    category: "Graphic Design & Marketing Materials",
+    category: "Graphic Design",
     client: "Aigata - Personal E-commerce Business",
     project_type: "Complete E-commerce Product Graphics & Multi-Platform Marketing Materials",
     description: "Comprehensive e-commerce product listing graphics and marketing assets for my personal Aigata brand business operating across Amazon, eBay, Etsy, and TikTok Shop platforms. I designed, branded, and created over 20 distinct graphic elements for product listings, social media marketing, and promotional materials. As the sole business operator, I handled complete business operations including working with overseas vendors on product design and logistics, personally managing inventory storage at my home, and coordinating all transportation and fulfillment. These graphics supported my multi-platform e-commerce strategy, featuring professional product presentations, social media assets, and promotional materials that established Aigata as a recognizable brand across all selling platforms.",
