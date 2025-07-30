@@ -141,7 +141,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                   {/* Line 1: Professional & Social Media Graphics - Ultra compact */}
                   <div className="space-y-1">
                     <h4 className="text-xs font-semibold text-gray-700">Professional & Social Media Graphics</h4>
-                    <div className="grid grid-cols-8 md:grid-cols-13 gap-1 p-1 bg-blue-50 rounded">
+                    <div className="grid grid-cols-8 md:grid-cols-10 gap-1 p-1 bg-blue-50 rounded">
                       {project.images.slice(0, 13).map((image, index) => (
                         <div key={index} className="aspect-square bg-white rounded overflow-hidden shadow-sm" style={{minHeight: '40px', maxHeight: '60px'}}>
                           <div className="w-full h-full bg-gray-100 flex items-center justify-center text-xs font-medium text-gray-600">
