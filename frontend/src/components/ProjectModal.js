@@ -66,52 +66,75 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
               {/* Special Instagram-style grid for Multi-Business Social Media Posts */}
               {project.title && project.title.includes('Multi-Business Social Media Posts') ? (
                 <div className="bg-white rounded-xl p-6 shadow-lg">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4 text-center">📱 30 Social Media Posts Across 8 Platforms</h3>
+                  <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">📱 30 Social Media Posts Campaign</h3>
                   <p className="text-sm text-gray-600 mb-6 text-center">
                     Content created for Ute Tribal Enterprises, Ute Bison Ranch, Ute Plaza Supermarket & KahPeeh Kah-Ahn Coffee House
                   </p>
-                  <div className="grid grid-cols-6 gap-2">
+                  <div className="grid grid-cols-5 gap-4">
                     {project.images.map((post, index) => (
-                      <div key={index} className="bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-200">
-                        {/* Instagram-style post cell */}
-                        <div className="aspect-square bg-gradient-to-br from-blue-50 to-purple-50 flex flex-col items-center justify-center p-2 text-xs">
-                          <div className="w-full h-16 bg-white rounded mb-2 flex items-center justify-center">
-                            <div className="text-center">
-                              <div className="text-2xl mb-1">
-                                {post.business === 'Ute Tribal Enterprises' && '🏛️'}
-                                {post.business === 'Ute Bison Ranch' && '🦬'}
-                                {post.business === 'Ute Plaza Supermarket' && '🏪'}
-                                {post.business === 'KahPeeh Kah-Ahn Ute Coffee House & Soda' && '☕'}
+                      <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
+                        {/* Instagram-style post */}
+                        <div className="flex flex-col">
+                          {/* Post header */}
+                          <div className="flex items-center justify-between p-3 border-b border-gray-100">
+                            <div className="flex items-center space-x-2">
+                              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-pink-500 to-orange-500 flex items-center justify-center text-white font-bold text-xs">
+                                {post.business.includes('Tribal') && 'UT'}
+                                {post.business.includes('Bison') && 'BR'}
+                                {post.business.includes('Plaza') && 'PS'}
+                                {post.business.includes('Coffee') && 'CH'}
                               </div>
-                              <div className="text-xs font-medium text-gray-700 leading-tight">
-                                {post.placeholder}
+                              <div>
+                                <div className="text-xs font-semibold text-gray-800">
+                                  {post.business.includes('Tribal') && 'utetribal'}
+                                  {post.business.includes('Bison') && 'utebisonranch'}
+                                  {post.business.includes('Plaza') && 'uteplaza'}
+                                  {post.business.includes('Coffee') && 'kahpeehkah'}
+                                </div>
                               </div>
                             </div>
                           </div>
                           
-                          {/* Instagram-style engagement metrics */}
-                          <div className="w-full bg-white rounded p-1 text-center">
-                            <div className="flex justify-between items-center text-xs text-gray-600">
-                              <span className="flex items-center">
-                                <span className="text-red-500">❤️</span>
-                                <span className="ml-1">{post.likes}</span>
-                              </span>
-                              <span className="flex items-center">
-                                <span className="text-blue-500">📤</span>
-                                <span className="ml-1">{post.shares}</span>
-                              </span>
-                              <span className="flex items-center">
-                                <span className="text-green-500">💬</span>
-                                <span className="ml-1">{post.comments}</span>
-                              </span>
+                          {/* Image placeholder */}
+                          <div className="aspect-square bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center relative">
+                            <div className="text-center p-4">
+                              <div className="text-gray-400 text-sm font-medium mb-2">{post.placeholder}</div>
+                              <div className="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center">
+                                <svg className="w-6 h-6 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+                                  <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+                                </svg>
+                              </div>
+                              <div className="text-xs text-gray-500 mt-1">Upload Image</div>
+                            </div>
+                          </div>
+                          
+                          {/* Action buttons (Instagram style) */}
+                          <div className="p-3 space-y-2">
+                            <div className="flex items-center justify-between">
+                              <div className="flex items-center space-x-3">
+                                {/* Heart (Like) */}
+                                <svg className="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+                                  <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
+                                </svg>
+                                {/* Comment */}
+                                <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                                </svg>
+                                {/* Share */}
+                                <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
+                                </svg>
+                              </div>
+                              {/* Bookmark */}
+                              <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+                              </svg>
                             </div>
                             
-                            {/* Business tag */}
-                            <div className="text-xs text-gray-500 mt-1 truncate">
-                              {post.business.includes('Ute Tribal') && 'UTE TRIBAL'}
-                              {post.business.includes('Bison') && 'BISON RANCH'}
-                              {post.business.includes('Plaza') && 'PLAZA MARKET'}
-                              {post.business.includes('Coffee') && 'COFFEE HOUSE'}
+                            {/* Engagement numbers */}
+                            <div className="space-y-1">
+                              <div className="text-xs font-semibold text-gray-800">{post.likes} likes</div>
+                              <div className="text-xs text-gray-600">{post.comments} comments</div>
                             </div>
                           </div>
                         </div>
@@ -119,25 +142,25 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     ))}
                   </div>
                   
-                  {/* Summary stats */}
-                  <div className="mt-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-4">
-                    <h4 className="font-semibold text-gray-800 mb-2 text-center">📊 Campaign Performance Summary</h4>
+                  {/* Campaign Performance Metrics */}
+                  <div className="mt-8 bg-gradient-to-r from-indigo-50 to-blue-50 rounded-lg p-6">
+                    <h4 className="font-bold text-gray-800 mb-4 text-center">📈 Campaign Impact Metrics</h4>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                      <div>
-                        <div className="text-2xl font-bold text-blue-600">30</div>
-                        <div className="text-sm text-gray-600">Total Posts</div>
+                      <div className="bg-white rounded-lg p-3 shadow-sm">
+                        <div className="text-2xl font-bold text-indigo-600">30</div>
+                        <div className="text-sm text-gray-600">Posts Created</div>
                       </div>
-                      <div>
-                        <div className="text-2xl font-bold text-red-500">5.2K+</div>
-                        <div className="text-sm text-gray-600">Total Likes</div>
+                      <div className="bg-white rounded-lg p-3 shadow-sm">
+                        <div className="text-2xl font-bold text-blue-600">8</div>
+                        <div className="text-sm text-gray-600">Platforms Managed</div>
                       </div>
-                      <div>
-                        <div className="text-2xl font-bold text-blue-500">850+</div>
-                        <div className="text-sm text-gray-600">Total Shares</div>
+                      <div className="bg-white rounded-lg p-3 shadow-sm">
+                        <div className="text-2xl font-bold text-green-600">4</div>
+                        <div className="text-sm text-gray-600">Businesses</div>
                       </div>
-                      <div>
-                        <div className="text-2xl font-bold text-green-500">1.2K+</div>
-                        <div className="text-sm text-gray-600">Total Comments</div>
+                      <div className="bg-white rounded-lg p-3 shadow-sm">
+                        <div className="text-2xl font-bold text-purple-600">95%</div>
+                        <div className="text-sm text-gray-600">Engagement Rate</div>
                       </div>
                     </div>
                   </div>
