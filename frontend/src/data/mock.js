@@ -919,7 +919,7 @@ export const portfolioProjects = [
   },
 
   {
-    id: 15,
+    id: 16,
     title: "Comprehensive Graphic Design Skills Portfolio - Multi-Category Design Showcase",
     category: "Graphic Design", 
     client: "Various Clients - Comprehensive Design Portfolio",
