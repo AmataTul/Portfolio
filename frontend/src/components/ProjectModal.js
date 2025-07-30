@@ -70,7 +70,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                   <p className="text-sm text-gray-600 mb-6 text-center">
                     Content created for Ute Tribal Enterprises, Ute Bison Ranch, Ute Plaza Supermarket & KahPeeh Kah-Ahn Coffee House
                   </p>
-                  <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-2 md:gap-4">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-4">
                     {project.images.map((post, index) => (
                       <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
                         {/* Instagram-style post */}
