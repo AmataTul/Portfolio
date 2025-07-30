@@ -986,6 +986,12 @@ export const portfolioProjects = [
     project_type: "Multi-Platform Social Media Content Strategy & Creation",
     description: "Comprehensive social media content creation campaign across multiple Ute Tribal Enterprise businesses including Ute Tribal Enterprises, Kah-Peeh kah-Ahn Ute Coffee House & Soda, Ute Plaza Supermarket, and Ute Bison Ranch. I created diverse content including promotional posts, event coverage, volunteering initiatives, progress updates, behind-the-scenes content, advertisements, and various graphics. The purpose was to increase social media engagement, boost exposure, drive traffic, and strengthen community connections across all business platforms. Each post was strategically crafted to align with business objectives while maintaining authentic brand voice and cultural sensitivity.",
     images: [
+      // EASY IMAGE UPLOAD INSTRUCTIONS:
+      // 1. Replace "UTE_TRIBAL_POST_1" with your image file path (e.g., "/images/my-post-1.jpg")
+      // 2. Or replace with a URL (e.g., "https://yoursite.com/image.jpg")
+      // 3. Keep the same structure but change only the placeholder text
+      // 4. Example: { placeholder: "/images/tribal-post-1.jpg", business: "Ute Tribal Enterprises", likes: 124, shares: 18, comments: 23, type: "promotional" },
+      
       // Ute Tribal Enterprises posts (8 posts)
       { placeholder: "UTE_TRIBAL_POST_1", business: "Ute Tribal Enterprises", likes: 124, shares: 18, comments: 23, type: "promotional" },
       { placeholder: "UTE_TRIBAL_POST_2", business: "Ute Tribal Enterprises", likes: 89, shares: 12, comments: 16, type: "event_coverage" },
