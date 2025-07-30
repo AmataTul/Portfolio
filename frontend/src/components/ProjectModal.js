@@ -275,29 +275,6 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                       ))}
                     </div>
                   </div>
-                  
-                  {/* Portfolio Summary */}
-                  <div className="bg-gradient-to-r from-gray-50 to-slate-50 rounded-lg p-6">
-                    <h4 className="font-bold text-gray-800 mb-4 text-center">📊 Portfolio Overview</h4>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                      <div className="bg-white rounded-lg p-3 shadow-sm">
-                        <div className="text-2xl font-bold text-orange-600">13</div>
-                        <div className="text-sm text-gray-600">Bison Ranch</div>
-                      </div>
-                      <div className="bg-white rounded-lg p-3 shadow-sm">
-                        <div className="text-2xl font-bold text-purple-600">4</div>
-                        <div className="text-sm text-gray-600">Design Assets</div>
-                      </div>
-                      <div className="bg-white rounded-lg p-3 shadow-sm">
-                        <div className="text-2xl font-bold text-green-600">13</div>
-                        <div className="text-sm text-gray-600">Multi-Business</div>
-                      </div>
-                      <div className="bg-white rounded-lg p-3 shadow-sm">
-                        <div className="text-2xl font-bold text-yellow-600">4</div>
-                        <div className="text-sm text-gray-600">Event Flyers</div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               ) : (
                 /* Regular single image display for other projects */
