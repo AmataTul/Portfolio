@@ -1048,6 +1048,79 @@ export const portfolioProjects = [
       "Indigenous Business Promotion"
     ]
   },
+  {
+    id: 18,
+    title: "Ute Plaza Supermarket - Holiday Merch Facebook Reels Campaign",
+    category: "Social Media Content & Campaigns",
+    client: "Ute Tribal Enterprises - Ute Plaza Supermarket",
+    project_type: "Holiday-Themed Facebook Reels Marketing Campaign",
+    description: "Strategic Facebook Reels campaign for Ute Plaza Supermarket focusing on holiday merchandise and seasonal promotions. Created engaging short-form video content to showcase holiday products, drive foot traffic, and increase seasonal sales through authentic storytelling and festive themes.",
+    images: [], // No main image - only the 3 Facebook Reels videos below
+    type: "video", 
+    featured: true,
+    orientation: "vertical",
+    videos: [
+      {
+        id: 1,
+        title: "🎄 Christmas Holiday Merch Showcase",
+        url: "FACEBOOK_REEL_LINK_1", // Replace with actual Facebook reel link or upload video
+        thumbnail: "CHRISTMAS_REEL_THUMBNAIL", // Upload your thumbnail image here
+        description: "Festive Christmas merchandise showcase featuring holiday decorations, gifts, and seasonal products available at Ute Plaza Supermarket. Captured the Christmas spirit with warm lighting and holiday music to drive seasonal shopping.",
+        type: "holiday_christmas_promo"
+      },
+      {
+        id: 2, 
+        title: "🦃 Thanksgiving Holiday Spirit Campaign",
+        url: "FACEBOOK_REEL_LINK_2", // Replace with actual Facebook reel link or upload video
+        thumbnail: "THANKSGIVING_REEL_THUMBNAIL", // Upload your thumbnail image here  
+        description: "Thanksgiving-themed reel highlighting traditional holiday foods, decorations, and family gathering essentials available at the supermarket. Emphasized gratitude and community values aligned with indigenous heritage.",
+        type: "holiday_thanksgiving_promo"
+      },
+      {
+        id: 3,
+        title: "🎆 New Year Holiday Celebration Prep", 
+        url: "FACEBOOK_REEL_LINK_3", // Replace with actual Facebook reel link or upload video
+        thumbnail: "NEW_YEAR_REEL_THUMBNAIL", // Upload your thumbnail image here
+        description: "New Year celebration preparation reel showcasing party supplies, festive foods, and celebration essentials. Created upbeat content to encourage customers to shop for their New Year celebrations at Ute Plaza Supermarket.",
+        type: "holiday_new_year_promo"
+      }
+    ],
+    key_contributions: [
+      "Created 3 strategic Facebook Reels focused on different holiday themes and seasonal merchandise",
+      "Developed compelling short-form video content optimized for Facebook's algorithm and user engagement",
+      "Designed holiday-themed campaigns that align with Ute Plaza Supermarket's community values and customer base",
+      "Implemented seasonal marketing strategy to drive foot traffic and increase holiday merchandise sales",
+      "Coordinated video production including staging, lighting, and editing for professional holiday content"
+    ],
+    skills_utilized: [
+      "Facebook Reels Production",
+      "Holiday-Themed Content Creation",
+      "Short-Form Video Marketing",
+      "Seasonal Merchandise Promotion",
+      "Community-Centered Marketing",
+      "Video Editing & Post-Production",
+      "Social Media Algorithm Optimization",
+      "Retail Marketing Strategy"
+    ],
+    impact: {
+      quantified_metrics: [
+        "3 high-engagement Facebook Reels created for holiday marketing campaigns",
+        "Targeted seasonal merchandise promotion across Christmas, Thanksgiving, and New Year holidays",
+        "Optimized content for Facebook's short-form video algorithm and user engagement patterns",
+        "Strategic holiday marketing to drive supermarket foot traffic during peak shopping seasons"
+      ],
+      qualitative_outcomes: [
+        "Successfully showcased Ute Plaza Supermarket's holiday merchandise through engaging video content",
+        "Enhanced brand presence on Facebook through consistent holiday-themed social media marketing",
+        "Strengthened community connection by aligning holiday promotions with local customer values and traditions",
+        "Established effective seasonal marketing framework for recurring holiday campaigns",
+        "Elevated supermarket's digital marketing presence through professional short-form video content"
+      ]
+    }
+  },
+
+  {
+    id: 19,
   // Additional entries omitted for brevity
 ];
 
