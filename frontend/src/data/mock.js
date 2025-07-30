@@ -990,11 +990,43 @@ export const portfolioProjects = [
     project_type: "Multi-Platform Social Media Content Strategy & Creation",
     description: "Comprehensive social media content creation campaign across multiple Ute Tribal Enterprise businesses including Ute Tribal Enterprises, Kah-Peeh kah-Ahn Ute Coffee House & Soda, Ute Plaza Supermarket, and Ute Bison Ranch. I created diverse content including promotional posts, event coverage, volunteering initiatives, progress updates, behind-the-scenes content, advertisements, and various graphics. The purpose was to increase social media engagement, boost exposure, drive traffic, and strengthen community connections across all business platforms. Each post was strategically crafted to align with business objectives while maintaining authentic brand voice and cultural sensitivity.",
     images: [
-      "SOCIAL_MEDIA_POST_1", "SOCIAL_MEDIA_POST_2", "SOCIAL_MEDIA_POST_3", "SOCIAL_MEDIA_POST_4",
-      "SOCIAL_MEDIA_POST_5", "SOCIAL_MEDIA_POST_6", "SOCIAL_MEDIA_POST_7", "SOCIAL_MEDIA_POST_8", 
-      "SOCIAL_MEDIA_POST_9", "SOCIAL_MEDIA_POST_10", "SOCIAL_MEDIA_POST_11", "SOCIAL_MEDIA_POST_12",
-      "SOCIAL_MEDIA_POST_13", "SOCIAL_MEDIA_POST_14", "SOCIAL_MEDIA_POST_15", "SOCIAL_MEDIA_POST_16",
-      "SOCIAL_MEDIA_POST_17", "SOCIAL_MEDIA_POST_18", "SOCIAL_MEDIA_POST_19", "SOCIAL_MEDIA_POST_20"
+      // Ute Tribal Enterprises posts (8 posts)
+      { placeholder: "UTE_TRIBAL_POST_1", business: "Ute Tribal Enterprises", likes: 124, shares: 18, comments: 23, type: "promotional" },
+      { placeholder: "UTE_TRIBAL_POST_2", business: "Ute Tribal Enterprises", likes: 89, shares: 12, comments: 16, type: "event_coverage" },
+      { placeholder: "UTE_TRIBAL_POST_3", business: "Ute Tribal Enterprises", likes: 156, shares: 31, comments: 42, type: "behind_scenes" },
+      { placeholder: "UTE_TRIBAL_POST_4", business: "Ute Tribal Enterprises", likes: 201, shares: 24, comments: 35, type: "volunteer_initiative" },
+      { placeholder: "UTE_TRIBAL_POST_5", business: "Ute Tribal Enterprises", likes: 178, shares: 29, comments: 51, type: "progress_update" },
+      { placeholder: "UTE_TRIBAL_POST_6", business: "Ute Tribal Enterprises", likes: 95, shares: 14, comments: 19, type: "advertisement" },
+      { placeholder: "UTE_TRIBAL_POST_7", business: "Ute Tribal Enterprises", likes: 143, shares: 22, comments: 28, type: "promotional" },
+      { placeholder: "UTE_TRIBAL_POST_8", business: "Ute Tribal Enterprises", likes: 167, shares: 33, comments: 46, type: "community_engagement" },
+      
+      // Ute Bison Ranch posts (8 posts)
+      { placeholder: "UTE_BISON_POST_1", business: "Ute Bison Ranch", likes: 289, shares: 45, comments: 67, type: "promotional" },
+      { placeholder: "UTE_BISON_POST_2", business: "Ute Bison Ranch", likes: 234, shares: 38, comments: 52, type: "behind_scenes" },
+      { placeholder: "UTE_BISON_POST_3", business: "Ute Bison Ranch", likes: 198, shares: 27, comments: 41, type: "event_coverage" },
+      { placeholder: "UTE_BISON_POST_4", business: "Ute Bison Ranch", likes: 312, shares: 56, comments: 78, type: "advertisement" },
+      { placeholder: "UTE_BISON_POST_5", business: "Ute Bison Ranch", likes: 176, shares: 31, comments: 44, type: "progress_update" },
+      { placeholder: "UTE_BISON_POST_6", business: "Ute Bison Ranch", likes: 145, shares: 19, comments: 33, type: "promotional" },
+      { placeholder: "UTE_BISON_POST_7", business: "Ute Bison Ranch", likes: 267, shares: 42, comments: 59, type: "community_engagement" },
+      { placeholder: "UTE_BISON_POST_8", business: "Ute Bison Ranch", likes: 223, shares: 35, comments: 48, type: "behind_scenes" },
+      
+      // Ute Plaza Supermarket posts (7 posts)
+      { placeholder: "UTE_PLAZA_POST_1", business: "Ute Plaza Supermarket", likes: 134, shares: 21, comments: 29, type: "promotional" },
+      { placeholder: "UTE_PLAZA_POST_2", business: "Ute Plaza Supermarket", likes: 98, shares: 15, comments: 22, type: "advertisement" },
+      { placeholder: "UTE_PLAZA_POST_3", business: "Ute Plaza Supermarket", likes: 167, shares: 28, comments: 36, type: "event_coverage" },
+      { placeholder: "UTE_PLAZA_POST_4", business: "Ute Plaza Supermarket", likes: 189, shares: 32, comments: 43, type: "behind_scenes" },
+      { placeholder: "UTE_PLAZA_POST_5", business: "Ute Plaza Supermarket", likes: 156, shares: 24, comments: 31, type: "promotional" },
+      { placeholder: "UTE_PLAZA_POST_6", business: "Ute Plaza Supermarket", likes: 112, shares: 18, comments: 25, type: "community_engagement" },
+      { placeholder: "UTE_PLAZA_POST_7", business: "Ute Plaza Supermarket", likes: 143, shares: 26, comments: 34, type: "progress_update" },
+      
+      // KahPeeh Kah-Ahn Coffee House posts (7 posts)
+      { placeholder: "COFFEE_HOUSE_POST_1", business: "KahPeeh Kah-Ahn Ute Coffee House & Soda", likes: 245, shares: 41, comments: 58, type: "promotional" },
+      { placeholder: "COFFEE_HOUSE_POST_2", business: "KahPeeh Kah-Ahn Ute Coffee House & Soda", likes: 198, shares: 34, comments: 47, type: "behind_scenes" },
+      { placeholder: "COFFEE_HOUSE_POST_3", business: "KahPeeh Kah-Ahn Ute Coffee House & Soda", likes: 167, shares: 29, comments: 39, type: "event_coverage" },
+      { placeholder: "COFFEE_HOUSE_POST_4", business: "KahPeeh Kah-Ahn Ute Coffee House & Soda", likes: 287, shares: 48, comments: 65, type: "advertisement" },
+      { placeholder: "COFFEE_HOUSE_POST_5", business: "KahPeeh Kah-Ahn Ute Coffee House & Soda", likes: 156, shares: 27, comments: 38, type: "promotional" },
+      { placeholder: "COFFEE_HOUSE_POST_6", business: "KahPeeh Kah-Ahn Ute Coffee House & Soda", likes: 134, shares: 23, comments: 32, type: "volunteer_initiative" },
+      { placeholder: "COFFEE_HOUSE_POST_7", business: "KahPeeh Kah-Ahn Ute Coffee House & Soda", likes: 201, shares: 36, comments: 49, type: "community_engagement" }
     ],
     type: "social",
     featured: true,
