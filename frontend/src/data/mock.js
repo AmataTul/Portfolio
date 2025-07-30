@@ -1150,26 +1150,29 @@ export const portfolioProjects = [
       {
         id: 1,
         title: "🎄 Christmas Holiday Merch Showcase",
-        url: "FACEBOOK_REEL_LINK_1", // Replace with actual Facebook reel link or upload video
+        url: "YOUR_CHRISTMAS_VIDEO_HERE", // Replace with your video file path or link
         thumbnail: "CHRISTMAS_REEL_THUMBNAIL", // Upload your thumbnail image here
         description: "Festive Christmas merchandise showcase featuring holiday decorations, gifts, and seasonal products available at Ute Plaza Supermarket. Captured the Christmas spirit with warm lighting and holiday music to drive seasonal shopping.",
-        type: "holiday_christmas_promo"
+        type: "holiday_christmas_promo",
+        orientation: "vertical" // Vertical reel format
       },
       {
         id: 2, 
-        title: "🦃 Thanksgiving Holiday Spirit Campaign",
-        url: "FACEBOOK_REEL_LINK_2", // Replace with actual Facebook reel link or upload video
-        thumbnail: "THANKSGIVING_REEL_THUMBNAIL", // Upload your thumbnail image here  
-        description: "Thanksgiving-themed reel highlighting traditional holiday foods, decorations, and family gathering essentials available at the supermarket. Emphasized gratitude and community values aligned with indigenous heritage.",
-        type: "holiday_thanksgiving_promo"
+        title: "💕 Valentine's Day Special Promotions",
+        url: "YOUR_VALENTINES_VIDEO_HERE", // Replace with your video file path or link
+        thumbnail: "VALENTINES_REEL_THUMBNAIL", // Upload your thumbnail image here  
+        description: "Valentine's Day themed reel highlighting romantic gifts, special treats, and love-inspired products available at the supermarket. Created warm, romantic atmosphere to encourage Valentine's Day shopping.",
+        type: "holiday_valentines_promo",
+        orientation: "vertical" // Vertical reel format
       },
       {
         id: 3,
-        title: "🎆 New Year Holiday Celebration Prep", 
-        url: "FACEBOOK_REEL_LINK_3", // Replace with actual Facebook reel link or upload video
-        thumbnail: "NEW_YEAR_REEL_THUMBNAIL", // Upload your thumbnail image here
-        description: "New Year celebration preparation reel showcasing party supplies, festive foods, and celebration essentials. Created upbeat content to encourage customers to shop for their New Year celebrations at Ute Plaza Supermarket.",
-        type: "holiday_new_year_promo"
+        title: "🐰 Easter Holiday Celebration Collection", 
+        url: "YOUR_EASTER_VIDEO_HERE", // Replace with your video file path or link
+        thumbnail: "EASTER_REEL_THUMBNAIL", // Upload your thumbnail image here
+        description: "Easter celebration preparation reel showcasing spring decorations, Easter treats, and family celebration essentials. Created joyful content to encourage customers to shop for their Easter celebrations at Ute Plaza Supermarket.",
+        type: "holiday_easter_promo",
+        orientation: "vertical" // Vertical reel format
       }
     ],
     key_contributions: [
