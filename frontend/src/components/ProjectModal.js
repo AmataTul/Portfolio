@@ -63,8 +63,175 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
           {/* Project Media - Only show if there are images */}
           {project.images && project.images.length > 0 && (
             <div className="relative">
-              {/* Special Instagram-style grid for Multi-Business Social Media Posts */}
-              {project.title && project.title.includes('Multi-Business Social Media Posts') ? (
+              {/* Special Business Showcase for Aigata Complete Business Development */}
+              {project.title && project.title.includes('Aigata Brand - Complete Business Development') ? (
+                <div className="bg-white rounded-xl p-6 shadow-lg">
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold text-gray-800 mb-2">🏢 Complete Business Success Story</h3>
+                    <p className="text-lg text-gray-600 mb-3">Aigata Brand - "Friendly Futures"</p>
+                    <div className="flex justify-center items-center space-x-8 mb-4">
+                      <div className="text-center">
+                        <div className="text-3xl font-bold text-green-600">1000+</div>
+                        <div className="text-sm text-gray-600">Total Sales</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-3xl font-bold text-blue-600">6+</div>
+                        <div className="text-sm text-gray-600">Years Running</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-3xl font-bold text-purple-600">5</div>
+                        <div className="text-sm text-gray-600">Platforms</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-3xl font-bold text-orange-600">24</div>
+                        <div className="text-sm text-gray-600">Product Designs</div>
+                      </div>
+                    </div>
+                    <div className="flex justify-center flex-wrap gap-2 mb-6">
+                      <span className="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm">Amazon</span>
+                      <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Etsy</span>
+                      <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">eBay</span>
+                      <span className="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-sm">TikTok Shop</span>
+                      <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">In-Person Events</span>
+                    </div>
+                  </div>
+                  
+                  {/* Brand Identity Section */}
+                  <div className="mb-8">
+                    <h4 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+                      <span className="text-2xl mr-2">🎨</span>
+                      Brand Identity & Logo Design (6 items)
+                    </h4>
+                    <div className="grid grid-cols-3 md:grid-cols-6 gap-3">
+                      {project.images.slice(0, 6).map((item, index) => (
+                        <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
+                          <div className="aspect-square bg-gradient-to-br from-purple-50 to-pink-50 flex items-center justify-center p-3">
+                            <div className="text-center">
+                              <div className="w-12 h-12 bg-purple-200 rounded-lg flex items-center justify-center mb-2">
+                                <svg className="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                                  <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+                                </svg>
+                              </div>
+                              <div className="text-xs font-medium text-gray-700 leading-tight">
+                                {item.placeholder}
+                              </div>
+                              <div className="text-xs text-gray-500 mt-1">
+                                {item.description}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Top-Selling Products Section */}
+                  <div className="mb-8">
+                    <h4 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+                      <span className="text-2xl mr-2">🛍️</span>
+                      Top-Selling Products Across Platforms (6 items)
+                    </h4>
+                    <div className="grid grid-cols-3 md:grid-cols-6 gap-3">
+                      {project.images.slice(6, 12).map((item, index) => (
+                        <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
+                          <div className="aspect-square bg-gradient-to-br from-green-50 to-blue-50 flex items-center justify-center p-3">
+                            <div className="text-center">
+                              <div className="w-12 h-12 bg-green-200 rounded-lg flex items-center justify-center mb-2">
+                                <svg className="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                                  <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+                                </svg>
+                              </div>
+                              <div className="text-xs font-medium text-gray-700 leading-tight">
+                                {item.placeholder}
+                              </div>
+                              <div className="text-xs text-gray-500 mt-1">
+                                {item.description}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Product Development Process Section */}
+                  <div className="mb-8">
+                    <h4 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+                      <span className="text-2xl mr-2">⚙️</span>
+                      Product Development & Business Operations (6 items)
+                    </h4>
+                    <div className="grid grid-cols-3 md:grid-cols-6 gap-3">
+                      {project.images.slice(12, 18).map((item, index) => (
+                        <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
+                          <div className="aspect-square bg-gradient-to-br from-orange-50 to-yellow-50 flex items-center justify-center p-3">
+                            <div className="text-center">
+                              <div className="w-12 h-12 bg-orange-200 rounded-lg flex items-center justify-center mb-2">
+                                <svg className="w-6 h-6 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+                                  <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+                                </svg>
+                              </div>
+                              <div className="text-xs font-medium text-gray-700 leading-tight">
+                                {item.placeholder}
+                              </div>
+                              <div className="text-xs text-gray-500 mt-1">
+                                {item.description}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Sales Success & Analytics Section */}
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+                      <span className="text-2xl mr-2">📈</span>
+                      Sales Success & Performance Analytics (6 items)
+                    </h4>
+                    <div className="grid grid-cols-3 md:grid-cols-6 gap-3">
+                      {project.images.slice(18, 24).map((item, index) => (
+                        <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
+                          <div className="aspect-square bg-gradient-to-br from-blue-50 to-indigo-50 flex items-center justify-center p-3">
+                            <div className="text-center">
+                              <div className="w-12 h-12 bg-blue-200 rounded-lg flex items-center justify-center mb-2">
+                                <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                                  <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+                                </svg>
+                              </div>
+                              <div className="text-xs font-medium text-gray-700 leading-tight">
+                                {item.placeholder}
+                              </div>
+                              <div className="text-xs text-gray-500 mt-1">
+                                {item.description}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Business Achievement Summary */}
+                  <div className="bg-gradient-to-r from-purple-50 via-blue-50 to-green-50 rounded-lg p-6">
+                    <h4 className="font-bold text-gray-800 mb-4 text-center">🏆 Complete Business Ownership & Success</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                      <div className="bg-white rounded-lg p-4 shadow-sm">
+                        <div className="text-xl font-bold text-purple-600 mb-1">Full Development</div>
+                        <div className="text-sm text-gray-600">Initiated, designed, and launched complete business from concept to success</div>
+                      </div>
+                      <div className="bg-white rounded-lg p-4 shadow-sm">
+                        <div className="text-xl font-bold text-blue-600 mb-1">Multi-Platform</div>
+                        <div className="text-sm text-gray-600">Successfully managing sales across 5+ platforms and in-person events</div>
+                      </div>
+                      <div className="bg-white rounded-lg p-4 shadow-sm">
+                        <div className="text-xl font-bold text-green-600 mb-1">Proven Results</div>
+                        <div className="text-sm text-gray-600">1000+ sales milestone achieved with 6+ years of continuous operation</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ) : project.title && project.title.includes('Multi-Business Social Media Posts') ? (
                 <div className="bg-white rounded-xl p-6 shadow-lg">
                   <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">📱 30 Social Media Posts Campaign</h3>
                   <p className="text-sm text-gray-600 mb-6 text-center">
