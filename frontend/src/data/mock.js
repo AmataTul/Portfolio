@@ -1218,6 +1218,93 @@ export const portfolioProjects = [
         "Elevated supermarket's digital marketing presence through professional short-form video content"
       ]
     }
+  },
+
+  {
+    id: 20,
+    title: "Aigata Brand - Complete Business Development & Product Line Success",
+    category: "Branding",
+    client: "Aigata - Personal E-commerce Business (Self-Initiated)",
+    project_type: "Complete Business Development, Branding & Multi-Platform E-commerce Success",
+    description: "Comprehensive business development and branding project showcasing the complete creation and management of Aigata brand from concept to 1000+ sales success. This project demonstrates full entrepreneurial capabilities including business initiation, vendor relationship management, product design, brand identity creation, logistics coordination, and multi-platform sales execution across Amazon, Etsy, eBay, TikTok Shop, and in-person events since 2019.",
+    images: [
+      // Row 1: Logo & Brand Identity (6 items)
+      { placeholder: "AIGATA_LOGO_MAIN", category: "Brand Identity", type: "primary_logo", description: "Main Aigata brand logo design" },
+      { placeholder: "AIGATA_LOGO_VARIATIONS", category: "Brand Identity", type: "logo_variations", description: "Logo variations and brand marks" },
+      { placeholder: "AIGATA_BRAND_GUIDELINES", category: "Brand Identity", type: "brand_guide", description: "Brand guidelines and color palette" },
+      { placeholder: "AIGATA_BUSINESS_CARDS", category: "Brand Identity", type: "business_materials", description: "Business cards and stationery" },
+      { placeholder: "AIGATA_PACKAGING_DESIGN", category: "Brand Identity", type: "packaging", description: "Product packaging design" },
+      { placeholder: "AIGATA_BRAND_MOCKUPS", category: "Brand Identity", type: "brand_mockup", description: "Brand identity mockups" },
+
+      // Row 2: Top-Selling Products - Amazon/Etsy (6 items)
+      { placeholder: "AIGATA_PRODUCT_1", category: "Top Sellers", type: "amazon_listing", description: "Best-selling product on Amazon" },
+      { placeholder: "AIGATA_PRODUCT_2", category: "Top Sellers", type: "etsy_listing", description: "Popular Etsy product listing" },
+      { placeholder: "AIGATA_PRODUCT_3", category: "Top Sellers", type: "ebay_listing", description: "eBay featured product" },
+      { placeholder: "AIGATA_PRODUCT_4", category: "Top Sellers", type: "tiktok_shop", description: "TikTok Shop viral product" },
+      { placeholder: "AIGATA_PRODUCT_5", category: "Top Sellers", type: "premium_product", description: "Premium product line item" },
+      { placeholder: "AIGATA_PRODUCT_6", category: "Top Sellers", type: "seasonal_product", description: "Seasonal bestseller" },
+
+      // Row 3: Product Development & Design Process (6 items)
+      { placeholder: "AIGATA_DESIGN_PROCESS_1", category: "Development", type: "concept_design", description: "Product concept and ideation" },
+      { placeholder: "AIGATA_DESIGN_PROCESS_2", category: "Development", type: "prototype", description: "Product prototyping phase" },
+      { placeholder: "AIGATA_VENDOR_COMMUNICATION", category: "Development", type: "vendor_relations", description: "Vendor communication and negotiations" },
+      { placeholder: "AIGATA_QUALITY_CONTROL", category: "Development", type: "quality_assurance", description: "Quality control and testing" },
+      { placeholder: "AIGATA_LOGISTICS_PLANNING", category: "Development", type: "logistics", description: "Shipping and logistics coordination" },
+      { placeholder: "AIGATA_INVENTORY_MANAGEMENT", category: "Development", type: "inventory", description: "Inventory management system" },
+
+      // Row 4: Sales Success & Marketing (6 items)
+      { placeholder: "AIGATA_SALES_DASHBOARD", category: "Success Metrics", type: "sales_analytics", description: "Sales dashboard showing 1000+ sales" },
+      { placeholder: "AIGATA_AMAZON_PERFORMANCE", category: "Success Metrics", type: "amazon_stats", description: "Amazon seller performance" },
+      { placeholder: "AIGATA_ETSY_SUCCESS", category: "Success Metrics", type: "etsy_analytics", description: "Etsy shop success metrics" },
+      { placeholder: "AIGATA_TIKTOK_VIRAL", category: "Success Metrics", type: "tiktok_performance", description: "TikTok Shop viral moments" },
+      { placeholder: "AIGATA_EVENT_SALES", category: "Success Metrics", type: "event_booth", description: "In-person event sales setup" },
+      { placeholder: "AIGATA_CUSTOMER_REVIEWS", category: "Success Metrics", type: "testimonials", description: "Customer reviews and testimonials" }
+    ],
+    type: "branding",
+    featured: true,
+    orientation: "mixed",
+    businessMetrics: {
+      launchYear: 2019,
+      totalSales: "1000+",
+      platforms: ["Amazon", "Etsy", "eBay", "TikTok Shop", "In-Person Events"],
+      businessModel: "Full Ownership & Management"
+    },
+    key_contributions: [
+      "Initiated and launched complete Aigata brand business from concept to 1000+ sales success",
+      "Designed comprehensive brand identity including logo creation, brand guidelines, and visual identity system",
+      "Established and managed vendor relationships for product sourcing, negotiation, and quality control",
+      "Developed complete product line with personal design input and market research validation",
+      "Created and optimized product listings across multiple e-commerce platforms (Amazon, Etsy, eBay, TikTok Shop)",
+      "Managed complete business logistics including inventory, shipping, customer service, and fulfillment",
+      "Executed multi-platform marketing strategy combining online sales with in-person event participation",
+      "Handled all business planning, financial management, and strategic growth initiatives since 2019"
+    ],
+    skills_utilized: [
+      "Complete Business Development", "Brand Identity Design", "Logo Creation",
+      "Vendor Relationship Management", "Product Design & Development", "E-commerce Platform Management",
+      "Multi-Platform Sales Strategy", "Amazon Seller Central", "Etsy Shop Management", "eBay Selling",
+      "TikTok Shop Operations", "Event Sales & Marketing", "Inventory Management",
+      "Customer Service Excellence", "Business Planning & Strategy", "Financial Management",
+      "Logistics Coordination", "Quality Control", "Market Research", "Competitive Analysis"
+    ],
+    impact: {
+      quantified_metrics: [
+        "1000+ total sales achieved across all platforms since 2019 launch",
+        "5 major e-commerce platforms successfully established and managed (Amazon, Etsy, eBay, TikTok Shop, Events)",
+        "24 unique product designs created and brought to market",
+        "Multiple vendor relationships established and maintained for consistent product sourcing",
+        "Complete brand identity system developed including logo, guidelines, and marketing materials",
+        "6+ years of continuous business operation and growth (2019-2025)"
+      ],
+      qualitative_outcomes: [
+        "Successfully launched and scaled personal brand business from zero to 1000+ sales milestone",
+        "Demonstrated complete entrepreneurial capabilities from business initiation through execution and growth",
+        "Established strong brand presence across multiple online marketplaces and in-person sales channels",
+        "Built sustainable business model with diverse revenue streams and consistent customer satisfaction",
+        "Created recognizable 'Friendly Futures' brand concept that resonates with target audience",
+        "Developed expertise in full-stack business operations including design, logistics, marketing, and sales"
+      ]
+    }
   }
 ];
 
