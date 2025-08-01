@@ -8,12 +8,12 @@ export const portfolioProjects = [
     project_type: "Educational Photography & Documentation",
     description: "Educational photography documentation of Uintah River High School students visiting the Ute Bison Ranch as part of the Summer Youth Program. Captured authentic moments of cultural education and youth engagement with tribal heritage and bison conservation efforts.",
     images: [
-      "YOUTH_PROGRAM_PHOTO_1", // Upload your youth program image 1 here
-      "YOUTH_PROGRAM_PHOTO_2", // Upload your youth program image 2 here
-      "YOUTH_PROGRAM_PHOTO_3", // Upload your youth program image 3 here
-      "YOUTH_PROGRAM_PHOTO_4", // Upload your youth program image 4 here
-      "YOUTH_PROGRAM_PHOTO_5", // Upload your youth program image 5 here
-      "YOUTH_PROGRAM_PHOTO_6"  // Upload your youth program image 6 here
+      "b1.jpg", // Upload your youth program image 1 here
+      "b2.jpg", // Upload your youth program image 2 here
+      "b3.jpg", // Upload your youth program image 3 here
+      "b4.jpg", // Upload your youth program image 4 here
+      "b5.jpg", // Upload your youth program image 5 here
+      "b6.jpg"  // Upload your youth program image 6 here
     ],
     type: "image",
     featured: true,
