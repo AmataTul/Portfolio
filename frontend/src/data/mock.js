@@ -1399,23 +1399,10 @@ export const portfolioProjects = [
     project_type: "Comprehensive Brand Audit & Strategic Marketing Analysis",
     description: "In-depth strategic marketing audit of Disney's brand positioning, consumer engagement strategies, and competitive landscape conducted as part of advanced marketing coursework at Utah State University. This comprehensive analysis examined Disney's multi-platform marketing approach, brand equity management, target audience segmentation, and competitive positioning within the entertainment industry ecosystem.",
     images: [
-      // Disney Brand Overview & Analysis (4 items)
-      { placeholder: "DISNEY_BRAND_OVERVIEW", category: "Brand Analysis", type: "brand_positioning", description: "Disney's overall brand positioning and market presence analysis", theme: "magical" },
-      { placeholder: "DISNEY_LOGO_EVOLUTION", category: "Brand Analysis", type: "visual_identity", description: "Evolution of Disney's iconic brand identity and visual elements", theme: "classic" },
-      { placeholder: "DISNEY_CONSUMER_INSIGHTS", category: "Brand Analysis", type: "audience_analysis", description: "Key consumer demographics and behavioral insights", theme: "data_driven" },
-      { placeholder: "DISNEY_COMPETITIVE_LANDSCAPE", category: "Brand Analysis", type: "competitive_analysis", description: "Disney's position within entertainment industry competitive landscape", theme: "strategic" },
-
-      // Marketing Strategy Analysis (4 items)  
-      { placeholder: "DISNEY_MARKETING_CHANNELS", category: "Marketing Strategy", type: "channel_analysis", description: "Multi-platform marketing channel effectiveness and strategy", theme: "omnichannel" },
-      { placeholder: "DISNEY_CONTENT_STRATEGY", category: "Marketing Strategy", type: "content_marketing", description: "Content marketing approach across Disney+ and traditional media", theme: "storytelling" },
-      { placeholder: "DISNEY_SOCIAL_MEDIA_IMPACT", category: "Marketing Strategy", type: "social_strategy", description: "Social media engagement and community building strategies", theme: "engagement" },
-      { placeholder: "DISNEY_SEASONAL_CAMPAIGNS", category: "Marketing Strategy", type: "campaign_analysis", description: "Seasonal marketing campaigns and promotional strategies", theme: "festive" },
-
-      // Key Findings & Recommendations (4 items)
-      { placeholder: "DISNEY_AUDIT_FINDINGS", category: "Strategic Insights", type: "audit_results", description: "Primary audit findings and strategic insights discovered", theme: "analytical" },
-      { placeholder: "DISNEY_SWOT_ANALYSIS", category: "Strategic Insights", type: "swot_matrix", description: "Comprehensive SWOT analysis of Disney's brand position", theme: "framework" },
-      { placeholder: "DISNEY_RECOMMENDATIONS", category: "Strategic Insights", type: "strategic_recommendations", description: "Strategic recommendations for Disney's marketing optimization", theme: "forward_thinking" },
-      { placeholder: "DISNEY_FUTURE_OPPORTUNITIES", category: "Strategic Insights", type: "growth_opportunities", description: "Identified future growth and marketing opportunities", theme: "innovative" }
+      // Only 3 Key Visual Insights
+      { placeholder: "DISNEY_BRAND_ECOSYSTEM_ANALYSIS", category: "Core Analysis", type: "brand_strategy", description: "Disney's integrated brand ecosystem across theme parks, streaming, and merchandise" },
+      { placeholder: "DISNEY_MULTIGENERATIONAL_TARGETING", category: "Consumer Strategy", type: "audience_segmentation", description: "Multi-generational marketing approach targeting millennials and Gen Z simultaneously" },
+      { placeholder: "DISNEY_PLUS_MARKETING_HUB", category: "Digital Strategy", type: "platform_integration", description: "Disney+ transformation into central marketing and content distribution hub" }
     ],
     type: "branding",
     featured: true,
