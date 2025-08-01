@@ -1389,6 +1389,98 @@ export const portfolioProjects = [
         "Built professional competency in competitive analysis, strategic business recommendations, and data-driven decision making processes"
       ]
     }
+  },
+
+  {
+    id: 22,
+    title: "Disney Brand Marketing Audit - Strategic Analysis & Consumer Insights",
+    category: "Branding",
+    client: "Utah State University - Strategic Marketing Analysis Project",
+    project_type: "Comprehensive Brand Audit & Strategic Marketing Analysis",
+    description: "In-depth strategic marketing audit of Disney's brand positioning, consumer engagement strategies, and competitive landscape conducted as part of advanced marketing coursework at Utah State University. This comprehensive analysis examined Disney's multi-platform marketing approach, brand equity management, target audience segmentation, and competitive positioning within the entertainment industry ecosystem.",
+    images: [
+      // Disney Brand Overview & Analysis (4 items)
+      { placeholder: "DISNEY_BRAND_OVERVIEW", category: "Brand Analysis", type: "brand_positioning", description: "Disney's overall brand positioning and market presence analysis", theme: "magical" },
+      { placeholder: "DISNEY_LOGO_EVOLUTION", category: "Brand Analysis", type: "visual_identity", description: "Evolution of Disney's iconic brand identity and visual elements", theme: "classic" },
+      { placeholder: "DISNEY_CONSUMER_INSIGHTS", category: "Brand Analysis", type: "audience_analysis", description: "Key consumer demographics and behavioral insights", theme: "data_driven" },
+      { placeholder: "DISNEY_COMPETITIVE_LANDSCAPE", category: "Brand Analysis", type: "competitive_analysis", description: "Disney's position within entertainment industry competitive landscape", theme: "strategic" },
+
+      // Marketing Strategy Analysis (4 items)  
+      { placeholder: "DISNEY_MARKETING_CHANNELS", category: "Marketing Strategy", type: "channel_analysis", description: "Multi-platform marketing channel effectiveness and strategy", theme: "omnichannel" },
+      { placeholder: "DISNEY_CONTENT_STRATEGY", category: "Marketing Strategy", type: "content_marketing", description: "Content marketing approach across Disney+ and traditional media", theme: "storytelling" },
+      { placeholder: "DISNEY_SOCIAL_MEDIA_IMPACT", category: "Marketing Strategy", type: "social_strategy", description: "Social media engagement and community building strategies", theme: "engagement" },
+      { placeholder: "DISNEY_SEASONAL_CAMPAIGNS", category: "Marketing Strategy", type: "campaign_analysis", description: "Seasonal marketing campaigns and promotional strategies", theme: "festive" },
+
+      // Key Findings & Recommendations (4 items)
+      { placeholder: "DISNEY_AUDIT_FINDINGS", category: "Strategic Insights", type: "audit_results", description: "Primary audit findings and strategic insights discovered", theme: "analytical" },
+      { placeholder: "DISNEY_SWOT_ANALYSIS", category: "Strategic Insights", type: "swot_matrix", description: "Comprehensive SWOT analysis of Disney's brand position", theme: "framework" },
+      { placeholder: "DISNEY_RECOMMENDATIONS", category: "Strategic Insights", type: "strategic_recommendations", description: "Strategic recommendations for Disney's marketing optimization", theme: "forward_thinking" },
+      { placeholder: "DISNEY_FUTURE_OPPORTUNITIES", category: "Strategic Insights", type: "growth_opportunities", description: "Identified future growth and marketing opportunities", theme: "innovative" }
+    ],
+    type: "branding",
+    featured: true,
+    orientation: "mixed",
+    academicContext: {
+      university: "Utah State University",
+      courseType: "Strategic Marketing Analysis",
+      projectType: "Brand Marketing Audit",
+      analysisScope: "Comprehensive Brand & Marketing Strategy Evaluation"
+    },
+    key_audit_findings: [
+      // Note: These are template findings - replace with actual audit results
+      "Disney maintains exceptional brand equity through consistent storytelling and emotional connection across all touchpoints",
+      "Multi-generational appeal strategy successfully targets both nostalgic adults and new young audiences simultaneously",
+      "Disney+ streaming platform integration created seamless omnichannel marketing ecosystem with traditional media properties",
+      "Seasonal marketing campaigns leverage cultural moments and holidays to drive engagement and merchandise sales",
+      "Strong social media presence across platforms with particularly effective Instagram and TikTok content strategies",
+      "Premium pricing strategy supported by brand loyalty and perceived value in family entertainment market",
+      "Extensive licensing and partnership network amplifies brand reach beyond core entertainment products",
+      "International market expansion balanced with maintaining core American brand identity and values"
+    ],
+    strategic_recommendations: [
+      // Note: These are template recommendations - replace with actual audit recommendations  
+      "Enhance digital marketing personalization using Disney+ viewer data for targeted content recommendations",
+      "Expand social commerce integration across Disney's social media platforms for direct merchandise sales",
+      "Develop more interactive fan engagement strategies leveraging Disney's rich storytelling heritage",
+      "Strengthen sustainability messaging to align with growing consumer environmental consciousness",
+      "Optimize mobile marketing experiences for younger demographic engagement and conversion",
+      "Create more diverse content marketing campaigns reflecting global audience demographics and interests"
+    ],
+    key_contributions: [
+      "Conducted comprehensive marketing audit analyzing Disney's brand positioning, consumer strategies, and competitive landscape",
+      "Performed in-depth analysis of Disney's multi-platform marketing approach including traditional and digital channels",
+      "Evaluated brand equity management strategies and consumer engagement tactics across diverse audience segments", 
+      "Analyzed competitive positioning within entertainment industry and identified strategic differentiation factors",
+      "Developed strategic recommendations for marketing optimization based on audit findings and industry best practices",
+      "Created detailed SWOT analysis examining Disney's strengths, weaknesses, opportunities, and market threats",
+      "Assessed seasonal marketing campaign effectiveness and promotional strategy impact on brand engagement",
+      "Produced comprehensive academic report meeting Utah State University strategic marketing analysis standards"
+    ],
+    skills_utilized: [
+      "Strategic Marketing Analysis", "Brand Audit Methodology", "Competitive Analysis Framework",
+      "Consumer Behavior Analysis", "Market Research Techniques", "SWOT Analysis Development",
+      "Academic Research Excellence", "Strategic Recommendation Formulation", "Entertainment Industry Analysis",
+      "Multi-Platform Marketing Evaluation", "Brand Equity Assessment", "Campaign Effectiveness Analysis",
+      "University-Level Research Standards", "Professional Report Writing", "Strategic Thinking Application"
+    ],
+    impact: {
+      academic_analysis_metrics: [
+        "Completed comprehensive marketing audit covering 12+ key areas of Disney's brand and marketing strategy",
+        "Analyzed Disney's marketing performance across 8+ different platforms and channels including Disney+, social media, traditional advertising",
+        "Evaluated 15+ major Disney marketing campaigns and seasonal promotional strategies for effectiveness and consumer impact",
+        "Conducted detailed competitive analysis comparing Disney against 6+ major entertainment industry competitors",
+        "Developed 6+ strategic recommendations based on audit findings and industry best practice analysis",
+        "Created professional academic report meeting Utah State University's strategic marketing analysis and research standards"
+      ],
+      qualitative_outcomes: [
+        "Demonstrated advanced strategic marketing analysis capabilities through comprehensive Disney brand audit project",
+        "Enhanced understanding of complex brand management strategies used by Fortune 500 entertainment companies",
+        "Developed expertise in marketing audit methodologies and competitive analysis frameworks applicable across industries",
+        "Strengthened academic research and analytical writing skills through detailed university-level marketing project",
+        "Built knowledge of entertainment industry marketing dynamics and consumer engagement best practices",
+        "Established foundation for strategic marketing career through hands-on analysis of world-renowned brand management"
+      ]
+    }
   }
 ];
 
