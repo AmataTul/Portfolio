@@ -12,8 +12,7 @@ export const portfolioProjects = [
       "b2.jpg", // Upload your youth program image 2 here
       "b3.jpg", // Upload your youth program image 3 here
       "b4.jpg", // Upload your youth program image 4 here
-      "b5.jpg", // Upload your youth program image 5 here
-      "b6.jpg"  // Upload your youth program image 6 here
+      "b5.jpg" // Upload your youth program image 5 heree
     ],
     type: "image",
     featured: true,
