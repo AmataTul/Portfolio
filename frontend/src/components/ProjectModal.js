@@ -102,102 +102,29 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     </div>
                   </div>
                   
-                  {/* Disney Brand Analysis Section */}
+                  {/* Key Visual Insights Section - Only 3 Items */}
                   <div className="mb-8">
                     <h4 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
-                      <span className="text-2xl mr-2">🏰</span>
-                      Disney Brand Analysis & Consumer Insights (4 items)
+                      <span className="text-2xl mr-2">🎯</span>
+                      Key Strategic Insights (3 core findings)
                     </h4>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                      {project.images.slice(0, 4).map((item, index) => (
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                      {project.images.map((item, index) => (
                         <div key={index} className="bg-white/90 backdrop-blur rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-purple-200 hover:border-purple-300">
-                          <div className="aspect-square bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center p-3 relative">
-                            {/* Disney magical sparkles */}
+                          <div className="aspect-square bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center p-4 relative">
                             <div className="absolute top-2 right-2 text-yellow-400 text-xs">✨</div>
-                            <div className="absolute bottom-2 left-2 text-pink-400 text-xs">🌟</div>
                             <div className="text-center">
-                              <div className="w-14 h-14 bg-gradient-to-br from-purple-200 to-pink-200 rounded-full flex items-center justify-center mb-2 border-2 border-white shadow-md">
-                                <span className="text-2xl">
+                              <div className="w-16 h-16 bg-gradient-to-br from-purple-200 to-pink-200 rounded-full flex items-center justify-center mb-3 border-2 border-white shadow-md">
+                                <span className="text-3xl">
                                   {index === 0 && '🏰'}
-                                  {index === 1 && '✨'}
-                                  {index === 2 && '👥'}
-                                  {index === 3 && '📊'}
+                                  {index === 1 && '👥'}
+                                  {index === 2 && '📱'}
                                 </span>
                               </div>
-                              <div className="text-xs font-medium text-purple-700 leading-tight mb-1">
-                                {item.placeholder}
+                              <div className="text-sm font-bold text-purple-700 mb-2">
+                                {item.category}
                               </div>
-                              <div className="text-xs text-purple-600">
-                                {item.description}
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Marketing Strategy Analysis Section */}
-                  <div className="mb-8">
-                    <h4 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
-                      <span className="text-2xl mr-2">🎬</span>
-                      Marketing Strategy & Channel Analysis (4 items)
-                    </h4>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                      {project.images.slice(4, 8).map((item, index) => (
-                        <div key={index} className="bg-white/90 backdrop-blur rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-blue-200 hover:border-blue-300">
-                          <div className="aspect-square bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center p-3 relative">
-                            {/* Disney magical elements */}
-                            <div className="absolute top-2 right-2 text-blue-400 text-xs">🎭</div>
-                            <div className="absolute bottom-2 left-2 text-indigo-400 text-xs">🎪</div>
-                            <div className="text-center">
-                              <div className="w-14 h-14 bg-gradient-to-br from-blue-200 to-indigo-200 rounded-full flex items-center justify-center mb-2 border-2 border-white shadow-md">
-                                <span className="text-2xl">
-                                  {index === 0 && '📺'}
-                                  {index === 1 && '📚'}
-                                  {index === 2 && '💬'}
-                                  {index === 3 && '🎄'}
-                                </span>
-                              </div>
-                              <div className="text-xs font-medium text-blue-700 leading-tight mb-1">
-                                {item.placeholder}
-                              </div>
-                              <div className="text-xs text-blue-600">
-                                {item.description}
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Strategic Insights & Recommendations Section */}
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
-                      <span className="text-2xl mr-2">💡</span>
-                      Strategic Insights & Recommendations (4 items)
-                    </h4>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                      {project.images.slice(8, 12).map((item, index) => (
-                        <div key={index} className="bg-white/90 backdrop-blur rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-green-200 hover:border-green-300">
-                          <div className="aspect-square bg-gradient-to-br from-green-100 to-emerald-100 flex items-center justify-center p-3 relative">
-                            {/* Disney magical touches */}
-                            <div className="absolute top-2 right-2 text-green-400 text-xs">🌟</div>
-                            <div className="absolute bottom-2 left-2 text-emerald-400 text-xs">💫</div>
-                            <div className="text-center">
-                              <div className="w-14 h-14 bg-gradient-to-br from-green-200 to-emerald-200 rounded-full flex items-center justify-center mb-2 border-2 border-white shadow-md">
-                                <span className="text-2xl">
-                                  {index === 0 && '🔍'}
-                                  {index === 1 && '⚖️'}
-                                  {index === 2 && '💡'}
-                                  {index === 3 && '🚀'}
-                                </span>
-                              </div>
-                              <div className="text-xs font-medium text-green-700 leading-tight mb-1">
-                                {item.placeholder}
-                              </div>
-                              <div className="text-xs text-green-600">
+                              <div className="text-xs text-purple-600 leading-tight">
                                 {item.description}
                               </div>
                             </div>
@@ -215,12 +142,12 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                       <span className="text-2xl ml-2">🏰</span>
                     </h4>
                     
-                    {/* Fun Findings Section */}
+                    {/* Concise Findings Section */}
                     <div className="mb-6">
                       <h5 className="font-semibold text-purple-700 mb-3 text-lg">🔍 What We Discovered:</h5>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                        {project.key_audit_findings && project.key_audit_findings.slice(0, 6).map((finding, index) => (
-                          <div key={index} className="bg-white/80 backdrop-blur rounded-lg p-3 text-sm text-gray-700 shadow-sm border border-purple-200">
+                      <div className="space-y-3">
+                        {project.key_audit_findings && project.key_audit_findings.map((finding, index) => (
+                          <div key={index} className="bg-white/90 backdrop-blur rounded-lg p-4 text-sm text-gray-700 shadow-sm border border-purple-200">
                             {finding}
                           </div>
                         ))}
@@ -230,9 +157,9 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     {/* Strategic Recommendations */}
                     <div>
                       <h5 className="font-semibold text-blue-700 mb-3 text-lg">💡 Strategic Recommendations:</h5>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                      <div className="space-y-3">
                         {project.strategic_recommendations && project.strategic_recommendations.map((recommendation, index) => (
-                          <div key={index} className="bg-white/80 backdrop-blur rounded-lg p-3 text-sm text-gray-700 shadow-sm border border-blue-200">
+                          <div key={index} className="bg-white/90 backdrop-blur rounded-lg p-4 text-sm text-gray-700 shadow-sm border border-blue-200">
                             {recommendation}
                           </div>
                         ))}
