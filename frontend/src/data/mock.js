@@ -1414,24 +1414,17 @@ export const portfolioProjects = [
       analysisScope: "Comprehensive Brand & Marketing Strategy Evaluation"
     },
     key_audit_findings: [
-      // Replace these template findings with your actual Disney audit discoveries:
-      "🏰 Disney's 'magic' isn't just storytelling - it's a carefully crafted brand ecosystem that connects emotional experiences across every touchpoint",
-      "👨‍👩‍👧‍👦 Multi-generational marketing genius: Disney simultaneously targets nostalgic millennials AND Gen Z through platform-specific content strategies",
-      "📱 Disney+ transformed from 'just another streaming service' to the central hub of Disney's entire marketing universe",
-      "🎢 Theme park experiences drive social media content - visitors become Disney's most authentic brand ambassadors",
-      "💰 Premium pricing strategy works because Disney sells 'memories' and 'magic moments,' not just entertainment products",
-      "🌍 Global expansion balanced perfectly with maintaining core American values - Disney adapts locally while staying universally 'Disney'",
-      "🎭 Seasonal marketing campaigns tap into cultural emotions (holidays, back-to-school) to drive both engagement AND merchandise sales",
-      "🤝 Strategic partnerships and licensing create a Disney presence in unexpected places - from Happy Meals to fashion collaborations"
+      "Disney's true competitive advantage lies in their 'ecosystem approach' - theme parks drive Disney+ subscriptions, which boost merchandise sales, creating a self-reinforcing cycle",
+      "The company targets three generations simultaneously: nostalgic millennials (childhood memories), Gen X parents (family experiences), and Gen Z (social media content)",  
+      "Disney+ became their marketing command center, not just a streaming service - every show launches tie-in merchandise, theme park attractions, and social campaigns",
+      "Their pricing strategy defies logic but works: premium prices feel justified because Disney sells 'childhood magic' and 'family memories,' not entertainment",
+      "Social media strategy is genius - they let visitors create content for them. Theme park guests become unpaid brand ambassadors posting millions of photos yearly"
     ],
     strategic_recommendations: [
-      // Replace these template recommendations with your actual audit suggestions:
-      "🎯 Leverage Disney+ viewer data for hyper-personalized content recommendations and targeted merchandise marketing",
-      "🛍️ Integrate social commerce directly into Instagram and TikTok for instant Disney merchandise purchases during viral moments",
-      "🎮 Create more interactive digital experiences that let fans 'step inside' Disney stories through AR/VR technology",
-      "🌱 Strengthen sustainability messaging to align with Gen Z environmental values while maintaining Disney magic",
-      "📲 Optimize mobile-first experiences - younger audiences discover Disney through their phones, not TV commercials",
-      "🎨 Develop more diverse content that reflects global audiences while celebrating Disney's inclusive 'magic for everyone' message"
+      "Leverage Disney+ viewing data to create hyper-personalized merchandise recommendations - if someone watches Encanto 10 times, show them Mirabel products immediately",
+      "Integrate social commerce into Instagram and TikTok - when Disney content goes viral, capitalize instantly with 'shop now' buttons on trending posts",
+      "Create 'Disney Adult' specific experiences and marketing - this growing demographic has disposable income and intense brand loyalty but different needs than families",
+      "Expand AR experiences in stores and parks - Gen Z expects interactive, phone-integrated experiences that blend digital and physical worlds"
     ],
     key_contributions: [
       "Conducted comprehensive marketing audit analyzing Disney's brand positioning, consumer strategies, and competitive landscape",
