@@ -63,8 +63,177 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
           {/* Project Media - Only show if there are images */}
           {project.images && project.images.length > 0 && (
             <div className="relative">
-              {/* Special Academic Excellence Showcase for Adobe Analytics Competition */}
-              {project.title && project.title.includes('Adobe Analytics Competition - Hildon Hotel Data Analysis') ? (
+              {/* Special Disney Magic Marketing Audit Showcase */}
+              {project.title && project.title.includes('Disney Brand Marketing Audit') ? (
+                <div className="bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 rounded-xl p-6 shadow-lg">
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold text-gray-800 mb-2">✨ Disney Brand Marketing Audit</h3>
+                    <p className="text-lg text-purple-700 mb-3 font-semibold">Strategic Analysis & Consumer Insights</p>
+                    <div className="bg-white/80 backdrop-blur rounded-lg p-4 mb-6 border border-purple-200">
+                      <div className="flex justify-center items-center space-x-8 mb-4">
+                        <div className="text-center">
+                          <div className="text-3xl font-bold text-purple-600">🏰</div>
+                          <div className="text-sm font-semibold text-gray-700">Disney Magic</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-3xl font-bold text-pink-600">📊</div>
+                          <div className="text-sm font-semibold text-gray-700">Strategic Audit</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-3xl font-bold text-blue-600">🎯</div>
+                          <div className="text-sm font-semibold text-gray-700">USU Project</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-3xl font-bold text-green-600">💡</div>
+                          <div className="text-sm font-semibold text-gray-700">Brand Insights</div>
+                        </div>
+                      </div>
+                      <div className="text-center">
+                        <div className="bg-gradient-to-r from-purple-100 to-pink-100 rounded-lg px-6 py-2 inline-block border border-purple-300">
+                          <span className="text-lg font-semibold text-purple-800">🎓 Utah State University Strategic Marketing Analysis</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex justify-center flex-wrap gap-2 mb-6">
+                      <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">Brand Analysis</span>
+                      <span className="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-sm font-medium">Consumer Insights</span>
+                      <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">Marketing Strategy</span>
+                      <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">Competitive Analysis</span>
+                    </div>
+                  </div>
+                  
+                  {/* Disney Brand Analysis Section */}
+                  <div className="mb-8">
+                    <h4 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+                      <span className="text-2xl mr-2">🏰</span>
+                      Disney Brand Analysis & Consumer Insights (4 items)
+                    </h4>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                      {project.images.slice(0, 4).map((item, index) => (
+                        <div key={index} className="bg-white/90 backdrop-blur rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-purple-200 hover:border-purple-300">
+                          <div className="aspect-square bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center p-3 relative">
+                            {/* Disney magical sparkles */}
+                            <div className="absolute top-2 right-2 text-yellow-400 text-xs">✨</div>
+                            <div className="absolute bottom-2 left-2 text-pink-400 text-xs">🌟</div>
+                            <div className="text-center">
+                              <div className="w-14 h-14 bg-gradient-to-br from-purple-200 to-pink-200 rounded-full flex items-center justify-center mb-2 border-2 border-white shadow-md">
+                                <span className="text-2xl">
+                                  {index === 0 && '🏰'}
+                                  {index === 1 && '✨'}
+                                  {index === 2 && '👥'}
+                                  {index === 3 && '📊'}
+                                </span>
+                              </div>
+                              <div className="text-xs font-medium text-purple-700 leading-tight mb-1">
+                                {item.placeholder}
+                              </div>
+                              <div className="text-xs text-purple-600">
+                                {item.description}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Marketing Strategy Analysis Section */}
+                  <div className="mb-8">
+                    <h4 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+                      <span className="text-2xl mr-2">🎬</span>
+                      Marketing Strategy & Channel Analysis (4 items)
+                    </h4>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                      {project.images.slice(4, 8).map((item, index) => (
+                        <div key={index} className="bg-white/90 backdrop-blur rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-blue-200 hover:border-blue-300">
+                          <div className="aspect-square bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center p-3 relative">
+                            {/* Disney magical elements */}
+                            <div className="absolute top-2 right-2 text-blue-400 text-xs">🎭</div>
+                            <div className="absolute bottom-2 left-2 text-indigo-400 text-xs">🎪</div>
+                            <div className="text-center">
+                              <div className="w-14 h-14 bg-gradient-to-br from-blue-200 to-indigo-200 rounded-full flex items-center justify-center mb-2 border-2 border-white shadow-md">
+                                <span className="text-2xl">
+                                  {index === 0 && '📺'}
+                                  {index === 1 && '📚'}
+                                  {index === 2 && '💬'}
+                                  {index === 3 && '🎄'}
+                                </span>
+                              </div>
+                              <div className="text-xs font-medium text-blue-700 leading-tight mb-1">
+                                {item.placeholder}
+                              </div>
+                              <div className="text-xs text-blue-600">
+                                {item.description}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Strategic Insights & Recommendations Section */}
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+                      <span className="text-2xl mr-2">💡</span>
+                      Strategic Insights & Recommendations (4 items)
+                    </h4>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                      {project.images.slice(8, 12).map((item, index) => (
+                        <div key={index} className="bg-white/90 backdrop-blur rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-green-200 hover:border-green-300">
+                          <div className="aspect-square bg-gradient-to-br from-green-100 to-emerald-100 flex items-center justify-center p-3 relative">
+                            {/* Disney magical touches */}
+                            <div className="absolute top-2 right-2 text-green-400 text-xs">🌟</div>
+                            <div className="absolute bottom-2 left-2 text-emerald-400 text-xs">💫</div>
+                            <div className="text-center">
+                              <div className="w-14 h-14 bg-gradient-to-br from-green-200 to-emerald-200 rounded-full flex items-center justify-center mb-2 border-2 border-white shadow-md">
+                                <span className="text-2xl">
+                                  {index === 0 && '🔍'}
+                                  {index === 1 && '⚖️'}
+                                  {index === 2 && '💡'}
+                                  {index === 3 && '🚀'}
+                                </span>
+                              </div>
+                              <div className="text-xs font-medium text-green-700 leading-tight mb-1">
+                                {item.placeholder}
+                              </div>
+                              <div className="text-xs text-green-600">
+                                {item.description}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Disney Magic Summary */}
+                  <div className="bg-gradient-to-r from-purple-100 via-pink-100 to-blue-100 rounded-xl p-6 border-2 border-purple-200">
+                    <h4 className="font-bold text-gray-800 mb-4 text-center flex items-center justify-center">
+                      <span className="text-2xl mr-2">🏰</span>
+                      Disney Marketing Audit Excellence
+                      <span className="text-2xl ml-2">✨</span>
+                    </h4>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                      <div className="bg-white/80 backdrop-blur rounded-lg p-4 shadow-sm border border-purple-200">
+                        <div className="text-2xl mb-2">🎯</div>
+                        <div className="text-lg font-bold text-purple-600 mb-1">Strategic Analysis</div>
+                        <div className="text-sm text-gray-600">Comprehensive brand positioning and competitive landscape analysis</div>
+                      </div>
+                      <div className="bg-white/80 backdrop-blur rounded-lg p-4 shadow-sm border border-pink-200">
+                        <div className="text-2xl mb-2">📊</div>
+                        <div className="text-lg font-bold text-pink-600 mb-1">Consumer Insights</div>
+                        <div className="text-sm text-gray-600">In-depth audience analysis and behavioral pattern evaluation</div>
+                      </div>
+                      <div className="bg-white/80 backdrop-blur rounded-lg p-4 shadow-sm border border-blue-200">
+                        <div className="text-2xl mb-2">💫</div>
+                        <div className="text-lg font-bold text-blue-600 mb-1">Strategic Recommendations</div>
+                        <div className="text-sm text-gray-600">Data-driven recommendations for marketing optimization</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ) : project.title && project.title.includes('Adobe Analytics Competition - Hildon Hotel Data Analysis') ? (
                 <div className="bg-white rounded-xl p-6 shadow-lg">
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-gray-800 mb-2">🏆 Academic Excellence & Research Achievement</h3>
