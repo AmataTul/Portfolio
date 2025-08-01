@@ -208,6 +208,39 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                   </div>
 
                   {/* Disney Magic Summary */}
+                  <div className="bg-gradient-to-r from-purple-100 via-pink-100 to-blue-100 rounded-xl p-6 border-2 border-purple-200 mb-8">
+                    <h4 className="font-bold text-gray-800 mb-6 text-center flex items-center justify-center">
+                      <span className="text-2xl mr-2">✨</span>
+                      Key Disney Marketing Insights
+                      <span className="text-2xl ml-2">🏰</span>
+                    </h4>
+                    
+                    {/* Fun Findings Section */}
+                    <div className="mb-6">
+                      <h5 className="font-semibold text-purple-700 mb-3 text-lg">🔍 What We Discovered:</h5>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        {project.key_audit_findings && project.key_audit_findings.slice(0, 6).map((finding, index) => (
+                          <div key={index} className="bg-white/80 backdrop-blur rounded-lg p-3 text-sm text-gray-700 shadow-sm border border-purple-200">
+                            {finding}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    {/* Strategic Recommendations */}
+                    <div>
+                      <h5 className="font-semibold text-blue-700 mb-3 text-lg">💡 Strategic Recommendations:</h5>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        {project.strategic_recommendations && project.strategic_recommendations.map((recommendation, index) => (
+                          <div key={index} className="bg-white/80 backdrop-blur rounded-lg p-3 text-sm text-gray-700 shadow-sm border border-blue-200">
+                            {recommendation}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Academic Excellence Summary */}
                   <div className="bg-gradient-to-r from-purple-100 via-pink-100 to-blue-100 rounded-xl p-6 border-2 border-purple-200">
                     <h4 className="font-bold text-gray-800 mb-4 text-center flex items-center justify-center">
                       <span className="text-2xl mr-2">🏰</span>
