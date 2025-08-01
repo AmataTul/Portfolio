@@ -1305,6 +1305,76 @@ export const portfolioProjects = [
         "Developed expertise in full-stack business operations including design, logistics, marketing, and sales"
       ]
     }
+  },
+
+  {
+    id: 21,
+    title: "Adobe Analytics Competition - Hildon Hotel Data Analysis & Research Excellence",
+    category: "Analytics & Research",
+    client: "Utah State University - Adobe Analytics Challenge (Academic Competition)",
+    project_type: "Advanced Data Analytics Research & Competitive Analysis",
+    description: "Comprehensive data analytics research project for prestigious Adobe Analytics Competition representing Utah State University against 5000+ universities statewide. Led advanced data analysis of Hildon Hotel performance metrics using professional Adobe Analytics tools, collaborating with master's degree research team while serving as undergraduate senior researcher. This project demonstrates exceptional analytical capabilities, academic excellence, and professional-level data interpretation skills in competitive academic environment.",
+    images: [
+      // Key Presentation Slides & Analytics Dashboards (12 items)
+      { placeholder: "ADOBE_COMPETITION_TITLE_SLIDE", category: "Competition Overview", type: "presentation_title", description: "Competition title slide showing Utah State University representation" },
+      { placeholder: "HILDON_HOTEL_DATA_OVERVIEW", category: "Data Analysis", type: "data_dashboard", description: "Hildon Hotel performance data overview and key metrics" },
+      { placeholder: "ADOBE_ANALYTICS_DASHBOARD", category: "Analytics Tools", type: "analytics_interface", description: "Adobe Analytics tool interface and data visualization" },
+      { placeholder: "RESEARCH_METHODOLOGY", category: "Research Process", type: "methodology_slide", description: "Research methodology and analytical approach framework" },
+      { placeholder: "COMPETITIVE_ANALYSIS_RESULTS", category: "Key Findings", type: "analysis_results", description: "Primary competitive analysis findings and insights" },
+      { placeholder: "DATA_VISUALIZATION_CHARTS", category: "Data Visualization", type: "charts_graphs", description: "Key data visualization charts and performance graphs" },
+      { placeholder: "UNIVERSITY_COMPETITION_STATS", category: "Competition Context", type: "competition_data", description: "5000+ universities competition statistics and context" },
+      { placeholder: "TEAM_COLLABORATION_SLIDE", category: "Team Dynamics", type: "team_overview", description: "Research team composition and collaboration structure" },
+      { placeholder: "ANALYTICAL_INSIGHTS_SUMMARY", category: "Key Insights", type: "insights_summary", description: "Summary of major analytical insights and discoveries" },
+      { placeholder: "RECOMMENDATIONS_SLIDE", category: "Strategic Recommendations", type: "recommendations", description: "Strategic recommendations based on data analysis" },
+      { placeholder: "COMPETITION_OUTCOMES", category: "Results & Achievement", type: "competition_results", description: "Competition performance and academic recognition" },
+      { placeholder: "UTAH_STATE_REPRESENTATION", category: "University Pride", type: "university_branding", description: "Utah State University representation and academic excellence" }
+    ],
+    type: "analytics",
+    featured: true,
+    orientation: "horizontal",
+    competitionDetails: {
+      year: 2021,
+      participatingUniversities: "5000+",
+      university: "Utah State University",
+      studentLevel: "Bachelor's Senior (working with Master's team)",
+      analyticsTools: ["Adobe Analytics", "Data Visualization Tools", "Statistical Analysis Software"]
+    },
+    key_contributions: [
+      "Represented Utah State University in prestigious Adobe Analytics Competition against 5000+ universities statewide",
+      "Conducted comprehensive data analysis of Hildon Hotel performance metrics using professional Adobe Analytics platform",
+      "Collaborated effectively with master's degree research team while contributing senior-level undergraduate analytical expertise",
+      "Developed advanced data interpretation methodologies and competitive analysis frameworks for hospitality industry data",
+      "Created compelling data visualizations and analytical presentations for academic competition submission",
+      "Demonstrated exceptional analytical skills by securing recognition in highly competitive academic research environment",
+      "Applied professional-grade analytics tools and research methodologies typically used in graduate-level academic projects",
+      "Contributed to interdisciplinary research team combining data analytics, business strategy, and hospitality industry insights"
+    ],
+    skills_utilized: [
+      "Adobe Analytics Platform Expertise", "Advanced Data Analysis", "Statistical Research Methods",
+      "Data Visualization & Reporting", "Competitive Analysis Framework", "Academic Research Excellence",
+      "Cross-Functional Team Collaboration", "Graduate-Level Research Participation", "Hospitality Industry Analytics",
+      "Performance Metrics Analysis", "Data-Driven Insights Development", "Strategic Recommendation Formulation",
+      "Professional Presentation Development", "Academic Competition Strategy", "Undergraduate Research Leadership",
+      "Master's Level Collaboration", "University Representation", "Analytical Problem Solving"
+    ],
+    impact: {
+      academic_achievement_metrics: [
+        "Successfully represented Utah State University in Adobe Analytics Competition against 5000+ participating universities",
+        "Demonstrated exceptional undergraduate analytical capabilities in graduate-level research environment (2021)",
+        "Collaborated effectively with master's degree students while contributing senior bachelor's level expertise",
+        "Applied professional Adobe Analytics tools typically used in advanced business analytics and research contexts",
+        "Developed comprehensive analytical framework for hospitality industry data analysis and competitive assessment",
+        "Created high-quality academic research presentation showcasing advanced data interpretation and visualization skills"
+      ],
+      qualitative_outcomes: [
+        "Achieved recognition for outstanding analytical skills and academic excellence in highly competitive university environment",
+        "Successfully bridged undergraduate and graduate academic levels through exceptional research collaboration and analytical contribution",
+        "Demonstrated professional-level data analytics capabilities using industry-standard Adobe Analytics platform and methodologies",
+        "Enhanced Utah State University's academic reputation through dedicated research excellence and competitive representation",
+        "Established foundation for advanced analytics career through hands-on experience with professional-grade analytics tools and research methods",
+        "Showcased ability to excel in challenging academic competitions while maintaining collaborative team dynamics with graduate researchers"
+      ]
+    }
   }
 ];
 
