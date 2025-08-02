@@ -51,26 +51,6 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
     return url && (url.includes('youtube.') || url.includes('youtu.be'));
   };
 
-  const handleVideoClick = () => {
-    if (project.videoUrl) {
-      if (isYouTubeUrl(project.videoUrl)) {
-        // Show embedded YouTube video instead of opening new tab
-        setShowEmbeddedVideo(true);
-      } else {
-        // For non-YouTube videos, open in new tab (existing behavior)
-        window.open(project.videoUrl, '_blank');
-      }
-    }
-  };
-
-  const handleThumbnailClick = () => {
-    if (project.youtubeEmbedId || isYouTubeUrl(project.videoUrl)) {
-      setShowEmbeddedVideo(true);
-    } else if (project.videoUrl) {
-      window.open(project.videoUrl, '_blank');
-    }
-  };
-
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto bg-white border-0 shadow-2xl rounded-2xl">
