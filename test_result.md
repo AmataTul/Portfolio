@@ -381,7 +381,8 @@ test_plan:
 test_plan:
   current_focus:
     - "YouTube Video Embedding for Advertising Projects"
-  stuck_tasks: []
+  stuck_tasks:
+    - "YouTube Video Embedding for Advertising Projects"
   test_all: false
   test_priority: "high_first"
 
