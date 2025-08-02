@@ -158,6 +158,7 @@ class ProjectUpdateRequest(BaseModel):
     featured: Optional[bool] = None
     orientation: Optional[str] = None
     video_url: Optional[str] = None
+    youtubeEmbedId: Optional[str] = None  # YouTube video ID for embedding
     analytics: Optional[AnalyticsData] = None
     research_slides: Optional[List[Dict[str, str]]] = None
     key_contributions: Optional[List[str]] = None
