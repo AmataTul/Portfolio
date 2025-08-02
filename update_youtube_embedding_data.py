@@ -29,12 +29,12 @@ def update_youtube_embedding_data():
         youtube_updates = {
             # KahPeeh kah-Ahn Ute Coffee House & Soda
             "4": {
-                "videoUrl": "https://youtu.be/voPeTh_2fvw",
+                "video_url": "https://youtu.be/voPeTh_2fvw",
                 "youtubeEmbedId": "voPeTh_2fvw"
             },
             # Ute Crossing Grill & Ute Lanes
             "5": {
-                "videoUrl": "https://youtu.be/yFg8sR1Y42s", 
+                "video_url": "https://youtu.be/yFg8sR1Y42s", 
                 "youtubeEmbedId": "yFg8sR1Y42s"
             }
         }
