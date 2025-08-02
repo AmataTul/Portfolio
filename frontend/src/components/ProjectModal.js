@@ -111,7 +111,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
           )}
 
           {/* Project Media - Skip for YouTube projects */}
-          {!(project.youtubeEmbedId || isYouTubeUrl(project.videoUrl)) && project.images && project.images.length > 0 && (
+          {!(project.youtubeEmbedId || isYouTubeUrl(project.video_url)) && project.images && project.images.length > 0 && (
             <div className="relative">
               {/* Special Disney Magic Marketing Audit Showcase */}
               {project.title && project.title.includes('Disney Brand Marketing Audit') ? (
