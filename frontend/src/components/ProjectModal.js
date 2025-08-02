@@ -66,6 +66,14 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
     }
   };
 
+  const handleThumbnailClick = () => {
+    if (project.youtubeEmbedId || isYouTubeUrl(project.videoUrl)) {
+      setShowEmbeddedVideo(true);
+    } else if (project.videoUrl) {
+      window.open(project.videoUrl, '_blank');
+    }
+  };
+
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto bg-white border-0 shadow-2xl rounded-2xl">
