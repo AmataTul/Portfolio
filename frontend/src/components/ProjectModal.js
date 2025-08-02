@@ -791,6 +791,55 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
             </div>
           )}
 
+          {/* YouTube Embedded Video Section */}
+          {showEmbeddedVideo && (project.youtubeEmbedId || isYouTubeUrl(project.videoUrl)) && (
+            <div className="mb-8">
+              <div className="bg-gradient-to-r from-red-50 to-pink-50 rounded-xl p-6 border border-red-200 shadow-lg">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center space-x-3">
+                    <Youtube className="w-8 h-8 text-red-600" />
+                    <div>
+                      <h3 className="font-bold text-red-800 text-xl">Watch Video</h3>
+                      <p className="text-red-600 text-sm">Professional advertisement campaign</p>
+                    </div>
+                  </div>
+                  <Button
+                    onClick={() => setShowEmbeddedVideo(false)}
+                    variant="ghost"
+                    className="text-red-600 hover:text-red-800 hover:bg-red-100"
+                  >
+                    <X size={20} />
+                  </Button>
+                </div>
+                
+                <div className="relative aspect-video bg-black rounded-lg overflow-hidden shadow-xl">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${project.youtubeEmbedId || getYouTubeId(project.videoUrl)}?autoplay=1&rel=0`}
+                    title={project.title}
+                    className="w-full h-full"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                </div>
+                
+                <div className="mt-4 flex items-center justify-between">
+                  <div className="text-sm text-gray-600">
+                    Click outside the video area or the X button to return to project details
+                  </div>
+                  <Button
+                    onClick={() => window.open(project.videoUrl, '_blank')}
+                    variant="outline"
+                    className="text-red-600 border-red-200 hover:bg-red-50"
+                  >
+                    <ExternalLink size={16} className="mr-2" />
+                    Open in YouTube
+                  </Button>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* Project Details */}
           <div className="space-y-6">
             <div className="prose prose-lg max-w-none">
