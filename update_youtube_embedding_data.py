@@ -60,7 +60,7 @@ def update_youtube_embedding_data():
             
             if update_result.modified_count > 0:
                 print(f"✅ Successfully updated project ID {project_id}")
-                print(f"   - Added videoUrl: {youtube_data['videoUrl']}")
+                print(f"   - Added video_url: {youtube_data['video_url']}")
                 print(f"   - Added youtubeEmbedId: {youtube_data['youtubeEmbedId']}")
             else:
                 print(f"⚠️  No changes made to project ID {project_id} (data may already exist)")
@@ -71,9 +71,9 @@ def update_youtube_embedding_data():
         for project_id in youtube_updates.keys():
             updated_project = collection.find_one({"id": project_id})
             if updated_project:
-                video_url = updated_project.get('videoUrl', 'NOT SET')
+                video_url = updated_project.get('video_url', 'NOT SET')
                 embed_id = updated_project.get('youtubeEmbedId', 'NOT SET')
-                print(f"📊 Project {project_id}: videoUrl={video_url}, youtubeEmbedId={embed_id}")
+                print(f"📊 Project {project_id}: video_url={video_url}, youtubeEmbedId={embed_id}")
             else:
                 print(f"❌ Could not verify project {project_id}")
         
