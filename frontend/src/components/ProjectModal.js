@@ -29,7 +29,6 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
 
   const goToImage = (index) => {
     setCurrentImageIndex(index);
-    setShowEmbeddedVideo(false);
   };
 
   const getAspectRatio = () => {
