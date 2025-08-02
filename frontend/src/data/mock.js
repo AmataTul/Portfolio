@@ -1180,7 +1180,7 @@ export const portfolioProjects = [
         id: 3,
         title: "🐰 Easter Holiday Celebration Collection", 
         facebookReelUrl: "YOUR_FACEBOOK_REEL_LINK_EASTER", // Replace with Facebook Reel URL
-        videoUrl: "YOUR_EASTER_VIDEO_URL", // Replace with direct video URL if hosting your own
+        video_url: "YOUR_EASTER_VIDEO_URL", // Replace with direct video URL if hosting your own
         thumbnail: "EASTER_REEL_THUMBNAIL", // Upload your thumbnail image here
         description: "Vertical Facebook Reel showcasing Easter celebration essentials, spring decorations, and family treats. Optimized for Facebook Reels vertical viewing experience.",
         type: "facebook_reel_easter",
