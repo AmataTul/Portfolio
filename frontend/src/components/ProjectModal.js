@@ -74,7 +74,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
         
         <div className="space-y-8">
           {/* YouTube Embedded Video Section - Show immediately for YouTube projects */}
-          {(project.youtubeEmbedId || isYouTubeUrl(project.videoUrl)) && (
+          {(project.youtubeEmbedId || isYouTubeUrl(project.video_url)) && (
             <div className="mb-8">
               <div className="bg-gradient-to-r from-red-50 to-pink-50 rounded-xl p-6 border border-red-200 shadow-lg">
                 <div className="flex items-center space-x-3 mb-4">
