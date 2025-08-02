@@ -1509,6 +1509,428 @@ class BackendTester:
             self.log_test("Database Consistency", False, f"Error checking database consistency: {str(e)}")
             return False
     
+    def test_youtube_embedding_project_retrieval(self):
+        """Test that both advertising projects with YouTube embedding exist and are retrievable"""
+        try:
+            response = self.session.get(f"{API_BASE_URL}/projects", timeout=10)
+            if response.status_code == 200:
+                projects = response.json()
+                
+                # Look for both advertising projects
+                kahpeeh_project = None
+                ute_crossing_project = None
+                
+                for project in projects:
+                    title = project.get('title', '')
+                    if "KahPeeh kah-Ahn Ute Coffee House & Soda" in title and "Advertisement" in title:
+                        kahpeeh_project = project
+                    elif "Ute Crossing Grill & Ute Lanes" in title and "Advertisement" in title:
+                        ute_crossing_project = project
+                
+                found_projects = []
+                if kahpeeh_project:
+                    found_projects.append(f"KahPeeh Coffee House (ID: {kahpeeh_project.get('id')})")
+                if ute_crossing_project:
+                    found_projects.append(f"Ute Crossing Grill (ID: {ute_crossing_project.get('id')})")
+                
+                if len(found_projects) == 2:
+                    self.log_test("YouTube Embedding Project Retrieval", True, 
+                                f"Found both advertising projects: {', '.join(found_projects)}")
+                    return kahpeeh_project, ute_crossing_project
+                else:
+                    self.log_test("YouTube Embedding Project Retrieval", False, 
+                                f"Expected 2 advertising projects, found {len(found_projects)}: {found_projects}")
+                    return kahpeeh_project, ute_crossing_project
+            else:
+                self.log_test("YouTube Embedding Project Retrieval", False, 
+                            f"Status {response.status_code}: {response.text}")
+                return None, None
+        except requests.exceptions.RequestException as e:
+            self.log_test("YouTube Embedding Project Retrieval", False, f"Request failed: {str(e)}")
+            return None, None
+    
+    def test_youtube_url_validation(self):
+        """Test that both advertising projects have correct YouTube URLs"""
+        try:
+            kahpeeh_project, ute_crossing_project = self.test_youtube_embedding_project_retrieval()
+            
+            expected_urls = {
+                "KahPeeh": "https://youtu.be/voPeTh_2fvw",
+                "Ute Crossing": "https://youtu.be/yFg8sR1Y42s"
+            }
+            
+            validation_results = []
+            
+            # Test KahPeeh project
+            if kahpeeh_project:
+                video_url = kahpeeh_project.get('videoUrl', '')
+                if video_url == expected_urls["KahPeeh"]:
+                    validation_results.append("✅ KahPeeh Coffee House YouTube URL correct")
+                else:
+                    validation_results.append(f"❌ KahPeeh Coffee House YouTube URL incorrect. Expected: {expected_urls['KahPeeh']}, Got: {video_url}")
+            else:
+                validation_results.append("❌ KahPeeh Coffee House project not found")
+            
+            # Test Ute Crossing project
+            if ute_crossing_project:
+                video_url = ute_crossing_project.get('videoUrl', '')
+                if video_url == expected_urls["Ute Crossing"]:
+                    validation_results.append("✅ Ute Crossing Grill YouTube URL correct")
+                else:
+                    validation_results.append(f"❌ Ute Crossing Grill YouTube URL incorrect. Expected: {expected_urls['Ute Crossing']}, Got: {video_url}")
+            else:
+                validation_results.append("❌ Ute Crossing Grill project not found")
+            
+            success_count = sum(1 for result in validation_results if result.startswith("✅"))
+            
+            if success_count == 2:
+                self.log_test("YouTube URL Validation", True, 
+                            f"Both projects have correct YouTube URLs: {'; '.join(validation_results)}")
+                return True
+            else:
+                self.log_test("YouTube URL Validation", False, 
+                            f"YouTube URL validation failed ({success_count}/2 correct): {'; '.join(validation_results)}")
+                return False
+                
+        except Exception as e:
+            self.log_test("YouTube URL Validation", False, f"Error validating YouTube URLs: {str(e)}")
+            return False
+    
+    def test_youtube_embed_id_validation(self):
+        """Test that both advertising projects have correct YouTube embed IDs"""
+        try:
+            kahpeeh_project, ute_crossing_project = self.test_youtube_embedding_project_retrieval()
+            
+            expected_embed_ids = {
+                "KahPeeh": "voPeTh_2fvw",
+                "Ute Crossing": "yFg8sR1Y42s"
+            }
+            
+            validation_results = []
+            
+            # Test KahPeeh project
+            if kahpeeh_project:
+                embed_id = kahpeeh_project.get('youtubeEmbedId', '')
+                if embed_id == expected_embed_ids["KahPeeh"]:
+                    validation_results.append("✅ KahPeeh Coffee House YouTube Embed ID correct")
+                else:
+                    validation_results.append(f"❌ KahPeeh Coffee House YouTube Embed ID incorrect. Expected: {expected_embed_ids['KahPeeh']}, Got: {embed_id}")
+            else:
+                validation_results.append("❌ KahPeeh Coffee House project not found")
+            
+            # Test Ute Crossing project
+            if ute_crossing_project:
+                embed_id = ute_crossing_project.get('youtubeEmbedId', '')
+                if embed_id == expected_embed_ids["Ute Crossing"]:
+                    validation_results.append("✅ Ute Crossing Grill YouTube Embed ID correct")
+                else:
+                    validation_results.append(f"❌ Ute Crossing Grill YouTube Embed ID incorrect. Expected: {expected_embed_ids['Ute Crossing']}, Got: {embed_id}")
+            else:
+                validation_results.append("❌ Ute Crossing Grill project not found")
+            
+            success_count = sum(1 for result in validation_results if result.startswith("✅"))
+            
+            if success_count == 2:
+                self.log_test("YouTube Embed ID Validation", True, 
+                            f"Both projects have correct YouTube Embed IDs: {'; '.join(validation_results)}")
+                return True
+            else:
+                self.log_test("YouTube Embed ID Validation", False, 
+                            f"YouTube Embed ID validation failed ({success_count}/2 correct): {'; '.join(validation_results)}")
+                return False
+                
+        except Exception as e:
+            self.log_test("YouTube Embed ID Validation", False, f"Error validating YouTube Embed IDs: {str(e)}")
+            return False
+    
+    def test_youtube_data_structure_integrity(self):
+        """Test that both projects maintain all existing fields while adding new YouTube-related fields"""
+        try:
+            kahpeeh_project, ute_crossing_project = self.test_youtube_embedding_project_retrieval()
+            
+            # Required existing fields that should be preserved
+            required_fields = ['id', 'title', 'category', 'client', 'description', 'type', 'created_at', 'updated_at']
+            
+            # New YouTube-related fields
+            youtube_fields = ['videoUrl', 'youtubeEmbedId']
+            
+            validation_results = []
+            
+            # Test KahPeeh project structure
+            if kahpeeh_project:
+                missing_required = [field for field in required_fields if not kahpeeh_project.get(field)]
+                missing_youtube = [field for field in youtube_fields if not kahpeeh_project.get(field)]
+                
+                if not missing_required and not missing_youtube:
+                    validation_results.append("✅ KahPeeh Coffee House has complete data structure")
+                else:
+                    issues = []
+                    if missing_required:
+                        issues.append(f"missing required fields: {missing_required}")
+                    if missing_youtube:
+                        issues.append(f"missing YouTube fields: {missing_youtube}")
+                    validation_results.append(f"❌ KahPeeh Coffee House data structure issues: {'; '.join(issues)}")
+            else:
+                validation_results.append("❌ KahPeeh Coffee House project not found")
+            
+            # Test Ute Crossing project structure
+            if ute_crossing_project:
+                missing_required = [field for field in required_fields if not ute_crossing_project.get(field)]
+                missing_youtube = [field for field in youtube_fields if not ute_crossing_project.get(field)]
+                
+                if not missing_required and not missing_youtube:
+                    validation_results.append("✅ Ute Crossing Grill has complete data structure")
+                else:
+                    issues = []
+                    if missing_required:
+                        issues.append(f"missing required fields: {missing_required}")
+                    if missing_youtube:
+                        issues.append(f"missing YouTube fields: {missing_youtube}")
+                    validation_results.append(f"❌ Ute Crossing Grill data structure issues: {'; '.join(issues)}")
+            else:
+                validation_results.append("❌ Ute Crossing Grill project not found")
+            
+            success_count = sum(1 for result in validation_results if result.startswith("✅"))
+            
+            if success_count == 2:
+                self.log_test("YouTube Data Structure Integrity", True, 
+                            f"Both projects have complete data structure: {'; '.join(validation_results)}")
+                return True
+            else:
+                self.log_test("YouTube Data Structure Integrity", False, 
+                            f"Data structure validation failed ({success_count}/2 complete): {'; '.join(validation_results)}")
+                return False
+                
+        except Exception as e:
+            self.log_test("YouTube Data Structure Integrity", False, f"Error validating data structure: {str(e)}")
+            return False
+    
+    def test_youtube_api_endpoints(self):
+        """Test /api/projects and /api/projects/{id} endpoints for both YouTube projects"""
+        try:
+            kahpeeh_project, ute_crossing_project = self.test_youtube_embedding_project_retrieval()
+            
+            validation_results = []
+            
+            # Test individual project retrieval for KahPeeh
+            if kahpeeh_project:
+                project_id = kahpeeh_project.get('id')
+                if project_id:
+                    response = self.session.get(f"{API_BASE_URL}/projects/{project_id}", timeout=10)
+                    if response.status_code == 200:
+                        individual_project = response.json()
+                        if (individual_project.get('videoUrl') == "https://youtu.be/voPeTh_2fvw" and
+                            individual_project.get('youtubeEmbedId') == "voPeTh_2fvw"):
+                            validation_results.append("✅ KahPeeh individual API endpoint working with YouTube data")
+                        else:
+                            validation_results.append("❌ KahPeeh individual API endpoint missing YouTube data")
+                    else:
+                        validation_results.append(f"❌ KahPeeh individual API endpoint failed: {response.status_code}")
+                else:
+                    validation_results.append("❌ KahPeeh project ID not found")
+            else:
+                validation_results.append("❌ KahPeeh project not found for API testing")
+            
+            # Test individual project retrieval for Ute Crossing
+            if ute_crossing_project:
+                project_id = ute_crossing_project.get('id')
+                if project_id:
+                    response = self.session.get(f"{API_BASE_URL}/projects/{project_id}", timeout=10)
+                    if response.status_code == 200:
+                        individual_project = response.json()
+                        if (individual_project.get('videoUrl') == "https://youtu.be/yFg8sR1Y42s" and
+                            individual_project.get('youtubeEmbedId') == "yFg8sR1Y42s"):
+                            validation_results.append("✅ Ute Crossing individual API endpoint working with YouTube data")
+                        else:
+                            validation_results.append("❌ Ute Crossing individual API endpoint missing YouTube data")
+                    else:
+                        validation_results.append(f"❌ Ute Crossing individual API endpoint failed: {response.status_code}")
+                else:
+                    validation_results.append("❌ Ute Crossing project ID not found")
+            else:
+                validation_results.append("❌ Ute Crossing project not found for API testing")
+            
+            success_count = sum(1 for result in validation_results if result.startswith("✅"))
+            
+            if success_count == 2:
+                self.log_test("YouTube API Endpoints", True, 
+                            f"Both individual project API endpoints working: {'; '.join(validation_results)}")
+                return True
+            else:
+                self.log_test("YouTube API Endpoints", False, 
+                            f"API endpoint testing failed ({success_count}/2 working): {'; '.join(validation_results)}")
+                return False
+                
+        except Exception as e:
+            self.log_test("YouTube API Endpoints", False, f"Error testing API endpoints: {str(e)}")
+            return False
+    
+    def test_youtube_advertising_category_filtering(self):
+        """Test that both YouTube projects appear in Advertising category filtering"""
+        try:
+            # Test with Advertising category
+            response = self.session.get(f"{API_BASE_URL}/projects?category=Advertising", timeout=10)
+            if response.status_code == 200:
+                projects = response.json()
+                
+                kahpeeh_found = False
+                ute_crossing_found = False
+                advertising_projects = []
+                
+                for project in projects:
+                    if project.get('category') == 'Advertising':
+                        advertising_projects.append(project.get('title', 'Unknown'))
+                        title = project.get('title', '')
+                        
+                        if "KahPeeh kah-Ahn Ute Coffee House & Soda" in title and "Advertisement" in title:
+                            # Verify YouTube fields are present
+                            if (project.get('videoUrl') == "https://youtu.be/voPeTh_2fvw" and
+                                project.get('youtubeEmbedId') == "voPeTh_2fvw"):
+                                kahpeeh_found = True
+                        
+                        elif "Ute Crossing Grill & Ute Lanes" in title and "Advertisement" in title:
+                            # Verify YouTube fields are present
+                            if (project.get('videoUrl') == "https://youtu.be/yFg8sR1Y42s" and
+                                project.get('youtubeEmbedId') == "yFg8sR1Y42s"):
+                                ute_crossing_found = True
+                
+                validation_results = []
+                if kahpeeh_found:
+                    validation_results.append("✅ KahPeeh Coffee House found in Advertising category with YouTube data")
+                else:
+                    validation_results.append("❌ KahPeeh Coffee House not found in Advertising category or missing YouTube data")
+                
+                if ute_crossing_found:
+                    validation_results.append("✅ Ute Crossing Grill found in Advertising category with YouTube data")
+                else:
+                    validation_results.append("❌ Ute Crossing Grill not found in Advertising category or missing YouTube data")
+                
+                success_count = sum(1 for result in validation_results if result.startswith("✅"))
+                
+                if success_count == 2:
+                    self.log_test("YouTube Advertising Category Filtering", True, 
+                                f"Both YouTube projects found in Advertising category ({len(advertising_projects)} total): {'; '.join(validation_results)}")
+                    return True
+                else:
+                    self.log_test("YouTube Advertising Category Filtering", False, 
+                                f"Category filtering failed ({success_count}/2 found). Projects in Advertising: {advertising_projects}. Results: {'; '.join(validation_results)}")
+                    return False
+            else:
+                self.log_test("YouTube Advertising Category Filtering", False, 
+                            f"Status {response.status_code}: {response.text}")
+                return False
+        except requests.exceptions.RequestException as e:
+            self.log_test("YouTube Advertising Category Filtering", False, f"Request failed: {str(e)}")
+            return False
+    
+    def test_youtube_database_persistence(self):
+        """Test that YouTube changes are persisted in MongoDB database"""
+        try:
+            kahpeeh_project, ute_crossing_project = self.test_youtube_embedding_project_retrieval()
+            
+            validation_results = []
+            
+            # Test KahPeeh project persistence
+            if kahpeeh_project:
+                # Verify project has proper timestamps indicating it was updated
+                created_at = kahpeeh_project.get('created_at')
+                updated_at = kahpeeh_project.get('updated_at')
+                
+                if created_at and updated_at:
+                    # Check that project maintains video type and advertising category
+                    if (kahpeeh_project.get('type') == 'video' and
+                        kahpeeh_project.get('category') == 'Advertising' and
+                        kahpeeh_project.get('videoUrl') == "https://youtu.be/voPeTh_2fvw" and
+                        kahpeeh_project.get('youtubeEmbedId') == "voPeTh_2fvw"):
+                        validation_results.append("✅ KahPeeh Coffee House properly persisted with YouTube data")
+                    else:
+                        validation_results.append("❌ KahPeeh Coffee House missing required fields or YouTube data")
+                else:
+                    validation_results.append("❌ KahPeeh Coffee House missing timestamp fields")
+            else:
+                validation_results.append("❌ KahPeeh Coffee House project not found for persistence testing")
+            
+            # Test Ute Crossing project persistence
+            if ute_crossing_project:
+                # Verify project has proper timestamps indicating it was updated
+                created_at = ute_crossing_project.get('created_at')
+                updated_at = ute_crossing_project.get('updated_at')
+                
+                if created_at and updated_at:
+                    # Check that project maintains video type and advertising category
+                    if (ute_crossing_project.get('type') == 'video' and
+                        ute_crossing_project.get('category') == 'Advertising' and
+                        ute_crossing_project.get('videoUrl') == "https://youtu.be/yFg8sR1Y42s" and
+                        ute_crossing_project.get('youtubeEmbedId') == "yFg8sR1Y42s"):
+                        validation_results.append("✅ Ute Crossing Grill properly persisted with YouTube data")
+                    else:
+                        validation_results.append("❌ Ute Crossing Grill missing required fields or YouTube data")
+                else:
+                    validation_results.append("❌ Ute Crossing Grill missing timestamp fields")
+            else:
+                validation_results.append("❌ Ute Crossing Grill project not found for persistence testing")
+            
+            success_count = sum(1 for result in validation_results if result.startswith("✅"))
+            
+            if success_count == 2:
+                self.log_test("YouTube Database Persistence", True, 
+                            f"Both projects properly persisted in database: {'; '.join(validation_results)}")
+                return True
+            else:
+                self.log_test("YouTube Database Persistence", False, 
+                            f"Database persistence validation failed ({success_count}/2 persisted): {'; '.join(validation_results)}")
+                return False
+                
+        except Exception as e:
+            self.log_test("YouTube Database Persistence", False, f"Error validating database persistence: {str(e)}")
+            return False
+    
+    def test_youtube_project_type_and_category_validation(self):
+        """Test that both projects maintain type: 'video' and category: 'Advertising'"""
+        try:
+            kahpeeh_project, ute_crossing_project = self.test_youtube_embedding_project_retrieval()
+            
+            validation_results = []
+            
+            # Test KahPeeh project
+            if kahpeeh_project:
+                project_type = kahpeeh_project.get('type')
+                category = kahpeeh_project.get('category')
+                
+                if project_type == 'video' and category == 'Advertising':
+                    validation_results.append("✅ KahPeeh Coffee House has correct type and category")
+                else:
+                    validation_results.append(f"❌ KahPeeh Coffee House incorrect type/category. Type: {project_type}, Category: {category}")
+            else:
+                validation_results.append("❌ KahPeeh Coffee House project not found")
+            
+            # Test Ute Crossing project
+            if ute_crossing_project:
+                project_type = ute_crossing_project.get('type')
+                category = ute_crossing_project.get('category')
+                
+                if project_type == 'video' and category == 'Advertising':
+                    validation_results.append("✅ Ute Crossing Grill has correct type and category")
+                else:
+                    validation_results.append(f"❌ Ute Crossing Grill incorrect type/category. Type: {project_type}, Category: {category}")
+            else:
+                validation_results.append("❌ Ute Crossing Grill project not found")
+            
+            success_count = sum(1 for result in validation_results if result.startswith("✅"))
+            
+            if success_count == 2:
+                self.log_test("YouTube Project Type and Category Validation", True, 
+                            f"Both projects have correct type and category: {'; '.join(validation_results)}")
+                return True
+            else:
+                self.log_test("YouTube Project Type and Category Validation", False, 
+                            f"Type/category validation failed ({success_count}/2 correct): {'; '.join(validation_results)}")
+                return False
+                
+        except Exception as e:
+            self.log_test("YouTube Project Type and Category Validation", False, f"Error validating type and category: {str(e)}")
+            return False
+    
     def test_coffee_house_tiktok_project_retrieval(self):
         """Test that TikTok Campaign Project (ID: 8) exists and is retrievable"""
         try:
