@@ -1176,6 +1176,196 @@ class BackendTester:
         except requests.exceptions.RequestException as e:
             self.log_test("Featured Projects Marking", False, f"Request failed: {str(e)}")
             return False
+
+    def test_youtube_embedding_advertising_projects(self):
+        """Test YouTube video embedding functionality for advertising projects"""
+        try:
+            # Test 1: Retrieve both advertising projects (IDs 4 and 5)
+            response = self.session.get(f"{API_BASE_URL}/projects", timeout=10)
+            if response.status_code != 200:
+                self.log_test("YouTube Embedding - Project Retrieval", False, 
+                            f"Failed to retrieve projects: {response.status_code}")
+                return False
+            
+            projects = response.json()
+            advertising_projects = [p for p in projects if p.get('category') == 'Advertising']
+            
+            # Find specific projects
+            kahpeeh_project = None
+            ute_crossing_project = None
+            
+            for project in advertising_projects:
+                title = project.get('title', '')
+                if 'KahPeeh' in title and 'Coffee House' in title:
+                    kahpeeh_project = project
+                elif 'Ute Crossing Grill' in title:
+                    ute_crossing_project = project
+            
+            if not kahpeeh_project:
+                self.log_test("YouTube Embedding - KahPeeh Project Retrieval", False, 
+                            "KahPeeh Coffee House advertising project not found")
+                return False
+            
+            if not ute_crossing_project:
+                self.log_test("YouTube Embedding - Ute Crossing Project Retrieval", False, 
+                            "Ute Crossing Grill advertising project not found")
+                return False
+            
+            self.log_test("YouTube Embedding - Project Retrieval", True, 
+                        f"Found both advertising projects: KahPeeh (ID: {kahpeeh_project.get('id')}) and Ute Crossing (ID: {ute_crossing_project.get('id')})")
+            
+            # Test 2: Validate YouTube URL fields
+            expected_kahpeeh_url = "https://youtu.be/voPeTh_2fvw"
+            expected_ute_crossing_url = "https://youtu.be/yFg8sR1Y42s"
+            
+            kahpeeh_video_url = kahpeeh_project.get('video_url', '')
+            ute_crossing_video_url = ute_crossing_project.get('video_url', '')
+            
+            if kahpeeh_video_url != expected_kahpeeh_url:
+                self.log_test("YouTube Embedding - KahPeeh Video URL", False, 
+                            f"Expected: {expected_kahpeeh_url}, Got: {kahpeeh_video_url}")
+                return False
+            
+            if ute_crossing_video_url != expected_ute_crossing_url:
+                self.log_test("YouTube Embedding - Ute Crossing Video URL", False, 
+                            f"Expected: {expected_ute_crossing_url}, Got: {ute_crossing_video_url}")
+                return False
+            
+            self.log_test("YouTube Embedding - Video URL Validation", True, 
+                        "Both projects have correct YouTube URLs")
+            
+            # Test 3: Validate YouTube Embed ID fields
+            expected_kahpeeh_embed_id = "voPeTh_2fvw"
+            expected_ute_crossing_embed_id = "yFg8sR1Y42s"
+            
+            kahpeeh_embed_id = kahpeeh_project.get('youtubeEmbedId', '')
+            ute_crossing_embed_id = ute_crossing_project.get('youtubeEmbedId', '')
+            
+            if kahpeeh_embed_id != expected_kahpeeh_embed_id:
+                self.log_test("YouTube Embedding - KahPeeh Embed ID", False, 
+                            f"Expected: {expected_kahpeeh_embed_id}, Got: {kahpeeh_embed_id}")
+                return False
+            
+            if ute_crossing_embed_id != expected_ute_crossing_embed_id:
+                self.log_test("YouTube Embedding - Ute Crossing Embed ID", False, 
+                            f"Expected: {expected_ute_crossing_embed_id}, Got: {ute_crossing_embed_id}")
+                return False
+            
+            self.log_test("YouTube Embedding - Embed ID Validation", True, 
+                        "Both projects have correct YouTube embed IDs")
+            
+            # Test 4: Test individual project retrieval
+            kahpeeh_response = self.session.get(f"{API_BASE_URL}/projects/{kahpeeh_project['id']}", timeout=10)
+            if kahpeeh_response.status_code != 200:
+                self.log_test("YouTube Embedding - Individual KahPeeh Retrieval", False, 
+                            f"Failed to retrieve KahPeeh project individually: {kahpeeh_response.status_code}")
+                return False
+            
+            individual_kahpeeh = kahpeeh_response.json()
+            if (individual_kahpeeh.get('video_url') != expected_kahpeeh_url or 
+                individual_kahpeeh.get('youtubeEmbedId') != expected_kahpeeh_embed_id):
+                self.log_test("YouTube Embedding - Individual KahPeeh Retrieval", False, 
+                            "YouTube fields missing in individual project retrieval")
+                return False
+            
+            ute_crossing_response = self.session.get(f"{API_BASE_URL}/projects/{ute_crossing_project['id']}", timeout=10)
+            if ute_crossing_response.status_code != 200:
+                self.log_test("YouTube Embedding - Individual Ute Crossing Retrieval", False, 
+                            f"Failed to retrieve Ute Crossing project individually: {ute_crossing_response.status_code}")
+                return False
+            
+            individual_ute_crossing = ute_crossing_response.json()
+            if (individual_ute_crossing.get('video_url') != expected_ute_crossing_url or 
+                individual_ute_crossing.get('youtubeEmbedId') != expected_ute_crossing_embed_id):
+                self.log_test("YouTube Embedding - Individual Ute Crossing Retrieval", False, 
+                            "YouTube fields missing in individual project retrieval")
+                return False
+            
+            self.log_test("YouTube Embedding - Individual Project Retrieval", True, 
+                        "Both projects maintain YouTube fields in individual retrieval")
+            
+            # Test 5: Test category filtering with YouTube fields
+            advertising_response = self.session.get(f"{API_BASE_URL}/projects?category=Advertising", timeout=10)
+            if advertising_response.status_code != 200:
+                self.log_test("YouTube Embedding - Category Filtering", False, 
+                            f"Failed to filter by Advertising category: {advertising_response.status_code}")
+                return False
+            
+            advertising_filtered = advertising_response.json()
+            kahpeeh_filtered = None
+            ute_crossing_filtered = None
+            
+            for project in advertising_filtered:
+                title = project.get('title', '')
+                if 'KahPeeh' in title and 'Coffee House' in title:
+                    kahpeeh_filtered = project
+                elif 'Ute Crossing Grill' in title:
+                    ute_crossing_filtered = project
+            
+            if not kahpeeh_filtered or not ute_crossing_filtered:
+                self.log_test("YouTube Embedding - Category Filtering", False, 
+                            "Projects not found in Advertising category filter")
+                return False
+            
+            if (kahpeeh_filtered.get('video_url') != expected_kahpeeh_url or 
+                kahpeeh_filtered.get('youtubeEmbedId') != expected_kahpeeh_embed_id or
+                ute_crossing_filtered.get('video_url') != expected_ute_crossing_url or 
+                ute_crossing_filtered.get('youtubeEmbedId') != expected_ute_crossing_embed_id):
+                self.log_test("YouTube Embedding - Category Filtering", False, 
+                            "YouTube fields missing in category filtered results")
+                return False
+            
+            self.log_test("YouTube Embedding - Category Filtering", True, 
+                        "Both projects maintain YouTube fields in category filtering")
+            
+            # Test 6: Validate data structure integrity
+            required_fields = ['id', 'title', 'category', 'client', 'description', 'type', 'video_url', 'youtubeEmbedId']
+            
+            for field in required_fields:
+                if not kahpeeh_project.get(field):
+                    self.log_test("YouTube Embedding - Data Structure Integrity", False, 
+                                f"KahPeeh project missing field: {field}")
+                    return False
+                if not ute_crossing_project.get(field):
+                    self.log_test("YouTube Embedding - Data Structure Integrity", False, 
+                                f"Ute Crossing project missing field: {field}")
+                    return False
+            
+            # Verify project types are 'video'
+            if kahpeeh_project.get('type') != 'video' or ute_crossing_project.get('type') != 'video':
+                self.log_test("YouTube Embedding - Data Structure Integrity", False, 
+                            f"Projects should have type 'video'. KahPeeh: {kahpeeh_project.get('type')}, Ute Crossing: {ute_crossing_project.get('type')}")
+                return False
+            
+            self.log_test("YouTube Embedding - Data Structure Integrity", True, 
+                        "Both projects maintain all required fields including YouTube fields")
+            
+            # Test 7: API Response Format Validation
+            # Verify that Pydantic models correctly serialize YouTube fields
+            if not isinstance(kahpeeh_project.get('video_url'), str) or not isinstance(kahpeeh_project.get('youtubeEmbedId'), str):
+                self.log_test("YouTube Embedding - API Response Format", False, 
+                            "KahPeeh YouTube fields are not properly serialized as strings")
+                return False
+            
+            if not isinstance(ute_crossing_project.get('video_url'), str) or not isinstance(ute_crossing_project.get('youtubeEmbedId'), str):
+                self.log_test("YouTube Embedding - API Response Format", False, 
+                            "Ute Crossing YouTube fields are not properly serialized as strings")
+                return False
+            
+            self.log_test("YouTube Embedding - API Response Format", True, 
+                        "Pydantic models correctly serialize YouTube fields in API responses")
+            
+            # Overall success
+            self.log_test("YouTube Embedding - Overall Functionality", True, 
+                        "YouTube video embedding functionality is working correctly for both advertising projects")
+            return True
+            
+        except requests.exceptions.RequestException as e:
+            self.log_test("YouTube Embedding - Overall Functionality", False, f"Request failed: {str(e)}")
+            return False
+        except Exception as e:
+            self.log_test("YouTube Embedding - Overall Functionality", False, f"Unexpected error: {str(e)}")
+            return False
     
     def test_enhanced_project_fields_creation(self):
         """Test creating a project with enhanced fields (project_type, key_contributions, skills_utilized, impact)"""
