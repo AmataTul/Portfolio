@@ -258,7 +258,7 @@ export const portfolioProjects = [
 
   {
     id: 5,
-    title: "Ute Crossing Grill & Ute Lanes - Video Advertisement Campaign",
+    title: "Video Advertisement Campaign for Ute Crossing Grill & Ute Lanes",
     category: "Advertising",
     client: "Ute Tribal Enterprises - Ute Crossing Grill & Ute Lanes",
     project_type: "Multi-Platform Video Advertisement Production & Direction", 
@@ -269,7 +269,7 @@ export const portfolioProjects = [
     type: "video",
     featured: true,
     orientation: "horizontal",
-    videoFile: "uvpl-utecrossinggrill_utes_lanes_2025 (1080p).mp4", // Customizable video placement - replace this filename to upload your own video
+    videoFile: "UteCrossingGrill_UteLanes.mp4", // Customizable video placement - replace this filename to upload your own video
     videoUrl: "https://customer-assets.emergentagent.com/job_project-showcase-15/artifacts/otstibjq_uvpl-utecrossinggrill_utes_lanes_2025%20%281080p%29.mp4", // Direct video URL for easy customization
     keyContributions: [
       "Coordinated complete advertising campaign from concept to final production",
