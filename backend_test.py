@@ -3218,6 +3218,19 @@ class BackendTester:
         self.test_featured_projects_marking()
         self.test_database_consistency()
         
+        # YouTube Video Embedding Tests (Priority Focus)
+        print("\n" + "=" * 60)
+        print("🎥 YOUTUBE VIDEO EMBEDDING TESTS (PRIORITY FOCUS)")
+        print("=" * 60)
+        self.test_youtube_embedding_project_retrieval()
+        self.test_youtube_url_validation()
+        self.test_youtube_embed_id_validation()
+        self.test_youtube_data_structure_integrity()
+        self.test_youtube_api_endpoints()
+        self.test_youtube_advertising_category_filtering()
+        self.test_youtube_database_persistence()
+        self.test_youtube_project_type_and_category_validation()
+        
         # Print summary
         print("\n" + "=" * 60)
         print("📊 TEST SUMMARY")
