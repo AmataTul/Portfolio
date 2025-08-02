@@ -56,7 +56,13 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
 
   const handleVideoClick = () => {
     if (project.videoUrl) {
-      window.open(project.videoUrl, '_blank');
+      if (isYouTubeUrl(project.videoUrl)) {
+        // Show embedded YouTube video instead of opening new tab
+        setShowEmbeddedVideo(true);
+      } else {
+        // For non-YouTube videos, open in new tab (existing behavior)
+        window.open(project.videoUrl, '_blank');
+      }
     }
   };
 
