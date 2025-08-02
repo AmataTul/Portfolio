@@ -87,7 +87,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                 
                 <div className="relative aspect-video bg-black rounded-lg overflow-hidden shadow-xl">
                   <iframe
-                    src={`https://www.youtube.com/embed/${project.youtubeEmbedId || getYouTubeId(project.videoUrl)}?rel=0`}
+                    src={`https://www.youtube.com/embed/${project.youtubeEmbedId || getYouTubeId(project.video_url)}?rel=0`}
                     title={project.title}
                     className="w-full h-full"
                     frameBorder="0"
