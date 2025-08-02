@@ -790,12 +790,12 @@ export const portfolioProjects = [
     project_type: "Agricultural Photography & Visual Content Creation",
     description: "Comprehensive photography collection capturing the essence of Ute Bison Ranch through intimate bison portraits and dynamic herd shots. I personally visited the ranch frequently to document the bison in their natural habitat, creating authentic visual content for promotional marketing materials and social media campaigns. This extensive photo collection showcases the majestic beauty of these indigenous animals while supporting the ranch's marketing initiatives and cultural storytelling. Each photograph was taken on-site, capturing spontaneous moments that reflect the ranch's commitment to ethical farming and the natural behavior of their bison herd.",
     images: [
-      "UTE_BISON_PHOTO_1", // Bison close-up portrait - Upload your own image here
-      "UTE_BISON_PHOTO_2", // Young bison with identification tag - Upload your own image here
-      "UTE_BISON_PHOTO_3", // Bison in natural grazing environment - Upload your own image here
-      "UTE_BISON_PHOTO_4", // Bison herd interaction - Upload your own image here
-      "UTE_BISON_PHOTO_5", // Bison in natural habitat - Upload your own image here
-      "UTE_BISON_PHOTO_6"  // Bison portrait showing character - Upload your own image here
+      "bison1.jpg", // Bison close-up portrait - Upload your own image here
+      "bison 2.jpg", // Young bison with identification tag - Upload your own image here
+      "bison 3.jpg", // Bison in natural grazing environment - Upload your own image here
+      "bison 4.jpg", // Bison herd interaction - Upload your own image here
+      "bison 5.jpg", // Bison in natural habitat - Upload your own image here
+      "bison 6.jpg"  // Bison portrait showing character - Upload your own image here
     ],
     type: "photography",
     featured: true,
