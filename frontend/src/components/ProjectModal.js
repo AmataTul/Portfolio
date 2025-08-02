@@ -876,22 +876,38 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
             </div>
             
             {/* Video Link */}
-            {project.videoUrl && (
+            {project.videoUrl && !showEmbeddedVideo && (
               <div className="bg-red-50 border-2 border-red-200 rounded-xl p-4 md:p-6">
                 <div className="flex flex-col sm:flex-row items-start sm:items-center sm:justify-between gap-4">
                   <div className="flex items-center space-x-4">
                     <Youtube className="w-6 h-6 md:w-8 md:h-8 text-red-600 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold text-red-800 text-lg">Watch on YouTube</h4>
-                      <p className="text-red-600 text-sm">Educational content for high school students</p>
+                      <h4 className="font-semibold text-red-800 text-lg">
+                        {isYouTubeUrl(project.videoUrl) ? 'Watch Video' : 'Watch on YouTube'}
+                      </h4>
+                      <p className="text-red-600 text-sm">
+                        {project.category === 'Advertising' 
+                          ? 'Professional advertisement campaign' 
+                          : 'Educational content for high school students'
+                        }
+                      </p>
                     </div>
                   </div>
                   <Button 
                     onClick={handleVideoClick}
                     className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-semibold w-full sm:w-auto"
                   >
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    Watch Video
+                    {isYouTubeUrl(project.videoUrl) ? (
+                      <>
+                        <Play className="w-4 h-4 mr-2" />
+                        Watch Embedded
+                      </>
+                    ) : (
+                      <>
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        Watch Video
+                      </>
+                    )}
                   </Button>
                 </div>
               </div>
