@@ -6,6 +6,7 @@ import { X, Play, ChevronLeft, ChevronRight, ExternalLink, Youtube } from 'lucid
 
 const ProjectModal = ({ project, isOpen, onClose }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [showEmbeddedVideo, setShowEmbeddedVideo] = useState(false);
 
   if (!project) return null;
 
