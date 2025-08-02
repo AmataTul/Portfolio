@@ -169,7 +169,7 @@ export const portfolioProjects = [
     type: "video",
     featured: true,
     orientation: "vertical",
-    videoUrl: "https://www.tiktok.com/@adobe/video/7334159049778351406",
+    video_url: "https://www.tiktok.com/@adobe/video/7334159049778351406",
     key_contributions: [
       "Created engaging vertical video content showcasing Adobe Creative Suite capabilities for social media platforms",
       "Developed dynamic storytelling approach optimized for Instagram Reels and TikTok short-form video format",
