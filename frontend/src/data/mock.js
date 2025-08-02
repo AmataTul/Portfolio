@@ -1169,7 +1169,7 @@ export const portfolioProjects = [
         id: 2, 
         title: "💕 Valentine's Day Special Promotions",
         facebookReelUrl: "YOUR_FACEBOOK_REEL_LINK_VALENTINES", // Replace with Facebook Reel URL
-        videoUrl: "YOUR_VALENTINES_VIDEO_URL", // Replace with direct video URL if hosting your own
+        video_url: "YOUR_VALENTINES_VIDEO_URL", // Replace with direct video URL if hosting your own
         thumbnail: "VALENTINES_REEL_THUMBNAIL", // Upload your thumbnail image here  
         description: "Vertical Facebook Reel highlighting romantic Valentine's Day gifts and special treats available at the supermarket. Created for Facebook Reels engagement.",
         type: "facebook_reel_valentines",
