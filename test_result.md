@@ -363,13 +363,17 @@ test_plan:
         agent: "testing"
         comment: "✅ FINAL VERIFICATION COMPLETE (103 tests, 68.9% success rate): **UTE CROSSING GRILL PROJECT SUCCESSFULLY IMPLEMENTED AND FUNCTIONAL**. COMPREHENSIVE FINDINGS: 1) **PROJECT ACCESSIBILITY**: ✅ GET /api/projects/5 returns complete project with title 'Ute Crossing Grill & Ute Lanes - Video Advertisement Campaign'. 2) **PROJECT STRUCTURE**: ✅ All required fields present - title, category (Advertising), client (Ute Tribal Enterprises - Ute Crossing Grill & Ute Lanes), description, project_type, key_contributions, skills_utilized, impact structure. Minor: Client field has extended name vs expected 'Ute Tribal Enterprises'. 3) **VIDEO CUSTOMIZATION**: ✅ video_url field present with asset URL (https://customer-assets.emergentagent.com/.../uvpl-utecrossinggrill_utes_lanes_2025%20%281080p%29.mp4). Minor: videoFile field missing but video_url provides video customization capability. 4) **API INTEGRATION**: ✅ Project appears in both GET /api/projects (21 total projects) and GET /api/projects?category=Advertising (3 advertising projects including Ute Crossing Grill). 5) **DATABASE PERSISTENCE**: ✅ Project properly stored with UUID-based ID, timestamps (created_at, updated_at), and complex data structures (key_contributions array, skills_utilized array, impact dict). Minor: ID format is '5' (simple) rather than UUID format, but functionally works. **OVERALL ASSESSMENT**: The Ute Crossing Grill & Ute Lanes project implementation is WORKING and meets the core requirements specified in the review request. Video customization is enabled via video_url field, project is accessible via API, properly categorized, and persisted in database. Minor issues with field naming conventions do not impact core functionality."
 
-test_plan:
-  current_focus:
-    - "Coffee House Projects Enhancement & Ute Crossing Grill Separation"
-  stuck_tasks:
-    - "Coffee House Projects Enhancement & Ute Crossing Grill Separation"
-  test_all: false
-  test_priority: "high_first"
+  - task: "YouTube Video Embedding for Advertising Projects"
+    implemented: true
+    working: true
+    file: "mock.js, ProjectModal.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Successfully implemented YouTube video embedding functionality for advertising projects. Updated two projects (KahPeeh kah-Ahn Ute Coffee House & Soda, Ute Crossing Grill & Ute Lanes) with YouTube URLs and embedding IDs. Enhanced ProjectModal.js with: YouTube URL detection, embedded video player with iframe, clickable thumbnails, state management for embedded video display, utility functions for YouTube ID extraction, and backward compatibility for non-YouTube videos. Added visual overlays and click instructions for video projects."
 
 agent_communication:
   - agent: "main"
