@@ -96,8 +96,45 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
         </DialogHeader>
         
         <div className="space-y-8">
-          {/* Project Media - Only show if there are images */}
-          {project.images && project.images.length > 0 && (
+          {/* YouTube Embedded Video Section - Show immediately for YouTube projects */}
+          {(project.youtubeEmbedId || isYouTubeUrl(project.videoUrl)) && (
+            <div className="mb-8">
+              <div className="bg-gradient-to-r from-red-50 to-pink-50 rounded-xl p-6 border border-red-200 shadow-lg">
+                <div className="flex items-center space-x-3 mb-4">
+                  <Youtube className="w-8 h-8 text-red-600" />
+                  <div>
+                    <h3 className="font-bold text-red-800 text-xl">Advertisement Video</h3>
+                    <p className="text-red-600 text-sm">Professional advertisement campaign</p>
+                  </div>
+                </div>
+                
+                <div className="relative aspect-video bg-black rounded-lg overflow-hidden shadow-xl">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${project.youtubeEmbedId || getYouTubeId(project.videoUrl)}?rel=0`}
+                    title={project.title}
+                    className="w-full h-full"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                </div>
+                
+                <div className="mt-4 flex items-center justify-end">
+                  <Button
+                    onClick={() => window.open(project.videoUrl, '_blank')}
+                    variant="outline"
+                    className="text-red-600 border-red-200 hover:bg-red-50"
+                  >
+                    <ExternalLink size={16} className="mr-2" />
+                    Open in YouTube
+                  </Button>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Project Media - Skip for YouTube projects */}
+          {!(project.youtubeEmbedId || isYouTubeUrl(project.videoUrl)) && project.images && project.images.length > 0 && (
             <div className="relative">
               {/* Special Disney Magic Marketing Audit Showcase */}
               {project.title && project.title.includes('Disney Brand Marketing Audit') ? (
