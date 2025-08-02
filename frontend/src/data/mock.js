@@ -453,7 +453,7 @@ export const portfolioProjects = [
     type: "video",
     featured: true,
     orientation: "horizontal",
-    videoUrl: "https://youtu.be/DYLLB8qiQ8k?si=IOvfHjRqkPHxcnlu",
+    video_url: "https://youtu.be/DYLLB8qiQ8k?si=IOvfHjRqkPHxcnlu",
     key_contributions: [
       "Created complete educational animation from scratch using Canva and professional editing tools for K-12 audience engagement",
       "Personally filmed and edited real-life footage at the Ute Bison ranch for authentic storytelling across grade levels",
