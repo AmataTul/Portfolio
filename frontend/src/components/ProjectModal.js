@@ -41,6 +41,19 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
     return 'aspect-video max-w-4xl mx-auto'; // Horizontal aspect ratio
   };
 
+  // Utility function to extract YouTube video ID from various URL formats
+  const getYouTubeId = (url) => {
+    if (!url) return null;
+    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+    const match = url.match(regExp);
+    return (match && match[2].length === 11) ? match[2] : null;
+  };
+
+  // Check if the video URL is YouTube
+  const isYouTubeUrl = (url) => {
+    return url && (url.includes('youtube.') || url.includes('youtu.be'));
+  };
+
   const handleVideoClick = () => {
     if (project.videoUrl) {
       window.open(project.videoUrl, '_blank');
