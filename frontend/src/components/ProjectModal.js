@@ -755,12 +755,41 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                 </div>
               ) : (
                 /* Regular single image display for other projects */
-                <div className={`relative aspect-video bg-gray-100 rounded-xl overflow-hidden shadow-xl project-image-container`}>
+                <div className={`relative aspect-video bg-gray-100 rounded-xl overflow-hidden shadow-xl project-image-container ${
+                  project.type === 'video' ? 'cursor-pointer group' : ''
+                }`}>
                   <img 
                     src={project.images[currentImageIndex]} 
                     alt={`${project.title} - Image ${currentImageIndex + 1}`}
                     className="w-full h-full object-cover object-center"
+                    onClick={project.type === 'video' ? handleThumbnailClick : undefined}
                   />
+                  
+                  {/* Video Play Overlay for video projects */}
+                  {project.type === 'video' && (
+                    <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                         onClick={handleThumbnailClick}>
+                      <div className="bg-white/90 rounded-full p-4 shadow-lg transform scale-100 group-hover:scale-110 transition-transform duration-300">
+                        {isYouTubeUrl(project.videoUrl) ? (
+                          <Youtube size={32} className="text-red-600" />
+                        ) : (
+                          <Play size={32} className="text-gray-800 ml-1" />
+                        )}
+                      </div>
+                    </div>
+                  )}
+                  
+                  {/* Click instruction for video projects */}
+                  {project.type === 'video' && !showEmbeddedVideo && (
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <div className="bg-black/70 text-white px-4 py-2 rounded-lg text-sm text-center">
+                        <span className="flex items-center justify-center space-x-2">
+                          <Play size={16} />
+                          <span>Click to watch {isYouTubeUrl(project.videoUrl) ? 'embedded' : ''} video</span>
+                        </span>
+                      </div>
+                    </div>
+                  )}
                   
                   {/* Navigation arrows for multiple images */}
                   {project.images.length > 1 && (
