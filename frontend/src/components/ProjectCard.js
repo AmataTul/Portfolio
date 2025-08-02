@@ -42,7 +42,7 @@ const ProjectCard = ({ project, onClick }) => {
             {/* Center icon */}
             {project.type === 'video' ? (
               <div className="bg-white/20 backdrop-blur-sm rounded-full p-4 border border-white/30">
-                {project.videoUrl && project.videoUrl.includes('youtube') ? (
+                {project.video_url && project.video_url.includes('youtube') ? (
                   <Youtube size={24} className="text-white" />
                 ) : (
                   <Play size={24} className="text-white ml-1" />
