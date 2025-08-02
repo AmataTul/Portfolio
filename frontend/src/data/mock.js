@@ -205,19 +205,18 @@ export const portfolioProjects = [
 
   {
     id: 4,
-    title: "KahPeeh kah-Ahn Ute Coffee House & Soda - Video Advertisement Campaign",
+    title: "Video Advertisement Campaign for KahPeeh kah-Ahn Ute Coffee House & Soda",
     category: "Advertising",
     client: "Ute Tribal Enterprises - KahPeeh kah-Ahn Ute Coffee House & Soda",
     project_type: "Multi-Platform Video Advertisement Production & Direction",
-    description: "Comprehensive video advertisement campaign for KahPeeh kah-Ahn Ute Coffee House & Soda, showcasing authentic indigenous hospitality and premium coffee experience. I directed and coordinated this complete advertising production from initial concept through final editing, working with a talented team of editors to create professional-grade content. The campaign demonstrates my experience with TV/YouTube advertisements and large-scale advertising initiatives. This video was strategically deployed across multiple platforms including social media, YouTube, cinema screenings, and big screen displays, showcasing the unique cultural atmosphere and community connection of this locally-owned indigenous business serving the Uintah and Ouray reservation communities.",
+    description: "I directed and coordinated a full-scale video advertisement campaign for KahPeeh kah-Ahn Ute Coffee House & Soda, showcasing the brand's authentic indigenous hospitality and premium coffee experience. From initial concept to final editing, I worked closely with a skilled team of editors to produce professional-grade content. This campaign highlights my expertise in TV/YouTube advertising and large-scale promotional initiatives. The video was strategically deployed across multiple platforms, including social media, YouTube, cinema screenings, and big-screen displays. It effectively captured the unique cultural atmosphere and community connection of this locally-owned indigenous business serving the Uintah and Ouray reservation communities.",
     images: [
       "https://customer-assets.emergentagent.com/job_project-showcase-15/artifacts/kfmsk8rn_coffee.jpg"
     ],
     type: "video", 
     featured: true,
-    orientation: "horizontal",
-    videoFile: "Ute Coffeehouse V4.mp4", // Replace this filename with your own video file
-    videoUrl: "https://customer-assets.emergentagent.com/job_design-hub-fix/artifacts/miz4w5hk_Ute%20Coffeehouse%20V4.mp4", // Direct video URL - user can watch this video
+    orientation: "horizontal", 
+    videoUrl: "https://youtu.be/voPeTh_2fvw", // Direct video URL - user can watch this video
     key_contributions: [
       "Directed and coordinated complete video advertisement campaign from initial concept through final delivery",
       "Led collaborative efforts with professional editing team to produce high-quality advertising content within budget constraints",
