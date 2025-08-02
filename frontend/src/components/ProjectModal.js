@@ -98,7 +98,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                 
                 <div className="mt-4 flex items-center justify-end">
                   <Button
-                    onClick={() => window.open(project.videoUrl, '_blank')}
+                    onClick={() => window.open(project.video_url, '_blank')}
                     variant="outline"
                     className="text-red-600 border-red-200 hover:bg-red-50"
                   >
