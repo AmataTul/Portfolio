@@ -1158,7 +1158,7 @@ export const portfolioProjects = [
         id: 1,
         title: "🎄 Christmas Holiday Merch Showcase",
         facebookReelUrl: "YOUR_FACEBOOK_REEL_LINK_CHRISTMAS", // Replace with Facebook Reel URL
-        videoUrl: "YOUR_CHRISTMAS_VIDEO_URL", // Replace with direct video URL if hosting your own
+        video_url: "YOUR_CHRISTMAS_VIDEO_URL", // Replace with direct video URL if hosting your own
         thumbnail: "CHRISTMAS_REEL_THUMBNAIL", // Upload your thumbnail image here
         description: "Vertical Facebook Reel showcasing festive Christmas merchandise, holiday decorations, and seasonal products at Ute Plaza Supermarket. Optimized for Facebook Reels vertical format.",
         type: "facebook_reel_christmas",
