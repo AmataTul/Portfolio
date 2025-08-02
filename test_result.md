@@ -260,7 +260,7 @@ metadata:
     implemented: true
     working: false
     file: "mock.js, update_social_media_videos.py"
-    stuck_count: 1
+    stuck_count: 2
     priority: "high"
     needs_retesting: false
     status_history:
