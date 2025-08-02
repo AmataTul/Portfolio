@@ -10,6 +10,13 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
 
   if (!project) return null;
 
+  useEffect(() => {
+    if (isOpen) {
+      setCurrentImageIndex(0);
+      setShowEmbeddedVideo(false);
+    }
+  }, [isOpen, project]);
+
   const nextImage = () => {
     setCurrentImageIndex((prev) => 
       prev === project.images.length - 1 ? 0 : prev + 1
