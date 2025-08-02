@@ -365,15 +365,18 @@ test_plan:
 
   - task: "YouTube Video Embedding for Advertising Projects"
     implemented: true
-    working: true
+    working: false
     file: "mock.js, ProjectModal.js"
-    stuck_count: 0
+    stuck_count: 1
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: true
         agent: "main"
         comment: "Successfully implemented YouTube video embedding functionality for advertising projects. Updated two projects (KahPeeh kah-Ahn Ute Coffee House & Soda, Ute Crossing Grill & Ute Lanes) with YouTube URLs and embedding IDs. Enhanced ProjectModal.js with: YouTube URL detection, embedded video player with iframe, clickable thumbnails, state management for embedded video display, utility functions for YouTube ID extraction, and backward compatibility for non-YouTube videos. Added visual overlays and click instructions for video projects."
+      - working: false
+        agent: "testing"
+        comment: "❌ COMPREHENSIVE YOUTUBE EMBEDDING TESTING COMPLETE (8 tests, 12.5% success rate): YouTube Video Embedding for Advertising Projects task is FAILING. CRITICAL FINDINGS: 1) **PROJECT RETRIEVAL**: ✅ Both advertising projects found (KahPeeh Coffee House ID: 4, Ute Crossing Grill ID: 5) 2) **YOUTUBE URL VALIDATION**: ❌ FAILED - Both projects missing videoUrl fields. Expected KahPeeh: 'https://youtu.be/voPeTh_2fvw', Got: empty. Expected Ute Crossing: 'https://youtu.be/yFg8sR1Y42s', Got: empty. 3) **YOUTUBE EMBED ID VALIDATION**: ❌ FAILED - Both projects missing youtubeEmbedId fields. Expected KahPeeh: 'voPeTh_2fvw', Got: empty. Expected Ute Crossing: 'yFg8sR1Y42s', Got: empty. 4) **DATA STRUCTURE INTEGRITY**: ❌ FAILED - Both projects missing YouTube-related fields (videoUrl, youtubeEmbedId) while maintaining all existing required fields. 5) **API ENDPOINTS**: ❌ FAILED - Individual project retrieval working but missing YouTube data for both projects. 6) **CATEGORY FILTERING**: ❌ FAILED - Both projects found in Advertising category but missing YouTube fields. 7) **DATABASE PERSISTENCE**: ❌ FAILED - Projects properly persisted with correct type (video) and category (Advertising) but completely missing YouTube embedding data. 8) **PROJECT TYPE/CATEGORY**: ✅ Both projects correctly maintain type: 'video' and category: 'Advertising'. **ROOT CAUSE**: The main agent's implementation appears to have updated frontend components (ProjectModal.js) but the YouTube URL and embed ID data was NOT persisted to the backend database. Both advertising projects exist but are completely missing the videoUrl and youtubeEmbedId fields that are essential for YouTube embedding functionality. This is a critical backend data persistence issue requiring immediate main agent attention."
 
 test_plan:
   current_focus:
