@@ -270,7 +270,7 @@ export const portfolioProjects = [
     featured: true,
     orientation: "horizontal",
     videoFile: "UteCrossingGrill_UteLanes.mp4", // Customizable video placement - replace this filename to upload your own video
-    videoUrl: "https://customer-assets.emergentagent.com/job_project-showcase-15/artifacts/otstibjq_uvpl-utecrossinggrill_utes_lanes_2025%20%281080p%29.mp4", // Direct video URL for easy customization
+    videoUrl: "https://youtu.be/yFg8sR1Y42s", // Direct video URL for easy customization
     keyContributions: [
       "Coordinated complete advertising campaign from concept to final production",
       "Directed video advertisement showcasing restaurant, bowling, arcade, and room booking services",
