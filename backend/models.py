@@ -29,6 +29,7 @@ class ProjectCreate(BaseModel):
     featured: bool = False
     orientation: str = "horizontal"  # horizontal, vertical, square
     video_url: Optional[str] = None
+    youtubeEmbedId: Optional[str] = None  # YouTube video ID for embedding
     analytics: Optional[AnalyticsData] = None
     research_slides: Optional[List[Dict[str, str]]] = None
     key_contributions: Optional[List[str]] = None  # Bullet points of specific contributions
