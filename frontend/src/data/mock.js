@@ -218,7 +218,7 @@ export const portfolioProjects = [
     featured: true,
     orientation: "horizontal",
     videoFile: "Ute Coffeehouse V4.mp4", // Replace this filename with your own video file
-    videoUrl: "https://youtu.be/voPeTh_2fvw", // YouTube embedded video URL
+    video_url: "https://youtu.be/voPeTh_2fvw", // YouTube embedded video URL
     youtubeEmbedId: "voPeTh_2fvw", // YouTube video ID for embedding
     key_contributions: [
       "Directed and coordinated complete video advertisement campaign from initial concept through final delivery",
