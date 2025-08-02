@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Portfolio website for a marketing coordinator showing analytics achievements and enabling backend integration for dynamic project management. Added Business Strategy Game analytics project showing 1st place achievement among 158 students with key metrics and strategic achievements section."
+user_problem_statement: "Portfolio website for a marketing coordinator showing analytics achievements and enabling backend integration for dynamic project management. User requested to check updated code from GitHub and create embedding function for advertising projects: Video Advertisement Campaign for KahPeeh kah-Ahn Ute Coffee House & Soda (https://youtu.be/voPeTh_2fvw) and Video Advertisement Campaign for Ute Crossing Grill & Ute Lanes (https://youtu.be/yFg8sR1Y42s). Videos should be embedded using iframe for YouTube URLs and HTML video tag for local files, with clickable thumbnails that open embedded YouTube videos directly on the website."
 
 backend:
   - task: "FastAPI Backend Setup"
