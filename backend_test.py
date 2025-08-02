@@ -3834,6 +3834,7 @@ class BackendTester:
         print("\n" + "=" * 60)
         print("🎥 YOUTUBE VIDEO EMBEDDING TESTS (PRIORITY FOCUS)")
         print("=" * 60)
+        self.test_youtube_embedding_advertising_projects()
         self.test_youtube_embedding_project_retrieval()
         self.test_youtube_url_validation()
         self.test_youtube_embed_id_validation()
