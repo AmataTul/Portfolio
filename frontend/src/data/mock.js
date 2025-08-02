@@ -273,7 +273,7 @@ export const portfolioProjects = [
     featured: true,
     orientation: "horizontal",
     videoFile: "uvpl-utecrossinggrill_utes_lanes_2025 (1080p).mp4", // Customizable video placement - replace this filename to upload your own video
-    videoUrl: "https://youtu.be/yFg8sR1Y42s", // YouTube embedded video URL
+    video_url: "https://youtu.be/yFg8sR1Y42s", // YouTube embedded video URL
     youtubeEmbedId: "yFg8sR1Y42s", // YouTube video ID for embedding
     keyContributions: [
       "Coordinated complete advertising campaign from concept to final production",
