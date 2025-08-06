@@ -1255,6 +1255,315 @@ class BackendTester:
             
             creative_highlights = project.get('creativeDesignHighlights', [])
             
+            # Check that creativeDesignHighlights field exists and is a list
+            if not isinstance(creative_highlights, list):
+                self.log_test("Beats by Dre Creative Design Highlights", False, 
+                            f"creativeDesignHighlights should be a list, got {type(creative_highlights)}")
+                return False
+            
+            # Check that we have exactly 4 creative design highlights
+            if len(creative_highlights) != 4:
+                self.log_test("Beats by Dre Creative Design Highlights", False, 
+                            f"Expected 4 creative design highlights, found {len(creative_highlights)}")
+                return False
+            
+            # Check that all elements are strings
+            for i, highlight in enumerate(creative_highlights):
+                if not isinstance(highlight, str) or len(highlight.strip()) == 0:
+                    self.log_test("Beats by Dre Creative Design Highlights", False, 
+                                f"Creative highlight {i+1} should be a non-empty string, got: {highlight}")
+                    return False
+            
+            self.log_test("Beats by Dre Creative Design Highlights", True, 
+                        f"Found 4 valid creative design highlights: {[h[:50] + '...' if len(h) > 50 else h for h in creative_highlights]}")
+            return True
+                
+        except Exception as e:
+            self.log_test("Beats by Dre Creative Design Highlights", False, f"Error checking creative highlights: {str(e)}")
+            return False
+
+    def test_beats_by_dre_separate_analytics_section(self):
+        """Test that Beats by Dre project has separateAnalyticsSection object with all required fields"""
+        try:
+            project = self.test_beats_by_dre_project_retrieval()
+            if not project:
+                self.log_test("Beats by Dre Separate Analytics Section", False, 
+                            "Cannot test separate analytics section - project not found")
+                return False
+            
+            analytics_section = project.get('separateAnalyticsSection', {})
+            
+            # Check that separateAnalyticsSection field exists and is a dict
+            if not isinstance(analytics_section, dict):
+                self.log_test("Beats by Dre Separate Analytics Section", False, 
+                            f"separateAnalyticsSection should be a dict, got {type(analytics_section)}")
+                return False
+            
+            # Check required fields in separateAnalyticsSection
+            required_fields = ['title', 'description', 'images', 'layout', 'highlights']
+            missing_fields = []
+            
+            for field in required_fields:
+                if field not in analytics_section:
+                    missing_fields.append(field)
+            
+            if missing_fields:
+                self.log_test("Beats by Dre Separate Analytics Section", False, 
+                            f"Missing required fields in separateAnalyticsSection: {missing_fields}")
+                return False
+            
+            # Validate specific field types and values
+            if not isinstance(analytics_section.get('title'), str) or len(analytics_section.get('title', '').strip()) == 0:
+                self.log_test("Beats by Dre Separate Analytics Section", False, 
+                            "separateAnalyticsSection.title should be a non-empty string")
+                return False
+            
+            if not isinstance(analytics_section.get('description'), str) or len(analytics_section.get('description', '').strip()) == 0:
+                self.log_test("Beats by Dre Separate Analytics Section", False, 
+                            "separateAnalyticsSection.description should be a non-empty string")
+                return False
+            
+            if analytics_section.get('layout') != 'all_horizontal':
+                self.log_test("Beats by Dre Separate Analytics Section", False, 
+                            f"separateAnalyticsSection.layout should be 'all_horizontal', got: {analytics_section.get('layout')}")
+                return False
+            
+            # Check images array
+            images = analytics_section.get('images', [])
+            if not isinstance(images, list) or len(images) != 4:
+                self.log_test("Beats by Dre Separate Analytics Section", False, 
+                            f"separateAnalyticsSection.images should be a list with 4 items, got {len(images) if isinstance(images, list) else type(images)}")
+                return False
+            
+            # Check that images contain expected analytics image names
+            expected_analytics_images = ['beatsdata1.jpg', 'beatsdata2.jpg', 'beatsdata3.jpg', 'beatsdata4.jpg']
+            analytics_images_found = []
+            for image in images:
+                if isinstance(image, str):
+                    for expected_name in expected_analytics_images:
+                        if expected_name in image:
+                            analytics_images_found.append(expected_name)
+                            break
+            
+            if len(analytics_images_found) != 4:
+                self.log_test("Beats by Dre Separate Analytics Section", False, 
+                            f"Expected analytics images {expected_analytics_images}, found {analytics_images_found}")
+                return False
+            
+            # Check highlights array
+            highlights = analytics_section.get('highlights', [])
+            if not isinstance(highlights, list) or len(highlights) == 0:
+                self.log_test("Beats by Dre Separate Analytics Section", False, 
+                            "separateAnalyticsSection.highlights should be a non-empty list")
+                return False
+            
+            self.log_test("Beats by Dre Separate Analytics Section", True, 
+                        f"separateAnalyticsSection has all required fields with correct structure: title, description, 4 analytics images, layout='all_horizontal', and {len(highlights)} highlights")
+            return True
+                
+        except Exception as e:
+            self.log_test("Beats by Dre Separate Analytics Section", False, f"Error checking separate analytics section: {str(e)}")
+            return False
+
+    def test_beats_by_dre_dual_sections_removal(self):
+        """Test that Beats by Dre project has removed old dualSections and brandingSection fields"""
+        try:
+            project = self.test_beats_by_dre_project_retrieval()
+            if not project:
+                self.log_test("Beats by Dre Dual Sections Removal", False, 
+                            "Cannot test dual sections removal - project not found")
+                return False
+            
+            # Check that old structure fields are not present
+            old_fields = ['dualSections', 'brandingSection']
+            found_old_fields = []
+            
+            for field in old_fields:
+                if field in project:
+                    found_old_fields.append(field)
+            
+            if found_old_fields:
+                self.log_test("Beats by Dre Dual Sections Removal", False, 
+                            f"Old structure fields still present: {found_old_fields}")
+                return False
+            
+            self.log_test("Beats by Dre Dual Sections Removal", True, 
+                        "Old dualSections and brandingSection fields successfully removed")
+            return True
+                
+        except Exception as e:
+            self.log_test("Beats by Dre Dual Sections Removal", False, f"Error checking dual sections removal: {str(e)}")
+            return False
+
+    def test_beats_by_dre_branding_category_filtering(self):
+        """Test that Beats by Dre project appears in Branding category with new fields"""
+        try:
+            # Test with Branding category
+            response = self.session.get(f"{API_BASE_URL}/projects?category=Branding", timeout=10)
+            if response.status_code == 200:
+                projects = response.json()
+                beats_project = None
+                
+                # Find the Beats by Dre project in Branding category
+                for project in projects:
+                    if project.get('id') == 'beats_kim_k_collaboration':
+                        beats_project = project
+                        break
+                
+                if not beats_project:
+                    self.log_test("Beats by Dre Branding Category Filtering", False, 
+                                "Beats by Dre project not found in Branding category")
+                    return False
+                
+                # Verify it has the new fields
+                if 'creativeDesignHighlights' not in beats_project:
+                    self.log_test("Beats by Dre Branding Category Filtering", False, 
+                                "Beats by Dre project in Branding category missing creativeDesignHighlights field")
+                    return False
+                
+                if 'separateAnalyticsSection' not in beats_project:
+                    self.log_test("Beats by Dre Branding Category Filtering", False, 
+                                "Beats by Dre project in Branding category missing separateAnalyticsSection field")
+                    return False
+                
+                self.log_test("Beats by Dre Branding Category Filtering", True, 
+                            "Beats by Dre project found in Branding category with new fields")
+                return True
+            else:
+                self.log_test("Beats by Dre Branding Category Filtering", False, 
+                            f"Status {response.status_code}: {response.text}")
+                return False
+        except requests.exceptions.RequestException as e:
+            self.log_test("Beats by Dre Branding Category Filtering", False, f"Request failed: {str(e)}")
+            return False
+
+    def test_beats_by_dre_data_integrity(self):
+        """Test that Beats by Dre project maintains existing data integrity"""
+        try:
+            project = self.test_beats_by_dre_project_retrieval()
+            if not project:
+                self.log_test("Beats by Dre Data Integrity", False, 
+                            "Cannot test data integrity - project not found")
+                return False
+            
+            # Check essential metadata fields are preserved
+            essential_fields = ['id', 'title', 'category', 'client', 'description', 'type', 'created_at', 'updated_at']
+            missing_fields = []
+            
+            for field in essential_fields:
+                if field not in project or project.get(field) is None:
+                    missing_fields.append(field)
+            
+            if missing_fields:
+                self.log_test("Beats by Dre Data Integrity", False, 
+                            f"Missing essential metadata fields: {missing_fields}")
+                return False
+            
+            # Verify specific expected values
+            if project.get('id') != 'beats_kim_k_collaboration':
+                self.log_test("Beats by Dre Data Integrity", False, 
+                            f"ID should be 'beats_kim_k_collaboration', got: {project.get('id')}")
+                return False
+            
+            if project.get('category') != 'Branding':
+                self.log_test("Beats by Dre Data Integrity", False, 
+                            f"Category should be 'Branding', got: {project.get('category')}")
+                return False
+            
+            if 'Beats by Dre' not in project.get('title', ''):
+                self.log_test("Beats by Dre Data Integrity", False, 
+                            f"Title should contain 'Beats by Dre', got: {project.get('title')}")
+                return False
+            
+            # Check that enhanced fields are present if they exist
+            enhanced_fields = ['key_contributions', 'skills_utilized', 'impact']
+            for field in enhanced_fields:
+                if field in project and project.get(field) is not None:
+                    # Field exists, verify it's properly structured
+                    if field == 'impact' and not isinstance(project.get(field), dict):
+                        self.log_test("Beats by Dre Data Integrity", False, 
+                                    f"Enhanced field '{field}' should be a dict, got: {type(project.get(field))}")
+                        return False
+                    elif field in ['key_contributions', 'skills_utilized'] and not isinstance(project.get(field), list):
+                        self.log_test("Beats by Dre Data Integrity", False, 
+                                    f"Enhanced field '{field}' should be a list, got: {type(project.get(field))}")
+                        return False
+            
+            self.log_test("Beats by Dre Data Integrity", True, 
+                        "All essential metadata fields preserved and properly structured")
+            return True
+                
+        except Exception as e:
+            self.log_test("Beats by Dre Data Integrity", False, f"Error checking data integrity: {str(e)}")
+            return False
+
+    def test_beats_by_dre_pydantic_serialization(self):
+        """Test that Pydantic models properly serialize new fields in JSON response"""
+        try:
+            project = self.test_beats_by_dre_project_retrieval()
+            if not project:
+                self.log_test("Beats by Dre Pydantic Serialization", False, 
+                            "Cannot test serialization - project not found")
+                return False
+            
+            # Test that the response is valid JSON (already parsed by requests)
+            if not isinstance(project, dict):
+                self.log_test("Beats by Dre Pydantic Serialization", False, 
+                            f"Project should be serialized as dict, got: {type(project)}")
+                return False
+            
+            # Test that new fields are properly serialized
+            creative_highlights = project.get('creativeDesignHighlights')
+            if creative_highlights is not None:
+                if not isinstance(creative_highlights, list):
+                    self.log_test("Beats by Dre Pydantic Serialization", False, 
+                                f"creativeDesignHighlights should serialize as list, got: {type(creative_highlights)}")
+                    return False
+                
+                # Check that list elements are properly serialized strings
+                for i, highlight in enumerate(creative_highlights):
+                    if not isinstance(highlight, str):
+                        self.log_test("Beats by Dre Pydantic Serialization", False, 
+                                    f"creativeDesignHighlights[{i}] should serialize as string, got: {type(highlight)}")
+                        return False
+            
+            analytics_section = project.get('separateAnalyticsSection')
+            if analytics_section is not None:
+                if not isinstance(analytics_section, dict):
+                    self.log_test("Beats by Dre Pydantic Serialization", False, 
+                                f"separateAnalyticsSection should serialize as dict, got: {type(analytics_section)}")
+                    return False
+                
+                # Check nested serialization
+                images = analytics_section.get('images')
+                if images is not None and not isinstance(images, list):
+                    self.log_test("Beats by Dre Pydantic Serialization", False, 
+                                f"separateAnalyticsSection.images should serialize as list, got: {type(images)}")
+                    return False
+                
+                highlights = analytics_section.get('highlights')
+                if highlights is not None and not isinstance(highlights, list):
+                    self.log_test("Beats by Dre Pydantic Serialization", False, 
+                                f"separateAnalyticsSection.highlights should serialize as list, got: {type(highlights)}")
+                    return False
+            
+            # Test that datetime fields are properly serialized
+            for datetime_field in ['created_at', 'updated_at']:
+                if datetime_field in project:
+                    datetime_value = project.get(datetime_field)
+                    if not isinstance(datetime_value, str):
+                        self.log_test("Beats by Dre Pydantic Serialization", False, 
+                                    f"{datetime_field} should serialize as ISO string, got: {type(datetime_value)}")
+                        return False
+            
+            self.log_test("Beats by Dre Pydantic Serialization", True, 
+                        "All fields properly serialized in JSON format by Pydantic models")
+            return True
+                
+        except Exception as e:
+            self.log_test("Beats by Dre Pydantic Serialization", False, f"Error checking serialization: {str(e)}")
+            return False
+            
             # Check that creativeDesignHighlights exists and is an array
             if not isinstance(creative_highlights, list):
                 self.log_test("Beats by Dre Creative Design Highlights", False, 
