@@ -70,11 +70,9 @@ export const portfolioProjects = [
     project_type: "Brand Strategy & Consumer Analytics Campaign",
     description: "Comprehensive branding strategy and consumer analytics project for Beats by Dre's limited edition earbuds and headphones collaboration with Kim Kardashian. As part of the Beats by Dre Branding Strategy and Business Analytics Externship, I analyzed market trends, consumer data, and created impactful marketing materials for Gen Z audience targeting and brand positioning optimization.",
     images: [
-      "/beats.jpg", // Main scrolling image 1
-      "/beats0.jpg", // Main scrolling image 2
-      "/beats2.jpg", // Analytics image 1
-      "/beats3.jpg", // Analytics image 2
-      "/beats4.jpg"  // Presentation image
+      "beatsg1.jpg", // Graphic design project 1
+      "beatsg2.jpg", // Graphic design project 2
+      "beatsg3.jpg"  // Graphic design project 3
     ],
     type: "image",
     featured: true,
@@ -82,6 +80,13 @@ export const portfolioProjects = [
     program: "Branding Strategy & Data Analysis Externship (2023)",
     focus: "Consumer Analytics, Market Research & Brand Strategy",
     myRole: "Brand Strategy Analyst & Marketing Materials Designer",
+    // Creative design highlights (moved to top, after description)
+    creativeDesignHighlights: [
+      "Cohesive visual identity system for limited edition product line",
+      "High-impact digital advertisements and social media campaign visuals",
+      "Product launch collateral and celebrity partnership marketing materials",
+      "Brand differentiation through strategic design and Gen Z-targeted aesthetics"
+    ],
     key_contributions: [
       "Conducted comprehensive consumer behavior analysis using SQL and Tableau, identifying key Gen Z engagement trends for Kim Kardashian collaboration launch",
       "Developed data-driven branding strategy for limited edition earbuds and headphones targeting socially-conscious younger consumers",
@@ -120,40 +125,23 @@ export const portfolioProjects = [
         "Established foundation for future celebrity collaboration campaigns with measurable success metrics"
       ]
     },
-    // Dual-section project structure
-    dualSections: {
-      analyticsSection: {
-        title: "Analytics & Research - Data Analysis & Presentations",
-        description: "Consumer behavior analysis, strategic insights, and comprehensive presentations using SQL, Tableau, and advanced data visualization to optimize celebrity collaboration campaigns",
-        images: [
-          "/beats0.jpg", // Analytics dashboard image 1
-          "/beats2.jpg", // Market research visualization 2  
-          "/beats4.jpg", // Consumer data analysis 3
-          "/beats6.jpg"  // Horizontal presentation image 4
-        ],
-        layout: "mixed", // Indicates mixed layouts (3 square + 1 horizontal)
-        highlights: [
-          "SQL database analysis for Gen Z consumer behavior patterns",
-          "Tableau data visualizations revealing key market insights", 
-          "Celebrity partnership effectiveness research and trend analysis",
-          "Comprehensive presentations and strategic recommendations"
-        ]
-      },
-      brandingSection: {
-        title: "Graphic Design & Brand Materials",
-        description: "Creative visual identity development and marketing materials design for the Kim Kardashian x Beats by Dre limited edition collaboration",
-        images: [
-          "/beats.jpg",  // Vertical brand identity design
-          "/beats3.jpg"  // Horizontal marketing materials
-        ],
-        layout: "vertical_horizontal", // Indicates 1 vertical + 1 horizontal
-        highlights: [
-          "Cohesive visual identity system for limited edition product line",
-          "High-impact digital advertisements and social media campaign visuals",
-          "Product launch collateral and celebrity partnership marketing materials",
-          "Brand differentiation through strategic design and Gen Z-targeted aesthetics"
-        ]
-      }
+    // Separate analytics section (not connected to main window)
+    separateAnalyticsSection: {
+      title: "Analytics & Research - Data Analysis & Presentations",
+      description: "Consumer behavior analysis, strategic insights, and comprehensive presentations using SQL, Tableau, and advanced data visualization to optimize celebrity collaboration campaigns",
+      images: [
+        "beatsdata1.jpg", // Analytics data image 1 (horizontal)
+        "beatsdata2.jpg", // Analytics data image 2 (horizontal)
+        "beatsdata3.jpg", // Analytics data image 3 (horizontal)
+        "beatsdata4.jpg"  // Analytics data image 4 (horizontal)
+      ],
+      layout: "all_horizontal", // All 4 images are horizontal
+      highlights: [
+        "SQL database analysis for Gen Z consumer behavior patterns",
+        "Tableau data visualizations revealing key market insights", 
+        "Celebrity partnership effectiveness research and trend analysis",
+        "Comprehensive presentations and strategic recommendations"
+      ]
     }
   },
 
