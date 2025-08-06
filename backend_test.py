@@ -4545,6 +4545,55 @@ class BackendTester:
         
         return passed == total
 
+    def run_beats_by_dre_tests(self):
+        """Run comprehensive Beats by Dre project restructuring tests"""
+        print("=" * 80)
+        print("🎧 BEATS BY DRE PROJECT RESTRUCTURING - COMPREHENSIVE TESTING")
+        print("=" * 80)
+        
+        # Core server health check
+        if not self.test_server_health():
+            print("❌ Server health check failed - aborting tests")
+            return self.generate_summary()
+        
+        # Initialize data if needed
+        self.test_initialize_data()
+        
+        # Beats by Dre specific tests
+        print("\n🎧 Testing Beats by Dre Project Restructuring...")
+        self.test_beats_by_dre_project_retrieval()
+        self.test_beats_by_dre_main_images_structure()
+        self.test_beats_by_dre_creative_design_highlights()
+        self.test_beats_by_dre_separate_analytics_section()
+        self.test_beats_by_dre_dual_sections_removal()
+        self.test_beats_by_dre_branding_category_filtering()
+        self.test_beats_by_dre_data_integrity()
+        self.test_beats_by_dre_pydantic_serialization()
+        
+        return self.generate_summary()
+
+    def generate_summary(self):
+        """Generate test summary"""
+        passed = sum(1 for result in self.test_results if result['success'])
+        total = len(self.test_results)
+        
+        print("\n" + "=" * 60)
+        print("📊 TEST SUMMARY")
+        print("=" * 60)
+        
+        print(f"Total Tests: {total}")
+        print(f"Passed: {passed}")
+        print(f"Failed: {total - passed}")
+        print(f"Success Rate: {(passed/total)*100:.1f}%")
+        
+        if total - passed > 0:
+            print("\n❌ FAILED TESTS:")
+            for result in self.test_results:
+                if not result['success']:
+                    print(f"  - {result['test']}: {result['message']}")
+        
+        return passed == total
+
 def main():
     """Main test execution"""
     tester = BackendTester()
