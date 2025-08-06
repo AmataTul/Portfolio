@@ -130,10 +130,10 @@ export const portfolioProjects = [
       title: "Analytics & Research - Data Analysis & Presentations",
       description: "Consumer behavior analysis, strategic insights, and comprehensive presentations using SQL, Tableau, and advanced data visualization to optimize celebrity collaboration campaigns",
       images: [
-        "https://customer-assets.emergentagent.com/job_project-showcase-15/artifacts/vxpzmjp2_IMG_0140.JPG", // Placeholder for beatsdata1.jpg - Replace with your analytics data image 1
-        "https://customer-assets.emergentagent.com/job_project-showcase-15/artifacts/073cgjso_IMG_0141.JPG", // Placeholder for beatsdata2.jpg - Replace with your analytics data image 2
-        "https://customer-assets.emergentagent.com/job_project-showcase-15/artifacts/94g3ncvm_IMG_0280.JPG", // Placeholder for beatsdata3.jpg - Replace with your analytics data image 3
-        "https://customer-assets.emergentagent.com/job_project-showcase-15/artifacts/xmhfglc3_IMG_0284.JPG"  // Placeholder for beatsdata4.jpg - Replace with your analytics data image 4
+        "beatsdata1.jpg", // Beats by Dre analytics data image 1 (horizontal) - Upload your SQL/Tableau analysis
+        "beatsdata2.jpg", // Beats by Dre analytics data image 2 (horizontal) - Upload your market research data
+        "beatsdata3.jpg", // Beats by Dre analytics data image 3 (horizontal) - Upload your consumer insights
+        "beatsdata4.jpg"  // Beats by Dre analytics data image 4 (horizontal) - Upload your presentation/dashboard
       ],
       layout: "all_horizontal", // All 4 images are horizontal
       highlights: [
