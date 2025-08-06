@@ -769,7 +769,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                 </div>
               ) : (
                 /* Regular image display - Optimized for perfect fitting */
-                <div className={`relative ${getImageContainerClass()} bg-gray-100 rounded-xl overflow-hidden shadow-xl project-image-container`}>
+                <div className={`relative aspect-video max-w-4xl mx-auto bg-gray-100 rounded-xl overflow-hidden shadow-xl project-image-container`}>
                   {/* Check if it's a placeholder image (.jpg filename) */}
                   {project.images[currentImageIndex] && project.images[currentImageIndex].includes('.jpg') && 
                    !project.images[currentImageIndex].startsWith('/') && !project.images[currentImageIndex].startsWith('http') ? (
