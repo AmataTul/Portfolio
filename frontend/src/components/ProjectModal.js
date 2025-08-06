@@ -920,157 +920,88 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
               </div>
             )}
 
-            {/* Dual Sections for Analytics & Graphic Design Projects */}
-            {project.dualSections && (
-              <div className="space-y-8">
-                {/* Analytics Section */}
-                <div className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 border-4 border-transparent bg-clip-padding rounded-2xl p-8 shadow-2xl">
-                  <div className="text-center mb-6">
-                    <h4 className="text-3xl font-bold bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent mb-4 flex items-center justify-center">
-                      <span className="text-4xl mr-3">📊</span>
-                      {project.dualSections.analyticsSection.title}
-                    </h4>
-                    <p className="text-gray-700 text-lg max-w-4xl mx-auto leading-relaxed">
-                      {project.dualSections.analyticsSection.description}
-                    </p>
-                  </div>
-                  
-                  {/* Analytics Images Grid - Flexible Layout for 4 images */}
-                  <div className={`mb-6 ${
-                    project.dualSections.analyticsSection.layout === 'mixed' 
-                      ? 'space-y-4' 
-                      : 'grid grid-cols-1 md:grid-cols-3 gap-6'
-                  }`}>
-                    {project.dualSections.analyticsSection.layout === 'mixed' ? (
-                      <>
-                        {/* First 3 images in a row */}
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                          {project.dualSections.analyticsSection.images.slice(0, 3).map((image, index) => (
-                            <div key={index} className="group relative overflow-hidden rounded-xl shadow-lg">
-                              <div className="bg-gradient-to-br from-blue-400 via-indigo-400 to-purple-400 rounded-xl p-1">
-                                <div className="bg-white rounded-lg overflow-hidden">
-                                  <img 
-                                    src={image} 
-                                    alt={`Analytics Work ${index + 1}`}
-                                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
-                                  />
-                                  <div className="absolute top-3 left-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-bold text-xs px-3 py-1 rounded-full shadow-lg">
-                                    Analytics #{index + 1}
+            {/* Creative Design Highlights - Show after description for Beats by Dre */}
+            {project.creativeDesignHighlights && (
+              <div className="bg-gradient-to-r from-pink-50 to-rose-50 border-2 border-pink-200 rounded-xl p-6">
+                <h4 className="font-semibold text-pink-800 mb-4 text-lg flex items-center">
+                  <span className="text-2xl mr-2">🎨</span>
+                  Creative Design Highlights
+                </h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {project.creativeDesignHighlights.map((highlight, index) => (
+                    <div key={index} className="flex items-start">
+                      <span className="w-2 h-2 bg-pink-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      <span className="text-gray-700 text-sm">{highlight}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Separate Analytics Section - Independent from main images */}
+            {project.separateAnalyticsSection && (
+              <div className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 border-4 border-transparent bg-clip-padding rounded-2xl p-8 shadow-2xl">
+                <div className="text-center mb-6">
+                  <h4 className="text-3xl font-bold bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent mb-4 flex items-center justify-center">
+                    <span className="text-4xl mr-3">📊</span>
+                    {project.separateAnalyticsSection.title}
+                  </h4>
+                  <p className="text-gray-700 text-lg max-w-4xl mx-auto leading-relaxed">
+                    {project.separateAnalyticsSection.description}
+                  </p>
+                </div>
+                
+                {/* All Horizontal Analytics Images Grid */}
+                <div className="space-y-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {project.separateAnalyticsSection.images.map((image, index) => (
+                      <div key={index} className="group relative overflow-hidden rounded-xl shadow-lg">
+                        <div className="bg-gradient-to-br from-blue-400 via-indigo-400 to-purple-400 rounded-xl p-1">
+                          <div className="bg-white rounded-lg overflow-hidden">
+                            <div className="relative aspect-video bg-gray-100 flex items-center justify-center">
+                              {image.includes('.jpg') ? (
+                                <div className="w-full h-full flex items-center justify-center bg-gray-200 text-gray-500">
+                                  <div className="text-center p-4">
+                                    <div className="text-sm font-medium mb-2">{image}</div>
+                                    <div className="w-16 h-16 bg-blue-200 rounded-lg flex items-center justify-center mb-2">
+                                      <svg className="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+                                      </svg>
+                                    </div>
+                                    <div className="text-xs text-gray-400">Upload Analytics Image</div>
                                   </div>
                                 </div>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                        {/* Horizontal image separately */}
-                        {project.dualSections.analyticsSection.images[3] && (
-                          <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                            <div className="bg-gradient-to-br from-blue-400 via-indigo-400 to-purple-400 rounded-xl p-1">
-                              <div className="bg-white rounded-lg overflow-hidden">
+                              ) : (
                                 <img 
-                                  src={project.dualSections.analyticsSection.images[3]} 
-                                  alt="Analytics Presentation"
-                                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                                  src={image} 
+                                  alt={`Analytics Data ${index + 1}`}
+                                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                                 />
-                                <div className="absolute top-3 left-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-bold text-xs px-3 py-1 rounded-full shadow-lg">
-                                  Presentation
-                                </div>
-                              </div>
+                              )}
                             </div>
-                          </div>
-                        )}
-                      </>
-                    ) : (
-                      project.dualSections.analyticsSection.images.map((image, index) => (
-                        <div key={index} className="group relative overflow-hidden rounded-xl shadow-lg">
-                          <div className="bg-gradient-to-br from-blue-400 via-indigo-400 to-purple-400 rounded-xl p-1">
-                            <div className="bg-white rounded-lg overflow-hidden">
-                              <img 
-                                src={image} 
-                                alt={`Analytics Work ${index + 1}`}
-                                className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
-                              />
-                              <div className="absolute top-3 left-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-bold text-xs px-3 py-1 rounded-full shadow-lg">
-                                Analytics #{index + 1}
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      ))
-                    )}
-                  </div>
-                  
-                  {/* Analytics Highlights */}
-                  <div className="bg-white rounded-xl p-6 shadow-sm">
-                    <h5 className="font-bold text-indigo-800 mb-4 flex items-center">
-                      <span className="text-2xl mr-2">🔍</span>
-                      Research & Analysis Highlights
-                    </h5>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {project.dualSections.analyticsSection.highlights.map((highlight, index) => (
-                        <div key={index} className="flex items-start">
-                          <span className="w-2 h-2 bg-indigo-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                          <span className="text-gray-700 text-sm">{highlight}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Graphic Design Section */}
-                <div className="bg-gradient-to-br from-pink-50 via-rose-50 to-red-50 border-4 border-transparent bg-clip-padding rounded-2xl p-8 shadow-2xl">
-                  <div className="text-center mb-6">
-                    <h4 className="text-3xl font-bold bg-gradient-to-r from-pink-600 via-rose-600 to-red-600 bg-clip-text text-transparent mb-4 flex items-center justify-center">
-                      <span className="text-4xl mr-3">🎨</span>
-                      {project.dualSections.brandingSection.title}
-                    </h4>
-                    <p className="text-gray-700 text-lg max-w-4xl mx-auto leading-relaxed">
-                      {project.dualSections.brandingSection.description}
-                    </p>
-                  </div>
-                  
-                  {/* Branding Images Grid - Flexible Layout for 2 images */}
-                  <div className={`mb-6 ${
-                    project.dualSections.brandingSection.layout === 'vertical_horizontal' 
-                      ? 'grid grid-cols-1 md:grid-cols-2 gap-6' 
-                      : 'grid grid-cols-1 md:grid-cols-3 gap-6'
-                  }`}>
-                    {project.dualSections.brandingSection.images.map((image, index) => (
-                      <div key={index} className="group relative overflow-hidden rounded-xl shadow-lg">
-                        <div className="bg-gradient-to-br from-pink-400 via-rose-400 to-red-400 rounded-xl p-1">
-                          <div className="bg-white rounded-lg overflow-hidden">
-                            <img 
-                              src={image} 
-                              alt={`Design Work ${index + 1}`}
-                              className={`w-full object-cover group-hover:scale-110 transition-transform duration-500 ${
-                                project.dualSections.brandingSection.layout === 'vertical_horizontal' 
-                                  ? 'h-64' 
-                                  : 'h-48'
-                              }`}
-                            />
-                            <div className="absolute top-3 left-3 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-bold text-xs px-3 py-1 rounded-full shadow-lg">
-                              Design #{index + 1}
+                            <div className="absolute top-3 left-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-bold text-xs px-3 py-1 rounded-full shadow-lg">
+                              Analytics #{index + 1}
                             </div>
                           </div>
                         </div>
                       </div>
                     ))}
                   </div>
-                  
-                  {/* Branding Highlights */}
-                  <div className="bg-white rounded-xl p-6 shadow-sm">
-                    <h5 className="font-bold text-rose-800 mb-4 flex items-center">
-                      <span className="text-2xl mr-2">✨</span>
-                      Creative Design Highlights
-                    </h5>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {project.dualSections.brandingSection.highlights.map((highlight, index) => (
-                        <div key={index} className="flex items-start">
-                          <span className="w-2 h-2 bg-rose-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                          <span className="text-gray-700 text-sm">{highlight}</span>
-                        </div>
-                      ))}
-                    </div>
+                </div>
+                
+                {/* Analytics Highlights */}
+                <div className="bg-white rounded-xl p-6 shadow-sm mt-6">
+                  <h5 className="font-bold text-indigo-800 mb-4 flex items-center">
+                    <span className="text-2xl mr-2">🔍</span>
+                    Research & Analysis Highlights
+                  </h5>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {project.separateAnalyticsSection.highlights.map((highlight, index) => (
+                      <div key={index} className="flex items-start">
+                        <span className="w-2 h-2 bg-indigo-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        <span className="text-gray-700 text-sm">{highlight}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
