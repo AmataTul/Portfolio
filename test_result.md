@@ -389,7 +389,8 @@ test_plan:
 
 test_plan:
   current_focus: []
-  stuck_tasks: []
+  stuck_tasks: 
+    - "Beats by Dre Project Restructuring & Image Layout Optimization"
   test_all: false
   test_priority: "high_first"
 
