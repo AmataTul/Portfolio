@@ -785,7 +785,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     <>
                       <button
                         onClick={previousImage}
-                        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+                        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105"
                       >
                         <ChevronLeft size={24} />
                       </button>
