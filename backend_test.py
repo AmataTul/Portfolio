@@ -1178,23 +1178,23 @@ class BackendTester:
             return False
 
     def test_beats_by_dre_project_retrieval(self):
-        """Test that Beats by Dre project (ID: 2) exists and is retrievable"""
+        """Test that Beats by Dre project exists and is retrievable"""
         try:
-            # Test individual project retrieval
-            response = self.session.get(f"{API_BASE_URL}/projects/2", timeout=10)
+            # Test individual project retrieval with correct ID
+            response = self.session.get(f"{API_BASE_URL}/projects/beats_kim_k_collaboration", timeout=10)
             if response.status_code == 200:
                 project = response.json()
-                if project.get('id') == '2':
+                if project.get('id') == 'beats_kim_k_collaboration':
                     self.log_test("Beats by Dre Project Retrieval", True, 
                                 f"Found Beats by Dre project: {project.get('title', 'Unknown Title')}")
                     return project
                 else:
                     self.log_test("Beats by Dre Project Retrieval", False, 
-                                f"ID mismatch: expected '2', got {project.get('id')}")
+                                f"ID mismatch: expected 'beats_kim_k_collaboration', got {project.get('id')}")
                     return None
             elif response.status_code == 404:
                 self.log_test("Beats by Dre Project Retrieval", False, 
-                            "Beats by Dre project (ID: 2) not found in database")
+                            "Beats by Dre project (ID: beats_kim_k_collaboration) not found in database")
                 return None
             else:
                 self.log_test("Beats by Dre Project Retrieval", False, 
