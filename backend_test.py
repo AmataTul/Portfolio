@@ -4201,6 +4201,20 @@ class BackendTester:
         self.test_youtube_database_persistence()
         self.test_youtube_project_type_and_category_validation()
         
+        # Beats by Dre Project Restructuring Tests (REVIEW REQUEST PRIORITY)
+        print("\n" + "=" * 60)
+        print("🎧 BEATS BY DRE PROJECT RESTRUCTURING TESTS (REVIEW REQUEST PRIORITY)")
+        print("=" * 60)
+        self.test_beats_by_dre_project_retrieval()
+        self.test_beats_by_dre_main_images_structure()
+        self.test_beats_by_dre_creative_design_highlights()
+        self.test_beats_by_dre_separate_analytics_section()
+        self.test_beats_by_dre_analytics_images_validation()
+        self.test_beats_by_dre_no_dual_sections()
+        self.test_beats_by_dre_existing_data_preservation()
+        self.test_beats_by_dre_branding_category_filtering()
+        self.test_beats_by_dre_data_structure_integrity()
+        
         # Print summary
         print("\n" + "=" * 60)
         print("📊 TEST SUMMARY")
