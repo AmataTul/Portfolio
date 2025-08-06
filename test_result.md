@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Portfolio website for a marketing coordinator showing analytics achievements and enabling backend integration for dynamic project management. User requested to check updated code from GitHub and create embedding function for advertising projects: Video Advertisement Campaign for KahPeeh kah-Ahn Ute Coffee House & Soda (https://youtu.be/voPeTh_2fvw) and Video Advertisement Campaign for Ute Crossing Grill & Ute Lanes (https://youtu.be/yFg8sR1Y42s). Videos should be embedded using iframe for YouTube URLs and HTML video tag for local files, with clickable thumbnails that open embedded YouTube videos directly on the website."
+user_problem_statement: "Portfolio website for a marketing coordinator showing analytics achievements and enabling backend integration for dynamic project management. Updated YouTube embedding functionality for advertising projects and restructured Beats by Dre project: removed Graphic Design & Brand Materials section, moved creative design highlights to top, main window shows only 3 images (beatsg1.jpg, beatsg2.jpg, beatsg3.jpg), Analytics & Research section is separate with 4 horizontal image placeholders (beatsdata1.jpg, beatsdata2.jpg, beatsdata3.jpg, beatsdata4.jpg). All projects with separate categories now have independent image sections, with code ensuring uploaded images fit perfectly."
 
 backend:
   - task: "FastAPI Backend Setup"
