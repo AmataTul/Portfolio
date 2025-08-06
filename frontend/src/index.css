@@ -17,18 +17,32 @@ code {
 }
 
 /* Custom animations */
-/* Image sizing fixes for portfolio projects */
-.project-image-container {
-  position: relative;
-  overflow: hidden;
-}
-
+/* Universal auto-fitting styles for all project images */
 .project-image-container img {
   object-fit: cover;
   object-position: center;
   width: 100%;
   height: 100%;
   display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Auto-fit for analytics and data images */
+.analytics-image-container img,
+.data-image-container img {
+  object-fit: cover !important;
+  object-position: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+}
+
+/* Auto-fit for modal images */
+.modal-image img {
+  object-fit: cover !important;
+  object-position: center !important;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 /* Specific fixes for photography projects with large images */
@@ -39,6 +53,19 @@ code {
   max-height: 100% !important;
   width: 100% !important;
   height: 100% !important;
+}
+
+/* Universal image auto-fitting for ALL projects */
+img[alt*="Image"], 
+img[alt*="Analytics"], 
+img[alt*="Data"], 
+img[alt*="Beats"],
+img[alt*="Project"] {
+  object-fit: cover !important;
+  object-position: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
 }
 
 /* Improved marquee animation */
