@@ -969,15 +969,16 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                   </p>
                 </div>
                 
-                {/* All Horizontal Analytics Images Grid */}
-                <div className="space-y-4">
+                {/* All Analytics Images Grid - 2 vertical + 2 horizontal layout */}
+                <div className="space-y-6">
+                  {/* First row: 2 vertical images */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {project.separateAnalyticsSection.images.map((image, index) => (
+                    {project.separateAnalyticsSection.images.slice(0, 2).map((image, index) => (
                       <div key={index} className="group relative overflow-hidden rounded-xl shadow-lg">
                         <div className="bg-gradient-to-br from-blue-400 via-indigo-400 to-purple-400 rounded-xl p-1">
                           <div className="bg-white rounded-lg overflow-hidden">
-                            <div className="relative aspect-video bg-gray-100 flex items-center justify-center">
-                              {image.includes('.jpg') ? (
+                            <div className="relative aspect-[4/5] bg-gray-100 flex items-center justify-center">
+                              {image.includes('.jpg') && !image.startsWith('http') ? (
                                 <div className="w-full h-full flex items-center justify-center bg-gray-200 text-gray-500">
                                   <div className="text-center p-4">
                                     <div className="text-sm font-medium mb-2">{image}</div>
@@ -986,19 +987,57 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                                         <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
                                       </svg>
                                     </div>
-                                    <div className="text-xs text-gray-400">Upload Analytics Image</div>
+                                    <div className="text-xs text-gray-400">Upload Vertical Analytics Image</div>
+                                    <div className="text-xs text-gray-300 mt-1">4:5 aspect ratio</div>
                                   </div>
                                 </div>
                               ) : (
                                 <img 
                                   src={image} 
-                                  alt={`Analytics Data ${index + 1}`}
+                                  alt={`Analytics Data ${index + 1} (Vertical)`}
                                   className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                                 />
                               )}
                             </div>
                             <div className="absolute top-3 left-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-bold text-xs px-3 py-1 rounded-full shadow-lg">
-                              Analytics #{index + 1}
+                              Vertical #{index + 1}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  {/* Second row: 2 horizontal images */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {project.separateAnalyticsSection.images.slice(2, 4).map((image, index) => (
+                      <div key={index + 2} className="group relative overflow-hidden rounded-xl shadow-lg">
+                        <div className="bg-gradient-to-br from-blue-400 via-indigo-400 to-purple-400 rounded-xl p-1">
+                          <div className="bg-white rounded-lg overflow-hidden">
+                            <div className="relative aspect-video bg-gray-100 flex items-center justify-center">
+                              {image.includes('.jpg') && !image.startsWith('http') ? (
+                                <div className="w-full h-full flex items-center justify-center bg-gray-200 text-gray-500">
+                                  <div className="text-center p-4">
+                                    <div className="text-sm font-medium mb-2">{image}</div>
+                                    <div className="w-16 h-16 bg-blue-200 rounded-lg flex items-center justify-center mb-2">
+                                      <svg className="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+                                      </svg>
+                                    </div>
+                                    <div className="text-xs text-gray-400">Upload Horizontal Analytics Image</div>
+                                    <div className="text-xs text-gray-300 mt-1">16:9 aspect ratio</div>
+                                  </div>
+                                </div>
+                              ) : (
+                                <img 
+                                  src={image} 
+                                  alt={`Analytics Data ${index + 3} (Horizontal)`}
+                                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                                />
+                              )}
+                            </div>
+                            <div className="absolute top-3 left-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-bold text-xs px-3 py-1 rounded-full shadow-lg">
+                              Horizontal #{index + 1}
                             </div>
                           </div>
                         </div>
