@@ -768,31 +768,17 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                   </div>
                 </div>
               ) : (
-                /* Regular image display - Optimized for perfect fitting */
+                /* Regular image display - Auto-fit any image size to container */
                 <div className={`relative aspect-video max-w-4xl mx-auto bg-gray-100 rounded-xl overflow-hidden shadow-xl project-image-container`}>
-                  {/* Check if it's a placeholder image (.jpg filename) */}
-                  {project.images[currentImageIndex] && project.images[currentImageIndex].includes('.jpg') && 
-                   !project.images[currentImageIndex].startsWith('/') && !project.images[currentImageIndex].startsWith('http') ? (
-                    <div className="w-full h-full flex items-center justify-center bg-gray-200 text-gray-500">
-                      <div className="text-center p-6">
-                        <div className="text-lg font-medium mb-4">{project.images[currentImageIndex]}</div>
-                        <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center mb-4">
-                          <svg className="w-10 h-10 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
-                          </svg>
-                        </div>
-                        <div className="text-sm text-gray-400">Upload your image here</div>
-                        <div className="text-xs text-gray-400 mt-1">Image will fit perfectly in this space</div>
-                      </div>
-                    </div>
-                  ) : (
-                    <img 
-                      src={project.images[currentImageIndex]} 
-                      alt={`${project.title} - Image ${currentImageIndex + 1}`}
-                      className="w-full h-full object-contain bg-white"
-                      style={{ maxWidth: '100%', maxHeight: '100%' }}
-                    />
-                  )}
+                  <img 
+                    src={project.images[currentImageIndex]} 
+                    alt={`${project.title} - Image ${currentImageIndex + 1}`}
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                    style={{ 
+                      objectFit: 'cover',
+                      objectPosition: 'center'
+                    }}
+                  />
                   
                   {/* Navigation arrows for multiple images */}
                   {project.images.length > 1 && (
