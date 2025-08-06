@@ -1177,6 +1177,363 @@ class BackendTester:
             self.log_test("Featured Projects Marking", False, f"Request failed: {str(e)}")
             return False
 
+    def test_beats_by_dre_project_retrieval(self):
+        """Test that Beats by Dre project (ID: 2) exists and is retrievable"""
+        try:
+            # Test individual project retrieval
+            response = self.session.get(f"{API_BASE_URL}/projects/2", timeout=10)
+            if response.status_code == 200:
+                project = response.json()
+                if project.get('id') == '2':
+                    self.log_test("Beats by Dre Project Retrieval", True, 
+                                f"Found Beats by Dre project: {project.get('title', 'Unknown Title')}")
+                    return project
+                else:
+                    self.log_test("Beats by Dre Project Retrieval", False, 
+                                f"ID mismatch: expected '2', got {project.get('id')}")
+                    return None
+            elif response.status_code == 404:
+                self.log_test("Beats by Dre Project Retrieval", False, 
+                            "Beats by Dre project (ID: 2) not found in database")
+                return None
+            else:
+                self.log_test("Beats by Dre Project Retrieval", False, 
+                            f"Status {response.status_code}: {response.text}")
+                return None
+        except requests.exceptions.RequestException as e:
+            self.log_test("Beats by Dre Project Retrieval", False, f"Request failed: {str(e)}")
+            return None
+
+    def test_beats_by_dre_main_images_structure(self):
+        """Test that Beats by Dre project has exactly 3 main images"""
+        try:
+            project = self.test_beats_by_dre_project_retrieval()
+            if not project:
+                self.log_test("Beats by Dre Main Images Structure", False, 
+                            "Cannot test main images - project not found")
+                return False
+            
+            images = project.get('images', [])
+            expected_images = ['beatsg1.jpg', 'beatsg2.jpg', 'beatsg3.jpg']
+            
+            # Check that we have exactly 3 images
+            if len(images) != 3:
+                self.log_test("Beats by Dre Main Images Structure", False, 
+                            f"Expected 3 main images, found {len(images)}")
+                return False
+            
+            # Check that the images contain the expected filenames
+            image_names_found = []
+            for image in images:
+                if isinstance(image, str):
+                    for expected_name in expected_images:
+                        if expected_name in image:
+                            image_names_found.append(expected_name)
+                            break
+            
+            if len(image_names_found) == 3:
+                self.log_test("Beats by Dre Main Images Structure", True, 
+                            f"Found all 3 expected main images: {image_names_found}")
+                return True
+            else:
+                self.log_test("Beats by Dre Main Images Structure", False, 
+                            f"Expected images {expected_images}, found {image_names_found}")
+                return False
+                
+        except Exception as e:
+            self.log_test("Beats by Dre Main Images Structure", False, f"Error checking main images: {str(e)}")
+            return False
+
+    def test_beats_by_dre_creative_design_highlights(self):
+        """Test that Beats by Dre project has creativeDesignHighlights array with 4 elements"""
+        try:
+            project = self.test_beats_by_dre_project_retrieval()
+            if not project:
+                self.log_test("Beats by Dre Creative Design Highlights", False, 
+                            "Cannot test creative design highlights - project not found")
+                return False
+            
+            creative_highlights = project.get('creativeDesignHighlights', [])
+            
+            # Check that creativeDesignHighlights exists and is an array
+            if not isinstance(creative_highlights, list):
+                self.log_test("Beats by Dre Creative Design Highlights", False, 
+                            f"creativeDesignHighlights should be an array, got {type(creative_highlights)}")
+                return False
+            
+            # Check that we have exactly 4 creative design points
+            if len(creative_highlights) != 4:
+                self.log_test("Beats by Dre Creative Design Highlights", False, 
+                            f"Expected 4 creative design highlights, found {len(creative_highlights)}")
+                return False
+            
+            # Check that all elements are strings
+            for i, highlight in enumerate(creative_highlights):
+                if not isinstance(highlight, str) or len(highlight.strip()) == 0:
+                    self.log_test("Beats by Dre Creative Design Highlights", False, 
+                                f"Creative design highlight {i+1} is not a valid string")
+                    return False
+            
+            self.log_test("Beats by Dre Creative Design Highlights", True, 
+                        f"Found 4 valid creative design highlights")
+            return True
+                
+        except Exception as e:
+            self.log_test("Beats by Dre Creative Design Highlights", False, f"Error checking creative design highlights: {str(e)}")
+            return False
+
+    def test_beats_by_dre_separate_analytics_section(self):
+        """Test that Beats by Dre project has separateAnalyticsSection with proper structure"""
+        try:
+            project = self.test_beats_by_dre_project_retrieval()
+            if not project:
+                self.log_test("Beats by Dre Separate Analytics Section", False, 
+                            "Cannot test separate analytics section - project not found")
+                return False
+            
+            analytics_section = project.get('separateAnalyticsSection', {})
+            
+            # Check that separateAnalyticsSection exists and is an object
+            if not isinstance(analytics_section, dict):
+                self.log_test("Beats by Dre Separate Analytics Section", False, 
+                            f"separateAnalyticsSection should be an object, got {type(analytics_section)}")
+                return False
+            
+            # Check required fields in separateAnalyticsSection
+            required_fields = ['title', 'description', 'images', 'layout', 'highlights']
+            missing_fields = []
+            
+            for field in required_fields:
+                if field not in analytics_section:
+                    missing_fields.append(field)
+            
+            if missing_fields:
+                self.log_test("Beats by Dre Separate Analytics Section", False, 
+                            f"Missing required fields in separateAnalyticsSection: {missing_fields}")
+                return False
+            
+            # Check that images array has 4 elements
+            analytics_images = analytics_section.get('images', [])
+            if not isinstance(analytics_images, list) or len(analytics_images) != 4:
+                self.log_test("Beats by Dre Separate Analytics Section", False, 
+                            f"Expected 4 images in separateAnalyticsSection, found {len(analytics_images) if isinstance(analytics_images, list) else 'not an array'}")
+                return False
+            
+            # Check that layout is "all_horizontal"
+            layout = analytics_section.get('layout', '')
+            if layout != 'all_horizontal':
+                self.log_test("Beats by Dre Separate Analytics Section", False, 
+                            f"Expected layout 'all_horizontal', found '{layout}'")
+                return False
+            
+            # Check that highlights is an array
+            highlights = analytics_section.get('highlights', [])
+            if not isinstance(highlights, list):
+                self.log_test("Beats by Dre Separate Analytics Section", False, 
+                            f"highlights should be an array, got {type(highlights)}")
+                return False
+            
+            self.log_test("Beats by Dre Separate Analytics Section", True, 
+                        f"separateAnalyticsSection has proper structure with 4 images and all_horizontal layout")
+            return True
+                
+        except Exception as e:
+            self.log_test("Beats by Dre Separate Analytics Section", False, f"Error checking separate analytics section: {str(e)}")
+            return False
+
+    def test_beats_by_dre_analytics_images_validation(self):
+        """Test that Beats by Dre separateAnalyticsSection has 4 specific horizontal images"""
+        try:
+            project = self.test_beats_by_dre_project_retrieval()
+            if not project:
+                self.log_test("Beats by Dre Analytics Images Validation", False, 
+                            "Cannot test analytics images - project not found")
+                return False
+            
+            analytics_section = project.get('separateAnalyticsSection', {})
+            analytics_images = analytics_section.get('images', [])
+            expected_images = ['beatsdata1.jpg', 'beatsdata2.jpg', 'beatsdata3.jpg', 'beatsdata4.jpg']
+            
+            if len(analytics_images) != 4:
+                self.log_test("Beats by Dre Analytics Images Validation", False, 
+                            f"Expected 4 analytics images, found {len(analytics_images)}")
+                return False
+            
+            # Check that the images contain the expected filenames
+            image_names_found = []
+            for image in analytics_images:
+                if isinstance(image, str):
+                    for expected_name in expected_images:
+                        if expected_name in image:
+                            image_names_found.append(expected_name)
+                            break
+            
+            if len(image_names_found) == 4:
+                self.log_test("Beats by Dre Analytics Images Validation", True, 
+                            f"Found all 4 expected analytics images: {image_names_found}")
+                return True
+            else:
+                self.log_test("Beats by Dre Analytics Images Validation", False, 
+                            f"Expected images {expected_images}, found {image_names_found}")
+                return False
+                
+        except Exception as e:
+            self.log_test("Beats by Dre Analytics Images Validation", False, f"Error validating analytics images: {str(e)}")
+            return False
+
+    def test_beats_by_dre_no_dual_sections(self):
+        """Test that Beats by Dre project no longer has dualSections field"""
+        try:
+            project = self.test_beats_by_dre_project_retrieval()
+            if not project:
+                self.log_test("Beats by Dre No Dual Sections", False, 
+                            "Cannot test dual sections removal - project not found")
+                return False
+            
+            # Check that dualSections field does not exist
+            if 'dualSections' in project:
+                self.log_test("Beats by Dre No Dual Sections", False, 
+                            "dualSections field still exists - should have been removed")
+                return False
+            
+            # Also check for any brandingSection references
+            if 'brandingSection' in project:
+                self.log_test("Beats by Dre No Dual Sections", False, 
+                            "brandingSection field still exists - should have been removed")
+                return False
+            
+            self.log_test("Beats by Dre No Dual Sections", True, 
+                        "dualSections and brandingSection fields successfully removed")
+            return True
+                
+        except Exception as e:
+            self.log_test("Beats by Dre No Dual Sections", False, f"Error checking dual sections removal: {str(e)}")
+            return False
+
+    def test_beats_by_dre_existing_data_preservation(self):
+        """Test that Beats by Dre project preserves all existing metadata fields"""
+        try:
+            project = self.test_beats_by_dre_project_retrieval()
+            if not project:
+                self.log_test("Beats by Dre Existing Data Preservation", False, 
+                            "Cannot test data preservation - project not found")
+                return False
+            
+            # Check that essential project fields are preserved
+            essential_fields = ['id', 'title', 'description', 'category', 'client', 'type', 'created_at', 'updated_at']
+            missing_fields = []
+            
+            for field in essential_fields:
+                if field not in project or not project[field]:
+                    missing_fields.append(field)
+            
+            if missing_fields:
+                self.log_test("Beats by Dre Existing Data Preservation", False, 
+                            f"Missing essential fields: {missing_fields}")
+                return False
+            
+            # Check enhanced project fields if they exist
+            enhanced_fields = ['key_contributions', 'skills_utilized', 'impact']
+            for field in enhanced_fields:
+                if field in project and project[field] is not None:
+                    # Validate structure
+                    if field in ['key_contributions', 'skills_utilized'] and not isinstance(project[field], list):
+                        self.log_test("Beats by Dre Existing Data Preservation", False, 
+                                    f"{field} should be an array")
+                        return False
+                    elif field == 'impact' and not isinstance(project[field], dict):
+                        self.log_test("Beats by Dre Existing Data Preservation", False, 
+                                    f"{field} should be an object")
+                        return False
+            
+            # Verify it's still a Branding project
+            if project.get('category') != 'Branding':
+                self.log_test("Beats by Dre Existing Data Preservation", False, 
+                            f"Category changed from Branding to {project.get('category')}")
+                return False
+            
+            self.log_test("Beats by Dre Existing Data Preservation", True, 
+                        "All existing metadata fields preserved correctly")
+            return True
+                
+        except Exception as e:
+            self.log_test("Beats by Dre Existing Data Preservation", False, f"Error checking data preservation: {str(e)}")
+            return False
+
+    def test_beats_by_dre_branding_category_filtering(self):
+        """Test that Beats by Dre project appears in Branding category filtering"""
+        try:
+            # Test with Branding category (URL encoded)
+            response = self.session.get(f"{API_BASE_URL}/projects?category=Branding", timeout=10)
+            if response.status_code == 200:
+                projects = response.json()
+                beats_project = None
+                
+                # Find the Beats by Dre project in Branding category
+                for project in projects:
+                    if project.get('id') == '2' or 'Beats by Dre' in project.get('title', ''):
+                        beats_project = project
+                        break
+                
+                if beats_project:
+                    # Verify it's actually in Branding category
+                    if beats_project.get('category') == 'Branding':
+                        self.log_test("Beats by Dre Branding Category Filtering", True, 
+                                    f"Beats by Dre project found in Branding category")
+                        return True
+                    else:
+                        self.log_test("Beats by Dre Branding Category Filtering", False, 
+                                    f"Project found but in wrong category: {beats_project.get('category')}")
+                        return False
+                else:
+                    self.log_test("Beats by Dre Branding Category Filtering", False, 
+                                "Beats by Dre project not found in Branding category")
+                    return False
+            else:
+                self.log_test("Beats by Dre Branding Category Filtering", False, 
+                            f"Status {response.status_code}: {response.text}")
+                return False
+        except requests.exceptions.RequestException as e:
+            self.log_test("Beats by Dre Branding Category Filtering", False, f"Request failed: {str(e)}")
+            return False
+
+    def test_beats_by_dre_data_structure_integrity(self):
+        """Test overall data structure integrity of restructured Beats by Dre project"""
+        try:
+            project = self.test_beats_by_dre_project_retrieval()
+            if not project:
+                self.log_test("Beats by Dre Data Structure Integrity", False, 
+                            "Cannot test data structure integrity - project not found")
+                return False
+            
+            # Comprehensive structure validation
+            structure_checks = {
+                'main_images_count': len(project.get('images', [])) == 3,
+                'creative_highlights_exists': 'creativeDesignHighlights' in project,
+                'creative_highlights_count': len(project.get('creativeDesignHighlights', [])) == 4,
+                'analytics_section_exists': 'separateAnalyticsSection' in project,
+                'analytics_images_count': len(project.get('separateAnalyticsSection', {}).get('images', [])) == 4,
+                'no_dual_sections': 'dualSections' not in project,
+                'proper_category': project.get('category') == 'Branding',
+                'has_title': bool(project.get('title')),
+                'has_description': bool(project.get('description'))
+            }
+            
+            failed_checks = [check for check, passed in structure_checks.items() if not passed]
+            
+            if not failed_checks:
+                self.log_test("Beats by Dre Data Structure Integrity", True, 
+                            "All data structure integrity checks passed")
+                return True
+            else:
+                self.log_test("Beats by Dre Data Structure Integrity", False, 
+                            f"Failed structure checks: {failed_checks}")
+                return False
+                
+        except Exception as e:
+            self.log_test("Beats by Dre Data Structure Integrity", False, f"Error checking data structure integrity: {str(e)}")
+            return False
+
     def test_youtube_embedding_advertising_projects(self):
         """Test YouTube video embedding functionality for advertising projects"""
         try:
