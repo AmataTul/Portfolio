@@ -27,6 +27,17 @@ code {
   transition: transform 0.3s ease;
 }
 
+/* Medium zoom effect on hover for ALL project images */
+.project-image-container:hover img,
+.analytics-image-container:hover img,
+.data-image-container:hover img,
+.modal-image:hover img,
+.photography-project:hover img,
+img:hover {
+  transform: scale(1.05) !important;
+  transition: transform 0.3s ease !important;
+}
+
 /* Auto-fit for analytics and data images */
 .analytics-image-container img,
 .data-image-container img {
@@ -35,6 +46,7 @@ code {
   width: 100% !important;
   height: 100% !important;
   display: block !important;
+  transition: transform 0.3s ease;
 }
 
 /* Auto-fit for modal images */
@@ -43,6 +55,7 @@ code {
   object-position: center !important;
   width: 100% !important;
   height: 100% !important;
+  transition: transform 0.3s ease;
 }
 
 /* Specific fixes for photography projects with large images */
@@ -53,9 +66,10 @@ code {
   max-height: 100% !important;
   width: 100% !important;
   height: 100% !important;
+  transition: transform 0.3s ease;
 }
 
-/* Universal image auto-fitting for ALL projects */
+/* Universal image auto-fitting for ALL projects with medium zoom */
 img[alt*="Image"], 
 img[alt*="Analytics"], 
 img[alt*="Data"], 
@@ -66,6 +80,16 @@ img[alt*="Project"] {
   width: 100% !important;
   height: 100% !important;
   display: block !important;
+  transition: transform 0.3s ease !important;
+}
+
+/* Medium zoom on hover for specific image types */
+img[alt*="Image"]:hover, 
+img[alt*="Analytics"]:hover, 
+img[alt*="Data"]:hover, 
+img[alt*="Beats"]:hover,
+img[alt*="Project"]:hover {
+  transform: scale(1.05) !important;
 }
 
 /* Improved marquee animation */
