@@ -35,6 +35,8 @@ class ProjectCreate(BaseModel):
     key_contributions: Optional[List[str]] = None  # Bullet points of specific contributions
     skills_utilized: Optional[List[str]] = None  # Project-specific skills and tools
     impact: Optional[ImpactData] = None  # Both quantified and qualitative impact
+    creativeDesignHighlights: Optional[List[str]] = None  # Creative design highlights for Beats by Dre type projects
+    separateAnalyticsSection: Optional[Dict] = None  # Separate analytics section for projects with multiple sections
 
 
 class Project(BaseModel):
@@ -55,6 +57,8 @@ class Project(BaseModel):
     key_contributions: Optional[List[str]] = None  # Bullet points of specific contributions
     skills_utilized: Optional[List[str]] = None  # Project-specific skills and tools
     impact: Optional[ImpactData] = None  # Both quantified and qualitative impact
+    creativeDesignHighlights: Optional[List[str]] = None  # Creative design highlights for Beats by Dre type projects
+    separateAnalyticsSection: Optional[Dict] = None  # Separate analytics section for projects with multiple sections
     created_at: datetime = Field(default_factory=datetime.utcnow)
     updated_at: datetime = Field(default_factory=datetime.utcnow)
 
