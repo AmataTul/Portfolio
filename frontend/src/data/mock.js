@@ -130,10 +130,10 @@ export const portfolioProjects = [
       title: "Analytics & Research - Data Analysis & Presentations",
       description: "Consumer behavior analysis, strategic insights, and comprehensive presentations using SQL, Tableau, and advanced data visualization to optimize celebrity collaboration campaigns",
       images: [
-        "beatsdata1.jpg", // Beats by Dre analytics data image 1 (horizontal) - Upload your SQL/Tableau analysis
-        "beatsdata2.jpg", // Beats by Dre analytics data image 2 (horizontal) - Upload your market research data
-        "beatsdata3.jpg", // Beats by Dre analytics data image 3 (horizontal) - Upload your consumer insights
-        "beatsdata4.jpg"  // Beats by Dre analytics data image 4 (horizontal) - Upload your presentation/dashboard
+        "https://via.placeholder.com/1200x675/2563EB/FFFFFF?text=Analytics+Dashboard+1", // Beats analytics data image 1 (horizontal placeholder)
+        "https://via.placeholder.com/1200x675/2563EB/FFFFFF?text=Market+Research+Data", // Beats analytics data image 2 (horizontal placeholder)
+        "https://via.placeholder.com/1200x675/2563EB/FFFFFF?text=Consumer+Insights", // Beats analytics data image 3 (horizontal placeholder)
+        "https://via.placeholder.com/1200x675/2563EB/FFFFFF?text=Presentation+Dashboard"  // Beats analytics data image 4 (horizontal placeholder)
       ],
       layout: "all_horizontal", // All 4 images are horizontal
       highlights: [
