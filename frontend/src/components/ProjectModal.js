@@ -1159,12 +1159,6 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                   </div>
                 </div>
 
-                {/* Easy Customization Instructions */}
-                <div className="mt-6 bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r-lg">
-                  <div className="text-xs text-blue-700">
-                    <strong>💡 Easy Customization:</strong> Replace "PLACEHOLDER_THUMBNAIL_X" with your actual screenshot URLs and update video URLs in the data file for seamless integration.
-                  </div>
-                </div>
               </div>
             )}
 
