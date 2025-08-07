@@ -541,7 +541,7 @@ export const portfolioProjects = [
         {
           id: 1,
           title: "🥩 Beef vs. Bison Benefits Joke Video",
-          url: "https://www.tiktok.com/@utebisonmeat/video/7390966903101050143",
+          url: "https://www.tiktok.com/@utebisonmeat/video/7372786580466994462",
           thumbnail: "PLACEHOLDER_THUMBNAIL_1", // User can replace with screenshot
           description: "HILARIOUS EDUCATION: A joke video that covers the main benefits between beef and bison! 🦬😂 Learn why bison is superior while laughing along with our indigenous ranchers. From health benefits to taste - we make learning about sustainable meat choices fun and memorable! 🌱✨ Click to discover the differences with a smile!",
           type: "educational_joke_organic"
