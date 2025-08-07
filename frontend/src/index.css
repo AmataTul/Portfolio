@@ -131,27 +131,44 @@ img[src*="Coffee Menu"] {
   display: block !important;
 }
 
-/* Specific styling for vertical physical menu images - Optimized sizing */
-.physical-menu-vertical {
+/* Specific styling for portrait physical menu images - Maintains vertical orientation */
+.physical-menu-portrait {
   object-fit: contain !important;
   object-position: center !important;
   width: auto !important;
   height: auto !important;
-  max-width: 100% !important;
-  max-height: 380px !important;
+  max-width: 400px !important;
+  max-height: 460px !important;
   display: block !important;
   margin: 0 auto !important;
+  /* Prevent horizontal stretching and maintain aspect ratio */
+  aspect-ratio: auto !important;
+  /* Ensure portrait images stay portrait */
+  min-width: unset !important;
+  min-height: unset !important;
 }
 
-.physical-menu-vertical img {
-  object-fit: contain !important;
-  object-position: center !important;
-  width: auto !important;
-  height: auto !important;
-  max-width: 100% !important;
-  max-height: 380px !important;
-  display: block !important;
-  margin: 0 auto !important;
+/* Container for physical menu to prevent overflow */
+.physical-menu-container {
+  max-width: 500px !important;
+  max-height: 500px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .physical-menu-portrait {
+    max-width: 300px !important;
+    max-height: 400px !important;
+  }
+  
+  .physical-menu-container {
+    max-width: 350px !important;
+    max-height: 450px !important;
+  }
 }
 
 /* Improved marquee animation */
