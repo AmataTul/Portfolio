@@ -755,14 +755,36 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     <div className="grid grid-cols-4 gap-4">
                       {project.images.slice(13, 17).map((item, index) => (
                         <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
-                          <div className="aspect-square bg-gradient-to-br from-purple-50 to-pink-50 flex items-center justify-center p-3">
-                            <div className="text-center">
+                          <div className="aspect-square bg-gradient-to-br from-purple-50 to-pink-50 flex items-center justify-center p-3 relative overflow-hidden">
+                            {item.placeholder.includes('http') || item.placeholder.includes('.jpg') ? (
+                              /* Real Image Display */
+                              <img 
+                                src={item.placeholder.includes('http') ? item.placeholder : `/images/graphic-design/${item.placeholder}`} 
+                                alt={`${item.category} - ${item.type}`}
+                                className="w-full h-full graphic-design-placeholder-image"
+                                style={{
+                                  objectFit: 'contain',
+                                  objectPosition: 'center',
+                                  width: '100%',
+                                  height: '100%',
+                                  maxWidth: '100%',
+                                  maxHeight: '100%'
+                                }}
+                                onError={(e) => {
+                                  e.target.style.display = 'none';
+                                  e.target.nextElementSibling.style.display = 'flex';
+                                }}
+                              />
+                            ) : null}
+                            
+                            {/* Fallback Placeholder Display */}
+                            <div className={`text-center w-full h-full flex flex-col items-center justify-center ${item.placeholder.includes('http') || item.placeholder.includes('.jpg') ? 'hidden' : 'flex'}`}>
                               <div className="w-16 h-16 bg-purple-200 rounded-lg flex items-center justify-center mb-2">
                                 <svg className="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
                                   <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
                                 </svg>
                               </div>
-                              <div className="text-sm font-medium text-gray-700 leading-tight">
+                              <div className="text-sm font-medium text-gray-700 leading-tight break-words max-w-full">
                                 {item.placeholder}
                               </div>
                             </div>
