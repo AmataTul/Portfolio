@@ -611,9 +611,10 @@ export const portfolioProjects = [
       title: "Physical Menu Design",
       description: "Professional double-sided physical menu maintaining brand consistency with digital displays",
       images: [
-        "Coffee Menu - brighter.jpg" // Placeholder for physical menu upload
+        "Coffee Menu - brighter.jpg" // Placeholder for physical menu upload (vertical)
       ],
-      layout: "single_image",
+      layout: "single_image_vertical", // Changed to vertical
+      orientation: "vertical", // Added orientation specification
       highlights: [
         "Double-sided physical menu design matching digital brand standards",
         "Professional food service presentation with clear readability",
