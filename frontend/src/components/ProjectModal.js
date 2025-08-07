@@ -63,6 +63,38 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
     return match ? match[1] : null;
   };
 
+  // Check if the video URL is Facebook
+  const isFacebookUrl = (url) => {
+    return url && (url.includes('facebook.com') || url.includes('fb.watch'));
+  };
+
+  // Extract Facebook video ID from URL
+  const getFacebookEmbedUrl = (url) => {
+    if (!url) return null;
+    
+    // Handle fb.watch URLs
+    if (url.includes('fb.watch')) {
+      const watchId = url.split('/').pop();
+      return `https://www.facebook.com/plugins/video.php?height=476&href=https://fb.watch/${watchId}&show_text=false&width=267&t=0`;
+    }
+    
+    // Handle facebook.com/reel URLs
+    if (url.includes('/reel/')) {
+      const reelId = url.match(/\/reel\/(\d+)/)?.[1];
+      if (reelId) {
+        return `https://www.facebook.com/plugins/video.php?height=476&href=https://www.facebook.com/reel/${reelId}&show_text=false&width=267&t=0`;
+      }
+    }
+    
+    // Handle facebook.com/videos URLs
+    if (url.includes('/videos/')) {
+      return `https://www.facebook.com/plugins/video.php?height=476&href=${encodeURIComponent(url)}&show_text=false&width=267&t=0`;
+    }
+    
+    // Default fallback for other Facebook URLs
+    return `https://www.facebook.com/plugins/video.php?height=476&href=${encodeURIComponent(url)}&show_text=false&width=267&t=0`;
+  };
+
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto bg-white border-0 shadow-2xl rounded-2xl">
