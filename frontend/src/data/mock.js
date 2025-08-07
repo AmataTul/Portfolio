@@ -722,7 +722,7 @@ export const portfolioProjects = [
 
   {
     id: 15,
-    title: "Aigata Brand - E-commerce Product Listing Graphics & Marketing Assets",
+    title: "E-commerce Graphics & Marketing Assets for My Owned Business",
     category: "Graphic Design",
     client: "Aigata - Personal E-commerce Business",
     project_type: "Complete E-commerce Product Graphics & Multi-Platform Marketing Materials",
