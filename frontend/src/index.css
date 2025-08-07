@@ -17,13 +17,15 @@ code {
 }
 
 /* Custom animations */
-/* Universal auto-fitting styles for all project images */
+/* Universal auto-fitting styles for all project images - NO CROPPING */
 .project-image-container img {
-  object-fit: cover;
-  object-position: center;
-  width: 100%;
-  height: 100%;
-  display: block;
+  object-fit: contain !important;
+  object-position: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  display: block !important;
   transition: transform 0.3s ease;
 }
 
@@ -38,47 +40,57 @@ img:hover {
   transition: transform 0.3s ease !important;
 }
 
-/* Auto-fit for analytics and data images */
+/* Auto-fit for analytics and data images - NO CROPPING */
 .analytics-image-container img,
 .data-image-container img {
-  object-fit: cover !important;
+  object-fit: contain !important;
   object-position: center !important;
   width: 100% !important;
   height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
   display: block !important;
   transition: transform 0.3s ease;
 }
 
-/* Auto-fit for modal images */
+/* Auto-fit for modal images - NO CROPPING */
 .modal-image img {
-  object-fit: cover !important;
+  object-fit: contain !important;
   object-position: center !important;
   width: 100% !important;
   height: 100% !important;
-  transition: transform 0.3s ease;
-}
-
-/* Specific fixes for photography projects with large images */
-.photography-project img {
-  object-fit: cover !important;
-  object-position: center !important;
   max-width: 100% !important;
   max-height: 100% !important;
-  width: 100% !important;
-  height: 100% !important;
+  display: block !important;
   transition: transform 0.3s ease;
 }
 
-/* Universal image auto-fitting for ALL projects with medium zoom */
+/* Specific fixes for photography projects with large images - NO CROPPING */
+.photography-project img {
+  object-fit: contain !important;
+  object-position: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  display: block !important;
+  transition: transform 0.3s ease;
+}
+
+/* Universal image auto-fitting for ALL projects with medium zoom - NO CROPPING */
 img[alt*="Image"], 
 img[alt*="Analytics"], 
 img[alt*="Data"], 
 img[alt*="Beats"],
-img[alt*="Project"] {
-  object-fit: cover !important;
+img[alt*="Project"],
+img[alt*="Menu"],
+img[alt*="Physical Menu"] {
+  object-fit: contain !important;
   object-position: center !important;
   width: 100% !important;
-  height: 100% !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
   display: block !important;
   transition: transform 0.3s ease !important;
 }
@@ -88,26 +100,27 @@ img[alt*="Image"]:hover,
 img[alt*="Analytics"]:hover, 
 img[alt*="Data"]:hover, 
 img[alt*="Beats"]:hover,
-img[alt*="Project"]:hover {
+img[alt*="Project"]:hover,
+img[alt*="Menu"]:hover,
+img[alt*="Physical Menu"]:hover {
   transform: scale(1.05) !important;
 }
 
-/* NEW: Full-width scaling for placeholder images while maintaining aspect ratio */
+/* Full-width scaling for placeholder images while maintaining aspect ratio - NO CROPPING */
 img[src*="placeholder"], 
 img[src*="PLACEHOLDER"], 
-img[src*="Coffee Menu"],
-img[alt*="Menu"],
-img[alt*="Physical Menu"] {
+img[src*="Coffee Menu"] {
   object-fit: contain !important;
   object-position: center !important;
   width: 100% !important;
   height: auto !important;
   max-width: 100% !important;
+  max-height: 100% !important;
   display: block !important;
   transition: transform 0.3s ease !important;
 }
 
-/* Enhanced scaling for mixed orientation projects (vertical and horizontal images) */
+/* Enhanced scaling for mixed orientation projects - NO CROPPING */
 .mixed-orientation img {
   object-fit: contain !important;
   object-position: center !important;
@@ -116,6 +129,18 @@ img[alt*="Physical Menu"] {
   max-width: 100% !important;
   max-height: 100% !important;
   display: block !important;
+}
+
+/* Specific styling for vertical physical menu images */
+.physical-menu-vertical img {
+  object-fit: contain !important;
+  object-position: center !important;
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 600px !important;
+  display: block !important;
+  margin: 0 auto !important;
 }
 
 /* Improved marquee animation */
