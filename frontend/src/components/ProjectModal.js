@@ -1386,6 +1386,128 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
               </div>
             )}
 
+            {/* Facebook Reels Section - Holiday Marketing Campaign */}
+            {project.facebookReels && (
+              <div className="mb-8">
+                {/* Section Header with Facebook Branding */}
+                <div className="bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 rounded-2xl p-6 mb-6 border border-blue-100">
+                  <div className="flex items-center justify-center mb-4">
+                    <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-lg px-6 py-2 rounded-full shadow-lg">
+                      📱 {project.facebookReels.sectionTitle}
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-bold text-blue-800 text-center mb-2">
+                    {project.facebookReels.videosTitle}
+                  </h3>
+                  <p className="text-blue-600 text-center font-medium">
+                    {project.facebookReels.videosSubtitle}
+                  </p>
+                </div>
+
+                {/* 4 Facebook Reels Grid - Embedded Facebook Videos */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  {project.facebookReels.videos.map((video, index) => (
+                    <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-200">
+                      <div className="relative">
+                        <div className="aspect-[9/16] bg-gradient-to-br from-blue-50 to-indigo-50 flex items-center justify-center relative">
+                          {/* Embedded Facebook Video */}
+                          {isFacebookUrl(video.url) ? (
+                            <iframe
+                              src={getFacebookEmbedUrl(video.url)}
+                              width="267"
+                              height="476"
+                              style={{border: "none", overflow: "hidden", maxWidth: "100%", height: "100%"}}
+                              scrolling="no"
+                              frameBorder="0"
+                              allowFullScreen={true}
+                              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                              className="rounded-lg"
+                            ></iframe>
+                          ) : (
+                            <div className="text-center p-6">
+                              <div className="w-16 h-16 bg-blue-200 rounded-full flex items-center justify-center mb-4 mx-auto">
+                                <svg className="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                              </div>
+                              <span className="text-sm font-medium text-blue-700">Facebook Reel #{index + 1}</span>
+                              <div className="mt-2">
+                                <button
+                                  onClick={() => window.open(video.url, '_blank')}
+                                  className="text-blue-600 hover:text-blue-700 font-semibold text-sm underline"
+                                >
+                                  Open in Facebook
+                                </button>
+                              </div>
+                            </div>
+                          )}
+                          
+                          {/* Video Number Badge */}
+                          <div className="absolute top-3 left-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-bold text-sm px-3 py-1 rounded-full shadow-lg z-10">
+                            #{index + 1}
+                          </div>
+                          
+                          {/* Holiday Badge */}
+                          <div className={`absolute top-3 right-3 text-white font-semibold text-xs px-2 py-1 rounded-full shadow-lg z-10 ${
+                            video.holiday === 'Christmas' 
+                              ? 'bg-gradient-to-r from-red-500 to-green-600' 
+                              : video.holiday === 'Valentine\'s Day'
+                              ? 'bg-gradient-to-r from-pink-500 to-red-500'
+                              : 'bg-gradient-to-r from-purple-500 to-yellow-500'
+                          }`}>
+                            {video.holiday === 'Christmas' ? '🎄' : video.holiday === 'Valentine\'s Day' ? '💝' : '🐰'} {video.holiday.toUpperCase()}
+                          </div>
+                        </div>
+                        
+                        {/* Video Info */}
+                        <div className="p-4 space-y-3">
+                          <h4 className="font-bold text-gray-800 text-lg leading-tight">{video.title}</h4>
+                          <p className="text-gray-600 text-sm leading-relaxed">{video.description}</p>
+                          
+                          <div className="flex items-center justify-between text-xs text-gray-500 pt-2 border-t">
+                            <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-medium">
+                              {video.type.replace('_', ' ').toUpperCase()}
+                            </span>
+                          </div>
+                          
+                          <button
+                            onClick={() => window.open(video.url, '_blank')}
+                            className="w-full bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white font-bold py-2 px-4 rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 text-sm flex items-center justify-center space-x-2"
+                          >
+                            <span>📱</span>
+                            <span>Watch on Facebook</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                
+                {/* Campaign Performance Stats */}
+                <div className="bg-gradient-to-r from-blue-100 via-indigo-100 to-purple-100 rounded-xl p-6 mt-6">
+                  <h5 className="font-bold text-blue-800 mb-4 text-center flex items-center justify-center">
+                    <span className="text-2xl mr-2">🛒</span>
+                    Holiday Campaign Impact Metrics
+                  </h5>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                    <div className="bg-white rounded-lg p-4 shadow-sm">
+                      <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">4</div>
+                      <div className="text-sm text-gray-600 font-medium">Holiday Seasons Covered</div>
+                    </div>
+                    <div className="bg-white rounded-lg p-4 shadow-sm">
+                      <div className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">100%</div>
+                      <div className="text-sm text-gray-600 font-medium">Mobile-Optimized Content</div>
+                    </div>
+                    <div className="bg-white rounded-lg p-4 shadow-sm">
+                      <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">4+</div>
+                      <div className="text-sm text-gray-600 font-medium">Months Campaign Coverage</div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            )}
+
             {/* Enhanced Project Information Section */}
             <div className="space-y-8 pt-6 border-t border-gray-200">
               
