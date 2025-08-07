@@ -876,8 +876,8 @@ export const portfolioProjects = [
     client: "Ute Tribal Enterprises & Associated Businesses",
     project_type: "Multi-Business Graphic Design & Visual Identity Portfolio",
     images: [
-      // Line 1: Ute Bison Ranch Graphics (13 items)
-      { placeholder: "UTE_BISON_PROMO_1", category: "Ute Bison Ranch Promos", type: "promotional_graphic" },
+      // Line 1: Ute Bison Ranch Graphics (13 items) - First image uploaded for testing
+      { placeholder: "https://customer-assets.emergentagent.com/job_project-showcase-20/artifacts/848tn2gz_490175273_1219013826892097_7282331591355033149_n.jpg", category: "Ute Bison Ranch Promos", type: "promotional_graphic" },
       { placeholder: "UTE_BISON_PROMO_2", category: "Ute Bison Ranch Promos", type: "advertisement" },
       { placeholder: "UTE_BISON_PRODUCT_1", category: "Ute Bison Ranch Promos", type: "product_listing" },
       { placeholder: "UTE_BISON_PRODUCT_2", category: "Ute Bison Ranch Promos", type: "ecommerce_graphic" },
