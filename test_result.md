@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Portfolio website for a marketing coordinator showing analytics achievements and enabling backend integration for dynamic project management. Removed specified projects: Adobe Creative Suite Instagram Reels (ID: 3), Beats by Dre Instagram Story Series (ID: 8), Adobe Analytics Challenge - Consumer Research & Strategy (ID: 9), and Comprehensive Graphic Design Skills Portfolio - Multi-Category Design Showcase (ID: 16). Also removed customization instruction text about PLACEHOLDER_THUMBNAIL replacements. Updated to use existing GitHub images with proper auto-fitting and medium zoom effects. Implemented TikTok embedding functionality for KahPeeh kah-Ahn Ute Coffee House project with direct iframe integration."
+user_problem_statement: "Portfolio website for a marketing coordinator showing analytics achievements and enabling backend integration for dynamic project management. Implemented TikTok embedding functionality for two projects: KahPeeh kah-Ahn Ute Coffee House & Soda (6 videos) and Ute Bison Ranch (6 videos) with specific TikTok URLs from @utebisonmeat account. Updated Ute Bison Ranch with joke videos, educational content, behind-the-scenes ABC4 'Taste Utah' TV series footage, bison zoomies, and educational bison vs buffalo content. Removed specified unwanted projects and customization text. Applied GitHub images with auto-fitting and medium zoom effects across all projects."
 
 backend:
   - task: "FastAPI Backend Setup"
