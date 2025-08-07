@@ -131,6 +131,29 @@ img[src*="Coffee Menu"] {
   display: block !important;
 }
 
+/* Graphic Design Portfolio - Responsive Placeholder Image Styling */
+.graphic-design-placeholder-image {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  transition: transform 0.3s ease !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+}
+
+.graphic-design-placeholder-image:hover {
+  transform: scale(1.02) !important;
+}
+
+/* Graphic design container responsive sizing */
+.graphic-design-container {
+  aspect-ratio: 1 / 1 !important;
+  overflow: hidden !important;
+  border-radius: 0.5rem !important;
+  position: relative !important;
+}
+
 /* Social Media Posts - Responsive Image Styling */
 .social-media-post-image {
   width: 100% !important;
