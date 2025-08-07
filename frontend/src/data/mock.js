@@ -596,16 +596,12 @@ export const portfolioProjects = [
     category: "Graphic Design",
     client: "Ute Tribal Enterprises - KahPeeh kah-Ahn Ute Coffee House & Soda",
     project_type: "Digital Menu Design & Management",
-    description: "Comprehensive digital drive thru menu design project for KahPeeh kah-Ahn Ute Coffee House & Soda, creating visually appealing and user-friendly menu displays for their drive-through service. I designed and managed the complete digital menu system, incorporating the coffee house's indigenous branding and cultural elements while ensuring optimal readability and customer experience. The project included creating multiple menu layouts, seasonal variations, and promotional displays that celebrate the unique indigenous coffee house experience while maintaining professional food service standards.",
+    description: "Comprehensive digital and physical drive-thru menu design project for KahPeeh Kah-Ahn Ute Coffee House & Soda, an Indigenous-owned café celebrating Ute culture. I designed and managed the full digital menu system, creating visually engaging and user-friendly drive-thru displays that align with the coffee house's Indigenous branding and cultural identity.\n\nThis project included multiple menu layouts, seasonal variations, and promotional screens - all optimized for clarity, quick readability, and a smooth customer experience. In addition to the digital displays, I also designed a professional double-sided physical menu, maintaining consistency across all touchpoints while meeting food service standards and elevating the overall brand presentation.",
     images: [
-      "PLACEHOLDER_IMAGE_1", // Digital menu board design - flexible size
-      "PLACEHOLDER_IMAGE_2", // Coffee specialty drinks menu - flexible size  
-      "PLACEHOLDER_IMAGE_3", // Food items and snacks menu - flexible size
-      "PLACEHOLDER_IMAGE_4", // Seasonal promotions menu - flexible size
-      "PLACEHOLDER_IMAGE_5", // Cultural branding elements - flexible size
-      "PLACEHOLDER_IMAGE_6", // Full drive thru menu layout - flexible size
-      "PLACEHOLDER_IMAGE_7", // Digital display mockup - flexible size
-      "PLACEHOLDER_IMAGE_8", // Menu system overview - flexible size
+      "https://customer-assets.emergentagent.com/job_visual-grid-master/artifacts/nxkgsoyl_UTE%20coffee%20House%20FOOD_OD%20S2.jpg", // Digital menu - Food section (vertical)
+      "https://customer-assets.emergentagent.com/job_visual-grid-master/artifacts/0j65o0n0_UTE%20coffee%20House%20EXTRAS_OD%20S1.jpg", // Digital menu - Extras section (vertical)
+      "https://customer-assets.emergentagent.com/job_visual-grid-master/artifacts/27xvyvm3_UTE%20coffee%20House%20SODA_OD%20S1.jpg", // Digital menu - Soda section (vertical)
+      "https://customer-assets.emergentagent.com/job_visual-grid-master/artifacts/av3hrcs8_UTE%20coffee%20House%20SODA_ID%20S1.jpg"  // Digital menu - Indoor soda display (horizontal)
     ],
     type: "design",
     featured: true,
