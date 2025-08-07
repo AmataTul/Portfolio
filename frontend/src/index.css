@@ -131,14 +131,25 @@ img[src*="Coffee Menu"] {
   display: block !important;
 }
 
-/* Specific styling for vertical physical menu images */
+/* Specific styling for vertical physical menu images - Optimized sizing */
+.physical-menu-vertical {
+  object-fit: contain !important;
+  object-position: center !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 380px !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
+
 .physical-menu-vertical img {
   object-fit: contain !important;
   object-position: center !important;
-  width: 100% !important;
+  width: auto !important;
   height: auto !important;
   max-width: 100% !important;
-  max-height: 600px !important;
+  max-height: 380px !important;
   display: block !important;
   margin: 0 auto !important;
 }
