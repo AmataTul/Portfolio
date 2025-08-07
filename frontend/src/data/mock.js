@@ -605,7 +605,22 @@ export const portfolioProjects = [
     ],
     type: "design",
     featured: true,
-    orientation: "mixed", // Supports both vertical and horizontal images
+    orientation: "mixed", // Mixed orientations - 3 vertical, 1 horizontal
+    // Separate physical menu section
+    separatePhysicalMenuSection: {
+      title: "Physical Menu Design",
+      description: "Professional double-sided physical menu maintaining brand consistency with digital displays",
+      images: [
+        "Coffee Menu - brighter.jpg" // Placeholder for physical menu upload
+      ],
+      layout: "single_image",
+      highlights: [
+        "Double-sided physical menu design matching digital brand standards",
+        "Professional food service presentation with clear readability",
+        "Consistent Indigenous branding across all menu touchpoints",
+        "Optimized layout for in-person customer experience"
+      ]
+    },
     keyContributions: [
       "Designed comprehensive digital drive thru menu system incorporating indigenous branding and cultural elements",
       "Created visually appealing menu layouts optimized for drive-through customer experience and readability",
