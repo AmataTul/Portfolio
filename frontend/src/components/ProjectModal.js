@@ -1304,15 +1304,16 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                   </h4>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {/* Quantified Metrics */}
-                    {project.impact.quantified_metrics && project.impact.quantified_metrics.length > 0 && (
+                    {/* Quantified Results */}
+                    {(project.impact.quantified_results || project.impact.quantified_metrics) && 
+                     (project.impact.quantified_results || project.impact.quantified_metrics).length > 0 && (
                       <div className="bg-white rounded-lg p-4 shadow-sm">
                         <h5 className="font-semibold text-purple-700 mb-3 flex items-center">
                           <span className="text-lg mr-2">📈</span>
                           Quantified Results
                         </h5>
                         <ul className="space-y-2">
-                          {project.impact.quantified_metrics.map((metric, index) => (
+                          {(project.impact.quantified_results || project.impact.quantified_metrics).map((metric, index) => (
                             <li key={index} className="flex items-start text-purple-600 text-sm">
                               <span className="w-1.5 h-1.5 bg-purple-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                               {metric}
