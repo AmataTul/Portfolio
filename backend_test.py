@@ -4780,13 +4780,16 @@ class BackendTester:
 def main():
     """Main test execution"""
     tester = BackendTester()
-    success = tester.run_all_tests()
+    
+    # Run database verification tests as requested in the review
+    print("🔍 Running Database State Verification Tests as requested...")
+    success = tester.run_database_verification_tests()
     
     if success:
-        print("\n🎉 All backend tests passed!")
+        print("\n🎉 All database verification tests passed!")
         return 0
     else:
-        print("\n💥 Some backend tests failed!")
+        print("\n💥 Some database verification tests failed!")
         return 1
 
 if __name__ == "__main__":
