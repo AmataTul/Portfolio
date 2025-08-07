@@ -836,12 +836,12 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                 </p>
               </div>
               
-              {/* Physical Menu Image - Optimized Size, Full Visibility, No Cropping */}
+              {/* Physical Menu Image - Portrait Orientation, Proper Sizing, Full Visibility */}
               <div className="mb-6">
-                <div className="group relative overflow-hidden rounded-xl shadow-lg max-w-2xl mx-auto">
+                <div className="group relative overflow-hidden rounded-xl shadow-lg max-w-lg mx-auto">
                   <div className="bg-gradient-to-br from-amber-400 via-orange-400 to-red-400 rounded-xl p-1">
                     <div className="bg-white rounded-lg overflow-hidden">
-                      <div className="relative bg-gray-100 flex items-center justify-center max-h-[400px] p-3">
+                      <div className="relative bg-gray-100 flex items-center justify-center p-3" style={{ maxHeight: '500px', minHeight: '300px' }}>
                         {project.separatePhysicalMenuSection.images[0].includes('.jpg') && !project.separatePhysicalMenuSection.images[0].startsWith('http') ? (
                           <div className="w-full h-full flex items-center justify-center bg-gray-200 text-gray-500 p-6">
                             <div className="text-center">
@@ -851,25 +851,28 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                                   <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
                                 </svg>
                               </div>
-                              <div className="text-sm text-gray-400">Upload Vertical Physical Menu Image</div>
-                              <div className="text-xs text-gray-400 mt-1">Image will be fully visible without cropping</div>
+                              <div className="text-sm text-gray-400">Upload Portrait Menu Image</div>
+                              <div className="text-xs text-gray-400 mt-1">Maintains original vertical orientation</div>
                             </div>
                           </div>
                         ) : (
                           <img 
                             src={project.separatePhysicalMenuSection.images[0]} 
-                            alt="Physical Menu Design - Vertical"
-                            className="physical-menu-vertical w-auto h-auto max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                            alt="Physical Menu Design - Portrait"
+                            className="physical-menu-portrait"
                             style={{ 
                               objectFit: 'contain',
                               objectPosition: 'center',
                               maxWidth: '100%',
-                              maxHeight: '380px',
+                              maxHeight: '460px',
                               width: 'auto',
                               height: 'auto',
                               display: 'block',
-                              margin: '0 auto'
+                              margin: '0 auto',
+                              transition: 'transform 0.3s ease'
                             }}
+                            onMouseEnter={(e) => e.target.style.transform = 'scale(1.02)'}
+                            onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
                           />
                         )}
                       </div>
