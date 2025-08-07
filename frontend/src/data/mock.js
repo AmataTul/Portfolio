@@ -514,7 +514,7 @@ export const portfolioProjects = [
       "Rural Community Outreach"
     ],
     impact: {
-      quantified_metrics: [
+      quantified_results: [
         "Increased social media engagement by 90%",
         "Boosted ranch visits and educational tour attendance by 55%",
         "Achieved 135% growth in brand awareness across agricultural communities",
