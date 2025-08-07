@@ -4572,6 +4572,189 @@ class BackendTester:
         
         return self.generate_summary()
 
+    def test_database_state_verification(self):
+        """Comprehensive database state verification as requested in review"""
+        try:
+            response = self.session.get(f"{API_BASE_URL}/projects", timeout=10)
+            if response.status_code == 200:
+                projects = response.json()
+                
+                # Count total projects
+                total_projects = len(projects)
+                
+                # List all project titles and IDs
+                project_list = []
+                multi_business_project = None
+                
+                for project in projects:
+                    project_id = project.get('id', 'No ID')
+                    project_title = project.get('title', 'No Title')
+                    project_list.append(f"ID: {project_id} | Title: {project_title}")
+                    
+                    # Check for the specific project mentioned in review request
+                    if "Multi-Business Social Media Posts" in project_title and "Comprehensive Content Creation Campaign" in project_title:
+                        multi_business_project = project
+                
+                # Log comprehensive database state
+                self.log_test("Database State Verification", True, 
+                            f"Database contains {total_projects} projects total", 
+                            {
+                                "total_projects": total_projects,
+                                "project_list": project_list[:10],  # First 10 for brevity
+                                "multi_business_project_found": multi_business_project is not None,
+                                "multi_business_project_details": multi_business_project.get('title', 'Not Found') if multi_business_project else None
+                            })
+                
+                # Print detailed results for user
+                print(f"\n📊 DATABASE STATE VERIFICATION:")
+                print(f"   Total Projects: {total_projects}")
+                print(f"   Multi-Business Social Media Posts Project: {'✅ FOUND' if multi_business_project else '❌ NOT FOUND'}")
+                
+                if multi_business_project:
+                    print(f"   Project ID: {multi_business_project.get('id')}")
+                    print(f"   Project Title: {multi_business_project.get('title')}")
+                    print(f"   Category: {multi_business_project.get('category')}")
+                    print(f"   Client: {multi_business_project.get('client')}")
+                
+                print(f"\n📋 ALL PROJECTS IN DATABASE:")
+                for i, project_info in enumerate(project_list, 1):
+                    print(f"   {i:2d}. {project_info}")
+                
+                return {
+                    "total_projects": total_projects,
+                    "projects": projects,
+                    "multi_business_project": multi_business_project,
+                    "project_list": project_list
+                }
+            else:
+                self.log_test("Database State Verification", False, 
+                            f"Failed to retrieve projects. Status {response.status_code}: {response.text}")
+                return None
+        except requests.exceptions.RequestException as e:
+            self.log_test("Database State Verification", False, f"Request failed: {str(e)}")
+            return None
+
+    def test_specific_project_search(self):
+        """Search for specific projects mentioned in review request"""
+        try:
+            db_state = self.test_database_state_verification()
+            if not db_state:
+                self.log_test("Specific Project Search", False, "Cannot search - database state verification failed")
+                return False
+            
+            projects = db_state["projects"]
+            search_terms = [
+                "Multi-Business Social Media Posts",
+                "Comprehensive Content Creation Campaign",
+                "Social Media Content",
+                "Business Social Media"
+            ]
+            
+            matching_projects = []
+            for project in projects:
+                title = project.get('title', '')
+                description = project.get('description', '')
+                for term in search_terms:
+                    if term.lower() in title.lower() or term.lower() in description.lower():
+                        matching_projects.append({
+                            "id": project.get('id'),
+                            "title": title,
+                            "category": project.get('category'),
+                            "client": project.get('client'),
+                            "matching_term": term
+                        })
+                        break
+            
+            if matching_projects:
+                self.log_test("Specific Project Search", True, 
+                            f"Found {len(matching_projects)} projects matching search terms",
+                            {"matching_projects": matching_projects})
+                
+                print(f"\n🔍 SPECIFIC PROJECT SEARCH RESULTS:")
+                for project in matching_projects:
+                    print(f"   ✅ Found: {project['title']}")
+                    print(f"      ID: {project['id']}")
+                    print(f"      Category: {project['category']}")
+                    print(f"      Client: {project['client']}")
+                    print(f"      Matched Term: {project['matching_term']}")
+                    print()
+                
+                return True
+            else:
+                self.log_test("Specific Project Search", False, 
+                            "No projects found matching the search terms")
+                print(f"\n🔍 SPECIFIC PROJECT SEARCH RESULTS:")
+                print(f"   ❌ No projects found matching: {', '.join(search_terms)}")
+                return False
+                
+        except Exception as e:
+            self.log_test("Specific Project Search", False, f"Error during search: {str(e)}")
+            return False
+
+    def test_mock_data_initialization_status(self):
+        """Check if database needs mock data initialization"""
+        try:
+            db_state = self.test_database_state_verification()
+            if not db_state:
+                self.log_test("Mock Data Initialization Status", False, "Cannot check - database state verification failed")
+                return False
+            
+            total_projects = db_state["total_projects"]
+            
+            if total_projects == 0:
+                self.log_test("Mock Data Initialization Status", True, 
+                            "Database is empty - mock data initialization is REQUIRED")
+                print(f"\n🔧 MOCK DATA INITIALIZATION STATUS:")
+                print(f"   Database is empty (0 projects)")
+                print(f"   ✅ Recommendation: Run /api/initialize-data endpoint")
+                return "required"
+            elif total_projects < 10:
+                self.log_test("Mock Data Initialization Status", True, 
+                            f"Database has limited data ({total_projects} projects) - mock data initialization may be beneficial")
+                print(f"\n🔧 MOCK DATA INITIALIZATION STATUS:")
+                print(f"   Database has limited data ({total_projects} projects)")
+                print(f"   ⚠️  Recommendation: Consider running /api/initialize-data endpoint")
+                return "recommended"
+            else:
+                self.log_test("Mock Data Initialization Status", True, 
+                            f"Database appears well-populated ({total_projects} projects) - mock data initialization not needed")
+                print(f"\n🔧 MOCK DATA INITIALIZATION STATUS:")
+                print(f"   Database is well-populated ({total_projects} projects)")
+                print(f"   ✅ Mock data initialization not needed")
+                return "not_needed"
+                
+        except Exception as e:
+            self.log_test("Mock Data Initialization Status", False, f"Error checking initialization status: {str(e)}")
+            return False
+
+    def run_database_verification_tests(self):
+        """Run specific tests requested in the review"""
+        print("🔍 Starting Database State Verification Tests...")
+        print(f"📡 Testing Backend URL: {API_BASE_URL}")
+        print("=" * 80)
+        
+        # Core server health check
+        if not self.test_server_health():
+            print("❌ Server health check failed. Stopping tests.")
+            return self.generate_summary()
+        
+        # Database state verification
+        self.test_database_state_verification()
+        self.test_specific_project_search()
+        self.test_mock_data_initialization_status()
+        
+        # Basic API endpoint verification
+        self.test_get_projects()
+        self.test_get_projects_by_category()
+        
+        # Test a few CRUD operations to ensure API is working
+        self.test_create_project()
+        self.test_get_single_project()
+        self.test_update_project()
+        self.test_delete_project()
+        
+        return self.generate_summary()
+
     def generate_summary(self):
         """Generate test summary"""
         passed = sum(1 for result in self.test_results if result['success'])
