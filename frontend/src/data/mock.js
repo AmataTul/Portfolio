@@ -533,9 +533,9 @@ export const portfolioProjects = [
     },
     // Combined TikTok videos section with integrated performance metrics
     combinedTikTokSection: {
-      sectionTitle: "Indigenous Bison Ranch TikTok Success",
-      videosTitle: "Top 6 Community-Engaging Organic TikTok Videos (All Organic Content)",
-      videosSubtitle: "Each video celebrates indigenous agriculture while driving measurable business results",
+      sectionTitle: "Indigenous Bison Ranch Social Media Success",
+      videosTitle: "Top 6 Community-Engaging Organic Videos (Facebook, TikTok, Instagram)",
+      videosSubtitle: "Each video celebrates indigenous agriculture while driving measurable business results across multiple platforms",
       
       videos: [
         {
