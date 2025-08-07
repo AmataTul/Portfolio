@@ -131,14 +131,14 @@ img[src*="Coffee Menu"] {
   display: block !important;
 }
 
-/* Physical menu image scaling - 9000x14000px scaled to max 600x900px proportionally */
-.physical-menu-scaled {
+/* Physical menu image scaling - 9000x14000px scaled to max 300x500px proportionally */
+.physical-menu-compact {
   object-fit: contain !important;
   object-position: center !important;
   width: auto !important;
   height: auto !important;
-  max-width: 600px !important;
-  max-height: 900px !important;
+  max-width: 300px !important;
+  max-height: 500px !important;
   display: block !important;
   margin: 0 auto !important;
   /* Ensure proper aspect ratio preservation from 9000x14000 source */
@@ -148,10 +148,10 @@ img[src*="Coffee Menu"] {
   min-height: unset !important;
 }
 
-/* Container for scaled physical menu */
-.physical-menu-container-scaled {
-  max-width: 650px !important;
-  max-height: 950px !important;
+/* Container for compact physical menu */
+.physical-menu-container-compact {
+  max-width: 350px !important;
+  max-height: 550px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -159,28 +159,28 @@ img[src*="Coffee Menu"] {
   margin: 0 auto !important;
 }
 
-/* Responsive adjustments for scaled menu */
+/* Responsive adjustments for compact menu */
 @media (max-width: 768px) {
-  .physical-menu-scaled {
-    max-width: 400px !important;
-    max-height: 600px !important;
+  .physical-menu-compact {
+    max-width: 250px !important;
+    max-height: 400px !important;
   }
   
-  .physical-menu-container-scaled {
-    max-width: 450px !important;
-    max-height: 650px !important;
+  .physical-menu-container-compact {
+    max-width: 300px !important;
+    max-height: 450px !important;
   }
 }
 
 @media (max-width: 480px) {
-  .physical-menu-scaled {
-    max-width: 300px !important;
-    max-height: 450px !important;
+  .physical-menu-compact {
+    max-width: 200px !important;
+    max-height: 320px !important;
   }
   
-  .physical-menu-container-scaled {
-    max-width: 350px !important;
-    max-height: 500px !important;
+  .physical-menu-container-compact {
+    max-width: 250px !important;
+    max-height: 370px !important;
   }
 }
 
