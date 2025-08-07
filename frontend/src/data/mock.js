@@ -540,51 +540,51 @@ export const portfolioProjects = [
       videos: [
         {
           id: 1,
-          title: "🥩 Beef vs. Bison: What's the Difference?",
-          url: "https://www.tiktok.com/@utebison/video/7471801091441659178",
+          title: "🥩 Beef vs. Bison Benefits Joke Video",
+          url: "https://www.tiktok.com/@utebisonmeat/video/7390966903101050143",
           thumbnail: "PLACEHOLDER_THUMBNAIL_1", // User can replace with screenshot
-          description: "EDUCATIONAL CONTENT: Learn the key differences between beef and bison! 🦬🐄 Discover why bison is leaner, more nutritious, and sustainable. Our indigenous ranchers explain the benefits of choosing bison over traditional beef. From taste to health benefits - everything you need to know! 🌱 Knowledge that will change how you think about meat!",
-          type: "educational_comparison_organic"
+          description: "HILARIOUS EDUCATION: A joke video that covers the main benefits between beef and bison! 🦬😂 Learn why bison is superior while laughing along with our indigenous ranchers. From health benefits to taste - we make learning about sustainable meat choices fun and memorable! 🌱✨ Click to discover the differences with a smile!",
+          type: "educational_joke_organic"
         },
         {
           id: 2,
-          title: "😊 Happy Bison Living Their Best Life",
-          url: "https://www.tiktok.com/@utebison/video/7476830915477982491",
+          title: "🦬 Bison Herd Never Circle Back Joke",
+          url: "https://www.tiktok.com/@utebisonmeat/video/7383024620179311903",
           thumbnail: "PLACEHOLDER_THUMBNAIL_2", // User can replace with screenshot
-          description: "HEARTWARMING CONTENT: Watch our bison living their absolute best life! 🦬💕 See these majestic animals roaming freely, playing, and enjoying our sustainable ranch environment. Their happiness is our priority - and it shows! 🌿 These content bison are proof of our commitment to ethical farming!",
-          type: "animal_welfare_organic"
+          description: "RANCH HUMOR: Showing bison herd joke - they never had to circle back and touch base! 😄🦬 Watch our hilarious take on modern corporate language vs. authentic ranch life. Our bison know how to get things done right the first time! Perfect ranch comedy! 🤠 Click for some genuine laughs!",
+          type: "ranch_humor_organic"
         },
         {
           id: 3,
-          title: "😂 Funny Bison Herd Moments",
-          url: "https://www.tiktok.com/@utebison/video/7476839847208741131",
+          title: "📺 Behind the Scenes ABC4 'Taste Utah' TV Series",
+          url: "https://www.tiktok.com/@utebisonmeat/video/7409153729083084062",
           thumbnail: "PLACEHOLDER_THUMBNAIL_3", // User can replace with screenshot
-          description: "HILARIOUS CONTENT: You won't believe these funny bison herd moments! 🤣🦬 Watch as our bison show their personalities - from playful antics to unexpected behaviors. Who knew bison could be this entertaining? 😄 Ranch life is never boring with these characters around!",
-          type: "entertainment_humor_organic"
+          description: "BEHIND THE SCENES: TV Series on ABC4 'Taste Utah' about Native American culture, bison, our ranch, and more! 🎬🦬 Go behind the cameras as we showcase Ute culture, authentic bison farming, and our family ranch traditions on statewide television. See how indigenous stories reach mainstream media! 📺✨ Click to see the magic!",
+          type: "media_behind_scenes_organic"
         },
         {
           id: 4,
-          title: "📚 Educational: Beef vs. Bison Deep Dive",
-          url: "https://www.tiktok.com/@utebison/video/7476845213441698091",
+          title: "🎓 Educational: Key Differences Beef vs. Bison",
+          url: "https://www.tiktok.com/@utebisonmeat/video/7390966903101050143",
           thumbnail: "PLACEHOLDER_THUMBNAIL_4", // User can replace with screenshot
-          description: "IN-DEPTH EDUCATION: The complete guide to beef vs. bison differences! 🎓🦬 Our ranching experts break down nutrition facts, environmental impact, and taste profiles. Learn why indigenous communities have valued bison for centuries and why modern consumers are making the switch! 📊 Educational content that matters!",
+          description: "EDUCATIONAL DEEP DIVE: Key differences between beef and bison explained by our ranch experts! 🦬📚 Learn about nutrition, sustainability, taste, and health benefits from indigenous ranchers who know best. Perfect educational content for conscious meat consumers! 🌱💪 Click to become a bison expert!",
           type: "educational_detailed_organic"
         },
         {
           id: 5,
-          title: "📺 Behind the Scenes: ABC4 Taste Utah Filming",
-          url: "https://www.tiktok.com/@utebison/video/7476852094441423131",
-          thumbnail: "PLACEHOLDER_THUMBNAIL_5", // User can replace with screenshot  
-          description: "EXCLUSIVE BEHIND-THE-SCENES: Go behind the cameras during our ABC4 'Taste Utah' filming! 🎬📺 See how we prepared for the big TV feature, what it was like being on television, and the excitement of showcasing Ute culture and bison farming to Utah! 🌟 A once-in-a-lifetime media experience!",
-          type: "behind_the_scenes_media_organic"
+          title: "⚡ Never Seen Bison Zoomies? Now You Did!",
+          url: "https://www.tiktok.com/@utebisonmeat/video/7375639334382275870",
+          thumbnail: "PLACEHOLDER_THUMBNAIL_5", // User can replace with screenshot
+          description: "ADORABLE RANCH LIFE: Never seen bison zoomies? Now you did! ⚡🦬 Watch these massive, majestic animals show their playful side with sudden bursts of energy and joy! Our ranch captures the most heartwarming moments of bison being surprisingly cute and energetic! 🥰 Click for pure ranch happiness!",
+          type: "cute_bison_behavior_organic"
         },
         {
           id: 6,
-          title: "🏞️ Ranch Tours & Education",
-          url: "https://www.tiktok.com/@utebison/video/7452207220508347691",
+          title: "🦌 Educational: Bison vs. Buffalo as Animals",
+          url: "https://www.tiktok.com/@utebisonmeat/video/7385755907117894954",
           thumbnail: "PLACEHOLDER_THUMBNAIL_6", // User can replace with screenshot
-          description: "COMMUNITY FAVORITE: Experience our educational ranch tours! 🚐🦬 Watch how we share indigenous agricultural knowledge with visitors of all ages. See the excitement and engagement when authentic ranching meets community education! Always creating memorable learning experiences! 🎪 Click to see us in action!",
-          type: "educational_tours_organic"
+          description: "EDUCATIONAL CONTENT: The difference between bison and buffalo as animals explained! 🦬🦌 Our indigenous ranch experts teach you the scientific and cultural distinctions between these magnificent creatures. Learn from generations of traditional knowledge combined with modern understanding! 📖✨ Click to expand your knowledge!",
+          type: "scientific_education_organic"
         }
       ]
     }
