@@ -611,7 +611,7 @@ export const portfolioProjects = [
       title: "Physical Menu Design",
       description: "Professional double-sided physical menu maintaining brand consistency with digital displays",
       images: [
-        "Coffee Menu - brighter.jpg" // Placeholder for physical menu upload (vertical)
+        "https://customer-assets.emergentagent.com/job_visual-grid-master/artifacts/x03u9mo9_Coffee%20Menu%20-%20brighter.jpg" // Actual uploaded physical menu (vertical)
       ],
       layout: "single_image_vertical", // Changed to vertical
       orientation: "vertical", // Added orientation specification
