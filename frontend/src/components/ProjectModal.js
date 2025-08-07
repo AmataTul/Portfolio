@@ -836,35 +836,35 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                 </p>
               </div>
               
-              {/* Physical Menu Image - Portrait Orientation, Proper Sizing, Full Visibility */}
+              {/* Physical Menu Image - Portrait 600x900 max, Proper Scaling, Full Visibility */}
               <div className="mb-6">
-                <div className="group relative overflow-hidden rounded-xl shadow-lg max-w-lg mx-auto">
+                <div className="group relative overflow-hidden rounded-xl shadow-lg max-w-2xl mx-auto">
                   <div className="bg-gradient-to-br from-amber-400 via-orange-400 to-red-400 rounded-xl p-1">
                     <div className="bg-white rounded-lg overflow-hidden">
-                      <div className="relative bg-gray-100 flex items-center justify-center p-3" style={{ maxHeight: '500px', minHeight: '300px' }}>
+                      <div className="relative bg-gray-100 flex items-center justify-center p-4" style={{ maxHeight: '950px', minHeight: '400px' }}>
                         {project.separatePhysicalMenuSection.images[0].includes('.jpg') && !project.separatePhysicalMenuSection.images[0].startsWith('http') ? (
                           <div className="w-full h-full flex items-center justify-center bg-gray-200 text-gray-500 p-6">
                             <div className="text-center">
                               <div className="text-lg font-medium mb-3">{project.separatePhysicalMenuSection.images[0]}</div>
-                              <div className="w-20 h-28 bg-amber-200 rounded-lg flex items-center justify-center mb-3 mx-auto">
-                                <svg className="w-10 h-14 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
-                                  <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+                              <div className="w-24 h-36 bg-amber-200 rounded-lg flex items-center justify-center mb-3 mx-auto">
+                                <svg className="w-12 h-18 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
+                                  <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
                                 </svg>
                               </div>
-                              <div className="text-sm text-gray-400">Upload Portrait Menu Image</div>
-                              <div className="text-xs text-gray-400 mt-1">Maintains original vertical orientation</div>
+                              <div className="text-sm text-gray-400">Upload Portrait Menu Image (9000x14000px)</div>
+                              <div className="text-xs text-gray-400 mt-1">Will be scaled to 600x900 max proportionally</div>
                             </div>
                           </div>
                         ) : (
                           <img 
                             src={project.separatePhysicalMenuSection.images[0]} 
-                            alt="Physical Menu Design - Portrait"
-                            className="physical-menu-portrait"
+                            alt="Physical Menu Design - Portrait 600x900"
+                            className="physical-menu-scaled"
                             style={{ 
                               objectFit: 'contain',
                               objectPosition: 'center',
-                              maxWidth: '100%',
-                              maxHeight: '460px',
+                              maxWidth: '600px',
+                              maxHeight: '900px',
                               width: 'auto',
                               height: 'auto',
                               display: 'block',
@@ -876,8 +876,8 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                           />
                         )}
                       </div>
-                      <div className="absolute top-2 left-2 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold text-xs px-2 py-1 rounded-full shadow-lg">
-                        Physical Menu
+                      <div className="absolute top-2 left-2 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold text-xs px-3 py-1 rounded-full shadow-lg">
+                        Physical Menu (Portrait)
                       </div>
                     </div>
                   </div>
