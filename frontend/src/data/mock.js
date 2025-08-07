@@ -305,50 +305,6 @@ export const portfolioProjects = [
   },
 
   {
-    id: 8,
-    title: "Beats by Dre Instagram Story Series",
-    category: "Social Media Content & Campaigns", 
-    client: "Beats by Dre",
-    description: "Dynamic Instagram Story series showcasing Beats headphones through lifestyle photography and engaging social media content optimized for vertical mobile viewing.",
-    images: [
-      "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=600&h=800&fit=crop"
-    ],
-    type: "image",
-    featured: true,
-    orientation: "vertical",
-    key_contributions: [
-      "Created cohesive Instagram Story series highlighting Beats product features and lifestyle integration",
-      "Developed engaging vertical content strategy optimized for mobile social media consumption",
-      "Produced lifestyle photography emphasizing product aesthetics and brand positioning",
-      "Implemented interactive Story elements including polls, questions, and swipe-up features",
-      "Coordinated content calendar ensuring consistent brand messaging across story campaigns"
-    ],
-    skills_utilized: [
-      "Instagram Story Design",
-      "Vertical Content Creation",
-      "Social Media Strategy", 
-      "Lifestyle Photography",
-      "Mobile-First Design",
-      "Interactive Content Development",
-      "Brand Storytelling"
-    ],
-    impact: {
-      quantified_metrics: [
-        "25+ Instagram Stories created for Beats product campaigns",
-        "60% increase in story completion rates compared to previous campaigns",
-        "35% boost in profile visits from story content",
-        "50% improvement in story engagement metrics"
-      ],
-      qualitative_outcomes: [
-        "Strengthened Beats brand identity through compelling lifestyle-focused story content",
-        "Enhanced audience engagement with Beats products through authentic social media storytelling",
-        "Established Beats as a premium lifestyle brand through strategic visual content",
-        "Improved brand awareness among target demographic through consistent story presence"
-      ]
-    }
-  },
-
-  {
     id: 9,
     title: "Adobe Analytics Challenge - Consumer Research & Strategy",
     category: "Illustrations & Educational Content",
