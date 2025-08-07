@@ -834,41 +834,46 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                 </p>
               </div>
               
-              {/* Physical Menu Image - Full Width */}
+              {/* Physical Menu Image - Vertical Layout, Full Visibility, No Cropping */}
               <div className="mb-6">
                 <div className="group relative overflow-hidden rounded-xl shadow-lg">
                   <div className="bg-gradient-to-br from-amber-400 via-orange-400 to-red-400 rounded-xl p-1">
                     <div className="bg-white rounded-lg overflow-hidden">
-                      <div className="relative bg-gray-100 flex items-center justify-center min-h-[400px]">
+                      <div className="relative bg-gray-100 flex items-center justify-center min-h-[500px] p-4">
                         {project.separatePhysicalMenuSection.images[0].includes('.jpg') && !project.separatePhysicalMenuSection.images[0].startsWith('http') ? (
                           <div className="w-full h-full flex items-center justify-center bg-gray-200 text-gray-500 p-8">
                             <div className="text-center">
                               <div className="text-xl font-medium mb-4">{project.separatePhysicalMenuSection.images[0]}</div>
-                              <div className="w-24 h-24 bg-amber-200 rounded-lg flex items-center justify-center mb-4 mx-auto">
-                                <svg className="w-12 h-12 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
+                              <div className="w-24 h-32 bg-amber-200 rounded-lg flex items-center justify-center mb-4 mx-auto">
+                                <svg className="w-12 h-16 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
                                   <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
                                 </svg>
                               </div>
-                              <div className="text-sm text-gray-400">Upload Physical Menu Image</div>
-                              <div className="text-xs text-gray-400 mt-1">Image will scale to fit full width while maintaining aspect ratio</div>
+                              <div className="text-sm text-gray-400">Upload Vertical Physical Menu Image</div>
+                              <div className="text-xs text-gray-400 mt-1">Image will be fully visible without cropping</div>
+                              <div className="text-xs text-gray-300 mt-1">Portrait orientation - no parts will be cut off</div>
                             </div>
                           </div>
                         ) : (
                           <img 
                             src={project.separatePhysicalMenuSection.images[0]} 
-                            alt="Physical Menu Design"
-                            className="w-full h-auto object-contain max-w-full group-hover:scale-105 transition-transform duration-300"
+                            alt="Physical Menu Design - Vertical"
+                            className="physical-menu-vertical w-auto h-auto max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
                             style={{ 
-                              width: '100%',
-                              height: 'auto',
                               objectFit: 'contain',
-                              objectPosition: 'center'
+                              objectPosition: 'center',
+                              maxWidth: '100%',
+                              maxHeight: '600px',
+                              width: 'auto',
+                              height: 'auto',
+                              display: 'block',
+                              margin: '0 auto'
                             }}
                           />
                         )}
                       </div>
                       <div className="absolute top-3 left-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold text-xs px-3 py-1 rounded-full shadow-lg">
-                        Physical Menu
+                        Physical Menu (Vertical)
                       </div>
                     </div>
                   </div>
