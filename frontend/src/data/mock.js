@@ -494,12 +494,12 @@ export const portfolioProjects = [
     featured: true,
     orientation: "vertical",
     key_contributions: [
-      "Conceptualized and created 6 high-engagement organic TikTok videos promoting indigenous bison ranching and agricultural practices",
-      "Coordinated community ranch events and educational tours, creating authentic content opportunities",
-      "Developed creative strategy showcasing unique indigenous ranching experience and sustainable farming practices",
-      "Wrote compelling copy and captions celebrating indigenous agricultural business and environmental stewardship",
-      "Edited and produced video content highlighting ranch operations, bison care, and community education",
-      "Analyzed performance metrics and adapted content strategy to maximize agricultural community engagement and business visibility"
+      "Created over 6 organic TikTok videos showcasing Indigenous bison ranching, sustainable agriculture, and everyday ranch life",
+      "Organized community events and educational ranch tours to generate authentic, high-impact content",
+      "Built a content strategy centered on Indigenous food systems, cultural heritage, and regenerative farming practices",
+      "Wrote captions and marketing copy that elevated Indigenous agriculture and highlighted environmental stewardship",
+      "Filmed and edited short-form videos featuring bison care, ranch operations, and hands-on community education",
+      "Monitored performance metrics and refined content approach to increase reach, engagement, and visibility across agricultural and Indigenous-focused audiences"
     ],
     skills_utilized: [
       "Indigenous Agricultural Marketing",
