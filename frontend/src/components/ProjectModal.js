@@ -51,6 +51,18 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
     return url && (url.includes('youtube.') || url.includes('youtu.be'));
   };
 
+  // Check if the video URL is TikTok
+  const isTikTokUrl = (url) => {
+    return url && url.includes('tiktok.com');
+  };
+
+  // Extract TikTok video ID from URL
+  const getTikTokId = (url) => {
+    if (!url) return null;
+    const match = url.match(/video\/(\d+)/);
+    return match ? match[1] : null;
+  };
+
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto bg-white border-0 shadow-2xl rounded-2xl">
