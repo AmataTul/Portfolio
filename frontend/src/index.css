@@ -131,6 +131,49 @@ img[src*="Coffee Menu"] {
   display: block !important;
 }
 
+/* Social Media Posts - Responsive Image Styling */
+.social-media-post-image {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  transition: transform 0.3s ease !important;
+}
+
+.social-media-post-image:hover {
+  transform: scale(1.05) !important;
+}
+
+/* Social media container responsive sizing */
+.social-media-post-container {
+  aspect-ratio: 1 / 1 !important;
+  overflow: hidden !important;
+  border-radius: 0.5rem !important;
+  background: linear-gradient(to bottom right, #f3f4f6, #e5e7eb) !important;
+}
+
+/* Responsive social media grid */
+@media (max-width: 640px) {
+  .social-media-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0.75rem !important;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .social-media-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 1rem !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  .social-media-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    gap: 1rem !important;
+  }
+}
+
 /* Physical menu image scaling - 9000x14000px scaled to max 300x500px proportionally */
 .physical-menu-compact {
   object-fit: contain !important;
