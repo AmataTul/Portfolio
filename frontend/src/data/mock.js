@@ -515,20 +515,20 @@ export const portfolioProjects = [
     ],
     impact: {
       quantified_metrics: [
-        "Generated 90% increase in social media engagement for the indigenous bison ranch",
-        "Drove 55% boost in ranch visits and educational tours",
-        "Achieved 135% growth in brand awareness throughout agricultural communities and surrounding areas",
-        "Successfully promoted multiple ranch education events through strategic organic TikTok marketing",
-        "Built substantial agricultural following and community recognition for Ute Bison Ranch",
-        "Established ranch as premier educational destination through compelling social media presence"
+        "Increased social media engagement by 90%",
+        "Boosted ranch visits and educational tour attendance by 55%",
+        "Achieved 135% growth in brand awareness across agricultural communities",
+        "Promoted multiple ranch education events through organic TikTok strategy",
+        "Built a strong agricultural following and community recognition",
+        "Positioned the ranch as a go-to educational destination"
       ],
       qualitative_outcomes: [
-        "Successfully positioned indigenous bison ranch as agricultural education hub and community resource",
-        "Enhanced pride in locally-owned indigenous agricultural business through authentic storytelling",
-        "Strengthened connections between ranch and rural communities through relatable, educational content",
-        "Elevated visibility of Ute Tribal Enterprises agricultural division in competitive market",
-        "Created sustainable framework for ongoing community-focused organic marketing and education",
-        "Fostered authentic brand personality celebrating indigenous culture and environmental stewardship"
+        "Established Ute Bison Ranch as a trusted source for agricultural education",
+        "Strengthened local pride in Indigenous-owned agriculture",
+        "Fostered deeper connections with rural communities",
+        "Raised visibility of Ute Tribal Enterprises in a competitive space",
+        "Created a lasting, community-driven content strategy",
+        "Developed an authentic brand rooted in culture and environmental values"
       ]
     },
     // Combined TikTok videos section with integrated performance metrics
