@@ -821,6 +821,78 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
             </div>
           )}
 
+          {/* Separate Physical Menu Section - Independent from main images */}
+          {project.separatePhysicalMenuSection && (
+            <div className="bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 border-4 border-transparent bg-clip-padding rounded-2xl p-8 shadow-2xl">
+              <div className="text-center mb-6">
+                <h4 className="text-3xl font-bold bg-gradient-to-r from-amber-600 via-orange-600 to-red-600 bg-clip-text text-transparent mb-4 flex items-center justify-center">
+                  <span className="text-4xl mr-3">🍽️</span>
+                  {project.separatePhysicalMenuSection.title}
+                </h4>
+                <p className="text-gray-700 text-lg max-w-4xl mx-auto leading-relaxed">
+                  {project.separatePhysicalMenuSection.description}
+                </p>
+              </div>
+              
+              {/* Physical Menu Image - Full Width */}
+              <div className="mb-6">
+                <div className="group relative overflow-hidden rounded-xl shadow-lg">
+                  <div className="bg-gradient-to-br from-amber-400 via-orange-400 to-red-400 rounded-xl p-1">
+                    <div className="bg-white rounded-lg overflow-hidden">
+                      <div className="relative bg-gray-100 flex items-center justify-center min-h-[400px]">
+                        {project.separatePhysicalMenuSection.images[0].includes('.jpg') && !project.separatePhysicalMenuSection.images[0].startsWith('http') ? (
+                          <div className="w-full h-full flex items-center justify-center bg-gray-200 text-gray-500 p-8">
+                            <div className="text-center">
+                              <div className="text-xl font-medium mb-4">{project.separatePhysicalMenuSection.images[0]}</div>
+                              <div className="w-24 h-24 bg-amber-200 rounded-lg flex items-center justify-center mb-4 mx-auto">
+                                <svg className="w-12 h-12 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
+                                  <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+                                </svg>
+                              </div>
+                              <div className="text-sm text-gray-400">Upload Physical Menu Image</div>
+                              <div className="text-xs text-gray-400 mt-1">Image will scale to fit full width while maintaining aspect ratio</div>
+                            </div>
+                          </div>
+                        ) : (
+                          <img 
+                            src={project.separatePhysicalMenuSection.images[0]} 
+                            alt="Physical Menu Design"
+                            className="w-full h-auto object-contain max-w-full group-hover:scale-105 transition-transform duration-300"
+                            style={{ 
+                              width: '100%',
+                              height: 'auto',
+                              objectFit: 'contain',
+                              objectPosition: 'center'
+                            }}
+                          />
+                        )}
+                      </div>
+                      <div className="absolute top-3 left-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold text-xs px-3 py-1 rounded-full shadow-lg">
+                        Physical Menu
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Physical Menu Highlights */}
+              <div className="bg-white rounded-xl p-6 shadow-sm">
+                <h5 className="font-bold text-orange-800 mb-4 flex items-center">
+                  <span className="text-2xl mr-2">✨</span>
+                  Physical Menu Design Highlights
+                </h5>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {project.separatePhysicalMenuSection.highlights.map((highlight, index) => (
+                    <div key={index} className="flex items-start">
+                      <span className="w-2 h-2 bg-orange-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      <span className="text-gray-700 text-sm">{highlight}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* Project Details */}
           <div className="space-y-6">
             <div className="prose prose-lg max-w-none">
