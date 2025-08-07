@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Portfolio website for a marketing coordinator showing analytics achievements and enabling backend integration for dynamic project management. Updated YouTube embedding functionality for advertising projects and restructured Beats by Dre project: removed Graphic Design & Brand Materials section, moved creative design highlights to top, main window shows only 3 images (beatsg1.jpg, beatsg2.jpg, beatsg3.jpg), Analytics & Research section is separate with 4 horizontal image placeholders (beatsdata1.jpg, beatsdata2.jpg, beatsdata3.jpg, beatsdata4.jpg). All projects with separate categories now have independent image sections, with code ensuring uploaded images fit perfectly."
+user_problem_statement: "Portfolio website for a marketing coordinator showing analytics achievements and enabling backend integration for dynamic project management. Updated to use existing GitHub images with proper auto-fitting and medium zoom effects (scale-105 on hover). Implemented TikTok embedding functionality for KahPeeh kah-Ahn Ute Coffee House & Soda project with 6 specific TikTok URLs embedded directly on website using iframe integration. Fixed Beats by Dre project structure with actual images from GitHub (b1.jpg, b2.jpg, b3.jpg for main window, beats0.jpg, beats2.jpg, beats3.jpg, b4.jpg for analytics section). Applied universal medium zoom and auto-fitting to all project images."
 
 backend:
   - task: "FastAPI Backend Setup"
