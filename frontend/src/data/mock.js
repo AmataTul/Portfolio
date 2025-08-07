@@ -305,39 +305,6 @@ export const portfolioProjects = [
   },
 
   {
-    id: 9,
-    title: "Adobe Analytics Challenge - Consumer Research & Strategy",
-    category: "Illustrations & Educational Content",
-    client: "Adobe x Hilton",
-    description: "Comprehensive research presentation analyzing Hilton Hotels consumer behavior data using Adobe Analytics. Includes strategic recommendations, data visualizations, and actionable insights for customer experience optimization.",
-    images: [
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1553028826-f4804a6dba3b?w=800&h=600&fit=crop"
-    ],
-    type: "presentation",
-    featured: true,
-    orientation: "horizontal",
-    researchSlides: [
-      {
-        title: "Consumer Behavior Analysis",
-        description: "Deep dive into Hilton customer journey mapping and behavior patterns",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
-      },
-      {
-        title: "Data Visualization & Insights",
-        description: "Strategic recommendations based on Adobe Analytics data analysis",
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
-      },
-      {
-        title: "Strategic Recommendations",
-        description: "Actionable insights for customer experience optimization",
-        image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop"
-      }
-    ]
-  },
-  {
     id: 10,
     title: "Utah High & Elementary School Bison Grant Program - Educational Animation & Marketing Campaign",
     category: "Illustrations & Educational Content",
