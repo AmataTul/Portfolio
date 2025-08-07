@@ -807,12 +807,12 @@ export const portfolioProjects = [
       // 3. Keep the same structure but change only the placeholder text
       // 4. Example: { placeholder: "/images/tribal-post-1.jpg", business: "Ute Tribal Enterprises", likes: 124, shares: 18, comments: 23, type: "promotional" },
       
-      // Ute Tribal Enterprises posts (8 posts)
-      { placeholder: "https://customer-assets.emergentagent.com/job_project-showcase-20/artifacts/w9d5a58c_bandicam%202025-07-29%2017-32-59-176.jpg", business: "Ute Bison Ranch", likes: 124, shares: 18, comments: 23, type: "promotional" },
-      { placeholder: "https://customer-assets.emergentagent.com/job_project-showcase-20/artifacts/6m82f0jp_bandicam%202025-07-29%2017-40-47-752.jpg", business: "Ute Bison Ranch", likes: 89, shares: 12, comments: 16, type: "promotional" },
-      { placeholder: "https://customer-assets.emergentagent.com/job_project-showcase-20/artifacts/4m8i6vmt_3.jpg", business: "KahPeeh Kah-Ahn Ute Coffee House & Soda", likes: 156, shares: 31, comments: 42, type: "promotional" },
-      { placeholder: "https://customer-assets.emergentagent.com/job_project-showcase-20/artifacts/0c5vivjr_4.jpg", business: "Ute Bison Ranch", likes: 201, shares: 24, comments: 35, type: "product_showcase" },
-      { placeholder: "https://customer-assets.emergentagent.com/job_project-showcase-20/artifacts/zapufvso_5.jpg", business: "Ute Bison Ranch", likes: 178, shares: 29, comments: 51, type: "educational_content" },
+      // Updated with 5 new uploaded images
+      { placeholder: "https://customer-assets.emergentagent.com/job_project-showcase-20/artifacts/fzl5cjdl_2.jpg", business: "Ute Bison Ranch", likes: 124, shares: 18, comments: 23, type: "promotional" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_project-showcase-20/artifacts/ho81nlun_1.jpg", business: "Ute Bison Ranch", likes: 89, shares: 12, comments: 16, type: "promotional" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_project-showcase-20/artifacts/k38jbmdp_5.jpg", business: "KahPeeh Kah-Ahn Ute Coffee House & Soda", likes: 156, shares: 31, comments: 42, type: "promotional" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_project-showcase-20/artifacts/p0p5ps8h_3.jpg", business: "Ute Bison Ranch", likes: 201, shares: 24, comments: 35, type: "product_showcase" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_project-showcase-20/artifacts/1sp42bds_4.jpg", business: "Ute Bison Ranch", likes: 178, shares: 29, comments: 51, type: "educational_content" },
       { placeholder: "UTE_TRIBAL_POST_6", business: "Ute Tribal Enterprises", likes: 95, shares: 14, comments: 19, type: "advertisement" },
       { placeholder: "UTE_TRIBAL_POST_7", business: "Ute Tribal Enterprises", likes: 143, shares: 22, comments: 28, type: "promotional" },
       { placeholder: "UTE_TRIBAL_POST_8", business: "Ute Tribal Enterprises", likes: 167, shares: 33, comments: 46, type: "community_engagement" },
