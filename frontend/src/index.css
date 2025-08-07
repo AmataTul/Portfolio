@@ -92,6 +92,32 @@ img[alt*="Project"]:hover {
   transform: scale(1.05) !important;
 }
 
+/* NEW: Full-width scaling for placeholder images while maintaining aspect ratio */
+img[src*="placeholder"], 
+img[src*="PLACEHOLDER"], 
+img[src*="Coffee Menu"],
+img[alt*="Menu"],
+img[alt*="Physical Menu"] {
+  object-fit: contain !important;
+  object-position: center !important;
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100% !important;
+  display: block !important;
+  transition: transform 0.3s ease !important;
+}
+
+/* Enhanced scaling for mixed orientation projects (vertical and horizontal images) */
+.mixed-orientation img {
+  object-fit: contain !important;
+  object-position: center !important;
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  display: block !important;
+}
+
 /* Improved marquee animation */
 @keyframes marquee-smooth {
   0% {
