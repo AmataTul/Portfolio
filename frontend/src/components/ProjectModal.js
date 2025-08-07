@@ -1062,54 +1062,54 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                   </p>
                 </div>
                 
-                {/* 6 TikTok Videos Grid - Easy to Customize */}
+                {/* 6 TikTok Videos Grid - Embedded TikTok Videos */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
                   {project.combinedTikTokSection.videos.map((video, index) => (
                     <div key={video.id} className="group relative">
                       {/* Video Card with Indigenous-inspired Gradient Border */}
                       <div className="bg-gradient-to-br from-amber-400 via-orange-400 to-red-400 rounded-2xl p-1 shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
                         <div className="bg-white rounded-xl overflow-hidden">
-                          {/* Video Thumbnail - EASY TO REPLACE */}
-                          <div className="relative aspect-[9/16] overflow-hidden bg-gray-100 flex items-center justify-center">
-                            {video.thumbnail.startsWith('PLACEHOLDER_THUMBNAIL_') ? (
-                              // Placeholder for your custom thumbnails
-                              <div className="w-full h-full bg-gradient-to-br from-amber-100 to-orange-100 flex flex-col items-center justify-center text-amber-700">
-                                <span className="text-4xl mb-2">📱</span>
-                                <span className="text-sm font-medium">Your Screenshot Here</span>
-                                <span className="text-xs">{video.thumbnail}</span>
+                          {/* Embedded TikTok Video */}
+                          <div className="relative aspect-[9/16] overflow-hidden bg-gray-100">
+                            {isTikTokUrl(video.url) ? (
+                              <div className="w-full h-full">
+                                <iframe
+                                  src={`https://www.tiktok.com/embed/v2/${getTikTokId(video.url)}?lang=en-US`}
+                                  width="100%"
+                                  height="100%"
+                                  frameBorder="0"
+                                  allowFullScreen
+                                  allow="encrypted-media"
+                                  className="w-full h-full"
+                                  title={video.title}
+                                />
                               </div>
                             ) : (
-                              <img 
-                                src={video.thumbnail} 
-                                alt={video.title}
-                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                              />
+                              // Fallback to thumbnail if URL issues
+                              <div className="w-full h-full bg-gradient-to-br from-amber-100 to-orange-100 flex flex-col items-center justify-center text-amber-700">
+                                <span className="text-4xl mb-2">📱</span>
+                                <span className="text-sm font-medium">TikTok Video #{index + 1}</span>
+                                <button 
+                                  onClick={() => window.open(video.url, '_blank')}
+                                  className="mt-2 px-4 py-2 bg-amber-500 text-white rounded-full text-xs hover:bg-amber-600 transition"
+                                >
+                                  Open in TikTok
+                                </button>
+                              </div>
                             )}
                             
-                            {/* TikTok Play Overlay */}
-                            <div 
-                              className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
-                              onClick={() => window.open(video.url, '_blank')}
-                            >
-                              <div className="bg-gradient-to-r from-amber-500 to-orange-500 rounded-full p-4 shadow-xl animate-pulse">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
-                                  <path d="M8 5v14l11-7z"/>
-                                </svg>
-                              </div>
-                            </div>
-                            
                             {/* Video Number Badge */}
-                            <div className="absolute top-3 left-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold text-sm px-3 py-1 rounded-full shadow-lg">
+                            <div className="absolute top-3 left-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold text-sm px-3 py-1 rounded-full shadow-lg z-10">
                               #{index + 1}
                             </div>
                             
                             {/* Content Type Badge */}
-                            <div className={`absolute top-3 right-3 text-white font-semibold text-xs px-2 py-1 rounded-full shadow-lg ${
-                              video.type === 'organic_content' 
+                            <div className={`absolute top-3 right-3 text-white font-semibold text-xs px-2 py-1 rounded-full shadow-lg z-10 ${
+                              video.type.includes('organic') 
                                 ? 'bg-gradient-to-r from-green-400 to-emerald-500' 
                                 : 'bg-gradient-to-r from-orange-400 to-red-500'
                             }`}>
-                              {video.type === 'organic_content' ? '🌟 ORGANIC' : '🎯 AD'}
+                              {video.type.includes('organic') ? '🌟 ORGANIC' : '🎯 AD'}
                             </div>
                           </div>
                           
