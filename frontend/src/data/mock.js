@@ -581,7 +581,7 @@ export const portfolioProjects = [
         {
           id: 4,
           title: "☕ Barista Secrets Revealed",
-          url: "https://www.tiktok.com/@kahpeehkahahn/video/7406134372803382559",
+          url: "https://www.tiktok.com/@kahpeehkahahn/video/7396130080369528094",
           thumbnail: "PLACEHOLDER_THUMBNAIL_4", // User can replace with screenshot
           description: "BEHIND THE SCENES: Go behind the counter and discover what makes our coffee so special! 🔥 Watch our skilled baristas craft the perfect drink using professional techniques and premium ingredients. The dedication and artistry will amaze you! Perfect coffee every time! ⭐️ Click to see the magic happen!",
           type: "behind_scenes_organic"
@@ -589,7 +589,7 @@ export const portfolioProjects = [
         {
           id: 5,
           title: "🎉 New Year Customer Love",
-          url: "https://www.tiktok.com/@kahpeehkahahn/video/7396130080369528094",
+          url: "https://www.tiktok.com/@kahpeehkahahn/video/7452207220508347691",
           thumbnail: "PLACEHOLDER_THUMBNAIL_5", // User can replace with screenshot
           description: "HEARTWARMING: Starting the New Year with gratitude! 💝 This heartwarming customer appreciation post showcases the incredible bonds between our coffee house and our loyal community. See why our customers become family and why everyone keeps coming back! 🤗✨ Click to feel the love!",
           type: "customer_appreciation_organic"
@@ -597,7 +597,7 @@ export const portfolioProjects = [
         {
           id: 6,
           title: "🚚 Mobile Coffee Magic On-the-Go",
-          url: "https://www.tiktok.com/@kahpeehkahahn/video/7452207220508347691",
+          url: "https://www.tiktok.com/@kahpeehkahahn/video/7406134372803382559",
           thumbnail: "PLACEHOLDER_THUMBNAIL_6", // User can replace with screenshot
           description: "COMMUNITY FAVORITE: Our coffee house comes to YOU! 🚐☕ Watch how we bring premium coffee directly to community events and celebrations with our mobile trailer. See the excitement and engagement when great coffee meets community gathering! Always creating memorable moments! 🎪 Click to see us in action!",
           type: "community_outreach_organic"
