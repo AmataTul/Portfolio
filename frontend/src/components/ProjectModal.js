@@ -780,15 +780,17 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                   </div>
                 </div>
               ) : (
-                /* Regular image display - Auto-fit any image size to container */
+                /* Regular image display - Full visibility, no cropping */
                 <div className={`relative aspect-video max-w-4xl mx-auto bg-gray-100 rounded-xl overflow-hidden shadow-xl project-image-container`}>
                   <img 
                     src={project.images[currentImageIndex]} 
                     alt={`${project.title} - Image ${currentImageIndex + 1}`}
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                    className="w-full h-full object-contain transition-transform duration-300 hover:scale-105"
                     style={{ 
-                      objectFit: 'cover',
-                      objectPosition: 'center'
+                      objectFit: 'contain',
+                      objectPosition: 'center',
+                      maxWidth: '100%',
+                      maxHeight: '100%'
                     }}
                   />
                   
