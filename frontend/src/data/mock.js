@@ -1262,7 +1262,7 @@ export const portfolioProjects = [
     category: "Photography Projects",
     client: "Aigata Brand - Personal Business",
     project_type: "Professional Product Photography for E-commerce & Marketing",
-    description: "Professional product photography for my own business, Aigata Brand, featuring handmade candles and artisan chocolate collection. Created high-quality product images for my personal brand's e-commerce listings and digital advertising campaigns. As the business owner, I personally photographed and styled each product to showcase the craftsmanship and premium quality of my handmade candles and chocolate products, ensuring authentic representation of my brand's artisanal approach.",
+    description: "Comprehensive professional product photography project for my personally-owned Aigata Brand business, specializing in handmade candles and artisan chocolate collections. I executed all photography, styling, and post-production work to create compelling visual assets for e-commerce listings, social media marketing, and digital advertising campaigns. This project showcased my complete creative control and business ownership, managing every aspect from product styling and lighting setup to final image editing and marketing implementation. Using professional photography techniques, custom prop arrangements, and strategic color correction, I created cohesive brand imagery that authentically represented the artisanal quality and premium positioning of my handmade products. These images directly supported my business operations across multiple platforms, contributing to brand recognition and sales conversion through visually compelling product presentations that highlighted the craftsmanship and unique appeal of each handmade item.",
     images: [
       "AIGATA_CANDLE_PRODUCT_1",
       "AIGATA_CANDLE_PRODUCT_2", 
@@ -1284,10 +1284,11 @@ export const portfolioProjects = [
     featured: true,
     orientation: "mixed",
     skills_utilized: [
-      "Adobe Photoshop", "Professional Product Photography", "Studio Lighting Setup",
-      "Photo Props & Styling", "Decorative Arrangement", "Color Correction & Enhancement",
-      "Background Selection & Setup", "Shadow & Highlight Control", "Image Composition",
-      "E-commerce Photography Standards", "Product Staging & Presentation", "Digital Image Editing"
+      "Professional Product Photography", "E-commerce Photography Standards", "Studio Lighting Setup & Control",
+      "Creative Photo Props & Styling", "Decorative Arrangement & Composition", "Adobe Photoshop Color Correction & Enhancement",
+      "Background Selection & Setup", "Shadow & Highlight Management", "Advanced Image Composition Techniques",
+      "E-commerce Platform Optimization", "Product Staging & Visual Storytelling", "Digital Image Editing & Retouching",
+      "Brand-Consistent Visual Identity", "Multi-Platform Marketing Photography", "Artisan Product Presentation Expertise"
     ]
   },
 
