@@ -1297,7 +1297,7 @@ export const portfolioProjects = [
     category: "Photography Projects",
     client: "Ute Bison Ranch - Ute Tribal Enterprises",
     project_type: "Professional Food Product Photography & Marketing Imagery",
-    description: "Professional product photography for Ute Bison Ranch's premium bison meat products. High-quality images used for product listings, social media marketing, advertisements, and promotional materials. Coordinated complex logistics including product handling, temperature control, and styling to showcase the quality and appeal of bison meat products.",
+    description: "Comprehensive professional photography project for Ute Bison Ranch's premium bison meat products, used across multiple marketing channels including product listings, social media campaigns, advertisements, and promotional materials. I executed all photography with meticulous attention to food styling, lighting, and prop coordination using limited resources to achieve professional-grade results. The project required coordinating complex logistics to ensure optimal product presentation while preventing meat spoilage, managing temperature control throughout the shoot, and employing creative backdrop setups and professional lighting techniques. These high-quality images directly supported the ranch's marketing efforts across digital platforms and print materials, showcasing the premium quality and artisanal nature of their bison meat products to drive sales and brand recognition.",
     images: [
       "UTE_BISON_MEAT_PRODUCT_1",
       "UTE_BISON_MEAT_PRODUCT_2",
@@ -1316,8 +1316,9 @@ export const portfolioProjects = [
     skills_utilized: [
       "Professional Food Photography", "Product Styling & Presentation", "Studio Lighting with Limited Resources",
       "Backdrop & Prop Coordination", "Adobe Photoshop Editing", "Temperature-Sensitive Product Handling",
-      "Logistics Coordination", "Food Safety & Handling", "Color Correction for Food Products",
-      "Social Media Marketing Photography", "Advertisement Photography", "Product Listing Optimization"
+      "Logistics Coordination & Planning", "Food Safety & Handling Protocols", "Color Correction for Food Products",
+      "Social Media Marketing Photography", "Advertisement Photography", "Product Listing Optimization Photography",
+      "Creative Problem-Solving Under Constraints", "Multi-Platform Content Creation", "Brand-Aligned Visual Storytelling"
     ]
   }
 ];
