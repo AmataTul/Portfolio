@@ -4945,15 +4945,15 @@ def main():
     """Main test execution"""
     tester = BackendTester()
     
-    # Run database verification tests as requested in the review
-    print("🔍 Running Database State Verification Tests as requested...")
-    success = tester.run_database_verification_tests()
+    # Run photography-specific tests as requested in the review
+    print("🔍 Running Photography Projects Tests as requested...")
+    success = tester.run_photography_tests()
     
     if success:
-        print("\n🎉 All database verification tests passed!")
+        print("\n🎉 Photography projects tests passed!")
         return 0
     else:
-        print("\n💥 Some database verification tests failed!")
+        print("\n💥 Some photography projects tests failed!")
         return 1
 
 if __name__ == "__main__":
