@@ -223,17 +223,7 @@ const Home = () => {
 
           {/* Enhanced Project Grid */}
           <div className="space-y-12">
-            {loading ? (
-              <div className="text-center py-16">
-                <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-pink-500 mb-4"></div>
-                <p className="text-gray-600 text-lg">Loading amazing projects...</p>
-              </div>
-            ) : error ? (
-              <div className="text-center py-16">
-                <p className="text-red-500 text-lg mb-4">⚠️ {error}</p>
-                <p className="text-gray-500">Please try refreshing the page.</p>
-              </div>
-            ) : filteredProjects.length > 0 ? (
+            {filteredProjects.length > 0 ? (
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
                   <span className="bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
