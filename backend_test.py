@@ -4545,7 +4545,171 @@ class BackendTester:
         
         return passed == total
 
-    def run_beats_by_dre_tests(self):
+    def test_photography_projects_specific(self):
+        """Test specific photography projects ID 13 and 14 as requested"""
+        print("\n🔍 TESTING PHOTOGRAPHY PROJECTS (ID 13 & 14) AS REQUESTED...")
+        print("=" * 80)
+        
+        # Test 1: Get all projects to find photography projects
+        response = self.session.get(f"{API_BASE_URL}/projects", timeout=10)
+        if response.status_code != 200:
+            self.log_test("Photography Projects - Get All", False, f"Status {response.status_code}")
+            return False
+        
+        projects = response.json()
+        self.log_test("Photography Projects - Get All", True, f"Retrieved {len(projects)} total projects")
+        
+        # Test 2: Find Ute Bison Ranch Photography (ID 13)
+        ute_bison_photo = None
+        for project in projects:
+            if str(project.get('id')) == '13':
+                ute_bison_photo = project
+                break
+        
+        if ute_bison_photo:
+            self.log_test("Ute Bison Ranch Photography (ID 13) Found", True, f"Title: {ute_bison_photo.get('title')}")
+            
+            # Test category
+            category = ute_bison_photo.get('category', '')
+            if 'Photography' in category:
+                self.log_test("Ute Bison Ranch - Category Check", True, f"Category: {category}")
+            else:
+                self.log_test("Ute Bison Ranch - Category Check", False, f"Expected Photography category, got: {category}")
+            
+            # Test enhanced description
+            description = ute_bison_photo.get('description', '')
+            if len(description) > 100:
+                self.log_test("Ute Bison Ranch - Enhanced Description", True, f"Description length: {len(description)} chars")
+            else:
+                self.log_test("Ute Bison Ranch - Enhanced Description", False, f"Description too short: {len(description)} chars")
+            
+            # Test skills_utilized
+            skills = ute_bison_photo.get('skills_utilized', [])
+            if isinstance(skills, list) and len(skills) > 0:
+                self.log_test("Ute Bison Ranch - Skills Utilized", True, f"Found {len(skills)} skills")
+            else:
+                self.log_test("Ute Bison Ranch - Skills Utilized", False, "Skills array empty or missing")
+        else:
+            self.log_test("Ute Bison Ranch Photography (ID 13) Found", False, "Project not found")
+        
+        # Test 3: Find Aigata Brand Photography (ID 14)
+        aigata_photo = None
+        for project in projects:
+            if str(project.get('id')) == '14':
+                aigata_photo = project
+                break
+        
+        if aigata_photo:
+            self.log_test("Aigata Brand Photography (ID 14) Found", True, f"Title: {aigata_photo.get('title')}")
+            
+            # Test category
+            category = aigata_photo.get('category', '')
+            if 'Photography' in category or 'Graphic' in category:
+                self.log_test("Aigata Brand - Category Check", True, f"Category: {category}")
+            else:
+                self.log_test("Aigata Brand - Category Check", False, f"Expected Photography/Graphic category, got: {category}")
+            
+            # Test enhanced description
+            description = aigata_photo.get('description', '')
+            if len(description) > 100:
+                self.log_test("Aigata Brand - Enhanced Description", True, f"Description length: {len(description)} chars")
+            else:
+                self.log_test("Aigata Brand - Enhanced Description", False, f"Description too short: {len(description)} chars")
+            
+            # Test skills_utilized
+            skills = aigata_photo.get('skills_utilized', [])
+            if isinstance(skills, list) and len(skills) > 0:
+                self.log_test("Aigata Brand - Skills Utilized", True, f"Found {len(skills)} skills")
+            else:
+                self.log_test("Aigata Brand - Skills Utilized", False, "Skills array empty or missing")
+        else:
+            self.log_test("Aigata Brand Photography (ID 14) Found", False, "Project not found")
+        
+        # Test 4: Individual project retrieval for ID 13
+        if ute_bison_photo:
+            response = self.session.get(f"{API_BASE_URL}/projects/13", timeout=10)
+            if response.status_code == 200:
+                individual_project = response.json()
+                self.log_test("Individual Retrieval - Ute Bison (ID 13)", True, f"Retrieved: {individual_project.get('title')}")
+            else:
+                self.log_test("Individual Retrieval - Ute Bison (ID 13)", False, f"Status {response.status_code}")
+        
+        # Test 5: Individual project retrieval for ID 14
+        if aigata_photo:
+            response = self.session.get(f"{API_BASE_URL}/projects/14", timeout=10)
+            if response.status_code == 200:
+                individual_project = response.json()
+                self.log_test("Individual Retrieval - Aigata (ID 14)", True, f"Retrieved: {individual_project.get('title')}")
+            else:
+                self.log_test("Individual Retrieval - Aigata (ID 14)", False, f"Status {response.status_code}")
+        
+        # Test 6: Photography category filtering
+        response = self.session.get(f"{API_BASE_URL}/projects?category=Photography Projects", timeout=10)
+        if response.status_code == 200:
+            photo_projects = response.json()
+            self.log_test("Photography Category Filtering", True, f"Found {len(photo_projects)} photography projects")
+            
+            # Check if our projects are in the photography category
+            found_ute = any(str(p.get('id')) == '13' for p in photo_projects)
+            found_aigata = any(str(p.get('id')) == '14' for p in photo_projects)
+            
+            if found_ute:
+                self.log_test("Ute Bison in Photography Category", True, "Project found in Photography Projects category")
+            else:
+                self.log_test("Ute Bison in Photography Category", False, "Project not found in Photography Projects category")
+            
+            if found_aigata:
+                self.log_test("Aigata in Photography Category", True, "Project found in Photography Projects category")
+            else:
+                self.log_test("Aigata in Photography Category", False, "Project not found in Photography Projects category")
+        else:
+            self.log_test("Photography Category Filtering", False, f"Status {response.status_code}")
+        
+        return True
+
+    def run_photography_tests(self):
+        """Run photography-specific tests as requested in review"""
+        print("🔍 BACKEND API TESTING FOR PHOTOGRAPHY PROJECTS")
+        print("🔍 Testing photography projects ID 13 and 14 as requested in review...")
+        print(f"📡 Testing Backend URL: {API_BASE_URL}")
+        print("=" * 80)
+        
+        # Run basic tests first
+        if not self.test_server_health():
+            print("❌ Server not responding. Aborting tests.")
+            return False
+        
+        # Run photography-specific tests
+        self.test_photography_projects_specific()
+        
+        # Print summary
+        print("\n" + "=" * 80)
+        print("📊 PHOTOGRAPHY PROJECTS TEST SUMMARY")
+        print("=" * 80)
+        
+        passed_tests = sum(1 for result in self.test_results if result['success'])
+        total_tests = len(self.test_results)
+        success_rate = (passed_tests / total_tests * 100) if total_tests > 0 else 0
+        
+        print(f"Total Tests: {total_tests}")
+        print(f"Passed: {passed_tests}")
+        print(f"Failed: {total_tests - passed_tests}")
+        print(f"Success Rate: {success_rate:.1f}%")
+        
+        # Show failed tests
+        failed_tests = [result for result in self.test_results if not result['success']]
+        if failed_tests:
+            print(f"\n❌ FAILED TESTS:")
+            for test in failed_tests:
+                print(f"  - {test['test']}: {test['message']}")
+        
+        if success_rate >= 80:
+            print("✅ PHOTOGRAPHY PROJECTS TESTING COMPLETE - WORKING CORRECTLY")
+            return True
+        else:
+            print("❌ PHOTOGRAPHY PROJECTS TESTING COMPLETE - ISSUES FOUND")
+            return False
+
         """Run comprehensive Beats by Dre project restructuring tests"""
         print("=" * 80)
         print("🎧 BEATS BY DRE PROJECT RESTRUCTURING - COMPREHENSIVE TESTING")
