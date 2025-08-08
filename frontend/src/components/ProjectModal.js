@@ -1792,6 +1792,80 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                 </div>
               </div>
             )}
+
+            {/* Photography Projects - Image Gallery */}
+            {project.category === "Photography Projects" && project.images && project.images.length > 0 && (
+              <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6 shadow-lg">
+                <div className="text-center mb-6">
+                  <h4 className="text-2xl font-bold text-gray-800 mb-2 flex items-center justify-center">
+                    <span className="text-3xl mr-3">📸</span>
+                    Photography Portfolio Gallery
+                  </h4>
+                  <p className="text-gray-600 text-lg">
+                    Professional photography showcasing technical expertise and creative vision
+                  </p>
+                </div>
+                
+                {/* Image Grid - Responsive */}
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                  {project.images.map((image, index) => (
+                    <div key={index} className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-all duration-300 bg-white">
+                      <div className="aspect-square bg-gray-200 flex items-center justify-center overflow-hidden">
+                        {image.includes('http') || image.includes('.jpg') || image.includes('.png') ? (
+                          <img 
+                            src={image}
+                            alt={`${project.title} - Image ${index + 1}`}
+                            className="w-full h-full transition-transform duration-300 group-hover:scale-105"
+                            style={{ 
+                              objectFit: 'contain',
+                              objectPosition: 'center',
+                              backgroundColor: '#f8f9fa'
+                            }}
+                            onError={(e) => {
+                              e.target.style.display = 'none';
+                              e.target.nextSibling.style.display = 'flex';
+                            }}
+                          />
+                        ) : (
+                          <div className="w-full h-full flex flex-col items-center justify-center text-gray-500 p-4">
+                            <span className="text-4xl mb-2">📷</span>
+                            <span className="text-xs font-medium text-center leading-tight">
+                              {image}
+                            </span>
+                          </div>
+                        )}
+                        
+                        {/* Image overlay with number */}
+                        <div className="absolute top-2 left-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded-full">
+                          #{index + 1}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                
+                {/* Photography Stats */}
+                <div className="mt-8 bg-white rounded-lg p-6 shadow-sm">
+                  <h5 className="font-bold text-gray-800 mb-4 text-center text-lg">
+                    📊 Photography Project Stats
+                  </h5>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                    <div className="bg-blue-50 rounded-lg p-4">
+                      <div className="text-2xl font-bold text-blue-600">{project.images.length}</div>
+                      <div className="text-sm text-blue-700 font-medium">Total Images</div>
+                    </div>
+                    <div className="bg-green-50 rounded-lg p-4">
+                      <div className="text-2xl font-bold text-green-600">{project.orientation}</div>
+                      <div className="text-sm text-green-700 font-medium">Format Mix</div>
+                    </div>
+                    <div className="bg-purple-50 rounded-lg p-4">
+                      <div className="text-2xl font-bold text-purple-600">Pro</div>
+                      <div className="text-sm text-purple-700 font-medium">Quality Level</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </DialogContent>
