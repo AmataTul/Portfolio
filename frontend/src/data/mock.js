@@ -1294,7 +1294,7 @@ export const portfolioProjects = [
   {
     id: 25,
     title: "Ute Bison Ranch - Premium Bison Meat Product Photography",
-    category: "Photography",
+    category: "Photography Projects",
     client: "Ute Bison Ranch - Ute Tribal Enterprises",
     project_type: "Professional Food Product Photography & Marketing Imagery",
     description: "Professional product photography for Ute Bison Ranch's premium bison meat products. High-quality images used for product listings, social media marketing, advertisements, and promotional materials. Coordinated complex logistics including product handling, temperature control, and styling to showcase the quality and appeal of bison meat products.",
