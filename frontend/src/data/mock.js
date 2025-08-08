@@ -1254,6 +1254,71 @@ export const portfolioProjects = [
         "Established foundation for strategic marketing career through hands-on analysis of world-renowned brand management"
       ]
     }
+  },
+
+  {
+    id: 24,
+    title: "Aigata Brand - Handmade Candles & Chocolate Product Photography",
+    category: "Product Photography & E-commerce",
+    client: "Aigata Brand - Personal Business",
+    project_type: "Professional Product Photography for E-commerce & Marketing",
+    description: "Professional product photography for Aigata Brand's handmade candles and artisan chocolate collection. High-quality images designed for e-commerce product listings and digital advertising campaigns, showcasing the craftsmanship and premium quality of handmade products.",
+    images: [
+      "AIGATA_CANDLE_PRODUCT_1",
+      "AIGATA_CANDLE_PRODUCT_2", 
+      "AIGATA_CANDLE_PRODUCT_3",
+      "AIGATA_CHOCOLATE_PRODUCT_1",
+      "AIGATA_CHOCOLATE_PRODUCT_2",
+      "AIGATA_CHOCOLATE_PRODUCT_3",
+      "AIGATA_CANDLE_PRODUCT_4",
+      "AIGATA_CANDLE_PRODUCT_5",
+      "AIGATA_CHOCOLATE_PRODUCT_4",
+      "AIGATA_CANDLE_PRODUCT_6",
+      "AIGATA_CHOCOLATE_PRODUCT_5",
+      "AIGATA_CANDLE_PRODUCT_7",
+      "AIGATA_CHOCOLATE_PRODUCT_6",
+      "AIGATA_CANDLE_PRODUCT_8",
+      "AIGATA_CHOCOLATE_PRODUCT_7"
+    ],
+    type: "photography",
+    featured: true,
+    orientation: "mixed",
+    skills_utilized: [
+      "Adobe Photoshop", "Professional Product Photography", "Studio Lighting Setup",
+      "Photo Props & Styling", "Decorative Arrangement", "Color Correction & Enhancement",
+      "Background Selection & Setup", "Shadow & Highlight Control", "Image Composition",
+      "E-commerce Photography Standards", "Product Staging & Presentation", "Digital Image Editing"
+    ]
+  },
+
+  {
+    id: 25,
+    title: "Ute Bison Ranch - Premium Bison Meat Product Photography",
+    category: "Product Photography & Marketing",
+    client: "Ute Bison Ranch - Ute Tribal Enterprises",
+    project_type: "Professional Food Product Photography & Marketing Imagery",
+    description: "Professional product photography for Ute Bison Ranch's premium bison meat products. High-quality images used for product listings, social media marketing, advertisements, and promotional materials. Coordinated complex logistics including product handling, temperature control, and styling to showcase the quality and appeal of bison meat products.",
+    images: [
+      "UTE_BISON_MEAT_PRODUCT_1",
+      "UTE_BISON_MEAT_PRODUCT_2",
+      "UTE_BISON_MEAT_PRODUCT_3", 
+      "UTE_BISON_MEAT_PRODUCT_4",
+      "UTE_BISON_MEAT_PRODUCT_5",
+      "UTE_BISON_MEAT_PRODUCT_6",
+      "UTE_BISON_MEAT_PRODUCT_7",
+      "UTE_BISON_MEAT_PRODUCT_8",
+      "UTE_BISON_MEAT_PRODUCT_9",
+      "UTE_BISON_MEAT_PRODUCT_10"
+    ],
+    type: "photography",
+    featured: true,
+    orientation: "mixed",
+    skills_utilized: [
+      "Professional Food Photography", "Product Styling & Presentation", "Studio Lighting with Limited Resources",
+      "Backdrop & Prop Coordination", "Adobe Photoshop Editing", "Temperature-Sensitive Product Handling",
+      "Logistics Coordination", "Food Safety & Handling", "Color Correction for Food Products",
+      "Social Media Marketing Photography", "Advertisement Photography", "Product Listing Optimization"
+    ]
   }
 ];
 
