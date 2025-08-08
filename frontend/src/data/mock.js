@@ -147,16 +147,14 @@ export const portfolioProjects = [
 
   {
     id: 23,
-    title: "Strategic Facebook Reels campaign for Ute Plaza Supermarket focusing on holiday merchandise and seasonal promotions. Created engaging vertical short-form video content optimized for Facebook's Reels platform to showcase holiday products, drive foot traffic, and increase seasonal sales through authentic storytelling and festive themes.",
+    title: "Holiday Campaign Reels - Ute Plaza Supermarket",
     category: "Social Media Content & Campaigns",
     client: "Ute Plaza Supermarket - Ute Tribal Enterprises",
     project_type: "Multi-Holiday Facebook Video Marketing & Seasonal Merchandising Campaign",
-    description: "Comprehensive seasonal marketing campaign featuring 4 strategic Facebook Reels designed to drive holiday shopping traffic and boost seasonal merchandise sales at Ute Plaza Supermarket. Each video strategically targets different holiday periods (Christmas, Valentine's Day, Easter) with engaging vertical content optimized for mobile viewing and social media engagement. The campaign showcases festive store displays, seasonal products, and promotional merchandise to attract customers during peak holiday shopping seasons, supporting the supermarket's revenue goals through compelling visual storytelling and strategic social media marketing.",
     images: ["FACEBOOK_REELS_THUMBNAIL"], // Add thumbnail for project card
     facebookReels: {
-      sectionTitle: "Holiday Merchandising Facebook Reels Campaign",
-      videosTitle: "4 Strategic Holiday Marketing Videos",
-      videosSubtitle: "Each reel targets specific holiday periods with engaging vertical content designed for mobile social media consumption",
+      sectionTitle: "Seasonal Facebook Reels – Ute Plaza Supermarket Campaign",
+      videosSubtitle: "Comprehensive seasonal marketing campaign featuring 4 strategic Facebook Reels designed to drive holiday shopping traffic and boost seasonal merchandise sales at Ute Plaza Supermarket. Each video strategically targets different holiday periods (Christmas, Valentine's Day, Easter) with engaging vertical content optimized for mobile viewing and social media engagement. The campaign showcases festive store displays, seasonal products, and promotional merchandise to attract customers during peak holiday shopping seasons, supporting the supermarket's revenue goals through compelling visual storytelling and strategic social media marketing.",
       videos: [
         {
           url: "https://www.facebook.com/reel/1378729616424715",
