@@ -146,7 +146,7 @@ export const portfolioProjects = [
   },
 
   {
-    id: 20,
+    id: 23,
     title: "Ute Plaza Supermarket - Holiday Merch Facebook Reels Campaign",
     category: "Social Media Content & Campaigns",
     client: "Ute Plaza Supermarket - Ute Tribal Enterprises",
