@@ -1489,7 +1489,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     <span className="text-2xl mr-2">📈</span>
                     Campaign Statistics
                   </h5>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
                     <div className="bg-white rounded-lg p-4 shadow-sm">
                       <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">4</div>
                       <div className="text-sm text-gray-600 font-medium">Strategic Video Reels</div>
@@ -1501,6 +1501,18 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     <div className="bg-white rounded-lg p-4 shadow-sm">
                       <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">3</div>
                       <div className="text-sm text-gray-600 font-medium">Key Holidays</div>
+                    </div>
+                    <div className="bg-white rounded-lg p-4 shadow-sm">
+                      <div className="text-3xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">14K+</div>
+                      <div className="text-sm text-gray-600 font-medium">Total Views</div>
+                    </div>
+                    <div className="bg-white rounded-lg p-4 shadow-sm">
+                      <div className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">90%</div>
+                      <div className="text-sm text-gray-600 font-medium">Engagement Rate</div>
+                    </div>
+                    <div className="bg-white rounded-lg p-4 shadow-sm">
+                      <div className="text-3xl font-bold bg-gradient-to-r from-red-600 to-pink-600 bg-clip-text text-transparent">+55%</div>
+                      <div className="text-sm text-gray-600 font-medium">Product Sales Increase</div>
                     </div>
                   </div>
                 </div>
