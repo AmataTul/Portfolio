@@ -1452,11 +1452,11 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                           <div className={`absolute top-3 right-3 text-white font-semibold text-xs px-2 py-1 rounded-full shadow-lg z-10 ${
                             video.holiday === 'Christmas' 
                               ? 'bg-gradient-to-r from-red-500 to-green-600' 
-                              : video.holiday === 'Valentine\'s Day'
+                              : video.holiday === "Valentine's Day"
                               ? 'bg-gradient-to-r from-pink-500 to-red-500'
                               : 'bg-gradient-to-r from-purple-500 to-yellow-500'
                           }`}>
-                            {video.holiday === 'Christmas' ? '🎄' : video.holiday === 'Valentine\'s Day' ? '💝' : '🐰'} {video.holiday.toUpperCase()}
+                            {video.holiday === 'Christmas' ? '🎄' : video.holiday === "Valentine's Day" ? '💝' : '🐰'} {video.holiday.toUpperCase()}
                           </div>
                         </div>
                         
