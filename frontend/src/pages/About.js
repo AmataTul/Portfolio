@@ -192,7 +192,7 @@ const About = () => {
                         SEO & SEM Expertise
                       </h4>
                       <p className="text-gray-700 text-sm mb-2">Advanced knowledge of SEO strategies, including on-page, off-page, and technical SEO.</p>
-                      <p className="text-gray-700 text-sm">Experience with Google Ads and Bing Ads, managing PPC campaigns, and retargeting strategies.</p>
+                      <p className="text-gray-700 text-sm">Experience with Google Ads, managing PPC campaigns, and retargeting strategies.</p>
                     </div>
                     
                     <div className="bg-pink-50 rounded-lg p-4">
