@@ -20,16 +20,18 @@ def update_facebook_reels_streamlined():
         # Update the existing Facebook Reels project
         result = db.projects.update_one(
             {"title": {"$regex": "Strategic Facebook Reels", "$options": "i"}},
-            {"$set": {
-                "title": "Holiday Campaign Reels - Ute Plaza Supermarket",
-                "facebookReels.sectionTitle": "Seasonal Facebook Reels – Ute Plaza Supermarket Campaign",
-                "facebookReels.videosSubtitle": "Comprehensive seasonal marketing campaign featuring 4 strategic Facebook Reels designed to drive holiday shopping traffic and boost seasonal merchandise sales at Ute Plaza Supermarket. Each video strategically targets different holiday periods (Christmas, Valentine's Day, Easter) with engaging vertical content optimized for mobile viewing and social media engagement. The campaign showcases festive store displays, seasonal products, and promotional merchandise to attract customers during peak holiday shopping seasons, supporting the supermarket's revenue goals through compelling visual storytelling and strategic social media marketing.",
+            {
+                "$set": {
+                    "title": "Holiday Campaign Reels - Ute Plaza Supermarket",
+                    "facebookReels.sectionTitle": "Seasonal Facebook Reels – Ute Plaza Supermarket Campaign",
+                    "facebookReels.videosSubtitle": "Comprehensive seasonal marketing campaign featuring 4 strategic Facebook Reels designed to drive holiday shopping traffic and boost seasonal merchandise sales at Ute Plaza Supermarket. Each video strategically targets different holiday periods (Christmas, Valentine's Day, Easter) with engaging vertical content optimized for mobile viewing and social media engagement. The campaign showcases festive store displays, seasonal products, and promotional merchandise to attract customers during peak holiday shopping seasons, supporting the supermarket's revenue goals through compelling visual storytelling and strategic social media marketing."
+                },
                 "$unset": {
                     "description": "",
                     "facebookReels.videosTitle": "",
                     "impact": ""
                 }
-            }}
+            }
         )
         
         if result.modified_count > 0:
