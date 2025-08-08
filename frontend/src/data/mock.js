@@ -203,30 +203,7 @@ export const portfolioProjects = [
       "Holiday Merchandising Display", "Vertical Video Production", "Social Media Algorithm Optimization",
       "Consumer Behavior Analysis", "Retail Marketing Strategy", "Visual Storytelling for Social Media",
       "Cross-Holiday Campaign Coordination", "Mobile Video Engagement", "Seasonal Promotional Planning"
-    ],
-    impact: {
-      campaign_metrics: [
-        "4 strategic holiday marketing videos created targeting Christmas, Valentine's Day, and Easter shopping seasons",
-        "100% mobile-optimized vertical video format designed for Facebook Reels algorithm and user engagement",
-        "Multi-seasonal campaign approach covering 4+ months of peak retail shopping periods throughout the year",
-        "Comprehensive merchandising display coordination featuring seasonal decorations, product arrangements, and promotional setups",
-        "Strategic content timing aligned with holiday shopping patterns to maximize customer reach and store visit conversion"
-      ],
-      engagement_outcomes: [
-        "Enhanced seasonal brand visibility through engaging Facebook Reels content optimized for mobile social media consumption",
-        "Increased customer awareness of holiday merchandise and seasonal promotional offerings through strategic video marketing",
-        "Boosted in-store foot traffic during peak shopping seasons by showcasing attractive store displays and seasonal product arrangements",
-        "Strengthened community engagement through locally-focused holiday content that resonates with regional shopping preferences",
-        "Improved social media presence with professional vertical video content designed to perform well on Facebook's algorithm"
-      ],
-      business_impact: [
-        "Supported seasonal revenue goals through strategic holiday marketing campaigns targeting key shopping periods",
-        "Enhanced customer shopping experience by highlighting seasonal merchandise availability and store festive atmosphere",
-        "Increased impulse purchasing opportunities by showcasing attractive holiday displays and limited-time seasonal offerings",
-        "Built stronger brand recognition in local community through consistent holiday marketing and social media engagement",
-        "Demonstrated effective use of social media marketing to drive retail foot traffic and seasonal merchandise sales"
-      ]
-    }
+    ]
   },
 
   {
