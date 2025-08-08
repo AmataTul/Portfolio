@@ -1397,9 +1397,6 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                       📱 {project.facebookReels.sectionTitle}
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-blue-800 text-center mb-2">
-                    {project.facebookReels.videosTitle}
-                  </h3>
                   <p className="text-blue-600 text-center font-medium">
                     {project.facebookReels.videosSubtitle}
                   </p>
@@ -1487,21 +1484,21 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                 {/* Campaign Performance Stats */}
                 <div className="bg-gradient-to-r from-blue-100 via-indigo-100 to-purple-100 rounded-xl p-6 mt-6">
                   <h5 className="font-bold text-blue-800 mb-4 text-center flex items-center justify-center">
-                    <span className="text-2xl mr-2">🛒</span>
-                    Holiday Campaign Impact Metrics
+                    <span className="text-2xl mr-2">📊</span>
+                    Campaign Overview
                   </h5>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
                     <div className="bg-white rounded-lg p-4 shadow-sm">
                       <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">4</div>
-                      <div className="text-sm text-gray-600 font-medium">Holiday Seasons Covered</div>
+                      <div className="text-sm text-gray-600 font-medium">Holiday Reels Created</div>
                     </div>
                     <div className="bg-white rounded-lg p-4 shadow-sm">
                       <div className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">100%</div>
-                      <div className="text-sm text-gray-600 font-medium">Mobile-Optimized Content</div>
+                      <div className="text-sm text-gray-600 font-medium">Mobile-Optimized Format</div>
                     </div>
                     <div className="bg-white rounded-lg p-4 shadow-sm">
-                      <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">4+</div>
-                      <div className="text-sm text-gray-600 font-medium">Months Campaign Coverage</div>
+                      <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">3</div>
+                      <div className="text-sm text-gray-600 font-medium">Holiday Seasons</div>
                     </div>
                   </div>
                 </div>
