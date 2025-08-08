@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { categories, contactInfo } from '../data/mock';
+import { portfolioProjects, categories, contactInfo } from '../data/mock';
 import ProjectCard from '../components/ProjectCard';
 import ProjectModal from '../components/ProjectModal';
 import BrandMarquee from '../components/BrandMarquee';
@@ -12,40 +12,8 @@ const Home = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [activeCategory, setActiveCategory] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
-  const [filteredProjects, setFilteredProjects] = useState([]);
-  const [portfolioProjects, setPortfolioProjects] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [filteredProjects, setFilteredProjects] = useState(portfolioProjects);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-  // Fetch projects from backend API
-  useEffect(() => {
-    const fetchProjects = async () => {
-      try {
-        setLoading(true);
-        const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8001';
-        const response = await fetch(`${backendUrl}/api/projects`);
-        
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        
-        const projects = await response.json();
-        setPortfolioProjects(projects);
-        setError(null);
-      } catch (err) {
-        console.error('Error fetching projects:', err);
-        setError('Failed to load projects');
-        // Fallback to mock data if API fails
-        const mockData = await import('../data/mock');
-        setPortfolioProjects(mockData.portfolioProjects || []);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchProjects();
-  }, []);
 
   // Mouse tracking for interactive elements
   useEffect(() => {
@@ -76,7 +44,7 @@ const Home = () => {
     }
     
     setFilteredProjects(filtered);
-  }, [activeCategory, searchTerm, portfolioProjects]);
+  }, [activeCategory, searchTerm]);
 
   const handleProjectClick = (project) => {
     setSelectedProject(project);
