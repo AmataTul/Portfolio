@@ -1259,10 +1259,10 @@ export const portfolioProjects = [
   {
     id: 24,
     title: "Aigata Brand - Handmade Candles & Chocolate Product Photography",
-    category: "Product Photography & E-commerce",
+    category: "Photography",
     client: "Aigata Brand - Personal Business",
     project_type: "Professional Product Photography for E-commerce & Marketing",
-    description: "Professional product photography for Aigata Brand's handmade candles and artisan chocolate collection. High-quality images designed for e-commerce product listings and digital advertising campaigns, showcasing the craftsmanship and premium quality of handmade products.",
+    description: "Professional product photography for my own business, Aigata Brand, featuring handmade candles and artisan chocolate collection. Created high-quality product images for my personal brand's e-commerce listings and digital advertising campaigns. As the business owner, I personally photographed and styled each product to showcase the craftsmanship and premium quality of my handmade candles and chocolate products, ensuring authentic representation of my brand's artisanal approach.",
     images: [
       "AIGATA_CANDLE_PRODUCT_1",
       "AIGATA_CANDLE_PRODUCT_2", 
