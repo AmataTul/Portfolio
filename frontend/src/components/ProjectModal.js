@@ -80,7 +80,8 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
     
     // Handle facebook.com/reel URLs
     if (url.includes('/reel/')) {
-      const reelId = url.match(/\/reel\/(\d+)/)?.[1];
+      const reelMatch = url.match(/\/reel\/(\d+)/);
+      const reelId = reelMatch ? reelMatch[1] : null;
       if (reelId) {
         return `https://www.facebook.com/plugins/video.php?height=476&href=https://www.facebook.com/reel/${reelId}&show_text=false&width=267&t=0`;
       }
