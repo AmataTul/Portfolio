@@ -320,51 +320,6 @@ export const portfolioProjects = [
   },
 
   {
-    id: 7,
-    title: "Disney+ Character Spotlight Campaign",
-    category: "Graphic Design & Marketing Materials",
-    client: "Disney",
-    description: "Multi-platform digital marketing campaign for Disney+ featuring character spotlights and promotional graphics across social media and digital advertising platforms.",
-    images: [
-      "https://images.unsplash.com/photo-1489399627699-e5c5f1e8f6c6?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop"
-    ],
-    type: "image",
-    featured: true,
-    orientation: "horizontal",
-    key_contributions: [
-      "Designed comprehensive digital marketing campaign showcasing Disney+ character portfolio",
-      "Created social media graphics optimized for Instagram, Facebook, and Twitter platforms",
-      "Developed consistent brand visual identity across multiple character spotlight campaigns",
-      "Implemented A/B testing strategy for promotional graphic optimization",
-      "Coordinated with content teams for character licensing and brand guideline compliance"
-    ],
-    skills_utilized: [
-      "Digital Marketing Design",
-      "Social Media Graphics",
-      "Brand Identity Design",
-      "Adobe Creative Suite",
-      "Campaign Visual Strategy",
-      "Multi-Platform Design Optimization",
-      "A/B Testing for Creative Assets"
-    ],
-    impact: {
-      quantified_metrics: [
-        "15+ character spotlight campaigns designed and deployed",
-        "40% improvement in social media engagement for Disney+ character content",
-        "2.5M+ impressions across digital marketing platforms",
-        "30% increase in Disney+ character-related search activity"
-      ],
-      qualitative_outcomes: [
-        "Enhanced Disney+ brand presence through compelling character-focused visual campaigns",
-        "Strengthened audience connection with Disney+ content through strategic character spotlights",
-        "Established consistent visual identity for Disney+ character marketing initiatives",
-        "Elevated brand recognition for Disney+ streaming service through targeted graphic campaigns"
-      ]
-    }
-  },
-
-  {
     id: 10,
     title: "Utah High & Elementary School Bison Grant Program - Educational Animation & Marketing Campaign",
     category: "Illustrations & Educational Content",
