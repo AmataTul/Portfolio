@@ -1047,11 +1047,12 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
           )}
 
           {/* Project Details */}
-          {!project.facebookReels && (
-            <div className="space-y-6">
+          <div className="space-y-6">
+            {!project.facebookReels && (
               <div className="prose prose-lg max-w-none">
                 <p className="text-gray-700 text-lg leading-relaxed">{project.description}</p>
               </div>
+            )}
 
             {/* Multiple Videos Section - For Advertising Projects */}
             {project.videos && project.videos.length > 0 && (
