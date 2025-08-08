@@ -234,15 +234,6 @@ const About = () => {
                       <p className="text-gray-700 text-sm">Familiarity with Figma, Adobe XD, and Sketch.</p>
                     </div>
                     
-                    <div className="bg-teal-50 rounded-lg p-4">
-                      <h4 className="font-bold text-teal-800 mb-2 flex items-center">
-                        <span className="text-xl mr-2">🤖</span>
-                        AI & Automation
-                      </h4>
-                      <p className="text-gray-700 text-sm mb-2">Knowledge of AI-enhanced marketing through chatbots, personalization tools, and AI-driven analytics.</p>
-                      <p className="text-gray-700 text-sm">Using GPT-4, HubSpot AI, and ChatGPT for content creation and workflow automation.</p>
-                    </div>
-                    
                     <div className="bg-red-50 rounded-lg p-4">
                       <h4 className="font-bold text-red-800 mb-2 flex items-center">
                         <span className="text-xl mr-2">🎬</span>
