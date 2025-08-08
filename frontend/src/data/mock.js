@@ -164,7 +164,7 @@ export const portfolioProjects = [
           type: "merchandising_display"
         },
         {
-          url: "https://fb.watch/BkYVO2DIaa/",
+          url: "https://fb.watch/Bl0G-WI0oO/",
           title: "Valentine's Day Gifts & Treats",
           description: "A colorful reel highlighting romantic gifts and limited-edition sweets designed to drive impulse purchases and seasonal engagement.",
           holiday: "Valentine's Day",
