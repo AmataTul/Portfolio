@@ -931,8 +931,8 @@ export const portfolioProjects = [
       { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/q9wjc02s_Original%20Nutrition%20Ingredients.jpg", category: "Ute Bison Ranch Promos", type: "nutrition_label_design" },
       { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/8a7r03ba_Pepper%20Nutrition%20Ingredients%202.jpg", category: "Ute Bison Ranch Promos", type: "nutrition_label_design" },
       { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/rr5iyptk_bisonmeatpromo.jpg", category: "Ute Bison Ranch Promos", type: "promotional_discount" },
-      { placeholder: "UTE_BISON_MATERIAL_2", category: "Ute Bison Ranch Promos", type: "marketing_collateral" },
-      { placeholder: "UTE_BISON_BRAND_1", category: "Ute Bison Ranch Promos", type: "brand_graphic" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/1c95a27b_bison%20burger%20menu.png", category: "Ute Bison Ranch Promos", type: "restaurant_menu_design" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/frotsl7q_bison%20jerky.jpg", category: "Ute Bison Ranch Promos", type: "location_availability_graphic" },
 
       // Line 2: Design Assets (4 items)
       { placeholder: "STICKER_DESIGN_1", category: "Custom Design Assets", type: "sticker_design" },
