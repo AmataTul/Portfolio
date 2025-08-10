@@ -934,11 +934,11 @@ export const portfolioProjects = [
       { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/1c95a27b_bison%20burger%20menu.png", category: "Ute Bison Ranch Promos", type: "restaurant_menu_design" },
       { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/frotsl7q_bison%20jerky.jpg", category: "Ute Bison Ranch Promos", type: "location_availability_graphic" },
 
-      // Line 2: Design Assets (4 items)
-      { placeholder: "STICKER_DESIGN_1", category: "Custom Design Assets", type: "sticker_design" },
-      { placeholder: "TSHIRT_DESIGN_1", category: "Custom Design Assets", type: "tshirt_design" },
-      { placeholder: "LOGO_DESIGN_1", category: "Custom Design Assets", type: "logo_design" },
-      { placeholder: "LOGO_DESIGN_2", category: "Custom Design Assets", type: "logo_design" },
+      // Line 2: Stickers, Apparel Design & Concept Logos (4 items)
+      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/2w2simb5_472787763_122176993082111532_4308856618447500817_n.jpg", category: "Stickers, Apparel Design & Concept Logos", type: "cultural_sticker_collection" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/f2xnpts2_bandicam%202025-07-29%2020-16-33-872.jpg", category: "Stickers, Apparel Design & Concept Logos", type: "logo_concept_exploration" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/0lii68jy_bandicam%202025-07-29%2020-16-39-603.jpg", category: "Stickers, Apparel Design & Concept Logos", type: "branding_variations" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/t6pkgkhv_Bear%20no%20background.png", category: "Stickers, Apparel Design & Concept Logos", type: "character_design" },
 
       // Line 3: Multi-Business Graphics (13 items)
       { placeholder: "UTE_PLAZA_PROMO_1", category: "Multi-Business Graphics", type: "supermarket_promo" },
