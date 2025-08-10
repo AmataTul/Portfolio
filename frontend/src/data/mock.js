@@ -8,12 +8,11 @@ export const portfolioProjects = [
     project_type: "Educational Photography & Documentation",
     description: "Educational photography documentation of Uintah River High School students visiting the Ute Bison Ranch as part of the Summer Youth Program. Captured authentic moments of cultural education and youth engagement with tribal heritage and bison conservation efforts.",
     images: [
-      "YOUTH_PROGRAM_PHOTO_1", // Upload your youth program image 1 here
-      "YOUTH_PROGRAM_PHOTO_2", // Upload your youth program image 2 here
-      "YOUTH_PROGRAM_PHOTO_3", // Upload your youth program image 3 here
-      "YOUTH_PROGRAM_PHOTO_4", // Upload your youth program image 4 here
-      "YOUTH_PROGRAM_PHOTO_5", // Upload your youth program image 5 here
-      "YOUTH_PROGRAM_PHOTO_6"  // Upload your youth program image 6 here
+      "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/lsot5k2g_b1.jpg", // Youth group walking on ranch pathway with mountain views
+      "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/pjmxu98z_b2.jpg", // Bison in their natural ranch environment
+      "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/vqp3y6ih_b3.jpg", // Students observing bison from viewing area
+      "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/vqz0c0bo_b4.jpg", // Ranch dog during summer program activities
+      "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/l2dk70pt_b5.jpg"  // Group educational experience on ranch pathways
     ],
     type: "image",
     featured: true,
