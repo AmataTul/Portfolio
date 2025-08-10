@@ -1063,19 +1063,14 @@ export const portfolioProjects = [
     project_type: "Advanced Data Analytics Research & Competitive Analysis",
     description: "Comprehensive data analytics research project for prestigious Adobe Analytics Competition representing Utah State University against 5000+ universities statewide. Led advanced data analysis of Hildon Hotel performance metrics using professional Adobe Analytics tools, collaborating with master's degree research team while serving as undergraduate senior researcher. This project demonstrates exceptional analytical capabilities, academic excellence, and professional-level data interpretation skills in competitive academic environment.",
     images: [
-      // Key Presentation Slides & Analytics Dashboards (12 items)
-      { placeholder: "ADOBE_COMPETITION_TITLE_SLIDE", category: "Competition Overview", type: "presentation_title", description: "Competition title slide showing Utah State University representation" },
-      { placeholder: "HILDON_HOTEL_DATA_OVERVIEW", category: "Data Analysis", type: "data_dashboard", description: "Hildon Hotel performance data overview and key metrics" },
-      { placeholder: "ADOBE_ANALYTICS_DASHBOARD", category: "Analytics Tools", type: "analytics_interface", description: "Adobe Analytics tool interface and data visualization" },
-      { placeholder: "RESEARCH_METHODOLOGY", category: "Research Process", type: "methodology_slide", description: "Research methodology and analytical approach framework" },
-      { placeholder: "COMPETITIVE_ANALYSIS_RESULTS", category: "Key Findings", type: "analysis_results", description: "Primary competitive analysis findings and insights" },
-      { placeholder: "DATA_VISUALIZATION_CHARTS", category: "Data Visualization", type: "charts_graphs", description: "Key data visualization charts and performance graphs" },
-      { placeholder: "UNIVERSITY_COMPETITION_STATS", category: "Competition Context", type: "competition_data", description: "5000+ universities competition statistics and context" },
-      { placeholder: "TEAM_COLLABORATION_SLIDE", category: "Team Dynamics", type: "team_overview", description: "Research team composition and collaboration structure" },
-      { placeholder: "ANALYTICAL_INSIGHTS_SUMMARY", category: "Key Insights", type: "insights_summary", description: "Summary of major analytical insights and discoveries" },
-      { placeholder: "RECOMMENDATIONS_SLIDE", category: "Strategic Recommendations", type: "recommendations", description: "Strategic recommendations based on data analysis" },
-      { placeholder: "COMPETITION_OUTCOMES", category: "Results & Achievement", type: "competition_results", description: "Competition performance and academic recognition" },
-      { placeholder: "UTAH_STATE_REPRESENTATION", category: "University Pride", type: "university_branding", description: "Utah State University representation and academic excellence" }
+      // 5 Question Analysis Images (horizontal)
+      "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/aqitzpw6_q1.jpg",
+      "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/8miz1c4b_q2.jpg",
+      "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/r94i2vj2_q3.jpg",
+      "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/oc7uj7k1_q4.jpg",
+      "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/oopj018k_q5.jpg",
+      // Final Recommendations Image (horizontal)
+      "https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGFuYWx5dGljcyUyMGRhc2hib2FyZHxlbnwwfHx8fDE3NTQ4NjA4Mjh8MA&ixlib=rb-4.1.0&q=85"
     ],
     type: "analytics",
     featured: true,
