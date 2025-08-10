@@ -854,11 +854,11 @@ export const portfolioProjects = [
       // KahPeeh Kah-Ahn Coffee House posts (7 posts)
       { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/m4rcdy65_24.jpg", business: "Ute Plaza Supermarket", likes: 245, shares: 41, comments: 58, type: "promotional_campaign" },
       { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/uzrfg88s_25.jpg", business: "Ute Crossing Trading Post", likes: 198, shares: 34, comments: 47, type: "native_crafts" },
-      { placeholder: "26.jpg", business: "KahPeeh Kah-Ahn Ute Coffee House & Soda", likes: 167, shares: 29, comments: 39, type: "event_coverage" },
-      { placeholder: "27.jpg", business: "KahPeeh Kah-Ahn Ute Coffee House & Soda", likes: 287, shares: 48, comments: 65, type: "advertisement" },
-      { placeholder: "28.jpg", business: "KahPeeh Kah-Ahn Ute Coffee House & Soda", likes: 156, shares: 27, comments: 38, type: "promotional" },
-      { placeholder: "29.jpg", business: "KahPeeh Kah-Ahn Ute Coffee House & Soda", likes: 134, shares: 23, comments: 32, type: "volunteer_initiative" },
-      { placeholder: "30.jpg", business: "KahPeeh Kah-Ahn Ute Coffee House & Soda", likes: 201, shares: 36, comments: 49, type: "community_engagement" }
+      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/70j9g4q4_26.jpg", business: "Ute Plaza Supermarket", likes: 167, shares: 29, comments: 39, type: "product_discovery" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/xywerd59_27.jpg", business: "KahPeeh Kah-Ahn Ute Coffee House & Soda", likes: 287, shares: 48, comments: 65, type: "event_coverage" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/ds2n3rzo_28.jpg", business: "Ute Plaza Supermarket", likes: 156, shares: 27, comments: 38, type: "community_appreciation" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/8e7q10yr_29.jpg", business: "KahPeeh Kah-Ahn Ute Coffee House & Soda", likes: 134, shares: 23, comments: 32, type: "customer_appreciation" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/2ktffxpa_30.jpg", business: "KahPeeh Kah-Ahn Ute Coffee House & Soda", likes: 201, shares: 36, comments: 49, type: "seasonal_branding" }
     ],
     type: "social",
     featured: true,
