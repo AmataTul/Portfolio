@@ -160,68 +160,113 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
             <div className="relative">
               {/* Special Disney Magic Marketing Audit Showcase */}
               {project.title && project.title.includes('Disney Brand Marketing Audit') ? (
-                <div className="bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 rounded-xl p-6 shadow-lg">
-                  <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-gray-800 mb-2">✨ Disney Brand Marketing Audit</h3>
-                    <p className="text-lg text-purple-700 mb-3 font-semibold">Strategic Analysis & Consumer Insights</p>
-                    <div className="bg-white/80 backdrop-blur rounded-lg p-4 mb-6 border border-purple-200">
-                      <div className="flex justify-center items-center space-x-8 mb-4">
-                        <div className="text-center">
-                          <div className="text-3xl font-bold text-purple-600">🏰</div>
-                          <div className="text-sm font-semibold text-gray-700">Disney Magic</div>
+                <div className="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 rounded-2xl p-8 shadow-2xl border border-gray-200">
+                  {/* Dynamic Header with Animated Elements */}
+                  <div className="relative mb-12">
+                    <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full opacity-20 animate-pulse"></div>
+                    <div className="absolute -bottom-2 -left-2 w-16 h-16 bg-gradient-to-br from-blue-400 to-indigo-400 rounded-full opacity-15 animate-bounce"></div>
+                    
+                    <div className="text-center relative z-10">
+                      <div className="inline-flex items-center gap-3 mb-4 bg-white/80 backdrop-blur-sm rounded-full px-6 py-3 shadow-lg border border-gray-200">
+                        <span className="text-3xl animate-bounce">🏰</span>
+                        <div className="h-8 w-px bg-gray-300"></div>
+                        <span className="text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">RESEARCH DEEP DIVE</span>
+                        <div className="h-8 w-px bg-gray-300"></div>
+                        <span className="text-3xl animate-pulse">📊</span>
+                      </div>
+                      
+                      <h3 className="text-4xl font-black text-gray-900 mb-2 tracking-tight">
+                        Disney Brand Marketing Audit
+                      </h3>
+                      <p className="text-xl text-gray-600 font-medium mb-6">Strategic Analysis & Consumer Insights Research</p>
+                      
+                      {/* Research Metrics Dashboard */}
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                        <div className="bg-white/90 backdrop-blur rounded-xl p-4 shadow-md border border-purple-200 hover:shadow-lg transition-all duration-300">
+                          <div className="text-3xl font-bold text-purple-600">12+</div>
+                          <div className="text-sm font-medium text-gray-700">Analysis Areas</div>
                         </div>
-                        <div className="text-center">
-                          <div className="text-3xl font-bold text-pink-600">📊</div>
-                          <div className="text-sm font-semibold text-gray-700">Strategic Audit</div>
+                        <div className="bg-white/90 backdrop-blur rounded-xl p-4 shadow-md border border-pink-200 hover:shadow-lg transition-all duration-300">
+                          <div className="text-3xl font-bold text-pink-600">8+</div>
+                          <div className="text-sm font-medium text-gray-700">Platforms Studied</div>
                         </div>
-                        <div className="text-center">
-                          <div className="text-3xl font-bold text-blue-600">🎯</div>
-                          <div className="text-sm font-semibold text-gray-700">USU Project</div>
+                        <div className="bg-white/90 backdrop-blur rounded-xl p-4 shadow-md border border-blue-200 hover:shadow-lg transition-all duration-300">
+                          <div className="text-3xl font-bold text-blue-600">15+</div>
+                          <div className="text-sm font-medium text-gray-700">Campaigns Analyzed</div>
                         </div>
-                        <div className="text-center">
-                          <div className="text-3xl font-bold text-green-600">💡</div>
-                          <div className="text-sm font-semibold text-gray-700">Brand Insights</div>
+                        <div className="bg-white/90 backdrop-blur rounded-xl p-4 shadow-md border border-indigo-200 hover:shadow-lg transition-all duration-300">
+                          <div className="text-3xl font-bold text-indigo-600">6+</div>
+                          <div className="text-sm font-medium text-gray-700">Strategic Insights</div>
                         </div>
                       </div>
-                      <div className="text-center">
-                        <div className="bg-gradient-to-r from-purple-100 to-pink-100 rounded-lg px-6 py-2 inline-block border border-purple-300">
-                          <span className="text-lg font-semibold text-purple-800">🎓 Utah State University Strategic Marketing Analysis</span>
-                        </div>
+
+                      <div className="bg-gradient-to-r from-indigo-100 to-purple-100 rounded-xl px-6 py-3 inline-block border border-indigo-200 shadow-md">
+                        <span className="font-semibold text-indigo-800 flex items-center gap-2">
+                          <span className="text-lg">🎓</span>
+                          Utah State University Strategic Marketing Analysis
+                        </span>
                       </div>
-                    </div>
-                    <div className="flex justify-center flex-wrap gap-2 mb-6">
-                      <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">Brand Analysis</span>
-                      <span className="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-sm font-medium">Consumer Insights</span>
-                      <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">Marketing Strategy</span>
-                      <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">Competitive Analysis</span>
                     </div>
                   </div>
                   
-                  {/* Key Visual Insights Section - Only 3 Items */}
-                  <div className="mb-8">
-                    <h4 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
-                      <span className="text-2xl mr-2">🎯</span>
-                      Key Strategic Insights (3 core findings)
-                    </h4>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  {/* Research Methodology Section */}
+                  <div className="mb-10">
+                    <div className="flex items-center justify-center mb-6">
+                      <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent flex-1"></div>
+                      <div className="px-6 py-2 bg-white rounded-full shadow-md border border-gray-200">
+                        <span className="font-bold text-gray-800 flex items-center gap-2">
+                          <span className="text-xl">🔬</span>
+                          RESEARCH FRAMEWORK
+                        </span>
+                      </div>
+                      <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent flex-1"></div>
+                    </div>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                       {project.images.map((item, index) => (
-                        <div key={index} className="bg-white/90 backdrop-blur rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-purple-200 hover:border-purple-300">
-                          <div className="aspect-square bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center p-4 relative">
-                            <div className="absolute top-2 right-2 text-yellow-400 text-xs">✨</div>
-                            <div className="text-center">
-                              <div className="w-16 h-16 bg-gradient-to-br from-purple-200 to-pink-200 rounded-full flex items-center justify-center mb-3 border-2 border-white shadow-md">
-                                <span className="text-3xl">
-                                  {index === 0 && '🏰'}
-                                  {index === 1 && '👥'}
-                                  {index === 2 && '📱'}
-                                </span>
-                              </div>
-                              <div className="text-sm font-bold text-purple-700 mb-2">
-                                {item.category}
-                              </div>
-                              <div className="text-xs text-purple-600 leading-tight">
-                                {item.description}
-                              </div>
+                        <div key={index} className="group relative bg-white rounded-2xl p-6 shadow-lg border-2 border-gray-200 hover:border-indigo-300 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                          <div className="absolute -top-3 -right-3 w-8 h-8 bg-gradient-to-br from-indigo-400 to-purple-400 rounded-full flex items-center justify-center text-white font-bold text-sm group-hover:scale-110 transition-transform duration-300">
+                            {index + 1}
+                          </div>
+                          
+                          <div className="text-center">
+                            <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-2xl flex items-center justify-center border-2 border-indigo-200 group-hover:border-indigo-400 transition-colors duration-300">
+                              <span className="text-4xl group-hover:scale-110 transition-transform duration-300">
+                                {index === 0 && '🏰'}
+                                {index === 1 && '👥'}
+                                {index === 2 && '📱'}
+                              </span>
+                            </div>
+                            <h5 className="font-bold text-gray-900 mb-2 text-lg">{item.category}</h5>
+                            <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Key Findings & Insights Section */}
+                  <div className="mb-10">
+                    <div className="flex items-center justify-center mb-8">
+                      <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent flex-1"></div>
+                      <div className="px-6 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-lg">
+                        <span className="font-bold flex items-center gap-2">
+                          <span className="text-xl">💡</span>
+                          RESEARCH DISCOVERIES
+                        </span>
+                      </div>
+                      <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent flex-1"></div>
+                    </div>
+                    
+                    <div className="space-y-6">
+                      {project.key_audit_findings && project.key_audit_findings.map((finding, index) => (
+                        <div key={index} className="group bg-white rounded-xl p-6 shadow-md border-l-4 border-purple-400 hover:shadow-lg hover:border-purple-500 transition-all duration-300">
+                          <div className="flex items-start gap-4">
+                            <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full flex items-center justify-center border-2 border-purple-200 group-hover:border-purple-400 transition-colors duration-300">
+                              <span className="font-bold text-purple-600 text-sm">#{index + 1}</span>
+                            </div>
+                            <div className="flex-1">
+                              <p className="text-gray-800 leading-relaxed">{finding}</p>
                             </div>
                           </div>
                         </div>
@@ -229,61 +274,69 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     </div>
                   </div>
 
-                  {/* Disney Magic Summary */}
-                  <div className="bg-gradient-to-r from-purple-100 via-pink-100 to-blue-100 rounded-xl p-6 border-2 border-purple-200 mb-8">
-                    <h4 className="font-bold text-gray-800 mb-6 text-center flex items-center justify-center">
-                      <span className="text-2xl mr-2">✨</span>
-                      Key Disney Marketing Insights
-                      <span className="text-2xl ml-2">🏰</span>
-                    </h4>
-                    
-                    {/* Concise Findings Section */}
-                    <div className="mb-6">
-                      <h5 className="font-semibold text-purple-700 mb-3 text-lg">🔍 What We Discovered:</h5>
-                      <div className="space-y-3">
-                        {project.key_audit_findings && project.key_audit_findings.map((finding, index) => (
-                          <div key={index} className="bg-white/90 backdrop-blur rounded-lg p-4 text-sm text-gray-700 shadow-sm border border-purple-200">
-                            {finding}
-                          </div>
-                        ))}
+                  {/* Strategic Recommendations Section */}
+                  <div className="mb-10">
+                    <div className="flex items-center justify-center mb-8">
+                      <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent flex-1"></div>
+                      <div className="px-6 py-2 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-full shadow-lg">
+                        <span className="font-bold flex items-center gap-2">
+                          <span className="text-xl">🎯</span>
+                          STRATEGIC RECOMMENDATIONS
+                        </span>
                       </div>
+                      <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent flex-1"></div>
                     </div>
                     
-                    {/* Strategic Recommendations */}
-                    <div>
-                      <h5 className="font-semibold text-blue-700 mb-3 text-lg">💡 Strategic Recommendations:</h5>
-                      <div className="space-y-3">
-                        {project.strategic_recommendations && project.strategic_recommendations.map((recommendation, index) => (
-                          <div key={index} className="bg-white/90 backdrop-blur rounded-lg p-4 text-sm text-gray-700 shadow-sm border border-blue-200">
-                            {recommendation}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      {project.strategic_recommendations && project.strategic_recommendations.map((recommendation, index) => (
+                        <div key={index} className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border-2 border-blue-200 hover:border-blue-300 shadow-md hover:shadow-lg transition-all duration-300">
+                          <div className="flex items-start gap-4">
+                            <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-400 to-indigo-400 rounded-xl flex items-center justify-center text-white font-bold shadow-md">
+                              R{index + 1}
+                            </div>
+                            <div className="flex-1">
+                              <p className="text-gray-800 leading-relaxed font-medium">{recommendation}</p>
+                            </div>
                           </div>
-                        ))}
-                      </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
 
-                  {/* Academic Excellence Summary */}
-                  <div className="bg-gradient-to-r from-purple-100 via-pink-100 to-blue-100 rounded-xl p-6 border-2 border-purple-200">
-                    <h4 className="font-bold text-gray-800 mb-4 text-center flex items-center justify-center">
-                      <span className="text-2xl mr-2">🏰</span>
-                      Disney Marketing Audit Excellence
-                      <span className="text-2xl ml-2">✨</span>
-                    </h4>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-                      <div className="bg-white/80 backdrop-blur rounded-lg p-4 shadow-sm border border-purple-200">
-                        <div className="text-2xl mb-2">🎯</div>
-                        <div className="text-lg font-bold text-purple-600 mb-1">Strategic Analysis</div>
-                        <div className="text-sm text-gray-600">Comprehensive brand positioning and competitive landscape analysis</div>
+                  {/* Research Impact Summary */}
+                  <div className="bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 rounded-2xl p-8 border-2 border-indigo-200 shadow-lg">
+                    <div className="text-center mb-8">
+                      <h4 className="text-2xl font-black text-gray-900 mb-2 flex items-center justify-center gap-3">
+                        <span className="text-3xl">🏆</span>
+                        RESEARCH IMPACT & EXCELLENCE
+                        <span className="text-3xl">✨</span>
+                      </h4>
+                      <p className="text-gray-600 font-medium">Comprehensive strategic analysis delivering actionable business insights</p>
+                    </div>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                      <div className="bg-white/90 backdrop-blur rounded-xl p-6 shadow-md border border-purple-200 text-center">
+                        <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-purple-400 to-pink-400 rounded-2xl flex items-center justify-center text-white text-2xl shadow-lg">
+                          🎯
+                        </div>
+                        <h5 className="font-bold text-lg text-purple-700 mb-2">Strategic Analysis</h5>
+                        <p className="text-gray-600 text-sm leading-relaxed">Comprehensive brand positioning and competitive landscape analysis</p>
                       </div>
-                      <div className="bg-white/80 backdrop-blur rounded-lg p-4 shadow-sm border border-pink-200">
-                        <div className="text-2xl mb-2">📊</div>
-                        <div className="text-lg font-bold text-pink-600 mb-1">Consumer Insights</div>
-                        <div className="text-sm text-gray-600">In-depth audience analysis and behavioral pattern evaluation</div>
+                      
+                      <div className="bg-white/90 backdrop-blur rounded-xl p-6 shadow-md border border-blue-200 text-center">
+                        <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-400 to-indigo-400 rounded-2xl flex items-center justify-center text-white text-2xl shadow-lg">
+                          📊
+                        </div>
+                        <h5 className="font-bold text-lg text-blue-700 mb-2">Consumer Insights</h5>
+                        <p className="text-gray-600 text-sm leading-relaxed">In-depth audience analysis and behavioral pattern evaluation</p>
                       </div>
-                      <div className="bg-white/80 backdrop-blur rounded-lg p-4 shadow-sm border border-blue-200">
-                        <div className="text-2xl mb-2">💫</div>
-                        <div className="text-lg font-bold text-blue-600 mb-1">Strategic Recommendations</div>
-                        <div className="text-sm text-gray-600">Data-driven recommendations for marketing optimization</div>
+                      
+                      <div className="bg-white/90 backdrop-blur rounded-xl p-6 shadow-md border border-indigo-200 text-center">
+                        <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-indigo-400 to-purple-400 rounded-2xl flex items-center justify-center text-white text-2xl shadow-lg">
+                          💡
+                        </div>
+                        <h5 className="font-bold text-lg text-indigo-700 mb-2">Strategic Outcomes</h5>
+                        <p className="text-gray-600 text-sm leading-relaxed">Data-driven recommendations for marketing optimization</p>
                       </div>
                     </div>
                   </div>
