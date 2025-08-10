@@ -327,28 +327,35 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     </div>
                   </div>
                   
-                  {/* Competition Overview & Key Slides Section */}
+                  {/* Data Analysis & Findings Section */}
                   <div className="mb-8">
                     <h4 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
                       <span className="text-2xl mr-2">📊</span>
-                      Competition Overview & Presentation Highlights (4 items)
+                      Data Analysis & Findings (5 items)
                     </h4>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                      {project.images.slice(0, 4).map((item, index) => (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                      {project.images.slice(0, 5).map((image, index) => (
                         <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
-                          <div className="aspect-square bg-gradient-to-br from-blue-50 to-indigo-50 flex items-center justify-center p-3">
-                            <div className="text-center">
-                              <div className="w-14 h-14 bg-blue-200 rounded-lg flex items-center justify-center mb-2">
-                                <svg className="w-7 h-7 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                                  <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
-                                </svg>
+                          <div className="aspect-video bg-gray-100 flex items-center justify-center overflow-hidden">
+                            {typeof image === 'string' && (image.includes('http') || image.includes('https')) ? (
+                              <img 
+                                src={image}
+                                alt={`Data Analysis Question ${index + 1}`}
+                                className="w-full h-full object-contain"
+                                onError={(e) => {
+                                  e.target.style.display = 'none';
+                                  e.target.nextElementSibling.style.display = 'flex';
+                                }}
+                              />
+                            ) : (
+                              <div className="w-full h-full flex items-center justify-center text-gray-500">
+                                <span className="text-4xl mb-2">📈</span>
                               </div>
-                              <div className="text-xs font-medium text-gray-700 leading-tight mb-1">
-                                {item.placeholder}
-                              </div>
-                              <div className="text-xs text-gray-500">
-                                {item.description}
-                              </div>
+                            )}
+                            
+                            {/* Question Number Overlay */}
+                            <div className="absolute top-2 left-2 bg-black bg-opacity-70 text-white text-sm px-2 py-1 rounded-full">
+                              Q{index + 1}
                             </div>
                           </div>
                         </div>
@@ -356,57 +363,35 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     </div>
                   </div>
 
-                  {/* Data Analysis & Methodology Section */}
-                  <div className="mb-8">
-                    <h4 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
-                      <span className="text-2xl mr-2">🔍</span>
-                      Data Analysis & Research Methodology (4 items)
-                    </h4>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                      {project.images.slice(4, 8).map((item, index) => (
-                        <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
-                          <div className="aspect-square bg-gradient-to-br from-green-50 to-emerald-50 flex items-center justify-center p-3">
-                            <div className="text-center">
-                              <div className="w-14 h-14 bg-green-200 rounded-lg flex items-center justify-center mb-2">
-                                <svg className="w-7 h-7 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                                  <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
-                                </svg>
-                              </div>
-                              <div className="text-xs font-medium text-gray-700 leading-tight mb-1">
-                                {item.placeholder}
-                              </div>
-                              <div className="text-xs text-gray-500">
-                                {item.description}
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Results & Achievement Section */}
+                  {/* Results Section */}
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
-                      <span className="text-2xl mr-2">📈</span>
-                      Competition Results & Academic Achievement (4 items)
+                      <span className="text-2xl mr-2">🎯</span>
+                      Results & Recommendations (1 item)
                     </h4>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                      {project.images.slice(8, 12).map((item, index) => (
+                    <div className="grid grid-cols-1 gap-4">
+                      {project.images.slice(5, 6).map((image, index) => (
                         <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
-                          <div className="aspect-square bg-gradient-to-br from-purple-50 to-pink-50 flex items-center justify-center p-3">
-                            <div className="text-center">
-                              <div className="w-14 h-14 bg-purple-200 rounded-lg flex items-center justify-center mb-2">
-                                <svg className="w-7 h-7 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-                                  <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
-                                </svg>
+                          <div className="aspect-video bg-gray-100 flex items-center justify-center overflow-hidden relative">
+                            {typeof image === 'string' && (image.includes('http') || image.includes('https')) ? (
+                              <img 
+                                src={image}
+                                alt="Final Recommendations & Results"
+                                className="w-full h-full object-contain"
+                                onError={(e) => {
+                                  e.target.style.display = 'none';
+                                  e.target.nextElementSibling.style.display = 'flex';
+                                }}
+                              />
+                            ) : (
+                              <div className="w-full h-full flex items-center justify-center text-gray-500">
+                                <span className="text-4xl mb-2">📈</span>
                               </div>
-                              <div className="text-xs font-medium text-gray-700 leading-tight mb-1">
-                                {item.placeholder}
-                              </div>
-                              <div className="text-xs text-gray-500">
-                                {item.description}
-                              </div>
+                            )}
+                            
+                            {/* Results Label Overlay */}
+                            <div className="absolute top-2 left-2 bg-green-600 bg-opacity-90 text-white text-sm px-3 py-1 rounded-full">
+                              Final Results
                             </div>
                           </div>
                         </div>
