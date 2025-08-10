@@ -688,7 +688,8 @@ export const portfolioProjects = [
       "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/y8vpkc3r_bison%202.jpg", // Bison family herd with adults and young calves on rocky terrain
       "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/7xodyswp_bison%203.jpg", // Beautiful bison head profile showcasing natural features and strength
       "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/lmom7zyt_bison%204.jpg", // Large bison herd gathered together on prairie grasslands
-      "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/4een0ymt_bison%205.jpg"  // Solitary bison standing majestically on ranch grassland
+      "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/4een0ymt_bison%205.jpg", // Solitary bison standing majestically on ranch grassland
+      "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/l1r7h0m8_bison%206.jpg"  // Two bison companions standing together on rocky terrain under beautiful blue sky
     ],
     type: "photography",
     featured: true,
