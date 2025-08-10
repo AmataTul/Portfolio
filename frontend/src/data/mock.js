@@ -130,10 +130,10 @@ export const portfolioProjects = [
       title: "Analytics & Research - Data Analysis & Presentations",
       description: "Consumer behavior analysis, strategic insights, and comprehensive presentations using SQL, Tableau, and advanced data visualization to optimize celebrity collaboration campaigns",
       images: [
-        "/beats0.jpg", // Beats analytics dashboard - Consumer behavior data
-        "/beats2.jpg", // Market research visualization - Gen Z targeting data
-        "/beats3.jpg", // Consumer insights presentation - Celebrity partnership analysis
-        "/b4.jpg"  // Final presentation dashboard - Campaign performance metrics
+        "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/xw1jm5h8_beatsdata1.jpg", // Beats analytics dashboard 1 - Consumer behavior data
+        "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/yv78uhtg_beatsdata2.jpg", // Beats analytics dashboard 2 - Gen Z targeting data
+        "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/3hovtwo7_beatsdata3.jpg", // Beats analytics dashboard 3 - Celebrity partnership analysis
+        "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/kovczna8_beatsdata4.jpg"  // Beats analytics dashboard 4 - Campaign performance metrics
       ],
       layout: "all_horizontal", // All 4 images are horizontal
       highlights: [
