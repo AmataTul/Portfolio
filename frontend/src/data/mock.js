@@ -921,11 +921,11 @@ export const portfolioProjects = [
     images: [
       // Line 1: Ute Bison Ranch Graphics (13 items) - First image uploaded for testing
       { placeholder: "https://customer-assets.emergentagent.com/job_project-showcase-20/artifacts/848tn2gz_490175273_1219013826892097_7282331591355033149_n.jpg", category: "Ute Bison Ranch Promos", type: "promotional_graphic" },
-      { placeholder: "UTE_BISON_PROMO_2", category: "Ute Bison Ranch Promos", type: "advertisement" },
-      { placeholder: "UTE_BISON_PRODUCT_1", category: "Ute Bison Ranch Promos", type: "product_listing" },
-      { placeholder: "UTE_BISON_PRODUCT_2", category: "Ute Bison Ranch Promos", type: "ecommerce_graphic" },
-      { placeholder: "UTE_BISON_EMAIL_1", category: "Ute Bison Ranch Promos", type: "email_template" },
-      { placeholder: "UTE_BISON_EMAIL_2", category: "Ute Bison Ranch Promos", type: "email_header" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/g10z43gt_bisonjerkyproductlisting.jpg", category: "Ute Bison Ranch Promos", type: "product_listing" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/qrtvhcnj_bisonskullpainted.jpg", category: "Ute Bison Ranch Promos", type: "cultural_artwork" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/gcsb5kft_newyearbison.jpg", category: "Ute Bison Ranch Promos", type: "seasonal_graphic" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/isacvov9_bisonsignpromo.jpg", category: "Ute Bison Ranch Promos", type: "promotional_signage" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/f7pp32x2_bisonjerkypromo.jpg", category: "Ute Bison Ranch Promos", type: "product_promotion" },
       { placeholder: "UTE_BISON_PROMO_3", category: "Ute Bison Ranch Promos", type: "promotional_banner" },
       { placeholder: "UTE_BISON_PROMO_4", category: "Ute Bison Ranch Promos", type: "social_media_post" },
       { placeholder: "UTE_BISON_AD_1", category: "Ute Bison Ranch Promos", type: "digital_advertisement" },
