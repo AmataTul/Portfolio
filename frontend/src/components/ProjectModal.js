@@ -398,25 +398,6 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                       ))}
                     </div>
                   </div>
-
-                  {/* Academic Excellence Summary */}
-                  <div className="bg-gradient-to-r from-blue-50 via-purple-50 to-indigo-50 rounded-lg p-6">
-                    <h4 className="font-bold text-gray-800 mb-4 text-center">🎓 Outstanding Academic & Research Achievement</h4>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-                      <div className="bg-white rounded-lg p-4 shadow-sm">
-                        <div className="text-xl font-bold text-blue-600 mb-1">Competitive Excellence</div>
-                        <div className="text-sm text-gray-600">Represented university against 5000+ competitors in Adobe Analytics Challenge</div>
-                      </div>
-                      <div className="bg-white rounded-lg p-4 shadow-sm">
-                        <div className="text-xl font-bold text-purple-600 mb-1">Graduate-Level Work</div>
-                        <div className="text-sm text-gray-600">Bachelor's senior collaborating with master's research team on advanced analytics</div>
-                      </div>
-                      <div className="bg-white rounded-lg p-4 shadow-sm">
-                        <div className="text-xl font-bold text-green-600 mb-1">Professional Tools</div>
-                        <div className="text-sm text-gray-600">Advanced proficiency in Adobe Analytics platform for complex data analysis</div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               ) : project.title && project.title.includes('Aigata Brand - Complete Business Development') ? (
                 <div className="bg-white rounded-xl p-6 shadow-lg">
