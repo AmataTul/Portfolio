@@ -1070,7 +1070,7 @@ export const portfolioProjects = [
       "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/oc7uj7k1_q4.jpg",
       "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/oopj018k_q5.jpg",
       // Final Recommendations Image (horizontal)
-      "https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGFuYWx5dGljcyUyMGRhc2hib2FyZHxlbnwwfHx8fDE3NTQ4NjA4Mjh8MA&ixlib=rb-4.1.0&q=85"
+      "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/mgi5vpy9_recommendation.jpg"
     ],
     type: "analytics",
     featured: true,
