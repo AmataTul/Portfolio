@@ -864,7 +864,7 @@ export const portfolioProjects = [
     featured: true,
     orientation: "mixed",
     keyContributions: [
-      "Created comprehensive social media content strategy across eight major Ute Tribal Enterprise businesses",
+      "Created comprehensive social media content strategy across seven major Ute Tribal Enterprise businesses",
       "Developed promotional posts, event coverage, and behind-the-scenes content to increase engagement and visibility",
       "Coordinated volunteer initiative coverage and progress update posts showcasing community involvement and business growth",
       "Designed advertisements and promotional graphics optimized for social media platforms to drive traffic and sales",
