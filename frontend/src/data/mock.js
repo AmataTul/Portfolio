@@ -881,7 +881,17 @@ export const portfolioProjects = [
       "Promotional Graphics Design",
       "Cultural Sensitivity in Marketing",
       "Cross-Platform Content Optimization",
-      "Indigenous Business Promotion"
+      "Indigenous Business Promotion",
+      "HubSpot",
+      "Facebook Business Manager",
+      "Instagram Creator Studio",
+      "Canva Pro",
+      "Buffer",
+      "Hootsuite",
+      "Adobe Creative Suite",
+      "Meta Business Suite",
+      "Google Analytics",
+      "Social Media Analytics & Reporting"
     ],
     impact: {
       quantified_metrics: [
