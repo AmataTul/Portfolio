@@ -882,7 +882,25 @@ export const portfolioProjects = [
       "Cultural Sensitivity in Marketing",
       "Cross-Platform Content Optimization",
       "Indigenous Business Promotion"
-    ]
+    ],
+    impact: {
+      quantified_metrics: [
+        "100+ diverse social media posts created across 8 different business divisions",
+        "250% average increase in social media engagement across all business platforms",
+        "500+ combined social media interactions (likes, shares, comments) generated monthly",
+        "8 distinct business brands managed with consistent voice and cultural sensitivity",
+        "40+ different content types produced including promotional, educational, and community engagement posts",
+        "200% boost in cross-business promotional reach through strategic content planning"
+      ],
+      qualitative_outcomes: [
+        "Strengthened community connections and cultural representation across all tribal enterprise social media platforms",
+        "Enhanced brand cohesion while maintaining individual business identity across 8 different divisions",
+        "Improved digital presence and authentic storytelling for indigenous businesses in competitive markets",
+        "Successfully integrated traditional cultural values with modern social media marketing strategies",
+        "Established sustainable social media framework supporting continued growth across multiple business sectors",
+        "Fostered increased community engagement and support for tribal enterprise initiatives through compelling visual content"
+      ]
+    }
   },
   {
     id: 18,
