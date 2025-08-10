@@ -835,11 +835,11 @@ export const portfolioProjects = [
       // Ute Bison Ranch posts (8 posts)
       { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/mb050qyc_9.jpg", business: "Ute Bison Ranch", likes: 289, shares: 45, comments: 67, type: "promotional" },
       { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/9559pd0y_10.jpg", business: "Ute Bison Ranch", likes: 234, shares: 38, comments: 52, type: "behind_scenes" },
-      { placeholder: "11.jpg", business: "Ute Bison Ranch", likes: 198, shares: 27, comments: 41, type: "event_coverage" },
-      { placeholder: "12.jpg", business: "Ute Bison Ranch", likes: 312, shares: 56, comments: 78, type: "advertisement" },
-      { placeholder: "13.jpg", business: "Ute Bison Ranch", likes: 176, shares: 31, comments: 44, type: "progress_update" },
-      { placeholder: "14.jpg", business: "Ute Bison Ranch", likes: 145, shares: 19, comments: 33, type: "promotional" },
-      { placeholder: "15.jpg", business: "Ute Bison Ranch", likes: 267, shares: 42, comments: 59, type: "community_engagement" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/6jvnvvc1_11.jpg", business: "Ute Bison Ranch", likes: 198, shares: 27, comments: 41, type: "event_coverage" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/nuauheq3_12.jpg", business: "Ute Tribal Enterprises", likes: 312, shares: 56, comments: 78, type: "event_coverage" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/v70m7irz_13.jpg", business: "Ute Plaza Supermarket", likes: 176, shares: 31, comments: 44, type: "seasonal_merchandise" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/1o93ik6z_14.jpg", business: "KahPeeh Kah-Ahn Ute Coffee House & Soda", likes: 245, shares: 41, comments: 58, type: "awareness_campaign" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/rg7j4yfv_15.jpg", business: "Ute Bison Ranch", likes: 267, shares: 42, comments: 59, type: "educational_content" },
       { placeholder: "16.jpg", business: "Ute Bison Ranch", likes: 223, shares: 35, comments: 48, type: "behind_scenes" },
       
       // Ute Plaza Supermarket posts (7 posts)
