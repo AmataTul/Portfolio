@@ -70,9 +70,9 @@ export const portfolioProjects = [
     project_type: "Brand Strategy & Consumer Analytics Campaign",
     description: "Comprehensive branding strategy and consumer analytics project for Beats by Dre's limited edition earbuds and headphones collaboration with Kim Kardashian. As part of the Beats by Dre Branding Strategy and Business Analytics Externship, I analyzed market trends, consumer data, and created impactful marketing materials for Gen Z audience targeting and brand positioning optimization.",
     images: [
-      "/b1.jpg", // Beats by Dre graphic design project 1 - Main design work
-      "/b2.jpg", // Beats by Dre graphic design project 2 - Brand collaboration  
-      "/b3.jpg"  // Beats by Dre graphic design project 3 - Marketing materials
+      "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/5bqabg0h_beatsg1.jpg", // Beats campaign design 1 - Main hero image
+      "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/j9kx9ylu_beatsg2.jpg", // Beats campaign design 2 - Product showcase  
+      "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/pymnl8nu_beatsg3.jpg"  // Beats campaign design 3 - Brand collaboration
     ],
     type: "image",
     featured: true,
