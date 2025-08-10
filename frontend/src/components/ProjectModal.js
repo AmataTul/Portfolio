@@ -723,7 +723,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                 </div>
               ) : project.title && project.title.includes('Multi-Business Social Media Posts') ? (
                 <div className="bg-white rounded-xl p-6 shadow-lg">
-                  <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">📱 30 Social Media Posts Campaign</h3>
+                  <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">📱 100+ Social Media Posts Campaign</h3>
                   <p className="text-sm text-gray-600 mb-6 text-center">
                     Content created for Ute Tribal Enterprises, Ute Bison Ranch, Ute Plaza Supermarket & KahPeeh Kah-Ahn Coffee House
                   </p>
