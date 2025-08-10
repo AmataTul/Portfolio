@@ -369,16 +369,18 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                       <span className="text-2xl mr-2">🎯</span>
                       Results & Recommendations (1 item)
                     </h4>
-                    <div className="grid grid-cols-1 gap-4 max-w-2xl mx-auto">
+                    <div className="grid grid-cols-1 gap-4 max-w-lg mx-auto">
                       {project.images.slice(5, 6).map((image, index) => (
                         <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
-                          <div className="aspect-[4/3] bg-gray-100 flex items-center justify-center overflow-hidden relative">
+                          <div className="aspect-[3/2] bg-gray-100 flex items-center justify-center overflow-hidden relative">
                             {typeof image === 'string' && (image.includes('http') || image.includes('https')) ? (
                               <img 
                                 src={image}
                                 alt="Final Recommendations & Results"
                                 className="w-full h-full object-contain"
+                                onLoad={() => console.log('Recommendations image loaded successfully')}
                                 onError={(e) => {
+                                  console.error('Failed to load recommendations image:', image);
                                   e.target.style.display = 'none';
                                   e.target.nextElementSibling.style.display = 'flex';
                                 }}
@@ -386,6 +388,10 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                             ) : (
                               <div className="w-full h-full flex items-center justify-center text-gray-500">
                                 <span className="text-4xl mb-2">📈</span>
+                                <div className="text-sm text-center">
+                                  <div>Recommendations Image</div>
+                                  <div className="text-xs text-gray-400 mt-1">{image}</div>
+                                </div>
                               </div>
                             )}
                             
