@@ -12,7 +12,8 @@ export const portfolioProjects = [
       "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/pjmxu98z_b2.jpg", // Bison in their natural ranch environment
       "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/vqp3y6ih_b3.jpg", // Students observing bison from viewing area
       "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/vqz0c0bo_b4.jpg", // Ranch dog during summer program activities
-      "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/l2dk70pt_b5.jpg"  // Group educational experience on ranch pathways
+      "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/l2dk70pt_b5.jpg", // Group educational experience on ranch pathways
+      "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/znnoqu8i_b6.jpg"  // Community group walking together through ranch landscape under blue skies
     ],
     type: "image",
     featured: true,
