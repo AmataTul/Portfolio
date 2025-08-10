@@ -827,7 +827,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     <h4 className="font-bold text-gray-800 mb-4 text-center">📈 Campaign Impact Metrics</h4>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
                       <div className="bg-white rounded-lg p-3 shadow-sm">
-                        <div className="text-2xl font-bold text-indigo-600">30</div>
+                        <div className="text-2xl font-bold text-indigo-600">100+</div>
                         <div className="text-sm text-gray-600">Posts Created</div>
                       </div>
                       <div className="bg-white rounded-lg p-3 shadow-sm">
@@ -835,7 +835,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                         <div className="text-sm text-gray-600">Platforms Managed</div>
                       </div>
                       <div className="bg-white rounded-lg p-3 shadow-sm">
-                        <div className="text-2xl font-bold text-green-600">4</div>
+                        <div className="text-2xl font-bold text-green-600">7</div>
                         <div className="text-sm text-gray-600">Businesses</div>
                       </div>
                       <div className="bg-white rounded-lg p-3 shadow-sm">
