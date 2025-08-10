@@ -333,10 +333,10 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                       <span className="text-2xl mr-2">📊</span>
                       Data Analysis & Findings (5 items)
                     </h4>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       {project.images.slice(0, 5).map((image, index) => (
                         <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
-                          <div className="aspect-video bg-gray-100 flex items-center justify-center overflow-hidden">
+                          <div className="aspect-video bg-gray-100 flex items-center justify-center overflow-hidden relative">
                             {typeof image === 'string' && (image.includes('http') || image.includes('https')) ? (
                               <img 
                                 src={image}
@@ -369,10 +369,10 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                       <span className="text-2xl mr-2">🎯</span>
                       Results & Recommendations (1 item)
                     </h4>
-                    <div className="grid grid-cols-1 gap-4">
+                    <div className="grid grid-cols-1 gap-4 max-w-2xl mx-auto">
                       {project.images.slice(5, 6).map((image, index) => (
                         <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
-                          <div className="aspect-video bg-gray-100 flex items-center justify-center overflow-hidden relative">
+                          <div className="aspect-[4/3] bg-gray-100 flex items-center justify-center overflow-hidden relative">
                             {typeof image === 'string' && (image.includes('http') || image.includes('https')) ? (
                               <img 
                                 src={image}
