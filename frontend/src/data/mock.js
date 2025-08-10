@@ -684,12 +684,11 @@ export const portfolioProjects = [
     project_type: "Agricultural Photography & Visual Content Creation",
     description: "Comprehensive photography collection capturing the essence of Ute Bison Ranch through intimate bison portraits and dynamic herd shots. I personally visited the ranch frequently to document the bison in their natural habitat, creating authentic visual content for promotional marketing materials and social media campaigns. This extensive photo collection showcases the majestic beauty of these indigenous animals while supporting the ranch's marketing initiatives and cultural storytelling. Each photograph was taken on-site, capturing spontaneous moments that reflect the ranch's commitment to ethical farming and the natural behavior of their bison herd.",
     images: [
-      "UTE_BISON_PHOTO_1", // Bison close-up portrait - Upload your own image here
-      "UTE_BISON_PHOTO_2", // Young bison with identification tag - Upload your own image here
-      "UTE_BISON_PHOTO_3", // Bison in natural grazing environment - Upload your own image here
-      "UTE_BISON_PHOTO_4", // Bison herd interaction - Upload your own image here
-      "UTE_BISON_PHOTO_5", // Bison in natural habitat - Upload your own image here
-      "UTE_BISON_PHOTO_6"  // Bison portrait showing character - Upload your own image here
+      "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/6bi8cszc_bison1.jpg", // Stunning close-up bison portrait eating hay - individual character study
+      "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/y8vpkc3r_bison%202.jpg", // Bison family herd with adults and young calves on rocky terrain
+      "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/7xodyswp_bison%203.jpg", // Beautiful bison head profile showcasing natural features and strength
+      "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/lmom7zyt_bison%204.jpg", // Large bison herd gathered together on prairie grasslands
+      "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/4een0ymt_bison%205.jpg"  // Solitary bison standing majestically on ranch grassland
     ],
     type: "photography",
     featured: true,
