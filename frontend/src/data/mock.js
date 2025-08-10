@@ -1142,7 +1142,9 @@ export const portfolioProjects = [
     project_type: "Comprehensive Brand Audit & Strategic Marketing Analysis",
     description: "In-depth strategic marketing audit of Disney's brand positioning, consumer engagement strategies, and competitive landscape conducted as part of advanced marketing coursework at Utah State University. This comprehensive analysis examined Disney's multi-platform marketing approach, brand equity management, target audience segmentation, and competitive positioning within the entertainment industry ecosystem.",
     images: [
-      // Only 3 Key Visual Insights
+      // Disney+ Logo Thumbnail
+      "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/ckiw5ddy_logo.jfif",
+      // Key Visual Insights
       { placeholder: "DISNEY_BRAND_ECOSYSTEM_ANALYSIS", category: "Core Analysis", type: "brand_strategy", description: "Disney's integrated brand ecosystem across theme parks, streaming, and merchandise" },
       { placeholder: "DISNEY_MULTIGENERATIONAL_TARGETING", category: "Consumer Strategy", type: "audience_segmentation", description: "Multi-generational marketing approach targeting millennials and Gen Z simultaneously" },
       { placeholder: "DISNEY_PLUS_MARKETING_HUB", category: "Digital Strategy", type: "platform_integration", description: "Disney+ transformation into central marketing and content distribution hub" }
