@@ -828,13 +828,13 @@ export const portfolioProjects = [
       { placeholder: "https://customer-assets.emergentagent.com/job_project-showcase-20/artifacts/k38jbmdp_5.jpg", business: "KahPeeh Kah-Ahn Ute Coffee House & Soda", likes: 156, shares: 31, comments: 42, type: "promotional" },
       { placeholder: "https://customer-assets.emergentagent.com/job_project-showcase-20/artifacts/p0p5ps8h_3.jpg", business: "Ute Bison Ranch", likes: 201, shares: 24, comments: 35, type: "product_showcase" },
       { placeholder: "https://customer-assets.emergentagent.com/job_project-showcase-20/artifacts/1sp42bds_4.jpg", business: "Ute Bison Ranch", likes: 178, shares: 29, comments: 51, type: "educational_content" },
-      { placeholder: "6.jpg", business: "Ute Tribal Enterprises", likes: 95, shares: 14, comments: 19, type: "advertisement" },
-      { placeholder: "7.jpg", business: "Ute Tribal Enterprises", likes: 143, shares: 22, comments: 28, type: "promotional" },
-      { placeholder: "8.jpg", business: "Ute Tribal Enterprises", likes: 167, shares: 33, comments: 46, type: "community_engagement" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/464zd635_6.jpg", business: "Ute Tribal Enterprises", likes: 95, shares: 14, comments: 19, type: "advertisement" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/folc6rf4_7.jpg", business: "Ute Tribal Enterprises", likes: 143, shares: 22, comments: 28, type: "promotional" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/zmmash8r_8.jpg", business: "Ute Tribal Enterprises", likes: 167, shares: 33, comments: 46, type: "community_engagement" },
       
       // Ute Bison Ranch posts (8 posts)
-      { placeholder: "9.jpg", business: "Ute Bison Ranch", likes: 289, shares: 45, comments: 67, type: "promotional" },
-      { placeholder: "10.jpg", business: "Ute Bison Ranch", likes: 234, shares: 38, comments: 52, type: "behind_scenes" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/mb050qyc_9.jpg", business: "Ute Bison Ranch", likes: 289, shares: 45, comments: 67, type: "promotional" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/9559pd0y_10.jpg", business: "Ute Bison Ranch", likes: 234, shares: 38, comments: 52, type: "behind_scenes" },
       { placeholder: "11.jpg", business: "Ute Bison Ranch", likes: 198, shares: 27, comments: 41, type: "event_coverage" },
       { placeholder: "12.jpg", business: "Ute Bison Ranch", likes: 312, shares: 56, comments: 78, type: "advertisement" },
       { placeholder: "13.jpg", business: "Ute Bison Ranch", likes: 176, shares: 31, comments: 44, type: "progress_update" },
