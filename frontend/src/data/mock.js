@@ -814,7 +814,7 @@ export const portfolioProjects = [
     category: "Social Media Content & Campaigns",
     client: "Ute Tribal Enterprises & Associated Businesses",
     project_type: "Multi-Platform Social Media Content Strategy & Creation",
-    description: "Comprehensive social media content creation campaign across multiple Ute Tribal Enterprise businesses including Ute Tribal Enterprises, Kah-Peeh kah-Ahn Ute Coffee House & Soda, Ute Plaza Supermarket, Ute Bison Ranch, and Ute Crossing Trading Post. I created over 100+ diverse social media posts including promotional content, event coverage, volunteering initiatives, progress updates, behind-the-scenes content, advertisements, product showcases, cultural celebrations, and various graphics across 8 different business divisions. The purpose was to increase social media engagement, boost exposure, drive traffic, and strengthen community connections across all business platforms. Each post was strategically crafted to align with business objectives while maintaining authentic brand voice and cultural sensitivity.",
+    description: "Developed and managed content for multiple brands, including Ute Coffee House & Soda, Ute Plaza Supermarket, Ute Bison Ranch, and Ute Crossing Trading Post. Produced diverse posts—promotions, event coverage, volunteer highlights, progress updates, behind-the-scenes features, ads, product showcases, cultural celebrations, and custom graphics—crafted to align with business goals, reflect authentic brand voice, and strengthen community connections.",
     images: [
       // EASY IMAGE UPLOAD INSTRUCTIONS:
       // 1. Replace "UTE_TRIBAL_POST_1" with your image file path (e.g., "/images/my-post-1.jpg")
