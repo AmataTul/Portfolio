@@ -4,6 +4,10 @@ import os
 import sys
 from pymongo import MongoClient
 from urllib.parse import quote_plus
+from dotenv import load_dotenv
+
+# Load environment variables from backend/.env
+load_dotenv('/app/backend/.env')
 
 # Add backend directory to Python path
 sys.path.append('/app/backend')
