@@ -1349,7 +1349,7 @@ export const workHistory = [
     location: "Remote",
     period: "May 2023 – Mar 2025",
     achievements: [
-      "Built and scaled D2C e-commerce brand (Aigata) from $0 to 6-figure revenue across Amazon, Etsy, eBay, and TikTok Shop",
+      "Build and scaled D2C e-commerce brand (Aigata) from the ground up, generating consistent revenue across Etsy & Ebay",
       "Managed complete brand lifecycle: strategy, operations, marketing, and product development with 95% customer satisfaction",
       "Produced original content and photography that increased conversion rates by 150% and reduced marketing costs by 30%",
       "Developed targeted marketing campaigns generating 200% ROI through social media, influencer partnerships, and seasonal promotions",
