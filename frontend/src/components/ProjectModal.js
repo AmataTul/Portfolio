@@ -702,21 +702,21 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     </div>
                   </div>
 
-                  {/* Product Development Process Section */}
+                  {/* Custom Branded Pillowcases with Unique Designs | Original Artwork Section */}
                   <div className="mb-8">
                     <h4 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
-                      <span className="text-2xl mr-2">⚙️</span>
-                      Product Development & Business Operations (6 items)
+                      <span className="text-2xl mr-2">🏠</span>
+                      Custom Branded Pillowcases with Unique Designs | Original Artwork (7 items)
                     </h4>
                     <div className="grid grid-cols-4 gap-4">
-                      {project.images.slice(35, 41).map((item, index) => (
+                      {project.images.slice(28, 35).map((item, index) => (
                         <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
-                          <div className="aspect-square bg-gradient-to-br from-orange-50 to-yellow-50 flex items-center justify-center p-3 relative overflow-hidden">
+                          <div className="aspect-square bg-gradient-to-br from-pink-50 to-rose-50 flex items-center justify-center p-3 relative overflow-hidden">
                             {item.placeholder && (item.placeholder.includes('http') || item.placeholder.includes('.jpg')) ? (
                               /* Real Image Display */
                               <img 
                                 src={item.placeholder.includes('http') ? item.placeholder : `/images/aigata-brand/${item.placeholder}`} 
-                                alt={`Development - ${item.description || 'Business Operation'}`}
+                                alt={`Custom Pillowcase - ${item.description || 'Unique Design'}`}
                                 className="w-full h-full aigata-brand-placeholder-image"
                                 style={{
                                   objectFit: 'contain',
@@ -735,8 +735,8 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                             
                             {/* Fallback Placeholder Display */}
                             <div className={`text-center w-full h-full flex flex-col items-center justify-center ${item.placeholder && (item.placeholder.includes('http') || item.placeholder.includes('.jpg')) ? 'hidden' : 'flex'}`}>
-                              <div className="w-16 h-16 bg-orange-200 rounded-lg flex items-center justify-center mb-2">
-                                <svg className="w-8 h-8 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+                              <div className="w-16 h-16 bg-pink-200 rounded-lg flex items-center justify-center mb-2">
+                                <svg className="w-8 h-8 text-pink-600" fill="currentColor" viewBox="0 0 20 20">
                                   <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
                                 </svg>
                               </div>
@@ -759,10 +759,10 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
                       <span className="text-2xl mr-2">📈</span>
-                      Performance & Sales Insights (2 items)
+                      Performance & Sales Insights (first 6 months) (2 items)
                     </h4>
                     <div className="grid grid-cols-2 gap-4">
-                      {project.images.slice(41, 43).map((item, index) => (
+                      {project.images.slice(35, 37).map((item, index) => (
                         <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
                           <div className="aspect-square bg-gradient-to-br from-blue-50 to-indigo-50 flex items-center justify-center p-3 relative overflow-hidden">
                             {item.placeholder && (item.placeholder.includes('http') || item.placeholder.includes('.jpg')) ? (
