@@ -1356,6 +1356,32 @@ export const workHistory = [
       "Attended in-person events and markets to showcase and sell products, driving direct customer engagement, increasing local brand awareness by 300%, and fostering repeat sales"
     ]
   },
+  {
+    position: "Marketing Specialist",
+    company: "Zorina Jewelry Design House, Inc",
+    location: "Vernal, UT (Hybrid)",
+    period: "Sep 2021 – Apr 2023",
+    achievements: [
+      "Developed comprehensive digital marketing strategies to boost online visibility, drive website traffic, and increase conversion rates across multiple channels",
+      "Managed Etsy and Meta advertising campaigns to maximize ROI and optimize performance through data-driven insights and A/B testing",
+      "Utilized Google Analytics and WordPress analytics to monitor website traffic patterns, user behavior, and campaign effectiveness for strategic optimization",
+      "Collaborated with cross-functional teams to implement integrated marketing strategies aligned with business objectives and sustainable growth goals",
+      "Executed e-commerce marketing campaigns that enhanced brand presence and drove measurable results in competitive jewelry market"
+    ]
+  },
+  {
+    position: "Business Analytics & Branding Strategy Extern",
+    company: "Beats by Dre",
+    location: "Culver City, CA (Remote)",
+    period: "Jan – Mar 2023",
+    achievements: [
+      "Analyzed Beats by Dre brand sentiment and communication strategies to deliver actionable insights for enhanced brand positioning and market perception",
+      "Leveraged SQL and Tableau for consumer data analysis and Gen Z marketing campaign optimization, achieving 30% increase in engagement metrics",
+      "Conducted comprehensive market research to identify emerging trends and consumer preferences, informing strategic marketing and product development initiatives",
+      "Generated data-driven recommendations for brand strategy improvements based on competitive analysis and consumer behavior patterns",
+      "Collaborated with marketing teams to develop insights-backed strategies for millennial and Gen Z audience targeting and brand messaging"
+    ]
+  },
   // Other work entries omitted for brevity
 ];
 
