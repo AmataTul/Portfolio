@@ -1353,7 +1353,7 @@ export const workHistory = [
       "Managed complete brand lifecycle: strategy, operations, marketing, and product development with 95% customer satisfaction",
       "Produced original content and photography that increased conversion rates by 150% and reduced marketing costs by 30%",
       "Developed targeted marketing campaigns generating 200% ROI through social media, influencer partnerships, and seasonal promotions",
-      "Coordinated events for direct customer engagement, resulting in 300% increase in local brand awareness and repeat customers"
+      "Attended in-person events and markets to showcase and sell products, driving direct customer engagement, increasing local brand awareness by 300%, and fostering repeat sales"
     ]
   },
   // Other work entries omitted for brevity
