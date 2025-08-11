@@ -1020,7 +1020,7 @@ export const portfolioProjects = [
       { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/bmtf1pab_business%20cards%20%282%29.jpg", category: "Business Cards", type: "business_card_design_1", description: "Business card design variation 1" },
       { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/h5uh2ma2_business%20cards%20%281%29.jpg", category: "Business Cards", type: "business_card_design_2", description: "Business card design variation 2" },
 
-      // Row 4: Products Sold Across Platforms (10 items)
+      // Row 4: Products Sold Across Platforms (15 items)
       { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/zves2r7q_Wallet%20button%20black%205.jpg", category: "Products Sold", type: "wallet_product_1", description: "Premium wallet product - black design variation 5" },
       { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/qfyeckij_Wallet%20button%20black%204.jpg", category: "Products Sold", type: "wallet_product_2", description: "Premium wallet product - black design variation 4" },
       { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/repihu59_ZS2204%20-5.jpg", category: "Products Sold", type: "sunglasses_product_1", description: "ZS2204 sunglasses model - premium eyewear" },
@@ -1031,6 +1031,11 @@ export const portfolioProjects = [
       { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/vr3vcm02_Detail%20Blue-site%203.jpg", category: "Products Sold", type: "sunglasses_product_6", description: "Detail Blue sunglasses with product specifications" },
       { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/jftj292g_DLX930%20-6.jpg", category: "Products Sold", type: "sunglasses_product_7", description: "DLX930 sunglasses model - premium collection" },
       { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/s5q37oa0_GM07%20blue-site%202-1_.jpg", category: "Products Sold", type: "sunglasses_product_8", description: "GM07 blue sunglasses with product details" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/txdmlg6p_ZS2204%20C6-3.jpg", category: "Products Sold", type: "sunglasses_product_9", description: "ZS2204 C6 sunglasses model - variation 3" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/agl0j4sv_Wallet%20button%20brown%203.jpg", category: "Products Sold", type: "wallet_product_3", description: "Premium wallet product - brown design variation 3" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/ifzn7ldy_Wallet%20button%20brown_1-1.jpg", category: "Products Sold", type: "wallet_product_4", description: "Premium wallet product - brown design variation 1" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/setijejy_%D0%92%D0%AB%D0%9F%D0%A3%D0%A1%D0%9A-WHITE%20BAG-2.jpg", category: "Products Sold", type: "bag_product_1", description: "Premium white bag with detailed product specifications" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/v45odcg8_%D0%92%D0%AB%D0%9F%D0%A3%D0%A1%D0%9A-BLACK%20BAG-3%20%D0%98%D0%BA%D0%BE%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B0.jpg", category: "Products Sold", type: "bag_product_2", description: "Premium black bag with iconographic design elements" },
 
       // Row 5: Product Development & Design Process (6 items)
       { placeholder: "AIGATA_DESIGN_PROCESS_1", category: "Development", type: "concept_design", description: "Product concept and ideation" },
