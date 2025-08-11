@@ -5307,6 +5307,287 @@ class BackendTester:
         
         return passed == total
 
+    def test_comprehensive_graphic_design_portfolio_retrieval(self):
+        """Test that Comprehensive Graphic Design Portfolio project exists and can be retrieved"""
+        try:
+            response = self.session.get(f"{API_BASE_URL}/projects", timeout=10)
+            if response.status_code == 200:
+                projects = response.json()
+                portfolio_project = None
+                
+                # Find the Comprehensive Graphic Design Portfolio project
+                for project in projects:
+                    title = project.get('title', '')
+                    if "Comprehensive Graphic Design Portfolio" in title:
+                        portfolio_project = project
+                        break
+                
+                if portfolio_project:
+                    self.log_test("Comprehensive Graphic Design Portfolio Retrieval", True, 
+                                f"Found project: {portfolio_project['title']}")
+                    return portfolio_project
+                else:
+                    self.log_test("Comprehensive Graphic Design Portfolio Retrieval", False, 
+                                "Comprehensive Graphic Design Portfolio project not found")
+                    return None
+            else:
+                self.log_test("Comprehensive Graphic Design Portfolio Retrieval", False, 
+                            f"Status {response.status_code}: {response.text}")
+                return None
+        except requests.exceptions.RequestException as e:
+            self.log_test("Comprehensive Graphic Design Portfolio Retrieval", False, f"Request failed: {str(e)}")
+            return None
+
+    def test_comprehensive_portfolio_image_array_count(self):
+        """Test that the images array has exactly 32 items (not 33)"""
+        try:
+            project = self.test_comprehensive_graphic_design_portfolio_retrieval()
+            if not project:
+                self.log_test("Comprehensive Portfolio Image Array Count", False, 
+                            "Cannot test image count - project not found")
+                return False
+            
+            images = project.get('images', [])
+            expected_count = 32
+            
+            if len(images) == expected_count:
+                self.log_test("Comprehensive Portfolio Image Array Count", True, 
+                            f"Images array has exactly {expected_count} items as expected")
+                return True
+            else:
+                self.log_test("Comprehensive Portfolio Image Array Count", False, 
+                            f"Expected {expected_count} images, found {len(images)}")
+                return False
+                
+        except Exception as e:
+            self.log_test("Comprehensive Portfolio Image Array Count", False, f"Error checking image count: {str(e)}")
+            return False
+
+    def test_comprehensive_portfolio_event_flyers_section(self):
+        """Test that the new Ute Plaza Eggstravaganza image is in the Event Flyers section (items 28-31)"""
+        try:
+            project = self.test_comprehensive_graphic_design_portfolio_retrieval()
+            if not project:
+                self.log_test("Comprehensive Portfolio Event Flyers Section", False, 
+                            "Cannot test Event Flyers section - project not found")
+                return False
+            
+            images = project.get('images', [])
+            if len(images) < 32:
+                self.log_test("Comprehensive Portfolio Event Flyers Section", False, 
+                            f"Insufficient images for Event Flyers section. Found {len(images)}, need at least 32")
+                return False
+            
+            # Check Event Flyers section (items 28-31, which are indices 28-31)
+            event_flyers_images = images[28:32]  # Items 28-31 (4 items)
+            expected_url = "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/eh3a9b99_Ute%20Plaza%20Eggstravaganza.jpg"
+            
+            # Check if the new Ute Plaza Eggstravaganza image is in the Event Flyers section
+            found_eggstravaganza = False
+            for i, image in enumerate(event_flyers_images):
+                if isinstance(image, str) and expected_url in image:
+                    found_eggstravaganza = True
+                    self.log_test("Comprehensive Portfolio Event Flyers Section", True, 
+                                f"Found Ute Plaza Eggstravaganza image in Event Flyers section at position {28+i}")
+                    return True
+            
+            if not found_eggstravaganza:
+                self.log_test("Comprehensive Portfolio Event Flyers Section", False, 
+                            f"Ute Plaza Eggstravaganza image not found in Event Flyers section (items 28-31). Expected URL: {expected_url}")
+                return False
+                
+        except Exception as e:
+            self.log_test("Comprehensive Portfolio Event Flyers Section", False, f"Error checking Event Flyers section: {str(e)}")
+            return False
+
+    def test_comprehensive_portfolio_plaza_fathers_day_placement(self):
+        """Test that Plaza Father's Day image is in Multi-Business Graphics section (items 17-27)"""
+        try:
+            project = self.test_comprehensive_graphic_design_portfolio_retrieval()
+            if not project:
+                self.log_test("Comprehensive Portfolio Plaza Father's Day Placement", False, 
+                            "Cannot test Plaza Father's Day placement - project not found")
+                return False
+            
+            images = project.get('images', [])
+            if len(images) < 28:
+                self.log_test("Comprehensive Portfolio Plaza Father's Day Placement", False, 
+                            f"Insufficient images for Multi-Business Graphics section. Found {len(images)}, need at least 28")
+                return False
+            
+            # Check Multi-Business Graphics section (items 17-27, which are indices 17-27)
+            multi_business_images = images[17:28]  # Items 17-27 (11 items)
+            
+            # Check if Plaza Father's Day image is in the Multi-Business Graphics section
+            found_plaza_fathers_day = False
+            for i, image in enumerate(multi_business_images):
+                if isinstance(image, str) and "Plaza%20Father%27s%20Day.jpg" in image:
+                    found_plaza_fathers_day = True
+                    self.log_test("Comprehensive Portfolio Plaza Father's Day Placement", True, 
+                                f"Found Plaza Father's Day image in Multi-Business Graphics section at position {17+i}")
+                    return True
+            
+            if not found_plaza_fathers_day:
+                self.log_test("Comprehensive Portfolio Plaza Father's Day Placement", False, 
+                            "Plaza Father's Day image not found in Multi-Business Graphics section (items 17-27)")
+                return False
+                
+        except Exception as e:
+            self.log_test("Comprehensive Portfolio Plaza Father's Day Placement", False, f"Error checking Plaza Father's Day placement: {str(e)}")
+            return False
+
+    def test_comprehensive_portfolio_updated_impact_metrics(self):
+        """Test that business_scope_metrics shows '32 professional graphic design pieces'"""
+        try:
+            project = self.test_comprehensive_graphic_design_portfolio_retrieval()
+            if not project:
+                self.log_test("Comprehensive Portfolio Updated Impact Metrics", False, 
+                            "Cannot test impact metrics - project not found")
+                return False
+            
+            # Check in description field
+            description = project.get('description', '')
+            if "32 professional graphic design pieces" in description:
+                self.log_test("Comprehensive Portfolio Updated Impact Metrics", True, 
+                            "Found '32 professional graphic design pieces' in description")
+                return True
+            
+            # Check in impact field if it exists
+            impact = project.get('impact', {})
+            if isinstance(impact, dict):
+                # Check in quantified_metrics
+                quantified_metrics = impact.get('quantified_metrics', {})
+                if isinstance(quantified_metrics, dict):
+                    for key, value in quantified_metrics.items():
+                        if isinstance(value, str) and "32 professional graphic design pieces" in value:
+                            self.log_test("Comprehensive Portfolio Updated Impact Metrics", True, 
+                                        f"Found '32 professional graphic design pieces' in impact.quantified_metrics.{key}")
+                            return True
+                
+                # Check in qualitative_outcomes
+                qualitative_outcomes = impact.get('qualitative_outcomes', [])
+                if isinstance(qualitative_outcomes, list):
+                    for outcome in qualitative_outcomes:
+                        if isinstance(outcome, str) and "32 professional graphic design pieces" in outcome:
+                            self.log_test("Comprehensive Portfolio Updated Impact Metrics", True, 
+                                        "Found '32 professional graphic design pieces' in impact.qualitative_outcomes")
+                            return True
+            
+            # Check in business_scope_metrics if it exists as a separate field
+            business_scope_metrics = project.get('business_scope_metrics', '')
+            if isinstance(business_scope_metrics, str) and "32 professional graphic design pieces" in business_scope_metrics:
+                self.log_test("Comprehensive Portfolio Updated Impact Metrics", True, 
+                            "Found '32 professional graphic design pieces' in business_scope_metrics")
+                return True
+            
+            self.log_test("Comprehensive Portfolio Updated Impact Metrics", False, 
+                        "Could not find '32 professional graphic design pieces' in description, impact, or business_scope_metrics fields")
+            return False
+                
+        except Exception as e:
+            self.log_test("Comprehensive Portfolio Updated Impact Metrics", False, f"Error checking impact metrics: {str(e)}")
+            return False
+
+    def test_comprehensive_portfolio_empty_container_elimination(self):
+        """Test that no problematic placeholders remain (MULTI_BUSINESS_BRAND_1, UTE_PETROLEUM_PROMOTION_PLACEHOLDER)"""
+        try:
+            project = self.test_comprehensive_graphic_design_portfolio_retrieval()
+            if not project:
+                self.log_test("Comprehensive Portfolio Empty Container Elimination", False, 
+                            "Cannot test empty container elimination - project not found")
+                return False
+            
+            # Convert project to string to search for problematic placeholders
+            project_str = str(project)
+            problematic_placeholders = [
+                "MULTI_BUSINESS_BRAND_1",
+                "UTE_PETROLEUM_PROMOTION_PLACEHOLDER"
+            ]
+            
+            found_placeholders = []
+            for placeholder in problematic_placeholders:
+                if placeholder in project_str:
+                    found_placeholders.append(placeholder)
+            
+            if not found_placeholders:
+                self.log_test("Comprehensive Portfolio Empty Container Elimination", True, 
+                            "No problematic placeholders found - empty containers successfully eliminated")
+                return True
+            else:
+                self.log_test("Comprehensive Portfolio Empty Container Elimination", False, 
+                            f"Found problematic placeholders: {found_placeholders}")
+                return False
+                
+        except Exception as e:
+            self.log_test("Comprehensive Portfolio Empty Container Elimination", False, f"Error checking empty containers: {str(e)}")
+            return False
+
+    def test_comprehensive_portfolio_database_synchronization_complete(self):
+        """Comprehensive test to verify all database synchronization requirements"""
+        try:
+            print("\n🔍 COMPREHENSIVE GRAPHIC DESIGN PORTFOLIO DATABASE SYNCHRONIZATION VERIFICATION")
+            print("=" * 80)
+            
+            # Run all individual tests
+            project_found = self.test_comprehensive_graphic_design_portfolio_retrieval() is not None
+            image_count_correct = self.test_comprehensive_portfolio_image_array_count()
+            event_flyers_correct = self.test_comprehensive_portfolio_event_flyers_section()
+            plaza_fathers_day_correct = self.test_comprehensive_portfolio_plaza_fathers_day_placement()
+            impact_metrics_correct = self.test_comprehensive_portfolio_updated_impact_metrics()
+            empty_containers_eliminated = self.test_comprehensive_portfolio_empty_container_elimination()
+            
+            # Calculate overall success
+            total_tests = 6
+            passed_tests = sum([
+                project_found,
+                image_count_correct,
+                event_flyers_correct,
+                plaza_fathers_day_correct,
+                impact_metrics_correct,
+                empty_containers_eliminated
+            ])
+            
+            success_rate = (passed_tests / total_tests) * 100
+            
+            if success_rate == 100:
+                self.log_test("Comprehensive Portfolio Database Synchronization Complete", True, 
+                            f"All database synchronization requirements met ({passed_tests}/{total_tests} tests passed)")
+                return True
+            else:
+                self.log_test("Comprehensive Portfolio Database Synchronization Complete", False, 
+                            f"Database synchronization incomplete ({passed_tests}/{total_tests} tests passed, {success_rate:.1f}% success rate)")
+                return False
+                
+        except Exception as e:
+            self.log_test("Comprehensive Portfolio Database Synchronization Complete", False, f"Error in comprehensive test: {str(e)}")
+            return False
+
+    def run_comprehensive_portfolio_tests(self):
+        """Run comprehensive graphic design portfolio database synchronization tests"""
+        print("🎨 COMPREHENSIVE GRAPHIC DESIGN PORTFOLIO DATABASE SYNCHRONIZATION TESTING")
+        print(f"📡 Testing Backend URL: {API_BASE_URL}")
+        print("=" * 80)
+        
+        # Core server health check
+        if not self.test_server_health():
+            print("❌ Server health check failed. Stopping tests.")
+            return self.generate_summary()
+        
+        # Initialize data if needed
+        self.test_initialize_data()
+        
+        # Run comprehensive portfolio tests
+        print("\n🎨 Testing Comprehensive Graphic Design Portfolio Database Synchronization...")
+        self.test_comprehensive_graphic_design_portfolio_retrieval()
+        self.test_comprehensive_portfolio_image_array_count()
+        self.test_comprehensive_portfolio_event_flyers_section()
+        self.test_comprehensive_portfolio_plaza_fathers_day_placement()
+        self.test_comprehensive_portfolio_updated_impact_metrics()
+        self.test_comprehensive_portfolio_empty_container_elimination()
+        self.test_comprehensive_portfolio_database_synchronization_complete()
+        
+        return self.generate_summary()
+
 def main():
     """Main test execution"""
     tester = BackendTester()
