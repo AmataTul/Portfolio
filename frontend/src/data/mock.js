@@ -1266,11 +1266,15 @@ export const portfolioProjects = [
       "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/wrpoupkn_IMG_1267.JPG",
       "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/i4dfg90i_Shanks%207.jpg",
       "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/5mawfi99_Shanks%207-2.jpg",
-      "UTE_BISON_MEAT_PRODUCT_6",
-      "UTE_BISON_MEAT_PRODUCT_7",
-      "UTE_BISON_MEAT_PRODUCT_8",
+      "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/00y0w6nm_Bison%20eye%20of%20round%20roast%205-5.jpg",
+      "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/w7w5kwjv_Bison%20Top%20Sirloin%20Steaks%209-3.jpg",
+      "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/wwxqqnmy_Filet%20Mignon%209-7.jpg",
       "UTE_BISON_MEAT_PRODUCT_9",
       "UTE_BISON_MEAT_PRODUCT_10"
+    ],
+    behind_the_scenes: [
+      "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/o8o788ic_20240606_150229.jpg",
+      "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/66r4tuus_20240606_143236.jpg"
     ],
     type: "photography",
     featured: true,
