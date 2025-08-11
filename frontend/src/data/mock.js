@@ -997,7 +997,7 @@ export const portfolioProjects = [
 
   {
     id: 20,
-    title: "Aigata Brand - Complete Business Development & Product Line Success",
+    title: "Business Development & Product Line Success of My Owned Brand",
     category: "Branding",
     client: "Aigata - Personal E-commerce Business (Self-Initiated)",
     project_type: "Complete Business Development, Branding & Multi-Platform E-commerce Success",
