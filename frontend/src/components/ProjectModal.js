@@ -603,7 +603,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                       Top-Selling Products Across Platforms (6 items)
                     </h4>
                     <div className="grid grid-cols-4 gap-4">
-                      {project.images.slice(6, 12).map((item, index) => (
+                      {project.images.slice(8, 14).map((item, index) => (
                         <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
                           <div className="aspect-square bg-gradient-to-br from-green-50 to-blue-50 flex items-center justify-center p-3 relative overflow-hidden">
                             {item.placeholder && (item.placeholder.includes('http') || item.placeholder.includes('.jpg')) ? (
