@@ -1020,13 +1020,12 @@ export const portfolioProjects = [
       { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/bmtf1pab_business%20cards%20%282%29.jpg", category: "Business Cards", type: "business_card_design_1", description: "Business card design variation 1" },
       { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/h5uh2ma2_business%20cards%20%281%29.jpg", category: "Business Cards", type: "business_card_design_2", description: "Business card design variation 2" },
 
-      // Row 4: Top-Selling Products - Amazon/Etsy (6 items)
-      { placeholder: "AIGATA_PRODUCT_1", category: "Top Sellers", type: "amazon_listing", description: "Best-selling product on Amazon" },
-      { placeholder: "AIGATA_PRODUCT_2", category: "Top Sellers", type: "etsy_listing", description: "Popular Etsy product listing" },
-      { placeholder: "AIGATA_PRODUCT_3", category: "Top Sellers", type: "ebay_listing", description: "eBay featured product" },
-      { placeholder: "AIGATA_PRODUCT_4", category: "Top Sellers", type: "tiktok_shop", description: "TikTok Shop viral product" },
-      { placeholder: "AIGATA_PRODUCT_5", category: "Top Sellers", type: "premium_product", description: "Premium product line item" },
-      { placeholder: "AIGATA_PRODUCT_6", category: "Top Sellers", type: "seasonal_product", description: "Seasonal bestseller" },
+      // Row 4: Products Sold Across Platforms (5 items)
+      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/zves2r7q_Wallet%20button%20black%205.jpg", category: "Products Sold", type: "wallet_product_1", description: "Premium wallet product - black design variation 5" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/qfyeckij_Wallet%20button%20black%204.jpg", category: "Products Sold", type: "wallet_product_2", description: "Premium wallet product - black design variation 4" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/repihu59_ZS2204%20-5.jpg", category: "Products Sold", type: "sunglasses_product_1", description: "ZS2204 sunglasses model - premium eyewear" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/btrcuc8w_Cindy%202224-4.jpg", category: "Products Sold", type: "sunglasses_product_2", description: "Cindy 2224 sunglasses model - fashionable design" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/bujqjf13_Cindy%202218%20-2-2.jpg", category: "Products Sold", type: "sunglasses_product_3", description: "Cindy 2218 sunglasses model - elegant style" },
 
       // Row 5: Product Development & Design Process (6 items)
       { placeholder: "AIGATA_DESIGN_PROCESS_1", category: "Development", type: "concept_design", description: "Product concept and ideation" },
