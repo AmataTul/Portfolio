@@ -469,20 +469,19 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                         <div className="text-sm text-gray-600">Total Sales</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-3xl font-bold text-blue-600">6+</div>
+                        <div className="text-3xl font-bold text-blue-600">5</div>
                         <div className="text-sm text-gray-600">Years Running</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-3xl font-bold text-purple-600">5</div>
+                        <div className="text-3xl font-bold text-purple-600">3</div>
                         <div className="text-sm text-gray-600">Platforms</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-3xl font-bold text-orange-600">24</div>
+                        <div className="text-3xl font-bold text-orange-600">50+</div>
                         <div className="text-sm text-gray-600">Product Designs</div>
                       </div>
                     </div>
                     <div className="flex justify-center flex-wrap gap-2 mb-6">
-                      <span className="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm">Amazon</span>
                       <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Etsy</span>
                       <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">eBay</span>
                       <span className="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-sm">TikTok Shop</span>
