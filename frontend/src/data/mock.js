@@ -1036,13 +1036,9 @@ export const portfolioProjects = [
       { placeholder: "AIGATA_LOGISTICS_PLANNING", category: "Development", type: "logistics", description: "Shipping and logistics coordination" },
       { placeholder: "AIGATA_INVENTORY_MANAGEMENT", category: "Development", type: "inventory", description: "Inventory management system" },
 
-      // Row 6: Sales Success & Marketing (6 items)
-      { placeholder: "AIGATA_SALES_DASHBOARD", category: "Success Metrics", type: "sales_analytics", description: "Sales dashboard showing 1000+ sales" },
-      { placeholder: "AIGATA_AMAZON_PERFORMANCE", category: "Success Metrics", type: "amazon_stats", description: "Amazon seller performance" },
-      { placeholder: "AIGATA_ETSY_SUCCESS", category: "Success Metrics", type: "etsy_analytics", description: "Etsy shop success metrics" },
-      { placeholder: "AIGATA_TIKTOK_VIRAL", category: "Success Metrics", type: "tiktok_performance", description: "TikTok Shop viral moments" },
-      { placeholder: "AIGATA_EVENT_SALES", category: "Success Metrics", type: "event_booth", description: "In-person event sales setup" },
-      { placeholder: "AIGATA_CUSTOMER_REVIEWS", category: "Success Metrics", type: "testimonials", description: "Customer reviews and testimonials" }
+      // Row 6: Performance & Sales Insights (2 items)
+      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/0mloh3mv_ebay.jpg", category: "Performance & Sales Insights", type: "ebay_analytics", description: "eBay sales performance and analytics dashboard" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/iu30ybjk_etsy.jpg", category: "Performance & Sales Insights", type: "etsy_analytics", description: "Etsy shop performance metrics and insights" }
     ],
     type: "branding",
     featured: true,
