@@ -1063,11 +1063,11 @@ export const portfolioProjects = [
       businessModel: "Full Ownership & Management"
     },
     key_contributions: [
-      "Initiated and launched complete Aigata brand business from concept to 1000+ sales success",
+      "1000+ total sales achieved across all platforms within the first 6 months",
       "Designed comprehensive brand identity including logo creation, brand guidelines, and visual identity system",
       "Established and managed vendor relationships for product sourcing, negotiation, and quality control",
       "Developed complete product line with personal design input and market research validation",
-      "Created and optimized product listings across multiple e-commerce platforms (Amazon, Etsy, eBay, TikTok Shop)",
+      "Created and optimized product listings across multiple e-commerce platforms (Etsy, eBay, TikTok Shop)",
       "Managed complete business logistics including inventory, shipping, customer service, and fulfillment",
       "Executed multi-platform marketing strategy combining online sales with in-person event participation",
       "Handled all business planning, financial management, and strategic growth initiatives since 2019"
