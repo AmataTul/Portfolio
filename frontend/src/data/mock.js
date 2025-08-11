@@ -1020,7 +1020,7 @@ export const portfolioProjects = [
       { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/bmtf1pab_business%20cards%20%282%29.jpg", category: "Business Cards", type: "business_card_design_1", description: "Business card design variation 1" },
       { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/h5uh2ma2_business%20cards%20%281%29.jpg", category: "Business Cards", type: "business_card_design_2", description: "Business card design variation 2" },
 
-      // Row 4: Products Sold Across Platforms (25 items)
+      // Row 4: Products Sold Across Platforms (18 items)
       { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/zves2r7q_Wallet%20button%20black%205.jpg", category: "Products Sold", type: "wallet_product_1", description: "Premium wallet product - black design variation 5" },
       { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/qfyeckij_Wallet%20button%20black%204.jpg", category: "Products Sold", type: "wallet_product_2", description: "Premium wallet product - black design variation 4" },
       { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/repihu59_ZS2204%20-5.jpg", category: "Products Sold", type: "sunglasses_product_1", description: "ZS2204 sunglasses model - premium eyewear" },
@@ -1039,23 +1039,17 @@ export const portfolioProjects = [
       { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/nvk7mfll_63002S-site%202%20grey-2_no%20made%20in%20China.jpg", category: "Products Sold", type: "sunglasses_product_10", description: "63002S grey sunglasses model with product specifications" },
       { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/wz4u6u2d_63002S-Amazon%20site%204.jpg", category: "Products Sold", type: "sunglasses_product_11", description: "63002S sunglasses Amazon product listing design" },
       { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/vqy7oih0_Cindy%203016%20features-5.jpg", category: "Products Sold", type: "sunglasses_product_12", description: "Cindy 3016 sunglasses with detailed features showcase" },
-      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/fud825jp_4%20SHEEP-1.jpg", category: "Products Sold", type: "pillow_product_1", description: "4 Sheep decorative pillow design - home decor collection" },
-      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/118x539o_Birds-1.jpg", category: "Products Sold", type: "pillow_product_2", description: "Birds decorative pillow design - nature themed home decor" },
-      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/nhwl1jpd_4%20Sheeps-Velvet-4.jpg", category: "Products Sold", type: "pillow_product_3", description: "4 Sheeps velvet pillow design - premium home textiles" },
-      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/g2jz9rg9_SHEEPS-Velvet-6-Recovered.jpg", category: "Products Sold", type: "pillow_product_4", description: "Sheeps velvet pillow design - recovered edition home decor" },
-      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/gm6vlsq9_Mockup%20Birds-3.jpg", category: "Products Sold", type: "pillow_product_5", description: "Birds pillow mockup design - home styling and interior decor" },
-      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/ublzc21g_4%20SHEEPS_2_5%20to%203.5-Linen-5.jpg", category: "Products Sold", type: "pillow_product_6", description: "4 Sheeps linen pillow design - premium home decor collection" },
-      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/3swnwzz5_4%20Birds.jpg", category: "Products Sold", type: "pillow_product_7", description: "4 Birds decorative pillow design - nature inspired home decor" },
 
-      // Row 5: Product Development & Design Process (6 items)
-      { placeholder: "AIGATA_DESIGN_PROCESS_1", category: "Development", type: "concept_design", description: "Product concept and ideation" },
-      { placeholder: "AIGATA_DESIGN_PROCESS_2", category: "Development", type: "prototype", description: "Product prototyping phase" },
-      { placeholder: "AIGATA_VENDOR_COMMUNICATION", category: "Development", type: "vendor_relations", description: "Vendor communication and negotiations" },
-      { placeholder: "AIGATA_QUALITY_CONTROL", category: "Development", type: "quality_assurance", description: "Quality control and testing" },
-      { placeholder: "AIGATA_LOGISTICS_PLANNING", category: "Development", type: "logistics", description: "Shipping and logistics coordination" },
-      { placeholder: "AIGATA_INVENTORY_MANAGEMENT", category: "Development", type: "inventory", description: "Inventory management system" },
+      // Row 5: Custom Branded Pillowcases with Unique Designs | Original Artwork (7 items)
+      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/fud825jp_4%20SHEEP-1.jpg", category: "Custom Pillowcases", type: "pillow_product_1", description: "4 Sheep decorative pillowcase design - home decor collection" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/118x539o_Birds-1.jpg", category: "Custom Pillowcases", type: "pillow_product_2", description: "Birds decorative pillowcase design - nature themed home decor" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/nhwl1jpd_4%20Sheeps-Velvet-4.jpg", category: "Custom Pillowcases", type: "pillow_product_3", description: "4 Sheeps velvet pillowcase design - premium home textiles" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/g2jz9rg9_SHEEPS-Velvet-6-Recovered.jpg", category: "Custom Pillowcases", type: "pillow_product_4", description: "Sheeps velvet pillowcase design - recovered edition home decor" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/gm6vlsq9_Mockup%20Birds-3.jpg", category: "Custom Pillowcases", type: "pillow_product_5", description: "Birds pillowcase mockup design - home styling and interior decor" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/ublzc21g_4%20SHEEPS_2_5%20to%203.5-Linen-5.jpg", category: "Custom Pillowcases", type: "pillow_product_6", description: "4 Sheeps linen pillowcase design - premium home decor collection" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/3swnwzz5_4%20Birds.jpg", category: "Custom Pillowcases", type: "pillow_product_7", description: "4 Birds decorative pillowcase design - nature inspired home decor" },
 
-      // Row 6: Performance & Sales Insights (2 items)
+      // Row 6: Performance & Sales Insights (first 6 months) (2 items)
       { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/0mloh3mv_ebay.jpg", category: "Performance & Sales Insights", type: "ebay_analytics", description: "eBay sales performance and analytics dashboard" },
       { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/iu30ybjk_etsy.jpg", category: "Performance & Sales Insights", type: "etsy_analytics", description: "Etsy shop performance metrics and insights" }
     ],
