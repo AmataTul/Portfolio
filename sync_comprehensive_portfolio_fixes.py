@@ -134,7 +134,7 @@ def update_comprehensive_portfolio_project():
         if update_result.modified_count > 0:
             print(f"✅ Successfully updated Comprehensive Graphic Design Portfolio project")
             print(f"📊 Updated {len(updated_images)} images in the array")
-            print(f"🎯 Updated impact metrics to reflect 32 professional pieces")
+            print(f"🎯 Updated impact metrics to reflect {len(updated_images)} professional pieces")
             print(f"📸 Added new Ute Plaza Eggstravaganza image to Event Flyers")
             print(f"🗂️ Plaza Father's Day image correctly placed in Multi-Business Graphics")
             return True
