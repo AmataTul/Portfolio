@@ -5592,15 +5592,15 @@ def main():
     """Main test execution"""
     tester = BackendTester()
     
-    # Run photography-specific tests as requested in the review
-    print("🔍 Running Photography Projects Tests as requested...")
-    success = tester.run_photography_tests()
+    # Run comprehensive graphic design portfolio database synchronization tests as requested in the review
+    print("🎨 Running Comprehensive Graphic Design Portfolio Database Synchronization Tests as requested...")
+    success = tester.run_comprehensive_portfolio_tests()
     
     if success:
-        print("\n🎉 Photography projects tests passed!")
+        print("\n🎉 Comprehensive Graphic Design Portfolio database synchronization tests passed!")
         return 0
     else:
-        print("\n💥 Some photography projects tests failed!")
+        print("\n💥 Some Comprehensive Graphic Design Portfolio database synchronization tests failed!")
         return 1
 
 if __name__ == "__main__":
