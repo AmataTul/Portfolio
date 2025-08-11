@@ -1364,7 +1364,8 @@ export const education = {
   minor: "Minor in Marketing",
   university: "Utah State University",
   honor: "Cum Laude",
-  period: "2019 - 2023"
+  period: "2019 - 2023",
+  additional_achievement: "Business Strategy Game Champion"
 };
 
 export const contactInfo = {
