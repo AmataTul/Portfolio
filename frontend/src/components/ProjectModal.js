@@ -2080,7 +2080,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     <p className="text-gray-600 text-center mb-6">
                       Exclusive behind-the-scenes look at the professional food photography setup and process
                     </p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                       {project.behind_the_scenes.map((image, index) => (
                         <div key={index} className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-all duration-300 bg-white">
                           <div className="aspect-video bg-gray-200 flex items-center justify-center overflow-hidden">
