@@ -4864,10 +4864,18 @@ class BackendTester:
         self.test_youtube_database_persistence()
         self.test_youtube_project_type_and_category_validation()
         
-        # Comprehensive Graphic Design Portfolio Tests (PROJECT ID 18 - REVIEW REQUEST PRIORITY)
+        # Comprehensive Graphic Design Portfolio Tests (REVIEW REQUEST PRIORITY)
         print("\n" + "=" * 60)
-        print("🎨 COMPREHENSIVE GRAPHIC DESIGN PORTFOLIO TESTS (PROJECT ID 18 - REVIEW REQUEST PRIORITY)")
+        print("🎨 COMPREHENSIVE GRAPHIC DESIGN PORTFOLIO TESTS (REVIEW REQUEST PRIORITY)")
         print("=" * 60)
+        self.test_comprehensive_graphic_design_portfolio_search_by_title()
+        self.test_comprehensive_graphic_design_portfolio_image_count()
+        self.test_comprehensive_graphic_design_portfolio_ute_plaza_eggstravaganza_image()
+        self.test_comprehensive_graphic_design_portfolio_impact_metrics()
+        self.test_comprehensive_graphic_design_portfolio_category()
+        self.test_comprehensive_graphic_design_portfolio_individual_retrieval()
+        
+        # Legacy comprehensive portfolio tests
         self.test_comprehensive_graphic_design_portfolio_retrieval()
         self.test_comprehensive_portfolio_image_array_structure()
         self.test_comprehensive_portfolio_empty_container_elimination()
