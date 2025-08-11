@@ -1009,9 +1009,9 @@ export const portfolioProjects = [
       { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/1p90o8kt_Logo.jpg", category: "Brand Identity", type: "alternative_logo_used", description: "Alternative Aigata brand logo - actually used for business" },
       
       // Row 2: Concept Logos & Brand Development (3 items)
-      { placeholder: "AIGATA_BRAND_GUIDELINES", category: "Concept Logos", type: "brand_guide", description: "Brand guidelines and color palette development" },
-      { placeholder: "AIGATA_BUSINESS_CARDS", category: "Concept Logos", type: "business_materials", description: "Business cards and stationery concepts" },
-      { placeholder: "AIGATA_BRAND_MOCKUPS", category: "Concept Logos", type: "brand_mockup", description: "Brand identity concept mockups" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/63k74p1m_Slide11.JPG", category: "Concept Logos", type: "brand_presentation", description: "Brand presentation and concept development" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/7nrxvqq4_Aigata%20logo%204.JPG", category: "Concept Logos", type: "logo_concept_4", description: "Aigata logo concept variation 4" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/8r3we4id_Aigata%20logo3.JPG", category: "Concept Logos", type: "logo_concept_3", description: "Aigata logo concept variation 3" },
 
       // Row 3: Top-Selling Products - Amazon/Etsy (6 items)
       { placeholder: "AIGATA_PRODUCT_1", category: "Top Sellers", type: "amazon_listing", description: "Best-selling product on Amazon" },
