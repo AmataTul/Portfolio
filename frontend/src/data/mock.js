@@ -941,10 +941,11 @@ export const portfolioProjects = [
       { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/t6pkgkhv_Bear%20no%20background.png", category: "Stickers, Apparel Design & Concept Logos", type: "character_design" },
 
       // Line 3: Multi-Business Graphics (13 items)
-      { placeholder: "UTE_PLAZA_PROMO_1", category: "Multi-Business Graphics", type: "supermarket_promo" },
-      { placeholder: "UTE_PLAZA_PROMO_2", category: "Multi-Business Graphics", type: "supermarket_ad" },
-      { placeholder: "UTE_PLAZA_HOLIDAY_1", category: "Multi-Business Graphics", type: "holiday_material" },
-      { placeholder: "UTE_PLAZA_HOLIDAY_2", category: "Multi-Business Graphics", type: "seasonal_graphic" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/ceyy0akf_473820052_122177917304111532_4653535610475693610_n.jpg", category: "Multi-Business Graphics", type: "holiday_special_promotion" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/259em1lr_474083199_122177917058111532_5805025566417667602_n.jpg", category: "Multi-Business Graphics", type: "holiday_breakfast_display" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/jpq1442y_476850917_122186403386103473_6184333914300278689_n.jpg", category: "Multi-Business Graphics", type: "free_beverage_promotion" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/go5i56th_480064924_122184792848111532_1735080723384809186_n.jpg", category: "Multi-Business Graphics", type: "case_lot_sale_event" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/l5k4oqzm_482215365_619213051018949_5481783028424469714_n.jpg", category: "Multi-Business Graphics", type: "mothers_day_coffee_promo" },
       { placeholder: "UTE_PETROLEUM_AD_1", category: "Multi-Business Graphics", type: "gas_station_promo" },
       { placeholder: "UTE_PETROLEUM_AD_2", category: "Multi-Business Graphics", type: "convenience_store_ad" },
       { placeholder: "UTE_PETROLEUM_PROMO_1", category: "Multi-Business Graphics", type: "fuel_promotion" },
