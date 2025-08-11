@@ -1003,7 +1003,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                       Event Flyers (4 items)
                     </h4>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                      {project.images.slice(30, 34).map((item, index) => (
+                      {project.images.slice(29, 33).map((item, index) => (
                         <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
                           <div className="aspect-square bg-gradient-to-br from-yellow-50 to-orange-50 flex items-center justify-center p-3 relative overflow-hidden">
                             {item.placeholder.includes('http') || item.placeholder.includes('.jpg') ? (
