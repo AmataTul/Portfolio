@@ -952,8 +952,8 @@ export const portfolioProjects = [
       { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/gj5739jq_Coffee%20House%20Hibiscus.jpg", category: "Multi-Business Graphics", type: "specialty_mothers_day_drink" },
       { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/yc4vxqmk_FALL%20FAVORITES.jpg", category: "Multi-Business Graphics", type: "seasonal_fall_beverages" },
       { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/t4bu096a_Drinks%20Christmass.jpg", category: "Multi-Business Graphics", type: "christmas_holiday_drinks" },
-      { placeholder: "MULTI_BUSINESS_AD_1", category: "Multi-Business Graphics", type: "cross_promotion" },
-      { placeholder: "MULTI_BUSINESS_AD_2", category: "Multi-Business Graphics", type: "tribal_enterprise_ad" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/mowyfcr0_Mother%27s%20Day%20Plaza.jpg", category: "Multi-Business Graphics", type: "mothers_day_plaza_tribute" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/fuj3qnc3_Plaza%20Father%27s%20Day.jpg", category: "Multi-Business Graphics", type: "fathers_day_hometown_grocer" },
       { placeholder: "MULTI_BUSINESS_BRAND_1", category: "Multi-Business Graphics", type: "unified_branding" },
 
       // Line 4: Event Flyers (4 items)
