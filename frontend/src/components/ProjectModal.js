@@ -466,15 +466,15 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     <div className="flex justify-center items-center space-x-8 mb-4">
                       <div className="text-center">
                         <div className="text-3xl font-bold text-green-600">1000+</div>
-                        <div className="text-sm text-gray-600">Total Sales</div>
+                        <div className="text-sm text-gray-600">Sales (First 6 Months)</div>
                       </div>
                       <div className="text-center">
                         <div className="text-3xl font-bold text-blue-600">5</div>
-                        <div className="text-sm text-gray-600">Years Running</div>
+                        <div className="text-sm text-gray-600">Years Running (2019-2024)</div>
                       </div>
                       <div className="text-center">
                         <div className="text-3xl font-bold text-purple-600">3</div>
-                        <div className="text-sm text-gray-600">Platforms</div>
+                        <div className="text-sm text-gray-600">Managed Platforms</div>
                       </div>
                       <div className="text-center">
                         <div className="text-3xl font-bold text-orange-600">50+</div>
