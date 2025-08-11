@@ -412,47 +412,46 @@ const About = () => {
           {/* Professional Accomplishments */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Professional Accomplishments</h2>
-            <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
-              {/* Business Strategy Game Achievement */}
-              <Card className="bg-white shadow-lg border-0 hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                      <BarChart3 className="w-6 h-6 text-blue-600" />
+          {/* Professional Experience - More Visual and Engaging */}
+            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Professional Marketing Experience</h3>
+            <div className="space-y-8">
+              {workHistory.map((job, index) => (
+                <Card key={index} className="bg-white shadow-lg border-0 hover:shadow-xl transition-all duration-300 overflow-hidden">
+                  <CardContent className="p-0">
+                    <div className="bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 p-6 text-white">
+                      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
+                        <div className="mb-4 lg:mb-0">
+                          <h4 className="text-xl font-bold mb-2">{job.position}</h4>
+                          <p className="text-lg font-semibold text-yellow-200">{job.company}</p>
+                          <p className="text-sm text-purple-100">{job.location}</p>
+                        </div>
+                        <div className="flex items-center space-x-4">
+                          <Badge className="bg-white/20 text-white border-white/30">
+                            <Calendar size={14} className="mr-2" />
+                            {job.period}
+                          </Badge>
+                          <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                            <Briefcase className="w-6 h-6 text-white" />
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-blue-600 mb-1">Business Strategy Game Champion</h3>
-                      <p className="text-sm text-gray-600">Utah State University • April 2022</p>
+                    
+                    <div className="p-6">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {job.achievements.map((achievement, achievementIndex) => (
+                          <div key={achievementIndex} className="flex items-start bg-gray-50 p-4 rounded-lg">
+                            <div className="flex-shrink-0 w-6 h-6 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center mt-1 mr-3">
+                              <span className="text-white text-xs font-bold">{achievementIndex + 1}</span>
+                            </div>
+                            <p className="text-gray-700 text-sm leading-relaxed">{achievement}</p>
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                  <div className="space-y-2 mb-4">
-                    <Badge className="bg-blue-100 text-blue-800 text-xs">1ST PLACE (158 STUDENTS)</Badge>
-                    <Badge className="bg-purple-100 text-purple-800 text-xs">WORLDWIDE COMPETITION INVITE</Badge>
-                  </div>
-                  <p className="text-sm text-gray-700 mb-4">
-                    Achieved 1st place in semester-long business simulation. Served as consultant to my team and teams from other industries. 
-                    Demonstrated exceptional strategic thinking and financial management skills.
-                  </p>
-                  <div className="grid grid-cols-4 gap-4">
-                    <div className="text-center">
-                      <div className="text-lg font-bold text-blue-600">29.4%</div>
-                      <div className="text-xs text-gray-600">ROE</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-lg font-bold text-purple-600">$13.57</div>
-                      <div className="text-xs text-gray-600">EPS</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-lg font-bold text-pink-600">A+</div>
-                      <div className="text-xs text-gray-600">Credit</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-lg font-bold text-green-600">$1.2M+</div>
-                      <div className="text-xs text-gray-600">Revenue</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
 
