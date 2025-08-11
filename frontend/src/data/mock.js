@@ -1020,12 +1020,17 @@ export const portfolioProjects = [
       { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/bmtf1pab_business%20cards%20%282%29.jpg", category: "Business Cards", type: "business_card_design_1", description: "Business card design variation 1" },
       { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/h5uh2ma2_business%20cards%20%281%29.jpg", category: "Business Cards", type: "business_card_design_2", description: "Business card design variation 2" },
 
-      // Row 4: Products Sold Across Platforms (5 items)
+      // Row 4: Products Sold Across Platforms (10 items)
       { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/zves2r7q_Wallet%20button%20black%205.jpg", category: "Products Sold", type: "wallet_product_1", description: "Premium wallet product - black design variation 5" },
       { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/qfyeckij_Wallet%20button%20black%204.jpg", category: "Products Sold", type: "wallet_product_2", description: "Premium wallet product - black design variation 4" },
       { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/repihu59_ZS2204%20-5.jpg", category: "Products Sold", type: "sunglasses_product_1", description: "ZS2204 sunglasses model - premium eyewear" },
       { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/btrcuc8w_Cindy%202224-4.jpg", category: "Products Sold", type: "sunglasses_product_2", description: "Cindy 2224 sunglasses model - fashionable design" },
       { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/bujqjf13_Cindy%202218%20-2-2.jpg", category: "Products Sold", type: "sunglasses_product_3", description: "Cindy 2218 sunglasses model - elegant style" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/we1zwi4h_Cindy%202218%20-3.jpg", category: "Products Sold", type: "sunglasses_product_4", description: "Cindy 2218 sunglasses model - variation 3" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/ztl4ihta_Cindy%208081%20black-2.jpg", category: "Products Sold", type: "sunglasses_product_5", description: "Cindy 8081 black sunglasses model" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/vr3vcm02_Detail%20Blue-site%203.jpg", category: "Products Sold", type: "sunglasses_product_6", description: "Detail Blue sunglasses with product specifications" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/jftj292g_DLX930%20-6.jpg", category: "Products Sold", type: "sunglasses_product_7", description: "DLX930 sunglasses model - premium collection" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/s5q37oa0_GM07%20blue-site%202-1_.jpg", category: "Products Sold", type: "sunglasses_product_8", description: "GM07 blue sunglasses with product details" },
 
       // Row 5: Product Development & Design Process (6 items)
       { placeholder: "AIGATA_DESIGN_PROCESS_1", category: "Development", type: "concept_design", description: "Product concept and ideation" },
