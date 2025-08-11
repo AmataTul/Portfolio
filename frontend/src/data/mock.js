@@ -1036,7 +1036,7 @@ export const portfolioProjects = [
       { placeholder: "AIGATA_LOGISTICS_PLANNING", category: "Development", type: "logistics", description: "Shipping and logistics coordination" },
       { placeholder: "AIGATA_INVENTORY_MANAGEMENT", category: "Development", type: "inventory", description: "Inventory management system" },
 
-      // Row 5: Sales Success & Marketing (6 items)
+      // Row 6: Sales Success & Marketing (6 items)
       { placeholder: "AIGATA_SALES_DASHBOARD", category: "Success Metrics", type: "sales_analytics", description: "Sales dashboard showing 1000+ sales" },
       { placeholder: "AIGATA_AMAZON_PERFORMANCE", category: "Success Metrics", type: "amazon_stats", description: "Amazon seller performance" },
       { placeholder: "AIGATA_ETSY_SUCCESS", category: "Success Metrics", type: "etsy_analytics", description: "Etsy shop success metrics" },
