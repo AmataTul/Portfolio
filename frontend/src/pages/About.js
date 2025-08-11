@@ -399,6 +399,7 @@ const About = () => {
 
             {/* Professional Experience - More Visual and Engaging */}
             <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Professional Marketing Experience</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Professional Marketing Experience</h3>
             <div className="space-y-8">
               {workHistory.map((job, index) => (
                 <Card key={index} className="bg-white shadow-lg border-0 hover:shadow-xl transition-all duration-300 overflow-hidden">
