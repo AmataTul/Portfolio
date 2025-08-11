@@ -980,7 +980,7 @@ export const portfolioProjects = [
     ],
     impact: {
       business_scope_metrics: [
-        "33 professional graphic design pieces created across 4 major categories",
+        "32 professional graphic design pieces created across 4 major categories",
         "7 different businesses supported with custom graphic design solutions",
         "Multi-platform design approach covering digital, print, and promotional materials",
         "Comprehensive brand identity development across all tribal enterprise businesses"
