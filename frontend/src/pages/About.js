@@ -361,6 +361,37 @@ const About = () => {
                       <p className="text-sm font-semibold text-pink-800">🎨 3rd Place Digital Media Arts Festival</p>
                       <p className="text-xs text-pink-700">Creative excellence recognition</p>
                     </div>
+                    <div className="bg-purple-50 border-l-4 border-purple-400 p-4 rounded col-span-1 md:col-span-2">
+                      <div className="flex items-center justify-between mb-2">
+                        <p className="text-sm font-semibold text-purple-800">🏆 Business Strategy Game Champion</p>
+                        <span className="text-xs text-purple-600 font-medium">Utah State University • April 2022</span>
+                      </div>
+                      <div className="flex flex-wrap gap-2 mb-2">
+                        <span className="bg-purple-200 text-purple-800 text-xs px-2 py-1 rounded">1ST PLACE (158 STUDENTS)</span>
+                        <span className="bg-blue-200 text-blue-800 text-xs px-2 py-1 rounded">WORLDWIDE COMPETITION INVITE</span>
+                      </div>
+                      <p className="text-xs text-purple-700 mb-2">
+                        Achieved 1st place in semester-long business simulation. Demonstrated exceptional strategic thinking and financial management skills.
+                      </p>
+                      <div className="grid grid-cols-4 gap-2 text-center">
+                        <div>
+                          <div className="text-sm font-bold text-purple-600">29.4%</div>
+                          <div className="text-xs text-purple-500">ROE</div>
+                        </div>
+                        <div>
+                          <div className="text-sm font-bold text-blue-600">$13.57</div>
+                          <div className="text-xs text-blue-500">EPS</div>
+                        </div>
+                        <div>
+                          <div className="text-sm font-bold text-pink-600">A+</div>
+                          <div className="text-xs text-pink-500">Credit</div>
+                        </div>
+                        <div>
+                          <div className="text-sm font-bold text-green-600">$1.2M+</div>
+                          <div className="text-xs text-green-500">Revenue</div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </CardContent>
