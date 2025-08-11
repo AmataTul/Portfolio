@@ -1259,6 +1259,7 @@ export const portfolioProjects = [
     category: "Photography Projects",
     client: "Ute Bison Ranch - Ute Tribal Enterprises",
     project_type: "Professional Food Product Photography & Marketing Imagery",
+    thumbnail: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/5mawfi99_Shanks%207-2.jpg",
     description: "Comprehensive professional photography project for Ute Bison Ranch's premium bison meat products, used across multiple marketing channels including product listings, social media campaigns, advertisements, and promotional materials. I executed all photography with meticulous attention to food styling, lighting, and prop coordination using limited resources to achieve professional-grade results. The project required coordinating complex logistics to ensure optimal product presentation while preventing meat spoilage, managing temperature control throughout the shoot, and employing creative backdrop setups and professional lighting techniques. These high-quality images directly supported the ranch's marketing efforts across digital platforms and print materials, showcasing the premium quality and artisanal nature of their bison meat products to drive sales and brand recognition.",
     images: [
       "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/560sqhl0_Stew%20meat%208-2.jpg",
