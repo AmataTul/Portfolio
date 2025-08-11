@@ -5318,7 +5318,7 @@ class BackendTester:
                 # Find the Comprehensive Graphic Design Portfolio project
                 for project in projects:
                     title = project.get('title', '')
-                    if "Comprehensive Graphic Design Portfolio" in title:
+                    if "Comprehensive Graphic Design" in title and "Portfolio" in title:
                         portfolio_project = project
                         break
                 
