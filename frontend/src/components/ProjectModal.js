@@ -653,10 +653,10 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                   <div className="mb-8">
                     <h4 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
                       <span className="text-2xl mr-2">🛍️</span>
-                      Products Sold Across Platforms (10 items)
+                      Products Sold Across Platforms (15 items)
                     </h4>
                     <div className="grid grid-cols-5 gap-4">
-                      {project.images.slice(10, 20).map((item, index) => (
+                      {project.images.slice(10, 25).map((item, index) => (
                         <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
                           <div className="aspect-square bg-gradient-to-br from-green-50 to-blue-50 flex items-center justify-center p-3 relative overflow-hidden">
                             {item.placeholder && (item.placeholder.includes('http') || item.placeholder.includes('.jpg')) ? (
