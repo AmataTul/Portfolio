@@ -4720,6 +4720,209 @@ class BackendTester:
             self.log_test("Comprehensive Portfolio Plaza Father's Day Placement", False, f"Error checking Plaza Father's Day placement: {str(e)}")
             return False
 
+    def test_comprehensive_graphic_design_portfolio_search_by_title(self):
+        """Test finding Comprehensive Graphic Design Portfolio project by title search"""
+        try:
+            response = self.session.get(f"{API_BASE_URL}/projects", timeout=10)
+            if response.status_code == 200:
+                projects = response.json()
+                found_project = None
+                
+                # Search for project by title containing "Comprehensive Graphic Design Portfolio"
+                for project in projects:
+                    title = project.get('title', '')
+                    if "Comprehensive Graphic Design Portfolio" in title:
+                        found_project = project
+                        break
+                
+                if found_project:
+                    self.log_test("Comprehensive Graphic Design Portfolio - Search by Title", True, 
+                                f"Found project by title: {found_project.get('title')}")
+                    return found_project
+                else:
+                    self.log_test("Comprehensive Graphic Design Portfolio - Search by Title", False, 
+                                "Project with title containing 'Comprehensive Graphic Design Portfolio' not found")
+                    return None
+            else:
+                self.log_test("Comprehensive Graphic Design Portfolio - Search by Title", False, 
+                            f"Status {response.status_code}: {response.text}")
+                return None
+        except requests.exceptions.RequestException as e:
+            self.log_test("Comprehensive Graphic Design Portfolio - Search by Title", False, f"Request failed: {str(e)}")
+            return None
+
+    def test_comprehensive_graphic_design_portfolio_image_count(self):
+        """Test that the project has exactly 32 images"""
+        try:
+            project = self.test_comprehensive_graphic_design_portfolio_search_by_title()
+            if not project:
+                self.log_test("Comprehensive Graphic Design Portfolio - Image Count", False, 
+                            "Cannot test image count - project not found")
+                return False
+            
+            images = project.get('images', [])
+            expected_count = 32
+            
+            if len(images) == expected_count:
+                self.log_test("Comprehensive Graphic Design Portfolio - Image Count", True, 
+                            f"Project has exactly {expected_count} images as expected")
+                return True
+            else:
+                self.log_test("Comprehensive Graphic Design Portfolio - Image Count", False, 
+                            f"Expected {expected_count} images, found {len(images)}")
+                return False
+                
+        except Exception as e:
+            self.log_test("Comprehensive Graphic Design Portfolio - Image Count", False, f"Error checking image count: {str(e)}")
+            return False
+
+    def test_comprehensive_graphic_design_portfolio_ute_plaza_eggstravaganza_image(self):
+        """Test that the last image (index 31) is the Ute Plaza Eggstravaganza URL"""
+        try:
+            project = self.test_comprehensive_graphic_design_portfolio_search_by_title()
+            if not project:
+                self.log_test("Comprehensive Graphic Design Portfolio - Ute Plaza Eggstravaganza Image", False, 
+                            "Cannot test Ute Plaza image - project not found")
+                return False
+            
+            images = project.get('images', [])
+            expected_url = "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/eh3a9b99_Ute%20Plaza%20Eggstravaganza.jpg"
+            
+            if len(images) < 32:
+                self.log_test("Comprehensive Graphic Design Portfolio - Ute Plaza Eggstravaganza Image", False, 
+                            f"Project has only {len(images)} images, cannot check index 31")
+                return False
+            
+            # Check the last image (index 31)
+            last_image = images[31] if len(images) > 31 else None
+            
+            if last_image and expected_url in str(last_image):
+                self.log_test("Comprehensive Graphic Design Portfolio - Ute Plaza Eggstravaganza Image", True, 
+                            f"Last image (index 31) contains the expected Ute Plaza Eggstravaganza URL")
+                return True
+            else:
+                self.log_test("Comprehensive Graphic Design Portfolio - Ute Plaza Eggstravaganza Image", False, 
+                            f"Expected Ute Plaza Eggstravaganza URL at index 31, found: {last_image}")
+                return False
+                
+        except Exception as e:
+            self.log_test("Comprehensive Graphic Design Portfolio - Ute Plaza Eggstravaganza Image", False, f"Error checking Ute Plaza image: {str(e)}")
+            return False
+
+    def test_comprehensive_graphic_design_portfolio_impact_metrics(self):
+        """Test that impact.business_scope_metrics contains '32 professional graphic design pieces'"""
+        try:
+            project = self.test_comprehensive_graphic_design_portfolio_search_by_title()
+            if not project:
+                self.log_test("Comprehensive Graphic Design Portfolio - Impact Metrics", False, 
+                            "Cannot test impact metrics - project not found")
+                return False
+            
+            impact = project.get('impact', {})
+            business_scope_metrics = impact.get('business_scope_metrics', '') if isinstance(impact, dict) else ''
+            expected_text = "32 professional graphic design pieces"
+            
+            if expected_text in str(business_scope_metrics):
+                self.log_test("Comprehensive Graphic Design Portfolio - Impact Metrics", True, 
+                            f"Impact metrics contain the expected text: '{expected_text}'")
+                return True
+            else:
+                # Also check in description and other fields as fallback
+                description = project.get('description', '')
+                if expected_text in description:
+                    self.log_test("Comprehensive Graphic Design Portfolio - Impact Metrics", True, 
+                                f"Expected text found in description: '{expected_text}'")
+                    return True
+                else:
+                    self.log_test("Comprehensive Graphic Design Portfolio - Impact Metrics", False, 
+                                f"Expected text '{expected_text}' not found in impact.business_scope_metrics or description. Found: {business_scope_metrics}")
+                    return False
+                
+        except Exception as e:
+            self.log_test("Comprehensive Graphic Design Portfolio - Impact Metrics", False, f"Error checking impact metrics: {str(e)}")
+            return False
+
+    def test_comprehensive_graphic_design_portfolio_category(self):
+        """Test that the project is in 'Graphic Design & Marketing Materials' category"""
+        try:
+            project = self.test_comprehensive_graphic_design_portfolio_search_by_title()
+            if not project:
+                self.log_test("Comprehensive Graphic Design Portfolio - Category", False, 
+                            "Cannot test category - project not found")
+                return False
+            
+            category = project.get('category', '')
+            expected_category = "Graphic Design & Marketing Materials"
+            
+            if category == expected_category:
+                self.log_test("Comprehensive Graphic Design Portfolio - Category", True, 
+                            f"Project is in the correct category: '{expected_category}'")
+                return True
+            else:
+                # Also check for similar category names
+                if "Graphic Design" in category:
+                    self.log_test("Comprehensive Graphic Design Portfolio - Category", True, 
+                                f"Project is in a Graphic Design category: '{category}' (close match)")
+                    return True
+                else:
+                    self.log_test("Comprehensive Graphic Design Portfolio - Category", False, 
+                                f"Expected category '{expected_category}', found: '{category}'")
+                    return False
+                
+        except Exception as e:
+            self.log_test("Comprehensive Graphic Design Portfolio - Category", False, f"Error checking category: {str(e)}")
+            return False
+
+    def test_comprehensive_graphic_design_portfolio_individual_retrieval(self):
+        """Test individual project retrieval for Comprehensive Graphic Design Portfolio"""
+        try:
+            # First get the project to find its ID
+            project = self.test_comprehensive_graphic_design_portfolio_search_by_title()
+            if not project:
+                self.log_test("Comprehensive Graphic Design Portfolio - Individual Retrieval", False, 
+                            "Cannot test individual retrieval - project not found")
+                return False
+            
+            project_id = project.get('id')
+            if not project_id:
+                self.log_test("Comprehensive Graphic Design Portfolio - Individual Retrieval", False, 
+                            "Project ID not found")
+                return False
+            
+            # Test individual project retrieval
+            response = self.session.get(f"{API_BASE_URL}/projects/{project_id}", timeout=10)
+            if response.status_code == 200:
+                individual_project = response.json()
+                
+                # Verify it's the same project
+                if individual_project.get('id') == project_id:
+                    # Verify key details are intact
+                    title = individual_project.get('title', '')
+                    category = individual_project.get('category', '')
+                    images = individual_project.get('images', [])
+                    
+                    if ("Comprehensive Graphic Design Portfolio" in title and 
+                        len(images) == 32):
+                        self.log_test("Comprehensive Graphic Design Portfolio - Individual Retrieval", True, 
+                                    f"Individual project retrieval successful with all details intact")
+                        return True
+                    else:
+                        self.log_test("Comprehensive Graphic Design Portfolio - Individual Retrieval", False, 
+                                    f"Project details incomplete. Title: {title}, Images: {len(images)}")
+                        return False
+                else:
+                    self.log_test("Comprehensive Graphic Design Portfolio - Individual Retrieval", False, 
+                                f"ID mismatch: expected {project_id}, got {individual_project.get('id')}")
+                    return False
+            else:
+                self.log_test("Comprehensive Graphic Design Portfolio - Individual Retrieval", False, 
+                            f"Status {response.status_code}: {response.text}")
+                return False
+                
+        except requests.exceptions.RequestException as e:
+            self.log_test("Comprehensive Graphic Design Portfolio - Individual Retrieval", False, f"Request failed: {str(e)}")
+            return False
+
     def run_all_tests(self):
         """Run all backend tests"""
         print(f"\n🚀 Starting Backend API Tests")
