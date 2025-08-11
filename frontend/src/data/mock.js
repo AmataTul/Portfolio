@@ -1028,7 +1028,7 @@ export const portfolioProjects = [
       { placeholder: "AIGATA_PRODUCT_5", category: "Top Sellers", type: "premium_product", description: "Premium product line item" },
       { placeholder: "AIGATA_PRODUCT_6", category: "Top Sellers", type: "seasonal_product", description: "Seasonal bestseller" },
 
-      // Row 4: Product Development & Design Process (6 items)
+      // Row 5: Product Development & Design Process (6 items)
       { placeholder: "AIGATA_DESIGN_PROCESS_1", category: "Development", type: "concept_design", description: "Product concept and ideation" },
       { placeholder: "AIGATA_DESIGN_PROCESS_2", category: "Development", type: "prototype", description: "Product prototyping phase" },
       { placeholder: "AIGATA_VENDOR_COMMUNICATION", category: "Development", type: "vendor_relations", description: "Vendor communication and negotiations" },
