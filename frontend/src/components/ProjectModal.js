@@ -550,7 +550,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                       Concept Logos & Brand Development (3 items)
                     </h4>
                     <div className="grid grid-cols-3 gap-4">
-                      {project.images.slice(3, 6).map((item, index) => (
+                      {project.images.slice(5, 8).map((item, index) => (
                         <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
                           <div className="aspect-square bg-gradient-to-br from-indigo-50 to-purple-50 flex items-center justify-center p-3 relative overflow-hidden">
                             {item.placeholder && (item.placeholder.includes('http') || item.placeholder.includes('.jpg')) ? (
