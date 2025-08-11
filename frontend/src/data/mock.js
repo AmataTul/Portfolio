@@ -956,12 +956,11 @@ export const portfolioProjects = [
       { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/fuj3qnc3_Plaza%20Father%27s%20Day.jpg", category: "Multi-Business Graphics", type: "fathers_day_hometown_grocer" },
       { placeholder: "MULTI_BUSINESS_BRAND_1", category: "Multi-Business Graphics", type: "unified_branding" },
 
-      // Line 4: Event Flyers (5 items)
+      // Line 4: Event Flyers (4 items)
       { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/v66lj9hc_Bunny%20Hunt.jpg", category: "Event Flyers", type: "easter_bunny_hunt_event" },
       { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/uv3dpw4n_Half%20Way%20Point.jpg", category: "Event Flyers", type: "community_celebration_festival" },
       { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/5ssz4g5d_Myton%20Petroleum%20Egg%20Hunt.jpg", category: "Event Flyers", type: "family_easter_egg_hunt" },
-      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/zmwzkcno_Ute%20Plaza%20Eggstravaganza.jpg", category: "Event Flyers", type: "easter_eggstravaganza_celebration" },
-      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/9kestahs_Ute%20Plaza%20Eggstravaganza.jpg", category: "Event Flyers", type: "additional_eggstravaganza_version" }
+      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/zmwzkcno_Ute%20Plaza%20Eggstravaganza.jpg", category: "Event Flyers", type: "easter_eggstravaganza_celebration" }
     ],
     type: "graphic_design",
     featured: true,
