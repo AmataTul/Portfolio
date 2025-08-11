@@ -1003,10 +1003,12 @@ export const portfolioProjects = [
     project_type: "Complete Business Development, Branding & Multi-Platform E-commerce Success",
     description: "Comprehensive business development and branding project showcasing the complete creation and management of Aigata brand from concept to 1000+ sales success. This project demonstrates full entrepreneurial capabilities including business initiation, vendor relationship management, product design, brand identity creation, logistics coordination, and multi-platform sales execution across Amazon, Etsy, eBay, TikTok Shop, and in-person events since 2019.",
     images: [
-      // Row 1: Brand Identity and Logo Design - Actual Business Logos (3 items)
+      // Row 1: Brand Identity and Logo Design - Actual Business Logos (5 items)
       { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/i0gb7ayv_Aigata%20Logo%201.png", category: "Brand Identity", type: "primary_logo_used", description: "Primary Aigata brand logo - actually used for business" },
       { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/a9dy2rmc_Aigata%20Logo.png", category: "Brand Identity", type: "secondary_logo_used", description: "Secondary Aigata brand logo - actually used for business" },
       { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/1p90o8kt_Logo.jpg", category: "Brand Identity", type: "alternative_logo_used", description: "Alternative Aigata brand logo - actually used for business" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/pqx4f584_Simple%20Heart%20Design.jpg", category: "Brand Identity", type: "heart_design_used", description: "Simple heart design - actually used for business" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/ybnjpqvx_Our%20Candle%20Sticker.png", category: "Brand Identity", type: "candle_sticker_used", description: "Candle sticker design - actually used for business" },
       
       // Row 2: Concept Logos & Brand Development (3 items)
       { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/63k74p1m_Slide11.JPG", category: "Concept Logos", type: "brand_presentation", description: "Brand presentation and concept development" },
