@@ -2070,6 +2070,55 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                   ))}
                 </div>
                 
+                {/* Behind the Scenes Section - Only for Ute Bison Ranch Premium Meat Photography */}
+                {project.title && project.title.includes('Ute Bison Ranch - Premium Bison Meat Product Photography') && project.behind_the_scenes && project.behind_the_scenes.length > 0 && (
+                  <div className="mt-8 bg-white rounded-lg p-6 shadow-sm border-2 border-amber-200">
+                    <h5 className="font-bold text-gray-800 mb-4 text-center text-lg flex items-center justify-center">
+                      <span className="text-2xl mr-2">🎬</span>
+                      Behind the Scenes - Photography Process
+                    </h5>
+                    <p className="text-gray-600 text-center mb-6">
+                      Exclusive behind-the-scenes look at the professional food photography setup and process
+                    </p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      {project.behind_the_scenes.map((image, index) => (
+                        <div key={index} className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-all duration-300 bg-white">
+                          <div className="aspect-video bg-gray-200 flex items-center justify-center overflow-hidden">
+                            {image.includes('http') || image.includes('.jpg') || image.includes('.png') ? (
+                              <img 
+                                src={image}
+                                alt={`Behind the scenes - ${index + 1}`}
+                                className="w-full h-full transition-transform duration-300 group-hover:scale-105"
+                                style={{ 
+                                  objectFit: 'cover',
+                                  objectPosition: 'center',
+                                  backgroundColor: '#f8f9fa'
+                                }}
+                                onError={(e) => {
+                                  e.target.style.display = 'none';
+                                  e.target.nextSibling.style.display = 'flex';
+                                }}
+                              />
+                            ) : (
+                              <div className="w-full h-full flex flex-col items-center justify-center text-gray-500 p-4">
+                                <span className="text-4xl mb-2">🎬</span>
+                                <span className="text-xs font-medium text-center leading-tight">
+                                  {image}
+                                </span>
+                              </div>
+                            )}
+                            
+                            {/* BTS overlay */}
+                            <div className="absolute top-2 left-2 bg-amber-500 bg-opacity-90 text-white text-xs px-2 py-1 rounded-full font-medium">
+                              BTS #{index + 1}
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                
                 {/* Photography Stats */}
                 <div className="mt-8 bg-white rounded-lg p-6 shadow-sm">
                   <h5 className="font-bold text-gray-800 mb-4 text-center text-lg">
