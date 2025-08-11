@@ -1254,7 +1254,7 @@ export const portfolioProjects = [
   },
 
   {
-    id: 25,
+    id: 24,
     title: "Ute Bison Ranch - Premium Bison Meat Product Photography",
     category: "Photography Projects",
     client: "Ute Bison Ranch - Ute Tribal Enterprises",
