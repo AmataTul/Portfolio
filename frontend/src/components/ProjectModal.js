@@ -847,7 +847,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                 </div>
               ) : project.title && project.title.includes('Comprehensive Graphic Design Portfolio') ? (
                 <div className="bg-white rounded-xl p-6 shadow-lg">
-                  <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">🎨 33 Professional Graphic Design Pieces</h3>
+                  <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">🎨 32 Professional Graphic Design Pieces</h3>
                   <p className="text-sm text-gray-600 mb-6 text-center">
                     Multi-category portfolio spanning promotional materials, brand identity, and event marketing
                   </p>
