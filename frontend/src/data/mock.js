@@ -1059,7 +1059,7 @@ export const portfolioProjects = [
     businessMetrics: {
       launchYear: 2019,
       totalSales: "1000+",
-      platforms: ["Amazon", "Etsy", "eBay", "TikTok Shop", "In-Person Events"],
+      platforms: ["Etsy", "eBay", "TikTok Shop", "In-Person Events"],
       businessModel: "Full Ownership & Management"
     },
     key_contributions: [
