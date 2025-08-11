@@ -1339,7 +1339,7 @@ export const workHistory = [
       "Coordinated and managed large-scale events, increasing foot traffic by 85% and strengthening community partnerships",
       "Directed comprehensive branding for Bison Made products, resulting in 40% increase in product recognition and sales",
       "Analyzed marketing data to drive strategic decisions across marketing, design, and operations, improving efficiency by 25%",
-      "Collaborated with C-suite executives to align marketing strategies with business goals, securing $2M+ in new revenue opportunities",
+      "Led 8+ social media accounts with paid Meta and TikTok advertising, driving measurable ROI and increasing conversions",
       "Developed digital marketing assets, including graphic designs, email creatives, social media content, and branded collateral to support multi-channel campaigns and increase online brand visibility"
     ]
   },
