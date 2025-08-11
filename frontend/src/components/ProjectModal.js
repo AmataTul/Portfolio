@@ -458,7 +458,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     </div>
                   </div>
                 </div>
-              ) : project.title && project.title.includes('Aigata Brand - Complete Business Development') ? (
+              ) : project.title && project.title.includes('Business Development & Product Line Success of My Owned Brand') ? (
                 <div className="bg-white rounded-xl p-6 shadow-lg">
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-gray-800 mb-2">🏢 Complete Business Success Story</h3>
