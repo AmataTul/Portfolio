@@ -1015,7 +1015,12 @@ export const portfolioProjects = [
       { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/7nrxvqq4_Aigata%20logo%204.JPG", category: "Concept Logos", type: "logo_concept_4", description: "Aigata logo concept variation 4" },
       { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/8r3we4id_Aigata%20logo3.JPG", category: "Concept Logos", type: "logo_concept_3", description: "Aigata logo concept variation 3" },
 
-      // Row 3: Top-Selling Products - Amazon/Etsy (6 items)
+      
+      // Row 3: Business Cards (2 items)
+      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/bmtf1pab_business%20cards%20%282%29.jpg", category: "Business Cards", type: "business_card_design_1", description: "Business card design variation 1" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/h5uh2ma2_business%20cards%20%281%29.jpg", category: "Business Cards", type: "business_card_design_2", description: "Business card design variation 2" },
+
+      // Row 4: Top-Selling Products - Amazon/Etsy (6 items)
       { placeholder: "AIGATA_PRODUCT_1", category: "Top Sellers", type: "amazon_listing", description: "Best-selling product on Amazon" },
       { placeholder: "AIGATA_PRODUCT_2", category: "Top Sellers", type: "etsy_listing", description: "Popular Etsy product listing" },
       { placeholder: "AIGATA_PRODUCT_3", category: "Top Sellers", type: "ebay_listing", description: "eBay featured product" },
