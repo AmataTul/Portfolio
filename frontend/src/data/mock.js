@@ -1003,15 +1003,17 @@ export const portfolioProjects = [
     project_type: "Complete Business Development, Branding & Multi-Platform E-commerce Success",
     description: "Comprehensive business development and branding project showcasing the complete creation and management of Aigata brand from concept to 1000+ sales success. This project demonstrates full entrepreneurial capabilities including business initiation, vendor relationship management, product design, brand identity creation, logistics coordination, and multi-platform sales execution across Amazon, Etsy, eBay, TikTok Shop, and in-person events since 2019.",
     images: [
-      // Row 1: Logo & Brand Identity (6 items)
-      { placeholder: "AIGATA_LOGO_MAIN", category: "Brand Identity", type: "primary_logo", description: "Main Aigata brand logo design" },
-      { placeholder: "AIGATA_LOGO_VARIATIONS", category: "Brand Identity", type: "logo_variations", description: "Logo variations and brand marks" },
-      { placeholder: "AIGATA_BRAND_GUIDELINES", category: "Brand Identity", type: "brand_guide", description: "Brand guidelines and color palette" },
-      { placeholder: "AIGATA_BUSINESS_CARDS", category: "Brand Identity", type: "business_materials", description: "Business cards and stationery" },
-      { placeholder: "AIGATA_PACKAGING_DESIGN", category: "Brand Identity", type: "packaging", description: "Product packaging design" },
-      { placeholder: "AIGATA_BRAND_MOCKUPS", category: "Brand Identity", type: "brand_mockup", description: "Brand identity mockups" },
+      // Row 1: Brand Identity and Logo Design - Actual Business Logos (3 items)
+      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/i0gb7ayv_Aigata%20Logo%201.png", category: "Brand Identity", type: "primary_logo_used", description: "Primary Aigata brand logo - actually used for business" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/a9dy2rmc_Aigata%20Logo.png", category: "Brand Identity", type: "secondary_logo_used", description: "Secondary Aigata brand logo - actually used for business" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/1p90o8kt_Logo.jpg", category: "Brand Identity", type: "alternative_logo_used", description: "Alternative Aigata brand logo - actually used for business" },
+      
+      // Row 2: Concept Logos & Brand Development (3 items)
+      { placeholder: "AIGATA_BRAND_GUIDELINES", category: "Concept Logos", type: "brand_guide", description: "Brand guidelines and color palette development" },
+      { placeholder: "AIGATA_BUSINESS_CARDS", category: "Concept Logos", type: "business_materials", description: "Business cards and stationery concepts" },
+      { placeholder: "AIGATA_BRAND_MOCKUPS", category: "Concept Logos", type: "brand_mockup", description: "Brand identity concept mockups" },
 
-      // Row 2: Top-Selling Products - Amazon/Etsy (6 items)
+      // Row 3: Top-Selling Products - Amazon/Etsy (6 items)
       { placeholder: "AIGATA_PRODUCT_1", category: "Top Sellers", type: "amazon_listing", description: "Best-selling product on Amazon" },
       { placeholder: "AIGATA_PRODUCT_2", category: "Top Sellers", type: "etsy_listing", description: "Popular Etsy product listing" },
       { placeholder: "AIGATA_PRODUCT_3", category: "Top Sellers", type: "ebay_listing", description: "eBay featured product" },
@@ -1019,7 +1021,7 @@ export const portfolioProjects = [
       { placeholder: "AIGATA_PRODUCT_5", category: "Top Sellers", type: "premium_product", description: "Premium product line item" },
       { placeholder: "AIGATA_PRODUCT_6", category: "Top Sellers", type: "seasonal_product", description: "Seasonal bestseller" },
 
-      // Row 3: Product Development & Design Process (6 items)
+      // Row 4: Product Development & Design Process (6 items)
       { placeholder: "AIGATA_DESIGN_PROCESS_1", category: "Development", type: "concept_design", description: "Product concept and ideation" },
       { placeholder: "AIGATA_DESIGN_PROCESS_2", category: "Development", type: "prototype", description: "Product prototyping phase" },
       { placeholder: "AIGATA_VENDOR_COMMUNICATION", category: "Development", type: "vendor_relations", description: "Vendor communication and negotiations" },
@@ -1027,7 +1029,7 @@ export const portfolioProjects = [
       { placeholder: "AIGATA_LOGISTICS_PLANNING", category: "Development", type: "logistics", description: "Shipping and logistics coordination" },
       { placeholder: "AIGATA_INVENTORY_MANAGEMENT", category: "Development", type: "inventory", description: "Inventory management system" },
 
-      // Row 4: Sales Success & Marketing (6 items)
+      // Row 5: Sales Success & Marketing (6 items)
       { placeholder: "AIGATA_SALES_DASHBOARD", category: "Success Metrics", type: "sales_analytics", description: "Sales dashboard showing 1000+ sales" },
       { placeholder: "AIGATA_AMAZON_PERFORMANCE", category: "Success Metrics", type: "amazon_stats", description: "Amazon seller performance" },
       { placeholder: "AIGATA_ETSY_SUCCESS", category: "Success Metrics", type: "etsy_analytics", description: "Etsy shop success metrics" },
