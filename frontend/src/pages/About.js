@@ -440,9 +440,6 @@ const About = () => {
             </div>
           </div>
 
-          {/* Professional Accomplishments */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Professional Accomplishments</h2>
           {/* Professional Experience - More Visual and Engaging */}
             <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Professional Marketing Experience</h3>
             <div className="space-y-8">
