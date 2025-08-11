@@ -494,10 +494,10 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                   <div className="mb-8">
                     <h4 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
                       <span className="text-2xl mr-2">🎨</span>
-                      Brand Identity and Logo Design - Actual Business Logos (3 items)
+                      Brand Identity and Logo Design - Actual Business Logos (5 items)
                     </h4>
-                    <div className="grid grid-cols-3 gap-4">
-                      {project.images.slice(0, 3).map((item, index) => (
+                    <div className="grid grid-cols-5 gap-4">
+                      {project.images.slice(0, 5).map((item, index) => (
                         <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
                           <div className="aspect-square bg-gradient-to-br from-purple-50 to-pink-50 flex items-center justify-center p-3 relative overflow-hidden">
                             {item.placeholder && (item.placeholder.includes('http') || item.placeholder.includes('.jpg')) ? (
