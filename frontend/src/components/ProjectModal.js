@@ -709,7 +709,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                       Product Development & Business Operations (6 items)
                     </h4>
                     <div className="grid grid-cols-4 gap-4">
-                      {project.images.slice(33, 39).map((item, index) => (
+                      {project.images.slice(35, 41).map((item, index) => (
                         <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
                           <div className="aspect-square bg-gradient-to-br from-orange-50 to-yellow-50 flex items-center justify-center p-3 relative overflow-hidden">
                             {item.placeholder && (item.placeholder.includes('http') || item.placeholder.includes('.jpg')) ? (
