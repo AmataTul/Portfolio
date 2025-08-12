@@ -504,7 +504,7 @@ export const portfolioProjects = [
     client: "Ute Tribal Enterprises - Ute Bison Ranch",
     project_type: "Indigenous Agricultural Business TikTok Marketing Campaign",
     description: "I led the organic marketing strategy for Ute Bison Ranch, an Indigenous-owned agricultural business rooted in sustainable bison farming and traditional ranching practices. Through engaging TikTok content, I highlighted daily ranch operations, behind-the-scenes footage, and cultural storytelling, increasing brand awareness across agricultural communities and broader consumer markets.\n\nIndigenous Business Success Metrics:\n• 90% social media engagement increase\n• 40% boost in store visits\n• 120% brand awareness growth\n• 55% rise in tour attendance\n\nMedia Recognition Highlights:\n• Featured on ABC4 Utah's \"Taste Utah\", spotlighting Ute culture, bison ranching, and Indigenous culinary traditions\n• Showcased on Fox 13 News and in multiple regional publications, discussing the inclusion of bison meat in Utah's school lunch programs and its impact on local food systems\n\nBy combining strategic content creation with authentic storytelling, I positioned Ute Bison Ranch as a leading Indigenous bison agriculture brand. This significantly boosted visibility, community engagement, foot traffic, and online sales at both regional and national levels.",
-    images: [], // No main video - only the 6 TikTok videos below
+    images: ["https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/108abt03_bandicam%202025-08-11%2019-25-53-563.jpg"], // TikTok campaign thumbnail
     type: "video",
     featured: true,
     orientation: "vertical",
