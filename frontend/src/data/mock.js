@@ -151,6 +151,7 @@ export const portfolioProjects = [
     category: "Social Media Content & Campaigns",
     client: "Ute Plaza Supermarket - Ute Tribal Enterprises",
     project_type: "Multi-Holiday Facebook Video Marketing & Seasonal Merchandising Campaign",
+    thumbnail: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/6r5moiov_bandicam%202025-08-11%2019-26-56-107.jpg",
     facebookReels: {
       sectionTitle: "Seasonal Facebook Reels – Ute Plaza Supermarket Campaign",
       videosSubtitle: "Seasonal marketing campaign with 4 strategic Facebook Reels to boost holiday traffic and merchandise sales at Ute Plaza Supermarket. Each video targets key holidays (Christmas, Valentine's Day, Easter), using engaging vertical content to showcase festive displays and promotions, driving mobile engagement and in-store visits.",
