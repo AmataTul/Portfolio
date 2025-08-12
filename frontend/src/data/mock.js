@@ -743,6 +743,7 @@ export const portfolioProjects = [
     category: "Social Media Content & Campaigns",
     client: "Ute Tribal Enterprises & Associated Businesses",
     project_type: "Multi-Platform Social Media Content Strategy & Creation",
+    thumbnail: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/omorldob_bandicam%202025-08-11%2019-24-14-749.jpg",
     description: "Developed and managed content for multiple brands, including Ute Coffee House & Soda, Ute Plaza Supermarket, Ute Bison Ranch, and Ute Crossing Trading Post. Produced diverse posts—promotions, event coverage, volunteer highlights, progress updates, behind-the-scenes features, ads, product showcases, cultural celebrations, and custom graphics—crafted to align with business goals, reflect authentic brand voice, and strengthen community connections.",
     images: [
       // EASY IMAGE UPLOAD INSTRUCTIONS:
