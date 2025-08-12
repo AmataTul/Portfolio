@@ -787,8 +787,6 @@ export const portfolioProjects = [
       { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/70j9g4q4_26.jpg", business: "Ute Plaza Supermarket", title: "Store Operations & Customer Service", likes: 167, shares: 29, comments: 39, type: "operations" },
       { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/xywerd59_27.jpg", business: "KahPeeh Kah-Ahn Ute Coffee House & Soda", title: "Coffee Culture & Indigenous Traditions", likes: 287, shares: 48, comments: 65, type: "cultural" },
       { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/ds2n3rzo_28.jpg", business: "Ute Plaza Supermarket", title: "Fresh Produce & Local Supplier Support", likes: 156, shares: 27, comments: 38, type: "local_suppliers" },
-      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/8e7q10yr_29.jpg", business: "Ute Plaza Supermarket", likes: 134, shares: 23, comments: 32, type: "customer_appreciation" },
-      { placeholder: "https://customer-assets.emergentagent.com/job_246fc36d-8c7a-4bae-91a4-7079a70b8b2d/artifacts/2ktffxpa_30.jpg", business: "KahPeeh Kah-Ahn Ute Coffee House & Soda", likes: 201, shares: 36, comments: 49, type: "seasonal_branding" }
     ],
     type: "social",
     featured: true,
