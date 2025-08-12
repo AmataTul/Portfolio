@@ -396,7 +396,7 @@ export const portfolioProjects = [
     client: "Ute Tribal Enterprises - KahPeeh kah-Ahn Ute Coffee House & Soda",
     project_type: "Indigenous Business TikTok Marketing Campaign",
     description: "I led the marketing strategy for KahPeeh kah-Ahn Ute Coffee House & Soda, an indigenous coffee house celebrating cultural storytelling and authentic hospitality. I coordinated several community events and created multiple TikTok videos showcasing the brand's values.\n\nThe top 6 high-engagement videos achieved significant results:\n• 85% increase in social media engagement\n• 40% boost in foot traffic\n• 120% growth in brand awareness across reservation communities and surrounding areas\n\nThrough strategic content creation and cultural narratives, I successfully positioned KahPeeh kah-Ahn as a growing indigenous business, driving visibility and engagement across diverse markets.",
-    images: ["https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/108abt03_bandicam%202025-08-11%2019-25-53-563.jpg"], // TikTok campaign thumbnail
+    images: [], // No main video - only the 6 TikTok videos below
     type: "video",
     featured: true,
     orientation: "vertical",
