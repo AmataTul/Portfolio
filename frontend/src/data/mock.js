@@ -750,7 +750,7 @@ export const portfolioProjects = [
       // 4. Example: { placeholder: "/images/tribal-post-1.jpg", business: "Ute Tribal Enterprises", likes: 124, shares: 18, comments: 23, type: "promotional" },
       
       // Updated with 5 new uploaded images (1-5) + placeholders 6-30
-      { placeholder: "https://customer-assets.emergentagent.com/job_project-showcase-20/artifacts/fzl5cjdl_2.jpg", business: "Ute Bison Ranch", likes: 124, shares: 18, comments: 23, type: "promotional" },
+      { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/omorldob_bandicam%202025-08-11%2019-24-14-749.jpg", business: "Ute Bison Ranch", likes: 124, shares: 18, comments: 23, type: "promotional" },
       { placeholder: "https://customer-assets.emergentagent.com/job_project-showcase-20/artifacts/ho81nlun_1.jpg", business: "Ute Bison Ranch", likes: 89, shares: 12, comments: 16, type: "promotional" },
       { placeholder: "https://customer-assets.emergentagent.com/job_project-showcase-20/artifacts/k38jbmdp_5.jpg", business: "KahPeeh Kah-Ahn Ute Coffee House & Soda", likes: 156, shares: 31, comments: 42, type: "promotional" },
       { placeholder: "https://customer-assets.emergentagent.com/job_project-showcase-20/artifacts/p0p5ps8h_3.jpg", business: "Ute Bison Ranch", likes: 201, shares: 24, comments: 35, type: "product_showcase" },
