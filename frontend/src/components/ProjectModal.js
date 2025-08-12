@@ -223,7 +223,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     </div>
                     
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                      {project.images.map((item, index) => (
+                      {project.images.filter(item => typeof item === 'object' && item.category).map((item, index) => (
                         <div key={index} className="group relative bg-white rounded-2xl p-6 shadow-lg border-2 border-gray-200 hover:border-indigo-300 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                           <div className="absolute -top-3 -right-3 w-8 h-8 bg-gradient-to-br from-indigo-400 to-purple-400 rounded-full flex items-center justify-center text-white font-bold text-sm group-hover:scale-110 transition-transform duration-300">
                             {index + 1}
@@ -235,6 +235,9 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                                 {index === 0 && '🏰'}
                                 {index === 1 && '👥'}
                                 {index === 2 && '📱'}
+                                {index === 3 && '🎯'}
+                                {index === 4 && '📈'}
+                                {index === 5 && '🎮'}
                               </span>
                             </div>
                             <h5 className="font-bold text-gray-900 mb-2 text-lg">{item.category}</h5>
