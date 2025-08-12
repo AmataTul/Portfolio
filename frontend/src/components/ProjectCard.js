@@ -24,7 +24,7 @@ const ProjectCard = ({ project, onClick }) => {
           project.category === 'Photography Projects' ? 'photography-project' : ''
         }`}>
           <img 
-            src={project.thumbnail || project.images[0] || '/placeholder-image.jpg'} 
+            src={project.thumbnail || (project.images && project.images.length > 0 ? project.images[0] : '/placeholder-image.jpg')} 
             alt={project.title}
             className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
             style={{
