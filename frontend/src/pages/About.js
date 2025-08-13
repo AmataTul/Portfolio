@@ -239,7 +239,7 @@ const About = () => {
                         <span className="text-xl mr-2">🎬</span>
                         Video Marketing & Live Streaming
                       </h4>
-                      <p className="text-gray-700 text-sm mb-2">Creating short-form and long-form video content for TikTok, YouTube, and Instagram.</p>
+                      <p className="text-gray-700 text-sm mb-2">Experienced in producing short- and long-form content for TikTok, YouTube, and Instagram, with strong proficiency in CapCut.</p>
                       <p className="text-gray-700 text-sm">Proficiency with Adobe Premiere Pro and Final Cut Pro.</p>
                     </div>
                     
