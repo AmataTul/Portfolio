@@ -533,9 +533,10 @@ export const portfolioProjects = [
     ],
     impact: {
       quantified_results: [
-        "Increased social media engagement by 90%",
+        "Increased social media engagement by 85%",
+        "Enhanced store visits to supermarket physical location by 40%",
         "Boosted ranch visits and educational tour attendance by 55%",
-        "Achieved 135% growth in brand awareness across agricultural communities",
+        "Achieved 120% growth in brand awareness across agricultural communities",
         "Promoted multiple ranch education events through organic TikTok strategy",
         "Built a strong agricultural following and community recognition",
         "Positioned the ranch as a go-to educational destination"
