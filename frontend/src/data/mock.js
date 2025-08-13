@@ -1309,8 +1309,8 @@ export const education = {
 
 export const contactInfo = {
   name: "Amata T.",
-  email: "amata.portfolio@gmail.com",
+  email: "amatat.tuleuova@gmail.com",
   linkedin: "https://linkedin.com/in/amata-marketing",
-  phone: "+1 (555) 123-4567",
+  phone: "435-5498791",
   location: "Utah, USA"
 };
