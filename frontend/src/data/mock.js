@@ -825,11 +825,11 @@ export const portfolioProjects = [
     impact: {
       quantified_metrics: [
         "100+ diverse social media posts created across 7 different business divisions",
-        "250% average increase in social media engagement across all business platforms",
+        "95% average increase in social media engagement across all business platforms",
         "500+ combined social media interactions (likes, shares, comments) generated monthly",
         "7 distinct business brands managed with consistent voice and cultural sensitivity",
         "40+ different content types produced including promotional, educational, and community engagement posts",
-        "200% boost in cross-business promotional reach through strategic content planning"
+        "85% boost in cross-business promotional reach through strategic content planning"
       ],
       qualitative_outcomes: [
         "Strengthened community connections and cultural representation across all tribal enterprise social media platforms",
