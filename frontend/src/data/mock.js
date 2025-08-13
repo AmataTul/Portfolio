@@ -1012,19 +1012,19 @@ export const portfolioProjects = [
     ],
     impact: {
       quantified_metrics: [
-        "1000+ total sales achieved across all platforms since 2019 launch",
-        "5 major e-commerce platforms successfully established and managed (Amazon, Etsy, eBay, TikTok Shop, Events)",
+        "$1000+ total sales achieved across all platforms within the first 6 months",
+        "3 major e-commerce platforms successfully established and managed (Etsy, eBay, TikTok Shop)",
+        "5 years running (2019-2024) - Aigata brand under Friendly Futures company",
         "24 unique product designs created and brought to market",
         "Multiple vendor relationships established and maintained for consistent product sourcing",
-        "Complete brand identity system developed including logo, guidelines, and marketing materials",
-        "6+ years of continuous business operation and growth (2019-2025)"
+        "Complete brand identity system developed including logo, guidelines, and marketing materials"
       ],
       qualitative_outcomes: [
-        "Successfully launched and scaled personal brand business from zero to 1000+ sales milestone",
-        "Demonstrated complete entrepreneurial capabilities from business initiation through execution and growth",
-        "Established strong brand presence across multiple online marketplaces and in-person sales channels",
+        "Successfully launched and scaled Aigata brand business from zero to $1000+ sales milestone within 6 months",
+        "Demonstrated complete entrepreneurial capabilities from business initiation through execution and growth for Friendly Futures company",
+        "Established strong Aigata brand presence across multiple online marketplaces and in-person sales channels",
         "Built sustainable business model with diverse revenue streams and consistent customer satisfaction",
-        "Created recognizable 'Friendly Futures' brand concept that resonates with target audience",
+        "Created recognizable Aigata brand concept under Friendly Futures that resonates with target audience",
         "Developed expertise in full-stack business operations including design, logistics, marketing, and sales"
       ]
     }
