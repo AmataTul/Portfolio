@@ -200,7 +200,7 @@ const About = () => {
                         <span className="text-xl mr-2">📱</span>
                         Social Media Marketing
                       </h4>
-                      <p className="text-gray-700 text-sm mb-2">Expertise in social media platforms (Instagram, TikTok, LinkedIn, etc.) and creating high-engagement content.</p>
+                      <p className="text-gray-700 text-sm mb-2">Expertise in social media platforms (Instagram, TikTok, Facebook, LinkedIn, etc.) and creating high-engagement content.</p>
                       <p className="text-gray-700 text-sm">Advanced social media ads management and influencer marketing.</p>
                     </div>
                     
