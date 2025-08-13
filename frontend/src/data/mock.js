@@ -989,7 +989,7 @@ export const portfolioProjects = [
     orientation: "mixed",
     businessMetrics: {
       launchYear: 2019,
-      totalSales: "1000+",
+      totalSales: "$1000+",
       platforms: ["Etsy", "eBay", "TikTok Shop", "In-Person Events"],
       businessModel: "Full Ownership & Management"
     },
