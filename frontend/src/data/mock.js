@@ -385,8 +385,8 @@ export const portfolioProjects = [
       title: "Supporting Marketing Materials",
       description: "Brochures and promotional materials created for the K-12 campaign",
       images: [
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop"
+        "https://customer-assets.emergentagent.com/job_project-curator/artifacts/hqj4x6j9_bandicam%202025-08-12%2018-04-41-496.jpg",
+        "https://customer-assets.emergentagent.com/job_project-curator/artifacts/djovx3im_bandicam%202025-08-12%2018-04-27-445.jpg"
       ]
     }
   },
