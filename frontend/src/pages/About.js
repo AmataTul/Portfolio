@@ -218,7 +218,7 @@ const About = () => {
                         <span className="text-xl mr-2">✍️</span>
                         Content Creation & Strategy
                       </h4>
-                      <p className="text-gray-700 text-sm mb-2">Develop and execute content strategies across various platforms (blogs, video, podcasts).</p>
+                      <p className="text-gray-700 text-sm mb-2">Develop and execute content strategies across various platforms (blogs, video, radio scripts).</p>
                       <p className="text-gray-700 text-sm">Strong skills in copywriting and visual storytelling.</p>
                     </div>
                   </div>
