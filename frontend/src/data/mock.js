@@ -932,7 +932,7 @@ export const portfolioProjects = [
     client: "Aigata - Personal E-commerce Business (Self-Initiated)",
     project_type: "Complete Business Development, Branding & Multi-Platform E-commerce Success",
     thumbnail: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/ttipb6a9_Logo.jpg",
-    description: "Comprehensive business development and branding project covering the creation and growth of the Aigata brand from concept to 1,000+ sales. Demonstrates end-to-end entrepreneurial skills, including graphic design, vendor relations, product development, brand identity, logistics coordination, and multi-platform sales execution across Etsy, eBay, TikTok Shop, and in-person events.",
+    description: "Comprehensive business development and branding project covering the creation and growth of the Aigata brand from concept to $1,000+ sales. Demonstrates end-to-end entrepreneurial skills, including graphic design, vendor relations, product development, brand identity, logistics coordination, and multi-platform sales execution across Etsy, eBay, TikTok Shop, and in-person events.",
     images: [
       // Row 1: Brand Identity and Logo Design - Actual Business Logos (5 items)
       { placeholder: "https://customer-assets.emergentagent.com/job_content-manager-13/artifacts/i0gb7ayv_Aigata%20Logo%201.png", category: "Brand Identity", type: "primary_logo_used", description: "Primary Aigata brand logo - actually used for business" },
