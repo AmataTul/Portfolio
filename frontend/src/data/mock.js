@@ -994,7 +994,7 @@ export const portfolioProjects = [
       businessModel: "Full Ownership & Management"
     },
     key_contributions: [
-      "1000+ total sales achieved across all platforms within the first 6 months",
+      "$1000+ total sales achieved across all platforms within the first 6 months",
       "Designed comprehensive brand identity including logo creation, brand guidelines, and visual identity system",
       "Established and managed vendor relationships for product sourcing, negotiation, and quality control",
       "Developed complete product line with personal design input and market research validation",
