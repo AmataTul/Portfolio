@@ -403,7 +403,7 @@ export const portfolioProjects = [
     featured: true,
     orientation: "vertical",
     key_contributions: [
-      "Conceptualized and created 6 high-engagement TikTok videos promoting the indigenous coffee house and community events",
+      "Created more than 10 high-engagement vertical videos promoting the Indigenous coffee house and community events",
       "Coordinated community events where the coffee house trailer provided services, creating authentic content opportunities",
       "Developed creative strategy showcasing the unique indigenous coffee house experience and community connection",
       "Wrote compelling copy and captions celebrating indigenous business and cultural pride",
