@@ -1311,6 +1311,6 @@ export const contactInfo = {
   name: "Amata T.",
   email: "amatat.tuleuova@gmail.com",
   linkedin: "https://linkedin.com/in/amata-marketing",
-  phone: "435-5498791",
+  phone: "435-549-8791",
   location: "Utah, USA"
 };
