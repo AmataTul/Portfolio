@@ -1310,7 +1310,7 @@ export const education = {
 export const contactInfo = {
   name: "Amata T.",
   email: "amatat.tuleuova@gmail.com",
-  linkedin: "https://linkedin.com/in/amata-marketing",
+  linkedin: "https://www.linkedin.com/in/amata-tuleuova/",
   phone: "435-549-8791",
   location: "Utah, USA"
 };
